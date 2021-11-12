@@ -1,0 +1,32 @@
+
+state={
+	id=97
+	name="STATE_97"
+
+	history={
+		owner = POL
+		victory_points = {
+			11301 3 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 3
+
+		}
+		add_core_of = POL
+		1941.1.1 = {
+			owner = SOV
+			controller = SOV
+
+		}
+
+	}
+
+	provinces={
+		290 347 11301 11357
+	}
+	manpower=1501844 
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

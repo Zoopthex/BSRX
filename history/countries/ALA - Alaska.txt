@@ -1,0 +1,102 @@
+﻿capital = 1562
+
+#set_cosmetic_tag = ALA_USA
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	gwtank = 1
+	early_fighter = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+	cv_CAS1 = 1
+	naval_bomber1 = 1
+	CAS1 = 1
+	early_bomber = 1
+	early_submarine = 1
+	basic_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	basic_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	early_battlecruiser = 1
+	early_carrier = 1
+	basic_carrier = 1
+	transport = 1
+	superior_firepower = 1
+	base_strike = 1
+
+}
+
+set_convoys = 30
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.11.8"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 92
+	fascism = 5
+	communism = 3
+	neutrality = 0
+}
+
+add_ideas = {
+	disarmed_nation
+	free_trade
+}
+
+
+create_country_leader = {
+	name = "Benjamin Franklin Heintzleman"
+	desc = ""
+	picture = "gfx/leaders/ALA/Benjamin_Franklin_Heintzleman.dds"
+	expire = "1950.1.1"
+	ideology = liberalism
+	traits = {
+		social_reformer_2
+	}
+}
+
+create_country_leader = {
+	name = "Anthony Dimond"
+	desc = ""
+	picture = "gfx/leaders/ALA/Anthony_Dimond.dds"
+	expire = "1965.1.1"
+	ideology = ultranationalism
+	traits = {
+		stammer	
+	}
+}
+
+create_country_leader = {
+	name = "Ernest Henry Gruening"
+	desc = ""
+	picture = "gfx/leaders/ALA/Ernest_Gruening.dds"
+	expire = "1965.1.1"
+	ideology = radical_socialism
+	traits = {
+		revolutionary_author_2
+	}
+}
+
+create_country_leader = {
+	name = "George Barnes Grigsby"
+	desc = ""
+	picture = "gfx/leaders/ALA/George_Barnes_Grigsby.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		regional_traditionalist_leader	
+	}
+}

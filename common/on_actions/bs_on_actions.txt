@@ -1,0 +1,8597 @@
+on_actions = {
+    on_civil_war_end = {
+	effect = {
+	if = {
+	limit = {
+	ROOT = {
+	has_country_flag = german_rebels
+	}
+	}
+	every_owned_state = {
+	limit = { 
+	is_core_of = AUS
+	}
+ 	set_temp_variable = { austriacores = THIS.id }
+    AUS = {
+       transfer_state = austriacores
+		set_politics = {
+			ruling_party = democratic
+			last_election = "1930.11.9"
+			election_frequency = 48
+			elections_allowed = yes
+		}	   
+    }
+	}
+	every_owned_state = {
+	limit = { 
+	is_core_of = CZE
+	}
+ 	set_temp_variable = { czechcores = THIS.id }
+    CZE = {
+       transfer_state = czechcores
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}	   
+    }
+	}
+	every_owned_state = {
+	limit = { 
+	is_core_of = POL
+	NOT = {
+	is_core_of = PRE
+	}
+	}
+ 	set_temp_variable = { polishcores = THIS.id }
+    POL = {
+       transfer_state = polishcores
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}	   
+    }
+	}
+	every_owned_state = {
+	limit = { 
+	is_core_of = FRA
+	}
+ 	set_temp_variable = { fracores = THIS.id }
+    FRA = {
+       transfer_state = fracores	   
+    }
+	}
+	every_owned_state = {
+	limit = { 
+	is_core_of = BEL
+	}
+ 	set_temp_variable = { belcores = THIS.id }
+    BEL = {
+       transfer_state = belcores	   
+    }
+	}
+	every_owned_state = {
+	limit = { 
+	is_core_of = HOL
+	}
+ 	set_temp_variable = { holcores = THIS.id }
+    HOL = {
+       transfer_state = holcores	   
+    }
+	}
+	every_owned_state = {
+	limit = { 
+	is_core_of = LUX
+	}
+ 	set_temp_variable = { luxcores = THIS.id }
+    LUX = {
+       transfer_state = luxcores	   
+    }
+	}
+	every_owned_state = {
+	limit = { 
+	is_core_of = DEN
+	}
+ 	set_temp_variable = { dencores = THIS.id }
+    DEN = {
+       transfer_state = dencores	   
+    }
+	}
+	every_owned_state = {
+	limit = { 
+	is_core_of = SWI
+	}
+ 	set_temp_variable = { swicores = THIS.id }
+    SWI = {
+       transfer_state = swicores	   
+    }
+	}
+    }
+}
+}	
+	on_capitulation = {
+	    effect = {
+		    if = {
+			limit = {
+			ROOT = {
+			tag = FRA
+			has_country_flag = rhin
+			}
+			}
+			every_country = {
+			limit = {
+			original_tag = FRA
+			OR = {
+			has_government = fascism 
+			has_government = communism
+			}
+			}
+			FRA = {
+            annex_country = { target = PREV }			
+			}
+			}
+			}
+			if = {
+			limit = {
+			tag = FRA
+			FRA = { has_war_with = ITA }
+			GER = { is_in_faction_with = ITA }
+			}
+			ITA = { 
+			transfer_state = 1388
+			transfer_state = 1389
+			transfer_state = 1390			
+			}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						tag = DAN
+					}
+				}
+				85 = { remove_core_of = DAN }
+				1516 = { remove_core_of = DAN }				
+				FROM = { annex_country = { target = DAN } }
+			}
+			if = {
+				limit = {
+					FROM = { 
+						tag = ITA 
+						OR = {
+							has_government = neutrality
+							has_government = fascism
+						}
+						has_full_control_of_state = 550
+						559 = { is_owned_or_subject_trigger = yes }
+						1088 = { is_owned_or_subject_trigger = yes }
+						is_ai = yes
+					}
+					ROOT = { tag = ETH }
+					date<1938.1.1
+				}
+				ITA = { annex_country = { target = ETH } }
+			}
+			if = {
+				limit = {
+					tag = USA
+					NOT = { has_global_flag = bsr_uberevent_collapse_of_america_happened }
+				}
+				set_global_flag = bsr_uberevent_collapse_of_america
+				set_global_flag = bsr_uberevent_collapse_of_america_happened
+			}
+			if = {
+				limit = {
+					tag = GER
+					NOT = { has_global_flag = bsr_uberevent_capitulation_of_germany_happened }
+				}
+				set_global_flag = bsr_uberevent_capitulation_of_germany
+				set_global_flag = bsr_uberevent_capitulation_of_germany_happened
+			}
+			if = {
+				limit = {
+					tag = ENG
+					NOT = { has_global_flag = bsr_uberevent_defeat_of_britain_happened }
+				}
+				set_global_flag = bsr_uberevent_defeat_of_britain
+				set_global_flag = bsr_uberevent_defeat_of_britain_happened
+			}
+			if = {
+				limit = {
+					tag = CHI
+					NOT = { has_global_flag = bsr_uberevent_fall_of_china_happened }
+				}
+				set_global_flag = bsr_uberevent_fall_of_china
+				set_global_flag = bsr_uberevent_fall_of_china_happened
+			}
+			if = {
+				limit = {
+					tag = FRA
+					NOT = { has_global_flag = bsr_uberevent_fall_of_france_happened }
+				}
+				set_global_flag = bsr_uberevent_fall_of_france
+				set_global_flag = bsr_uberevent_fall_of_france_happened
+			}
+			if = {
+				limit = {
+					tag = POL
+					NOT = { has_global_flag = bsr_uberevent_fall_of_poland_happened }
+				}
+				set_global_flag = bsr_uberevent_fall_of_poland
+				set_global_flag = bsr_uberevent_fall_of_poland_happened
+			}
+			if = {
+				limit = {
+					tag = SOV
+					NOT = { has_global_flag = bsr_uberevent_collapse_of_russia_happened }
+				}
+				set_global_flag = bsr_uberevent_collapse_of_russia
+				set_global_flag = bsr_uberevent_collapse_of_russia_happened
+			}
+			if = {
+				limit = {
+					tag = JAP
+					NOT = { has_global_flag = bsr_uberevent_surrender_of_japan_happened }
+				}
+				set_global_flag = bsr_uberevent_surrender_of_japan
+				set_global_flag = bsr_uberevent_surrender_of_japan_happened
+			}
+			if = {
+			limit = {
+			ROOT = {
+			tag = CZE
+			}
+			}
+			SLO = {
+			create_country_leader = {
+				name = "Jan Golian"
+				desc = "POLITICS_JAN_GOLIAN_DESC"
+				picture = "Portrait_Jan_Golian.dds"
+				expire = "1965.1.1"
+				ideology = conservatism
+				traits = {
+				Resistance_Leader
+				}
+			}
+            }
+            }			
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = MCO
+					}
+					FROM = {
+						original_tag = ITA
+						controls_state = 821
+						controls_state = 825
+						OR = {
+							has_government = fascism
+							has_government = neutrality
+						}
+					}
+				}
+				ITA = { annex_country = { target = MCO } }
+			}
+			if = {
+				limit = {
+					ROOT = {
+						tag = GER
+						has_government = fascism
+						has_civil_war = no
+					}
+				}
+				GER = {
+					country_event = { id = bs.12 }
+				}
+			}
+			
+			if = {
+				limit = {
+					ROOT = {
+						tag = GFA
+						has_government = fascism
+						has_civil_war = no
+					}
+				}
+				GFA = {
+					remove_state_core = 16
+				}
+			}
+			
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = DEN
+					}
+				}
+				GER = {
+					set_state_controller = 805
+				}
+				DEN = {
+					set_state_controller = 101
+					set_state_controller = 811
+				}
+			}
+			
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = NOR
+					}
+				}
+				NOR = {
+					set_state_controller = 1259
+				}
+			}
+
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = GER
+					}
+					any_state = {
+					OR = {
+					is_core_of = WGR
+					is_core_of = DDR
+					}
+					}
+				}
+				every_state = {
+				remove_core_of = GER
+				remove_claim_by = GER
+				}
+			}
+
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = POL
+					}
+				}
+				kill_ideology_leader = fascism
+				kill_ideology_leader = democratic					
+				country_event = { hours = 0 id = bs.508 }			
+			    set_party_name = { ideology = fascism long_name = POL_fascism_dmowski_dead_party_long name = POL_fascism_dmowski_dead_party } #Piasecki's Falanga grows more relevant				
+                if = {
+				limit = {
+				has_government = democratic
+				}
+				create_country_leader = {
+					name = "Władysław Sikorski"
+					desc = "POLITICS_WLADYSLAW_SIKORSKI_DESC"
+					picture = "Portrait_Poland_Wladyslaw_Sikorski.dds"
+					expire = "1965.1.1"
+					ideology = social_democracy
+					traits = {
+					   patriotic_guerilla
+						Freedom_Fighter_2
+					}
+				}
+                }
+                if = {
+				limit = {
+				has_government = neutrality
+				}
+				create_country_leader = {
+					name = "Władysław Sikorski"
+					desc = "POLITICS_WLADYSLAW_SIKORSKI_DESC"
+					picture = "Portrait_Poland_Wladyslaw_Sikorski.dds"
+					expire = "1965.1.1"
+					ideology = centrism
+					traits = {
+					    patriotic_guerilla
+						Freedom_Fighter_2
+					}
+				}
+                }				
+			}			
+			
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = FRA
+						is_in_faction_with = ENG
+						has_war_with = GER
+					}
+				}
+				GER = {
+					set_state_controller = 974
+				}
+			}
+		}
+	}
+	
+	on_uncapitulation = {
+		effect = {
+			if = {
+				limit = {
+						original_tag = POL
+						has_government = communism			
+				}
+				POL = {
+				create_country_leader = {
+					name = "Józef Franczak"
+					desc = ""
+					picture = "jozef_franczak.dds"
+					expire = "1965.1.1"
+					ideology = moderatism
+					traits = {
+						zolnierz_wyklety
+					}
+				}				
+				}
+			}		
+			if = {
+				limit = {
+					original_tag = GER
+					has_government = fascism
+					is_puppet = no
+				}
+				drop_cosmetic_tag = yes
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = POL
+					}
+				}
+                drop_cosmetic_tag = yes
+            }				
+		}
+	}
+	
+	on_war = {
+		effect = {
+			if = {
+				limit = {
+					tag = JAP
+					has_war_with = CHI
+					NOT = { has_global_flag = bsr_uberevent_sino_japanese_war_happened }
+				}
+				set_global_flag = bsr_uberevent_sino_japanese_war
+				set_global_flag = bsr_uberevent_sino_japanese_war_happened
+			}
+			if = {
+				limit = {
+					tag = SOV
+					has_defensive_war = yes
+					any_enemy_country = {
+						is_major = yes
+					}
+					NOT = { has_global_flag = bsr_uberevent_invasion_of_russia_happened }
+				}
+				set_global_flag = bsr_uberevent_invasion_of_russia
+				set_global_flag = bsr_uberevent_invasion_of_russia_happened
+			}
+			if = {
+				limit = {
+					original_tag = SAF
+					has_country_leader = { name = "J. B. M. Hertzog" ruling_only = yes }
+					is_in_faction_with = ENG
+					has_war_together_with = ENG
+				}
+				country_event = { id = bs.70 days = 2 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_civil_war = no
+					NOT = { has_global_flag = bsr_uberevent_america_at_war_happened }
+				}
+				set_global_flag = bsr_uberevent_america_at_war
+				set_global_flag = bsr_uberevent_america_at_war_happened
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_civil_war = no
+					NOT = { has_global_flag = bsr_uberevent_america_at_war_happened }
+				}
+				set_global_flag = bsr_uberevent_america_at_war
+				set_global_flag = bsr_uberevent_america_at_war_happened
+			}
+			if = {
+				limit = {
+					tag = GER
+					OR = {
+						has_war_with = FRA 
+						has_war_with = ENG
+					}
+					NOT = { has_global_flag = bsr_uberevent_second_great_war_happened }
+				}
+				set_global_flag = bsr_uberevent_second_great_war
+				set_global_flag = bsr_uberevent_second_great_war_happened
+			}
+			if = {
+				limit = {	
+					NOT = { has_global_flag = bsr_uberevent_spanish_war_happened }
+					OR = {
+						original_tag = SPR
+						original_tag = SPA
+					}
+					OR = {
+						has_civil_war = yes
+						has_war_with = SPR
+						has_war_with = SPA
+					}
+				}
+				set_global_flag = bsr_uberevent_spanish_war
+				set_global_flag = bsr_uberevent_spanish_war_happened
+			}
+			if = {
+				limit = {	
+					NOT = { has_global_flag = bsr_uberevent_spanish_war_happened }
+					OR = {
+						original_tag = SPR
+						original_tag = SPA
+					}
+					OR = {
+						has_civil_war = yes
+						has_war_with = SPR
+						has_war_with = SPA
+					}
+				}
+				set_global_flag = bsr_uberevent_spanish_war
+				set_global_flag = bsr_uberevent_german_civil_war
+			}
+			if = {
+				limit = {	
+					NOT = { has_global_flag = bsr_uberevent_german_civil_war_happened }
+					tag = GER
+					has_civil_war = yes
+				}
+				set_global_flag = bsr_uberevent_german_civil_war
+				set_global_flag = bsr_uberevent_german_civil_war_happened
+			}
+			if = {
+				limit = {
+					original_tag = USA
+					has_global_flag = japan_pearl_harbor_bombing_planned
+					NOT = { has_global_flag = japan_pearl_harbor_bombing_executed }
+					629 = {
+						controller = {
+							OR = {
+								original_tag = USA
+								is_puppet_of = USA
+							}
+						}
+					}
+					has_defensive_war_with = JAP 
+				}
+				country_event = { id = bs.771 }
+			}
+			if = {
+				limit = {
+					original_tag = USA
+					has_global_flag = japan_pearl_harbor_bombing_planned
+					NOT = { has_global_flag = japan_pearl_harbor_bombing_executed }
+					629 = {
+						controller = {
+							OR = {
+								original_tag = USA
+								is_puppet_of = USA
+							}
+						}
+					}
+					has_offensive_war_with = JAP 
+				}
+				country_event = { id = bs.773 }
+			}
+		    if = {
+			limit = {
+			original_tag = RKO
+            NOT = {
+            has_government = fascism
+            }			
+			}
+            drop_cosmetic_tag = yes
+			set_cosmetic_tag = BAL_RES
+			load_oob = LIT_1936
+			load_oob = LAT_1936
+			load_oob = EST_1936						
+			}			
+		    if = {
+			limit = {
+			original_tag = GGO
+			has_focus_tree = generic_focus			
+            NOT = {
+            has_government = fascism
+            }			
+			}
+            drop_cosmetic_tag = yes
+			set_cosmetic_tag = POL_RES
+			load_oob = POL_1936
+                load_focus_tree = {
+                tree = polish_focus
+                keep_completed = no
+                }			
+			}
+		    if = {
+			limit = {
+			original_tag = GFA
+			has_focus_tree = generic_focus			
+            NOT = {
+            has_government = fascism
+            }			
+			}
+            drop_cosmetic_tag = yes
+			set_cosmetic_tag = FRA_RES
+			load_oob = FRA_1936
+                load_focus_tree = {
+                tree = free_french_focus
+                keep_completed = no
+                }			
+			}			
+		    if = {
+			limit = {
+			original_tag = RKU		
+            NOT = {
+            has_government = fascism
+			has_cosmetic_tag = german_ukraine_affirmed
+            }			
+			}
+            drop_cosmetic_tag = yes
+			set_cosmetic_tag = UKR_RES
+			load_oob = POL_1936		
+			}			
+		    if = {
+			limit = {
+			original_tag = NID
+			has_focus_tree = generic_focus			
+            NOT = {
+            has_government = fascism
+            }			
+			}
+            drop_cosmetic_tag = yes
+			set_cosmetic_tag = HOL_RES
+			load_oob = HOL_1936
+                load_focus_tree = {
+                tree = netherlands_focus
+                keep_completed = no
+                }			
+			}			
+		    if = {
+			limit = {
+			original_tag = PBM
+			has_focus_tree = generic_focus
+            NOT = {
+            has_government = fascism
+            }			
+			}
+            drop_cosmetic_tag = yes
+			set_cosmetic_tag = CZE_RES
+			load_oob = CZE_1936
+                load_focus_tree = {
+                tree = czech_focus
+                keep_completed = no
+                }							
+			}			
+			if = {
+				limit = {
+					original_tag = GER
+                    has_focus_tree = generic_focus
+				}
+                load_focus_tree = {
+                tree = german_focus
+                keep_completed = no
+                }					
+				set_cosmetic_tag = GER_CIVILWAR
+create_country_leader = {
+	name = "Adolf Hitler"
+	desc = "POLITICS_ADOLF_HITLER_DESC"
+	picture = "Portrait_Germany_Adolf_Hitler.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		Fuhrer
+	}
+}
+
+create_country_leader = {
+	name = "Konrad Adenauer"
+	desc = "POLITICS_KONRAD_ADENAUER_DESC"
+	picture = "Portrait_Germany_Konrad_Adenauer.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+	economist
+	}
+}
+
+create_country_leader = {
+	name = "Erwin von Witzleben"
+	desc = "POLITICS_KONRAD_ADENAUER_DESC"
+	picture = "Portrait_Germany_Erwin_von_Witzleben.dds"
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = {
+	liberal_general
+	}
+}
+
+create_country_leader = {
+	name = "Ernst Thälmann"
+	desc = "POLITICS_ERNST_THALMANN_DESC"
+	picture = "Ernst_Thalmann.dds"
+	expire = "1956.1.1"
+	ideology = stalinism
+	traits = {
+		Staunch_stalinist_2
+	}
+}				
+			}
+			if = {
+				limit = {
+					original_tag = BRA				
+                    has_war_with = BRA
+				}
+				set_cosmetic_tag = BRA_CIVILWAR
+create_country_leader = {
+	name = "Eurico Gaspar Dutra"
+	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+	picture = "r56_Eurico_Gaspar_Dutra.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+	    Champion_of_Freedom
+		hardened_officer
+	}
+}
+
+create_country_leader = {
+	name = "Plínio Salgado"
+	desc = "POLITICS_PLINIO_SALGADO_DESC"
+	picture = "Portrait_Brazil_Plinio_Salgado.dds"
+	expire = "1965.1.1"
+	ideology = falangism
+	traits = {
+		The_Fascist_Organizer
+	}
+}
+create_country_leader = {
+	name = "Caio da Silva Prado Júnior"
+	desc = "POLITICS_LUIS_CARLOS_PRESTES_DESC"
+	picture = "caios.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+	revolutionary_author
+	}
+}
+
+create_country_leader = {
+	name = "Armando de Sales Oliveira"
+	desc = ""
+	picture = "armandos.dds"
+	expire = "1965.1.1"
+	ideology = social_conservatism
+	traits = {
+		Foreign_Investments
+	}
+}
+create_country_leader = {
+	name = "Washington Luís"
+	desc = ""
+	picture = "Washington_Luis.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+	    determined_democrat
+		professional_crisis_solver
+	}
+}
+}
+			if = {
+				limit = {
+					original_tag = ALB				
+                    has_war_with = ALB
+				}
+				set_cosmetic_tag = ALB_CIVILWAR
+create_country_leader = {
+	name = "Mid'hat Frashëri"
+	desc = "POLITICS_KING_ZOG_DESC"
+	picture = "Portrait_Midhat_Frasheri.dds"
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = {
+	national_revivalist
+	}
+}
+
+create_country_leader = {
+	name = "Shefqet bej Vërlaci"
+	desc = "POLITICS_KING_ZOG_DESC"
+	picture = "Portrait_Shefqet_Verlaci.dds"
+	expire = "1965.1.1"
+	ideology = falangism
+	traits = {
+	#italian_collaborator   I made it so he gets this trait only after he actually becomes a collaborator
+	tenacious_negotiator
+	}
+}
+create_country_leader = {
+	name = "Fan Nola"
+	desc = "POLITICS_FAN_NOLA_DESC"
+	picture = "Fan_Nola.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		social_reformer
+		liberal_democratic_paragon
+		man_of_the_nation
+	}
+}
+
+create_country_leader = {
+	name = "Enver Hoxha"
+	desc = ""
+	picture = "Enver_Hoxha.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		Paranoid_Stalinist
+	}
+}
+}
+			if = {
+				limit = {
+					original_tag = LIT				
+                    has_war_with = LIT
+				}
+				set_cosmetic_tag = LIT_CIVILWAR
+create_country_leader = {
+	name = "Antanas Smetona"
+	desc = "POLITICS_ANTANAS_SMETONA_DESC"
+	picture = "GFX_Portrait_lithuania_antanas_smetona"
+	expire = "1965.1.1"
+	ideology = oligarchism
+	traits = {
+	the_statist
+	}
+}
+
+create_country_leader = {
+	name = "Antanas Snieckus"
+	desc = "POLITICS_ANTANAS_SNIECKUS_DESC"
+	picture = "r56_Antanas_Snieckus.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		Agent
+	}
+}
+
+create_country_leader = {
+	name = "Augustinas Voldemaras"
+	desc = ""
+	picture = "r56_augustinas_voldemaras.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		Brilliant_Orator
+	}
+}
+
+create_country_leader = {
+	name = "Kazys Grinius"
+	desc = ""
+	picture = "r56_Kazys_Grinius.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+	social_reformer
+	
+		
+	}
+}
+}
+			if = {
+				limit = {
+					original_tag = LAT				
+                    has_war_with = LAT
+				}
+				set_cosmetic_tag = LAT_CIVILWAR
+create_country_leader = {
+	name = "Jānis Balodis"
+	desc = "POLITICS_JANIS_BALODIS_DESC"
+	picture = "Janis_Balodis.dds"
+	expire = "1965.1.1"
+	ideology = oligarchism
+	traits = {
+	POL_military_organizational_leader
+	military_treasurer
+	}
+}
+
+create_country_leader = {
+	name = "Gustavs Celmiņš"
+	desc = ""
+	picture = "r56_Gustavs_Celmins.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+	eager_collaborator
+		
+		
+	}
+}
+create_country_leader = {
+	name = "Fricis Menders"
+	desc = ""
+	picture = "GFX_portrait_lat_fricis_menders"
+	expire = "1965.1.1"
+	ideology = social_democracy
+	traits = {
+		resolute_social_democrat
+	}
+}
+create_country_leader = {
+	name = "Vilis Lācis" 
+	desc = ""
+	picture = "r56_lacis_vilis.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+	socialist_novelist
+	
+		#
+	}
+}
+}
+			if = {
+				limit = {
+					original_tag = EST				
+                    has_war_with = EST
+				}
+				set_cosmetic_tag = EST_CIVILWAR
+create_country_leader = {
+	name = "Konstantin Päts"
+	desc = "POLITICS_KONSTANTIN_PATS_DESC"
+	picture = "GFX_Portrait_estonia_konstantin_pats"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		anti_fascist_autocrat
+	}
+}
+
+create_country_leader = {
+	name = "Jaan Anvelt"
+	desc = "POLITICS_KARL_SARE_DESC"
+	picture = "r56_Karl_Sare.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+	ambitious_union_boss
+	}
+}
+
+create_country_leader = {
+	name = "Hjalmar Mäe"
+	desc = "POLITICS_HJALMAR_MAE_DESC"
+	picture = "r56_Hjalmar_Mae.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+	anti_communist_crusader
+	}
+}
+
+create_country_leader = {
+	name = "Jaan Tönisson"
+	desc = "POLITICS_JAAN_TONISSON_DESC"
+	picture = "r56_Jaan_Tonisson.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+	liberal_journalist
+	}
+}
+}
+			if = {
+				limit = {
+					original_tag = FIN				
+                    has_war_with = FIN
+				}
+				set_cosmetic_tag = FIN_CIVILWAR
+create_country_leader = {
+	name = "Otto Wille Kuusinen"
+	desc = "POLITICS_OTTO_KUUSINEN_DESC"
+	picture = "r56_Otto_Wille_Kuusinen.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		Unpopular_Traitor
+	}
+}
+
+create_country_leader = {
+	name = "Vilho Annala"
+	desc = "POLITICS_VILHO_ANNALA_DESC"
+	picture = "Portrait_Finland_Vilho_Annala.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		economist
+	}
+}
+
+			create_country_leader = {
+				name = "Carl Gustaf Mannerheim"
+				desc = ""
+				picture = "portrait_fin_carl_mannerheim.dds"
+				expire = "1965.1.1"
+				ideology = moderatism
+				traits = {
+					Marsalkka
+				}
+			}
+
+			create_country_leader = {
+				name = "Risto Ryti"
+				desc = ""
+				picture = "Portrait_Finland_Risto_Heikki_Ryti.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+					resistance_banker
+				}
+			}
+}
+			if = {
+				limit = {
+					original_tag = SWE				
+                    has_war_with = SWE
+				}
+				set_cosmetic_tag = SWE_CIVILWAR
+create_country_leader = {
+	name = "Per Albin Hansson"
+	desc = "POLITICS_PER_ALBIN_HANSSON_DESC"
+	picture = "Portrait_Sweden_Per_Albin_Hansson.dds"
+	expire = "1965.1.1"
+	ideology = social_democracy
+	traits = {
+	    folkhemmet
+		devoted_corporatist
+	}
+}
+
+create_country_leader = {
+	name = "Sven Olov Lindholm"
+	desc = "POLITICS_SVEN_OLOV_LINDHOLM_DESC"
+	picture = "Portrait_Sweden_Sven_Lindholm.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		Nazi_youth_organizer
+	}
+}
+
+create_country_leader = {
+	name = "Sven Linderot"
+	desc = "POLITICS_SVEN_LINDEROT_DESC"
+	picture = "r56_Sven_Linderot.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		Socialist_Cooperation
+	}
+}
+
+create_country_leader = {
+	name = "Gustaf V"
+	desc = ""
+	picture = "Gustaf_V.dds"
+	expire = "1965.1.1"
+	ideology = constitutional_monarchism
+	traits = {
+		gentle_scholar
+		anti_communist
+	}
+}
+}
+			if = {
+				limit = {
+					original_tag = NOR				
+                    has_war_with = NOR
+				}
+				set_cosmetic_tag = NOR_CIVILWAR
+create_country_leader = {
+	name = "Johan Nygaardsvold"
+	desc = "POLITICS_JOHAN_NYGAARDSVOLD_DESC"
+	picture = "Portrait_Norway_Johan_Nygaardsvold.dds"
+	expire = "1965.1.1"
+	ideology = social_democracy
+	traits = {
+		industry_reformer
+	}
+}
+
+create_country_leader = {
+	name = "Vidkun Quisling"
+	desc = "POLITICS_VIDKUN_QUISLING_DESC"
+	picture = "Portrait_Norway_Vidkun_Quisling.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		Unpopular_Traitor
+	}
+}
+
+create_country_leader = {
+	name = "Haakon VII"
+	desc = ""
+	picture = "Haakon_VII.dds"
+	expire = "1965.1.1"
+	ideology = constitutional_monarchism
+	traits = {
+		Nationalist_Symbol_2
+	}
+}
+
+create_country_leader = {
+	name = "Adam Egede-Nissen"
+	desc = "POLITICS_ADAM_EGEDE_NISSEN_DESC"
+	picture = "r56_Adam_Egede-Nissen.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		militant_socialist
+	}
+}
+}
+			if = {
+				limit = {
+					original_tag = DEN				
+                    has_war_with = DEN
+				}
+				set_cosmetic_tag = DEN_CIVILWAR
+create_country_leader = {  #Dies in 1942
+	name = "Thorvald Stauning"
+	desc = "POLITICS_THORVALD_STAUNING_DESC"
+	picture = "Portrait_Denmark_Thorvald_Stauning.dds"
+	expire = "1965.1.1"
+	ideology = social_democracy
+	traits = {
+		resolute_social_democrat_2
+	}
+}
+
+create_country_leader = {
+	name = "Frits Clausen"
+	desc = "POLITICS_FRITS_CLAUSEN_DESC"
+	picture = "r56_Frits_Clausen.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		bitter_collaborator
+		Medical_Doctor
+		incompetent_leader
+	}
+}
+
+create_country_leader = {
+	name = "Aksel Larsen"
+	desc = "POLITICS_AKSEL_LARSEN_DESC"
+	picture = "r56_Aksel_Larsen.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		Popular_Resistor
+	}
+}
+
+create_country_leader = {
+	name = "Christian X"
+	desc = ""
+	picture = "Christian_X.dds"
+	expire = "1965.1.1"
+	ideology = constitutional_monarchism
+	traits = {
+		man_of_the_nation
+	}
+}
+}
+			if = {
+				limit = {
+					original_tag = FIN				
+                    has_war_with = FIN
+				}
+				set_cosmetic_tag = FIN_CIVILWAR
+create_country_leader = {
+	name = "Otto Wille Kuusinen"
+	desc = "POLITICS_OTTO_KUUSINEN_DESC"
+	picture = "r56_Otto_Wille_Kuusinen.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		Unpopular_Traitor
+	}
+}
+
+create_country_leader = {
+	name = "Vilho Annala"
+	desc = "POLITICS_VILHO_ANNALA_DESC"
+	picture = "Portrait_Finland_Vilho_Annala.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		economist
+	}
+}
+
+			create_country_leader = {
+				name = "Carl Gustaf Mannerheim"
+				desc = ""
+				picture = "portrait_fin_carl_mannerheim.dds"
+				expire = "1965.1.1"
+				ideology = moderatism
+				traits = {
+					Marsalkka
+				}
+			}
+
+create_country_leader = {
+	name = "Pehr Evind Svinhufvud"
+	desc = ""
+	picture = "r56_Pehr_Evind_Svinhufvud.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		Ukko_Pekka
+	}
+}
+}
+			if = {
+				limit = {
+					original_tag = BEL				
+                    has_war_with = BEL
+				}
+				set_cosmetic_tag = BEL_CIVILWAR
+create_country_leader = {
+	name = "Paul Van Zeeland"
+	desc = "POLITICS_PAUL_VAN_ZEELAND_DESC"
+	picture = "Portrait_Belgium_Paul_Van_Zeeland.dds"
+	expire = "1965.1.1"
+	ideology = market_liberalism
+	traits = {
+		banker
+		education_reformer
+	}
+}
+
+#create_country_leader = {
+#	name = "Hubert Pierlot"
+#	desc = "POLITICS_HUBERT_PIERLOT_DESC"
+#	picture = "Portrait_Belgium_Hubert_Pierlot.dds"
+#	expire = "1965.1.1"
+#	ideology = conservatism
+#	traits = {
+#		#
+#	}
+#}
+
+create_country_leader = {
+	name = "Joseph Jacquemotte"
+	desc = "POLITICS_JOSEPH_JACQUEMOTTE_DESC"
+	picture = "Portrait_Belgium_Joseph_Jacquemotte.dds"
+	expire = "1965.1.1"
+	ideology = anarchist_communism
+	traits = {
+		editor
+	}
+}
+
+create_country_leader = {
+	name = "Léon Degrelle"
+	desc = "POLITICS_LEON_DEGRELLE_DESC"
+	picture = "Portrait_Belgium_Leon_Degrelle.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		eager_collaborator
+	}
+}
+
+create_country_leader = {
+	name = "Leopold III"
+	desc = "POLITICS_LEOPOLD_III_DESC"
+	picture = "Portrait_Belgium_Leopold_iii.dds"
+	expire = "1965.1.1"
+	ideology = constitutional_monarchism
+	traits = {
+		Unpopular_Monarch_3
+	}
+}
+}					
+			if = {
+				limit = {
+					original_tag = FRA				
+                    has_focus_tree = generic_focus
+				}
+                load_focus_tree = {
+                tree = french_focus
+                keep_completed = no
+                }				
+				set_cosmetic_tag = FRA_CIVILWAR
+create_country_leader = {
+	name = "Édouard Daladier"
+	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+	picture = "Portrait_France_Edouard_Daladier.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		stout_defender
+	}
+}
+
+create_country_leader = {
+	name = "Pierre Laval"
+	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+	picture = GFX_portrait_fra_pierre_laval
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		stout_defender
+	}
+}
+
+create_country_leader = {
+	name = "Pierre Laval"
+	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+	picture = GFX_portrait_fra_pierre_laval
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = {
+		stout_defender
+	}
+}
+
+create_country_leader = {
+	name = "Maurice Thorez"
+	desc = "POLITICS_MAURICE_THOREZ_DESC"
+	picture = "GFX_portrait_fra_maurice_thorez"
+	expire = "1965.1.1"
+	ideology = 	stalinism
+	traits = {
+		Communist_Organizer
+	}
+}
+
+create_country_leader = {
+	name = "Philippe Pétain"
+	desc = "POLITICS_PHILIPPE_PÉTAIN_DESC"
+	picture = "Portrait_France_Philippe_Petain.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		Marshal_Of_France
+	}
+}				
+			}
+			if = {
+				limit = {
+					original_tag = ENG				
+                    has_focus_tree = generic_focus
+				}
+                load_focus_tree = {
+                tree = british_focus
+                keep_completed = no
+                }				
+				set_cosmetic_tag = ENG_CIVILWAR
+create_country_leader = {
+	name = "Winston Churchill"
+	desc = "POLITICS_WINSTON_CHURCHILL_DESC"
+	picture = "Portrait_Britain_Winston_Churchill.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+	British_Bulldog_2	#traits here need to also be added to events britain.9 and britain.10. Don't ask why.
+	}
+}
+
+create_country_leader = {
+	name = "Oswald Mosley"
+	desc = "POLITICS_OSWALD_MOSLEY_DESC"
+	picture = "Portrait_Britain_Oswald_Mosley.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		economic_reformer
+	}
+}
+
+create_country_leader = {
+	name = "Harry Pollitt"
+	desc = "POLITICS_HARRY_POLLITT_DESC"
+	picture = "portrait_eng_harry_pollitt.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		staunch_stalinist
+	}
+}
+
+create_country_leader = {
+	name = "David Lloyd George"
+	desc = ""
+	picture = "Lloyd_George.dds"
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = {
+		headstrong
+		autocratic_imperialist
+		}
+	}		
+}		
+
+			if = {
+				limit = {
+					original_tag = USA
+                    has_focus_tree = generic_focus
+				}
+                load_focus_tree = {
+                tree = usa_focus
+                keep_completed = no
+                }							
+				set_cosmetic_tag = USA_CIVILWAR
+create_country_leader = {
+	name = "Franklin Delano Roosevelt"
+	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+	picture = "Portrait_USA_Franklin_Roosevelt.dds"
+	expire = "1947.1.1"
+	ideology = liberalism
+	traits = {
+		dislikes_germany
+		democratic_idealist
+	}
+}
+
+create_country_leader = {
+	name = "William Dudley Pelley"
+	desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
+	picture = "Portrait_USA_William_Dudley_Pelley.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		Chief_of_Terror
+	}
+}
+
+create_country_leader = {
+	name = "Earl Browder"
+	desc = "POLITICS_EARL_BROWDER_DESC"
+	picture = "portrait_USA_earl_browder.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		Red_Director
+	}
+}
+
+create_country_leader = {
+	name = "J. Edgar Hoover"
+	desc = ""
+	picture = "John_Edgar_Hoover.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		The_Director_2
+	}
+}
+            set_cosmetic_tag = USA_CIVILWAR				
+			}
+			if = {
+				limit = {
+					original_tag = SOV
+                    has_focus_tree = generic_focus
+				}
+                load_focus_tree = {
+                tree = soviet_focus
+                keep_completed = no
+                }				
+				set_cosmetic_tag = SOV_CIVILWAR
+create_country_leader = {
+	name = "Iosef Stalin"
+	desc = "POLITICS_JOSEPH_STALIN_DESC"
+	picture = "Portrait_Soviet_Joseph_Stalin.dds"
+	expire = "1953.3.1"
+	ideology = stalinism
+	traits = {
+	The_Vozhd
+	}
+}
+
+create_country_leader = {
+	name = "Konstantin Rodzaevsky"
+	desc = "POLITICS_KONSTANTIN_RODZAEVSKY_DESC"
+	picture = "Portrait_Soviet_Konstantin_Rodzaevsky.dds"
+	expire = "1953.3.1"
+	ideology = fascism_ideology
+	traits = {
+		The_Russian_National_Socialist
+	}
+}
+
+create_country_leader = {
+	name = "Alexander Fyodorovich Kerensky"
+	desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
+	picture = "Portrait_Alexander_Kerensky.dds"
+	expire = "1953.3.1"
+	ideology = socialism
+	traits = {
+	sharp_tongued_lawyer	
+	}
+}
+
+create_country_leader = {
+	name = "Konstantin Rokossovsky"
+	desc = ""
+	picture = "Portrait_Soviet_Konstantin_Rokossovsky.dds"
+	expire = "1953.3.1"
+	ideology = moderatism
+	traits = {
+	revolutionary_general	
+	}
+}				
+			}
+			if = {
+				limit = {
+					original_tag = AST
+                    has_focus_tree = generic_focus
+					has_dlc = "Together for Victory"
+				}
+                load_focus_tree = {
+                tree = australian_focus
+                keep_completed = no
+                }					
+				set_cosmetic_tag = AST_CIVILWAR
+create_country_leader = {
+	name = "John Curtin"
+	desc = "POLITICS_JOHN_CURTIN_DESC"
+	picture = "Portrait_Australia_John_Curtin.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		editor
+	}
+}
+
+create_country_leader = {
+	name = "Eric Campbell"
+	desc = "POLITICS_ERIC_CAMPBELL_DESC"
+	picture = "GFX_AST_eric_campbell"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		Fascist_Veteran_Paramilitarist
+	}
+}
+
+create_country_leader = {
+	name = "Richard Dixon"
+	desc = "POLITICS_RICHARD_DIXON_DESC"
+	picture = "GFX_AST_richard_dixon"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		Trade_Unionist
+	}
+}
+
+create_country_leader = {
+	name = "Earle Page"
+	desc = "POLITICS_EARLE_PAGE_DESC"
+	picture = "GFX_AST_earle_page"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		Treasurer
+	}
+}				
+			}			
+			if = {
+				limit = {
+					original_tag = BUL
+                    has_focus_tree = generic_focus
+					has_dlc = "Battle for the Bosporus"
+				}
+                load_focus_tree = {
+                tree = bulgarian_focus
+                keep_completed = no
+                }					
+				set_cosmetic_tag = BUL_CIVILWAR
+	create_country_leader = { #DLC
+		name = "Boris III"
+		desc = "POLITICS_BORIS_III_DESC"
+		picture = "Portrait_Bulgaria_Boris_III.dds"
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {
+			tsar_unifier
+		}
+	}
+
+	create_country_leader = { #DLC
+		name = "Georgi Dimitrov"
+		desc = "POLITICS_GEORGI_DIMITROV_DESC"
+		picture = GFX_portrait_bul_georgi_dimitrov
+		expire = "1965.1.1"
+		ideology = stalinism
+		traits = {
+			the_hero_of_the_leipzig_trials
+		}
+	}
+
+	create_country_leader = { #DLC
+		name = "Nikola Mushanov" 
+		desc = "POLITICS_NIKOLA_MUSHANOV_DESC"
+		picture = GFX_portrait_bul_nikola_mushanov
+		expire = "1965.1.1"
+		ideology = liberalism
+		traits = {
+			appeaser
+		}
+	}
+
+	create_country_leader = { #DLC
+		name = "Hristo Lukov"
+		desc = "POLITICS_HRISTO_LUKOV_DESC"
+		picture = "GFX_Portrait_bulgaria_hristo_lukov"
+		expire = "1965.1.1"
+		ideology = fascism_ideology
+		traits = {
+			hardened_officer
+		}
+	}				
+			}			
+			if = {
+				limit = {
+					original_tag = CAN
+                    has_focus_tree = generic_focus
+			has_dlc = "Together for Victory"					
+				}
+                load_focus_tree = {
+                tree = canadian_focus
+                keep_completed = no
+                }					
+				set_cosmetic_tag = CAN_CIVILWAR
+create_country_leader = {
+	name = "Mackenzie King"
+	desc = "POLITICS_MACKENZIE_KING_DESC"
+	picture = "Portrait_Canada_Mackenzie_King.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		technocrat
+		Liberal_Corporatist
+	}
+}
+
+create_country_leader = {
+	name = "Adrien Arcand"
+	desc = "POLITICS_ADRIEN_ARCAND_DESC"
+	picture = "GFX_CAN_adrien_arcand"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		Canadian_Fuhrer
+	}
+}
+
+create_country_leader = {
+	name = "Tim Buck"
+	desc = "POLITICS_TIM_BUCK_DESC"
+	picture = "Portrait_Canada_Tim_Buck.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "J. S. Woodsworth"
+	desc = "POLITICS_JS_WOODSWORTH_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}				
+			}			
+			if = {
+				limit = {
+				    OR = {
+					original_tag = CHI
+					original_tag = PRC				
+					}
+                    has_focus_tree = generic_focus
+					has_government = communism
+					NOT = {
+					has_cosmetic_tag = EAST_HEBEI
+					}
+			has_dlc = "Waking the Tiger"					
+				}
+                load_focus_tree = {
+                tree = china_communist_focus
+                keep_completed = no
+                }				
+				set_cosmetic_tag = CHI_CIVILWAR
+create_country_leader = {
+	name = "Chiang Chung-Cheng"
+	desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
+	picture = "Portrait_China_Chiang_Kai_Shek.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		Generallissimo_2
+	}
+}
+
+create_country_leader = {
+	name = "Mao Tse-Tung"
+	desc = "POLITICS_MAO_ZEDONG_DESC"
+	picture = "GFX_portrait_prc_mao_zedong"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		Staunch_stalinist_2
+	}
+}
+
+create_country_leader = {
+	name = "Wang Jingwei"
+	desc = "POLITICS_WANG_JINGWEI_DESC"
+	picture = "GFX_portrait_chi_wang_jingwei"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		Fascist_collaborator
+	}
+}
+
+create_country_leader = {
+	name = "Lin Sen" 
+	desc = "POLITICS_LIN_SEN_DESC"
+	picture = "Lin_Sen.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		honest_elder
+	}
+}				
+			}
+			if = {
+				limit = {
+				    OR = {
+					original_tag = CHI
+					original_tag = PRC				
+					}
+                    has_focus_tree = generic_focus
+					NOT = {
+					has_cosmetic_tag = EAST_HEBEI
+					}					
+			has_dlc = "Waking the Tiger"					
+					NOT = {
+					has_government = communism
+					}
+				}
+                load_focus_tree = {
+                tree = china_nationalist_focus
+                keep_completed = no
+                }				
+				set_cosmetic_tag = CHI_CIVILWAR
+create_country_leader = {
+	name = "Chiang Chung-Cheng"
+	desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
+	picture = "gfx/leaders/CHI/Portrait_China_Chiang_Kai_Shek.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		Generallissimo_2
+	}
+}
+
+create_country_leader = {
+	name = "Mao Tse-Tung"
+	desc = "POLITICS_MAO_ZEDONG_DESC"
+	picture = "GFX_portrait_prc_mao_zedong"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		Staunch_stalinist_2
+	}
+}
+
+create_country_leader = {
+	name = "Wang Jingwei"
+	desc = "POLITICS_WANG_JINGWEI_DESC"
+	picture = "GFX_portrait_chi_wang_jingwei"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		Fascist_collaborator
+	}
+}
+
+create_country_leader = {
+	name = "Lin Sen" 
+	desc = "POLITICS_LIN_SEN_DESC"
+	picture = "Lin_Sen.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		honest_elder
+	}
+}			
+			}			
+			if = {
+				limit = {
+					original_tag = CZE
+                    has_focus_tree = generic_focus
+			has_dlc = "Death or Dishonor"					
+				}
+                load_focus_tree = {
+                tree = czech_focus
+                keep_completed = no
+                }					
+				set_cosmetic_tag = CZE_CIVILWAR
+create_country_leader = {
+	name = "Edvard Beneš"
+	desc = "POLITICS_EDVARD_BENES_DESC"
+	picture = "Portrait_Czech_Edvard_Benes.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+	economic_reformer
+	}
+}
+
+create_country_leader = {
+	name = "Jaroslav Krejčí"
+	desc = "POLITICS_JAROSLAV_KREJCI_DESC"
+	picture = "Portrait_Czech_Jaroslav_Krejci.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+	Fascist_collaborator
+	}
+}
+
+create_country_leader = {
+	name = "Klement Gottwald"
+	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+	picture = "Portrait_Czech_Klement_Gottwald.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+	Staunch_stalinist_2
+	}
+}
+
+create_country_leader = {
+	name = "Vojtěch Boris Luža"
+	desc = "POLITICS_VOJTECH_LUZA_DESC"
+	picture = "portrait_vojtech_luza.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+	Resistance_Leader
+	}
+}				
+			}			
+			if = {
+				limit = {
+					original_tag = GRE
+                    has_focus_tree = generic_focus
+			has_dlc = "Battle for the Bosporus"					
+				}
+                load_focus_tree = {
+                tree = greek_focus
+                keep_completed = no
+                }	
+				set_cosmetic_tag = GRE_CIVILWAR
+	create_country_leader = {
+		name = "Konstantinos Demertzis"
+		desc = "POLITICS_KONSTANTINOS_DEMERTZIS_DESC"
+		picture = "GFX_portrait_gre_konstantinos_demertzis"
+		expire = "1965.1.1"
+		ideology = centrism
+		traits = {
+			monarchist_puppet
+		}
+	}
+	
+	create_country_leader = {
+		name = "Nikos Zachariadis"
+		desc = "POLITICS_NIKOS_ZACHARIADIS_DESC"
+		picture = "GFX_portrait_gre_nikos_zachariadis"
+		expire = "1965.1.1"
+		ideology = stalinism
+		traits = {
+			reluctant_stalinist
+		}
+	}
+	
+	create_country_leader = {
+		name = "Eleftherios Venizelos"
+		desc = "POLITICS_ELEFTHERIOS_VENIZELOS_DESC"
+		picture = "GFX_portrait_gre_eleftherios_venizelos"
+		expire = "1965.1.1"
+		ideology = liberalism
+		traits = {
+			ethnarch
+		}
+	}
+	
+	create_country_leader = {
+		name = "George Mercouris"
+		desc = "POLITICS_GEORGIOS_KOSMIDIS_DESC"
+		picture = "GFX_portrait_gre_george_mercouris"
+		expire = "1965.1.1"
+		ideology = gen_nazism
+		traits = {
+			polemarch
+			likes_turkey
+		}
+	}				
+			}	
+			if = {
+				limit = {
+					original_tag = HUN
+                    has_focus_tree = generic_focus
+			has_dlc = "Death or Dishonor"					
+				}
+                load_focus_tree = {
+                tree = hungarian_focus
+                keep_completed = no
+                }				
+				set_cosmetic_tag = HUN_CIVILWAR
+create_country_leader = {
+	name = "Mátyás Rákosi"
+	desc = "POLITICS_MATYAS_RAKOSKI_DESC"
+	picture = "Portrait_Hungary_Matyas_Rakoski.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		Staunch_stalinist_2
+	}
+}
+
+create_country_leader = {
+	name = "Árpád Szakasits"
+	desc = "POLITICS_ARPAD_SZAKASITS_DESC"
+	picture = "Portrait_Arpad_Szakasits.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+		create_country_leader = {
+			name = "Miklós Horthy"
+			desc = "POLITICS_MIKLOS_HORTHY_DESC"
+			picture = "Portrait_Hungary_Miklos_Horthy.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+			Regent_and_Admiral
+			}
+		}
+		create_country_leader = {
+			name = "Miklós Horthy"
+			desc = "POLITICS_MIKLOS_HORTHY_DESC"
+			picture = "Portrait_Hungary_Miklos_Horthy.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+			Regent_and_Admiral
+			}
+		}				
+			}
+			if = {
+				limit = {
+					original_tag = RAJ
+                    has_focus_tree = generic_focus
+				has_dlc = "Together for Victory"				
+				}
+                load_focus_tree = {
+                tree = indian_focus
+                keep_completed = no
+                }				
+				set_cosmetic_tag = RAJ_CIVILWAR
+	create_country_leader = {
+		name = "Lord Linlithgow"
+		desc = "POLITICS_LORD_LINLITHGOW_DESC"
+		picture = "gfx/leaders/RAJ/Portrait_British_Raj_Lord_Linlithgow.dds"
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {
+
+		}
+	}
+create_country_leader = {
+	name = "V. D. Savarkar"
+	desc = "POLITICS_VD_SAVARKAR_DESC"
+	picture = "GFX_RAJ_veer_savarkar"
+	expire = "1965.1.1"
+	ideology = falangism
+	traits = {
+		headstrong
+	}
+}
+
+create_country_leader = {
+	name = "P. Krishna Pillai"
+	desc = "POLITICS_P_KRISHNA_PILLAI_DESC"
+	picture = "GFX_RAJ_krishna_pillai"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		colonial_communist
+	}
+}
+
+create_country_leader = {
+	name = "B. P. Sitaramayya"
+	desc = "POLITICS_B_P_SITARAMAYYA_DESC"
+	picture = "GFX_RAJ_pattabhi_sitaramayya"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		social_reformer
+	}
+}	
+			}
+			if = {
+				limit = {
+					original_tag = ITA
+                    has_focus_tree = generic_focus
+				}
+                load_focus_tree = {
+                tree = italian_focus
+                keep_completed = no
+                }					
+				set_cosmetic_tag = ITA_CIVILWAR
+create_country_leader = {
+	name = "Benito Mussolini"
+	desc = "POLITICS_BENITO_MUSSOLINI_DESC"
+	picture = "Portrait_Italy_Benito_Mussolini.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+	Il_Duce
+	}
+}
+
+create_country_leader = {
+	name = "Ferruccio Parri"
+	desc = "POLITICS_BENITO_MUSSOLINI_DESC"
+	picture = "GFX_portrait_italy_ferruccio_parri"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+	liberal_journalist	
+	}
+}
+
+create_country_leader = {
+	name = "Umberto II"
+	desc = "POLITICS_VICTOR_UMBERTO_II_DESC"
+	picture = "umberto.dds"
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = {
+    Nationalist_Symbol_3
+	}
+}
+
+create_country_leader = {
+	name = "Palmiro Togliatti"
+	desc = "POLITICS_BENITO_MUSSOLINI_DESC"
+	picture = "GFX_portrait_ita_palmiro_togliatti"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+	anti_fascist_agent	
+	}
+}				
+			}
+			if = {
+				limit = {
+					original_tag = JAP
+                    has_focus_tree = generic_focus				
+				}
+                load_focus_tree = {
+                tree = japan_wtt_focus
+                keep_completed = no
+                }					
+				set_cosmetic_tag = JAP_CIVILWAR
+create_country_leader = {
+	name = "Hirohito"
+	desc = "POLITICS_Hirohito_DESC"
+	picture = "Portrait_Japan_Hirohito.dds"
+	expire = "1989.1.1"
+	ideology = fascism_ideology
+	traits = {
+		warrior_code
+		emperor_showa
+		imperial_sanction
+	}
+}
+
+create_country_leader = {
+	name = "Hideki Tojo"
+	desc = "POLITICS_TOJO_DESC"
+	picture = "r56_Hideki_Tojo.dds"
+	expire = "1989.1.1"
+	ideology = gen_nazism
+	traits = {
+		Chief_of_Terror
+		The_Butcher
+		warmonger
+	}
+}
+
+create_country_leader = {
+	name = "Kyuichi Tokuda"
+	desc = "POLITICS_Hirohito_DESC"
+	picture = "GFX_Portrait_kyuichi_tokuda"
+	expire = "1989.1.1"
+	ideology = marxism
+	traits = {
+		Communist_Lawyer
+	}
+}
+
+create_country_leader = {
+	name = "Tetsu Katayama"
+	desc = "POLITICS_Hirohito_DESC"
+	picture = "GFX_Portrait_tetsu_katayama"
+	expire = "1989.1.1"
+	ideology = liberalism
+	traits = {
+		social_reformer
+	}
+}
+create_country_leader = {
+	name = "Tetsu Katayama"
+	desc = "POLITICS_Hirohito_DESC"
+	picture = "GFX_Portrait_tetsu_katayama"
+	expire = "1989.1.1"
+	ideology = moderatism
+	traits = {
+		social_reformer
+	}
+}				
+			}
+			if = {
+				limit = {
+					original_tag = MAN
+                    has_focus_tree = generic_focus
+			has_dlc = "Waking the Tiger"					
+				}
+                load_focus_tree = {
+                tree = manchukuo_focus
+                keep_completed = no
+                }				
+				set_cosmetic_tag = MAN_CIVILWAR
+create_country_leader = {
+	name = "Aisin Gioro Puyi"
+	
+	picture = "gfx/leaders/MAN/Portrait_Manchuria_Henry_Pu_Yi.dds"
+	expire = "1960.1.1"
+	ideology = rexism
+	traits = {
+		warrior_code
+		Puppet_Emperor
+	}
+}
+
+create_country_leader = {
+	name = "Aisin Gioro Puyi"
+	
+	picture = "gfx/leaders/MAN/Portrait_Manchuria_Henry_Pu_Yi.dds"
+	expire = "1960.1.1"
+	ideology = despotism
+	traits = {
+		warrior_code
+		Puppet_Emperor
+	}
+}
+create_country_leader = {
+	name = "Manchu Revolutionary Council"
+	
+	picture = "gfx/leaders/MAN/MAN_council.dds"
+	expire = "1960.1.1"
+	ideology = marxism
+	traits = {
+		revolutionary_author
+	}
+}
+
+create_country_leader = {
+	name = "Manchu Liberation Council"
+	
+	picture = "gfx/leaders/MAN/MAN_council.dds"
+	expire = "1960.1.1"
+	ideology = socialism
+	traits = {
+		elected_regency_council_pro_allies
+	}
+}
+           	set_cosmetic_tag = MAN_CIVILWAR				
+			}
+			if = {
+				limit = {
+					original_tag = MEX
+                    has_focus_tree = generic_focus
+			has_dlc = "Man the Guns"					
+				}
+                load_focus_tree = {
+                tree = mexico_focus_tree
+                keep_completed = no
+                }				
+				set_cosmetic_tag = MEX_CIVILWAR
+				create_country_leader = {
+					name = "Plutarco E. Calles"
+					desc = "POLITICS_PLUTARCO_E_CALLES_DESC"
+					picture = GFX_portrait_mex_calles_civil
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						el_jefe_maximo
+					}
+				}
+
+create_country_leader = {
+	name = "Salvador Abascal"
+	desc = "POLITICS_SALVADOR_ABASCAL_DESC"
+	picture = "GFX_Portrait_MEX_Salvador_Abascal"
+	expire = "1965.1.1"
+	ideology = falangism
+	traits = {
+		fascist_militia_leader
+	}
+}
+
+			create_country_leader = {
+				name = "Luis María Martínez"
+				desc = "POLITICS_LUIS_MARIA_MARTINEZ_DESC"
+				picture = "GFX_portrait_MEX_Luis_Maria_Martinez"
+				expire = "1965.1.1"
+				ideology = socialism
+				traits = {
+					primate_of_mexico
+				}
+			}
+
+				create_country_leader = {
+					name = "Vicente Lombardo"
+					desc = "POLITICS_VICENTE_LOMBARDO_DESC"
+					picture = GFX_portrait_mex_vicente_lombardo
+					expire = "1965.1.1"
+					ideology = marxism
+					traits = {
+						the_dean_of_mexican_marxism
+					}
+				}				
+			}
+			if = {
+				limit = {
+					original_tag = HOL
+                    has_focus_tree = generic_focus
+			has_dlc = "Man the Guns"					
+				}
+                load_focus_tree = {
+                tree = netherlands_focus
+                keep_completed = no
+                }					
+				set_cosmetic_tag = HOL_CIVILWAR
+create_country_leader = {
+	name = "Hendrikus Colijn"
+	desc = "POLITICS_HENDRIKUS_COLJIN_DESC"
+	picture = "GFX_portrait_holland_hendrikus_colijn"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		strict_austerity_adherent
+	}
+}
+
+create_country_leader = {
+	name = "Anton Mussert"
+	desc = "POLITICS_ANTON_MUSSERT_DESC"
+	picture = "GFX_portrait_hol_anton_mussert"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		leider
+	}
+}
+
+create_country_leader = {
+	name = "Lou de Visser"
+	desc = "POLITICS_LOU_DE_VISSER_DESC"
+	picture = "GFX_portrait_HOL_lou_de_visser"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		veteran_communist
+	}
+}
+
+create_country_leader = {
+	name = "Willem Schermerhorn"
+	desc = "POLITICS_WIM_SCHERMERHORN_DESC"
+	picture = "GFX_portrait_hol_wim_schermerhorn"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}				
+			}	
+			if = {
+				limit = {
+					original_tag = NZL
+                    has_focus_tree = generic_focus
+			has_dlc = "Together for Victory"					
+				}
+                load_focus_tree = {
+                tree = new_zealander_focus
+                keep_completed = no
+                }				
+				set_cosmetic_tag = NZL_CIVILWAR
+create_country_leader = {
+	name = "Michael Joseph Savage"
+	desc = "POLITICS_MICHAEL_JOSEPH_SAVAGE_DESC"
+	picture = "GFX_NZL_michael_joseph_savage"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		social_reformer
+	}
+}
+
+create_country_leader = {
+	name = "Sidney Holland"
+	desc = "POLITICS_SIDNEY_HOLLAND_DESC"
+	picture = "GFX_NZL_sidney_holland"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "John Ormond"
+	desc = "POLITICS_JOHN_ORMOND_DESC"
+	picture = "GFX_NZL_john_ormond"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Elsie Farrelly"
+	desc = "POLITICS_JOHN_ORMOND_DESC"
+	picture = "GFX_NZL_elsie_farrelly"
+	expire = "1965.1.1"
+	ideology = marxism
+	female = yes
+	traits = {
+		#
+	}
+}				
+			}
+			if = {
+				limit = {
+					original_tag = POL
+                    has_focus_tree = generic_focus
+				}
+                load_focus_tree = {
+                tree = polish_focus
+                keep_completed = no
+                }								
+				set_cosmetic_tag = POL_CIVILWAR
+create_country_leader = {
+	name = "Władysław Sikorski"
+	desc = "POLITICS_WLADYSLAW_SIKORSKI_DESC"
+	picture = "Portrait_Poland_Wladyslaw_Sikorski.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+	    patriotic_guerilla
+		Freedom_Fighter_2
+	}
+}
+
+create_country_leader = {
+	name = "Władysław Gomułka"
+	desc = "POLITICS_WLADYSLAW_GOMULKA_DESC"
+	picture = "Portrait_Poland_Wladyslaw_Gomulka.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		reluctant_stalinist
+	}
+}
+
+create_country_leader = {
+	name = "Wincenty Witos"
+	desc = "POLITICS_WINCENTY_WITOS_DESC"
+	picture = "GFX_POL_wincenty_witos"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		social_reformer
+	}
+}
+
+create_country_leader = {
+	name = "Bolesław Piasecki"
+	desc = "POLITICS_BOLESLAW_PIASECKI_DESC"
+	picture = "GFX_POL_boleslaw_piasecki"
+	expire = "1965.1.1"
+	ideology = falangism
+	traits = {
+		eager_collaborator
+	}
+}				
+			}
+			if = {
+				limit = {
+					original_tag = POR
+                    has_focus_tree = generic_focus
+				has_dlc = "La Resistance"				
+				}
+                load_focus_tree = {
+                tree = portuguese_focus
+                keep_completed = no
+                }				
+				set_cosmetic_tag = POR_CIVILWAR
+	create_country_leader = {
+		name = "António de Oliveira Salazar"
+		desc = "POLITICS_ANTÓNIO_DE_OLIVEIRA_SALAZAR_DESC"
+		picture = "gfx/leaders/POR/portrait_por_antonio_de_oliveira_salazar.dds"
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {
+			conservative_nationalist_lar
+		}
+	}
+	
+	create_country_leader = {
+		name = "Bento Gonçalves"
+		desc = "POLITICS_BENTO_GONCALVES_DESC"
+		picture = "gfx/leaders/POR/portrait_por_bento_goncalves.dds"
+		expire = "1965.1.1"
+		ideology = marxism
+		traits = {
+			veteran_communist
+		}
+	}
+	
+	create_country_leader = {
+		name = "Francisco de Barcelos Rolão Preto"
+		desc = "POLITICS_FRANSISCO_BARCELOS_ROLAO_PRETO_DESC"
+		picture = "gfx/leaders/POR/portrait_por_francisco_de_barcelos_oliveira_preto.dds"
+		expire = "1965.1.1"
+		ideology = fascism_ideology
+		traits = {
+			fascist_militia_leader
+		}
+	}
+	
+	create_country_leader = {
+		name = "José Norton de Matos"
+		desc = "POLITICS_JOSE_NORTON_DE_MATOS_DESC"
+		picture = "gfx/leaders/POR/portrait_por_jose_norton_de_matos.dds"
+		expire = "1965.1.1"
+		ideology = liberalism
+		traits = {
+			democratic_reformer
+		}
+	}				
+			}
+			if = {
+				limit = {
+					original_tag = ROM
+                    has_focus_tree = generic_focus
+			has_dlc = "Death or Dishonor"					
+				}
+                load_focus_tree = {
+                tree = romanian_focus
+                keep_completed = no
+                }				
+				set_cosmetic_tag = ROM_CIVILWAR
+create_country_leader = {
+	name = "Gheorghe Tatarescu"
+	desc = "POLITICS_GHEORGHE_TATARESCU_DESC"
+	picture = "gfx/leaders/ROM/Portrait_Romania_Gheorghe_Tatarescu.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+	monarchist_puppet
+	}
+}
+
+create_country_leader = {
+	name = "Constantin Ion Parhon"
+	desc = "POLITICS_CONSTANTIN_PARHON_DESC"
+	picture = "Portrait_Romania_Constantin_Parhon.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		Staunch_Stalinist_2
+	}
+}
+
+create_country_leader = { 
+	name = "Gheorghe Gheorghiu-Dej"
+	desc = "POLITICS_GHEORGHE_GHEORGHIU_DEJ_DESC"
+	picture = "gheorgiu_dej.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		stalinist_revolutionary
+		Communist_Organizer
+	}
+}
+
+create_country_leader = {
+	name = "Armand Calinescu"
+	desc = "POLITICS_ARMAND_CALINESCU_DESC"
+	picture = "gfx/leaders/ROM/Portrait_Romania_Armand_Calinescu.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+	gifted_shipping_magnate
+	}
+}
+
+create_country_leader = {
+	name = "Octavian Goga"
+	desc = "POLITICS_OCTAVIAN_GOGA_DESC"
+	picture = "Portrait_Romania_Octavian_Goga.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}				
+			}
+			if = {
+				limit = {
+					original_tag = SAF
+                    has_focus_tree = generic_focus
+			has_dlc = "Together for Victory"					
+				}
+                load_focus_tree = {
+                tree = south_african_focus
+                keep_completed = no
+                }					
+				set_cosmetic_tag = SAF_CIVILWAR
+	create_country_leader = {
+		name = "Jan Smuts"
+		desc = "POLITICS_JAN_SMUTS_DESC"
+		picture = "Portrait_SouthAfrica_Jan_Smuts.dds"
+		expire = "1965.1.1"
+		ideology = conservatism
+		traits = {
+			staunch_globalist
+		}
+	}
+
+create_country_leader = {
+	name = "D. F. Malan"
+	desc = "POLITICS_DF_MALAN_DESC"
+	picture = "GFX_SAF_daniel_malan"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		Segregationist
+	}
+}
+
+create_country_leader = {
+	name = "Moses Kotane"
+	desc = "POLITICS_MOSES_KOTANE_DESC"
+	picture = "GFX_SAF_moses_kotane"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Pixley Ka Isaka Seme"
+	desc = "POLITICS_PIXLEY_SEME_DESC"
+	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_3.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}				
+			}	
+			if = {
+				limit = {
+					original_tag = SPR
+                    has_focus_tree = generic_focus
+					has_global_flag = scw_over
+						has_dlc = "La Resistance"		
+				}
+                load_focus_tree = {
+                tree = spanish_focus
+                keep_completed = no
+                }					
+				set_cosmetic_tag = SPR_CIVILWAR
+	create_country_leader = {
+		name = "Niceto Alcalá-Zamora"
+		desc = "POLITICS_NICETO_ALCALA_ZAMORA_DESC"
+		picture = "GFX_portrait_SPR_niceto_alcala_zamora"
+		expire = "1965.1.1"
+		ideology = conservatism
+		traits = {
+			indecisive
+		}
+	}
+	
+	create_country_leader = {
+		name = "José Díaz"
+		desc = "POLITICS_JOSE_DIAZ_DESC"
+		picture = "portrait_spr_jose_diaz.dds"
+		expire = "1965.1.1"
+		ideology = stalinism
+		traits = {
+			veteran_communist
+		}
+	}
+	create_country_leader = {
+		name = "José Antonio Primo de Rivera"
+		desc = "POLITICS_JOSE_ANTONIO_PRIMO_DE_RIVERA_DESC"
+		picture = "GFX_portrait_SPA_jose_antonio_primo_de_rivera"
+		expire = "1965.1.1"
+		ideology = falangism
+		traits = {
+			sins_of_the_father
+		}
+	}
+	create_country_leader = {
+		name = "Manuel Fal Conde"
+		desc = "POLITICS_MANUEL_FAL_CONDE_DESC"
+		picture = "GFX_portrait_SPA_manuel_fal_conde"
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {
+			jefe
+		}
+	}				
+			}
+			if = {
+				limit = {
+					original_tag = TUR
+                    has_focus_tree = generic_focus
+					has_dlc = "Battle for the Bosporus"			
+				}
+                load_focus_tree = {
+                tree = turkish_focus
+                keep_completed = no
+                }					
+				set_cosmetic_tag = TUR_CIVILWAR
+		create_country_leader = {
+			name = "İsmet İnönü"
+			desc = "POLITICS_ISMET_INÖNÜ_DESC"
+			picture = "Portrait_Turkey_Ismet_Inonu.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				milli_sef_2
+			}
+		}
+	create_country_leader = {
+		name = "Sefik Hüsnü"
+		desc = "POLITICS_SEFIK_HUSNU_DESC"
+		picture = "gfx/leaders/TUR/Portrait_Turkey_Sefik_Husnu.dds"
+		expire = "1965.1.1"
+		ideology = stalinism
+		traits = {
+			reluctant_stalinist
+		}
+	}
+	
+	create_country_leader = {
+		name = "Celâl Bayar"
+		desc = "POLITICS_CELAL_BAYAR_DESC"
+		picture = "GFX_portrait_tur_celal_bayar"
+		expire = "1965.1.1"
+		ideology = conservatism
+		traits = {
+			liberal_democratic_paragon
+		}
+	}
+	create_country_leader = {
+		name = "Mehmet Recep Peker"
+		desc = "POLITICS_MEHMET_RECEP_PEKER_DESC"
+		picture = "GFX_portrait_tur_recep_peker"
+		expire = "1965.1.1"
+		ideology = fascism_ideology
+		traits = {
+			the_statist
+		}
+	}		
+			}
+			if = {
+				limit = {
+					original_tag = YUG
+                    has_focus_tree = generic_focus
+				has_dlc = "Death or Dishonor"				
+				}
+                load_focus_tree = {
+                tree = yugoslavian_focus
+                keep_completed = no
+                }				
+				set_cosmetic_tag = YUG_CIVILWAR
+create_country_leader = {
+	name = "Prince Paul"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "Portrait_Yugoslavia_Prince_Paul.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+	crown_regent
+	}
+}
+
+create_country_leader = {
+	name = "Milan Stojadinović"
+	desc = "POLITICS_MILAN_STOJADINOVIC_DESC"
+	picture = "gfx/leaders/YUG/Portrait_Yugoslavia_Milan_Stojadinovic.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		Economist
+	}
+}
+
+create_country_leader = {
+	name = "Milan Grol"
+	desc = "POLITICS_MILAN_GROL_DESC"
+	picture = "gfx/leaders/YUG/Portrait_Yugoslavia_Milan_Grol.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+	connected_citizen
+	democratic_reformer
+	}
+}
+
+create_country_leader = {
+	name = "Josip Broz Tito"
+	desc = "POLITICS_JOSIP_BROZ_TITO_DESC"
+	picture = "Portrait_Yugoslavia_Josip_Broz_Tito.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+	Guerilla_Expert_2
+	}
+}				
+			}
+			if = {
+				limit = {
+				    OR = {
+				original_tag = YUN
+				original_tag = SIK
+				original_tag = GXC
+				original_tag = SHX
+				original_tag = XSM
+				original_tag = HSI
+				original_tag = SZH
+				original_tag = NEA
+				original_tag = NSI
+				original_tag = TUG
+					}
+                    has_focus_tree = generic_focus
+					has_dlc = "Waking the Tiger"			
+				}
+                load_focus_tree = {
+                tree = china_warlord_focus
+                keep_completed = no
+                }						
+				set_cosmetic_tag = CHI_CIVILWAR
+			}			
+		}
+	}
+	
+	on_declare_war = {
+		effect = {			
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = SOV
+					}
+					FROM = {
+						tag = POL
+						has_war_with = GER
+					}
+				}
+				every_country = {
+					limit = {
+						OR = {
+							original_tag = FRA
+							original_tag = ENG
+							original_tag = USA				
+						}
+					}
+					set_truce = {
+						target = SOV
+						days = 120
+					}            
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+					original_tag = FRA
+					}
+					FROM = {
+						tag = GER
+					}
+				}
+                POL = {
+				country_event = { id = bs.819 }	
+                }	
+			}			
+			if = {
+				limit = {
+					ROOT = {
+					OR = {
+						original_tag = SOV
+						original_tag = GER
+						}
+					}
+					FROM = {
+						tag = POL
+					}
+				}
+                POL = {
+					add_ideas = {
+						POL_last_struggle
+					}
+                }
+                HUN = {
+		diplomatic_relation = {
+			country = POL
+			relation = non_aggression_pact
+			active = yes
+		}
+            }		
+			}		
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = GER
+					}
+					FROM = {
+						tag = SOV						
+					}
+				}
+				SOV = { add_ideas = BS_SOV_better_surrender_limit }
+				every_country = {
+					limit = {
+						AND = {
+							has_war_with = SOV
+							has_war_with = GER	
+						}				 
+					}
+					save_event_target_as = state_peace_out
+					event_target:state_peace_out = {	
+						white_peace = SOV
+						set_truce = {
+							target = SOV
+							days = 400
+						}             
+						give_military_access = SOV
+					}			   
+				}
+            }			
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = GER
+					}
+					FROM = {
+						tag = DAN
+					}
+				}
+				DAN = {
+					country_event = { hours = 0 id = bshistory.10 }
+				}
+			}			
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = GER
+						has_government = fascism
+					}
+					FROM = {
+						tag = DEN
+					}
+				}
+				GER = { add_ideas = denmark_fucking_dies }
+				DEN = { add_ideas = denmark_fucking_die }
+			}
+		}
+	}
+
+	
+	on_state_control_changed = {
+		effect = {
+			if = {
+		limit = {
+			TUR = {
+			owns_state = 341
+			}
+			NOT = {
+				TUR = {
+					OR = {
+					has_cosmetic_tag = OTT_UNIFIED
+					has_cosmetic_tag = OTT_SULTANATE
+					}
+				}
+			}
+		}		
+		341 = { set_state_name = "İstanbul" }
+				set_province_name = {
+				id = 9833
+				name = İstanbul
+				}
+		}
+		if = {
+			limit = {
+					TUR = {
+						OR = {
+						has_cosmetic_tag = OTT_UNIFIED
+						has_cosmetic_tag = OTT_SULTANATE	
+						}
+						owns_state = 341
+					}
+				}		
+			341 = { set_state_name = "Konstantiniyye" }
+				set_province_name = {
+				id = 9833
+				name = Konstantiniyye
+				}
+		}
+			if = {
+                limit = {
+				SOV = {
+				exists = no
+				}
+				SOV = {
+					NOT = {
+						OR = {
+							has_cosmetic_tag = RUS_EMPIRE
+							has_cosmetic_tag = SOV_russia
+							}
+						}
+					}
+                }
+                SOV = {
+                    set_cosmetic_tag = SOV_russia
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				UKR = {
+				exists = no
+				}
+				UKR = {
+						has_cosmetic_tag = UKR_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 202
+						has_government = communism
+
+						}
+					
+					}
+                }
+                UKR = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				BLR = {
+				exists = no
+				}
+				BLR = {
+						has_cosmetic_tag = BLR_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 206
+						has_government = communism
+
+						}
+					
+					}
+                }
+                BLR = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				MOL = {
+				exists = no
+				}
+				MOL = {
+						OR = {
+						has_cosmetic_tag = MOL_SOV1
+						has_cosmetic_tag = MOL_SOV2
+							}
+						}
+				NOT = {
+					SOV = {
+						owns_state = 78
+						has_government = communism
+
+						}
+					
+					}
+                }
+                MOL = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				LIT = {
+				exists = no
+				}
+				LIT = {
+						has_cosmetic_tag = LIT_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 11
+						has_government = communism
+
+						}
+					
+					}
+                }
+                LIT = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 40
+							communism = 10
+							neutrality = 50
+						}
+
+					set_politics = {
+						ruling_party = neutrality
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = no
+					}
+                }
+            }
+			if = {
+                limit = {
+				LAT = {
+				exists = no
+				}
+				LAT = {
+						has_cosmetic_tag = LAT_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 12
+						has_government = communism
+
+						}
+					
+					}
+                }
+                LAT = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 40
+							communism = 10
+							neutrality = 50
+						}
+
+					set_politics = {
+						ruling_party = neutrality
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				EST = {
+				exists = no
+				}
+				EST = {
+						has_cosmetic_tag = EST_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 13
+						has_government = communism
+
+						}
+					
+					}
+                }
+                EST = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 40
+							communism = 10
+							neutrality = 50
+						}
+
+					set_politics = {
+						ruling_party = neutrality
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				KAR = {
+				exists = no
+				}
+				KAR = {
+						has_cosmetic_tag = KAR_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 216
+						has_government = communism
+
+						}
+					
+					}
+                }
+                KAR = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = no
+					}
+                }
+            }
+			if = {
+                limit = {
+				CRI = {
+				exists = no
+				}
+				CRI = {
+						has_cosmetic_tag = CRI_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 1267
+						has_government = communism
+
+						}
+					
+					}
+                }
+                CRI = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				ABH = {
+				exists = no
+				}
+				ABH = {
+						has_cosmetic_tag = ABH_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 1002
+						has_government = communism
+
+						}
+					
+					}
+                }
+                ABH = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				GEO = {
+				exists = no
+				}
+				GEO = {
+						has_cosmetic_tag = GEO_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 231
+						has_government = communism
+
+						}
+					
+					}
+                }
+                GEO = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				ARM = {
+				exists = no
+				}
+				ARM = {
+						has_cosmetic_tag = ARM_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 230
+						has_government = communism
+
+						}
+					}
+                }
+                ARM = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				AZR = {
+				exists = no
+				}
+				AZR = {
+						has_cosmetic_tag = AZR_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 1487
+						has_government = communism
+
+						}		
+					}
+                }
+                AZR = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				DAG = {
+				exists = no
+				}
+				DAG = {
+						has_cosmetic_tag = DAG_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 931
+						has_government = communism
+
+						}
+					
+					}
+                }
+                DAG = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				CHE = {
+				exists = no
+				}
+				CHE = {
+						has_cosmetic_tag = CHE_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 232
+						has_government = communism
+
+						}
+					}
+                }
+                CHE = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 40
+							communism = 10
+							neutrality = 50
+						}
+
+					set_politics = {
+						ruling_party = neutrality
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = no
+					}
+                }
+            }
+			if = {
+                limit = {
+				KBR = {
+				exists = no
+				}
+				KBR = {
+						has_cosmetic_tag = KBR_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 1326
+						has_government = communism
+
+						}
+					}
+                }
+                KBR = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				KLY = {
+				exists = no
+				}
+				KLY = {
+						has_cosmetic_tag = KLY_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 237
+						has_government = communism
+
+						}	
+					}
+                }
+                KLY = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				KAZ = {
+				exists = no
+				}
+				KAZ = {
+						OR = {
+						has_cosmetic_tag = KAZ_SOV1
+						has_cosmetic_tag = KAZ_SOV2
+							}
+						}
+				NOT = {
+					SOV = {
+						owns_state = 586
+						has_government = communism
+
+						}					
+					}
+                }
+                KAZ = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				KYR = {
+				exists = no
+				}
+				KYR = {
+						has_cosmetic_tag = KYR_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 732
+						has_government = communism
+
+						}
+					}
+                }
+                KYR = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				TAJ = {
+				exists = no
+				}
+				TAJ = {
+						has_cosmetic_tag = TAJ_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 742
+						has_government = communism
+
+						}
+					}
+                }
+                TAJ = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				UZB = {
+				exists = no
+				}
+				UZB = {
+						has_cosmetic_tag = UZB_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 405
+						has_government = communism
+
+						}
+					}
+                }
+                UZB = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				KPS = {
+				exists = no
+				}
+				KPS = {
+						has_cosmetic_tag = KPS_SOV
+						}
+				NOT = {
+					OR = {
+						SOV = {
+							owns_state = 1138
+							has_government = communism
+							}
+						UZB = {
+							owns_state = 1138
+							has_government = communism
+							has_cosmetic_tag = UZB_SOV
+							}
+						}
+					}
+                }
+                KPS = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				TMS = {
+				exists = no
+				has_cosmetic_tag = TMS_SOV
+				}
+				
+				NOT = {
+					SOV = {
+						owns_state = 584
+						has_government = communism
+
+						}
+					}
+                }
+                TMS = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				YAK = {
+				exists = no
+				}
+				YAK = {
+						has_cosmetic_tag = YAK_SOV
+						}
+				NOT = {
+					SOV = {
+						owns_state = 584
+						has_government = communism
+
+						}
+					}
+                }
+                YAK = {
+                    drop_cosmetic_tag = yes
+					set_popularities = {
+							democratic = 50
+							communism = 10
+							neutrality = 40
+						}
+
+					set_politics = {
+						ruling_party = democratic
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = yes
+					}
+                }
+            }
+			if = {
+                limit = {
+				ZIM = {
+				exists = no
+				}
+				ZIM = {
+						has_cosmetic_tag = ZIM_ENG
+						}
+				NOT = {
+					ENG = {
+						owns_state = 545
+						}
+					}
+                }
+				ZIM = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				ZAM = {
+				exists = no
+				}
+				ZAM = {
+						has_cosmetic_tag = ZAM_ENG
+						}
+				NOT = {
+					ENG = {
+						owns_state = 771
+						}
+					}
+                }
+				ZAM = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				MLW = {
+				exists = no
+				}
+				MLW = {
+						has_cosmetic_tag = MLW_ENG
+						}
+				NOT = {
+					ENG = {
+						owns_state = 770
+						}
+					}
+                }
+				MLW = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				BOT = {
+				exists = no
+				}
+				BOT = {
+						has_cosmetic_tag = BOT_ENG
+						}
+				NOT = {
+					ENG = {
+						owns_state = 542
+						}
+					}
+                }
+				BOT = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				TZN = {
+				exists = no
+				}
+				TZN = {
+						has_cosmetic_tag = TZN_ENG
+						}
+				NOT = {
+					ENG = {
+						owns_state = 546
+						}
+					}
+                }
+				TZN = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				UGA = {
+				exists = no
+				}
+				UGA = {
+						has_cosmetic_tag = UGA_ENG
+						}
+				NOT = {
+					ENG = {
+						owns_state = 548
+						}
+					}
+                }
+				UGA = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				KEN = {
+				exists = no
+				}
+				KEN = {
+						has_cosmetic_tag = KEN_ENG
+						}
+				NOT = {
+					ENG = {
+						owns_state = 547
+						}
+					}
+                }
+				KEN = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				PAL = {
+				exists = no
+				}
+				PAL = {
+						has_cosmetic_tag = PAL_ENG
+						}
+				NOT = {
+					ENG = {
+						owns_state = 1235
+						}
+					}
+                }
+				PAL = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				SMA = {
+				exists = no
+				}
+				SMA = {
+						has_cosmetic_tag = SMA_ENG
+						}
+				NOT = {
+					ENG = {
+						owns_state = 269
+						}
+					}
+                }
+				SMA = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				NGA = {
+				exists = no
+				}
+				NGA = {
+						has_cosmetic_tag = NGA_ENG
+						}
+				NOT = {
+					ENG = {
+						owns_state = 1110
+						}
+					}
+                }
+				NGA = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				GHA = {
+				exists = no
+				}
+				GHA = {
+						has_cosmetic_tag = GHA_ENG
+						}
+				NOT = {
+					ENG = {
+						owns_state = 274
+						}
+					}
+                }
+				GHA = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				SIE = {
+				exists = no
+				}
+				SIE = {
+						has_cosmetic_tag = SIE_ENG
+						}
+				NOT = {
+					ENG = {
+						owns_state = 700
+						}
+					}
+                }
+				SIE = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				GAM = {
+				exists = no
+				}
+				GAM = {
+						has_cosmetic_tag = GAM_ENG
+						}
+				NOT = {
+					ENG = {
+						owns_state = 701
+						}
+					}
+                }
+				GAM = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			
+			if = {
+                limit = {
+				COG = {
+				exists = no
+				}
+				COG = {
+						has_cosmetic_tag = COG_BEL
+						}
+				NOT = {
+					BEL = {
+						owns_state = 538
+						}
+					}
+                }
+				COG = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				ANG = {
+				exists = no
+				}
+				ANG = {
+						has_cosmetic_tag = ANG_POR
+						}
+				NOT = {
+					POR = {
+						owns_state = 540
+						}
+					}
+                }
+				ANG = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				MZB = {
+				exists = no
+				}
+				MZB = {
+						has_cosmetic_tag = MZB_POR
+						}
+				NOT = {
+					POR = {
+						owns_state = 544
+						}
+					}
+                }
+				MZB = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				SAO = {
+				exists = no
+				}
+				SAO = {
+						has_cosmetic_tag = SAO_POR
+						}
+				NOT = {
+					POR = {
+						owns_state = 705
+						}
+					}
+                }
+				SAO = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				GNB = {
+				exists = no
+				}
+				GNB = {
+						has_cosmetic_tag = GNB_POR
+						}
+				NOT = {
+					POR = {
+						owns_state = 296
+						}
+					}
+                }
+				GNB = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				LBA = {
+				exists = no
+				}
+				LBA = {
+						has_cosmetic_tag = LBA_ITA
+						}
+				NOT = {
+					ITA = {
+						owns_state = 448
+						}
+					}
+                }
+				LBA = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				ETH = {
+				exists = no
+				}
+				ETH = {
+						has_cosmetic_tag = ETH_ITA
+						}
+				NOT = {
+					ITA = {
+						owns_state = 271
+						}
+					}
+                }
+				ETH = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				DJI = {
+				exists = no
+				}
+				DJI = {
+						has_cosmetic_tag = DJI_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 268
+						}
+					}
+                }
+				DJI = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				MOR = {
+				exists = no
+				}
+				MOR = {
+						has_cosmetic_tag = MOR_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 462
+						}
+					}
+                }
+				MOR = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				TUN = {
+				exists = no
+				}
+				TUN = {
+						has_cosmetic_tag = TUN_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 458
+						}
+					}
+                }
+				TUN = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				MRT = {
+				exists = no
+				}
+				MRT = {
+						has_cosmetic_tag = MRT_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 557
+						}
+					}
+                }
+				MRT = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				MLI = {
+				exists = no
+				}
+				MLI = {
+						has_cosmetic_tag = MLI_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 556
+						}
+					}
+                }
+				MLI = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				SEN = {
+				exists = no
+				}
+				SEN = {
+						has_cosmetic_tag = SEN_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 272
+						}
+					}
+                }
+				SEN = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				GNA = {
+				exists = no
+				}
+				GNA = {
+						has_cosmetic_tag = GNA_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 780
+						}
+					}
+                }
+				GNA = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				IVO = {
+				exists = no
+				}
+				IVO = {
+						has_cosmetic_tag = IVO_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 779
+						}
+					}
+                }
+				IVO = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				VOL = {
+				exists = no
+				}
+				VOL = {
+						has_cosmetic_tag = VOL_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 778
+						}
+					}
+                }
+				VOL = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				NGR = {
+				exists = no
+				}
+				NGR = {
+						has_cosmetic_tag = NGR_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 781
+						}
+					}
+                }
+				NGR = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				TOG = {
+				exists = no
+				}
+				TOG = {
+						has_cosmetic_tag = TOG_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 777
+						}
+					}
+                }
+				TOG = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				DAH = {
+				exists = no
+				}
+				DAH = {
+						has_cosmetic_tag = DAH_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 776
+						}
+					}
+                }
+				DAH = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				CHA = {
+				exists = no
+				}
+				CHA = {
+						has_cosmetic_tag = CHA_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 774
+						}
+					}
+                }
+				CHA = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				CMR = {
+				exists = no
+				}
+				CMR = {
+						has_cosmetic_tag = CMR_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 773
+						}
+					}
+                }
+				CMR = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				CAR = {
+				exists = no
+				}
+				CAR = {
+						has_cosmetic_tag = CAR_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 660
+						}
+					}
+                }
+				CAR = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				GAB = {
+				exists = no
+				}
+				GAB = {
+						has_cosmetic_tag = GAB_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 539
+						}
+					}
+                }
+				GAB = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				RCG = {
+				exists = no
+				}
+				RCG = {
+						has_cosmetic_tag = RCG_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 772
+						}
+					}
+                }
+				RCG = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				MAD = {
+				exists = no
+				}
+				MAD = {
+						has_cosmetic_tag = MAD_FRA
+						}
+				NOT = {
+					FRA = {
+						owns_state = 543
+						}
+					}
+                }
+				MAD = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				SOM = {
+				exists = no
+				}
+				SOM = {
+						has_cosmetic_tag = SOM_ITA
+						}
+				NOT = {
+					OR = {
+						ITA = {
+							owns_state = 559
+							}
+						ETH = {
+							owns_state = 559
+							has_cosmetic_tag = ETH_ITA
+							}
+						}
+					}
+                }
+				SOM = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				ERI = {
+				exists = no
+				}
+				ERI = {
+						has_cosmetic_tag = ERI_ITA
+						}
+				NOT = {
+					OR = {
+						ITA = {
+							owns_state = 550
+							}
+						ETH = {
+							owns_state = 550
+							has_cosmetic_tag = ETH_ITA
+							}
+						}
+					}
+                }
+				ERI = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+				limit = {
+					ROOT ={
+						NOT = {
+							tag = POR
+						}
+					controls_state = 540
+					}
+				}
+				540 = { set_state_name = "Loanda" }
+				set_province_name = {
+				id = 10966
+				name = "Huambo"
+				}
+				set_province_name = {
+				id = 8248
+				name = Loanda
+				}
+			}
+			if = {
+				limit = {
+					SLO = {
+					owns_state = 70
+					}
+				}
+				CZE = {
+					set_cosmetic_tag = CZE_ONLY
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						CZE = {
+							owns_state = 70
+							}
+						}
+					}
+					CZE = {
+						set_cosmetic_tag = CZE_ONLY
+					}
+				}
+			if = {
+				limit = {
+					ROOT ={
+					NOT = {
+					OR = {
+					is_German_speak = yes
+					original_tag = UKR
+					AND = {
+					is_Soviet_speak = yes
+					has_country_leader = {
+					name = "Iosef Stalin"
+					ruling_only = yes
+					}
+								}
+							}
+						}
+					controls_state = 227
+					}
+
+				}
+				227 = { set_state_name = "Donetsk" }
+				set_province_name = {
+				id = 6474
+				name = Donetsk
+				}
+			}
+			if = {
+				limit = {
+					ROOT ={
+					NOT = {
+					OR = {
+					is_German_speak = yes
+					original_tag = UKR
+					AND = {
+					is_Soviet_speak = yes
+					has_government = communism
+								}
+							}
+						}
+					controls_state = 228
+					}
+
+				}
+				228 = { set_state_name = "Luhansk" }
+				set_province_name = {
+				id = 9461
+				name = Luhansk
+				}
+			}
+			if = {
+				limit = {
+					ROOT ={
+					NOT = {
+					OR = {
+					original_tag = FIN
+					is_German_speak = yes
+					AND = {
+					is_Soviet_speak = yes
+					has_government = communism
+								}
+							}
+						}
+					controls_state = 195
+					}
+					
+				}
+				195 = { set_state_name = "Sankt-Peterburg" }
+				set_province_name = {
+				id = 3151
+				name = Sankt-Peterburg
+				}
+			}
+			if = {
+				limit = {
+					ROOT ={
+					NOT = {
+					AND = {
+					is_Soviet_speak = yes
+					has_country_leader = {
+					name = "Iosef Stalin"
+					ruling_only = yes
+					}
+								}
+						}
+					controls_state = 742
+					}
+				}
+				742 = { set_state_name = "Duşanbe" }
+				set_province_name = {
+				id = 1384
+				name = Duşanbe
+				}
+			}
+			if = {
+				limit = {
+					ROOT ={
+					NOT = {
+					AND = {
+					is_Soviet_speak = yes
+					has_country_leader = {
+					name = "Iosef Stalin"
+					ruling_only = yes
+					}
+								}
+						}
+					controls_state = 742
+					}
+				}
+				1091 = { set_state_name = "Tshinvali" }
+				set_province_name = {
+				id = 9632
+				name = Tshinvali
+				}
+			}
+			if = {
+				limit = {
+					ROOT ={
+					NOT = {
+					AND = {
+					is_Soviet_speak = yes
+					has_government = communism
+								}
+						}
+					controls_state = 732
+					}
+				}
+				732 = { set_state_name = "Pishpek" }
+				set_province_name = {
+				id = 12583
+				name = Pishpek
+				}
+			}
+			if = {
+				limit = {
+					ROOT ={
+					NOT = {
+					original_tag = CIR
+					original_tag = KBR
+					}
+					NOT = {
+					AND = {
+					is_Soviet_speak = yes
+					has_government = communism
+								}
+						}
+					controls_state = 1326
+					}
+				}
+				1326 = { set_state_name = "Vladivakaz" }
+				set_province_name = {
+				id = 9628
+				name = Vladivakaz
+				}
+			}
+			if = {
+				limit = {
+					ROOT ={
+						NOT = {
+							has_government = communism
+						}
+					controls_state = 401
+					}
+				}
+				401 = { set_state_name = "Pokrovsk" }
+				set_province_name = {
+				id = 6502
+				name = Balakovo
+				}
+			}
+			if = {
+				limit = {
+					ROOT ={
+							has_government = communism
+					controls_state = 401
+					}
+				}
+				401 = { set_state_name = "Engels" }
+				set_province_name = {
+				id = 6502
+				name = Balakovo
+				}
+			}
+			if = {
+				limit = {
+					ROOT ={
+						NOT = {
+							has_government = communism
+							is_German_speak = yes
+						}
+					controls_state = 400
+					}
+				}
+				400 = { set_state_name = "Vyatka" }
+			}
+			if = {
+				limit = {
+					ROOT ={
+					NOT = {
+					OR = {
+					is_German_speak = yes
+					original_tag = UKR
+					AND = {
+					is_Soviet_speak = yes
+					has_government = communism
+								}
+							}
+						}
+					controls_state = 1444
+					}
+					
+				}
+				1444 = { set_state_name = "Chystiakove" }
+			}
+			if = {
+				limit = {
+					ROOT ={
+					has_government = communism
+					NOT = {
+					OR = {
+					is_German_speak = yes
+					original_tag = UKR
+					AND = {
+					is_Soviet_speak = yes
+								}
+							}
+						}
+					controls_state = 1444
+					}
+					
+				}
+				1444 = { set_state_name = "Torez" }
+			}
+			if = {
+				limit = {
+					ROOT ={
+							has_government = communism
+							controls_state = 400
+							NOT = {
+							is_German_speak = yes
+							}
+					}
+				}
+				400 = { set_state_name = "Kirov" }
+			}
+			if = {
+				limit = {
+				    FROM.FROM = { state = 996 }
+					FROM = {
+					OR = {
+					original_tag = GER
+					original_tag = GGO					
+					}
+					has_government = fascism
+					SLO = {
+					has_government = fascism
+					OR = {
+					is_in_faction_with = FROM
+					is_subject_of = FROM
+					is_puppet_of = FROM
+					}
+					}
+					}
+					ROOT = {
+						has_war_with = GER
+						NOT = {
+						has_government = fascism
+						}
+					}
+				}
+			    SLO = {
+				set_capital = 1325
+			    start_civil_war = {
+				ruling_party = fascism
+				ideology = democratic
+				size = 0.6
+				capital = 70
+				states = { 70 71 664 1583 }
+			        }
+				set_capital = 70
+				  create_country_leader = {
+					name = "Gottlob Berger"
+					desc = "POLITICS_GOTTLOB_BERGER_DESC"
+					picture = "Gottlob_Berger.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					    The_Butcher
+						anti_communist
+					}
+				}              				
+			    }
+			random_other_country = {
+				limit = {
+					original_tag = SLO
+					has_government = democratic
+				}
+				set_stability = 1.0
+				set_war_support = 1.0
+				set_cosmetic_tag = SLO_FREE
+				add_ideas = {
+				desperate_defence_idea
+				}
+			    add_popularity = {
+				ideology = communism
+				popularity = 0.3
+			    }				
+			    add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			    }
+			    add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			    }				
+			    create_field_marshal = { 
+			        name = "Rudolf Viest"
+			        picture = "Portrait_Rudolf_Viest.dds"
+			        traits = { harsh_leader infantry_officer }
+			        skill = 5
+			    	attack_skill = 5
+			    	defense_skill = 5
+			    	planning_skill = 5
+			    	logistics_skill = 5
+			    }
+			    create_corps_commander = { 
+			        name = "Jan Golian"
+			        picture = "Portrait_Jan_Golian.dds"
+			        traits = { skirmisher war_hero }
+			        skill = 5
+			    	attack_skill = 5
+			    	defense_skill = 5
+			    	planning_skill = 5
+			    	logistics_skill = 5
+			    }				
+			}				
+			}			
+			if = {
+				limit = {
+				    FROM.FROM = { state = 1105 }
+					FROM = {
+					original_tag = GER
+					has_country_leader = {
+					name = "Adolf Hitler"
+					ruling_only = yes
+					}
+					surrender_progress > 0.25
+					}
+					ROOT = {
+						has_war_with = GER
+						NOT = {
+						has_government = fascism
+						}
+					}
+				}
+			    FROM = {
+				country_event = { id = bs.12 }
+				}
+				news_event = { id = bs_ger.700 }
+			}
+			if = {
+				limit = {
+					tag = NWG
+					OR = {
+						controls_state = 141
+						owns_state = 141
+					}
+					is_puppet_of = GER
+				}
+				NWG = {
+					set_cosmetic_tag = SKA
+				}
+			}
+			if = {
+                limit = {
+                    tag = NIR
+					ENG = {
+						NOT = {
+							owns_state = 119
+							owns_state = 1398
+							owns_state = 1397
+							has_cosmetic_tag = ENG_england
+						}
+					}
+					NOT = { country_exists = SCO }
+                }
+                ENG = {
+                    set_cosmetic_tag = ENG_GBR
+                }
+            }
+			if = {
+                limit = {
+                    tag = IRE
+					ENG = {
+						NOT = {
+							owns_state = 119
+							owns_state = 1398
+							owns_state = 1397
+							has_cosmetic_tag = ENG_england
+						}
+					}
+					NOT = { country_exists = SCO }
+                }
+                ENG = {
+                    set_cosmetic_tag = ENG_GBR
+                }
+            }
+			if = {
+                limit = {
+                    tag = SCO
+					ENG = {
+						NOT = {
+							owns_state = 121
+						}
+					}
+                }
+                ENG = {
+                    set_cosmetic_tag = ENG_england
+                }
+            }
+			if = {
+				limit = {
+				    FROM.FROM = { state = 889 }
+					NOT = { has_global_flag = occupied_schutzzone }
+					ROOT = {
+						tag = SLO
+						is_puppet_of = GER
+						has_government = fascism
+					}
+				}
+			    set_global_flag = schutzzone_treaty
+			}
+			if = {
+				limit = {
+					HUN = { has_cosmetic_tag = HUN_EMPIRE }
+					country_exists = AUS
+				}
+				HUN = {
+					drop_cosmetic_tag = yes
+				}
+				AUS = {
+					drop_cosmetic_tag = yes
+				}
+			}
+			if = {
+				limit = {
+					AUS = { has_cosmetic_tag = HUN_EMPIRE }
+					country_exists = HUN
+				}
+				AUS = {
+					drop_cosmetic_tag = yes
+				}
+				HUN = {
+					drop_cosmetic_tag = yes
+				}
+			}
+			if = {
+				limit = {
+					CZE = { has_cosmetic_tag = HUN_EMPIRE }
+					OR = {
+						country_exists = AUS
+						country_exists = HUN
+					}
+				}
+				CZE = {
+					drop_cosmetic_tag = yes
+				}
+			}
+			if = {
+				limit = {
+					tag = JAP
+					has_global_flag = bs_sino_japanese_war_flag
+					has_war_with = CHI
+					NOT = { has_idea = blitzkrieg_japan_phase_one }
+					CHI = { surrender_progress > 0.0 }
+					CHI = { surrender_progress < 0.4 }
+				}
+				JAP = {
+					remove_ideas = {
+						blitzkrieg_japan_phase_two
+						blitzkrieg_japan_phase_three
+						blitzkrieg_japan_phase_four
+						blitzkrieg_japan_phase_five
+					}
+					add_ideas = blitzkrieg_japan_phase_one
+				}
+			}
+			if = {
+				limit = {
+					tag = JAP
+					has_global_flag = bs_sino_japanese_war_flag
+					has_war_with = CHI
+					NOT = { has_idea = blitzkrieg_japan_phase_two }
+					CHI = { surrender_progress > 0.4 }
+					CHI = { surrender_progress < 0.5 }
+				}
+				JAP = {
+					remove_ideas = {
+						blitzkrieg_japan_phase_one
+						blitzkrieg_japan_phase_three
+						blitzkrieg_japan_phase_four
+						blitzkrieg_japan_phase_five
+					}
+					add_ideas = blitzkrieg_japan_phase_two
+				}
+			}
+			if = {
+				limit = {
+					tag = JAP
+					has_global_flag = bs_sino_japanese_war_flag
+					has_war_with = CHI
+					NOT = { has_idea = blitzkrieg_japan_phase_three }
+					CHI = { surrender_progress > 0.5 }
+					CHI = { surrender_progress < 0.6 }
+				}
+				JAP = {
+					remove_ideas = {
+						blitzkrieg_japan_phase_one
+						blitzkrieg_japan_phase_two
+						blitzkrieg_japan_phase_four
+						blitzkrieg_japan_phase_five
+					}
+					add_ideas = blitzkrieg_japan_phase_three
+				}
+			}
+			if = {
+				limit = {
+					tag = JAP
+					has_global_flag = bs_sino_japanese_war_flag
+					has_war_with = CHI
+					NOT = { has_idea = blitzkrieg_japan_phase_four }
+					CHI = { surrender_progress > 0.6 }
+					CHI = { surrender_progress < 0.7 }
+				}
+				JAP = {
+					remove_ideas = {
+						blitzkrieg_japan_phase_one
+						blitzkrieg_japan_phase_two
+						blitzkrieg_japan_phase_three
+						blitzkrieg_japan_phase_five
+					}
+					add_ideas = blitzkrieg_japan_phase_four
+				}
+			}
+			if = {
+				limit = {
+					tag = JAP
+					has_global_flag = bs_sino_japanese_war_flag
+					has_war_with = CHI
+					NOT = { has_idea = blitzkrieg_japan_phase_five }
+					CHI = { surrender_progress > 0.7 }
+				}
+				JAP = {
+					remove_ideas = {
+						blitzkrieg_japan_phase_one
+						blitzkrieg_japan_phase_two
+						blitzkrieg_japan_phase_three
+						blitzkrieg_japan_phase_four
+					}
+					add_ideas = blitzkrieg_japan_phase_five
+				}
+			}
+			if = {
+                limit = {
+                    tag = ENG
+					NOT = {
+						owns_state = 119
+						owns_state = 1398
+						owns_state = 1397
+					}
+                }
+                ENG = {
+                    set_cosmetic_tag = ENG_GBR
+                }
+            }
+			if = {
+                limit = {
+                    tag = SAU
+					AND = {
+						owns_state = 292
+						has_cosmetic_tag = SAU_ONLY
+					}
+                }
+                SAU = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+                    tag = SAU
+					AND = {
+						owns_state = 292
+						has_cosmetic_tag = SAU_NEJD
+					}
+                }
+                SAU = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+                    tag = JBS
+					owns_state = 292
+               }
+                SAU = {
+                    set_cosmetic_tag = SAU_ONLY
+                }
+            }
+			if = {
+                limit = {
+                    tag = JBS
+					SAU = {
+					NOT = {
+					owns_state = 944				
+					}
+					}
+					HEJ = {
+					owns_state = 679									
+					}
+					JBS = {
+					owns_state = 292									
+					}
+               }
+                SAU = {
+                    set_cosmetic_tag = SAU_NEJD
+                }
+            }
+			if = {
+                limit = {
+                    tag = TUR
+					SAU = {
+					NOT = {
+					owns_state = 944				
+					}
+					}
+					HEJ = {
+					owns_state = 679									
+					}
+					JBS = {
+					owns_state = 292									
+					}
+					TUR = {
+					owns_state = 1488									
+					}
+               }
+                SAU = {
+                    set_cosmetic_tag = SAU_NEJD
+                }
+            }
+			if = {
+                limit = {
+                    tag = SAU
+					SAU = {
+					owns_state = 944							
+					}
+					HEJ = {
+					owns_state = 679									
+					}
+					JBS = {
+					owns_state = 292									
+					}
+               }
+                SAU = {
+                    set_cosmetic_tag = SAU_ONLY
+                }
+            }
+			if = {
+                limit = {
+                    tag = HEJ
+					owns_state = 679
+					JBS = {
+					owns_state = 292									
+					}
+               }
+                SAU = {
+                    set_cosmetic_tag = SAU_ONLY
+                }
+            }
+			if = {
+                limit = {
+                    tag = JBS
+					owns_state = 1158		
+                }
+                JBS = {
+                    set_cosmetic_tag = JBS_UNIFIED
+                }
+            }
+			if = {
+				limit = {
+					original_tag = FIN
+					any_state = {
+						is_controlled_by = FIN
+						is_core_of = KAR
+						NOT = { 
+							is_core_of = FIN 
+							has_dynamic_modifier = { 
+							modifier = FIN_KAR_brotherhood 
+							}
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = FIN
+						is_core_of = KAR
+						NOT = { 
+							is_core_of = FIN 
+							has_dynamic_modifier = { 
+							modifier = FIN_KAR_brotherhood 
+							}
+						}
+					}
+					add_dynamic_modifier = { modifier = FIN_KAR_brotherhood }
+				}
+			}
+		}
+	}		
+	
+	on_startup = {
+			effect = {
+				if = {
+					limit = {
+						LAT = {
+							is_ai = no
+						}
+					}
+					LAT = {
+						country_event = {
+							id = bs.10000
+							days = 10
+						}
+					}
+				}
+			    every_country = {
+				limit = {
+				NOT = {
+				OR = {
+				has_government = fascism
+				original_tag = CHI
+				}
+				}
+				}
+				add_ideas = {
+				dont_be_retarded
+				}
+				}
+                CHI = {
+				add_ideas = {
+                CHI_dont_throw_yourself_into_enemies
+				}
+                }				
+			    every_country = {
+				limit = {
+				has_country_flag = monroe_doctrine
+				NOT = { tag = CAN }
+				}
+				add_ideas = {
+				usa_influence_uwu
+				}
+				}
+			    every_country = {
+				add_ideas = {
+				infra_speed_b
+				}
+				}
+				VEN = {
+					#give_resource_rights = { receiver = ENG state = 476 }
+					#give_resource_rights = { receiver = USA state = 480 }
+				}
+				# Game Rules - nano countries
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = vanilla_colorss
+							option = FUCK_YOU_CUNT
+						}
+					}
+					ENG = { set_cosmetic_tag = ENG_VANILLA }					
+					FRA = { set_cosmetic_tag = FRA_VANILLA }
+					GER = { set_cosmetic_tag = GER_VANILLA }
+					SOV = { set_cosmetic_tag = SOV_VANILLA }
+					LUX = { set_cosmetic_tag = LUX_VANILLA }
+					BEL = { set_cosmetic_tag = BEL_VANILLA }
+					HOL = { set_cosmetic_tag = HOL_VANILLA }	
+					CZE = { set_cosmetic_tag = CZE_VANILLA }
+					POL = { set_cosmetic_tag = POL_VANILLA }
+					AUS = { set_cosmetic_tag = AUS_VANILLA }
+					LIT = { set_cosmetic_tag = LIT_VANILLA }
+					EST = { set_cosmetic_tag = EST_VANILLA }
+					LAT = { set_cosmetic_tag = LAT_VANILLA }
+					SPR = { set_cosmetic_tag = SPR_VANILLA }
+					ITA = { set_cosmetic_tag = ITA_VANILLA }
+					ROM = { set_cosmetic_tag = ROM_VANILLA }
+					YUG = { set_cosmetic_tag = YUG_VANILLA }
+					SWI = { set_cosmetic_tag = SWI_VANILLA }
+					TUR = { set_cosmetic_tag = TUR_VANILLA }
+					GRE = { set_cosmetic_tag = GRE_VANILLA }
+					ALB = { set_cosmetic_tag = ALB_VANILLA }
+					NOR = { set_cosmetic_tag = NOR_VANILLA }
+					DEN = { set_cosmetic_tag = DEN_VANILLA }
+					BUL = { set_cosmetic_tag = BUL_VANILLA }
+					POR = { set_cosmetic_tag = POR_VANILLA }
+					FIN = { set_cosmetic_tag = FIN_VANILLA }
+					IRE = { set_cosmetic_tag = IRE_VANILLA }
+					HUN = { set_cosmetic_tag = HUN_VANILLA }
+					AFG = { set_cosmetic_tag = AFG_VANILLA }
+					ARG = { set_cosmetic_tag = ARG_VANILLA }
+					AST = { set_cosmetic_tag = AST_VANILLA }
+					BHU = { set_cosmetic_tag = BHU_VANILLA }
+					BOL = { set_cosmetic_tag = BOL_VANILLA }
+					BRA = { set_cosmetic_tag = BRA_VANILLA }
+					CAN = { set_cosmetic_tag = CAN_VANILLA }
+					CHI = { set_cosmetic_tag = CHI_VANILLA }
+					CHL = { set_cosmetic_tag = CHL_VANILLA }
+					COL = { set_cosmetic_tag = COL_VANILLA }
+					COS = { set_cosmetic_tag = COS_VANILLA }
+					ECU = { set_cosmetic_tag = ECU_VANILLA }
+					ELS = { set_cosmetic_tag = ELS_VANILLA }
+					ETH = { set_cosmetic_tag = ETH_VANILLA }
+					GUA = { set_cosmetic_tag = GUA_VANILLA }
+					HON = { set_cosmetic_tag = HON_VANILLA }
+					IRQ = { set_cosmetic_tag = IRQ_VANILLA }
+					JAP = { set_cosmetic_tag = JAP_VANILLA }
+					LIB = { set_cosmetic_tag = LIB_VANILLA }
+					MEX = { set_cosmetic_tag = MEX_VANILLA }
+					NEP = { set_cosmetic_tag = NEP_VANILLA }
+					NIC = { set_cosmetic_tag = NIC_VANILLA }
+					NZL = { set_cosmetic_tag = NZL_VANILLA }
+					PAN = { set_cosmetic_tag = PAN_VANILLA }
+					PER = { set_cosmetic_tag = PER_VANILLA }
+					PHI = { set_cosmetic_tag = PHI_VANILLA }
+					PRU = { set_cosmetic_tag = PRU_VANILLA }
+					SAF = { set_cosmetic_tag = SAF_VANILLA }
+					SAU = { set_cosmetic_tag = SAU_VANILLA }
+					SIA = { set_cosmetic_tag = SIA_VANILLA }
+					SIK = { set_cosmetic_tag = SIK_VANILLA }
+					TIB = { set_cosmetic_tag = TIB_VANILLA }
+					URG = { set_cosmetic_tag = URG_VANILLA }	
+					VEN = { set_cosmetic_tag = VEN_VANILLA }
+					YUN = { set_cosmetic_tag = YUN_VANILLA }
+					USA = { set_cosmetic_tag = USA_VANILLA }
+					MON = { set_cosmetic_tag = MON_VANILLA }
+					MEN = { set_cosmetic_tag = MEN_VANILLA }
+					TAN = { set_cosmetic_tag = TAN_VANILLA }
+					PAR = { set_cosmetic_tag = PAR_VANILLA }
+					CUB = { set_cosmetic_tag = CUB_VANILLA }
+					DOM = { set_cosmetic_tag = DOM_VANILLA }
+					HAI = { set_cosmetic_tag = HAI_VANILLA }
+					YEM = { set_cosmetic_tag = YEM_VANILLA }
+					OMA = { set_cosmetic_tag = OMA_VANILLA }
+					SLO = { set_cosmetic_tag = SLO_VANILLA }
+					RAJ = { set_cosmetic_tag = RAJ_VANILLA }
+					CRO = { set_cosmetic_tag = CRO_VANILLA }
+					PRC = { set_cosmetic_tag = PRC_VANILLA }
+					GXC = { set_cosmetic_tag = GXC_VANILLA }
+					SHX = { set_cosmetic_tag = SHX_VANILLA }
+					XSM = { set_cosmetic_tag = XSM_VANILLA }
+					LBA = { set_cosmetic_tag = LBA_VANILLA }
+					EGY = { set_cosmetic_tag = EGY_VANILLA }	
+					PAL = { set_cosmetic_tag = PAL_VANILLA }
+					LEB = { set_cosmetic_tag = LEB_VANILLA }
+					JOR = { set_cosmetic_tag = JOR_VANILLA }
+					SYR = { set_cosmetic_tag = SYR_VANILLA }
+					SER = { set_cosmetic_tag = SER_VANILLA }
+					ICE = { set_cosmetic_tag = ICE_VANILLA }
+					UKR = { set_cosmetic_tag = UKR_VANILLA }
+					AZR = { set_cosmetic_tag = AZR_VANILLA }
+					GEO = { set_cosmetic_tag = GEO_VANILLA }
+					ARM = { set_cosmetic_tag = ARM_VANILLA }
+					LAO = { set_cosmetic_tag = LAO_VANILLA }
+					INS = { set_cosmetic_tag = INS_VANILLA }
+					VIN = { set_cosmetic_tag = VIN_VANILLA }
+					CAM = { set_cosmetic_tag = CAM_VANILLA }
+					MAL = { set_cosmetic_tag = MAL_VANILLA }
+					MNT = { set_cosmetic_tag = MNT_VANILLA }
+					BLR = { set_cosmetic_tag = BLR_VANILLA }
+					MAN = { set_cosmetic_tag = MAN_VANILLA }
+					ANG = { set_cosmetic_tag = ANG_VANILLA }
+					COG = { set_cosmetic_tag = COG_VANILLA }
+					MZB = { set_cosmetic_tag = MZB_VANILLA }
+					KEN = { set_cosmetic_tag = KEN_VANILLA }
+					ZIM = { set_cosmetic_tag = ZIM_VANILLA }
+					BOT = { set_cosmetic_tag = BOT_VANILLA }
+					PAK = { set_cosmetic_tag = PAK_VANILLA }
+					WGR = { set_cosmetic_tag = WGR_VANILLA }
+					DDR = { set_cosmetic_tag = DDR_VANILLA }
+					KOR = { set_cosmetic_tag = KOR_VANILLA }
+					ISR = { set_cosmetic_tag = ISR_VANILLA }
+					CSA = { set_cosmetic_tag = CSA_VANILLA }
+                }
+				every_country = {
+					limit = { is_ai = no }
+					add_to_array = {
+						array = global.players
+					}
+				}
+				#UI Setup
+				for_each_scope_loop = {
+					array = global.players
+					set_country_flag = show_welcome_splash
+				}	
+				if = {
+					limit = {
+						has_start_date<1939.1.1
+						JAP = {
+							owns_state = 609
+						}
+						has_game_rule = {
+							rule = asia_colonization_status
+							option = DEFAULT
+						}
+						has_game_rule = {
+							rule = east_hebei_status
+							option = EASTHEBEI_PUPPET
+						}
+					}
+					create_dynamic_country = {
+                        original_tag = CHI
+                        set_temp_variable = { new_country = this }
+                        var:new_country = {
+							transfer_state = 609
+							set_cosmetic_tag = EAST_HEBEI 
+							load_focus_tree = generic_focus
+							add_ideas = {
+								unpopular_government
+								civilian_economy
+							}
+						
+                        	every_state = {
+                            	limit = { NOT = { state = 609 } }
+                            	remove_core_of = var:new_country
+							}
+						}
+                    }
+					JAP = {
+						puppet = var:new_country
+					}
+					var:new_country = {
+					add_popularity = {
+                            ideology = fascism
+                            popularity = 40
+                        }
+					add_popularity = {
+                            ideology = neutrality
+                            popularity = 60
+                        }
+                        if = {
+                        limit = {
+                        JAP = {
+                        has_government = neutrality
+                        }
+                        }						
+                        set_politics = {
+                            ruling_party = neutrality
+                            elections_allowed = no
+							election_frequency = 48
+                        }
+						}
+                        if = {
+                        limit = {
+                        JAP = {
+                        has_government = fascism
+                        }
+                        }						
+                        set_politics = {
+                            ruling_party = fascism
+                            elections_allowed = no
+							election_frequency = 48
+                        }
+					    add_popularity = {
+                            ideology = fascism
+                            popularity = 15
+                        }						
+						}						
+						create_country_leader = {
+							name = "Chinese Liberation Council" 
+							desc = ""
+							picture = "gfx/leaders/CHI/china.dds"
+							expire = "1953.3.1"
+							ideology = marxism
+							traits = {
+							freedom_fighter
+ 						   experienced_insurgent	
+							}
+						}
+
+						create_country_leader = {
+							name = "Chinese Liberation Council" 
+							desc = ""
+							picture = "gfx/leaders/CHI/china.dds"
+							expire = "1953.3.1"
+							ideology = conservatism
+							traits = {
+							freedom_fighter
+ 						   experienced_insurgent		
+							}
+						}						
+						create_country_leader = {
+							name = "Yin Ju-keng"
+							desc = ""
+							picture = "gfx/leaders/JAP/Yin_Ku_keng.dds"
+							expire = "1965.1.1"
+							ideology = despotism
+							traits = {
+							bitter_collaborator
+							Despised_Defector
+							}
+						}						
+						create_country_leader = {
+							name = "Yin Ju-keng"
+							desc = ""
+							picture = "gfx/leaders/JAP/Yin_Ku_keng.dds"
+							expire = "1965.1.1"
+							ideology = fascism_ideology
+							traits = {
+							bitter_collaborator
+							Despised_Defector
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = nano_nation
+							option = BS_BLOCKED
+						}
+					}
+					SPR = {
+						annex_country = {
+							target = ADR
+							transfer_troops = no
+						}
+					}
+					FRA = {
+						annex_country = {
+							target = MCO
+							transfer_troops = no
+						}
+					}
+					ITA = {
+						annex_country = {
+							target = SMR
+							transfer_troops = no
+						}
+						annex_country = {
+							target = VCT
+							transfer_troops = no
+						}
+					}
+					POL = {
+						annex_country = {
+							target = DAN
+							transfer_troops = no
+						}
+					}
+					SWI = {
+						annex_country = {
+							target = LIE
+							transfer_troops = no
+						}
+					}
+				}
+				# Game Rules - Germany fragmentation
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = ger_fragmentation_status
+							option = GER_FRAGMENTED
+						}
+					}
+					every_state = {
+						limit = {
+							is_core_of = GER
+							}
+							set_demilitarized_zone = no
+						}
+					GER = {
+						release = SAR
+						release = RHI
+						release = WUR
+						release = MEK
+						release = LUS
+						release = SIL
+						release = SAX
+						release = BDN
+						release = SHL
+						release = HAN
+						release = THU
+						release = BAY
+						release = HES
+					}
+					PRE = {
+						annex_country = {
+							target = GER
+							transfer_troops = no
+						}
+						change_tag_from = GER
+						add_state_core = 85
+						add_state_core = 1516
+						add_ai_strategy = { #franco-prussian rivalry
+							type = antagonize
+							id = FRA
+							value = 500
+						}		
+					}
+					every_state = {
+						limit = {
+							is_core_of = GER
+						}
+						remove_core_of = GER
+					}
+				}
+				# Game Rules - Italy fragmentation
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = ita_fragmentation_status
+							option = ITA_FRAGMENTED
+						}
+					}
+					VEC = {
+						add_state_core = 736
+						add_state_core = 163
+						add_state_core = 1970
+						add_state_claim = 44
+						add_state_claim = 103
+						add_state_claim = 164
+						add_state_claim = 182
+						add_state_claim = 977
+						add_state_claim = 1104
+						add_state_claim = 1157
+						add_state_claim = 1228
+						add_state_claim = 1229
+						add_state_claim = 1427
+						add_state_claim = 1510
+					}
+					ITA = {
+						release = KTS
+						release = VEC
+						release = LBA
+						release = AUS
+						release = GRE
+						release = SRD
+						release = TUS
+						release = PRM
+                    }
+					every_state = {
+						limit = {
+							is_core_of = ITA
+						}
+						remove_core_of = ITA
+					}
+					every_state = {
+						limit = {
+							is_claimed_by = ITA
+						}
+						remove_claim_by = ITA
+					}
+					YUG = {
+						transfer_state = 993
+						transfer_state = 1066
+						transfer_state = 866
+					}
+					SLV = { add_state_core = 993 }
+					VCT = {
+						transfer_state = 2
+						transfer_state = 990
+						transfer_state = 157
+						transfer_state = 161
+						transfer_state = 1755
+						add_state_core = 2
+						add_state_core = 990
+						add_state_core = 157
+						add_state_core = 161
+						add_state_core = 1755
+						set_cosmetic_tag = VCT_popestates
+						set_capital = 2
+						remove_ideas = {
+							BS_microstate_faction
+							BS_microstate_justify
+						}
+					}
+					SUD = { add_state_core = 1069 }
+					ENG = {
+						transfer_state = 1069
+						transfer_state = 1087
+						transfer_state = 559
+						transfer_state = 1088
+					}
+					FRA = {
+						transfer_state = 998
+						transfer_state = 1072
+					}
+					ETH = {
+						transfer_state = 550
+						transfer_state = 1980
+					}
+					EGY = {
+						add_state_core = 1070
+						add_state_core = 1145
+						transfer_state = 1070
+						transfer_state = 1145
+						transfer_state = 1071
+						transfer_state = 1176
+					}
+					SRD = {
+						change_tag_from = ITA
+						add_ai_strategy = {
+							type = antagonize
+							id = KTS
+							value = 50
+						}
+					}
+                }
+				if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = yug_fragmentation_status
+                            option = YUG_FRAGMENTED
+                        }
+						has_game_rule = {
+							rule = ita_fragmentation_status
+							option = ITA_FRAGMENTED
+						}
+                    }
+					YUG = {
+                        release = SLV
+                        release = CRO
+                    }
+					SLV = {
+						transfer_state = 993
+					}
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = africa_colonization_status
+							option = AFRICA_DECOLONIZED
+						}
+						has_game_rule = {
+							rule = ita_fragmentation_status
+							option = ITA_FRAGMENTED
+						}
+					}
+					FRA = {
+						release = CHA
+					}
+					ENG = {
+						release = SOM
+					}
+					SUD = { transfer_state = 1069 }
+					ALG = {
+						transfer_state = 1072
+						add_state_core = 1072
+					}
+				
+				}
+				# Game Rules - Czechoslovakia fragmentation - CZE-SLO
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = cze_fragmentation_status
+							option = CZE_SLO_FRAGMENTED
+						}
+					}
+					CZE = {
+						release = SLO
+						set_cosmetic_tag = CZE_ONLY
+						remove_state_core = 1284
+					}
+				}
+				# Game Rules - Czechoslovakia fragmentation - Fully
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = cze_fragmentation_status
+							option = CZE_FRAGMENTED
+						}
+					}
+					CZE = {
+						release = SLO
+						release = MRV
+						set_cosmetic_tag = BOHEMIA
+						remove_state_core = 1284
+					}
+				}
+				# Soviet Fragmentation claims for Belarus as well as Poland wanting to ally Ukraine and Belarus for intermarium
+				if = {
+					limit = {
+						NOT = {
+							has_game_rule = {
+								rule = sov_fragmentation_status
+								option = DEFAULT
+							}
+						}
+					}
+					BLR = {
+						add_state_claim = 97
+						add_state_claim = 1205
+						add_state_claim = 1375
+						add_state_claim = 1416
+						add_state_claim = 1417
+						add_state_claim = 1383
+					}
+					POL = {
+						add_ai_strategy = {
+							type = alliance
+							id = UKR
+							value = 100
+						}
+					}
+					POL = {
+						add_ai_strategy = {
+							type = alliance
+							id = BLR
+							value = 100
+						}
+					}
+				}
+				# Game Rules - Soviet fragmentation - Fully
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = sov_fragmentation_status
+							option = SOV_FULLY_FRAGMENTED
+						}
+					}
+					SOV = {
+						release = KPS
+						release = KBR
+						release = CRI
+						release = CHE
+						release = MOL 
+						release = YAK
+						release = KAR
+						release = SOT
+						release = ABH
+						release = UKR
+						release = BLR
+						release = CIR
+						release = KUB
+						release = ARM
+						release = AZR
+						release = GEO
+						release = UZB
+						release = TAJ
+						release = KYR
+						release = TMS
+						release = KAZ
+						release = DON
+						release = IDL
+						release = KLY
+						release = DAG
+						release = BRY
+						release = FER
+						release = SIB
+						release = KOM
+						retire_country_leader = yes
+						dismantle_faction = yes
+                    	set_cosmetic_tag = SOV_russia
+                    	set_global_flag = SOV_became_russia
+						end_puppet = MON
+						end_puppet = TAN
+						MON = {
+							swap_ideas = {
+								remove_idea = soviet_puppet_illegal_regime
+								add_idea = BS_Illegitimate_Chinese_State
+							}
+						}
+						TAN = {
+							swap_ideas = {
+								remove_idea = soviet_puppet_illegal_regime
+								add_idea = BS_Illegitimate_Chinese_State
+							}
+						}
+						transfer_units_fraction = {
+							target = UKR
+							size = 0.2
+							keep_unit_leaders_trigger = {
+								always = yes
+							}
+						}
+						transfer_units_fraction = {
+							target = BLR
+							size = 0.2
+							keep_unit_leaders_trigger = {
+								always = yes
+							}
+						}
+					}
+					MON = {
+						drop_cosmetic_tag = yes 
+						swap_ideas = {
+							add_idea = BS_Illegitimate_Chinese_State
+							remove_idea = soviet_puppet_illegal_regime
+						} 
+					}
+					TAN = { 
+						drop_cosmetic_tag = yes 
+						swap_ideas = {
+							add_idea = BS_Illegitimate_Chinese_State
+							remove_idea = soviet_puppet_illegal_regime
+						} 
+					}
+					FIN = {
+						add_ai_strategy = {
+							type = protect
+							id = KAR
+							value = 500
+						}
+						add_ai_strategy = {
+							type = befriend
+							id = KAR
+							value = 500
+						}
+					}
+					KAR = {
+						add_ai_strategy = {
+							type = befriend
+							id = FIN
+							value = 500
+						}
+					}
+				}
+				# Game Rules - Romanian fragmentation
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = rom_fragmentation_status
+							option = ROM_FRAGMENTED
+						}
+					}
+					ROM = {
+						release = BNT
+						release = MOL
+						transfer_units_fraction = {
+							target = MOL
+							size = 0.2
+						}
+						release = TRA
+						transfer_units_fraction = {
+							target = TRA
+							size = 0.4
+						}
+						release = BUK
+						remove_state_core = 79
+						remove_state_core = 925
+						remove_state_core = 831
+						remove_state_core = 832
+						remove_state_core = 77
+						remove_state_core = 1423
+						set_cosmetic_tag = ROM_WAL
+					}
+					TRA = { puppet = BNT }
+					MOL = {
+						transfer_state = 79
+						transfer_state = 1735
+						add_state_core = 79
+						add_state_core = 1735
+						puppet = BUK
+						set_cosmetic_tag = MDA
+						set_politics = { ruling_party = neutrality }
+						add_popularity = {
+							ideology = neutrality
+							popularity = 0.5
+						}
+					}
+					HUN = {
+						add_state_core = 1201
+						transfer_state = 1625
+						transfer_state = 1643
+						add_ai_strategy = {
+							type = consider_weak
+							id = TRA
+							value = 50
+						}
+					}
+					BUL = {
+						transfer_state = 831
+						transfer_state = 832
+						transfer_state = 77
+						transfer_state = 1423
+						remove_state_claim = 77
+						add_state_core = 831
+						add_state_core = 832
+						add_state_core = 77
+						add_state_core = 1423
+					}
+				}
+				#Game Rules - Pakistan Balkanized
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = RAJ_FRAGMENTATION_STATUS
+							option = PAK_FRAGMENTED
+						}
+					}
+					RAJ = {
+						release = BRM
+						release = BAN 
+						release = KSH
+						release = HYD
+						release = BAL 
+						release = SIN
+						release = PUN
+						release = SKM
+						remove_ideas = RAJ_marginalized_muslim_community
+					}
+					every_state = {
+						limit = {
+							is_core_of = PAK
+						}
+						remove_core_of = PAK
+					}
+					AFG = {
+						transfer_state = 442
+					}
+				}
+				#Game Rules - Belgium fragmentation
+				if = {
+					limit = {
+						NOT = {
+							has_game_rule = {
+								rule = bel_fragmentation_status
+								option = DEFAULT
+							}
+						}
+						has_game_rule = {
+							rule = africa_colonization_status
+							option = DEFAULT
+						}
+					}
+					BEL = { release = COG }
+					random_list = {
+						18.9 = { COG = { set_cosmetic_tag = COG_leapold_free_state } }
+						12.5 = { SPR = { country_event = { id = bs.114 random = 6 } } }
+						12.5 = { POR = { country_event = { id = bs.114 random = 6 } } }
+						12.5 = { SWE = { country_event = { id = bs.114 random = 6 } } }
+						12.5 = { DEN = { country_event = { id = bs.114 random = 6 } } }
+						12.5 = { HOL = { country_event = { id = bs.114 random = 6 } } }
+						5 = { FRA = { country_event = { id = bs.114 random = 6 } } }
+						5 = { ENG = { country_event = { id = bs.114 random = 6 } } }
+						5 = { ITA = { country_event = { id = bs.114 random = 6 } } }
+						1.2 = { YUG = { country_event = { id = bs.114 random = 6 } } }
+						1.2 = { ROM = { country_event = { id = bs.114 random = 6 } } }
+						1.2 = { GRE = { country_event = { id = bs.114 random = 6 } } }
+					}
+					ENG = {
+						transfer_state = 768
+						transfer_state = 769
+						transfer_state = 1135
+					}
+					TZN = { #for british decolonization
+						add_state_core = 768
+						add_state_core = 769
+					}
+					ZAM = {
+						add_state_core = 1135
+					}
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = bel_fragmentation_status
+							option = FLANDERS_AND_WALLONIA
+						}
+					}
+					BEL = {
+						release = WLL
+						release = FLA
+					}
+					FLA = {
+						annex_country = {
+							target = BEL
+							transfer_troops = no
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = bel_fragmentation_status
+							option = BEL_FRAGMENTED
+						}
+					}
+					BEL = {
+						release = WLL
+						release = FLA
+					}
+					FLA = {
+						annex_country = {
+							target = BEL
+							transfer_troops = no
+						}
+					}
+					GER = {
+						transfer_state = 812
+					}
+					WLL = {
+						remove_state_core = 812
+						remove_state_core = 1182
+						add_state_claim = 812
+					}
+					LUX = {
+						add_state_core = 1182
+						transfer_state = 1182
+					}
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = bel_fragmentation_status
+							option = BEL_PARTITIONED
+						}
+					}
+					LUX = {
+						add_state_core = 1182
+						transfer_state = 1182
+					}
+					GER = {
+						add_state_core = 812
+						transfer_state = 812
+					}
+					HOL = {
+						add_state_core = 6
+						add_state_core = 1435
+						transfer_state = 6
+						transfer_state = 1435
+					}
+					FRA = {
+						add_state_core = 34
+						add_state_core = 813
+						add_state_core = 1251
+						add_state_core = 1754
+						add_state_core = 1770
+						transfer_state = 34
+						transfer_state = 1754
+						transfer_state = 1770
+						transfer_state = 813
+						transfer_state = 1251
+					}
+				}
+				if = {
+					limit = {
+						AND = {
+							OR = {
+								has_game_rule = {
+									rule = bel_fragmentation_status
+									option = BEL_FRAGMENTED
+								}
+								has_game_rule = {
+									rule = bel_fragmentation_status
+									option = BEL_PARTITIONED
+								}
+							}
+							has_game_rule = {
+								rule = ger_fragmentation_status
+								option = DEFAULT
+							}
+						}
+					}
+					GER = {
+						add_state_core = 812
+					}
+				}
+				if = {
+					limit = {
+						AND = {
+							OR = {
+								has_game_rule = {
+									rule = bel_fragmentation_status
+									option = BEL_FRAGMENTED
+								}
+								has_game_rule = {
+									rule = bel_fragmentation_status
+									option = BEL_PARTITIONED
+								}
+							}
+							has_game_rule = {
+								rule = ger_fragmentation_status
+								option = GER_FRAGMENTED
+							}
+						}
+					}
+					RHI = {
+						transfer_state = 812
+					}
+				}
+				#MURICA fragmentation
+				if = {
+					limit = {
+						NOT = {
+							has_game_rule = {
+								rule = usa_fragmentation_status
+								option = DEFAULT
+							}
+						}
+						has_game_rule = {
+							rule = asia_colonization_status
+							option = DEFAULT
+						}
+						has_game_rule = {
+							rule = oceania_colonization_status
+							option = DEFAULT
+						}
+						has_game_rule = {
+							rule = americas_colonization_status
+							option = DEFAULT
+						}
+					}
+					JAP = {
+						transfer_state = 638
+						transfer_state = 727
+						transfer_state = 632
+					}
+					ENG = {
+						transfer_state = 642
+					}
+					NZL = {
+						transfer_state = 1102
+					}
+					DEN = {
+						transfer_state = 972
+					}
+					USA = {
+						release = PAN 
+						release = CUB
+						release = HAW
+						release = ALA
+						release = PUE
+						end_puppet = PHI
+					}
+					set_global_flag = picked_an_option_for_usa
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = usa_fragmentation_status
+							option = USA_FRAGMENTED
+						}
+					}
+					ORE = { 
+						add_state_core = 385 
+						add_state_core = 1640
+						add_state_core = 1649
+						add_state_core = 1650
+					}
+					WAS = { add_state_core = 386 }
+					OHO = { 
+						add_state_core = 261 
+						add_state_core = 1681
+					}
+					MIC = { 
+						add_state_core = 393
+						add_state_core = 856
+					}
+					MIN = { 
+						add_state_core = 391
+						add_state_core = 857
+						add_state_core = 1608
+						add_state_core = 1889
+					}
+					ILL = { add_state_core = 395 }
+					IND = { add_state_core = 396 }
+					WIS = { add_state_core = 394 }
+					UTA = {
+						add_state_core = 380
+						add_state_core = 1875
+					}
+					MIS = { add_state_core = 373 }
+					FLO = { add_state_core = 366 }
+					GGA = { add_state_core = 365 }
+					SCL = { add_state_core = 364 }
+					NCL = {	add_state_core = 363 }
+					TEN = { add_state_core = 368 }
+					NJY = { 
+					add_state_core = 359 
+					add_state_core = 1998
+					add_state_core = 1999					
+					}
+					DEL = { add_state_core = 841 }
+					MRY = { 
+						add_state_core = 844
+						add_state_core = 361
+					}
+					KFC = { add_state_core = 369 }
+					WVR = { add_state_core = 843 }
+					VIR = {
+						add_state_core = 362
+						add_state_core = 1456
+					}
+					PEN = { 
+						add_state_core = 360 
+						add_state_core = 1682
+						add_state_core = 1683
+					}
+					NWY = {
+						add_state_core = 358
+						add_state_core = 1175
+						add_state_core = 1684
+					}
+					ARZ = {
+						add_state_core = 377
+						add_state_core = 1195
+						add_state_core = 1566
+						add_state_core = 1874
+					}
+					NEV = {
+						add_state_core = 379
+						add_state_core = 853
+						add_state_core = 1676
+						add_state_core = 1677
+					}
+					NMX = {
+						add_state_core = 1064
+						add_state_core = 1199
+						add_state_core = 1567
+						add_state_core = 376
+						add_state_core = 1623
+						add_state_core = 1200
+						add_state_core = 1873
+					}
+					DKT = {
+						add_state_core = 389
+						add_state_core = 390
+						add_state_core = 1609
+						add_state_core = 1610
+						add_state_core = 1860
+						add_state_core = 1863
+					}
+					MNA = {
+						add_state_core = 388
+						add_state_core = 859
+						add_state_core = 1862
+					}
+					WYM = {
+						add_state_core = 381
+						add_state_core = 1652
+						add_state_core = 1290
+						add_state_core = 1642
+						add_state_core = 1636
+						add_state_core = 1150
+						add_state_core = 1635
+						add_state_core = 846
+						add_state_core = 1859
+					}
+					IDH = {
+						add_state_core = 387
+						add_state_core = 1641
+						add_state_core = 1651
+					}
+					ARK = { add_state_core = 372 }
+					MSS = {
+						add_state_core = 370
+						add_state_core = 1496
+						add_state_core = 1495
+					}
+					ABM = {
+						add_state_core = 367
+						add_state_core = 1494
+						add_state_core = 1497
+					}
+					CLR = {
+						add_state_core = 382
+						add_state_core = 847
+						add_state_core = 1065
+						add_state_core = 1632
+						add_state_core = 1633
+						add_state_core = 1634
+					}
+					NEB = { 
+						add_state_core = 384 
+						add_state_core = 1861
+					}
+					KAN = {
+						add_state_core = 383
+						add_state_core = 848
+					}
+					IOW = { add_state_core = 392 }
+					VER = { add_state_core = 838 }
+					OKH = { 
+						add_state_core = 374
+						add_state_core = 849
+					}
+					USA = {
+						release = CAL
+						release = TEX
+						release = LOU
+						release = VER
+						release = NEE
+						release = SIX #native american representation
+						release = NVJ #native american representation
+						release = ORE
+						release = WAS
+						release = OHO
+						release = MIC
+						release = MIN
+						release = ILL
+						release = IND
+						release = WIS
+						release = UTA
+						release = MIS
+						release = FLO
+						release = GGA
+						release = SCL
+						release = NCL
+						release = TEN
+						release = NJY
+						release = DEL
+						release = KFC
+						release = WVR
+						release = VIR
+						release = PEN
+						release = NWY
+						release = ARZ
+						release = NEV
+						release = NMX
+						release = DKT
+						release = MNA
+						release = WYM
+						release = IDH
+						release = ARK
+						release = MSS
+						release = ABM
+						release = CLR 
+						release = NEB
+						release = KAN
+						release = IOW
+						release = OKH
+					}
+					MRY = {
+						annex_country = {
+							target = USA
+							transfer_troops = no
+						}
+						change_tag_from = USA
+					}
+					every_state = {
+						limit = {
+							is_core_of = USA
+						}
+						remove_core_of = USA
+					}
+					MIC = {
+						add_ai_strategy = {
+							type = antagonize
+							id = OHO
+							value = 100
+						}
+					}
+					OHO = {
+						add_ai_strategy = {
+							type = antagonize
+							id = MIC
+							value = 100
+						}
+					}
+					KAN = {
+						add_ai_strategy = {
+							type = antagonize
+							id = MIS
+							value = 100
+						}
+					}
+					MIS = {
+						add_ai_strategy = {
+							type = antagonize
+							id = KAN
+							value = 100
+						}
+					}
+					NMX = {
+						add_ai_strategy = {
+							type = antagonize
+							id = TEX
+							value = 100
+						}
+					}
+					TEX = {
+						add_ai_strategy = {
+							type = antagonize
+							id = NMX
+							value = 100
+						}
+					}
+					WVR = {
+						add_ai_strategy = {
+							type = antagonize
+							id = VIR
+							value = 100
+						}
+					}
+					VIR = {
+						add_ai_strategy = {
+							type = antagonize
+							id = WVR
+							value = 100
+						}
+					}
+				}
+				#Fragmented trees
+				if = {
+					limit = {
+						AND = {
+							has_game_rule = {
+								rule = allow_fragment_trees
+								option = FRAGMENT_YES
+							}
+							has_game_rule = {
+								rule = ger_fragmentation_status
+								option = GER_FRAGMENTED
+							}
+						}
+					}
+					PRE = { load_focus_tree = prussia_fragmented_focus }
+				}
+				if = {
+					limit = {
+						AND = {
+							NOT = {
+								has_game_rule = {
+									rule = allow_fragment_trees
+									option = FRAGMENT_NO
+								}
+							}
+							has_game_rule = {
+								rule = sov_fragmentation_status
+								option = SOV_FULLY_FRAGMENTED
+							}
+						}
+					}
+					SOV = { load_focus_tree = generic_focus }
+				}
+			}
+		}
+	
+	on_puppet = {
+		effect = {
+			if = {
+                limit = {
+					tag = BGN
+					has_cosmetic_tag = BGN_SS
+					NOT = { is_subject_of = GER }
+                }
+                BGN = {
+					drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = POL
+						has_cosmetic_tag = POL_EXILE
+					}
+				}
+				ROOT = {
+					drop_cosmetic_tag = yes
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							original_tag = CHI
+							original_tag = PRC
+							original_tag = GXC
+							original_tag = YUN
+							original_tag = SHX
+							original_tag = XSM
+							original_tag = SIK
+							original_tag = HSI
+							original_tag = SZH
+							original_tag = NEA
+							original_tag = NSI
+							original_tag = TUG
+							original_tag = KWA
+							original_tag = HAM
+							original_tag = GAN
+							original_tag = KNA
+							original_tag = KWI
+							original_tag = HNA
+							original_tag = NWA
+							original_tag = YLI
+							original_tag = SIY
+							original_tag = HPH
+							original_tag = SHN
+							original_tag = HEX
+						}
+					}
+					FROM = {
+						original_tag = JAP
+						has_government = fascism
+					}
+				}
+				FROM = {
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = SIK
+					}
+					FROM = {
+						tag = TUG
+					}
+				}
+				FROM = {
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = TUG
+					}
+					FROM = {
+						tag = SIK
+					}
+				}
+				FROM = {
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+				}
+			}
+			#Limitation to force Nazi Germany to create RKs and Bohemia-Moravia and Generalgouvernment
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = CZE
+						original_tag = POL
+						original_tag = NOR
+						original_tag = HOL
+						original_tag = BEL
+						original_tag = LUX
+						original_tag = UKR
+						original_tag = LIT
+						original_tag = LAT
+						original_tag = EST
+						original_tag = SOV
+						original_tag = MUS
+						original_tag = IDL
+						original_tag = SWE
+					}
+					FROM = {
+						original_tag = GER
+						has_government = fascism
+					}
+				}
+				FROM = {
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							tag = CHI
+							has_cosmetic_tag = CHI_warlord_leader
+						}
+					}
+					FROM = {
+						has_government = communism
+						is_in_faction_with = event_target:WTT_communist_china
+					}
+				}
+				event_target:WTT_communist_china = {
+					annex_country = {
+						target = ROOT
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						TAG = SER
+						is_subject_of = GER
+						GER = { has_government = fascism }
+					}
+				}
+				set_cosmetic_tag = SER_GER
+				set_party_name = { ideology = fascism long_name = SER_Arrow_Cross_party_long name = SER_Arrow_Cross_party }
+				create_country_leader = {
+					name = "Milan Nedić"
+					desc = "POLITICS_FERENC_SZALASI_DESC"
+					picture = "portrait_ser_milan.dds"
+					expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+					}
+				}
+			}
+			if = {
+				limit = {
+						SOV = {
+							is_subject = yes
+							}	
+				}
+				SOV = {
+				set_cosmetic_tag = SOV_russia
+				}
+			}
+			if = {
+			limit = {
+			AND = {
+			original_tag = ETH
+			is_subject_of = ITA
+			}
+			}
+			set_cosmetic_tag = ETH_ITA
+			remove_ideas = { ETH_last_stand }
+					    add_popularity = {
+						ideology = fascism
+						popularity = 1.0
+					    }
+					    add_popularity = {
+						ideology = democratic
+						popularity = 0.2
+					    }			
+					    add_popularity = {
+						ideology = neutrality
+						popularity = 0.3
+					    }
+            ITA = {
+            every_owned_state = {
+            limit = {
+            OR = {
+            state = 1280	
+            state = 1281
+            state = 1282
+            state = 1283
+            state = 1285
+            state = 1286
+            state = 1287	
+            state = 1087
+            state = 559
+            state = 1088
+            state = 269
+            state = 268	
+            state = 1113	
+            state = 550
+            state = 271
+            state = 1111
+            state = 709
+            state = 1039				
+			}
+			}
+			set_temp_variable = { ethddd = THIS.id }
+			ETH = {
+			add_state_core = ethddd
+			transfer_state = ethddd
+			}
+			}
+			}
+			}					
+			#if = {
+			#	limit = {
+			#		tag = HKG
+			#		NOT = {
+			#			FROM = {
+			#				tag = ENG
+			#			}
+			#		}
+			#	}
+			#	HKG = {
+			#		drop_cosmetic_tag = yes
+			#		retire_country_leader = yes
+			#	}
+			#}
+			#if = {
+			#	limit = {
+			#		tag = INS
+			#		NOT = {
+			#			FROM = {
+			#				tag = HOL
+			#			}
+			#		}
+			#	}
+			#	INS = {
+			#		drop_cosmetic_tag = yes
+			#		retire_country_leader = yes
+			#	}
+			#}
+			if = {
+				limit = {
+					AND = {
+						TAG = GRE
+						is_subject_of = GER
+						GER = { has_government = fascism }
+					}
+				}
+				set_cosmetic_tag = GRE_GER
+				
+				create_country_leader = {
+					name = "Konstantinos Logothetopoulos"
+					desc = "POLITICS_KONSTANTINOS_LOGOTHETOPOULOS_DESC"
+					picture = "Portrait_Greece_Konstantinos_Logothetopoulos.dds"
+					expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+						great_war_hero
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						TAG = HUN
+						is_subject_of = GER
+						GER = { has_government = fascism }
+					}
+				}
+				set_cosmetic_tag = HUN_GER
+				set_party_name = { ideology = fascism long_name = HUN_Arrow_Cross_party_long name = HUN_Arrow_Cross_party }
+				create_country_leader = {
+					name = "Ferenc Szálasi"
+					desc = "POLITICS_FERENC_SZALASI_DESC"
+					picture = "portrait_hun_ferenc_szalasi.dds"
+					expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						TAG = SER
+						is_subject_of = GER
+						GER = { has_government = fascism }
+					}
+				}
+				set_cosmetic_tag = SER_GER
+				set_party_name = { ideology = fascism long_name = SER_Arrow_Cross_party_long name = SER_Arrow_Cross_party }
+				create_country_leader = {
+					name = "Milan Nedić"
+					desc = "POLITICS_FERENC_SZALASI_DESC"
+					picture = "portrait_ser_milan.dds"
+					expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						TAG = ITA
+						is_subject_of = GER
+						GER = { has_government = fascism }
+					}
+				}
+				set_cosmetic_tag = ITA_RSI
+				set_party_name = { ideology = fascism long_name = ITA_Arrow_Cross_party_long name = ITA_Arrow_Cross_party }
+				create_country_leader = {
+					name = "Benito Mussolini"
+                	desc = "POLITICS_BENITO_MUSSOLINI_DESC"
+	                picture = "Portrait_Italy_Benito_Mussolini.dds"
+                	expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						original_tag = GER
+						has_government = neutrality
+					}
+				}
+				set_cosmetic_tag = GER_german_empire
+				add_ideas = GER_wilhelm_iii
+				create_country_leader = {
+					name = "Carl Friedrich Goerdeler"
+                	desc = "POLITICS_CARL_FRIEDRICH_GOERDELER_DESC"
+	                picture = "gfx/leaders/GER/Goerdeler.dds"
+                	expire = "1965.1.1"
+					ideology = oligarchism
+					traits = {
+					conservative_kanzler
+					}
+				}
+			}			
+		}
+	}
+	
+	on_release_as_puppet = {
+		effect = {				
+			if = {
+                limit = {
+                    tag = NIR
+					ENG = {
+						NOT = {
+							owns_state = 119
+							owns_state = 1398
+							owns_state = 1397
+							has_cosmetic_tag = ENG_england
+						}
+					}
+					NOT = { country_exists = SCO }
+                }
+                ENG = {
+                    set_cosmetic_tag = ENG_GBR
+                }
+            }
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							tag = CHI
+							tag = PRC
+							tag = NEA
+							tag = YLI
+							tag = HNA
+							tag = SIY
+							tag = HAM
+							tag = HEX
+						}
+					}
+					FROM = {
+						original_tag = JAP
+						has_government = fascism
+					}
+				}
+				FROM = {
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							tag = CHI
+							has_cosmetic_tag = CHI_warlord_leader
+						}
+					}
+					FROM = {
+						has_government = communism
+						is_in_faction_with = event_target:WTT_communist_china
+					}
+				}
+				event_target:WTT_communist_china = {
+					annex_country = {
+						target = ROOT
+					}
+				}
+			}
+			#Limitation to force Nazi Germany to create RKs and Bohemia-Moravia and Generalgouvernment
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = CZE
+						original_tag = POL
+						original_tag = NOR
+						original_tag = HOL
+						original_tag = BEL
+						original_tag = LUX
+						original_tag = UKR
+						original_tag = LIT
+						original_tag = LAT
+						original_tag = EST
+						original_tag = BLR
+						original_tag = SOV
+						original_tag = MUS
+						original_tag = IDL
+						original_tag = SWE
+					}
+					FROM = {
+						original_tag = GER
+						has_government = fascism
+					}
+				}
+				FROM = {
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+				}
+			}
+			if = {
+                limit = {
+                    tag = IRE
+					ENG = {
+						NOT = {
+							owns_state = 119
+							owns_state = 1398
+							owns_state = 1397
+							has_cosmetic_tag = ENG_england
+						}
+					}
+					NOT = { country_exists = SCO }
+                }
+                ENG = {
+                    set_cosmetic_tag = ENG_GBR
+                }
+            }
+			if = {
+                limit = {
+                    tag = SCO
+					ENG = {
+						NOT = {
+							owns_state = 121
+						}
+					}
+                }
+                ENG = {
+                    set_cosmetic_tag = ENG_england
+                }
+            }
+			if = {
+                limit = {
+                    tag = KOK
+					has_cosmetic_tag = TRK_AUTONOMY
+					is_subject = no
+					exists = yes
+                }
+                KOK = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+                    tag = SLO
+					has_government = democratic
+                }
+                SLO = {
+                create_country_leader = {
+                	name = "Vavro Šrobár"
+                	desc = "POLITICS_VAVRO_SROBAR_DESC"
+                	picture = "BSR_Vavro_Srobar.dds"
+                	expire = "1965.1.1"
+                	ideology = liberalism
+                	traits = {
+                	canny_administrator
+                	Popular_Resistor
+                	}
+                }
+                }
+            }
+            if = {
+            limit = {
+            tag = SLO
+            OR = {
+            has_government = communism
+			has_government = fascism
+            }
+            }
+			SLO = {
+			create_country_leader = {
+				name = "Jan Golian"
+				desc = "POLITICS_JAN_GOLIAN_DESC"
+				picture = "Portrait_Jan_Golian.dds"
+				expire = "1965.1.1"
+				ideology = conservatism
+				traits = {
+				Resistance_Leader
+				}
+			}
+            }
+            }			
+			if = {
+                limit = {
+                    tag = KAZ
+					has_cosmetic_tag = ALA_AUTONOMY
+					is_subject = no
+					exists = yes
+                }
+                KAZ = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+                    tag = SAU
+					AND = {
+						owns_state = 292
+						has_cosmetic_tag = SAU_ONLY
+					}
+                }
+                SAU = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+                    tag = SAU
+					AND = {
+						owns_state = 292
+						has_cosmetic_tag = SAU_NEJD
+					}
+                }
+                SAU = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+                    tag = JBS
+					owns_state = 292
+					HEJ = {
+					owns_state = 679									
+					}
+               }
+                SAU = {
+                    set_cosmetic_tag = SAU_ONLY
+                }
+            }
+			if = {
+                limit = {
+                    tag = JBS
+					SAU = {
+					NOT = {
+					owns_state = 944				
+					}
+					}
+					HEJ = {
+					owns_state = 679									
+					}
+					JBS = {
+					owns_state = 292									
+					}
+               }
+                SAU = {
+                    set_cosmetic_tag = SAU_NEJD
+                }
+            }
+			if = {
+                limit = {
+                    tag = TUR
+					SAU = {
+					NOT = {
+					owns_state = 944				
+					}
+					}
+					HEJ = {
+					owns_state = 679									
+					}
+					JBS = {
+					owns_state = 292									
+					}
+					TUR = {
+					owns_state = 1488									
+					}
+               }
+                SAU = {
+                    set_cosmetic_tag = SAU_NEJD
+                }
+            }
+			if = {
+                limit = {
+                    tag = SAU
+					SAU = {
+					owns_state = 944							
+					}
+					HEJ = {
+					owns_state = 679									
+					}
+					JBS = {
+					owns_state = 292									
+					}
+               }
+                SAU = {
+                    set_cosmetic_tag = SAU_ONLY
+                }
+            }
+			if = {
+                limit = {
+                    tag = HEJ
+					owns_state = 679
+					JBS = {
+					owns_state = 292									
+					}
+               }
+                SAU = {
+                    set_cosmetic_tag = SAU_ONLY
+                }
+            }
+			if = {
+                limit = {
+                    tag = JBS
+					owns_state = 1158		
+                }
+                JBS = {
+                    set_cosmetic_tag = JBS_UNIFIED
+                }
+            }
+			if = {
+			limit = {
+			AND = {
+			original_tag = ETH
+			is_subject_of = ITA
+			}
+			}
+			set_cosmetic_tag = ETH_ITA
+			remove_ideas = { ETH_last_stand }
+					    add_popularity = {
+						ideology = fascism
+						popularity = 1.0
+					    }
+					    add_popularity = {
+						ideology = democratic
+						popularity = 0.2
+					    }			
+					    add_popularity = {
+						ideology = neutrality
+						popularity = 0.3
+					    }
+            ITA = {
+            every_owned_state = {
+            limit = {
+            OR = {
+            state = 1280	
+            state = 1281
+            state = 1282
+            state = 1283
+            state = 1285
+            state = 1286
+            state = 1287	
+            state = 1087
+            state = 559
+            state = 1088
+            state = 269
+            state = 268	
+            state = 1113	
+            state = 550
+            state = 271
+            state = 1111
+            state = 709
+            state = 1039				
+			}
+			}
+			set_temp_variable = { ethddd = THIS.id }
+			ETH = {
+			add_state_core = ethddd
+			transfer_state = ethddd
+			}
+			}
+			}
+			}		
+			if = {
+				limit = {
+					AND = {
+						TAG = CAL
+						is_subject_of = JAP
+					}
+				}
+				set_cosmetic_tag = CAL_JAP
+
+			}
+			if = {
+				limit = {
+						AND = {
+							TAG = CAL
+							NOT = {
+							is_subject_of = JAP
+							}
+						}
+				}
+				CAL = {
+				drop_cosmetic_tag = yes
+			}
+			}			
+			if = {
+				limit = {
+					AND = {
+						TAG = GRE
+						is_subject_of = GER
+						GER = { has_government = fascism }
+					}
+				}
+				set_cosmetic_tag = GRE_GER
+				
+				create_country_leader = {
+					name = "Konstantinos Logothetopoulos"
+					desc = "POLITICS_KONSTANTINOS_LOGOTHETOPOULOS_DESC"
+					picture = "Portrait_Greece_Konstantinos_Logothetopoulos.dds"
+					expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+						great_war_hero
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						TAG = HUN
+						is_subject_of = GER
+						GER = { has_government = fascism }
+					}
+				}
+				set_cosmetic_tag = HUN_GER
+				set_party_name = { ideology = fascism long_name = HUN_Arrow_Cross_party_long name = HUN_Arrow_Cross_party }
+				create_country_leader = {
+					name = "Ferenc Szálasi"
+					desc = "POLITICS_FERENC_SZALASI_DESC"
+					picture = "portrait_hun_ferenc_szalasi.dds"
+					expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						TAG = SER
+						is_subject_of = GER
+						GER = { has_government = fascism }
+					}
+				}
+				set_cosmetic_tag = SER_GER
+				set_party_name = { ideology = fascism long_name = SER_Arrow_Cross_party_long name = SER_Arrow_Cross_party }
+				create_country_leader = {
+					name = "Milan Nedić"
+					desc = "POLITICS_FERENC_SZALASI_DESC"
+					picture = "portrait_ser_milan.dds"
+					expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						TAG = ITA
+						is_subject_of = GER
+						GER = { has_government = fascism }
+					}
+				}
+				set_cosmetic_tag = ITA_RSI
+				set_party_name = { ideology = fascism long_name = ITA_Arrow_Cross_party_long name = ITA_Arrow_Cross_party }
+				create_country_leader = {
+					name = "Benito Mussolini"
+                	desc = "POLITICS_BENITO_MUSSOLINI_DESC"
+	                picture = "Portrait_Italy_Benito_Mussolini.dds"
+                	expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						original_tag = GER
+						has_government = neutrality
+					}
+				}
+				set_cosmetic_tag = GER_german_empire
+				add_ideas = GER_wilhelm_iii
+				create_country_leader = {
+					name = "Carl Friedrich Goerdeler"
+                	desc = "POLITICS_CARL_FRIEDRICH_GOERDELER_DESC"
+	                picture = "gfx/leaders/GER/Goerdeler.dds"
+                	expire = "1965.1.1"
+					ideology = oligarchism
+					traits = {
+					conservative_kanzler
+					}
+				}
+			}			
+		}
+	}
+	
+	on_subject_autonomy_level_change = {
+		effect = {
+			if = {
+				limit = {
+					AND = {
+						TAG = CAL
+						is_subject_of = JAP
+					}
+				}
+				set_cosmetic_tag = CAL_JAP
+
+			}
+			if = {
+				limit = {
+						AND = {
+							TAG = CAL
+							NOT = {
+							is_subject_of = JAP
+							}
+						}
+				}
+				CAL = {
+				drop_cosmetic_tag = yes
+			}
+			}
+            if = {
+			limit = {
+					AND = {
+						TAG = NEE
+						is_subject_of = GER
+						GER = { has_government = neutrality }
+					}
+				}
+				set_cosmetic_tag = NEE_GER
+
+				create_country_leader = {
+					name = "Wilhelm III"
+					desc = "POLITICS_WILHELM_III_DESC"
+					picture = GFX_portrait_ger_wilhelm_iii
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						popular_figurehead2
+					}
+				}
+			}
+		if = {
+			limit = {
+					AND = {
+						TAG = NEE
+						NOT = {
+						is_subject_of = GER
+						}
+					}
+				}
+				set_cosmetic_tag = NEE_GER
+
+				create_country_leader = {
+					name = "Albert I"
+					desc = ""
+					picture = "gfx/leaders/USA/Portrait_USA_Generic_2.dds"
+					expire = "1950.1.1"
+					ideology = despotism
+				traits = {
+					}
+				}
+			}			
+			if = {
+				limit = {
+					AND = {
+						TAG = GRE
+						is_subject_of = GER
+						GER = { has_government = fascism }
+					}
+				}
+				set_cosmetic_tag = GRE_GER
+				
+				create_country_leader = {
+					name = "Konstantinos Logothetopoulos"
+					desc = "POLITICS_KONSTANTINOS_LOGOTHETOPOULOS_DESC"
+					picture = "Portrait_Greece_Konstantinos_Logothetopoulos.dds"
+					expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+						great_war_hero
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						TAG = HUN
+						is_subject_of = GER
+						GER = { has_government = fascism }
+					}
+				}
+				set_cosmetic_tag = HUN_GER
+				set_party_name = { ideology = fascism long_name = HUN_Arrow_Cross_party_long name = HUN_Arrow_Cross_party }
+				create_country_leader = {
+					name = "Ferenc Szálasi"
+					desc = "POLITICS_FERENC_SZALASI_DESC"
+					picture = "portrait_hun_ferenc_szalasi.dds"
+					expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						TAG = SER
+						is_subject_of = GER
+						GER = { has_government = fascism }
+					}
+				}
+				set_cosmetic_tag = SER_GER
+				set_party_name = { ideology = fascism long_name = SER_Arrow_Cross_party_long name = SER_Arrow_Cross_party }
+				create_country_leader = {
+					name = "Milan Nedić"
+					desc = "POLITICS_FERENC_SZALASI_DESC"
+					picture = "portrait_ser_milan.dds"
+					expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						TAG = ITA
+						is_subject_of = GER
+						GER = { has_government = fascism }
+					}
+				}
+				set_cosmetic_tag = ITA_RSI
+				set_party_name = { ideology = fascism long_name = ITA_Arrow_Cross_party_long name = ITA_Arrow_Cross_party }
+				create_country_leader = {
+					name = "Benito Mussolini"
+                	desc = "POLITICS_BENITO_MUSSOLINI_DESC"
+	                picture = "Portrait_Italy_Benito_Mussolini.dds"
+                	expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+					}
+				}
+			}
+		}
+	}	
+	
+	on_subject_free = {
+		effect = {
+			if = {
+                limit = {
+					tag = BGN
+					has_cosmetic_tag = BGN_SS
+                }
+                BGN = {
+					drop_cosmetic_tag = yes
+                }
+            }
+		}
+	}
+	
+	on_release_as_free = {
+		effect = {			
+			if = {
+                limit = {
+					tag = BGN
+					has_cosmetic_tag = BGN_SS
+                }
+                BGN = {
+					drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				tag = COG
+				COG = {
+				NOT = {
+				is_puppet_of = BEL
+						}
+					}
+                }
+                COG = {
+					remove_state_core = 768
+					remove_state_core = 769
+                }
+            }
+			if = {
+                limit = {
+				tag = CMR
+				CMR = {
+				NOT = {
+				is_puppet_of = FRA
+						}
+					}
+                }
+                CMR = {
+					add_state_core = 900
+                }
+            }
+			if = {
+                limit = {
+                    tag = NIR
+					ENG = {
+						NOT = {
+							owns_state = 119
+							owns_state = 1398
+							owns_state = 1397
+							has_cosmetic_tag = ENG_england
+						}
+					}
+					NOT = { country_exists = SCO }
+                }
+                ENG = {
+                    set_cosmetic_tag = ENG_GBR
+                }
+            }
+			if = {
+                limit = {
+                    tag = IRE
+					ENG = {
+						NOT = {
+							owns_state = 119
+							owns_state = 1398
+							owns_state = 1397
+							has_cosmetic_tag = ENG_england
+						}
+					}
+					NOT = { country_exists = SCO }
+                }
+                ENG = {
+                    set_cosmetic_tag = ENG_GBR
+                }
+            }
+			if = {
+                limit = {
+                    tag = SCO
+					ENG = {
+						NOT = {
+							owns_state = 121
+						}
+					}
+                }
+                ENG = {
+                    set_cosmetic_tag = ENG_england
+                }
+            }
+			if = {
+                limit = {
+                    tag = KOK
+					has_cosmetic_tag = TRK_AUTONOMY
+					is_subject = no
+					exists = yes
+                }
+                KOK = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+                    tag = KAZ
+					has_cosmetic_tag = ALA_AUTONOMY
+					is_subject = no
+					exists = yes
+                }
+                KAZ = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+                    tag = SAU
+					AND = {
+						owns_state = 292
+						has_cosmetic_tag = SAU_ONLY
+					}
+                }
+                SAU = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+                    tag = SAU
+					AND = {
+						owns_state = 292
+						has_cosmetic_tag = SAU_NEJD
+					}
+                }
+                SAU = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+                    tag = JBS
+					owns_state = 292
+					HEJ = {
+					owns_state = 679									
+					}
+               }
+                SAU = {
+                    set_cosmetic_tag = SAU_ONLY
+                }
+            }
+			if = {
+                limit = {
+                    tag = JBS
+					SAU = {
+					NOT = {
+					owns_state = 944				
+					}
+					}
+					HEJ = {
+					owns_state = 679									
+					}
+					JBS = {
+					owns_state = 292									
+					}
+               }
+                SAU = {
+                    set_cosmetic_tag = SAU_NEJD
+                }
+            }
+			if = {
+                limit = {
+                    tag = TUR
+					SAU = {
+					NOT = {
+					owns_state = 944				
+					}
+					}
+					HEJ = {
+					owns_state = 679									
+					}
+					JBS = {
+					owns_state = 292									
+					}
+					TUR = {
+					owns_state = 1488									
+					}
+               }
+                SAU = {
+                    set_cosmetic_tag = SAU_NEJD
+                }
+            }
+			if = {
+                limit = {
+                    tag = SAU
+					SAU = {
+					owns_state = 944							
+					}
+					HEJ = {
+					owns_state = 679									
+					}
+					JBS = {
+					owns_state = 292									
+					}
+               }
+                SAU = {
+                    set_cosmetic_tag = SAU_ONLY
+                }
+            }
+			if = {
+                limit = {
+                    tag = HEJ
+					owns_state = 679
+					JBS = {
+					owns_state = 292									
+					}
+               }
+                SAU = {
+                    set_cosmetic_tag = SAU_ONLY
+                }
+            }
+			if = {
+                limit = {
+                    tag = JBS
+					owns_state = 1158		
+                }
+                JBS = {
+                    set_cosmetic_tag = JBS_UNIFIED
+                }
+            }
+			if = {
+				limit = {
+					tag = MON
+					OR = {
+						NOT = {	is_subject_of = SOV }
+						has_global_flag = SOV_became_russia
+					}
+				}
+				set_cosmetic_tag = MON_FREE
+			}
+			if = {
+				limit = {
+					tag = TAN
+					OR = {
+						NOT = {	is_subject_of = SOV }
+						has_global_flag = SOV_became_russia
+					}
+				}
+				set_cosmetic_tag = TAN_free
+			}
+		}
+	}
+	
+	on_government_change = {
+		effect = {
+			if = {
+				limit = {
+					ROOT ={
+						NOT = {
+							has_government = communism
+							is_German_speak = yes
+						}
+					controls_state = 400
+					}
+				}
+				400 = { set_state_name = "Vyatka" }
+			}
+			if = {
+				limit = {
+					ROOT ={
+							has_government = communism
+							controls_state = 400
+							NOT = {
+							is_German_speak = yes
+							}
+					}
+				}
+				400 = { set_state_name = "Kirov" }
+			}
+			if = {
+				limit = {
+					ROOT ={
+						NOT = {
+							has_government = communism
+						}
+					controls_state = 401
+					}
+				}
+				401 = { set_state_name = "Pokrovsk" }
+				set_province_name = {
+				id = 6502
+				name = Balakovo
+				}
+			}
+			if = {
+				limit = {
+					ROOT ={
+							has_government = communism
+					controls_state = 401
+					}
+				}
+				401 = { set_state_name = "Engels" }
+				set_province_name = {
+				id = 6502
+				name = Balakovo
+				}
+			}
+			if = {
+				limit = {
+					ROOT ={
+					tag = TAN
+					OR = {
+					has_government = communism
+					has_government = democratic
+					}
+					controls_state = 329
+					}
+				}
+				329 = { set_state_name = "Tannú Tyva" }
+				set_province_name = {
+				id = 10627
+				name = "Kızıl"
+				}
+			}
+			if = {
+				limit = {
+					ROOT ={
+					tag = TAN
+					NOT = {
+					has_government = communism
+					has_government = democratic
+					}
+					controls_state = 329
+					}
+				}
+				329 = { set_state_name = "Tannú Tyva" }
+				set_province_name = {
+				id = 10627
+				name = "Khem-Beldir"
+				}
+			}
+			if = {
+                limit = {
+					tag = SOV
+					SOV = {
+						NOT = {
+							has_government = communism
+							has_cosmetic_tag = SOV_russia
+							has_cosmetic_tag = RUS_EMPIRE
+						}
+					}
+                }
+                SOV = {
+                    set_cosmetic_tag = SOV_russia
+                }
+            }
+			if = {
+                limit = {
+				FRA = {
+				owns_state = 461
+				}
+				MOR = {
+				exists = no
+				}
+				NOT = {
+				FRA = { has_government = democratic }
+					}
+                }
+                MOR = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+                limit = {
+				FRA = {
+				owns_state = 458
+				}
+				TUN = {
+				exists = no
+				}
+				NOT = {
+				FRA = { has_government = democratic }
+					}
+                }
+                TUN = {
+                    drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+				limit = {
+					has_dlc = "Death or Dishonor"
+					has_cosmetic_tag = HUN_EMPIRE
+					has_government = fascism
+				}
+				country_event = { id = AUH.1 }
+			}
+			if = {
+				limit = {
+					has_dlc = "Death or Dishonor"
+					has_cosmetic_tag = HUN_EMPIRE
+					has_government = communism
+				}
+				country_event = { id = AUH.2 }
+			}
+		}
+	}
+    on_ruling_party_change = {
+        effect = {
+			if = {
+                limit = {
+					tag = BGN
+					has_cosmetic_tag = BGN_SS
+					NOT = { has_government = fascism }
+                }
+                BGN = {
+					drop_cosmetic_tag = yes
+                }
+            }
+			if = {
+				limit = {
+						POL = {
+							has_government = communism
+						}			
+				}
+				POL = {
+				create_country_leader = {
+					name = "Józef Franczak"
+					desc = ""
+					picture = "jozef_franczak.dds"
+					expire = "1965.1.1"
+					ideology = moderatism
+					traits = {
+						zolnierz_wyklety
+					}
+				}				
+				}
+			}		
+			if = {
+				limit = {
+						SOV = {
+							is_subject = yes
+						}			
+				}
+				SOV = {
+				set_cosmetic_tag = SOV_russia
+				}
+			}
+		    if = {
+			limit = {
+			tag = RKU
+            NOT = {
+            has_government = fascism
+			has_cosmetic_tag = german_ukraine_affirmed			
+            }			
+			}
+            drop_cosmetic_tag = yes
+			set_cosmetic_tag = UKR_RES
+			load_oob = POL_1936
+			if = {
+			limit = {			
+			GER = {
+			has_government = fascism
+			}
+			RKU = {
+			OR = {
+			is_in_faction_with = GER
+			is_subject_of = GER
+			is_puppet_of = GER
+			}
+			}
+			}
+			GER = {
+			end_puppet = RKU
+			remove_from_faction = RKU
+			declare_war_on = {
+			    target = RKU
+			    type = annex_everything
+			}
+			}		
+			}
+            }
+		    if = {
+			limit = {
+			tag = GFA
+            NOT = {
+            has_government = fascism
+            }			
+			}
+            drop_cosmetic_tag = yes
+			set_cosmetic_tag = FRA_RES
+			load_oob = FRA_1936
+                load_focus_tree = {
+                tree = free_french_focus
+                keep_completed = no
+                }					
+			if = {
+			limit = {			
+			GER = {
+			has_government = fascism
+			}
+			GFA = {
+			OR = {
+			is_in_faction_with = GER
+			is_subject_of = GER
+			is_puppet_of = GER
+			}
+			}
+			}
+			GER = {
+			end_puppet = GFA
+			remove_from_faction = GFA
+			declare_war_on = {
+			    target = GFA
+			    type = annex_everything
+			}
+			}
+            every_country = {
+            limit = {
+            has_government = democratic 
+            has_war_with = GER
+            is_faction_leader = yes
+			}
+			white_peace = GFA			
+			add_to_faction = GFA
+			}			
+			}			
+			}			
+		    if = {
+			limit = {
+			tag = GGO
+            NOT = {
+            has_government = fascism
+            }			
+			}
+            drop_cosmetic_tag = yes
+			set_cosmetic_tag = POL_RES
+			load_oob = POL_1936
+                load_focus_tree = {
+                tree = polish_focus
+                keep_completed = no
+                }				
+			if = {
+			limit = {			
+			GER = {
+			has_government = fascism
+			}
+			GGO = {
+			OR = {
+			is_in_faction_with = GER
+			is_subject_of = GER
+			is_puppet_of = GER
+			}
+			}
+			}
+			GER = {
+			end_puppet = GGO
+			remove_from_faction = GGO
+			declare_war_on = {
+			    target = GGO
+			    type = annex_everything
+			}
+			}
+            every_country = {
+            limit = {
+            has_government = democratic 
+            has_war_with = GER
+            is_faction_leader = yes
+			}
+			white_peace = GGO
+			add_to_faction = GGO
+			}			
+			}			
+			}
+		    if = {
+			limit = {
+			tag = NID
+            NOT = {
+            has_government = fascism
+            }			
+			}
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = HOL_RES
+			load_oob = HOL_1936	
+                load_focus_tree = {
+                tree = netherlands_focus
+                keep_completed = no
+                }			
+			if = {
+			limit = {			
+			GER = {
+			has_government = fascism
+			}
+			NID = {
+			OR = {
+			is_in_faction_with = GER
+			is_subject_of = GER
+			is_puppet_of = GER
+			}
+			}
+			}
+			GER = {
+			end_puppet = NID
+			remove_from_faction = NID
+			declare_war_on = {
+			    target = NID
+			    type = annex_everything
+			}
+			}
+            every_country = {
+            limit = {
+            has_government = democratic 
+            has_war_with = GER
+            is_faction_leader = yes
+			}
+			white_peace = NID
+			add_to_faction = NID
+			}			
+			}			
+			}	
+		    if = {
+			limit = {
+			tag = RKO
+            NOT = {
+            has_government = fascism
+            }			
+			}
+            drop_cosmetic_tag = yes
+			set_cosmetic_tag = BAL_RES
+			load_oob = LIT_1936
+			load_oob = LAT_1936
+			load_oob = EST_1936						
+			if = {
+			limit = {			
+			GER = {
+			has_government = fascism
+			}
+			RKO = {
+			OR = {
+			is_in_faction_with = GER
+			is_subject_of = GER
+			is_puppet_of = GER
+			}
+			}
+			}
+			GER = {
+			end_puppet = RKO
+			remove_from_faction = RKO
+			declare_war_on = {
+			    target = RKO
+			    type = annex_everything
+			}
+			}			
+			}			
+			}			
+		    if = {
+			limit = {
+			tag = PBM
+            NOT = {
+            has_government = fascism
+            }			
+			}
+            drop_cosmetic_tag = yes
+			set_cosmetic_tag = CZE_RES
+			load_oob = CZE_1936
+                load_focus_tree = {
+                tree = czech_focus
+                keep_completed = no
+                }			
+			if = {
+			limit = {			
+			GER = {
+			has_government = fascism
+			}
+			PBM = {
+			OR = {
+			is_in_faction_with = GER
+			is_subject_of = GER
+			is_puppet_of = GER
+			}
+			}
+			}
+			GER = {
+			end_puppet = PBM
+			remove_from_faction = PBM
+			declare_war_on = {
+			    target = PBM
+			    type = annex_everything
+			}
+			}
+            every_country = {
+            limit = {
+            has_government = democratic 
+            has_war_with = GER
+            is_faction_leader = yes
+			}
+			white_peace = PBM
+			add_to_faction = PBM
+			}			
+			}			
+			}						
+		    if = {
+			limit = {
+			tag = SOV
+			NOT = {
+			has_game_rule = {
+				rule = vanilla_colorss
+				option = FUCK_YOU_CUNT
+			}
+            }			
+			}
+                if = {
+                    limit = {
+                        has_government = fascism
+                    }
+                    drop_cosmetic_tag = yes
+                }
+                if = {
+                    limit = {
+                        has_government = democratic
+                    }
+                    drop_cosmetic_tag = yes
+                }
+                if = {
+                    limit = {
+                        has_government = neutrality
+                    }
+                    drop_cosmetic_tag = yes
+                }
+                if = {
+                    limit = {
+                        has_government = communism
+                    }
+                    set_cosmetic_tag = SOV_RED
+                }
+            }
+            if = {
+			limit = {
+			tag = POR
+			NOT = {
+			has_game_rule = {
+				rule = vanilla_colorss
+				option = FUCK_YOU_CUNT
+			}
+            }			
+			}
+                if = {
+                    limit = {
+                        has_government = fascism
+                    }
+                    drop_cosmetic_tag = yes
+                }
+                if = {
+                    limit = {
+                        has_government = democratic
+                    }
+                    drop_cosmetic_tag = yes
+                }
+                if = {
+                    limit = {
+                        has_government = neutrality
+						NOT = {
+						has_country_leader = {
+						name = "António de Oliveira Salazar"
+						ruling_only = yes
+						}
+						}
+                    }
+					drop_cosmetic_tag = yes
+                    set_cosmetic_tag = KOP_kingdom_portugal
+                }
+                if = {
+                    limit = {
+                        has_government = communism
+                    }
+                    set_cosmetic_tag = SOV_RED
+                }
+            }
+            if = {
+			limit = {
+			tag = GER
+			NOT = {
+			has_game_rule = {
+				rule = vanilla_colorss
+				option = FUCK_YOU_CUNT
+			}
+            }			
+			}
+                if = {
+                    limit = {
+                        has_government = fascism
+                    }
+                    drop_cosmetic_tag = yes
+                }
+                if = {
+                    limit = {
+                        has_government = democratic
+                    }
+                    set_cosmetic_tag = GER_WGR
+                }
+                if = {
+                    limit = {
+                        has_government = neutrality
+                    }
+                    set_cosmetic_tag = GER_german_empire
+                }
+                if = {
+                    limit = {
+                        has_government = communism
+                    }
+                    set_cosmetic_tag = GER_COMMT
+                }
+            }
+            if = {
+			limit = {
+			tag = USA
+			NOT = {
+			has_game_rule = {
+				rule = vanilla_colorss
+				option = FUCK_YOU_CUNT
+			}
+            }			
+			}
+                if = {
+                    limit = {
+                        has_government = fascism
+                    }
+                    set_cosmetic_tag = USA_FASH
+					every_country = {
+					remove_ideas = {
+					usa_influence_uwu
+					}
+					}
+                }
+                if = {
+                    limit = {
+                        has_government = democratic
+                    }
+                    drop_cosmetic_tag = yes
+					every_country = {
+					remove_ideas = {
+					usa_influence_uwu
+					}
+					}
+			    every_country = {
+				limit = {
+				has_country_flag = monroe_doctrine
+				}
+				add_ideas = {
+				usa_influence_uwu
+				}
+				}					
+                }
+                if = {
+                    limit = {
+                        has_government = neutrality
+                    }
+                    set_cosmetic_tag = USA_NEUT
+					every_country = {
+					remove_ideas = {
+					usa_influence_uwu
+					}
+					}					
+                }
+                if = {
+                    limit = {
+                        has_government = communism
+                    }
+                    set_cosmetic_tag = USA_COMM
+					every_country = {
+					remove_ideas = {
+					usa_influence_uwu
+					}
+					}					
+                }
+            }			
+            if = {
+			limit = {
+			tag = ITA			
+			}
+                if = {
+                    limit = {
+                        has_government = fascism
+                    }
+                    SMR = {
+					   add_popularity = {
+					ideology = fascism
+					popularity = 0.25
+					   }					
+                    set_politics = {
+                    	ruling_party = fascism
+                    	elections_allowed = yes
+                    }
+                    }					
+                }
+                if = {
+                    limit = {
+                        has_government = democratic
+                    }
+                    SMR = {
+					   add_popularity = {
+					ideology = democratic
+					popularity = 0.25
+					   }					
+                    set_politics = {
+                    	ruling_party = democratic
+                    	elections_allowed = yes
+                    }
+                    }					
+                }
+                if = {
+                    limit = {
+                        has_government = neutrality
+                    }
+                    SMR = {
+					   add_popularity = {
+					ideology = neutrality
+					popularity = 0.25
+					   }					
+                    set_politics = {
+                    	ruling_party = neutrality
+                    	elections_allowed = yes
+                    }
+                    }
+                }
+                if = {
+                    limit = {
+                        has_government = communism
+                    }
+                    SMR = {
+					   add_popularity = {
+					ideology = communism
+					popularity = 0.25
+					   }					
+                    set_politics = {
+                    	ruling_party = communism
+                    	elections_allowed = yes
+                    }
+                    }
+                }
+            }
+            if = {
+			limit = {
+			tag = FRA
+			}
+                if = {
+                    limit = {
+                        has_government = fascism
+                    }
+                    MCO = {
+					   add_popularity = {
+					ideology = fascism
+					popularity = 0.25
+					   }					
+                    set_politics = {
+                    	ruling_party = fascism
+                    	elections_allowed = yes
+                    }
+                    }					
+                }
+                if = {
+                    limit = {
+                        has_government = democratic
+                    }
+                    MCO = {
+					   add_popularity = {
+					ideology = democratic
+					popularity = 0.25
+					   }						
+                    set_politics = {
+                    	ruling_party = democratic
+                    	elections_allowed = yes
+                    }
+                    }					
+                }
+                if = {
+                    limit = {
+                        has_government = neutrality
+                    }
+                    MCO = {
+					   add_popularity = {
+					ideology = neutrality
+					popularity = 0.25
+					   }					
+                    set_politics = {
+                    	ruling_party = neutrality
+                    	elections_allowed = yes
+                    }
+                    }
+                }
+                if = {
+                    limit = {
+                        has_government = communism
+                    }
+                    MCO = {
+					   add_popularity = {
+					ideology = communism
+					popularity = 0.25
+					   }						
+                    set_politics = {
+                    	ruling_party = communism
+                    	elections_allowed = yes
+                    }
+                    }
+                }
+            }			
+			if = {
+				limit = {
+					has_dlc = "Death or Dishonor"
+					has_cosmetic_tag = HUN_EMPIRE
+					has_government = fascism
+				}
+				country_event = { id = AUH.1 }
+			}	
+			if = {
+				limit = {
+					has_dlc = "Death or Dishonor"
+					has_cosmetic_tag = HUN_EMPIRE
+					has_government = communism
+				}
+				country_event = { id = AUH.2 }
+			}			
+        }
+    }
+}
+
+

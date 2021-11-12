@@ -1,0 +1,81 @@
+add_namespace = bs_ura
+
+country_event = { #batov coups
+
+    id = bs_ura.1
+    title = bs_ura.1.t
+    desc = bs_ura.1.d
+    picture = GFX_report_event_generic_sign_treaty1 #placeholder
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+    option = {
+        name = bs_ura.1.a
+
+    }
+}
+
+country_event = { #batov dies
+
+    id = bs_ura.2
+    title = bs_ura.2.t
+    desc = bs_ura.2.d
+    picture = GFX_report_event_generic_sign_treaty1 #placeholder
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+    option = {
+        name = bs_ura.2.a
+
+    }
+}
+
+country_event = { # cheater event 
+    id = bs_ura.3
+    title = bs_ura.3.t
+    desc = bs_ura.3.d
+    
+    fire_only_once = yes
+
+    is_triggered_only = yes
+
+    trigger = {
+        original_tag = URA
+    }
+
+    option = {
+        name = bs_ura.3.a
+    }
+}
+
+country_event = {
+    id = bs_ura.4
+    title = bs_ura.4.t
+    desc = bs_ura.4.d
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+    
+    trigger = {
+        original_tag = URA
+        
+    }
+
+    option = {
+        name = bs_ura.4.a
+        set_country_flag = batov_resistance
+        set_country_flag = batov_resistance_active
+        set_variable = {
+            var = konr_readiness_level
+            value = 0
+        }
+        set_variable = {
+            var = batov_resistance_level
+            value = 100
+        }
+        activate_mission = URA_put_down_third_army
+    }
+}

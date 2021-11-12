@@ -1,0 +1,49 @@
+
+state={
+	id=378
+	name="STATE_378"
+	resources={
+		oil=90.000
+		aluminium=2.000
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 6
+			air_base = 10
+			dockyard = 1			
+			6881 = {
+				naval_base = 4
+
+			}
+
+		}
+		add_core_of = USA
+		add_core_of = CAL
+		victory_points = {
+			6881 5 
+		}
+		victory_points = {
+			11859 3
+		}
+		victory_points = {
+			986 1
+		}		
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		986 3784 6881 11859 11876 
+	}
+	manpower=402028
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,69 @@
+khiva_flag = {
+
+	khiva_flag_change1 = {
+
+		visible = {		
+		ROOT = {
+		has_government = neutrality
+				}
+		NOT = {
+		ROOT = {
+		has_country_flag = changed_khiva_flag
+				}
+			}
+		}
+
+		icon = generic_form_nation
+		
+		available = {
+
+		}
+
+		complete_effect = {
+		KPS = {
+		set_cosmetic_tag = KPS2
+		set_country_flag = changed_khiva_flag
+		clr_country_flag = changed_back_khiva_flag
+			}
+        }
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	khiva_flag_change2 = {
+
+		visible = {		
+		ROOT = {
+		has_government = neutrality
+		has_country_flag = changed_khiva_flag
+				}
+		NOT = {
+		ROOT = {
+		has_country_flag = changed_back_khiva_flag
+				}
+			}
+		}
+
+		icon = generic_form_nation
+		
+		available = {
+
+		}
+
+		complete_effect = {
+		KPS = {
+		drop_cosmetic_tag = yes
+		set_country_flag = changed_back_khiva_flag
+		clr_country_flag = changed_khiva_flag
+			}
+        }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

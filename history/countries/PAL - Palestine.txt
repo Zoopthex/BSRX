@@ -1,0 +1,143 @@
+﻿capital = 1236
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gwtank = 1
+}
+
+set_convoys = 5
+
+set_cosmetic_tag = PAL_ENG
+
+1939.1.1 = {
+
+	add_political_power = 1198
+	
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = large_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	set_technology = {
+		tech_support = 1
+		tech_recon = 1
+		support_weapons = 1
+		gw_artillery = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.7.10"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 50
+	fascism = 15
+	communism = 35
+}
+
+create_country_leader = {
+	name = "Jamal al-Husayni"
+	desc = ""
+	picture = "Jamal_alHusayni.dds"
+	ideology = liberalism
+	traits = {
+	great_compromiser
+	moderate_leader
+	}
+}
+
+create_country_leader = {
+	name = "Raghib al-Nashashibi"
+	desc = ""
+	picture = "Portrait_Palestine_Raghib_al-Nashashibi.dds"
+	ideology = liberalism
+	traits = {
+	determined_democrat
+	socialite_connections
+	}
+}
+
+create_country_leader = {
+    name = "Musa Alami"
+    desc = ""
+    picture = "musa_alami.dds"
+    ideology = liberalism
+    traits = {
+    assiduous_democratiser_2
+        }
+    }
+
+create_country_leader = {
+	name = "Ahmed Hilmi Pasha"
+	desc = ""
+	picture = "r56_ahmad_hilmi_pasha.dds"
+	ideology = liberalism
+	traits = {
+	voice_of_restraint_2
+	}
+}
+
+create_country_leader = {
+	name = "Amin al-Husseini"
+	desc = ""
+	picture = "r56_Amin_al-Husseini.dds"
+	ideology = fascism_ideology
+	traits = {
+		pan_arab_nationalist
+	}
+}
+
+create_country_leader = {
+	name = "Abd al-Qadir al-Husayni"
+	desc = ""
+	picture = "gfx/leaders/PAL/Portrait_Palestine_Abd_al_Qadir_al-Hussayni.dds"
+	ideology = despotism
+	traits = {
+	experienced_insurgent
+	}
+}
+
+create_country_leader = {
+	name = "Jabra Nicola"
+	desc = ""
+	picture = "gfx/leaders/PAL/Jabra_Nicola.dds"
+	ideology = leninism
+	traits = {
+	devoted_trotskyist
+	}
+}

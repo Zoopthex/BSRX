@@ -1,0 +1,618 @@
+﻿# _           _ _                   _              _ _       _
+#| |__   __ _(_| |_  __ _ _ __   __|  _____      _(_| |_ ___| |__
+#| '_ \ / _` | | __ / _` | '_ \ / _` / __\ \ /\ / | | __/ __| '_ \
+#| |_) | (_| | | |_| (_| | | | | (_| \__ \\ V  V /| | || (__| | | |
+#|_.__/ \__,_|_|\__ \__,_|_| |_|\__,_|___/ \_/\_/ |_|\__\___|_| |_|
+
+shared_focus = {
+    id = URA_bruh_moment
+    icon = GFX_shared_focus_generic_little_entente
+
+    cost = 7
+
+    allow_branch = {
+        has_country_flag = some_fucking_bullshit
+    }
+}
+
+### Vlasov bait and switch ###
+    shared_focus = {
+        id = URA_assert_control
+        icon =  GFX_shared_focus_generic_support_the_left_right
+        
+        cost = 1
+
+        available = {
+            always = no
+        }
+
+        x = 17 
+        y = 0
+
+        allow_branch = {
+            has_country_flag = vlasov_bait
+            NOT = { has_country_flag = rk_ural_bohme }
+        }
+
+        bypass = {
+            has_country_flag = vlasov_bait
+        }
+
+        completion_reward = {
+            
+        }
+    }
+
+    shared_focus = {
+        id = URA_absorb_soviet_authorities 
+        icon = GFX_goal_generic_war_with_comintern
+
+        cost = 1
+
+        x = 0
+        y = 1
+
+        prerequisite = {
+            focus = URA_assert_control
+        }
+
+        relative_position_id = URA_assert_control
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.4
+                    }
+                }
+            }
+        }
+    }
+    shared_focus = {
+        id = URA_root_out_resistance
+        icon = GFX_shared_focus_shared_focus_fra_maquis
+
+        cost = 1
+
+        x = -8
+        y = 2
+
+        relative_position_id = URA_absorb_soviet_authorities
+
+        prerequisite = {
+            focus = URA_absorb_soviet_authorities
+        }
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }
+        }
+    }
+
+    shared_focus = {
+        id = URA_support_from_the_reich
+        icon = GFX_focus_chi_mission_to_germany
+
+        cost = 1
+
+        x = 8
+        y = 2
+
+        relative_position_id = URA_absorb_soviet_authorities
+
+        available = {
+            NOT = {
+                has_country_flag = batov_resistance
+                has_country_flag = batov_resistance_active
+            }
+        }
+
+        prerequisite = {
+            focus = URA_absorb_soviet_authorities
+        }
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }
+        }
+    }
+    
+    shared_focus = {
+        id = URA_german_volunteer_armies
+        icon = GFX_focus_YUG_pan_slavic_congress
+
+        cost = 1
+        
+        x = -5
+        y = 1
+
+        relative_position_id = URA_support_from_the_reich
+
+        prerequisite = {
+            focus = URA_support_from_the_reich
+        }
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }
+        }
+    }
+
+    shared_focus = {
+        id = URA_import_german_equipment
+        icon = GFX_focus_ger_oppose_hitler
+
+        cost = 1
+
+        x = 0
+        y = 3
+
+        available = {
+            NOT = {
+                has_country_flag = batov_resistance
+                has_country_flag = batov_resistance_active
+            }
+        }
+
+        relative_position_id = URA_german_volunteer_armies
+
+        prerequisite = {
+            focus = URA_german_volunteer_armies
+        }
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }
+        }
+    }
+
+    shared_focus = {
+        id = URA_army_recruitment_campaign
+        icon = GFX_shared_focus_generic_military_mission
+
+        cost = 1
+
+        x = -4
+        y = 2
+
+        available = {
+            NOT = {
+                has_country_flag = batov_resistance
+                has_country_flag = batov_resistance_active
+            }
+        }
+
+        relative_position_id = URA_import_german_equipment
+
+        prerequisite = {
+            focus = URA_import_german_equipment
+        }
+        
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }
+        }
+    }
+
+    shared_focus = {
+        id = URA_recruit_the_youth
+        icon = GFX_shared_focus_generic_little_entente
+
+        cost = 1
+
+        x = 0
+        y = 2
+
+        relative_position_id = URA_army_recruitment_campaign
+
+        available = {
+            NOT = {
+                has_country_flag = batov_resistance
+                has_country_flag = batov_resistance_active
+            }
+        }
+        
+        prerequisite = {
+            focus = URA_army_recruitment_campaign
+        }
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }
+        }
+    }
+
+    shared_focus = {
+        id = URA_german_industrial_assistance
+        icon = GFX_goal_generic_construct_mil_factory
+
+        cost = 1
+
+        x = 5
+        y = 1
+        
+        relative_position_id = URA_support_from_the_reich
+
+        available = {
+            NOT = {
+                has_country_flag = batov_resistance
+                has_country_flag = batov_resistance_active
+            }
+        }
+
+        prerequisite = {
+            focus = URA_support_from_the_reich
+        }
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }
+        }
+    }
+
+    shared_focus = {
+        id = URA_provide_for_people
+        icon = GFX_goal_generic_construct_civ_factory
+
+        cost = 1
+
+        x = 0
+        y = 1
+
+        relative_position_id = URA_german_industrial_assistance
+
+        prerequisite = {
+            focus = URA_german_industrial_assistance
+        }
+
+
+        available = {
+            NOT = {
+                has_country_flag = batov_resistance
+                has_country_flag = batov_resistance_active
+            }
+        }
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }
+        }
+    }
+
+    shared_focus = {
+        id = URA_provide_for_machine
+        icon = GFX_goal_generic_army_tanks
+
+        cost = 1
+
+        x = -3
+        y = 2
+
+        relative_position_id = URA_provide_for_people
+
+        available = {
+            NOT = {
+                has_country_flag = batov_resistance
+                has_country_flag = batov_resistance_active
+            }
+        }
+        
+        prerequisite = {
+            focus = URA_provide_for_people 
+        }
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }
+        }
+    }
+
+    shared_focus = {
+        id = URA_educate_researchers
+        icon = GFX_shared_focus_research2
+
+        cost = 1
+
+        x = 3
+        y = 2
+
+        relative_position_id = URA_provide_for_people
+
+        prerequisite = {
+           focus = URA_provide_for_people
+        }
+
+        completion_reward = {
+             hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }
+        }
+    }
+
+    shared_focus = {
+        id = URA_improve_our_equipment
+        icon = GFX_shared_focus_secret_rearmament
+
+        cost = 1
+
+        x = 4
+        y = 2
+
+        relative_position_id = URA_import_german_equipment
+
+        prerequisite = {
+            focus = URA_import_german_equipment
+            focus = URA_provide_for_machine
+        }
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }
+        }
+    }
+
+    shared_focus = {
+        id = URA_enforce_natsoc_ideals
+        icon = GFX_goal_generic_political_pressure
+
+        cost = 1
+
+        x = 5
+        y = 2
+
+        relative_position_id = URA_root_out_resistance 
+
+        prerequisite = {
+            focus = URA_root_out_resistance
+        }
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }
+        }
+    }
+
+    shared_focus = {
+        id = URA_anti_commie_education
+        icon = GFX_goal_generic_war_with_comintern
+
+        cost = 1
+
+        x = 3
+        y = 2
+
+        relative_position_id = URA_enforce_natsoc_ideals
+
+        prerequisite = {
+            focus = URA_enforce_natsoc_ideals
+        }
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }        
+        }
+    }
+
+    shared_focus = {
+        id = URA_indoctrinate_the_youth
+        icon = GFX_goal_generic_war_with_comintern
+
+        cost = 1
+
+        x = -3
+        y = 2
+
+        relative_position_id = URA_enforce_natsoc_ideals
+
+        prerequisite = {
+            focus = URA_enforce_natsoc_ideals
+        }
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }
+        }
+    }
+
+    shared_focus = {
+        id = URA_pursue_partisans
+        icon = GFX_goal_generic_war_with_comintern
+
+        cost = 1
+
+        x = -5
+        y = 2
+
+        relative_position_id = URA_root_out_resistance
+
+        prerequisite = {
+            focus = URA_root_out_resistance
+        }
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }
+        }
+    }
+
+    shared_focus = {
+        id = URA_search_behind_urals
+        icon = GFX_goal_generic_war_with_comintern
+
+        cost = 1
+        
+        x = -3
+        y = 2
+
+        relative_position_id = URA_pursue_partisans
+
+        prerequisite = {
+            focus = URA_pursue_partisans
+        }
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }
+        }
+    }
+
+    shared_focus = {
+        id = URA_search_in_urals
+        icon = GFX_goal_generic_war_with_comintern
+
+        cost = 1
+
+        x = 3
+        y = 2
+
+        relative_position_id = URA_pursue_partisans
+
+        prerequisite = {
+            focus = URA_pursue_partisans
+        }
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }
+        }
+    }
+
+    shared_focus = {
+        id = URA_break_the_red_menace
+        icon = GFX_goal_generic_war_with_comintern
+
+        cost = 1
+
+        x = 3
+        y = 2
+
+        relative_position_id = URA_search_behind_urals
+
+        prerequisite = {
+            focus = URA_search_behind_urals
+        }
+
+        prerequisite = {
+            focus = URA_search_in_urals
+        }
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }          
+        }
+    }
+
+    shared_focus = {
+        id = URA_shatter_the_dream
+        icon = GFX_goal_generic_war_with_comintern
+
+        cost = 1
+
+        x = 0
+        y = 2
+        
+        relative_position_id = URA_break_the_red_menace
+
+        prerequisite = {
+            focus = URA_break_the_red_menace
+        }
+
+        completion_reward = {
+            hidden_effect = {
+                URA = {
+                    country_event = {
+                        id = bs_ura.3
+                    }
+                }
+            }
+        }
+    }

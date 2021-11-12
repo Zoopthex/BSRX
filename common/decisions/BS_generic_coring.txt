@@ -1,0 +1,2187 @@
+BS_generic_coring = {
+
+	core_ceuta_melilla = {
+
+		highlight_state_targets = {
+			state = 1043
+			state = 1044
+		}
+
+		visible = {
+			original_tag = SPR
+			controls_state = 1043
+			controls_state = 1044
+			NOT = {
+				1043 = { is_core_of = ROOT }
+				1044 = { is_core_of = ROOT }
+				tag = SPC
+			}
+		}
+
+		available = {
+			has_global_flag = scw_over
+			controls_state = 1043
+			controls_state = 1044
+			1043 = { compliance > 40 }
+			1044 = { compliance > 40 }
+			NOT = {
+				1043 = { is_core_of = ROOT }
+				1044 = { is_core_of = ROOT }
+			}
+		}
+
+		icon = generic_nationalism
+		
+		cost = 100
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.05
+		}
+
+		remove_effect = {
+			add_state_core = 1043
+			add_state_core = 1044
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	coring_states_LIT = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 30
+				any_neighbor_state = {
+						is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = lithuania_can_core
+            }
+			ROOT = {
+				OR = {
+				original_tag = LIT
+				has_cosmetic_tag = BAL_UNIFIED
+				}
+				NOT = { has_cosmetic_tag = PLC_UNIFIED }
+			}
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	coring_states_BLR = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 30
+				any_neighbor_state = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = belarus_can_core
+            }
+			ROOT = { original_tag = BLR }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	
+	coring_states_UKR_easy = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 30
+				any_neighbor_state = {
+						is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = ukraine_can_core_easy
+            }
+			ROOT = { original_tag = UKR }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_UKR_hard = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 50
+				any_neighbor_state = {
+						is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = no
+
+		days_remove = 100
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = ukraine_can_core_hard
+            }
+			ROOT = { original_tag = UKR }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_FRA_easy = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 30
+				any_neighbor_state = {
+						is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = france_can_core_easy
+            }
+			ROOT = { original_tag = FRA }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_FRA_hard = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 50
+				any_neighbor_state = {
+						is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = no
+
+		days_remove = 100
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = france_can_core_hard
+            }
+			ROOT = { original_tag = FRA }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_FRA_overseas = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 50
+				is_coastal = yes
+				NOT = {
+					any_neighbor_state = { is_core_of = ROOT }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 150
+
+		fire_only_once = no
+
+		days_remove = 140
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              	has_state_flag = france_can_core_hard
+				is_coastal = yes
+				NOT = {
+					any_neighbor_state = { is_core_of = ROOT }
+				}
+            }
+			ROOT = { original_tag = FRA }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	coring_states_HOL = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 30
+				any_neighbor_state = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = netherlands_can_core
+            }
+			ROOT = { original_tag = HOL }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	coring_states_MON = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 30
+				any_neighbor_state = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = mongolia_can_core
+            }
+			ROOT = { original_tag = MON }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_ITA = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 30
+				any_neighbor_state = {
+						is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = italy_can_core
+            }
+			ROOT = {
+				OR = {
+					original_tag = ITA
+					has_cosmetic_tag = ITA_REFORMED
+				}
+				NOT = { has_cosmetic_tag = TRIESTE }		
+			}
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_ARM_easy = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 30
+				any_neighbor_state = {
+						is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+					ROOT = { has_cosmetic_tag = CAU_UNIFIED }
+                }
+              has_state_flag = armenia_can_core_easy
+            }
+			ROOT = { original_tag = ARM }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_ARM_hard = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 50
+				any_neighbor_state = {
+						is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = no
+
+		days_remove = 100
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = armenia_can_core_hard
+            }
+			ROOT = { original_tag = ARM }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_AZR_easy = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 30
+				any_neighbor_state = {
+						is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+					ROOT = { has_cosmetic_tag = CAU_UNIFIED }
+                }
+              has_state_flag = azerbaijan_can_core_easy
+            }
+			ROOT = { original_tag = AZR }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_AZR_hard = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 50
+				any_neighbor_state = {
+						is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = no
+
+		days_remove = 100
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+					ROOT = { has_cosmetic_tag = CAU_UNIFIED }
+                }
+              has_state_flag = azerbaijan_can_core_hard
+            }
+			ROOT = { original_tag = AZR }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_TUR_easy = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 30
+				any_neighbor_state = {
+						is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+					ROOT = { has_cosmetic_tag = CAU_UNIFIED }
+                }
+              has_state_flag = turkey_can_core_easy
+            }
+			ROOT = { 
+				original_tag = TUR 
+				NOT = { has_cosmetic_tag = turk_straits }
+			}
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_TUR_hard = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 50
+				any_neighbor_state = {
+						is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = no
+
+		days_remove = 100
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+					ROOT = { has_cosmetic_tag = CAU_UNIFIED }
+                }
+              has_state_flag = turkey_can_core_hard
+            }
+			ROOT = { 
+				original_tag = TUR 
+				NOT = { has_cosmetic_tag = turk_straits }
+			}
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_GEO = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 30
+				any_neighbor_state = {
+						is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+					ROOT = { has_cosmetic_tag = CAU_UNIFIED }
+                }
+              has_state_flag = georgia_can_core
+            }
+			ROOT = {
+				original_tag = GEO		
+			}
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_SIA_easy = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 30
+				any_neighbor_state = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = siam_can_core_easy
+            }
+			ROOT = { original_tag = SIA }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_SIA_hard = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 50
+				any_neighbor_state = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = no
+
+		days_remove = 100
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = siam_can_core_hard
+            }
+			ROOT = { original_tag = SIA }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_RKU = {
+
+		name = coring_states_rk_ukraine
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			NOT = { 
+				OR = {
+					has_war_with = SOV
+					has_war_with = UKR #ukrainian uprisings will be able to occur if independent somehow
+				}
+			}
+			FROM = {
+				compliance > 70
+				any_neighbor_state = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = no
+
+		days_remove = 100
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = RK_ukraine_can_integrate
+            }
+			ROOT = { 
+				original_tag = RKU 
+				has_completed_focus = integrate_ukrainian_land
+			}
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_TUG_SIK = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 30
+				any_neighbor_state = {
+						is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = east_turkestan_and_xinjiang_can_core
+            }
+			ROOT = {
+				OR = {
+				original_tag = TUG
+				original_tag = SIK
+				original_tag = PRC
+				original_tag = CHI
+				}
+			}
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_HUN_peaceful = {
+		
+		name = generic_compliance_coring
+
+		icon = infiltrate_state
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.75
+			FROM = {
+				compliance > 70
+				any_neighbor_state = {
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 75
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 150
+
+		fire_only_once = no
+
+		days_remove = 120
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+					custom_trigger_tooltip = {
+						tooltip = HUN_is_coring_this_tt
+						has_state_flag = HUN_is_coring_this
+					}
+                }
+            	has_state_flag = HUN_can_core
+            }
+			ROOT = {
+				original_tag = HUN
+				NOT = { has_cosmetic_tag = HUN_EMPIRE }
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				FROM = {
+					set_state_flag = HUN_is_coring_this
+				}
+			}
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+				clr_state_flag = HUN_is_coring_this
+			}
+		}
+	}
+	coring_states_HUN_forceful = {
+		
+		name = coring_states_HUN_forceful
+
+		icon = generic_military
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.5
+			FROM = {
+				any_neighbor_state = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 100
+			modifier = {
+				FROM = { compliance > 55 }
+				factor = 0
+			}
+			modifier = {
+				FROM = { resistance < 25 }
+				factor = 5
+			}
+			modifier = { #The AI should begin assimilating in 1943, so making sure the AI does so.
+				date<1943.1.1
+				factor = 0
+			}
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+					custom_trigger_tooltip = {
+						tooltip = HUN_is_coring_this_tt
+						has_state_flag = HUN_is_coring_this
+					}
+                }
+              has_state_flag = HUN_can_core
+            }
+			ROOT = {
+				original_tag = HUN
+				NOT = { 
+					has_government = democratic
+					has_cosmetic_tag = HUN_EMPIRE
+				}
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				add_resistance_target = 35
+			}
+			hidden_effect = {
+				FROM = {
+					set_state_flag = HUN_is_coring_this
+				}
+			}
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+				clr_state_flag = HUN_is_coring_this
+			}
+		}
+	}
+	coring_states_ALB_easy = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 30
+				any_neighbor_state = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = albania_can_core_easy
+            }
+			ROOT = { original_tag = ALB }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_ALB_hard = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 50
+				any_neighbor_state = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = no
+
+		days_remove = 100
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = albania_can_core_hard
+            }
+			ROOT = { original_tag = ALB }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_DEN_easy = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 30
+				any_neighbor_state = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = denmark_can_core_easy
+            }
+			ROOT = { original_tag = DEN }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_DEN_hard = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 50
+				any_neighbor_state = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = no
+
+		days_remove = 100
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = denmark_can_core_hard
+            }
+			ROOT = { original_tag = DEN }
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_AUS_easy = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 30
+				any_neighbor_state = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = no
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              	has_state_flag = austria_can_core_easy
+            }
+			ROOT = { 
+				original_tag = AUS 
+				NOT = { has_cosmetic_tag = HUN_EMPIRE }
+			}
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	coring_states_AUS_hard = {
+
+		name = generic_compliance_coring
+
+		icon = generic_nationalism
+
+		allowed = { always = yes }
+
+		available = {
+			has_stability > 0.6
+			FROM = {
+				compliance > 50
+				any_neighbor_state = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 5
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = no
+
+		days_remove = 100
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+                    is_core_of = ROOT
+                }
+              has_state_flag = austria_can_core_hard
+            }
+			ROOT = { 
+				original_tag = AUS 
+				NOT = { has_cosmetic_tag = HUN_EMPIRE }
+			}
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	TEX_core_old = {
+	
+		icon = generic_form_nation
+
+		name = integrate_old_provinces
+
+		highlight_state_targets = {
+			state = 1200
+			state = 376
+			state = 1623
+			state = 849
+			state = 848
+			state = 1065
+			state = 1632
+			state = 1633
+			state = 1150
+			state = 1635
+		}
+
+
+		available = {
+			is_subject = no
+			AND = {
+				controls_state = 1200
+				controls_state = 376
+				controls_state = 1623
+				controls_state = 849
+				controls_state = 848
+				controls_state = 1065
+				controls_state = 1632
+				controls_state = 1633
+				controls_state = 1150
+				controls_state = 1635
+				if = {
+					1200 = {
+					compliance > 30
+					}
+				}
+				if = {
+					376 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1623 = {
+					compliance > 30
+					}
+				}
+				if = {
+					849 = {
+					compliance > 30
+					}
+				}
+				if = {
+					848 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1065 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1632 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1633 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1150 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1635 = {
+					compliance > 30
+					}
+				}
+			}
+			has_war = no
+			has_stability > 0.6
+			
+			
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		days_remove = 30
+
+		visible = {
+			original_tag = TEX
+			controls_state = 1200
+			controls_state = 376
+			controls_state = 1623
+		}
+		remove_effect = {
+			
+			add_state_core = 1200
+			add_state_core = 376
+			add_state_core = 1623
+			add_state_core = 849
+			add_state_core = 848
+			add_state_core = 1065
+			add_state_core = 1632
+			add_state_core = 1633
+			add_state_core = 1150
+			add_state_core = 1635
+				
+		}
+	}
+}

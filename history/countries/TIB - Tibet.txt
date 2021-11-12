@@ -1,0 +1,175 @@
+﻿capital = 757
+
+oob = "TIB_1936"
+984 = {  force_disable_resistance = TIB }
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+add_ideas = {
+ BS_Illegitimate_Chinese_State 
+ the_Dalai_Lama
+}
+
+1939.1.1 = {
+
+	add_political_power = 1198
+	
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = construction_effort_2
+	complete_national_focus = production_effort_2
+	complete_national_focus = infrastructure_effort
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	oob = "TIB_1939"
+	set_technology = {
+		#doctrines
+		air_superiority = 1
+
+		mass_assault = 1
+		pocket_defence = 1
+		defence_in_depth = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 100
+}
+add_ideas = {
+	BS_Illegitimate_Chinese_State
+}
+
+create_country_leader = {
+	name = "Jamphel Yeshe Gyaltsen"
+	desc = "POLITICS_JAMPHEL_YESHE_GYALTSEN_DESC"
+	picture = "Portrait_Tibet_Jamphel_Yeshe_Gyaltsen.dds"
+	expire = "1965.1.1"
+	ideology = theocracy
+	traits = {
+		Regent
+	}
+}
+
+create_country_leader = {
+	name = "Taring Jigme"
+	desc = "POLITICS_CHAO_KUNG_DESC"
+	picture = "gfx/leaders/TIB/Portrait_Taring_Jigme.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		brilliant_officer
+	}
+}
+
+create_country_leader = {
+	name = "Phuntsok Wangyal Goranga"
+	desc = "POLITICS_PHUNTSOK_WANGYAL_DESC"
+	picture = "gfx/leaders/TIB/Portrait_Phuntsok_Wangyal.dds"
+	expire = "1965.1.1"
+	ideology = radical_socialism
+	traits = {
+		marxist_philosopher
+	}
+}
+
+create_country_leader = {
+	name = "Pandatsang Rapga" 
+	desc = "POLITICS_PANDATSANG_RAPGA_DESC"
+	picture = "gfx/leaders/TIB/Portrait_Pandatsang_Rapga.dds"
+	expire = "1965.1.1"
+	ideology = social_liberalism
+	traits = {
+		assiduous_democratiser_2
+	}
+}
+
+create_field_marshal = {
+	name = "Changra"
+	portrait_path = "gfx/leaders/TIB/Portrait_Changra.dds"
+	traits = { old_guard defensive_doctrine }
+	skill = 6
+	attack_skill = 5
+    defense_skill = 6
+    planning_skill = 7
+    logistics_skill = 6
+}
+
+create_corps_commander = {
+	name = "Kunga Wanchuk Landun"
+	portrait_path = "gfx/leaders/TIB/Portrait_Kunga_Wanchuk_Landun.dds"
+	traits = { trait_cautious }
+	skill = 6
+	attack_skill = 7
+    defense_skill = 5
+    planning_skill = 3
+    logistics_skill = 5
+}
+create_corps_commander = {
+	name = "Tashi Dondrub"
+	portrait_path = "gfx/leaders/TIB/Portrait_Tashi_Dondrub.dds"
+	traits = { trait_mountaineer }
+	skill = 5
+	attack_skill = 4
+    defense_skill = 6
+    planning_skill = 5
+    logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Taring Jigme"
+	portrait_path = "gfx/leaders/TIB/Portrait_Taring_Jigme.dds"
+	traits = { offensive_doctrine career_officer }
+	id = 20924
+	skill = 5
+	attack_skill = 6
+    defense_skill = 5
+    planning_skill = 5
+    logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Wangchen Geleg Surkhang"
+	portrait_path = "gfx/leaders/TIB/Portrait_Wangchen_Geleg_Surkhang.dds"
+	traits = { politically_connected }
+	id = 20925
+	skill = 4
+	attack_skill = 5
+    defense_skill = 4
+    planning_skill = 5
+    logistics_skill = 6
+}
+create_corps_commander = {
+	name = "Surkhang Lhawang Topgyal"
+	portrait_path = "gfx/leaders/TIB/Portrait_Surkhang_Lhawang_Topgyal.dds"
+	traits = { trait_reckless }
+	id = 20926
+	skill = 3
+	attack_skill = 3
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 3
+}

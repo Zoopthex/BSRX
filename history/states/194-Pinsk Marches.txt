@@ -1,0 +1,25 @@
+
+state={
+	id=194
+	name="STATE_194" # Mozyr
+	manpower = 834632
+	
+	state_category = rural
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 3
+			air_base = 3
+		}
+		victory_points = {
+			6319 5
+		}
+		add_core_of = SOV
+		add_core_of = BLR
+	}
+
+	provinces={
+		 3203 3507 6319 9249 11453 9466 9568
+	}
+}

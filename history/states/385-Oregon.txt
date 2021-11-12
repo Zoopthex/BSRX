@@ -1,0 +1,28 @@
+
+state={
+	id=385
+	name="STATE_385"
+	manpower = 197531
+	
+	state_category = rural
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 4
+			air_base = 6
+			12281 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = USA
+		victory_points = {
+			12281 1 
+		}
+
+	}
+
+	provinces={
+	 528 4274 7398 11495 12281 10151 4347 1414 
+	}
+}

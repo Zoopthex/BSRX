@@ -1,0 +1,72 @@
+guiTypes = {
+	containerWindowType = {
+		name = "fra_decision_parameters_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 250 }
+		#buttonType = {
+		#	name = "refresh_button"
+		#	spriteType = "GFX_browser_refresh"
+		#	position = { x = 5 y = 5 }
+		#}
+		iconType = {
+			name = "FRA_parameters_0"
+			spriteType = "GFX_fra_parameters_0"
+			position = { x = 160 y = 32 }
+		}
+		iconType = {
+			name = "FRA_parameters_1"
+			spriteType = "GFX_fra_parameters_1"
+			position = { x = 160 y = 32 }
+		}
+		iconType = {
+			name = "FRA_parameters_2"
+			spriteType = "GFX_fra_parameters_2"
+			position = { x = 160 y = 32 }
+		}
+		iconType = {
+			name = "FRA_parameters_3"
+			spriteType = "GFX_fra_parameters_3"
+			position = { x = 160 y = 32 }
+		}
+		iconType = {
+			name = "FRA_parameters_4"
+			spriteType = "GFX_fra_parameters_4"
+			position = { x = 160 y = 32 }
+		}
+		iconType = {
+			name = "FRA_parameters_5"
+			spriteType = "GFX_fra_parameters_5"
+			position = { x = 160 y = 32 }
+		}
+		iconType = {
+			name = "FRA_stalinist"
+			quadTextureSprite = "GFX_fra_stalinist"
+			position = { x = 230 y = 3 }
+			scale = 0.7
+		}
+		iconType = {
+			name = "FRA_leninist"
+			quadTextureSprite = "GFX_fra_leninist"
+			position = { x = 130 y = 85 }
+			scale = 0.7
+		}
+		iconType = {
+			name = "FRA_syndicalist"
+			quadTextureSprite = "GFX_fra_syndicalist"
+			position = { x = 330 y = 85 }
+			scale = 0.7
+		}
+		iconType = {
+			name = "FRA_syndical_democrat"
+			quadTextureSprite = "GFX_fra_syndical_democrat"
+			position = { x = 164 y = 193 }
+			scale = 0.7
+		}
+		iconType = {
+			name = "FRA_anarcho_syndicalist"
+			quadTextureSprite = "GFX_fra_anarcho_syndicalist"
+			position = { x = 296 y = 193 }
+			scale = 0.7
+		}
+	}
+}

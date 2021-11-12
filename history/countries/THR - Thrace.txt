@@ -1,0 +1,174 @@
+capital = 1156
+
+set_research_slots = 1
+
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	trench_warfare = 1
+	early_fighter = 1
+	early_bomber = 1
+	fuel_silos = 1
+	synth_oil_experiments = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+		pre_dreadnoughts = 1
+		mtg_transport = 1
+	}
+}
+		add_ideas = {
+			export_focus
+			limited_conscription
+			civilian_economy
+		}
+
+1939.1.1 = {
+	add_political_power = 1198
+	set_technology = {
+		tech_support = 1		
+		tech_engineers2 = 1
+		tech_recon = 1
+		early_fighter = 1
+		early_bomber = 1
+		CAS1 = 1
+		naval_bomber1 = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		fuel_silos = 1
+		oil_processing = 1
+		improved_oil_processing = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		dispersed_industry3 = 1
+	}
+	if = {
+		limit = { not = { has_dlc = "Man the Guns" } }
+		set_technology = {
+			basic_destroyer = 1
+		}
+	}
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+		set_technology = {
+			basic_light_battery = 1
+			basic_depth_charges = 1
+		}
+	}
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.6.9"
+	election_frequency = 48
+	elections_allowed = yes 
+}
+set_popularities = {
+	democratic = 50
+	fascism = 22
+	communism = 20
+	neutrality = 8
+}
+
+set_stability = 0.9
+set_war_support = 0.8
+set_convoys = 80
+
+	create_country_leader = {
+		name = "Thracian Parliament"
+		desc = ""
+		picture = "thrace.dds"
+		expire = "1965.1.1"
+		ideology = socialism
+		traits = {
+			council_of_experts
+		}
+	}
+	
+	create_country_leader = {
+		name = "Thracian Parliament"
+		desc = ""
+		picture = "thrace.dds"
+		expire = "1965.1.1"
+		ideology = centrism
+		traits = {
+			council_of_experts
+		}
+	}
+	
+	create_country_leader = {
+		name = "Thracian Parliament"
+		desc = ""
+		picture = "thrace.dds"
+		expire = "1965.1.1"
+		ideology = marxism
+		traits = {
+			council_of_experts
+		}
+	}
+
+	create_country_leader = {
+		name = "Thracian Parliament"
+		desc = ""
+		picture = "thrace.dds"
+		expire = "1965.1.1"
+		ideology = falangism
+		traits = {
+			council_of_experts
+		}
+	}	

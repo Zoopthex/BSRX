@@ -1,0 +1,117 @@
+spriteTypes = { 
+	##Icon For: The Military Governor
+	SpriteType = { 
+		name = "GFX_SER_the_military_governor-105134"
+		texturefile = "gfx/interface/goals/GFX_SER_the_military_governor-105134.dds"
+	}
+
+	##Icon Shine For: The Military Governor
+	SpriteType = { 
+		name = "GFX_SER_the_military_governor-105134_shine"
+		texturefile = "gfx/interface/goals/GFX_SER_the_military_governor-105134.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_SER_the_military_governor-105134.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_SER_the_military_governor-105134.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Fate of Yugoslavia
+	SpriteType = { 
+		name = "GFX_SER_fate_of_yugoslavia-102679"
+		texturefile = "gfx/interface/goals/GFX_SER_fate_of_yugoslavia-102679.dds"
+	}
+
+	##Icon Shine For: Fate of Yugoslavia
+	SpriteType = { 
+		name = "GFX_SER_fate_of_yugoslavia-102679_shine"
+		texturefile = "gfx/interface/goals/GFX_SER_fate_of_yugoslavia-102679.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_SER_fate_of_yugoslavia-102679.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_SER_fate_of_yugoslavia-102679.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Side with Partisans
+	SpriteType = { 
+		name = "GFX_SER_side_with_partisans-105139"
+		texturefile = "gfx/interface/goals/GFX_SER_side_with_partisans-105139.dds"
+	}
+
+	##Icon Shine For: Side with Partisans
+	SpriteType = { 
+		name = "GFX_SER_side_with_partisans-105139_shine"
+		texturefile = "gfx/interface/goals/GFX_SER_side_with_partisans-105139.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_SER_side_with_partisans-105139.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_SER_side_with_partisans-105139.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+ 
+ }

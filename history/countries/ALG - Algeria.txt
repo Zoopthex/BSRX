@@ -1,0 +1,155 @@
+﻿capital = 1577
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 20
+
+1939.1.1 = {
+	
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = large_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	set_technology = {
+		tech_support = 1
+		tech_recon = 1
+		support_weapons = 1
+		gw_artillery = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 45
+	fascism = 20
+	communism = 5
+	neutrality = 30
+}
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 50
+		fascism = 10
+		communism = 20
+		neutrality = 20
+	}
+}
+
+create_country_leader = {
+	name = "Messali Hadj"
+	desc = ""
+	picture = "gfx/leaders/ALG/Messali_Hadj.dds"
+	ideology = conservatism
+	traits = {
+		social_reformer_2
+	}
+}
+
+create_country_leader = {
+	name = "Ferhat Abbas"
+	desc = ""
+	picture = "gfx/leaders/ALG/Ferhat_Abbas.dds"
+	ideology = despotism
+	traits = {
+		popular_figurehead
+	}
+}
+
+create_country_leader = {
+	name = "Saïd Mohammedi"
+	desc = ""
+	picture = "gfx/leaders/ALG/Said_Mohammedi.dds"
+	ideology = falangism
+	traits = {
+		old_figurehead
+	}
+}
+
+create_country_leader = {
+	name = "Amar Ouzegane"
+	desc = ""
+	picture = "gfx/leaders/ALG/ouzegane.dds"
+	ideology = leninism
+	traits = {
+		the_academic
+	}
+}
+
+create_field_marshal = {
+	name = "Saïd Mohammedi"
+	portrait_path = "gfx/leaders/ALG/Said_Mohammedi.dds"
+	traits = { politically_connected harsh_leader }
+	skill = 4
+	attack_skill = 4
+        defense_skill = 5
+        planning_skill = 3
+        logistics_skill = 5
+    
+}
+create_corps_commander = {
+	name = "Amar Imache"
+	portrait_path = "gfx/leaders/ALG/Amar_Imache.dds"
+	traits = { politically_connected }
+	skill = 3
+	attack_skill = 5
+        defense_skill = 3
+        planning_skill = 5
+        logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Mohammed Bellounis"
+	portrait_path = "gfx/leaders/ALG/Mohammed_Bellounis.dds"
+	traits = { politically_connected }
+	skill = 3
+	attack_skill = 4
+        defense_skill = 4
+        planning_skill = 6
+        logistics_skill = 7
+}

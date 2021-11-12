@@ -1,0 +1,19 @@
+
+state={
+	id=416
+	name="STATE_416"
+	manpower = 400000
+	state_category = pastoral
+
+	history={
+		owner = PER
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = PER
+	}
+
+	provinces={
+		1888 1957 5073 7573 10806 
+	}
+}

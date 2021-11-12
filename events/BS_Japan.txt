@@ -1,0 +1,199 @@
+
+add_namespace = bs_japan
+
+#How to deal with Mongolia after Mengjiang cores it
+country_event = {
+    id = bs_japan.1
+    title = bs_japan.1.t
+    desc = bs_japan.1.desc
+	picture = GFX_report_event_japan_army_mountainside
+
+	is_triggered_only = yes
+
+    option = { #All to Mengjiang
+        name = bs_japan.1.a
+
+        MEN = {
+            transfer_state = 330
+            transfer_state = 1015
+            transfer_state = 1016
+            transfer_state = 1017
+            transfer_state = 1018
+            transfer_state = 1019
+            transfer_state = 1020
+            transfer_state = 1448
+        }
+
+        ai_chance = {
+            factor = 50
+        }
+    }
+
+    option = { #All to Mengjiang but a border strip
+        trigger = {
+            OR = {
+                SIK = {
+                    controls_state = 617
+                    controls_state = 618
+                    controls_state = 760
+                    is_subject_of = JAP
+                }
+                TUG = {
+                    controls_state = 617
+                    controls_state = 618
+                    controls_state = 760
+                    is_subject_of = JAP
+                }
+                PGR = {
+                    controls_state = 617
+                    controls_state = 618
+                    controls_state = 760
+                    is_subject_of = JAP
+                }
+            }
+        }
+        name = bs_japan.1.b
+
+        MEN = {
+            transfer_state = 330
+            transfer_state = 1015
+            transfer_state = 1016
+            transfer_state = 1017
+            transfer_state = 1018
+            transfer_state = 1019
+            transfer_state = 1020
+        }
+
+        if = {
+            limit = {
+                SIK = {
+                    controls_state = 617
+                    controls_state = 618
+                    controls_state = 760
+                    is_subject_of = JAP
+                }
+            }
+            SIK = { transfer_state = 1448 }
+        }
+        else_if = {
+            limit = {
+                TUG = {
+                    controls_state = 617
+                    controls_state = 618
+                    controls_state = 760
+                    is_subject_of = JAP
+                }
+            }
+            TUG = { transfer_state = 1448 }
+        }
+        else_if = {
+            limit = {
+                PGR = {
+                    controls_state = 617
+                    controls_state = 618
+                    controls_state = 760
+                    is_subject_of = JAP
+                }
+            }
+            PGR = { transfer_state = 1448 }
+        }
+
+        ai_chance = {
+            factor = 50
+        }
+    }
+
+    option = { #The east to Mengjiang
+        name = bs_japan.1.c
+
+        MEN = {
+            transfer_state = 1018
+            transfer_state = 1019
+            transfer_state = 1020
+        }
+
+        if = {
+            limit = {
+                SIK = {
+                    controls_state = 617
+                    controls_state = 618
+                    controls_state = 760
+                    is_subject_of = JAP
+                }
+            }
+            SIK = { transfer_state = 1448 }
+        }
+        else_if = {
+            limit = {
+                TUG = {
+                    controls_state = 617
+                    controls_state = 618
+                    controls_state = 760
+                    is_subject_of = JAP
+                }
+            }
+            TUG = { transfer_state = 1448 }
+        }
+        else_if = {
+            limit = {
+                PGR = {
+                    controls_state = 617
+                    controls_state = 618
+                    controls_state = 760
+                    is_subject_of = JAP
+                }
+            }
+            PGR = { transfer_state = 1448 }
+        }
+
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 5
+                has_country_flag = ningsia_puppet
+            }
+        }
+    }
+
+    option = { #None to Mengjiang
+        name = bs_japan.1.d
+
+        if = {
+            limit = {
+                SIK = {
+                    controls_state = 617
+                    controls_state = 618
+                    controls_state = 760
+                    is_subject_of = JAP
+                }
+            }
+            SIK = { transfer_state = 1448 }
+        }
+        else_if = {
+            limit = {
+                TUG = {
+                    controls_state = 617
+                    controls_state = 618
+                    controls_state = 760
+                    is_subject_of = JAP
+                }
+            }
+            TUG = { transfer_state = 1448 }
+        }
+        else_if = {
+            limit = {
+                PGR = {
+                    controls_state = 617
+                    controls_state = 618
+                    controls_state = 760
+                    is_subject_of = JAP
+                }
+            }
+            PGR = { transfer_state = 1448 }
+        }
+
+        ai_chance = {
+            factor = 50
+        }
+    }
+}

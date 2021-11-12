@@ -1,0 +1,66 @@
+guiTypes = {
+	containerWindowType = {
+		name = "duel_container"
+		position = { x = 0 y = 0 }
+		
+		buttonType = {
+			name ="duel_icon"
+			spriteType = "GFX_pol_duel_open"
+			position = { x= 160 y = 279 }
+			Orientation = "UPPER_LEFT"
+			
+			pdx_tooltip = "PORTRAIT_TOOLTIP"
+			pdx_tooltip_delayed = "PORTRAIT_TOOLTIP_DELAYED"
+		}
+	}
+	
+	### Baldwin ###
+	containerWindowType = {
+		name = "duel_menu_George_v_Container"
+		position = {x=-545 y=4}
+		size = { width=400 height=440 }
+		clipping = no
+		show_position = { x= 545 y = 4 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 0
+		show_sound = open_sub_window
+		
+		containerWindowType = {
+			name = "duel_menu_George_v_Portrait"
+			position = { x = -380 y = 16 }
+			size = { width=400 height=400 }
+			verticalScrollbar = "right_vertical_slider"
+			margin = { top = 4 bottom = 12 }	
+			
+			iconType = {
+				name = "leader_George_V"
+				spriteType = "GFX_pol_leader_frame_George_V"
+				position = { x = 12 y = 20 }
+				alwaystransparent = no
+			}
+			
+			instantTextboxType = {
+				name = "leader_George_V_name"
+				position = { x = 18 y = 245 }
+				font = "hoi_18mbs"
+				text = "George V"
+				maxWidth = 155
+				maxHeight = 20
+				format = center
+				vertical_alignment = center
+			}
+		
+			buttonType = {
+				name = "leader_George_V_close"
+				spriteType = "GFX_pol_duel_close"
+				position = { x= -405 y = 255 }
+				buttonFont = "Main_14_black"
+				shortcut = "ESCAPE"
+				Orientation = "UPPER_RIGHT"
+				clicksound = click_close
+				pdx_tooltip = "Monarch"
+			}
+		}
+	}
+}

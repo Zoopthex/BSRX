@@ -1,0 +1,645 @@
+
+is_German_country = {
+	OR = {
+		original_tag = GER
+		tag = WGR
+		tag = DDR
+		tag = DAN
+		tag = PRE
+		tag = AUS
+		tag = BAY
+		tag = WUR
+		tag = SAR
+		tag = BDN
+		tag = MEK
+		tag = RKK
+		tag = RKO
+		tag = RKM
+		tag = RKU
+		tag = RKW
+		tag = RKS
+		tag = NID
+		tag = NWG
+		tag = BNF
+		tag = PBM
+		tag = GGO
+		tag = SAX
+		tag = SHL
+		tag = HAN
+		tag = BGN
+		tag = GFA
+	}
+	NOT = {
+	has_cosmetic_tag = HUN_EMPIRE
+	}
+}
+
+is_German_puppet = {
+	OR = {
+		is_puppet_of = GER
+		is_puppet_of = WGR
+		is_puppet_of = DDR
+		is_puppet_of = DAN
+		is_puppet_of = PRE
+		is_puppet_of = AUS
+		is_puppet_of = BAY
+		is_puppet_of = WUR
+		is_puppet_of = SAR
+		is_puppet_of = BDN
+		is_puppet_of = MEK
+		is_puppet_of = RKK
+		is_puppet_of = RKO
+		is_puppet_of = RKM
+		is_puppet_of = RKU
+		is_puppet_of = RKW
+		is_puppet_of = RKS
+		is_puppet_of = NID
+		is_puppet_of = NWG
+		is_puppet_of = BNF
+		is_puppet_of = PBM
+		is_puppet_of = GGO
+		is_puppet_of = SAX
+		is_puppet_of = SHL
+		is_puppet_of = HAN
+		is_puppet_of = BGN
+	}
+	NOT = {
+	has_cosmetic_tag = HUN_EMPIRE
+	}
+}
+
+is_German_speak = {
+	OR = {
+		is_German_country = yes
+		is_German_puppet = yes
+	}
+	NOT = {
+	has_cosmetic_tag = HUN_EMPIRE
+	}
+}
+
+is_austria_hungary = {
+	OR = {
+		tag = AUS
+		tag = HUN
+		tag = CZE
+	}
+	has_cosmetic_tag = HUN_EMPIRE
+}
+
+is_Polish_speak = {
+	original_tag = POL
+}
+
+is_Chinese_speak = {
+	OR = {
+		tag = CHI
+		tag = PRC
+		tag = XSM
+		tag = SIK
+		tag = GXC
+		tag = SHX
+	}
+}
+
+is_Arabian_speak = {
+	OR = {
+		tag = SYR
+		tag = IRQ
+		tag = JOR
+		tag = PAL
+		tag = SAU
+		tag = HEJ
+		tag = KUW
+		tag = EGY
+		tag = BHR
+		tag = UAE
+		tag = OMA
+		tag = YEM
+		tag = SYE
+		tag = LYB
+		tag = TUN
+		tag = ALG
+		tag = MOR
+		tag = WES
+		tag = ADU
+		tag = MRT
+	}
+}
+
+is_Japanese_country = {
+	OR = {
+		original_tag = JAP
+		tag = RYU
+	}
+}
+
+is_Soviet_speak = {
+	OR = {
+		original_tag = SOV
+	}
+}
+
+is_Russian_speak = {
+    OR = {
+	original_tag = SOV
+	AND = {
+	    original_tag = URA
+		OR = {
+			has_country_leader = {
+ 			   name = "Andrey Vlasov"
+ 			   ruling_only = yes
+			}
+			has_country_leader = {
+ 			   name = "Pavel Batov"
+ 			   ruling_only = yes
+				}		
+			}
+		}
+	}
+}
+
+is_Ukranian_speak = {
+	tag = UKR
+}
+
+is_Belarusian_speak = {
+	tag = BLR
+}
+
+is_Korean_speak = {
+	tag = KOR
+}
+
+is_Italian_speak = {
+	OR = {
+		original_tag = ITA
+		original_tag = KTS
+		original_tag = VEC
+		original_tag = SRD
+		original_tag = TUS
+		original_tag = PRM
+		original_tag = VCT
+		original_tag = SMR
+	}
+}
+
+is_French_speak = {
+	OR = {
+		original_tag = FRA
+		tag = BRI
+		tag = OCC
+	}
+}
+
+is_Germany_divided = {
+	OR = {
+		AND = {
+			WGR = { controls_state = 1105 }
+			NOT = { WGR = { controls_state = 64 } }
+		}
+		AND = {
+			DDR = { controls_state = 64 }
+			NOT = { DDR = { controls_state = 1105 } }
+		}
+	}
+}
+
+is_France_divided = {
+	BGN = { controls_state = 16 }
+}
+
+is_France_united = {
+	country_exists = BGN
+	NOT = { BGN = { controls_state = 16 } }
+}
+
+virgin_islands_divided = {
+	OR = {
+		AND = {
+			USA = { 
+				controls_state = 972 
+				NOT = { controls_state = 973 }
+			}
+			ENG = { 
+				controls_state = 973
+				NOT = { controls_state = 972 }
+			}
+		}
+	}
+}
+
+is_RK_or_RP = {
+	OR = {
+		tag = RKU
+		tag = RKO
+		tag = RKM
+		tag = RKK
+		tag = RKT
+		tag = RKS
+		tag = RKW
+		tag = RKD
+		tag = NWG
+		tag = NID
+		tag = GGO
+		tag = PBM
+		tag = BNF
+		tag = GFA
+	}
+}
+
+is_former_us_state_without_change = {
+	OR = {
+		tag = CAL
+		tag = TEX
+		tag = LOU
+		tag = VIR
+		tag = KFC
+		tag = PEN
+		tag = MSS
+		tag = FLO
+		tag = ABM
+		tag = DEL
+		tag = GGA
+		tag = MRY
+		tag = NJY
+		tag = NWY
+		tag = SCL
+		tag = NCL
+		tag = VER
+		tag = WVR
+		tag = OKH
+		tag = ARK
+		tag = TEN
+		tag = MIC
+		tag = MIN
+		tag = ILL
+		tag = IND
+		tag = IOW
+		tag = MIS
+		tag = OHO
+		tag = WIS
+		tag = ARZ
+		tag = UTA
+		tag = CLR
+		tag = IDH
+		tag = NMX
+		tag = NEV
+		tag = WYM
+		tag = MNA
+		tag = NEB
+		tag = KAN
+		tag = DKT
+		tag = ORE
+		tag = WAS
+	}
+	OR = {
+		has_cosmetic_tag = CAL_USA
+		has_cosmetic_tag = TEX_USA
+		has_cosmetic_tag = LOU_USA
+		has_cosmetic_tag = VIR_USA
+		has_cosmetic_tag = KFC_USA
+		has_cosmetic_tag = PEN_USA
+		has_cosmetic_tag = MSS_USA
+		has_cosmetic_tag = FLO_USA
+		has_cosmetic_tag = ABM_USA
+		has_cosmetic_tag = DEL_USA
+		has_cosmetic_tag = GGA_USA
+		has_cosmetic_tag = MRY_USA
+		has_cosmetic_tag = NJY_USA
+		has_cosmetic_tag = NWY_USA
+		has_cosmetic_tag = SCL_USA
+		has_cosmetic_tag = NCL_USA
+		has_cosmetic_tag = VER_USA
+		has_cosmetic_tag = WVR_USA
+		has_cosmetic_tag = OKH_USA
+		has_cosmetic_tag = ARK_USA
+		has_cosmetic_tag = TEN_USA
+		has_cosmetic_tag = MIC_USA
+		has_cosmetic_tag = MIN_USA
+		has_cosmetic_tag = ILL_USA
+		has_cosmetic_tag = IND_USA
+		has_cosmetic_tag = IOW_USA
+		has_cosmetic_tag = MIS_USA
+		has_cosmetic_tag = OHO_USA
+		has_cosmetic_tag = WIS_USA
+		has_cosmetic_tag = ARZ_USA
+		has_cosmetic_tag = UTA_USA
+		has_cosmetic_tag = CLR_USA
+		has_cosmetic_tag = IDH_USA
+		has_cosmetic_tag = NMX_USA
+		has_cosmetic_tag = NEV_USA
+		has_cosmetic_tag = WYM_USA
+		has_cosmetic_tag = MNA_USA
+		has_cosmetic_tag = NEB_USA
+		has_cosmetic_tag = KAN_USA
+		has_cosmetic_tag = DKT_USA
+		has_cosmetic_tag = ORE_USA
+		has_cosmetic_tag = WAS_USA
+	}
+}
+
+is_former_SSR_without_change = {
+	OR = {
+		tag = UKR
+		tag = BRY
+		tag = BLR
+		tag = GEO
+		tag = AZR
+		tag = ARM
+		tag = KAZ
+		tag = UZB
+		tag = TMS
+		tag = KYR
+		tag = TAJ
+		tag = CRI
+		tag = KAR
+		tag = KLY
+		tag = DAG
+		tag = CHE
+		tag = KBR 
+		tag = LIT
+		tag = LAT
+		tag = EST
+		tag = MOL
+		tag = ABH
+		tag = KPS
+		tag = YAK
+		tag = BRY
+	}
+	OR = {
+		has_cosmetic_tag = UKR_SOV
+		has_cosmetic_tag = BLR_SOV
+		has_cosmetic_tag = GEO_SOV
+		has_cosmetic_tag = AZR_SOV
+		has_cosmetic_tag = ARM_SOV
+		has_cosmetic_tag = KAZ_SOV1
+		has_cosmetic_tag = KAZ_SOV2
+		has_cosmetic_tag = UZB_SOV
+		has_cosmetic_tag = TMS_SOV
+		has_cosmetic_tag = KYR_SOV1
+		has_cosmetic_tag = KYR_SOV2
+		has_cosmetic_tag = TAJ_SOV
+		has_cosmetic_tag = CRI_SOV
+		has_cosmetic_tag = KAR_SOV
+		has_cosmetic_tag = KLY_SOV
+		has_cosmetic_tag = DAG_SOV
+		has_cosmetic_tag = CHE_SOV
+		has_cosmetic_tag = KBR_SOV
+		has_cosmetic_tag = LIT_SOV
+		has_cosmetic_tag = LAT_SOV
+		has_cosmetic_tag = EST_SOV
+		has_cosmetic_tag = MOL_SOV1
+		has_cosmetic_tag = MOL_SOV2
+		has_cosmetic_tag = ABH_SOV
+		has_cosmetic_tag = KPS_SOV
+		has_cosmetic_tag = YAK_SOV
+		has_cosmetic_tag = BRY_SOV
+	}
+}
+
+former_british_colony_without_change = {
+	OR = {
+		tag = BOT
+		tag = GAM
+		tag = KEN
+		tag = MLW
+		tag = NGA
+		tag = UGA
+		tag = ZAM
+		tag = ZIM
+		tag = SIE
+		tag = PAL
+		tag = GHA
+		tag = SMA
+		tag = TZN
+		tag = TOG
+		tag = CMR
+	}
+	OR = {
+		has_cosmetic_tag = BOT_ENG
+		has_cosmetic_tag = GAM_ENG
+		has_cosmetic_tag = KEN_ENG
+		has_cosmetic_tag = MLW_ENG
+		has_cosmetic_tag = NGA_ENG
+		has_cosmetic_tag = UGA_ENG
+		has_cosmetic_tag = ZAM_ENG
+		has_cosmetic_tag = ZIM_ENG
+		has_cosmetic_tag = SIE_ENG
+		has_cosmetic_tag = PAL_ENG
+		has_cosmetic_tag = GHA_ENG
+		has_cosmetic_tag = SMA_ENG
+		has_cosmetic_tag = TZN_ENG
+		has_cosmetic_tag = TOG_ENG
+		has_cosmetic_tag = CMR_ENG
+	}
+}
+
+english_free_country_in_africa = {
+	OR = {
+		tag = KEN
+		tag = ZAM
+		tag = ZIM
+	}
+	OR = {
+		has_cosmetic_tag = KEN_ENG_FREE
+		has_cosmetic_tag = ZAM_ENG_FREE
+		has_cosmetic_tag = ZIM_ENG_FREE
+	}
+}
+
+former_french_colony_without_change = {
+	OR = {
+		tag = MOR
+		tag = TUN
+		tag = MRT
+		tag = MLI
+		tag = SEN
+		tag = GNA
+		tag = IVO
+		tag = VOL
+		tag = TOG
+		tag = DAH
+		tag = NGA
+		tag = CHA
+		tag = CMR
+		tag = CAR
+		tag = GAB
+		tag = RCG
+		tag = DJI
+		tag = MAD
+	}
+	OR = {
+		has_cosmetic_tag = MOR_FRA
+		has_cosmetic_tag = TUN_FRA
+		has_cosmetic_tag = MLI_FRA
+		has_cosmetic_tag = MRT_FRA
+		has_cosmetic_tag = SEN_FRA
+		has_cosmetic_tag = GNA_FRA
+		has_cosmetic_tag = IVO_FRA
+		has_cosmetic_tag = VOL_FRA
+		has_cosmetic_tag = TOG_FRA
+		has_cosmetic_tag = DAH_FRA
+		has_cosmetic_tag = NGA_FRA
+		has_cosmetic_tag = CHA_FRA
+		has_cosmetic_tag = CMR_FRA
+		has_cosmetic_tag = CAR_FRA
+		has_cosmetic_tag = GAB_FRA
+		has_cosmetic_tag = RCG_FRA
+		has_cosmetic_tag = DJI_FRA
+	}
+}
+
+former_portugese_colony_without_change = {
+	OR = {
+		tag = GNB
+		tag = ANG
+		tag = MZB
+		tag = SAO
+	}
+	OR = {
+		has_cosmetic_tag = GNB_POR
+		has_cosmetic_tag = MZB_POR
+		has_cosmetic_tag = ANG_POR
+		has_cosmetic_tag = SAO_POR
+	}
+}
+
+former_italian_colony_without_change = {
+	OR = {
+		tag = ETH
+		tag = LBA
+		tag = SOM
+		tag = ERI
+	}
+	OR = {
+		has_cosmetic_tag = ETH_ITA
+		has_cosmetic_tag = LBA_ITA
+		has_cosmetic_tag = SOM_ITA
+		has_cosmetic_tag = ERI_ITA
+	}
+}
+
+alt_hist_italian_colony_without_change = {
+	OR = {
+		tag = TUN
+		tag = SYR
+	}
+	OR = {
+		has_cosmetic_tag = TUN_ITA
+		has_cosmetic_tag = SYR_ITA
+	}
+}
+
+former_belgian_colony_without_change = {
+	tag = COG 
+	has_cosmetic_tag = COG_BEL
+}
+
+native_south_africa_without_change = {
+	tag = SAF
+	has_cosmetic_tag = SAF_NATIVE
+}
+
+european_south_africa_without_change = {
+	tag = SAF
+	NOT = {
+	has_cosmetic_tag = SAF_NATIVE
+	is_subject_of = ENG
+	}
+}
+
+european_south_africa = {
+	tag = SAF
+	NOT = {
+	has_cosmetic_tag = SAF_NATIVE
+	is_subject_of = ENG
+	}
+}
+germany_or_allies_control_moskowien = {
+	OR = {
+		GER = { controls_state = 219 }
+		any_other_country = {
+			is_in_faction_with = GER
+			controls_state = 219
+		}
+	}
+}
+germany_or_allies_control_kaukasus = {
+	OR = {
+		GER = { controls_state = 1487 }
+		any_other_country = {
+			is_in_faction_with = GER
+			controls_state = 1487
+		}
+	}
+	OR = {
+		GER = { controls_state = 236 }
+		any_other_country = {
+			is_in_faction_with = GER
+			controls_state = 236
+		}
+	}
+	OR = {
+		GER = { controls_state = 1121 }
+		any_other_country = {
+			is_in_faction_with = GER
+			controls_state = 1121
+		}
+	}
+}
+germany_or_allies_control_double_a_line = { #excluding astrakhan
+	OR = {
+		GER = {
+			controls_state = 1255
+		}
+		any_other_country = {
+			is_in_faction_with = GER
+			controls_state = 1255
+		}
+		FIN = {
+			has_war_together_with = GER
+			has_war_with = SOV
+			NOT = { has_war_with = GER }
+			controls_state = 1255
+		}
+	}
+	OR = {
+		GER = { controls_state = 351 }
+		any_other_country = {
+			is_in_faction_with = GER
+			controls_state = 351
+		}
+	}
+	OR = {
+		GER = { controls_state = 252 }
+		any_other_country = {
+			is_in_faction_with = GER
+			controls_state = 252
+		}
+	}
+	OR = {
+		GER = { controls_state = 255 }
+		any_other_country = {
+			is_in_faction_with = GER
+			controls_state = 255
+		}
+	}
+	OR = {
+		GER = { controls_state = 239 }
+		any_other_country = {
+			is_in_faction_with = GER
+			controls_state = 239
+		}
+	}
+	OR = {
+		GER = { controls_state = 930 }
+		any_other_country = {
+			is_in_faction_with = GER
+			controls_state = 930
+		}
+	}
+}
+has_ROOT_at_least_3_div_in_current_state_scope = {
+	ROOT = { divisions_in_state = { state = PREV size > 2 } }
+}

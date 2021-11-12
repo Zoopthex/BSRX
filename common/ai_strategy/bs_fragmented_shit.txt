@@ -1,0 +1,54 @@
+
+bs_prussia_sardinia_alliance = {
+    enable = {
+        has_game_rule = {
+			rule = ger_fragmentation_status
+			option = GER_FRAGMENTED
+        }
+        has_game_rule = {
+			rule = ita_fragmentation_status
+			option = ITA_FRAGMENTED
+        }
+        original_tag = PRE 
+        original_tag = SRD
+        date>1938.8.1
+    }
+    abort = {
+        NOT = {
+            country_exists = PRE
+            country_exists = SRD
+        }
+    }
+    ai_strategy = {
+        type = alliance
+		id = SRD
+		value = 150
+    }
+    ai_strategy = {
+        type = alliance
+		id = PRE
+		value = 150
+    }
+}
+
+bs_france_start_thinking_prussia_is_up_to_something = {
+    enable = {
+        has_game_rule = {
+			rule = ger_fragmentation_status
+			option = GER_FRAGMENTED
+        }
+        original_tag = FRA
+        country_exists = PRE
+    }
+    abort = {
+        OR = {
+            NOT = { country_exists = PRE }
+            PRE = { is_subject = yes }
+        }
+    }
+    ai_strategy = {
+        type = contain
+        id = PRE
+        value = 200
+    }
+}

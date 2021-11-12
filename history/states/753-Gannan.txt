@@ -1,0 +1,32 @@
+
+state={
+	id=753
+	name="STATE_753"
+
+	history={
+		owner = SZH
+		add_core_of = SZH
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			12141 3 
+		}
+		1939.1.1 = {
+			owner = CHI
+			controller = CHI
+
+		}
+
+	}
+
+	provinces={
+		1395 10841 12141 12705 
+	}
+	manpower=3000000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

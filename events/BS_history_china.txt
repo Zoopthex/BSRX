@@ -1,0 +1,338 @@
+add_namespace = bshischina
+
+country_event = {
+	id = bshischina.1
+	title = bshischina.1.t
+	desc = bshischina.1.d
+
+	picture = GFX_report_event_chinese_soldiers
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = bshischina.1.a
+		ai_chance = { factor = 100 }
+		CHI = {
+			annex_country = {
+				target = SZH
+				transfer_troops = yes
+			}
+			change_tag_from = ROOT
+		}
+		set_global_flag = china_szechwan
+	}
+
+	option = {
+		name = bshischina.1.b
+	}
+}
+
+country_event = {
+	id = bshischina.2
+	title = bshischina.2.t
+	desc = bshischina.2.d
+
+	picture = GFX_report_event_chinese_soldiers
+
+	fire_only_once = yes
+
+    is_triggered_only = yes
+
+	option = {
+		name = bshischina.2.a
+		ai_chance = { factor = 100 }
+		CHI = {
+			annex_country = {
+				target = NEA
+				transfer_troops = yes
+			}
+			change_tag_from = ROOT
+		}
+		every_state = {
+			limit = {
+				is_core_of = NEA
+			}
+			remove_core_of = NEA
+		}
+		if = {
+			limit = {
+				PRC = {
+					controls_state = 622
+					is_in_faction_with = CHI
+				}
+			}
+			PRC = { transfer_state = 1307 }
+		}
+		set_global_flag = china_northeast
+	}
+
+	option = {
+		name = bshischina.2.b
+	}
+}
+
+country_event = {
+	id = bshischina.3
+	title = bshischina.3.t
+	desc = bshischina.3.d
+
+	picture = GFX_report_event_chinese_soldiers
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = bshischina.3.a
+		ai_chance = { factor = 0 }
+		CHI = {
+			annex_country = {
+				target = HSI
+				transfer_troops = yes
+			}
+			change_tag_from = ROOT
+		}
+		set_global_flag = china_hsikang
+	}
+
+	option = {
+		name = bshischina.3.b
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = bshischina.4
+	title = bshischina.4.t
+	desc = bshischina.4.d
+
+	picture = GFX_report_event_chinese_soldiers
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = bshischina.4.a
+		ai_chance = { factor = 95 }
+
+		leave_faction = yes
+		SIK = { 
+			leave_faction = yes 
+		}
+			transfer_state = 619
+			619 = { set_demilitarized_zone = no }
+		declare_war_on = {
+			target = SIK
+			type = annex_everything
+		}
+		set_global_flag = islamic_revolt
+	}
+
+	option = {
+		name = bshischina.4.b 
+		ai_chance = { factor = 5 }
+
+		set_global_flag = no_islamic_revolt
+	}
+}
+
+country_event = {
+	id = bshischina.5
+	title = bshischina.5.t
+	desc = bshischina.5.d
+
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = bshischina.5.a
+		ai_chance = { factor = 75 }
+		declare_war_on = {
+			target = TUG
+			type = annex_everything
+		}
+		set_global_flag = sinkiang_invaded
+	}
+
+	option = {
+		name = bshischina.5.b
+		ai_chance = { factor = 25 }
+	}
+}
+
+country_event = {
+	id = bshischina.6
+	title = bshischina.6.t
+	desc = {
+		trigger = {
+			tag = TUG
+		}
+		text = bshischina.6.d_TUG
+	}
+	desc = {
+		trigger = {
+			tag = SIK
+		}
+		text = bshischina.6.d_SIK
+	}
+
+	fire_only_once = yes
+
+	picture = GFX_report_event_chinese_soldiers
+
+	trigger = {
+		OR = {
+			AND = {
+				tag = TUG
+				controls_state = 287
+				controls_state = 617
+				controls_state = 618
+				controls_state = 759
+				controls_state = 1306
+				controls_state = 1318
+				SIK = { exists = no }
+			}
+			AND = {
+				tag = SIK
+				controls_state = 287
+				controls_state = 617
+				controls_state = 618
+				controls_state = 759
+				controls_state = 1306
+				controls_state = 1318
+				TUG = { exists = no }
+			}
+		}
+		619 = { is_owned_or_subject_trigger = yes }
+		OR = {
+			has_global_flag = islamic_revolt
+			has_global_flag = sinkiang_invaded
+		}
+	}
+	
+	immediate = {
+		dismantle_faction = yes
+	}
+
+	option = {
+		trigger = {
+			tag = TUG
+		}
+		name = bshischina.6.TUG
+
+		add_political_power = 100
+		set_global_flag = tunganistan_won
+		every_state = {
+			limit = {
+				is_core_of = SIK
+			}
+			remove_core_of = SIK
+		}
+		every_state = {
+			limit = {
+				is_claimed_by = SIK
+			}
+			remove_claim_by = SIK
+		}
+		add_state_core = 287
+		add_state_core = 617
+		add_state_core = 618
+		add_state_core = 619
+		add_state_core = 759
+		add_state_core = 760
+		add_state_core = 1306
+		add_state_core = 1318
+		add_state_core = 1737
+		add_state_core = 1738
+		set_capital = 617
+		set_cosmetic_tag = TUG_SINK
+	}
+	option = {
+		trigger = {
+			tag = SIK
+		}
+		name = bshischina.6.SIK
+
+		add_political_power = 100
+		set_global_flag = sinkiang_won
+		every_state = {
+			limit = {
+				is_core_of = TUG
+			}
+			remove_core_of = TUG
+		}
+		every_state = {
+			limit = {
+				is_claimed_by = TUG
+			}
+			remove_claim_by = TUG
+		}
+	}
+}
+country_event = {
+	id = bshischina.7
+	title = bshischina.7.t
+	desc = bshischina.7.d
+
+	fire_only_once = yes
+
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = bshischina.7.a
+		
+		if = {
+			limit = {
+				has_dlc = "Waking the Tiger"
+			}
+			set_autonomy = {
+				target = MEN
+				autonomous_state = autonomy_wtt_imperial_protectorate
+			}
+		}
+		else = {
+			puppet = MEN
+		}
+
+		MEN = {
+			drop_cosmetic_tag = yes
+			transfer_state = 612
+			transfer_state = 1921
+			set_capital = 612
+		}
+
+		612 = { set_demilitarized_zone = no }
+
+		1921 = { set_demilitarized_zone = no }
+
+		SHX = { 
+			transfer_state = 1523 
+			transfer_state = 1449
+			add_state_core = 1523
+			add_state_core = 1449
+			remove_state_claim = 1523
+			remove_state_claim = 1449
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = {
+		name = bshischina.7.b
+
+		MAN = { transfer_state = 612 }
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+#Dissolution of the Hopeh-Chahar Political Council
+#Abolishment of Shantung's autonomy

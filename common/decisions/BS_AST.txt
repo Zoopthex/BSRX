@@ -1,0 +1,67 @@
+AST_peace_with_JAP_category = {
+
+        AST_peace_with_JAP = {
+            icon = generic_form_nation
+
+        visible = {
+            AST = {
+                has_war_with = JAP
+            }
+        }
+
+        available = {
+            OR = {
+                MAL = { has_capitulated = yes }
+                NOT = { country_exists = MAL }
+                MAL = { is_subject_of = JAP }
+            }
+            AST = {
+                is_subject_of = ENG
+                has_war_with = JAP
+                NOT = {
+                    controls_state = 918
+                    controls_state = 885
+                    controls_state = 1296
+                    controls_state = 523
+                    controls_state = 737
+                    controls_state = 1035
+                }
+            }
+
+            ENG = {
+                NOT = {
+                    controls_state = 118
+                    controls_state = 995
+                    controls_state = 1237
+                }
+            }
+            if = {
+                limit = {
+                    USA = { has_war_with = JAP }
+                }
+                USA = {
+                    NOT = {
+                        controls_state = 629
+                        controls_state = 630
+                        controls_state = 631
+                        controls_state = 632
+                        controls_state = 638
+                    }
+                }
+            }
+        }
+
+        complete_effect = {
+            ENG = { end_puppet = AST }
+
+            AST = {
+                set_country_flag = surrendered_to_JAP
+                leave_faction = yes
+
+                white_peace = {
+                    tag = JAP
+                }
+            }
+        }
+    }
+}

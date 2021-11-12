@@ -1,0 +1,114 @@
+reject_slovak_borders = {
+
+	#Decision for: Request Michalovce State
+	HUN_requestmichalovcestate = {
+
+		icon = decision_generic_prepare_civil_war
+
+		allowed = { 
+			original_tag = HUN
+		}
+
+		available = {
+			OR = {
+				1325 = { is_owned_by = CZE }
+				1325 = { is_owned_by = SLO }
+			}
+			73 = { 
+				is_owned_by = HUN 
+				has_ROOT_at_least_1_div_in_current_state_scope = yes
+			}
+			has_war = no
+			SLO = { has_war = no }
+		}
+		visible = {
+			original_tag = HUN
+			73 = { is_owned_by = HUN }
+			NOT = { 1325 = { is_owned_by = HUN } }
+		}
+
+		cost = 15
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				73 = {
+					has_ROOT_at_least_3_div_in_current_state_scope = yes
+				}
+				is_historical_focus_on = yes
+				add = 100
+			}
+		}
+
+		complete_effect = {
+			1325 = { add_core_of = HUN }
+			start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 73
+					num_provinces = 5
+				}
+				
+				defender = {
+					state = 1325
+					num_provinces = 1
+				}
+			}
+		}
+	}
+}
+
+
+BS_border_conflicts = {
+    SIA_sieze_kengtung = {
+
+        highlight_states = {
+            state = 1041
+        }
+
+        visible = {
+            original_tag = SIA
+            BRM = { has_full_control_of_state = 1041 }
+        }
+
+        available = {
+            has_full_control_of_state = 1095
+			1095 = { has_ROOT_at_least_1_div_in_current_state_scope = yes }
+            BRM = { has_full_control_of_state = 1041 }
+        }
+
+        icon = border_war
+
+        cost = 15
+
+        days_remove = 7
+
+        days_re_enable = 180
+
+        remove_effect = {
+            start_border_war = {
+                change_state_after_war = no
+                attacker = {
+                    state = 1095
+                    num_provinces = 2
+                    on_win = bs_border_conflict.1
+                    on_lose = bs_border_conflict.2
+                    on_cancel = bs_border_conflict.3
+                }
+                defender = {
+                    state = 1041
+                    num_provinces = 3
+                    on_win = bs_border_conflict.2
+                    on_lose = bs_border_conflict.1
+                    on_cancel = bs_border_conflict.3
+                }
+            }
+        }
+
+		ai_will_do = {
+			factor = 2
+		}
+    }
+}

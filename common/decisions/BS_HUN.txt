@@ -1,0 +1,1704 @@
+BS_request_territoy_category = {
+	HUN_burgenland_question = {
+		
+		highlight_state_targets = {
+			state = 810
+		}
+
+		icon = generic_political_discourse
+
+		available = {
+			NOT = { HUN = { controls_state = 810 }}
+			GER = { controls_state = 810 }
+			NOT = { has_war_with = GER }
+			NOT = { is_puppet_of = GER }
+		}
+
+		visible = {
+		    has_global_flag = germany_has_burgenland
+			NOT = { has_government = democratic }
+			NOT = { has_government = communism }
+		}
+		
+		cost = 25
+		
+		fire_only_once = yes
+
+		complete_effect = {
+			GER = { 
+		        country_event = { hours = 4 id = bs.1 }
+		    }
+			
+			hidden_effect = {
+			    HUN = { set_country_flag = HUN_request_burgenland }
+			
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+			
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+BS_austria_hungary_integration = {
+	austria_hungary_austria = {
+		
+		highlight_states = {
+			has_state_flag = AUSTRIA_HUNGARY_AUSTRIA
+			is_core_of = ROOT
+			is_controlled_by = ROOT 
+		}
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			any_state = {
+				has_state_flag = AUSTRIA_HUNGARY_AUSTRIA
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = is_viewing_tt
+				always = yes
+			}
+		}
+
+		icon = generic_form_nation
+
+		complete_effect = {
+			custom_effect_tooltip = is_viewing_tt
+		}
+	}
+	austria_hungary_hungary = {
+		
+		highlight_states = {
+			has_state_flag = AUSTRIA_HUNGARY_HUNGARY
+			is_core_of = ROOT
+			is_controlled_by = ROOT 
+		}
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			any_state = {
+				has_state_flag = AUSTRIA_HUNGARY_HUNGARY
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = is_viewing_tt
+				always = yes
+			}
+		}
+
+		icon = generic_form_nation
+
+		complete_effect = {
+			custom_effect_tooltip = is_viewing_tt
+		}
+	}
+	#AUS and HUN correspond to their parts of the empire in these decisions.
+	HUN_take_slovakia = {
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			CZE = {
+				controls_state = 70
+				controls_state = 71
+				controls_state = 73
+				controls_state = 664
+				controls_state = 889
+				controls_state = 1325
+				controls_state = 1376
+				controls_state = 1570
+				controls_state = 1583
+				controls_state = 1729
+				is_subject_of = ROOT
+			}
+		}
+
+		available = {
+			CZE = {
+				controls_state = 70
+				controls_state = 71
+				controls_state = 73
+				controls_state = 664
+				controls_state = 889
+				controls_state = 1325
+				controls_state = 1376
+				controls_state = 1570
+				controls_state = 1583
+				controls_state = 1729
+				is_subject_of = ROOT
+			}
+		}
+
+		icon = generic_nationalism
+
+		complete_effect = {
+			transfer_state = 70
+			transfer_state = 71
+			transfer_state = 73
+			transfer_state = 664
+			transfer_state = 889
+			transfer_state = 1325
+			transfer_state = 1376
+			transfer_state = 1570
+			transfer_state = 1583
+			transfer_state = 1729
+			if = {
+				limit = {
+					CZE = { has_full_control_of_state = 1284 }
+				}
+				transfer_state = 1284
+			}
+			if = {
+				limit = {
+					CZE = { has_full_control_of_state = 1372 }
+				}
+				transfer_state = 1372
+			}
+			hidden_effect = {
+				set_country_flag = HUN_took_slovakia
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	AUS_integrate_CZE = {
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			has_country_flag = HUN_took_slovakia
+			CZE = { NOT = { has_idea = HUN_crownland_integration } }
+		}
+		
+		available = {
+			CZE = { is_subject_of = ROOT }
+		}
+
+		icon = generic_nationalism
+
+		cost = 10
+
+		days_remove = 90
+
+		modifier = {
+			political_power_cost = 0.3
+		}
+
+		remove_effect = {
+			CZE = { add_ideas = HUN_crownland_integration }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HUN_question_of_TRA = {
+
+		highlight_states = {
+			state = 76
+			state = 82
+			state = 83
+			state = 84
+			state = 1201
+			state = 1507
+			state = 1625
+			state = 1643
+		}
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			NOT = {
+				76 = { is_core_of = ROOT }
+				82 = { is_core_of = ROOT }
+				83 = { is_core_of = ROOT }
+				84 = { is_core_of = ROOT }
+				1507 = { is_core_of = ROOT }
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				TRA = { country_exists = no }
+			}
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 76
+			has_full_control_of_state = 82
+			has_full_control_of_state = 83
+			has_full_control_of_state = 84
+			has_full_control_of_state = 1201
+			has_full_control_of_state = 1507
+			has_full_control_of_state = 1625
+			has_full_control_of_state = 1643
+		}
+
+		icon = generic_form_nation
+
+		cost = 25
+
+		complete_effect = {
+			country_event = AUH.3
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HUN_integrate_TRA_puppet = {
+
+		name = HUN_integrate_TRA
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			TRA = { is_subject_of = ROOT }
+			has_country_flag = HUN_autonomous_TRA
+		}
+
+		available = {
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				TRA = {
+					compare_autonomy_state < autonomy_puppet
+					compare_autonomy_progress_ratio < 0.3 
+				}
+			}
+			else = {
+				hidden_trigger = {
+					NOT = { TRA = { has_country_flag = HUN_integration_time } }
+				}
+			}
+		}
+
+		icon = generic_nationalism
+
+		cost = 25
+
+		days_remove = 90
+
+		modifier = {
+			political_power_cost = 0.3
+		}
+
+		remove_effect = {
+			add_state_core = 76
+			add_state_core = 82
+			add_state_core = 83
+			add_state_core = 84
+			add_state_core = 1507
+			annex_country = {
+				target = TRA
+				transfer_troops = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HUN_integrate_TRA_compliance = {
+
+		highlight_states = {
+			state = 76
+			state = 82
+			state = 83
+			state = 84
+			state = 1507
+		}
+
+		name = HUN_integrate_TRA
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			has_country_flag = HUN_TRA_compliance
+		}
+
+		available = {
+			has_stability > 0.6
+			controls_state = 76
+			controls_state = 82
+			controls_state = 83
+			controls_state = 84
+			controls_state = 1507
+			if = {
+				76 = {
+					compliance > 30
+				}
+			}
+			if = {
+				82 = {
+					compliance > 30
+				}
+			}
+			if = {
+				83 = {
+					compliance > 30
+				}
+			}
+			if = {
+				84 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1507 = {
+					compliance > 30
+				}
+			}
+		}
+
+		icon = generic_nationalism
+
+		cost = 25
+
+		days_remove = 30
+
+		modifier = {
+			political_power_cost = 0.5
+			stability_factor = -0.05
+		}
+
+		remove_effect = {
+			add_state_core = 76
+			add_state_core = 82
+			add_state_core = 83
+			add_state_core = 84
+			add_state_core = 1507
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HUN_question_of_VOJ = {
+
+		highlight_states = {
+			state = 45
+			state = 764
+			state = 1988
+			state = 1987
+			state = 868
+		}
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			NOT = {
+				45 = { is_core_of = ROOT }
+				764 = { is_core_of = ROOT }
+				868 = { is_core_of = ROOT }
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				VOJ = { country_exists = no }
+			}
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 45
+			has_full_control_of_state = 764
+			has_full_control_of_state = 868
+		}
+
+		icon = generic_form_nation
+
+		cost = 25
+
+		complete_effect = {
+			country_event = AUH.4
+			add_state_core = 1988
+			add_state_core = 1987
+			add_state_core = 868
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HUN_integrate_VOJ_puppet = {
+
+		name = HUN_integrate_VOJ
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			VOJ = { is_subject_of = ROOT }
+			has_country_flag = HUN_autonomous_VOJ
+		}
+
+		available = {
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				VOJ = {
+					compare_autonomy_state < autonomy_puppet
+					compare_autonomy_progress_ratio < 0.3 
+				}
+			}
+			else = {
+				hidden_trigger = {
+					NOT = { VOJ = { has_country_flag = HUN_integration_time } }
+				}
+			}
+		}
+
+		icon = generic_nationalism
+
+		cost = 25
+
+		days_remove = 60
+
+		modifier = {
+			political_power_cost = 0.1
+		}
+
+		remove_effect = {
+			add_state_core = 45
+			add_state_core = 764
+			annex_country = {
+				target = VOJ
+				transfer_troops = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HUN_integrate_VOJ_compliance = {
+
+		highlight_states = {
+			state = 45
+			state = 764
+		}
+
+		name = HUN_integrate_VOJ
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			has_country_flag = HUN_VOJ_compliance
+		}
+
+		available = {
+			has_stability > 0.6
+			controls_state = 45
+			controls_state = 764
+			if = {
+				45 = {
+					compliance > 30
+				}
+			}
+			if = {
+				764 = {
+					compliance > 30
+				}
+			}
+		}
+
+		icon = generic_nationalism
+
+		cost = 10
+
+		days_remove = 30
+
+		modifier = {
+			political_power_cost = 0.3
+			stability_factor = -0.03
+		}
+
+		remove_effect = {
+			add_state_core = 45
+			add_state_core = 764
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HUN_question_of_CRO = {
+
+		highlight_states = {
+			state = 109
+			state = 869
+			state = 937
+			state = 939
+			state = 1066
+			state = 2012
+		}
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			NOT = {
+				109 = { is_core_of = ROOT }
+				869 = { is_core_of = ROOT }
+				937 = { is_core_of = ROOT }
+				939 = { is_core_of = ROOT }
+				1066 = { is_core_of = ROOT }
+				2012 = { is_core_of = ROOT }
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				CRO = { country_exists = no }
+			}
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 109
+			has_full_control_of_state = 869
+			has_full_control_of_state = 937
+			has_full_control_of_state = 939
+			has_full_control_of_state = 1066
+			has_full_control_of_state = 2012
+		}
+
+		icon = generic_form_nation
+
+		cost = 25
+
+		complete_effect = {
+			country_event = AUH.5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HUN_integrate_CRO_puppet = {
+
+		name = HUN_integrate_CRO
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			CRO = { is_subject_of = ROOT }
+			has_country_flag = HUN_autonomous_CRO
+		}
+
+		available = {
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				CRO = {
+					compare_autonomy_state < autonomy_puppet
+					compare_autonomy_progress_ratio < 0.3 
+				}
+			}
+			else = {
+				hidden_trigger = {
+					NOT = { CRO = { has_country_flag = HUN_integration_time } }
+				}
+			}
+		}
+
+		icon = generic_nationalism
+
+		cost = 25
+
+		days_remove = 60
+
+		modifier = {
+			political_power_cost = 0.1
+		}
+
+		remove_effect = {
+			add_state_core = 109
+			add_state_core = 869
+			add_state_core = 937
+			add_state_core = 939
+			add_state_core = 1066
+			add_state_core = 2012
+			if = {
+				limit = {
+					has_country_flag = CRO_DAL_attached
+				}
+				add_state_core = 103
+				add_state_core = 163
+				add_state_core = 940
+				add_state_core = 1104
+				add_state_core = 1970
+				add_state_core = 1387
+			}
+			if = {
+				limit = {
+					has_country_flag = CRO_IST_attached
+				}
+				add_state_core = 736
+			}
+			annex_country = {
+				target = CRO
+				transfer_troops = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HUN_integrate_CRO_compliance = {
+
+		highlight_states = {
+			state = 109
+			state = 869
+			state = 937
+			state = 939
+			state = 1066
+			state = 2012
+		}
+
+		name = HUN_integrate_CRO
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			has_country_flag = HUN_CRO_compliance
+		}
+
+		available = {
+			has_stability > 0.6
+			controls_state = 109
+			controls_state = 869
+			controls_state = 937
+			controls_state = 939
+			controls_state = 1066
+			controls_state = 2012
+			if = {
+				109 = {
+					compliance > 30
+				}
+			}
+			if = {
+				869 = {
+					compliance > 30
+				}
+			}
+			if = {
+				937 = {
+					compliance > 30
+				}
+			}
+			if = {
+				939 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1066 = {
+					compliance > 30
+				}
+			}
+			if = {
+				2012 = {
+					compliance > 30
+				}
+			}
+		}
+
+		icon = generic_nationalism
+
+		cost = 10
+
+		days_remove = 30
+
+		modifier = {
+			political_power_cost = 0.3
+			stability_factor = -0.05
+		}
+
+		remove_effect = {
+			add_state_core = 109
+			add_state_core = 869
+			add_state_core = 937
+			add_state_core = 939
+			add_state_core = 1066
+			add_state_core = 2012
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	AUS_question_of_DAL = {
+
+		highlight_states = {
+			state = 103
+			state = 163
+			state = 940
+			state = 1104
+			state = 1970
+			state = 1387
+		}
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			has_country_flag = HUN_autonomous_CRO
+			CRO = { is_subject_of = ROOT }
+			NOT = {
+				103 = { is_core_of = ROOT }
+				163 = { is_core_of = ROOT }
+				940 = { is_core_of = ROOT }
+				1104 = { is_core_of = ROOT }
+				1387 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 103
+			has_full_control_of_state = 163
+			has_full_control_of_state = 940
+			has_full_control_of_state = 1104
+			has_full_control_of_state = 1387
+		}
+
+		icon = generic_form_nation
+
+		cost = 25
+
+		complete_effect = {
+			country_event = AUH.6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	AUS_integrate_DAL = {
+
+		highlight_states = {
+			state = 109
+			state = 869
+			state = 937
+			state = 939
+			state = 1066
+		}
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			OR = {
+				has_country_flag = HUN_CRO_compliance
+				has_country_flag = AUS_DAL_compliance
+			}
+		}
+
+		available = {
+			has_stability > 0.6
+			controls_state = 109
+			controls_state = 869
+			controls_state = 937
+			controls_state = 939
+			controls_state = 1066
+			if = {
+				109 = {
+					compliance > 30
+				}
+			}
+			if = {
+				869 = {
+					compliance > 30
+				}
+			}
+			if = {
+				937 = {
+					compliance > 30
+				}
+			}
+			if = {
+				939 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1066 = {
+					compliance > 30
+				}
+			}
+		}
+
+		icon = generic_nationalism
+
+		cost = 10
+
+		days_remove = 30
+
+		modifier = {
+			political_power_cost = 0.3
+			stability_factor = -0.05
+		}
+
+		remove_effect = {
+			add_state_core = 109
+			add_state_core = 869
+			add_state_core = 937
+			add_state_core = 939
+			add_state_core = 1066
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	AUS_question_of_SLV = {
+
+		highlight_states = {
+			state = 102
+			state = 934
+			state = 935
+			state = 1450
+			state = 1458
+		}
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			NOT = {
+				102 = { is_core_of = ROOT }
+				934 = { is_core_of = ROOT }
+				935 = { is_core_of = ROOT }
+				936 = { is_core_of = ROOT }
+				1450 = { is_core_of = ROOT }
+				1458 = { is_core_of = ROOT }
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				SLV = { country_exists = no }
+			}
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 102
+			has_full_control_of_state = 934
+			has_full_control_of_state = 935
+			has_full_control_of_state = 936
+			has_full_control_of_state = 1450
+			has_full_control_of_state = 1458
+		}
+
+		icon = generic_form_nation
+
+		cost = 25
+
+		complete_effect = {
+			country_event = AUH.7
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	AUS_integrate_SLV_puppet = {
+
+		name = AUS_integrate_SLV
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			SLV = { is_subject_of = ROOT }
+			has_country_flag = AUS_autonomous_SLV
+		}
+
+		available = {
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				SLV = {
+					compare_autonomy_state < autonomy_puppet
+					compare_autonomy_progress_ratio < 0.3 
+				}
+			}
+			else = {
+				hidden_trigger = {
+					NOT = { SLV = { has_country_flag = HUN_integration_time } }
+				}
+			}
+		}
+
+		icon = generic_nationalism
+
+		cost = 25
+
+		days_remove = 60
+
+		modifier = {
+			political_power_cost = 0.1
+		}
+
+		remove_effect = {
+			add_state_core = 102
+			add_state_core = 935
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = SLV_LIT_attached_partial
+						has_country_flag = SLV_LIT_attached_fully
+					}
+				}
+				add_state_core = 866
+				add_state_core = 948
+				add_state_core = 993
+				add_state_core = 1451
+			}
+			if = {
+				limit = {
+					has_country_flag = AUS_SLV_LIT_attached_fully
+				}
+				add_state_core = 736
+			}
+			annex_country = {
+				target = SLV
+				transfer_troops = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	AUS_integrate_SLV_compliance = {
+
+		highlight_states = {
+			state = 102
+			state = 935
+		}
+
+		name = AUS_integrate_SLV
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			has_country_flag = AUS_SLV_compliance
+		}
+
+		available = {
+			has_stability > 0.6
+			controls_state = 102
+			controls_state = 935
+			if = {
+				102 = {
+					compliance > 30
+				}
+			}
+			if = {
+				935 = {
+					compliance > 30
+				}
+			}
+		}
+
+		icon = generic_nationalism
+
+		cost = 10
+
+		days_remove = 30
+
+		modifier = {
+			political_power_cost = 0.3
+			stability_factor = -0.02
+		}
+
+		remove_effect = {
+			add_state_core = 102
+			add_state_core = 935
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	AUS_question_of_LIT = {
+
+		highlight_states = {
+			state = 736
+			state = 866
+			state = 948
+			state = 993
+			state = 1451
+		}
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			has_country_flag = AUS_autonomous_SLV
+			SLV = { is_subject_of = ROOT }
+			NOT = {
+				736 = { is_core_of = ROOT }
+				866 = { is_core_of = ROOT }
+				948 = { is_core_of = ROOT }
+				993 = { is_core_of = ROOT }
+				1451 = { is_core_of = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 736
+			has_full_control_of_state = 866
+			has_full_control_of_state = 948
+			has_full_control_of_state = 993
+			has_full_control_of_state = 1451
+		}
+
+		icon = generic_form_nation
+
+		cost = 25
+
+		complete_effect = {
+			country_event = AUH.8
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	AUS_integrate_LIT = {
+
+		highlight_states = {
+			state = 736
+			state = 866
+			state = 948
+			state = 993
+			state = 1451
+		}
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			OR = {
+				has_country_flag = AUS_SLV_compliance
+				has_country_flag = AUS_LIT_compliance
+			}
+		}
+
+		available = {
+			has_stability > 0.6
+			controls_state = 736
+			controls_state = 866
+			controls_state = 948
+			controls_state = 993
+			controls_state = 1451
+			if = {
+				736 = {
+					compliance > 30
+				}
+			}
+			if = {
+				866 = {
+					compliance > 30
+				}
+			}
+			if = {
+				948 = {
+					compliance > 30
+				}
+			}
+			if = {
+				993 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1451 = {
+					compliance > 30
+				}
+			}
+		}
+
+		icon = generic_nationalism
+
+		cost = 10
+
+		days_remove = 30
+
+		modifier = {
+			political_power_cost = 0.3
+			stability_factor = -0.05
+		}
+
+		remove_effect = {
+			add_state_core = 736
+			add_state_core = 866
+			add_state_core = 948
+			add_state_core = 993
+			add_state_core = 1451
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	AUS_integrate_trent = {
+
+		highlight_states = {
+			state = 867
+			state = 1864
+		}
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			controls_state = 867
+			controls_state = 1864
+			NOT = {
+				867 = { is_core_of = ROOT }
+				1864 = { is_core_of = ROOT }
+			}
+			if = {
+				867 = {
+					compliance > 5
+				}
+			}
+			if = {
+				1864 = {
+					compliance > 5
+				}
+			}
+		}
+
+		available = {
+			has_stability > 0.6
+			controls_state = 867
+			controls_state = 1864
+			if = {
+				867 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1864 = {
+					compliance > 30
+				}
+			}
+		}
+
+		icon = generic_nationalism
+
+		cost = 10
+
+		days_remove = 30
+
+		modifier = {
+			political_power_cost = 0.3
+			stability_factor = -0.02
+		}
+
+		remove_effect = {
+			add_state_core = 867
+			add_state_core = 1864
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	AUS_question_of_GAL = {
+
+		highlight_states = {
+			state = 88
+			state = 89
+			state = 91
+			state = 863
+			state = 1984
+			state = 1983
+			state = 1982
+			state = 996
+			state = 1180
+			state = 1374
+			state = 1386
+			state = 1414
+			state = 1553
+			state = 1558
+			state = 1588
+			state = 1589
+			state = 1590
+			state = 1599
+			state = 1737
+			state = 1768
+			state = 1769
+		}
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			NOT = {
+				88 = { is_core_of = ROOT }
+				89 = { is_core_of = ROOT }
+				91 = { is_core_of = ROOT }
+				863 = { is_core_of = ROOT }
+				996 = { is_core_of = ROOT }
+				1180 = { is_core_of = ROOT }
+				1374 = { is_core_of = ROOT }
+				1386 = { is_core_of = ROOT }
+				1414 = { is_core_of = ROOT }
+				1558 = { is_core_of = ROOT }
+				1588 = { is_core_of = ROOT }
+				1589 = { is_core_of = ROOT }
+				1590 = { is_core_of = ROOT }
+				1599 = { is_core_of = ROOT }
+				1737 = { is_core_of = ROOT }
+				1768 = { is_core_of = ROOT }
+				1769 = { is_core_of = ROOT }
+				1982 = { is_core_of = ROOT }
+				1983 = { is_core_of = ROOT }
+				1984 = { is_core_of = ROOT }
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				GAL = { country_exists = no }
+			}
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 88
+			has_full_control_of_state = 89
+			has_full_control_of_state = 91
+			has_full_control_of_state = 863
+			has_full_control_of_state = 996
+			has_full_control_of_state = 1180
+			has_full_control_of_state = 1374
+			has_full_control_of_state = 1386
+			has_full_control_of_state = 1414
+			has_full_control_of_state = 1558
+			has_full_control_of_state = 1588
+			has_full_control_of_state = 1589
+			has_full_control_of_state = 1590
+			has_full_control_of_state = 1737
+			has_full_control_of_state = 1982
+			has_full_control_of_state = 1983
+			has_full_control_of_state = 1984
+		}
+
+		icon = generic_form_nation
+
+		cost = 25
+
+		complete_effect = {
+			country_event = AUH.9
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	AUS_integrate_GAL_puppet = {
+
+		name = AUS_integrate_GAL
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			GAL = { is_subject_of = ROOT }
+			has_country_flag = AUS_autonomous_GAL
+		}
+
+		available = {
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				GAL = {
+					compare_autonomy_state < autonomy_puppet
+					compare_autonomy_progress_ratio < 0.3 
+				}
+			}
+			else = {
+				hidden_trigger = {
+					NOT = { GAL = { has_country_flag = HUN_integration_time } }
+				}
+			}
+		}
+
+		icon = generic_nationalism
+
+		cost = 25
+
+		days_remove = 60
+
+		modifier = {
+			political_power_cost = 0.6
+		}
+
+		remove_effect = {
+			add_state_core = 88
+			add_state_core = 89
+			add_state_core = 91
+			add_state_core = 863
+			add_state_core = 1984
+			add_state_core = 1983
+			add_state_core = 1982			
+			add_state_core = 996
+			add_state_core = 1180
+			add_state_core = 1374
+			add_state_core = 1386
+			add_state_core = 1414
+			add_state_core = 1553
+			add_state_core = 1558
+			add_state_core = 1588
+			add_state_core = 1589
+			add_state_core = 1590
+			add_state_core = 1599
+			add_state_core = 1737
+			add_state_core = 1768
+			add_state_core = 1769
+			add_state_core = 1982
+			add_state_core = 1983
+			add_state_core = 1984
+			if = {
+				limit = {
+					has_country_flag = GAL_BUK_attached
+				}
+				add_state_core = 80
+				add_state_core = 839
+			}
+			annex_country = {
+				target = GAL
+				transfer_troops = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	AUS_integrate_GAL_compliance = {
+
+		highlight_states = {
+			state = 88
+			state = 89
+			state = 91
+			state = 863
+			state = 1983
+			state = 1984
+			state = 1982
+			state = 996
+			state = 1180
+			state = 1374
+			state = 1386
+			state = 1414
+			state = 1553
+			state = 1558
+			state = 1588
+			state = 1589
+			state = 1590
+			state = 1599
+			state = 1737
+			state = 1768
+			state = 1769
+		}
+
+		name = AUS_integrate_GAL
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			has_country_flag = AUS_GAL_compliance
+		}
+
+		available = {
+			has_stability > 0.6
+			controls_state = 88
+			controls_state = 89
+			controls_state = 91
+			controls_state = 863
+			controls_state = 996
+			controls_state = 1180
+			controls_state = 1374
+			controls_state = 1386
+			controls_state = 1414
+			controls_state = 1553
+			controls_state = 1558
+			controls_state = 1588
+			controls_state = 1589
+			controls_state = 1590
+			controls_state = 1599
+			controls_state = 1737
+			controls_state = 1768
+			controls_state = 1769
+			controls_state = 1982
+			controls_state = 1983
+			controls_state = 1984
+			if = {
+				88 = {
+					compliance > 30
+				}
+			}
+			if = {
+				89 = {
+					compliance > 30
+				}
+			}
+			if = {
+				91 = {
+					compliance > 30
+				}
+			}
+			if = {
+				863 = {
+					compliance > 30
+				}
+			}
+			if = {
+				996 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1180 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1374 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1386 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1414 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1553 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1558 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1588 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1589 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1590 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1599 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1737 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1768 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1769 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1982 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1983 = {
+					compliance > 30
+				}
+			}
+			if = {
+				1984 = {
+					compliance > 30
+				}
+			}
+		}
+
+		icon = generic_nationalism
+
+		cost = 10
+
+		days_remove = 30
+
+		modifier = {
+			political_power_cost = 0.6
+			stability_factor = -0.15
+		}
+
+		remove_effect = {
+			add_state_core = 88
+			add_state_core = 89
+			add_state_core = 91
+			add_state_core = 863
+			add_state_core = 996
+			add_state_core = 1180
+			add_state_core = 1374
+			add_state_core = 1386
+			add_state_core = 1414
+			add_state_core = 1553
+			add_state_core = 1558
+			add_state_core = 1588
+			add_state_core = 1589
+			add_state_core = 1590
+			add_state_core = 1982
+			add_state_core = 1983
+			add_state_core = 1984
+			add_state_core = 1599
+			add_state_core = 1737
+			add_state_core = 1768
+			add_state_core = 1769
+			add_state_core = 1982
+			add_state_core = 1983
+			add_state_core = 1984
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	AUS_question_of_BUK = {
+
+		highlight_states = {
+			state = 80
+			state = 830
+		}
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			NOT = {
+				80 = { is_core_of = ROOT }
+				830 = { is_core_of = ROOT }
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				BUK = { country_exists = no }
+			}
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_full_control_of_state = 80
+			has_full_control_of_state = 830
+		}
+
+		icon = generic_form_nation
+
+		cost = 25
+
+		complete_effect = {
+			country_event = AUH.10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	AUS_integrate_BUK_puppet = {
+
+		name = AUS_integrate_BUK
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			BUK = { is_subject_of = ROOT }
+			has_country_flag = AUS_autonomous_BUK
+		}
+
+		available = {
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				BUK = {
+					compare_autonomy_state < autonomy_puppet
+					compare_autonomy_progress_ratio < 0.3 
+				}
+			}
+			else = {
+				hidden_trigger = {
+					NOT = { BUK = { has_country_flag = HUN_integration_time } }
+				}
+			}
+		}
+
+		icon = generic_nationalism
+
+		cost = 25
+
+		days_remove = 60
+
+		modifier = {
+			political_power_cost = 0.1
+		}
+
+		remove_effect = {
+			add_state_core = 80
+			add_state_core = 830
+			annex_country = {
+				target = BUK
+				transfer_troops = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	AUS_integrate_BUK_compliance = {
+
+		highlight_states = {
+			state = 80
+			state = 830
+		}
+
+		name = AUS_integrate_BUK
+
+		visible = {
+			has_cosmetic_tag = HUN_EMPIRE
+			has_country_flag = AUS_BUK_compliance
+		}
+
+		available = {
+			has_stability > 0.6
+			controls_state = 80
+			controls_state = 830
+			if = {
+				80 = {
+					compliance > 30
+				}
+			}
+			if = {
+				830 = {
+					compliance > 30
+				}
+			}
+		}
+
+		icon = generic_nationalism
+
+		cost = 10
+
+		days_remove = 30
+
+		modifier = {
+			political_power_cost = 0.3
+			stability_factor = -0.02
+		}
+
+		remove_effect = {
+			add_state_core = 80
+			add_state_core = 830
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

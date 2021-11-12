@@ -1,0 +1,30 @@
+﻿l_french:
+
+ #Splash
+ BSR_SPLASH_TITLE:0 "Bienvenue dans Beautiful States Reborn"
+ BSR_SPLASH_CREDITS:0 "\nMerci de jouer à notre mod, nous avons travaillé jour et nuit pour vous proposer ce contenu.\n\nLes développeurs principaux: Zooptyx,Foxite,Kris,Jingo Spunk et Benpa\n\nL'Équipe de développeurs: Aoife, Bag of Nickels, Camille, Gaffate, Kaiser, Marblistical, MiketheGibus, Mr. Confused, Nodara-Kun, Vitality, Amogusmaster69, Noko, Breinschadecoupé Conducteur\n\nLes contributeurs: Schloky, Tobias et Geo,\n\nUn grand merci à:\n\nBig Bantha pour ses corrections\nAKarlefeldt pour ses portraits additionnels\nTheBolshevikJew pour ses nouveaux portraits\nFacundoSim pour ses nombreux portraits\nMerci à Mappa Mundi pour nous avoir laissé utiliser ses éléments pour nouvelle Egypte\nCrédit à CSRZ pour nous avoir autorisé à utiliser ses évents et ses décisions\nCrédit à Hovelax pour les nations formables\nCrédit à Chentienyu pour les portraits\nCrédit à Batsy pour les portraits\nCrédit à R56 pour les portraits\nCrédit à YoanMeister et Wasted192 pour le mod de choix de portraits\n\nMerci à Gerrade pour le mod le plus incroyable de tous les temps! Merci à toi pour avoir crée Beautiful States. J'espère que tu sers bien ton pays, et j'espère que tu aimes comment j'ai continué ton mod! Merci pour tout <3. Aussi, merci à Yusuf pour avoir continué le mod avec nous et Gerrade."
+
+ ### USA INTRO ###
+ bs_welcome.2.t:0 "Beautiful States Reborn: Mise à Jour 2.1!"
+ bs_welcome.2.desc:0 "\n§RCE MOD N'EST PAS COMPATIBLE AVEC RT56, TOUT MOD CHANGEANT LA MAP ET UNE GRANDE PARTIE DES MODS CHANGEANT LE L'EXPERIENCE DE JEU.§!\n\nBienvenue dans BSR ! L'équipe de développeurs a mit beaucoup d'amour et d'effort dans le mod, en espérant que vous apprécierez !\n\nActuellement, nous avons fait pas mal de changements majeurs. Par exemple, retravailler les états du jeu de base pour être plus précis historiquement, nous avons aussi ajouté les frontières des autres périodes comme avant 1936, ou après 1945, une des plus grandes choses que vous pouvez remarquer est notre toute nouvelle map complète !\nTraduis en Français par l'Alsacien et Camille"
+ bs_welcome.2.a:0 "Merci."
+ bs_welcome.2.b:0 "Contenu Extra (Menu)"
+ 
+ bs_welcome.3.t:0 "Sous-Menu Contenu Extra"
+ bs_welcome.3.desc:0 "En dessous se trouve une liste des continents que vous pouvez choisir pour activer chaques options de contenu extra spécifique comme ajouter tous les états américains comme libérable ou eleasables ou si vous préférez avoir un jeu plus rapide, vous pouvez choisir l'option pour optimiser votre jeu."
+ bs_welcome.3.a:0 "Merci."
+ bs_welcome.3.b:0 "Ramenez-moi en arrière."
+ bs_welcome.3.c:0 "Options pour les États-Unis d'Amérique"
+ bs_welcome.3.d:0 "Options pour la Chine"
+
+ bs_welcome.usa.t:0 "Options de Libération des États-Unis"
+ bs_welcome.usa.desc:0 "Au début de la partie, les trois états qui peuvent être libérés sont la Californie, le Texas et la Louisiane. La Nouvelle-Angleterre peut être libéré mais ce n'est qu'une région. Si vous voulez plus d'états américains libérés, ou si vous voulez les puissances régionales, choisissez une option. §RSi vous prenez une option, Cela sera votre choix final et vous ne pourrez revenir en arrière. NE correspond à la Nouvelle-Angleterre (New-England) au passage."
+ bs_welcome.usa.a:0 "Laissez tomber, ramenez-moi en arrière."
+ bs_welcome.usa.b:0 "J'aimerais les puissances régionales."
+ bs_welcome.usa.c:0 "J'aimerais le reste des états."
+ bs_welcome.usa.d:0 "Je ne voudrais pas de nouveaux états."
+
+bs_welcome.4.t:0 "Options Seigneurs de Guerre Chinois"
+bs_welcome.4.desc:0 "Au début de la partie, la Chine est plutôt rempli de seigneurs de guerre et nous pensons que c'est un bon nombre. §RBUT§ Si vous voulez améliorer votre histoire et peut-être créer une histoire alternative, vous pouvez utiliser cette option pour donner des états pour plus de seigneurs de guerre. \nVous aurez à libérer manuellement tous les seigneurs de guerre. Munissez-vous d'un mod comme State Transfert Tool ou Toolpack pour vous aider."
+bs_welcome.4.a:0 "Plus de seigneurs de guerre !"
+bs_welcome.4.b:0 "Ramenez-moi en arrière."

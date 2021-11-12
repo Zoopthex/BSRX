@@ -1,0 +1,1762 @@
+﻿focus_tree = {
+	id = rk_ukraine_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = RKU
+		}
+	}
+	
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+	#
+	#BRUTALY OPPRESS RESISTANCE
+	#BRUTALY OPPRESS RESISTANCE
+	#BRUTALY OPPRESS RESISTANCE
+	#BRUTALY OPPRESS RESISTANCE
+	
+	focus = {
+		id = RKU_brutally_oppress_resistance
+		icon = GFX_focus_spr_crush_the_revolution
+		prerequisite = {  }
+		x = 3
+		y = 0
+		#relative_position_id = 
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = RK_lower_resistance
+		}
+	}
+
+	focus = {
+		id = RKU_contact_nationalist_groups
+		icon = GFX_goal_tripartite_pact
+		prerequisite = {
+			focus = RKU_brutally_oppress_resistance
+		}
+		x = 1
+		y = 1
+		#relative_position_id = brutally_supress_resistance
+		
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+			has_idea = RK_SOV_worse_partisans
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RK_SOV_worse_partisans
+				add_idea = RK_SOV_bad_partisans
+			}
+		}
+	}
+		
+	focus = {
+		id = RKU_request_guns
+		icon = GFX_focus_generic_concessions
+		prerequisite = { 
+		focus = RKU_brutally_oppress_resistance 
+		}
+		x = 5
+		y = 1
+		#relative_position_id = brutally_supress_resistance
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+			has_idea = RK_funds
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RK_funds
+				add_idea = RK_funds_2
+			}
+		}
+	}
+		
+	focus = {
+		id = RKU_destroy_partisan_groups
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { 
+		focus = RKU_contact_nationalist_groups
+		}
+		x = -1
+		y = 2
+		#relative_position_id = RKU_contact_nationalist_groups
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+			has_idea = RK_SOV_bad_partisans
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RK_SOV_bad_partisans
+				add_idea = RK_SOV_minor_partisans
+			}
+		}
+	}
+		
+	focus = {
+		id = ukrainian_volunteer_force
+		icon = GFX_focus_generic_manpower
+		prerequisite = { 
+		focus = RKU_contact_nationalist_groups
+		}
+		x = 1
+		y = 3
+		#relative_position_id = RKU_contact_nationalist_groups
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_manpower = 25000
+			}
+		}
+		
+	focus = {
+		id = RKU_encourage_cooperation
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { 
+			focus = RKU_contact_nationalist_groups
+		}
+		x = 3
+		y = 2
+		#relative_position_id = RKU_contact_nationalist_groups
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = RKU_local_cooperation
+		}
+	}
+		
+	focus = {
+		id = RKU_local_arms_procurment
+		icon = GFX_goal_continuous_reduce_training_time
+		prerequisite = { 
+		focus = RKU_german_blueprints
+		focus = RKU_encourage_cooperation
+		}
+		x = 3
+		y = 4
+		#relative_position_id = RKU_contact_nationalist_groups
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+				}
+			add_ideas = RK_local_arms_procurement
+		}
+	}
+	
+	focus = {
+		id = RKU_german_blueprints
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { 
+		focus = RKU_request_guns
+		}
+		prerequisite = { 
+		focus = RKU_german_industrial_and_farm_workers
+		}
+		x = 5
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+			has_idea = RK_funds_2
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_technology = { 
+				advanced_infantry_weapons = 1
+				tech_engineers = 1
+				artillery1 = 1
+				excavation1 = 1	
+			}
+			swap_ideas = {
+				remove_idea = RK_funds_2
+				add_idea = RK_funds_3
+			}
+		}
+	}
+	
+	focus = {
+		id = RKU_a_new_army
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { 
+		focus = ukrainian_volunteer_force
+			}
+		prerequisite = { 
+		focus = RKU_local_arms_procurment
+		}
+		x = 1
+		y = 5
+		#relative_position_id = RKU_contact_nationalist_groups
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_manpower = 30000
+			}
+		}
+	
+	focus = {
+		id = RKU_establish_a_research_department
+		icon = GFX_focus_research
+		prerequisite = { 
+		focus = ukrainian_volunteer_force
+			}
+		prerequisite = { 
+		focus = RKU_german_blueprints
+		}
+		x = 5
+		y = 5
+		#relative_position_id = RKU_contact_nationalist_groups
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+		
+	focus = {
+		id = RKU_department_of_education
+		icon = GFX_focus_research2
+		prerequisite = { 
+		focus = RKU_establish_a_research_department
+			}
+		prerequisite = { 
+		focus = RKU_industrial_expansion_phase2
+		}
+		x = 5
+		y = 7
+		#relative_position_id = RKU_contact_nationalist_groups
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+		
+	#APPOINT A REICHSKOMMISSAR
+	#APPOINT A REICHSKOMMISSAR
+	#APPOINT A REICHSKOMMISSAR
+	#APPOINT A REICHSKOMMISSAR
+	
+	focus = {
+		id = RKU_appoint_a_reichskommissar
+		icon = GFX_focus_generic_military_mission
+		prerequisite = {  }
+		x = 15
+		y = 0
+		#relative_position_id = 
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 75
+			}
+		}
+		
+	focus = {
+		id = RKU_a_german_administration
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = {  
+			focus = RKU_appoint_a_reichskommissar
+		}
+		x = 20
+		y = 1
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+			has_idea = RK_occupation_government
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RK_occupation_government
+				add_idea = RK_competent_occupation_government
+			}
+		}
+	}
+	
+	focus = {
+		id = RKU_hitler_the_liberator
+		icon = GFX_focus_ger_reichskommisariats
+		prerequisite = {  
+			focus = RKU_a_german_administration
+		}
+		x = 20
+		y = 2
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_manpower = 10000
+			add_war_support = 0.05
+		}
+	}
+		
+	focus = {
+		id = RKU_propaganda_effort
+		icon = GFX_goal_continuous_def_against_influence
+		prerequisite = {  
+			focus = RKU_hitler_the_liberator
+			}
+		x = 20
+		y = 4
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.025
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = rku_waldemar_magunia
+		}
+	}
+		
+	focus = {
+		id = deutsche_ukrainezeitung
+		icon = GFX_goal_generic_propaganda
+		prerequisite = {  
+			focus = RKU_propaganda_effort
+			}
+		x = 20
+		y = 5
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.025
+			add_manpower = 10000
+		}
+	}
+		
+	focus = {
+		id = RKU_civil_and_criminal_justice
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = {  
+			focus = RKU_a_german_administration
+			}
+		x = 22
+		y = 2
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+			has_idea = RK_competent_occupation_government
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RK_competent_occupation_government
+				add_idea = RK_efficent_occupation_government
+			}
+		}
+	}
+		
+	focus = {
+		id = RKU_limited_religious_freedom
+		icon = GFX_focus_por_concordat
+		prerequisite = {  
+			focus = RKU_civil_and_criminal_justice
+		}
+		x = 22
+		y = 4
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = rku_polikarp_sikorsky
+		}
+	}
+	
+	focus = {
+		id = RKU_volksdeutsche_special_rights
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = {  
+			focus = RKU_limited_religious_freedom
+			}
+		x = 22
+		y = 5
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_political_power = 120
+		add_stability = 0.025
+			}
+		}
+		
+	focus = {
+		id = RKU_protect_the_volksdeutsche
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = {  
+			focus = deutsche_ukrainezeitung
+			}
+		prerequisite = {  
+			focus = RKU_volksdeutsche_special_rights
+			}
+		x = 21
+		y = 6
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_political_power = 120
+		add_stability = 0.025
+			}
+		}
+		
+	#ECONOMIC DEVELOPMENT AND EXPLOITATION
+	#ECONOMIC DEVELOPMENT AND EXPLOITATION
+	#ECONOMIC DEVELOPMENT AND EXPLOITATION
+	#ECONOMIC DEVELOPMENT AND EXPLOITATION
+	
+	focus = {
+		id = RKU_economic_development_and_exploitation
+		icon = GFX_goal_generic_production2
+		prerequisite = {  
+			focus = RKU_appoint_a_reichskommissar
+			}
+		x = 10
+		y = 1
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+			has_idea = RK_bad_funds
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			swap_ideas = {
+				remove_idea = RK_bad_funds
+				add_idea = RK_funds
+			}
+		}
+	}
+		
+	focus = {
+		id = RKU_german_industrial_and_farm_workers
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = {  
+			focus = RKU_economic_development_and_exploitation
+			}
+		x = 8
+		y = 2
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_manpower = 5000
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+				}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = industry
+				}
+			}
+		}
+		
+	focus = {
+		id = expand_ukrainian_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = {  
+			focus = RKU_german_industrial_and_farm_workers
+			focus = RKU_industrial_expansion_phase1
+			}
+		x = 8
+		y = 4
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			202 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+					}
+				}
+			201 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+					}
+				}
+			93 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+					}
+				}
+			199 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+					}
+				}
+			}
+		}
+		
+	focus = {
+		id = RKU_military_industrial_expansion
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = {  
+			focus = expand_ukrainian_infrastructure
+			}
+		x = 9
+		y = 5
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+					}
+				}
+			}
+		}
+		
+	focus = {
+		id = RKU_industrial_expansion_phase1
+		icon = GFX_focus_generic_industry_1
+		prerequisite = {  
+			focus = RKU_economic_development_and_exploitation
+			}
+		x = 10
+		y = 3
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+				}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = industry
+				}
+			}
+		}
+		
+	focus = {
+		id = RKU_industrial_expansion_phase2
+		icon = GFX_focus_generic_industry_2
+		prerequisite = {  
+			focus = RKU_industrial_expansion_phase1
+			}
+		prerequisite = {  
+			focus = RKU_military_industrial_expansion
+			}
+		prerequisite = {  
+			focus = RKU_civilian_industrial_expansion
+			}
+		x = 10
+		y = 6
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+					}
+				}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = industry
+				}
+			}
+		}
+		
+	focus = {
+		id = RKU_industrial_expansion_phase3
+		icon = GFX_focus_generic_industry_3
+		prerequisite = {  
+			focus = RKU_industrial_expansion_phase2
+			}
+		prerequisite = {  
+			focus = breadbasket_of_the_reich
+			}
+		x = 10
+		y = 9
+		#relative_position_id = 
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+					}
+				}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+				}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = industry
+				}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = electronics
+				}
+			}
+		}
+		
+	focus = {
+		id = ukrainian_industry_and_farm_workers
+		icon = GFX_focus_CZE_german_puppet
+		prerequisite = {  
+			focus = RKU_economic_development_and_exploitation
+			}
+			
+		x = 12
+		y = 2
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+				}
+			add_stability = -0.025
+			}
+		}
+	
+	focus = {
+		id = RKU_wartime_measures
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = {  
+			focus = ukrainian_industry_and_farm_workers
+			focus = RKU_industrial_expansion_phase1
+			}
+		x = 12
+		y = 4
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = war_economy
+					}
+				add_political_power = 150
+				}
+			else = {
+				add_ideas = war_economy
+				}
+			add_stability = -0.025
+			}
+		}
+	
+	focus = {
+		id = RKU_civilian_industrial_expansion
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = {  
+			focus = RKU_wartime_measures
+			}
+		x = 11
+		y = 5
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+					}
+				}
+			}
+		}
+		
+	#MOBILISE THE CIVILIAN WORKFORCE
+	#MOBILISE THE CIVILIAN WORKFORCE
+	#MOBILISE THE CIVILIAN WORKFORCE
+	#MOBILISE THE CIVILIAN WORKFORCE
+	
+	focus = {
+		id = RKU_mobilise_the_civilian_workforce
+		icon = GFX_goal_generic_build_tank
+		prerequisite = {  
+			focus = RKU_propaganda_effort
+		}
+		prerequisite = {  
+			focus = RKU_wartime_measures
+		}
+		x = 16
+		y = 5
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+			has_idea = RK_lower_resistance
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = extensive_conscription
+					}
+				add_political_power = 150
+			}
+			else = {
+				add_ideas = extensive_conscription
+			}
+			add_stability = -0.025
+			swap_ideas = {
+				remove_idea = RK_lower_resistance
+				add_idea = RK_lower_resistance_plusrepair
+			}
+		}
+	}
+		
+	focus = {
+		id = RKU_gemeindwitschaften
+		icon = GFX_goal_generic_construction
+		prerequisite = {  
+			focus = RKU_mobilise_the_civilian_workforce
+			}
+		x = 15
+		y = 6
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+		
+	focus = {
+		id = RKU_establish_kombines
+		icon = GFX_goal_generic_construction2
+		prerequisite = {  
+			focus = RKU_mobilise_the_civilian_workforce
+			}
+		x = 17
+		y = 6
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_resource = {
+				type = aluminium
+				amount = 12
+				state = 202
+				}
+			add_resource = {
+				type = oil
+				amount = 4
+				state = 202
+				}
+			add_resource = {
+				type = oil
+				amount = 2
+				state = 226
+				}
+			add_resource = {
+				type = steel
+				amount = 14
+				state = 221
+				}
+			}
+		}
+		
+	focus = {
+		id = RKU_autarky
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = {  
+			focus = RKU_establish_kombines
+			}
+		prerequisite = {  
+			focus = RKU_gemeindwitschaften
+			}
+		x = 16
+		y = 7
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = excavation_tech
+			}
+			add_ideas = RK_autarky
+		}
+	}
+		
+	focus = {
+		id = breadbasket_of_the_reich
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = {  
+			focus = RKU_autarky
+		}
+		prerequisite = {  
+			focus = RKU_industrial_expansion_phase2
+		}
+		x = 12
+		y = 8
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+			has_idea = RK_funds_3
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = UKR_breadbasket
+			if = {
+				limit = {
+					has_idea = free_trade
+					}
+				add_political_power = 150
+			}
+			else = {
+				add_ideas = free_trade
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				remove_idea = RK_funds_3
+				add_idea = RK_funds_2
+			}
+		}
+	}
+		
+	#FALL OF THE SOVIET UNION
+	#FALL OF THE SOVIET UNION
+	#FALL OF THE SOVIET UNION
+	#FALL OF THE SOVIET UNION
+	
+	focus = {
+		id = RKU_fall_of_the_soviet_union
+		icon = GFX_goal_anti_comintern_pact
+		x = 2
+		y = 7
+		#relative_position_id = 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+			country_exists = RKM
+			country_exists = RKK
+			has_idea = RK_SOV_minor_partisans
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = RK_SOV_minor_partisans
+			add_ideas = RK_ussr_dead
+		}
+	}
+	
+	focus = {
+		id = RKU_mass_german_immgration
+		icon = GFX_focus_chi_mission_to_germany
+		x = 2
+		y = 9
+		#relative_position_id = 
+		
+		prerequisite = {  
+			focus = RKU_fall_of_the_soviet_union
+			}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			94 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			93 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			199 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			201 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			194 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			202 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			203 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			226 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			259 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			225 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			200 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			224 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			222 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			220 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			258 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			257 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			260 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			240 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			221 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			228 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			227 = {
+				add_manpower = 100000
+				add_compliance = 20
+				}
+			}
+		}
+		
+	focus = {
+		id = integrate_ukrainian_land
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 2
+		y = 10
+		#relative_position_id = 
+		
+		prerequisite = {
+			focus = RKU_mass_german_immgration
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = coring_states_RKU
+		}
+	}
+		
+	focus = {
+		id = RKU_a_model_german_colony
+		icon = GFX_focus_generic_self_management
+		x = 5
+		y = 9
+		#relative_position_id = 
+		
+		prerequisite = {
+			focus = RKU_department_of_education
+		}
+		prerequisite = {  
+			focus = RKU_fall_of_the_soviet_union
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+			has_idea = RKU_local_cooperation
+			has_idea = RK_efficent_occupation_government
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RKU_local_cooperation
+				add_idea = RKU_local_cooperation_enhanced
+			}
+			swap_ideas = {
+				remove_idea = RK_efficent_occupation_government
+				add_idea = RK_best_occupation_government
+			}
+		}
+	}
+		
+	focus = {
+		id = RKU_invite_german_investors
+		icon = GFX_focus_generic_tank_production
+		x = 10
+		y = 10
+		#relative_position_id = 
+		
+		prerequisite = {
+			focus = RKU_industrial_expansion_phase3
+			}
+		prerequisite = {  
+			focus = RKU_mass_german_immgration
+			}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+
+		available = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			202 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+
+technology_sharing_group = {
+	id = tibet_tribal_sharing
+	name = tibet_tribal_sharing_name
+	desc = tibet_tribal_sharing_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.2
+	
+	categories = { infantry industry }
+
+    available = {
+        if = {
+            limit = {
+                has_idea = BSR_tribe
+            }
+            is_subject_of = TIB
+        }
+        if = {
+            limit = {
+                original_tag = TIB
+            }
+            num_subjects > 0
+        }
+    }
+}

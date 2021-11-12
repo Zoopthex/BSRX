@@ -1,0 +1,25 @@
+﻿l_polish:
+
+ #Splash
+ BSR_SPLASH_TITLE:0 "Witaj w Beautiful States Reborn!"
+ BSR_SPLASH_CREDITS:0 "\nDzięki za granie w naszego moda, pracowaliśmy nad tym dniami i nocami - wszystko dla Ciebie!\n\nDeweloperzy główni: Zooptyx, Foxite, Kris, Jingo Spunk i Benpa\n\nZespół deweloperski: Aoife, Bag of Nickels, Camille, Gaffate, Kaiser, Marblistical, MikeTheGibus, Mr. Confused, Nodara-Kun, Vitality, Amogusmaster69, Noko, Breinschadecoupé Conducteur\n\nKontrybutorzy: Schloky, Tobias oraz Geom\n\nSpecjalne podziękowania dla:\n\n"Fix sentences smoothly" autorstwa Big Bantha\nDodatkowe portrety autorstwa Karlefeldt\nNowe portrety autorstwa TheBolshevikJew\nMNÓŚTWO portretów od FacundoSim\nPodziękowania dla Mappa Mundi za pozwolenia na używanie części ich dzieła\nPodziękowania dla CSRZ za pozwolenie na używanie jego eventów i decyzji\nPodziękowania dla Hovelax za formable nations\nPodziękowania dla Chentienyu za portrety\nPodziękowania dla Batsy za portrety\nPodziękowania dla zespołu R56 za portrety\nPodziękowania dla YoanMeister oraz Wasted192 za ich "portrait chooser mod"\n\nSpecjalne podziękowania dla Gerrade za najlepszy mod świata! Dziękujemy, że stworzyłeś Beatiful States. Mamy nadzieję, że jesteś zadowolony ze sposobu, w jakim kontynuujemy twoje dzieło! Również dziękujemy Yusufowi za kontynuowanie naszego moda po Gerrade, ale jeszcze przed nami."
+ 
+ ### USA INTRO ###        
+ bs_welcome.2.t:0 "Beautiful States Reborn"
+ bs_welcome.2.desc:0 "\nDzięki za wypróbowanie BSR.\n§RWeNiestety BSR jest dostępny tylko w języku angielskim,\nbez planowanego wsparcia dla języka polskiego.\nZalecam zmianę języka na angielski, żeby grać.\nTen mod nie jest kompatybilny z Road to 56\n ani z innymi modami, które modifykują mapę i większością modów\nktóre radykalnie modifykują rozgrywkę."
+ bs_welcome.2.a:0 "Powinienem to zrobić."
+ bs_welcome.2.b:0 "Opcje Dodatkowe! (Menu)"
+ 
+ bs_welcome.3.t:0 "Opcje Dodatkowe"
+ bs_welcome.3.d:0 "Poniżej znajdziesz listę kontynentów - możesz je wybrać żeby aktywować specjalne opcje, typu rozpierdalanie całej Ameryki na pojedyncze stany, możesz też zoptymizować grę, żeby działała szybciej."                 
+ bs_welcome.3.a:0 "Dzięki!"
+ bs_welcome.3.b:0 "Chcę z powrotem."
+ bs_welcome.3.c:0 "No to Hameryka." 
+ 
+ bs_welcome.usa.t:0 "Opcje dla Hameryki"
+ bs_welcome.usa.d:0 "Na starcie gry, tylko 3 stany funkcjonują jako tagi - Kalifornia, Teksas i Luizjana. Nowa Anglia to też tag, choć w sumie to jest cały region, a nie stan. Jak chcesz więcej tagów do Hameryki, albo tylko te najważniejsze regiony, wybierz opcję. §RPo wybranie opcji, to będzie twoja ostateczna decyzja i nie będzie mógł jej zmienić w cią gry.§"
+ bs_welcome.usa.a:0 "Dobra nie, chcę z powrotem."
+ bs_welcome.usa.b:0 "Chcę najważniejsze regiony."
+ bs_welcome.usa.c:0 "Chcę wszystko."
+ bs_welcome.usa.e:0 "Żadnych nowych nacji."
+

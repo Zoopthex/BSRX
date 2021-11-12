@@ -1,0 +1,1579 @@
+us_state_investments = {
+	
+	icon = generic_economy
+
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+
+}
+former_us_state_stuff = {
+	
+	icon = generic_political_actions
+
+	allowed = {
+
+	}
+
+	visible = {
+		is_former_us_state_without_change = yes
+	}
+}
+independence_war = {
+	icon = generic_formable_nations
+
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		has_idea = generic_independence_war
+	}
+}
+AI_GER_puppets = {
+	icon = generic_formable_nations
+
+	allowed = {
+		original_tag = GER 
+	}
+
+	visible = {
+		is_ai = yes
+		has_government = fascism
+	}
+}
+FRA_colonies_fly_away = {
+	icon = generic_formable_nations
+
+	allowed = {
+		original_tag = FRA
+	}
+}
+BS_border_conflicts = {
+	icon = border_war
+
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+Latvia_Arms_Imports_category = {
+
+	icon = ger_military_buildup
+
+	picture = GFX_decision_cat_latvia_arms_imports
+
+	allowed = {
+		original_tag = LAT
+	}
+}
+BS_austria_hungary_integration = {
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_austria_hungary
+
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		has_cosmetic_tag = HUN_EMPIRE
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+BS_CHI_anti_tusi_campaigns = {
+	
+	icon = generic_formable_nations
+
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		tag = event_target:WTT_current_china_leader
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+AST_peace_with_JAP_category = {
+
+	icon = generic_formable_nations
+	
+	allowed = {
+			original_tag = AST
+	}
+	
+	visible = {
+			has_game_rule = {
+				rule = allow_bs_extra
+				option = BS_ALLOWED
+			}
+	}
+}
+
+BS_USA_territorial_management = {
+
+	icon = generic_formable_nations
+
+	allowed = {
+		original_tag = USA
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+BS_disestablish_RKs = {
+
+	icon = generic_formable_nations
+
+	allowed = {
+		NOT = { original_tag = GER }
+	}
+
+	visible = {
+		NOT = { original_tag = GER }
+	}
+}
+BS_form_deseret_cat = {
+
+	icon = generic_formable_nations
+
+	allowed = {
+		original_tag = UTA
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+BS_form_cascadia_cat = {
+
+	icon = generic_formable_nations
+
+	allowed = {
+		OR = {
+			original_tag = WAS
+			original_tag = ORE
+		}
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+BS_naming_category = {
+	
+	icon = generic_formable_nations
+}
+ITA_establish_new_colonies = {
+	icon = generic_formable_nations
+
+	allowed = {
+		original_tag = ITA
+	}
+
+	visible = {
+		NOT = { has_government = communism }
+	}
+}
+RK_request_control_over_industry = {
+	icon = generic_industry
+
+	allowed = {
+		is_RK_or_RP = yes
+	}
+
+	visible = {
+		is_subject_of = GER
+	}
+}
+BS_Beijing_Biden_Category = { #Easter egg that zoop wanted sometime ago
+	allowed = {
+		original_tag = USA
+	}
+	visible = {
+		PRC = { is_puppet_of = USA }
+	}
+}
+occupy_tangiers_cat = {
+	allowed = {
+		original_tag = SPR
+	}
+	visible = {
+		owns_state = 290
+	}
+}
+american_fleet_recovery = {
+	allowed = {
+		original_tag = USA
+	}
+	visible = {
+		
+	}
+}
+former_british_colony_stuff = {
+allowed = {
+			OR = {
+			tag = BOT
+			tag = GAM
+			tag = KEN
+			tag = MLW
+			tag = NGA
+			tag = TZN
+			tag = UGA
+			tag = ZAM
+			tag = ZIM
+			tag = SIE
+			tag = PAL
+			tag = GHA
+			tag = SMA
+            }	
+}
+visible = {	
+}
+}
+south_africa_status_cat = {
+allowed = {
+			tag = SAF	
+}
+visible = {	
+	NOT = {
+	has_completed_focus = SAF_abandon_westminster
+	}
+}
+}
+former_french_colony_stuff_cat = {
+allowed = {
+			OR = {
+		tag = MOR
+		tag = TUN
+		tag = MRT
+		tag = MLI
+		tag = SEN
+		tag = GNB
+		tag = GNA
+		tag = IVO
+		tag = VOL
+		tag = TOG
+		tag = DAH
+		tag = NGA
+		tag = CHA
+		tag = CMR
+		tag = CAR
+		tag = GAB
+		tag = RCG
+		tag = DJI
+		tag = MAD
+            }	
+}
+visible = {	
+}
+}
+former_italian_colony_stuff_cat = {
+allowed = {
+			OR = {
+		tag = ERI
+		tag = ETH
+		tag = SOM
+		tag = LBA
+            }	
+}
+visible = {	
+}
+}
+former_portugese_colony_stuff_cat = {
+allowed = {
+			OR = {
+		tag = ANG
+		tag = MZB
+		tag = GNB
+		tag = SAO
+            }	
+}
+visible = {	
+}
+}
+former_belgian_colony_stuff_cat = {
+allowed = {
+		tag = COG         	
+}
+visible = {	
+}
+}
+BS_Andorra_Co_Prince_Cat = { #
+	allowed = {
+		original_tag = ADR
+	}
+	visible = {
+	}
+}
+GER_transfer_equipment_category = {
+	icon = generic_industry
+
+	allowed = {
+		tag = GER
+	}
+
+	visible = {
+		tag = GER
+		has_government = fascism
+		OR = {
+		GFA = {
+		exists = yes
+		is_puppet_of = GER
+		}
+		GGO = {
+		exists = yes
+		is_puppet_of = GER
+		}
+		}
+	}
+}
+BS_any_neutral_puppet_governments = {
+	allowed = {
+		#always = no
+	}
+	visible = {
+		has_government = neutrality
+	}
+}
+BS_GER_fascist_puppet_governments = {
+	allowed = {
+		#always = no
+		original_tag = GER
+	}
+	visible = {
+		has_government = fascism
+	}
+}
+BS_any_fascist_puppet_governments = {
+	allowed = {
+		#always = no
+	}
+	visible = {
+		has_government = fascism
+	}
+}
+BS_SOVIET_communist_puppet_governments = {
+	allowed = {
+		#always = no
+	}
+	visible = {
+		has_government = communism
+	}
+}
+RAJ_campaigns_against_tibet = {
+
+	icon = generic_nationalism
+
+	allowed = {
+		original_tag = RAJ
+	}
+
+	visible = {
+		country_exists = TIB
+		has_country_flag = india_can_contest_tibet_borders
+	}
+}
+femboy_decisions_category = {
+	icon = generic_industry
+
+	allowed = {
+		original_tag = FEM
+	}
+
+	visible = {
+		original_tag = FEM
+	}
+}
+split_romania_category = {
+
+	icon = generic_nationalism
+
+	allowed = {
+		NOT = {
+		original_tag = ROM 
+		original_tag = HUN
+		original_tag = MOL
+		original_tag = TRA
+		original_tag = BUK
+		}
+	}
+
+	visible = {
+		OR = {
+		ROM = { exists = no }
+		ROM = { is_subject_of = ROOT }
+		}
+	}
+}
+reunite_romania_category = {
+
+	icon = generic_nationalism
+
+	allowed = {
+		OR = {
+		original_tag = ROM 
+		original_tag = TRA
+		original_tag = MOL
+		original_tag = BUK
+		original_tag = BNT
+		}
+	}
+
+	visible = {
+		OR = {
+		ROOT = { has_cosmetic_tag = MOL_WAL_UNITED }
+		original_tag = ROM 
+		original_tag = TRA
+		original_tag = MOL
+		original_tag = BUK
+		original_tag = BNT
+		}
+	}
+}
+establish_trieste_category = {
+	
+	icon = generic_political_actions
+
+	allowed = {
+
+	}
+
+	visible = {			
+		ROOT = {
+			OR = {
+				controls_state = 993
+			}
+			is_Italian_speak = no
+		}			
+	}
+}
+
+former_ssr_stuff = {
+	
+	icon = generic_political_actions
+
+	allowed = {
+
+	}
+
+	visible = {
+		is_former_SSR_without_change = yes
+	}
+}
+
+reorganize_central_asia_category = {
+	
+	icon = generic_political_actions
+
+	allowed = {
+		NOT = {
+			original_tag = KAZ
+			original_tag = UZB
+			original_tag = TMS
+			original_tag = KYR
+			original_tag = TAJ
+			original_tag = KPS
+		}
+	}
+
+	visible = {
+		NOT = {
+			AND = {
+				original_tag = SOV
+				has_government = communism
+				}
+			}	
+	}
+}
+
+restore_russian_empire_category = {
+	
+	icon = generic_political_actions
+
+	allowed = {
+		original_tag = SOV
+	}
+
+	visible = {
+		has_government = neutrality
+		is_subject = no
+		NOT = { has_cosmetic_tag = RUS_EMPIRE }
+	}
+}
+
+khiva_flag = {
+
+	icon = generic_nationalism
+
+	allowed = {
+		tag = KPS
+	}
+
+	visible = {
+		has_government = neutrality
+		NOT = {
+			is_former_SSR_without_change = yes
+		}
+	}
+}
+
+iraq_flag = {
+
+	icon = generic_nationalism
+
+	allowed = {
+		tag = IRQ
+	}
+
+	visible = {
+		has_government = democratic
+	}
+}
+
+ddr_flag = {
+
+	icon = generic_nationalism
+
+	allowed = {
+		tag = DDR
+	}
+
+	visible = {
+		has_government = communism
+	}
+}
+
+armenia_flag = {
+
+	icon = generic_nationalism
+
+	allowed = {
+		tag = ARM
+	}
+
+	visible = {
+		has_government = democratic
+		NOT = {
+			is_former_SSR_without_change = yes
+		}
+	}
+}
+BS_generic_coring = {
+
+	icon = generic_nationalism
+
+	allowed = {
+		has_dlc = "La Resistance"
+	}
+
+	visible = {
+		
+	}
+}
+BS_Eng_Restore_Monarchy_Colonies = {
+	allowed = {
+		original_tag = ENG
+	}
+	
+	visible = {
+		any_country = {
+			OR = {
+				original_tag = CAN
+				original_tag = AST
+				original_tag = NZL
+				original_tag = RAJ
+				original_tag = SAF
+			}
+			is_puppet_of = ENG
+			NOT = {	has_idea = king_edward_viii_colonial_fash }
+			NOT = { has_idea = king_george_vi_colonial }
+			NOT = { has_idea = queen_elizabeth_ii_colonial }
+		}
+		ENG = { NOT = { has_government = communism }}
+		OR = {
+			ENG = { has_idea = ENG_king_edward_fascism }
+			ENG = { has_idea = ENG_george_vi }
+			ENG = { has_country_leader = { ruling_only = yes name = "Edward VIII" } }
+			ENG = { has_country_leader = { ruling_only = yes name = "George VI" } }
+			ENG = { has_country_leader = { ruling_only = yes name = "Elizabeth II" } }
+		}
+	}
+}
+establish_the_turkish_straits = {
+
+	icon = generic_political_actions
+
+	allowed = {
+
+	}
+
+	visible = {
+		NOT = { 
+			original_tag = TUR
+			original_tag = GRE #constantinople is important
+			tag = SOV #has a focus to literally control the straits
+		}
+		is_major = yes
+		controls_state = 341
+		controls_state = 1188
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+BS_ural_resistance = {
+
+	icon = decision_revolt
+
+	allowed = {
+		original_tag = URA
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+		has_country_flag = batov_resistance
+	}
+}
+BS_take_command_sov_Category = {
+
+	icon = generic_political_actions
+
+	allowed = {
+		original_tag = SOV
+	}
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+creating_new_germany = {
+
+	icon = generic_political_actions
+
+	allowed = {
+
+	}
+
+	visible = {
+		NOT = { 
+			original_tag = GER
+			original_tag = WGR
+			original_tag = DDR
+		}
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+ITA_motion_of_no_confidence_category = {
+
+	icon = generic_political_actions
+
+	allowed = {
+		original_tag = ITA
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+JAP_MONARCHY = {
+
+	icon = generic_political_actions
+
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+aus_ans_cat = {
+
+	icon = generic_military
+
+	allowed = {
+		original_tag = AUS	
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+steal_land_from_czechoslovakia = {
+
+	icon = generic_military
+
+	allowed = {
+		OR = {
+			original_tag = POL
+			original_tag = HUN
+		}
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+greater_manchuria_category = {
+	
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_picture_gateway_to_europe
+
+	allowed = {
+	
+	}
+}
+
+GER_kaiserboo_larp = {
+	
+	icon = generic_formable_nations
+
+
+	picture = GFX_decision_cat_picture_gateway_to_europe
+	
+
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+		has_government = neutrality
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+JAP_government_general_category = {
+	
+	icon = category_jap_pacific_guardian
+
+
+	picture = GFX_decision_cat_picture_gateway_to_europe
+	
+
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		has_government = fascism
+		}
+	}
+}
+
+BS_Celtic_Union_Category = {
+
+	icon = generic_military
+
+	allowed = {
+		OR = {
+			original_tag = SCO
+			original_tag = IRE
+			original_tag = NTR
+			original_tag = WLS
+			original_tag = CRN
+			original_tag = BRI
+		}
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+fuck_czechslovakia = {
+	
+	icon = border_conflicts
+
+	allowed = {
+		original_tag = POL
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+ITA_preparing_for_war_category = {
+	
+	icon = generic_military
+
+	allowed = {
+		original_tag = ITA
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+GER_enacting_hitler_plans_in_the_east = {
+	
+	icon = generic_political_actions
+
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+		has_government = fascism
+		
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+BS_form_commonwealth_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_commonwealth
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+BS_form_greater_italia_category = {
+
+	icon = generic_formable_nations
+
+	allowed = {
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+BS_form_greater_finland_category = {
+
+	icon = generic_formable_nations
+
+	allowed = {
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+ottoman_drip_category = {
+	
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_ottoman_drip
+
+	allowed = {
+	
+	}
+
+	visible = {
+		is_ai = no
+		has_cosmetic_tag = OTT_UNIFIED
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+RK_future = {
+	
+	allowed = {
+		is_RK_or_RP = yes
+	}
+	
+	visible = {
+		is_subject = no
+		
+		NOT = { is_subject_of = GER }
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+JAP_GEACPS = {
+	
+	allowed = {
+		tag = JAP
+	}
+	
+	visible = {
+		has_government = fascism
+		
+		has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere
+		
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+ITA_sphere = {
+	
+	allowed = {
+		tag = ITA
+	}
+	
+	visible = {
+		has_government = fascism
+		
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+FRA_napoleonic_stuff = {
+
+	picture = GFX_decision_cat_generic_formable_france
+	
+	allowed = {
+		tag = FRA
+	}
+	
+	visible = {
+		has_completed_focus = FRA_proclaim_the_third_empire
+		
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+GER_reichsprotektorat = {
+
+	allowed = {
+		tag = GER
+	}
+
+	visible = {
+		has_government = fascism
+		
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+
+}
+
+GER_operation_achse_category = {
+
+	picture = GFX_decision_bs_operation_archse
+
+	allowed = {
+		tag = GER
+	}
+
+	visible = {
+	    has_country_flag = GER_operation_achse_flag
+		
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+		
+	}
+
+}
+
+GER_new_order_in_france_category = {
+
+	icon = category_ger_reichskommissariats
+
+	allowed = {
+		tag = GER
+	}
+
+	visible = {
+	    has_global_flag = anton_succ
+		
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+		
+	}
+
+}
+
+BS_request_territoy_category = {
+
+	icon = border_conflicts
+
+	allowed = {
+		tag = HUN
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	    
+	}
+
+}
+
+BS_colony_politic_category = {
+
+	icon = eng_concessions_to_the_trade_unions
+
+    picture = GFX_decision_bs_separate_burma_from_india
+
+	allowed = {
+	    tag = ENG
+	}
+
+	visible = {
+		OR = {
+			AND = {
+				RAJ = { is_puppet_of = ENG }
+				date > 1937.1.1
+			}
+			any_country = {
+				has_country_flag = bs_can_colony_politic
+			}
+		}
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+
+	}
+
+}
+
+BS_new_name_of_cities_category = {
+
+	icon = generic_political_actions
+
+	allowed = {
+
+	}
+}
+
+form_north_german_confederation_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_bs_revive_the_ngc
+
+	allowed = {
+
+	}
+}
+
+BS_invade_microstates_category = {
+
+	icon = usa_intervention_mandate
+
+	allowed = {
+
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+		NOT = { has_government = democratic }
+		has_war = yes
+
+	}
+
+}
+
+form_confederate_states_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_bs_glory_of_csa
+
+	allowed = {
+
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+
+}
+
+BS_transfer_territories_category = {
+
+	icon = border_conflicts
+
+	allowed = {
+		tag = GER
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	    
+	}
+
+}
+
+BS_jews_country_category = {
+
+	icon = generic_formable_nations
+	
+	allowed = {
+
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+		NOT = { country_exists = ISR }
+		date > 1940.1.1
+	}
+}
+
+GER_mittelafrika_plan_category = {
+	
+	picture = GFX_decision_GER_mittelafrika
+
+	allowed = {
+		tag = GER
+	}
+
+	visible = {
+		has_government = neutrality
+		
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+GER_german_american_bund_category = {
+	
+	picture = GFX_decision_american_bund
+
+	allowed = {
+		tag = GER
+	}
+
+	visible = {
+		has_government = fascism
+		
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+BS_german_empire_territory_cateogry = {
+
+	allowed = {
+		tag = GER
+	}
+
+	visible = {
+		OR = {
+			has_cosmetic_tag = GER_german_empire
+			has_cosmetic_tag = GER_german_monarchy
+		}
+		
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+BS_demand_old_empire_territory_category = {
+
+	allowed = {
+		tag = GER
+	}
+
+	visible = {
+		OR = {
+			has_cosmetic_tag = GER_german_empire
+			has_cosmetic_tag = GER_german_monarchy
+		}
+		
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+BS_golden_gate_bridge_category = {
+
+	picture = GFX_decision_golden_gate_bridge
+
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		has_start_date < 1936.01.02
+		NOT = {
+			has_global_flag =  GOLDEN_GATE_BRIDGE_DONE
+		}
+		
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+form_east_africa_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_picture_gateway_to_europe
+
+	allowed = {
+
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+
+}
+
+form_west_africa_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_picture_gateway_to_europe
+
+	allowed = {
+
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+
+}
+
+form_abyssinia_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_picture_gateway_to_europe
+
+	allowed = {
+
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+
+}
+
+expand_reich_category = {
+
+	icon = GFX_decision_category_ger_reichskommissariats
+
+	picture = GFX_decision_cat_generic_formable_germany
+
+	allowed = {
+		tag = GER
+		has_dlc = "La Resistance"
+	}
+
+	visible = {
+		tag = GER
+		has_government = fascism
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+	
+}
+
+expand_soviet_union_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_formable_soviet_union
+
+	allowed = {
+		tag = SOV
+		has_dlc = "La Resistance"
+	}
+
+	visible = {
+		tag = SOV
+		has_government = communism
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+form_la_plata_category = {
+	
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_formable_laplata
+
+	allowed = {
+
+	}
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+form_indochina_category = {
+	
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_picture_gateway_to_europe
+	
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+form_caucasus_category = {
+	
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_picture_gateway_to_europe
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+form_peru_bolivia_category = {
+	
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_peru_bolivia
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+form_turkestan_category = {
+	
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_picture_gateway_to_europe
+	
+	allowed = {
+	OR = {
+	tag = TMS
+	tag = UZB
+	tag = KAZ
+	tag = KYR
+	tag = TAJ
+	tag = KPS
+	tag = KOK
+	tag = TUG
+		}
+	}
+	
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+risorgimento_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_picture_gateway_to_europe
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+		has_game_rule = {
+			rule = ita_fragmentation_status
+			option = ITA_FRAGMENTED
+		}
+		OR = {
+			tag = KTS
+			tag = SRD
+			tag = TUS
+			tag = PRM
+			tag = VEC
+			tag = VAT
+			tag = SMR
+		}
+		NOT = { country_exists = ITA }	
+	}
+}
+
+generic_formables_category = {
+
+	icon = generic_formable_nations
+	
+	picture = GFX_decision_cat_picture_gateway_to_europe
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+	
+}
+
+reject_slovak_borders = {
+	
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_picture_gateway_to_europe
+
+	visible = {
+		has_game_rule = {
+			rule = allow_bs_extra
+			option = BS_ALLOWED
+		}
+	}
+}
+
+BS_Request_territory_category = {
+
+    allowed = {
+        original_tag = GER
+    }
+
+    visible = {
+        has_game_rule = {
+            rule = allow_bs_extra
+            option = BS_ALLOWED
+        }
+    }
+}

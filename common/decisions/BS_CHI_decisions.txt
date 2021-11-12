@@ -1,0 +1,65 @@
+
+BS_CHI_anti_tusi_campaigns = {
+    CHI_anti_tusi_decision = {
+
+        visible = {
+            tag = event_target:WTT_current_china_leader
+            OR = {
+                has_completed_focus = CHI_prioritize_the_interior
+                has_completed_focus = CHI_one_china_policy
+            }
+        }
+
+        icon = generic_military
+        
+        fire_only_once = no
+
+        target_trigger = {
+            FROM = {
+                OR = {
+                    tag = NAI
+                    tag = KRE
+                    tag = CAG
+                    tag = HOR
+                    tag = MEU
+                    tag = NGL
+                    tag = KNY
+                    tag = LIN
+                    tag = MUI
+                    tag = GNG
+                    tag = MNH
+                    tag = NAN
+                }
+                exists = yes
+                OR = {
+                    is_neighbor_of = event_target:WTT_current_china_leader
+                    any_country = {
+                        is_subject_of = event_target:WTT_current_china_leader
+                        is_neighbor_of = FROM
+                    }
+                }
+                is_subject = no
+                NOT = { has_war_with = event_target:WTT_current_china_leader }
+            }
+        }
+
+        available = {
+            OR = {
+                has_completed_focus = CHI_prioritize_the_interior
+                has_completed_focus = CHI_one_china_policy
+            }
+        }
+		cost = 5
+
+        days_remove = 14
+
+        remove_effect = {
+            event_target:WTT_current_china_leader = {
+                declare_war_on = {
+                    target = FROM
+                    type = annex_everything
+                }
+            }
+        }
+    }
+}

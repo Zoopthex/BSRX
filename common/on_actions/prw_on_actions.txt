@@ -1,0 +1,9 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			PHI = {
+				add_to_variable = { ger_port_1 = 1 }
+			}
+		}
+	}
+}

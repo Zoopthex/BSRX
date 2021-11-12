@@ -1,0 +1,25 @@
+
+state={
+	id=1736
+	name="STATE_1736"
+
+	history={
+		owner = ROM
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			13746 1 
+		}
+		add_core_of = ROM
+
+	}
+
+	provinces={
+		5962 8414 13724 
+	}
+	manpower=32730
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

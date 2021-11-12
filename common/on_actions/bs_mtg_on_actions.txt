@@ -1,0 +1,276 @@
+on_actions = {
+    on_startup = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = asia_colonization_status
+						option = ASIA_DECOLONIZED
+					}
+				}
+				ENG = {
+					release = BHR
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = africa_colonization_status
+						option = AFRICA_DECOLONIZED
+					}
+				}
+				ENG = {
+					release = LES
+					release = SWA
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						has_game_rule = {
+							rule = eng_fragmentation_status
+							option = ENG_FRAGMENTED
+						}
+						has_game_rule = {
+							rule = americas_colonization_status
+							option = DEFAULT
+						}
+					}
+				}
+				SCO = {
+					transfer_state = 464
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						has_game_rule = {
+							rule = fra_fragmentation_status
+							option = FRA_FRAGMENTED
+						}
+						has_game_rule = {
+							rule = ita_fragmentation_status
+							option = DEFAULT
+						}
+					}
+				}
+				ITA = {
+					transfer_state = 1
+					transfer_state = 735
+					transfer_state = 821
+					transfer_state = 1132
+					transfer_state = 1147
+					transfer_state = 1388
+					transfer_state = 1390
+					annex_country = {
+						target = MCO
+						transfer_troops = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						has_game_rule = {
+							rule = fra_fragmentation_status
+							option = FRA_FRAGMENTED
+						}
+						has_game_rule = {
+							rule = ita_fragmentation_status
+							option = ITA_FRAGMENTED
+						}
+					}
+				}
+				FRA = { release = SRD }
+				SRD = {
+					transfer_state = 1388
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						has_game_rule = {
+							rule = fra_fragmentation_status
+							option = FRA_FRAGMENTED
+						}
+						has_game_rule = {
+							rule = bel_fragmentation_status
+							option = DEFAULT
+						}
+					}
+				}
+				BEL = { 
+					transfer_state = 29
+					transfer_state = 1089
+					transfer_state = 1430 
+					transfer_state = 1482
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						has_game_rule = {
+							rule = fra_fragmentation_status
+							option = FRA_FRAGMENTED
+						}
+						NOT = {
+							OR = {
+								has_game_rule = {
+									rule = bel_fragmentation_status
+									option = DEFAULT
+								}
+								has_game_rule = {
+									rule = bel_fragmentation_status
+									option = BEL_PARTITIONED
+								}
+							}
+						}
+					}
+				}
+				FLA = { 
+					transfer_state = 1089 
+					add_state_core = 1089
+				}
+				WLL = { 
+					transfer_state = 1430 
+					add_state_core = 1430
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						has_game_rule = {
+							rule = fra_fragmentation_status
+							option = FRA_FRAGMENTED
+						}
+						has_game_rule = {
+							rule = ger_fragmentation_status
+							option = DEFAULT
+						}
+					}
+				}
+				GER = { 
+					transfer_state = 28 
+					transfer_state = 1436
+					transfer_state = 1934
+					add_state_core = 28
+					add_state_core = 1436
+					add_state_core = 1933
+					add_state_core = 1934
+				}
+				LUX = {
+					transfer_state = 1933
+					add_state_core = 1933
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						has_game_rule = {
+							rule = fra_fragmentation_status
+							option = FRA_FRAGMENTED
+						}
+						has_game_rule = {
+							rule = spr_fragmentation_status
+							option = DEFAULT
+						}
+					}
+				}
+				SPR = { 
+					transfer_state = 1352 
+					transfer_state = 1353
+					transfer_state = 820
+					annex_country = {
+						target = ADR
+						transfer_troops = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						has_game_rule = {
+							rule = fra_fragmentation_status
+							option = FRA_FRAGMENTED
+						}
+						NOT = {
+							has_game_rule = {
+								rule = spr_fragmentation_status
+								option = DEFAULT
+							}
+						}
+					}
+				}
+				CAT = { 
+					transfer_state = 820
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						has_game_rule = {
+							rule = yug_fragmentation_status
+							option = YUG_FRAGMENTED
+						}
+						has_game_rule = {
+							rule = rom_fragmentation_status
+							option = DEFAULT
+						}
+					}
+				}
+				ROM = { 
+					transfer_state = 764 
+					add_state_core = 764
+				}
+			}
+			else_if = {
+				limit = {
+					AND = {
+						has_game_rule = {
+							rule = yug_fragmentation_status
+							option = YUG_FRAGMENTED
+						}
+						has_game_rule = {
+							rule = rom_fragmentation_status
+							option = ROM_FRAGMENTED
+						}
+					}
+				}
+				BNT = { 
+					transfer_state = 764
+					transfer_state = 1988
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						has_game_rule = {
+							rule = asia_colonization_status
+							option = ASIA_DECOLONIZED
+						}
+						has_game_rule = {
+							rule = raj_fragmentation_status
+							option = DEFAULT
+						}
+					}
+				}
+				RAJ = { release = PAK }
+			}
+			if = {
+				limit = {
+					AND = {
+						has_game_rule = {
+							rule = spr_fragmentation_status
+							option = SPR_EU4
+						}
+						has_game_rule = {
+							rule = ita_fragmentation_status
+							option = ITA_FRAGMENTED
+						}
+					}
+				}
+				CAT = { puppet = KTS }
+			}
+		}
+	}
+}

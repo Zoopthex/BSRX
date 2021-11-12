@@ -1,0 +1,32 @@
+﻿l_german:
+
+ #Splash
+ BSR_SPLASH_TITLE:0 "Wilkommen bei Beautiful States Reborn"
+ BSR_SPLASH_CREDITS:0 "\nDanke, dass sie unseren Mod spielen. Wir haben Tag und Nacht an diesem Mod gearbeitet.\n\n Leitende Entwickler: Zooptyx,Foxite,Kris,Jingo Spunk and Benpa\n\nEntwickler Team: Aoife, Bag of Nickels, Camille, Gaffate, Kaiser, Marblistical, MiketheGibus, Mr. Confused, Nodara-Kun, Vitality, Amogusmaster69, Noko, Breinschadecoupé Conducteur\n\nMitwirkende: Schloky, Tobias and Geo,\n\nÜbersetzer: Kera (Russisch), L'Alsacien (Französisch), greek salad (Deutsch) \n\nBesonderen Dank an:\n\nFix sentences smoothly von Big Bantha\nAdditional Portraits von Karlefeldt\nNew portraits von TheBolshevikJew\nLOTS of portraits von FacundoSim\nDanke an Mappa Mundi dass wir seine Assets für unser neues Agypten benutzen durften\nDank an CSRZ, dass wir seine Ereignisse und Entscheidungen nutzen dürfen\n Dank an Hovelax für die Formbaren Nationen\nDank an Chentienyu für Porträts\nDank an Batsy für Porträts\nVielen Dank and Road to 56 für Porträts\nVielen Dank an YoanMeister und Wasted192 für den portait chooser mod\n\n Danke an Gerrade für den besten Mod aller Zeiten! Danke dafür für das erschaffen des Beautiful states Mod. I hoffe du dienst deinem Land gut, and I hoffe dass du meine Vortsetzung deines Mods gut findest! Danke für alles Alter <3. Ebenfalls, danke an Yusuf für die Vortsetzung des Mods zwischen uns und Gerrade."
+
+ ### USA INTRO ###
+ bs_welcome.2.t:0 "Beautiful States Reborn: Update 2.1!"
+ bs_welcome.2.desc:0 "\n§RDIESER MOD IST NICHT KOMPATIBEL MIT ROAD TO 56, JEGLICH ANDERER MOD DER DIE MAP VERÄNDERT UND DIE MEISTEN ANDEREN MODS DIE DAS GAMEPLAY ÄNDERN.§!\n\nWillkommen bei BSR!Dass Entwickler Team hat sehr viel Mühe und Liebe hier hineingesteckt. Wir hoffen, dass sie eine Angenehme Zeit haben werden. Wir werden den Mod weiterhin updaten und weiter Features ergänzen. Bitte trete dem Discord bei, wenn sie weitere Ideen haben oder Bugs gefunden haben, um diese zu reporten. Auf dem Server können sie uns Bilder schicken denen uns Entwicklern 100-mal mehr helfen!\n\nMomentan haben wir bereits viele große Bestandteile des Basegames überarbeitet wie zum Beispiel die Staaten, damit sie historisch genauer sind. Allerdings fügen wir auch Staatsgrenzen von anderen Zeiträumen der Geschichte. Einer der größten Veränderungen die sie vielleicht bemerken werden ist eine komplett neue Recourse Map. Eine weitere auffällige Veränderung ist unser historisch genaues China, dass voll funktionsfähig ist.\n"
+ bs_welcome.2.a:0 "Danke."
+ bs_welcome.2.b:0 "Extra Inhalte (Menü)"
+ 
+ bs_welcome.3.t:0 "Extra Inhalte Untermenü"
+ bs_welcome.3.desc:0 "Unten ist eine Liste von Kontinenten, die du Auswählen kannst, um spezifische Extrainhalts-Optionen zu wählen. Zum Beispiel das Hinzufügen alls Releasables, oder wenn sie eine schnellere Spielgeschwindigkeit wollen können sie die Option Spiel optimieren clicken"
+ bs_welcome.3.a:0 "Dankeschön."
+ bs_welcome.3.b:0 "Ich will raus."
+ bs_welcome.3.c:0 "Optionen für die USA"
+ bs_welcome.3.d:0 "Optionen für China"
+
+ bs_welcome.usa.t:0 "Vereinigte Staaten Releasable Optionen"
+ bs_welcome.usa.desc:0 „Beim Start des Spiels, können die drei Staaten  Kalifornien, Texas und Louisiana, als auch die Region New England freigelassen werden. Wenn sie mehr US Staaten als Releasables, oder regionale Mächte haben wollen, wählen sie die jeweiligen Optionen. §RSobald du eine Option ausgewählt hast ist diese final und kann nicht mehr geändert werden§"
+ bs_welcome.usa.a:0 "Bring mich wieder zurück."
+ bs_welcome.usa.b:0 "Ich hätte gerne regionale Mächte."
+ bs_welcome.usa.c:0 "Ich hätte gerne die weiteren Staaten."
+ bs_welcome.usa.d:0 "Ich will keine neuen Cores."
+ 
+bs_welcome.4.t:0 "China Extra Kriegsfürsten Optionen"
+bs_welcome.4.desc:0 "Am Anfang des Spiels ist China voll mit Kriegsfürsten  und wir dachten, dass es eine gute Anzahl ist. §RABER§! Wenn sie ihre (Alt-)History erweitern möchtest kannst du diese Option nutzen, um mehr Kriegsfürsten zum Spiel hinzuzufügen. Beachte, dass wenn sie einen schlechten Computer haben wir ihnen nicht empfehlen Mehr Kriegsfürsten+ auszuwählen."
+bs_welcome.4.a:0 "Mehr Kriegsfürsten."
+bs_welcome.4.b:0 "Mehr Kriegsfürsten§R+§!."
+bs_welcome.4.c:0 "Ich will zurück."
+bs_china_extra_warlords_plus_warning:0 "§RDiese Option kommt nicht mit Fokusbaum- und Entscheidungskompabilität mit den extra extra Kriegsfürsten.§!"

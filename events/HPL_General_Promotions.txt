@@ -1,0 +1,623 @@
+﻿###########################
+# Promotion Events
+###########################
+
+add_namespace = HPLgenerals
+
+#Added Generals in 1938
+country_event = {
+	id = HPLgenerals.1
+	title = HPLgenerals.1.t
+	desc = HPLgenerals.1.d
+	picture = GFX_report_event_Ionescu_poland
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = POL
+		POL = { has_capitulated = no }
+		POL = { is_puppet = no }
+		date > 1938.01.01
+		date < 1939.01.01
+		NOT = { has_government = communism }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+    }
+	
+	immediate = {
+		set_country_flag = POL_thirty_eight_generals
+		set_global_flag = DISABLE_HPL_PROMOTION_SYSTEM
+		#Intended Factions: EXCLUDE-Communists, EXCLUDE-ONR
+		if = { 
+			limit = {
+				NOT = { has_unit_leader = 3169 }
+				NOT = { has_government = communism }
+				NOT = { has_government = fascism }
+			}
+			create_corps_commander = {
+				name = "Roman Abraham"
+				picture = "Roman_Abraham.dds"
+				traits = { brilliant_strategist cavalry_officer cavalry_leader trickster }
+				id = 3169
+				skill = 4
+				attack_skill = 4
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 4
+			}
+		}
+		else_if = {
+			limit = { 
+				POL = { NOT = { has_unit_leader = 3169 } }
+				G01 = { NOT = { has_unit_leader = 3169 } }
+			}
+			G01 = {
+				create_corps_commander = {
+					name = "Roman Abraham"
+					picture = "Roman_Abraham.dds"
+					traits = { brilliant_strategist cavalry_officer cavalry_leader trickster }
+					id = 3169
+					skill = 4
+					attack_skill = 4
+					defense_skill = 4
+					planning_skill = 3
+					logistics_skill = 4
+				}
+			}
+		}
+		#Intended Factions: EXCLUDE-Communists
+		if = { 
+			limit = {
+				NOT = { has_unit_leader = 3162 }
+				NOT = { has_government = communism }
+			}
+			create_corps_commander = {
+				name = "Mikołaj Bołtuć"
+				picture = "Mikolaj_Boltuc.dds"
+				traits = { trait_reckless ranger }
+				id = 3162
+				skill = 2
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 1
+			}
+		}
+		else_if = {
+			limit = { 
+				POL = { NOT = { has_unit_leader = 3162 } }
+				G01 = { NOT = { has_unit_leader = 3162 } }
+			}
+			G01 = {
+				create_corps_commander = {
+					name = "Mikołaj Bołtuć"
+					picture = "Mikolaj_Boltuc.dds"
+					traits = { trait_reckless ranger }
+					id = 3162
+					skill = 2
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 1
+				}
+			}
+		}
+		#Intended Factions: INCLUDE-Sanation Right, INCLUDE-Sanation Left, INCLUDE-Castle
+		if = { 
+			limit = { 
+				NOT = { has_unit_leader = 3172 }
+				has_government = neutrality
+			}
+			create_corps_commander = {
+				name = "Zygmunt Podhorski"
+				picture = "Zygmunt_Podhorski.dds"
+				traits = { cavalry_officer organizer swamp_fox }
+				id = 3172
+				skill = 3
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 3
+			}
+		}
+		else_if = {
+			limit = { 
+				POL = { NOT = { has_unit_leader = 3172 } }
+				G01 = { NOT = { has_unit_leader = 3172 } }
+			}
+			G01 = {
+				create_corps_commander = {
+					name = "Zygmunt Podhorski"
+					picture = "Zygmunt_Podhorski.dds"
+					traits = { cavalry_officer organizer swamp_fox }
+					id = 3172
+					skill = 3
+					attack_skill = 2
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 3
+				}
+			}
+		}
+		clr_global_flag = DISABLE_HPL_PROMOTION_SYSTEM
+	}
+	
+	option = {
+		name = HPLgenerals.1.a
+	}
+}
+
+#Added Generals in 1939
+country_event = {
+	id = HPLgenerals.2
+	title = HPLgenerals.2.t
+	desc = HPLgenerals.2.d
+	picture = GFX_report_event_Tadeusz_Jordan_Rozwadowski
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = POL
+		POL = { has_capitulated = no }
+		POL = { is_puppet = no }
+		date > 1939.01.01
+		date < 1940.01.01
+		NOT = { has_government = communism }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+    }
+	
+	immediate = {
+		set_country_flag = POL_thirty_nine_generals
+		set_global_flag = DISABLE_HPL_PROMOTION_SYSTEM
+		#Intended Factions: EXCLUDE-Communists
+		if = { 
+			limit = {
+				NOT = { has_unit_leader = 3161 }
+				NOT = { has_government = communism }
+				G01 = { NOT = { has_unit_leader = 3161 } }
+			}
+			create_corps_commander = {
+				name = "Wincenty Kowalski"
+				picture = "Wincenty_Kowalski.dds"
+				traits = { infantry_officer trickster }
+				id = 3161
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
+			}
+		}
+		else_if = {
+			limit = { 
+				POL = { NOT = { has_unit_leader = 3161 } }
+				G01 = { NOT = { has_unit_leader = 3161 } }
+			}
+			G01 = {
+				create_corps_commander = {
+					name = "Wincenty Kowalski"
+					picture = "Wincenty_Kowalski.dds"
+					traits = { infantry_officer trickster }
+					id = 3161
+					skill = 3
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 3
+				}
+			}
+		}
+		#Intended Factions: EXCLUDE-Communists
+		if = {
+			limit = {
+				NOT = { has_unit_leader = 3184 }
+				NOT = { has_government = communism }
+				G01 = { NOT = { has_unit_leader = 3184 } }
+			}
+			create_corps_commander = {
+				name = "Jan Jagmin-Sadowski"
+				picture = "Jan_Jagmin_Sadowski.dds"
+				traits = { brilliant_strategist trait_engineer }
+				id = 3184
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 4
+			}
+		}
+		else_if = {
+			limit = { 
+				POL = { NOT = { has_unit_leader = 3184 } }
+				G01 = { NOT = { has_unit_leader = 3184 } }
+			}
+			G01 = {
+				create_corps_commander = {
+					name = "Jan Jagmin-Sadowski"
+					picture = "Jan_Jagmin_Sadowski.dds"
+					traits = { brilliant_strategist trait_engineer }
+					id = 3184
+					skill = 3
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 4
+				}
+			}
+		}
+		clr_global_flag = DISABLE_HPL_PROMOTION_SYSTEM
+	}
+	
+	option = {
+		name = HPLgenerals.2.a
+	}
+}
+
+#Added Generals in 1940
+country_event = {
+	id = HPLgenerals.3
+	title = HPLgenerals.3.t
+	desc = HPLgenerals.3.d
+	picture = GFX_report_event_maczek_netherlands
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = POL
+		POL = { has_capitulated = no }
+		POL = { is_puppet = no }
+		date > 1940.01.01
+		date < 1941.01.01
+		NOT = { has_country_flag = POL_exile_generals }
+		NOT = { has_government = communism }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+    }
+	
+	immediate = {
+		set_country_flag = POL_forty_generals
+		set_global_flag = DISABLE_HPL_PROMOTION_SYSTEM
+		#Intended Factions: EXCLUDE-Communists
+		if = {
+			limit = {
+				NOT = { has_unit_leader = 3176 }
+				NOT = { has_government = communism }
+				G01 = { NOT = { has_unit_leader = 3176 } }
+			}
+			create_corps_commander = {
+				name = "Bronisław Prugar-Ketling"
+				picture = "Bronislaw_Prugar_Ketling.dds"
+				traits = { infantry_officer commando }
+				id = 3176
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 2
+			}
+		}
+		else_if = {
+			limit = { 
+				POL = { NOT = { has_unit_leader = 3176 } }
+				G01 = { NOT = { has_unit_leader = 3176 } }
+			}
+			G01 = {
+				create_corps_commander = {
+					name = "Bronisław Prugar-Ketling"
+					picture = "Bronislaw_Prugar_Ketling.dds"
+					traits = { infantry_officer commando }
+					id = 3176
+					skill = 3
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 2
+				}
+			}
+		}
+		#Intended Factions: EXCLUDE-Communists
+		if = { 
+			limit = {
+				NOT = { has_unit_leader = 3160 }
+				NOT = { has_government = communism }
+				G01 = { NOT = { has_unit_leader = 3160 } }
+			}
+			create_corps_commander = {
+				name = "Stanisław Maczek"
+				picture = "Stanislaw_Maczek.dds"
+				traits = { cavalry_officer armor_officer panzer_leader trickster hill_fighter trait_mountaineer }
+				id = 3160
+				skill = 5
+				attack_skill = 5
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 2
+			}
+		}
+		else_if = {
+			limit = { 
+				POL = { NOT = { has_unit_leader = 3160 } }
+				G01 = { NOT = { has_unit_leader = 3160 } }
+			}
+			G01 = {
+				create_corps_commander = {
+					name = "Stanisław Maczek"
+					picture = "Stanislaw_Maczek.dds"
+					traits = { cavalry_officer armor_officer panzer_leader trickster hill_fighter trait_mountaineer }
+					id = 3160
+					skill = 5
+					attack_skill = 5
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 2
+				}
+			}
+		}
+		#Intended Factions: EXCLUDE-Communists, EXCLUDE-ONR
+		if = { 
+			limit = {
+				NOT = { has_unit_leader = 3183 }
+				NOT = { has_government = communism }
+				NOT = { has_government = fascism }
+				G01 = { NOT = { has_unit_leader = 3183 } }
+			}
+			create_corps_commander = {
+				name = "Bolesław Bronisław Duch"
+				picture = "Boleslaw_Bronislaw_Duch.dds"
+				traits = { infantry_officer infantry_leader }
+				id = 3183
+				skill = 3
+				attack_skill = 2
+				defense_skill = 4
+				planning_skill = 2
+				logistics_skill = 3
+			}
+		}
+		else_if = {
+			limit = { 
+				POL = { NOT = { has_unit_leader = 3183 } }
+				G01 = { NOT = { has_unit_leader = 3183 } }
+			}
+			G01 = {
+				create_corps_commander = {
+					name = "Bolesław Bronisław Duch"
+					picture = "Boleslaw_Bronislaw_Duch.dds"
+					traits = { infantry_officer infantry_leader }
+					id = 3183
+					skill = 3
+					attack_skill = 2
+					defense_skill = 4
+					planning_skill = 2
+					logistics_skill = 3
+				}
+			}
+		}
+		clr_global_flag = DISABLE_HPL_PROMOTION_SYSTEM
+	}
+	
+	option = {
+		name = HPLgenerals.3.a
+	}
+}
+
+#Exiled Generals
+country_event = {
+	id = HPLgenerals.4
+	title = HPLgenerals.4
+	desc = HPLgenerals.4
+	picture = GFX_report_event_maczek_netherlands
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = POL
+		POL = { has_capitulated = yes }
+		POL = { is_puppet = no }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+    }
+	
+	immediate = {
+		set_country_flag = POL_exile_generals
+		set_global_flag = DISABLE_HPL_PROMOTION_SYSTEM
+		if = {
+			limit = { 
+				NOT = { has_unit_leader = 3160 }
+				NOT = { has_government = communism }
+				G01 = { NOT = { has_unit_leader = 3160 } }
+			}
+			create_corps_commander = {
+				name = "Stanisław Maczek"
+				picture = "Stanislaw_Maczek.dds"
+				traits = { cavalry_officer armor_officer panzer_leader trickster hill_fighter trait_mountaineer }
+				id = 3160
+				skill = 5
+				attack_skill = 5
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 2
+			}
+		}
+		else_if = {
+			limit = { 
+				POL = { NOT = { has_unit_leader = 3160 } }
+				G01 = { NOT = { has_unit_leader = 3160 } }
+			}
+			G01 = {
+				create_corps_commander = {
+					name = "Stanisław Maczek"
+					picture = "Stanislaw_Maczek.dds"
+					traits = { cavalry_officer armor_officer panzer_leader trickster hill_fighter trait_mountaineer }
+					id = 3160
+					skill = 5
+					attack_skill = 5
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 2
+				}
+			}
+		}
+		if = { 
+			limit = {
+				NOT = { has_unit_leader = 3176 }
+				NOT = { has_government = communism }
+				G01 = { NOT = { has_unit_leader = 3176 } }
+			}
+			create_corps_commander = {
+				name = "Bronisław Prugar-Ketling"
+				picture = "Bronislaw_Prugar_Ketling.dds"
+				traits = { infantry_officer commando }
+				id = 3176
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 2
+			}
+		}
+		else_if = {
+			limit = { 
+				POL = { NOT = { has_unit_leader = 3176 } }
+				G01 = { NOT = { has_unit_leader = 3176 } }
+			}
+			G01 = {
+				create_corps_commander = {
+					name = "Bronisław Prugar-Ketling"
+					picture = "Bronislaw_Prugar_Ketling.dds"
+					traits = { infantry_officer commando }
+					id = 3176
+					skill = 3
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 2
+				}
+			}
+		}
+		if = { 
+			limit = {
+				NOT = { has_unit_leader = 3181 }
+				NOT = { has_government = communism }
+				G01 = { NOT = { has_unit_leader = 3181 } }
+			}
+			create_corps_commander = {
+				name = "Stanisław Kopański"
+				picture = "Portrait_POL_Stanislaw_Kopamski.dds"
+				traits = { adaptable trait_engineer }
+				id = 3181
+				skill = 2
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+			}
+		}
+		else_if = {
+			limit = { 
+				POL = { NOT = { has_unit_leader = 3181 } }
+				G01 = { NOT = { has_unit_leader = 3181 } }
+			}
+			G01 = {
+				create_corps_commander = {
+					name = "Stanisław Kopański"
+					picture = "Portrait_POL_Stanislaw_Kopamski.dds"
+					traits = { adaptable trait_engineer }
+					id = 3181
+					skill = 2
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 3
+					logistics_skill = 3
+				}
+			}
+		}
+		if = { 
+			limit = {
+				NOT = { has_unit_leader = 3182 }
+				NOT = { has_government = communism }
+				G01 = { NOT = { has_unit_leader = 3182 } }
+			}
+			create_corps_commander = {
+				name = "Zygmunt Bohusz-Szyszko"
+				picture = "Zygmunt_Bohusz_Szyszko.dds"
+				traits = { career_officer brilliant_strategist trickster trait_mountaineer }
+				id = 3182
+				skill = 4
+				attack_skill = 3
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 4
+			}
+		}
+		else_if = {
+			limit = { 
+				POL = { NOT = { has_unit_leader = 3182 } }
+				G01 = { NOT = { has_unit_leader = 3182 } }
+			}
+			G01 = {
+				create_corps_commander = {
+					name = "Zygmunt Bohusz-Szyszko"
+					picture = "Zygmunt_Bohusz_Szyszko.dds"
+					traits = { career_officer brilliant_strategist trickster trait_mountaineer }
+					id = 3182
+					skill = 4
+					attack_skill = 3
+					defense_skill = 4
+					planning_skill = 3
+					logistics_skill = 4
+				}
+			}
+		}
+		if = { 
+			limit = {
+				NOT = { has_unit_leader = 3183 }
+				NOT = { has_government = communism }
+				G01 = { NOT = { has_unit_leader = 3183 } }
+			}
+			create_corps_commander = {
+				name = "Bolesław Bronisław Duch"
+				picture = "Boleslaw_Bronislaw_Duch.dds"
+				traits = { infantry_officer infantry_leader }
+				id = 3183
+				skill = 3
+				attack_skill = 2
+				defense_skill = 4
+				planning_skill = 2
+				logistics_skill = 3
+			}
+		}
+		else_if = {
+			limit = { 
+				POL = { NOT = { has_unit_leader = 3183 } }
+				G01 = { NOT = { has_unit_leader = 3183 } }
+			}
+			G01 = {
+				create_corps_commander = {
+					name = "Bolesław Bronisław Duch"
+					picture = "Boleslaw_Bronislaw_Duch.dds"
+					traits = { infantry_officer infantry_leader }
+					id = 3183
+					skill = 3
+					attack_skill = 2
+					defense_skill = 4
+					planning_skill = 2
+					logistics_skill = 3
+				}
+			}
+		}
+		clr_global_flag = DISABLE_HPL_PROMOTION_SYSTEM
+	}
+	
+	option = {
+		name = HPLgenerals.4.a
+	}
+}

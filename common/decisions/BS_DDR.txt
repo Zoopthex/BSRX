@@ -1,0 +1,69 @@
+ddr_flag = {
+
+	ddr_flag_change1 = {
+
+		visible = {		
+		ROOT = {
+		has_government = communism
+				}
+		NOT = {
+		ROOT = {
+		has_country_flag = changed_ddr_flag
+				}
+			}
+		}
+
+		icon = generic_form_nation
+		
+		available = {
+
+		}
+
+		complete_effect = {
+		DDR = {
+		set_cosmetic_tag = DDR2
+		set_country_flag = changed_ddr_flag
+		clr_country_flag = changed_back_ddr_flag
+			}
+        }
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	ddr_flag_change2 = {
+
+		visible = {		
+		ROOT = {
+		has_government = communism
+		has_country_flag = changed_ddr_flag
+				}
+		NOT = {
+		ROOT = {
+		has_country_flag = changed_back_ddr_flag
+				}
+			}
+		}
+
+		icon = generic_form_nation
+		
+		available = {
+
+		}
+
+		complete_effect = {
+		DDR = {
+		drop_cosmetic_tag = yes
+		set_country_flag = changed_back_ddr_flag
+		clr_country_flag = changed_ddr_flag
+			}
+        }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

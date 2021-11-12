@@ -1,0 +1,382 @@
+ideas = {
+
+	great_depression_recovery_status = {
+		law = yes
+		use_list_view = yes
+		
+		status_no_economic_impact = {
+			ledger = civilian
+			
+			picture = generic_no_impact
+			
+			cost = 500
+			removal_cost = -1
+			level = 1
+			
+			allowed = {
+				NOT = { original_tag = USA }
+				AND = {
+					has_dlc = "Together for Victory"
+					NOT = { original_tag = CAN }
+				}
+				AND = {
+					has_dlc = "Together for Victory"
+					NOT = { original_tag = AST }
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				drift_defence_factor = 0.10
+				local_resources_factor = 0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		status_full_economic_recovery = {
+			ledger = civilian
+			
+			picture = generic_political_support
+			
+			cost = 500
+			removal_cost = -1
+			level = 2
+			
+			allowed = {
+				NOT = { original_tag = USA }
+				AND = {
+					has_dlc = "Together for Victory"
+					NOT = { original_tag = CAN }
+				}
+				AND = {
+					has_dlc = "Together for Victory"
+					NOT = { original_tag = AST }
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			available = {
+				hidden_trigger = {
+					NOT = {
+						has_idea = status_no_economic_impact
+					}
+				}
+			}
+
+			modifier = {
+				drift_defence_factor = 0.05
+				consumer_goods_factor = 0.03
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		status_partial_economic_recovery = {
+			ledger = civilian
+			
+			picture = generic_partial_recovery
+			
+			cost = 500
+			removal_cost = -1
+			level = 3
+			
+			allowed = {
+				NOT = { original_tag = USA }
+				AND = {
+					has_dlc = "Together for Victory"
+					NOT = { original_tag = CAN }
+				}
+				AND = {
+					has_dlc = "Together for Victory"
+					NOT = { original_tag = AST }
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			available = {
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = status_no_economic_impact
+							has_idea = status_full_economic_recovery
+						}
+					}
+				}
+			}
+
+			modifier = {
+				local_resources_factor = -0.05
+				consumer_goods_factor = 0.06
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		status_economic_stabilization = {
+			ledger = civilian
+			
+			picture = generic_neutrality_drift_bonus
+			
+			cost = 500
+			removal_cost = -1
+			level = 4
+			
+			allowed = {
+				NOT = { original_tag = USA }
+				AND = {
+					has_dlc = "Together for Victory"
+					NOT = { original_tag = CAN }
+				}
+				AND = {
+					has_dlc = "Together for Victory"
+					NOT = { original_tag = AST }
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			available = {
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = status_no_economic_impact
+							has_idea = status_full_economic_recovery
+							has_idea = status_partial_economic_recovery
+						}
+					}
+				}
+			}
+
+			modifier = {
+				drift_defence_factor = -0.05
+				local_resources_factor = -0.1
+				consumer_goods_factor = 0.09
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+			}
+			
+			cancel_if_invalid = no
+			
+			default = yes
+		}
+		
+		status_mild_decline = {
+			ledger = civilian
+			
+			picture = great_depression
+			
+			cost = 500
+			removal_cost = -1
+			level = 5
+			
+			allowed = {
+				NOT = { original_tag = USA }
+				AND = {
+					has_dlc = "Together for Victory"
+					NOT = { original_tag = CAN }
+				}
+				AND = {
+					has_dlc = "Together for Victory"
+					NOT = { original_tag = AST }
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			available = {
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = status_no_economic_impact
+							has_idea = status_full_economic_recovery
+							has_idea = status_partial_economic_recovery
+							has_idea = status_economic_stabilization
+						}
+					}
+				}
+			}
+
+			modifier = {
+				drift_defence_factor = -0.1
+				local_resources_factor = -0.15
+				consumer_goods_factor = 0.12
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		status_severe_decline = {
+			ledger = civilian
+			
+			picture = usa_great_depression_2
+			
+			cost = 500
+			removal_cost = -1
+			level = 6
+			
+			allowed = {
+				NOT = { original_tag = USA }
+				AND = {
+					has_dlc = "Together for Victory"
+					NOT = { original_tag = CAN }
+				}
+				AND = {
+					has_dlc = "Together for Victory"
+					NOT = { original_tag = AST }
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			available = {
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = status_no_economic_impact
+							has_idea = status_full_economic_recovery
+							has_idea = status_partial_economic_recovery
+							has_idea = status_economic_stabilization
+							has_idea = status_mild_decline
+						}
+					}
+				}
+			}
+
+			modifier = {
+				drift_defence_factor = -0.15
+				local_resources_factor = -0.2
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		status_catastrophic_decline = {
+			ledger = civilian
+			
+			picture = usa_great_depression_3
+			
+			cost = 500
+			removal_cost = -1
+			level = 7
+			
+			allowed = {
+				NOT = { original_tag = USA }
+				AND = {
+					has_dlc = "Together for Victory"
+					NOT = { original_tag = CAN }
+				}
+				AND = {
+					has_dlc = "Together for Victory"
+					NOT = { original_tag = AST }
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			available = {
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = status_no_economic_impact
+							has_idea = status_full_economic_recovery
+							has_idea = status_partial_economic_recovery
+							has_idea = status_economic_stabilization
+							has_idea = status_mild_decline
+							has_idea = status_severe_decline
+						}
+					}
+				}
+			}
+
+			modifier = {
+				drift_defence_factor = -0.2
+				local_resources_factor = -0.25
+				consumer_goods_factor = 0.18
+				industrial_capacity_factory = -0.30
+				industrial_capacity_dockyard = -0.30
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		status_full_economic_collapse = {
+			ledger = civilian
+			
+			picture = MEX_revolutionary_army
+			
+			cost = 500
+			removal_cost = -1
+			level = 8
+			
+			allowed = {
+				NOT = { original_tag = USA }
+				AND = {
+					has_dlc = "Together for Victory"
+					NOT = { original_tag = CAN }
+				}
+				AND = {
+					has_dlc = "Together for Victory"
+					NOT = { original_tag = AST }
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			available = {
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							has_idea = status_no_economic_impact
+							has_idea = status_full_economic_recovery
+							has_idea = status_partial_economic_recovery
+							has_idea = status_economic_stabilization
+							has_idea = status_mild_decline
+							has_idea = status_severe_decline
+							has_idea = status_catastrophic_decline
+						}
+					}
+				}
+			}
+
+			modifier = {
+				drift_defence_factor = -0.25
+				local_resources_factor = -0.3
+				consumer_goods_factor = 0.21
+				industrial_capacity_factory = -0.35
+				industrial_capacity_dockyard = -0.35
+				communism_drift = 0.1
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+}

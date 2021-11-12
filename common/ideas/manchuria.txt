@@ -1,0 +1,76 @@
+ideas = {
+
+	country = { 
+
+        MAN_unreliable_army = {
+            picture = chi_incompetent_officers
+            
+            allowed = { OR = { is_puppet_of = JAP has_government = fascism } }
+            
+            cancel = { NOT = { OR = { is_puppet_of = JAP has_government = fascism } } }
+            
+            allowed_civil_war = { always = no}
+            
+            removal_cost = -1
+            
+            modifier = {
+                army_attack_factor = -0.1
+                army_defence_factor = -0.2
+                army_morale_factor = -0.1
+            }
+        }
+
+        MAN_partisan_warfare_3 = { 
+            picture = chi_army_corruption2
+            
+            allowed = { OR = { is_puppet_of = JAP has_government = fascism } }
+            
+            cancel = { NOT = { OR = { is_puppet_of = JAP has_government = fascism } } }
+            
+            allowed_civil_war = { always = no }
+            
+            removal_cost = -1
+
+            modifier = {
+                industrial_capacity_factory = -0.15
+                stability_factor = -0.2
+                war_support_factor = -0.2
+            }	
+        }
+
+        MAN_partisan_warfare_2 = { 
+            picture = chi_army_corruption2
+            
+            allowed = { OR = { is_puppet_of = JAP has_government = fascism } }
+            
+            cancel = { NOT = { OR = { is_puppet_of = JAP has_government = fascism } } }
+            
+            allowed_civil_war = { always = no }
+            
+            removal_cost = -1
+
+            modifier = {
+                industrial_capacity_factory = -0.07
+                stability_factor = -0.1
+                war_support_factor = -0.1
+            }	
+        }
+
+        MAN_partisan_warfare_1 = { 
+            picture = chi_army_corruption2
+            
+            allowed = { OR = { is_puppet_of = JAP has_government = fascism } }
+            
+            cancel = { NOT = { OR = { is_puppet_of = JAP has_government = fascism } } }
+            
+            allowed_civil_war = { always = no }
+            
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.05
+                war_support_factor = -0.05
+            }	
+        }
+    }
+}

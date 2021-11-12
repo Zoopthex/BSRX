@@ -1,0 +1,189 @@
+focus_tree = {
+	id = nazi_serbia
+	country = {
+		factor = 0
+	}
+	#Focus for Fate of Yugoslavia
+	focus = {
+		id = SER_fate_of_yugoslavia
+		icon = GFX_SER_fate_of_yugoslavia-102679
+		x = 5
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		#prerequisite = { focus = SER_national_government_of_salvation } #this focus does not exist
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.05
+		}
+	}
+
+	#Focus for The Military Governor
+	focus = {
+		id = SER_the_military_governor
+		icon = GFX_SER_the_military_governor-105134
+		relative_position_id = SER_fate_of_yugoslavia
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SER_fate_of_yugoslavia }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	#Focus for Side with Partisans
+	focus = {
+		id = SER_side_with_partisans
+		icon = GFX_SER_side_with_partisans-105139
+		relative_position_id = SER_the_military_governor
+		x = -1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SER_the_military_governor }
+		mutually_exclusive = { focus = SER_side_with_collaborationists }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = { ideology = communism popularity = 0.1 }
+		}
+	}
+
+	#Focus for Side with Collaborationists
+	focus = {
+		id = SER_side_with_collaborationists
+		icon = GFX_focus_chi_mission_to_germany
+		relative_position_id = SER_the_military_governor
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SER_the_military_governor }
+		mutually_exclusive = { focus = SER_side_with_partisans }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = { ideology = fascism popularity = 0.1 }
+
+			add_stability = -0.05
+		}
+	}
+
+	#Focus for Approach Italy
+	focus = {
+		id = SER_approach_italy
+		icon = GFX_focus_befriend_italy
+		relative_position_id = SER_side_with_collaborationists
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SER_side_with_collaborationists }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			ITA = { give_guarantee = SER }
+		}
+	}
+
+	#Focus for Rebuilding the Serbian state
+	focus = {
+		id = SER_rebuilding_the_serbian_state
+		icon = GFX_goal_generic_construct_civ_factory
+		relative_position_id = SER_side_with_collaborationists
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SER_side_with_collaborationists }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = { limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } } add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+		}
+	}
+} #This may not be in the right place. If your focus tree is having issues, check the above focus, as this closing brace was added to close the focus.
+
+	#Focus for Putting down the Rebellions
+	focus = {
+		id = SER_putting_down_the_rebellions
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		relative_position_id = SER_rebuilding_the_serbian_state
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SER_approach_italy 
+		}
+		prerequisite = { 
+			focus = SER_rebuilding_the_serbian_state 
+		}
+		prerequisite = { 
+			focus = SER_military_aid_to_germany 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			add_manpower = -2500
+		}
+	}
+
+	#Focus for Military aid to Germany
+	focus = {
+		id = SER_military_aid_to_germany
+		icon = GFX_focus_focus_fra_maquis
+		relative_position_id = SER_side_with_collaborationists
+		x = 4
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SER_side_with_collaborationists }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			send_equipment = { target = GER type = infantry_equipment amount = 500 }
+		}
+	}
+
+	#Focus for Etablish a stable Governement
+	focus = {
+		id = SER_etablish_a_stable_governement
+		icon = GFX_focus_spr_class_war
+		relative_position_id = SER_putting_down_the_rebellions
+		y = 2
+		cost = 25
+		available_if_capitulated = yes
+		prerequisite = { focus = SER_putting_down_the_rebellions }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.10
+			add_war_support = 0.10
+			add_popularity = { ideology = communism popularity = -0.25 }
+		}
+	}
+
+#End of focuses 
+ }

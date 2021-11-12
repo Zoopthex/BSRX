@@ -1,0 +1,1333 @@
+######## Events for the Phoney War timeframe
+### made by CSRZ
+### in vanilla Italy always joins the Axis in 1939
+### These events are meant to make Italy and the balkans more historically accurate during the Phoney War period.
+
+
+add_namespace = phoney
+
+
+#Event for Italy after Ethiopian war
+#activate SLOG and kick Italy from faction with Germany
+
+country_event = {
+	id = phoney.1
+	title = phoney.1.t
+	desc = phoney.1.d
+
+	picture = GFX_report_war_in_ethiopia_is_a_slog
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ITA
+		OR = {
+			AND = {
+				ITA = {
+					has_full_control_of_state = 271
+					has_full_control_of_state = 1111
+					has_full_control_of_state = 1113
+				}
+			}
+			AND = {
+				ETH = {
+					has_full_control_of_state = 271
+					has_full_control_of_state = 1111
+					has_full_control_of_state = 1113
+					is_puppet_of = ITA
+				}
+			}
+		}
+		has_war = no #War in Ethiopia is over
+		date < 1938.12.30 #failsafe for future scenarios #Italian East Africa supposed to exist in 1939
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		ITA = {
+			annex_country = {
+				target = ETH
+				transfer_troops = no
+			}
+		}
+	}
+
+	option = {
+		name = phoney.1.a
+		ai_chance = { 
+			factor = 75
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}	
+		leave_faction = yes
+		add_ideas = ITA_italy_unprep
+		set_global_flag = italy_unprepared_for_war
+	}
+
+	option = {
+		name = phoney.1.b
+		ai_chance = { 
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_stability = -0.1
+	}
+}
+
+#Italy is now prepared for war - deactivate SLOG event
+country_event = {
+	id = phoney.2
+	title = phoney.2.t
+	desc = phoney.2.d
+
+	picture = GFX_report_italy_is_ready_for_war
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ITA
+		is_historical_focus_on = yes
+		has_global_flag = italy_unprepared_for_war
+		GER = { controls_state = 16 }
+		OR = {
+			date > 1940.6.1
+			has_war = yes #it's war anyway so get rid of it
+			NOT = { has_government = fascism } #communist/democratic Italy must get rid of this without triggering the war
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = phoney.2.a
+		leave_faction = yes
+		remove_ideas = ITA_italy_unprep
+		clr_global_flag = italy_unprepared_for_war
+		if = {
+			limit = { 
+				ITA = { has_government = fascism } 
+				NOT = { 
+					is_in_faction_with = ENG
+					is_in_faction_with = FRA
+				}
+			}
+			country_event = {
+				id = phoney.3
+				days = 2
+			}
+		}
+	}
+}
+
+
+#Italy declares war on the United Kingdom and France
+country_event = {
+	id = phoney.3
+	title = phoney.3.t
+	desc = phoney.3.d
+
+	picture = GFX_report_mussolini_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = phoney.3.a
+		ai_chance = { factor = 100 }
+		declare_war_on = {
+			target = ENG
+			type = take_state
+		}
+		declare_war_on = {
+			target = FRA
+			type = take_state
+		}
+		news_event = {
+			id = phoney.11
+			hours = 3
+		}
+	}
+
+	option = {
+		name = phoney.3.b
+		add_war_support = -0.1
+	}
+}
+
+#News event - Mussolini's Speech
+news_event = {
+	id = phoney.11
+	title = phoney.11.t
+	desc = phoney.11.d
+	picture = GFX_news_event_mussolini_speech
+	
+	major = yes
+	
+	#fire_only_once = yes
+
+	is_triggered_only =  yes 
+
+	option = {
+		name = phoney.11.a
+		trigger = {
+			OR = {
+				has_government = fascism
+			}
+		}
+	}
+
+	option = {
+		name = phoney.11.b
+		trigger = {
+			NOT = {
+				has_government = fascism
+			}
+		}
+	}	
+}
+
+#Communist takeover in Yugoslavia
+
+news_event = {
+	id = phoney.19
+	title = phoney.19.t
+	desc = phoney.19.d
+	picture = GFX_news_event_tito_yugoslavia
+	
+	major = yes
+	
+	fire_only_once = yes
+
+	is_triggered_only =  yes 
+
+	option = {
+		name = phoney.19.a
+		trigger = {
+			OR = {
+				has_government = communism
+			}
+		}
+	}
+
+	option = {
+		name = phoney.19.b
+		trigger = {
+			NOT = {
+				has_government = communism
+			}
+		}
+	}	
+}
+
+country_event = {
+	id = phoney.20
+	title = phoney.20.t
+	desc = phoney.20.d
+
+	picture = GFX_report_tito_yugoslavia
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = YUG
+		date > 1943.1.1
+		has_war_with = GER
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = phoney.20.a
+		ai_chance = { 
+			factor = 0
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		YUG = { 
+			set_popularities = {
+				democratic = 5
+				neutrality = 5
+				fascism = 0
+				communism = 90
+			}
+		}
+		YUG = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+		news_event = {
+			id = phoney.19
+			hours = 3
+		}
+	}
+
+	option = {
+		name = phoney.20.b
+		ai_chance = { 
+			factor = 100
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+
+
+#block Romania from joining the war too early
+country_event = {
+	id = phoney.21
+	title = phoney.21.t
+	desc = phoney.21.d
+
+	picture = GFX_report_unprepared_for_war_generic
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ROM
+		
+		is_historical_focus_on = yes
+		AND = {
+			FRA = { has_war_with = GER }
+			ENG = { has_war_with = GER }
+		}
+		date < 1940.11.11
+		date > 1939.1.1
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = phoney.21.a
+		ai_chance = { factor = 100 }
+		add_ideas = generic_unprep
+		set_country_flag = not_prepared_for_war_general_flag
+	}
+
+	option = {
+		name = phoney.21.b
+	}
+}
+
+#unlock Romania
+country_event = {
+	id = phoney.22
+	title = phoney.22.t
+	desc = phoney.22.d
+
+	picture = GFX_report_unprepared_for_war_generic
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ROM
+		has_country_flag = not_prepared_for_war_general_flag
+		OR = {
+			has_war = yes
+			date > 1940.11.21 #set 10 days later to prevent a bug where it fires before the lock event
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 2 #21 november + 2 = 23 november 1940 - the day Romania joined Axis
+	}
+
+	option = {
+		name = phoney.22.a
+		remove_ideas = generic_unprep
+		clr_country_flag = not_prepared_for_war_general_flag
+	}
+}
+
+
+#block Hungary from joining the war too early
+country_event = {
+	id = phoney.23
+	title = phoney.23.t
+	desc = phoney.23.d
+
+	picture = GFX_report_unprepared_for_war_generic
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		is_historical_focus_on = yes
+		AND = {
+			FRA = { has_war_with = GER }
+			ENG = { has_war_with = GER }
+		}
+		date < 1940.1.1
+		date > 1939.1.1
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = phoney.23.a
+		ai_chance = { factor = 100 }
+		add_ideas = generic_unprep
+		set_country_flag = not_prepared_for_war_general_flag
+	}
+
+	option = {
+		name = phoney.23.b
+	}
+}
+
+#unlock Hungary
+country_event = {
+	id = phoney.24
+	title = phoney.24.t
+	desc = phoney.24.d
+
+	picture = GFX_report_unprepared_for_war_generic
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		has_country_flag = not_prepared_for_war_general_flag
+		OR = {
+			date > 1940.1.10 #set 10 days later to prevent a bug where it fires before the lock event
+			has_war = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = phoney.24.a
+		remove_ideas = generic_unprep
+		clr_country_flag = not_prepared_for_war_general_flag
+	}
+}
+
+#Luxembourg - on historical shouldn't join Allies that quickly
+country_event = {
+	id = phoney.31
+
+	trigger = {
+		tag = LUX
+		is_ai = yes
+		is_historical_focus_on = yes
+		date < 1940.4.4
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	hidden = yes
+
+	immediate = {
+		add_ideas = generic_unprep
+	}
+}
+
+country_event = {
+	id = phoney.32
+
+	trigger = {
+		tag = LUX
+		
+		date > 1940.5.5
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	hidden = yes
+
+	immediate = {
+		remove_ideas = generic_unprep
+	}
+}
+
+#Germany attacks Benelux on historical dates
+country_event = {
+	id = phoney.33
+
+	trigger = {
+		tag = GER
+		has_government = fascism
+		is_ai = yes
+		is_historical_focus_on = yes
+		date < 1940.6.20
+		date > 1940.5.5
+		has_war_with = FRA
+		NOT = {
+			is_in_faction_with = HOL
+			is_in_faction_with = BEL
+			is_in_faction_with = LUX
+		}
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	hidden = yes
+
+	immediate = {
+		GER = {
+			declare_war_on = {
+   				target = BEL
+				type = annex_everything
+			}
+			declare_war_on = {
+   				target = LUX
+				type = annex_everything
+			}
+			declare_war_on = {
+   				target = HOL
+				type = annex_everything
+			}
+		}
+	}
+}
+
+#Germany attacks Denmark and Norway on historical dates
+country_event = {
+	id = phoney.34
+
+	trigger = {
+		tag = GER
+		has_government = fascism
+		is_ai = yes
+		is_historical_focus_on = yes
+		date < 1940.5.20
+		date > 1940.4.1
+		has_war_with = ENG
+		NOT = {
+			is_in_faction_with = DEN
+			is_in_faction_with = NOR
+		}
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	hidden = yes
+
+	immediate = {
+		declare_war_on = {
+   			target = NOR
+			type = annex_everything
+		}
+		declare_war_on = {
+   			target = DEN
+			type = annex_everything
+		}
+	}
+}
+
+#Italy returns northern French provinces to Germany when on historical focus
+
+country_event = {
+	id = phoney.35
+
+	trigger = {
+		tag = ITA
+		date < 1942.1.1
+		is_ai = yes
+		is_historical_focus_on = yes
+		OR = {
+			7 = { is_controlled_by = ITA }
+			36 = { is_controlled_by = ITA }
+			16 = { is_controlled_by = ITA }
+			785 = { is_controlled_by = ITA }
+			29 = { is_controlled_by = ITA }
+			34 = { is_controlled_by = ITA }
+			6 = { is_controlled_by = ITA }
+			35 = { is_controlled_by = ITA }
+			29 = { is_controlled_by = ITA }
+			18 = { is_controlled_by = ITA }
+			17 = { is_controlled_by = ITA }
+			1734 = { is_controlled_by = ITA }
+			28 = { is_controlled_by = ITA }
+			27 = { is_controlled_by = ITA }
+			24 = { is_controlled_by = ITA }
+			15 = { is_controlled_by = ITA }
+			14 = { is_controlled_by = ITA }
+			30 = { is_controlled_by = ITA }
+			23 = { is_controlled_by = ITA }
+			19 = { is_controlled_by = ITA }
+			1183 = { is_controlled_by = ITA }
+			1876 = { is_controlled_by = ITA }			
+			814 = { is_controlled_by = ITA }
+			1731 = { is_controlled_by = ITA }
+			1184 = { is_controlled_by = ITA }
+			817 = { is_controlled_by = ITA }
+			1732 = { is_controlled_by = ITA }
+			1733 = { is_controlled_by = ITA }			
+			815 = { is_controlled_by = ITA }
+			1089 = { is_controlled_by = ITA }
+			1194 = { is_controlled_by = ITA }
+			818 = { is_controlled_by = ITA }
+			1198 = { is_controlled_by = ITA }
+			819 = { is_controlled_by = ITA }
+			2018 = { is_controlled_by = ITA }			
+			1581 = { is_controlled_by = ITA }
+			1582 = { is_controlled_by = ITA }			
+			1268 = { is_controlled_by = ITA }
+			1321 = { is_controlled_by = ITA }
+			1186 = { is_controlled_by = ITA }
+			1352 = { is_controlled_by = ITA }
+			1353 = { is_controlled_by = ITA }			
+			1622 = { is_controlled_by = ITA }			
+		}
+		has_war_with = FRA
+		FRA = { has_capitulated = yes }
+		is_in_faction_with = GER
+		GER = { has_war_with = FRA }
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = {
+				7 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 7
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 7 }
+		}
+		if = {
+			limit = {
+				1734 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1734
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1734 }
+		}		
+		if = {
+			limit = {
+				36 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 36
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 36 }
+		}
+		if = {
+			limit = {
+				35 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 35
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 35 }
+		}
+		if = {
+			limit = {
+				6 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 6
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 6 }
+		}
+		if = {
+			limit = {
+				34 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 34
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 34 }
+		}
+		if = {
+			limit = {
+				29 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 29
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 29 }
+		}
+		if = {
+			limit = {
+				785 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 785
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 785 }
+		}
+		if = {
+			limit = {
+				16 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 16
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 16 }
+		}
+		if = {
+			limit = {
+				18 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 18
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 18 }
+		}
+		if = {
+			limit = {
+				28 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 28
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 28 }
+		}
+		if = {
+			limit = {
+				17 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 17
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 17 }
+		}
+		if = {
+			limit = {
+				1734 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1734
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1734 }
+		}		
+		if = {
+			limit = {
+				27 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 27
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 27 }
+		}
+		if = {
+			limit = {
+				24 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 24
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 24 }
+		}
+		if = {
+			limit = {
+				15 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 15
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 15 }
+		}
+		if = {
+			limit = {
+				14 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 14
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 14 }
+		}
+		if = {
+			limit = {
+				30 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 30
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 30 }
+		}
+		if = {
+			limit = {
+				23 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 23
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 23 }
+		}
+		if = {
+			limit = {
+				19 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 19
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 19 }
+		}
+		if = {
+			limit = {
+				1183 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1183
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1183 }
+		}
+		if = {
+			limit = {
+				1876 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1876
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1876 }
+		}		
+		if = {
+			limit = {
+				814 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 814
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 814 }
+		}
+		if = {
+			limit = {
+				1731 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1731
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1731 }
+		}		
+		if = {
+			limit = {
+				1184 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1184
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1184 }
+		}
+		if = {
+			limit = {
+				817 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 817
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 817 }
+		}
+		if = {
+			limit = {
+				1733 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1733
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1733 }
+		}
+		if = {
+			limit = {
+				1732 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1732
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1732 }
+		}		
+		if = {
+			limit = {
+				815 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 815
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 815 }
+		}
+		if = {
+			limit = {
+				1089 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1089
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1089 }
+		}
+		if = {
+			limit = {
+				1194 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1194
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1194 }
+		}
+		if = {
+			limit = {
+				818 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 818
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 818 }
+		}
+		if = {
+			limit = {
+				1198 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1198
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1198 }
+		}
+		if = {
+			limit = {
+				819 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 819
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 819 }
+		}
+		if = {
+			limit = {
+				2018 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 2018
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 2018 }
+		}		
+		if = {
+			limit = {
+				1581 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1581
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1581 }
+		}
+		if = {
+			limit = {
+				1582 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1582
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1582 }
+		}		
+		if = {
+			limit = {
+				1268 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1268
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1268 }
+		}
+		if = {
+			limit = {
+				1321 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1321
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1321 }
+		}
+		if = {
+			limit = {
+				1186 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1186
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1186 }
+		}
+		if = {
+			limit = {
+				1352 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1352
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1352 }
+		}
+		if = {
+			limit = {
+				1353 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1353
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1353 }
+		}
+		if = {
+			limit = {
+				1622 = {
+					OR = {
+						is_controlled_by = ITA
+						any_other_country = {
+							controls_state = 1622
+							is_in_faction_with = ITA
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1622 }
+		}		
+	}
+}
+
+#Germany attacks Yugoslavia on historical dates
+country_event = {
+	id = phoney.36
+
+	trigger = {
+		tag = GER
+		is_ai = yes
+		is_historical_focus_on = yes
+		date < 1941.6.1
+		date > 1941.4.1
+		has_war_with = ENG
+		has_government = fascism
+		NOT = {
+			is_in_faction_with = YUG
+		}
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	hidden = yes
+
+	immediate = {
+		declare_war_on = {
+   			target = YUG
+			type = annex_everything
+		}
+	}
+}
+
+#Germany attacks the Soviet Union on historical dates
+country_event = {
+	id = phoney.37
+
+	trigger = {
+		tag = GER
+		is_ai = yes
+		is_historical_focus_on = yes
+		date > 1941.6.21
+		date < 1941.7.21
+		has_war_with = ENG
+		has_government = fascism
+		NOT = {
+			is_in_faction_with = SOV
+		}
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	hidden = yes
+
+	immediate = {
+		declare_war_on = {
+   			target = SOV
+			type = annex_everything
+		}
+		add_timed_idea = {
+			idea = GER_barbarossa
+			days = 150
+		}
+	}
+}
+
+#Japan dows the USA on historical dates
+country_event = {
+	id = phoney.38
+
+	trigger = {
+		tag = JAP
+		is_ai = yes
+		is_historical_focus_on = yes
+		date > 1941.12.5
+		date < 1942.1.5
+		has_government = fascism
+		NOT = {
+			is_in_faction_with = USA
+		}
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	hidden = yes
+
+	immediate = {
+		declare_war_on = {
+   			target = USA
+			type = annex_everything
+		}
+	}
+}

@@ -1,0 +1,24 @@
+scripted_gui = {
+	block_occupation_for_politics_view = {
+		context_type = player_context
+		window_name = "block_occupation_for_politics_view_window"
+		parent_window_name = "countrypoliticsview"
+		ai_enabled = { always = no }
+		visible = {
+			is_ai = no
+			has_country_flag = cannot_use_release_button
+		}
+		triggers = { cannot_use_fp_button_click_enabled = { NOT = { has_country_flag = cannot_use_release_button } } }
+	}
+	block_occupation_for_states_view = {
+		context_type = player_context
+		window_name = "block_occupation_for_states_view_window"
+		parent_window_name = "countrystateview"
+		ai_enabled = { always = no }
+		visible = {
+			is_ai = no
+			has_country_flag = cannot_use_release_button
+		}
+		triggers = { cannot_use_fs_button_click_enabled = { NOT = { has_country_flag = cannot_use_release_button } } }
+	}
+}

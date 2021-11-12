@@ -1,0 +1,37 @@
+﻿
+add_namespace = bs_canada
+
+# New Governor General
+country_event = {
+    id = bs_canada.1
+    title = bs_canada.1.t
+    desc = bs_canada.1.d
+    picture = GFX_report_event_generic_funeral
+ 
+    fire_only_once = yes
+ 
+    trigger = {
+		tag = CAN
+		date > 1940.2.11
+	}
+	
+	immediate = {
+		hidden_effect = {
+			create_country_leader = {
+				name = "Alexander Cambridge"
+				desc = "POLITICS_ALEXANDER_CAMBRIDGE_DESC"
+				picture = "r56_Alexander_Cambridge.dds"
+				expire = "1965.1.1"
+				ideology = moderatism
+				traits = {
+					Well_decorated_general
+				}
+			}
+		}
+	}
+
+    option = {
+        name = bs_canada.1.a
+
+    }
+}

@@ -1,0 +1,10 @@
+on_actions = {
+	on_startup = {
+		effect = {
+
+			ENG = {
+				add_to_variable = { eng_port1_1 = 1 }
+			}
+		}
+	}
+}

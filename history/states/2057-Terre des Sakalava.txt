@@ -1,0 +1,21 @@
+
+state={
+	id=2057
+	name="STATE_2057"
+	manpower = 847921
+	
+	state_category = pastoral
+	
+	history={
+		add_core_of = MAD
+		owner = FRA
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+
+	provinces={
+	 5185 11015 8180
+	}
+}

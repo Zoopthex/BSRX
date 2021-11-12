@@ -1,0 +1,24 @@
+#check resistance_modifiers.txt for example
+
+
+compliance_80_hidden = {
+	type = core_compliance_modifier
+	icon = "GFX_occupation_compliance_modifier_strip:5"
+	small_icon = "GFX_occupation_compliance_modifier_small_strip:5"
+	threshold = 80
+	margin = 2
+	
+	visible = {
+		NOT = { has_dlc = "La Resistance" }
+		original_tag = POL
+	}
+	enabled = {
+		
+	}
+	state_modifier = {
+	}
+	
+	on_enable = {
+		
+	}
+}

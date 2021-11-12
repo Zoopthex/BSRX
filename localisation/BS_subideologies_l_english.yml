@@ -1,0 +1,76 @@
+﻿l_english:
+ liberalism:0 "Liberalism"
+ liberalism_desc:0 "Liberalism is a variation on mainstream Market liberalism, with the main difference being the inclusion of various civil freedoms as basic human rights. Professing progressive social and economic policies the Liberals aim to create a society where every individual is free to live his own life with full opportunities regardless of their status."
+ social_liberalism:0 "Social Liberalism"
+ social_liberalism_desc:0 "With a long philosophical tradition of valuing personal liberty, civil freedoms, equality and basic human rights, Social Liberalism views safeguarding these rights as the primary function of the state."
+ market_liberalism:0 "Market Liberalism"
+ market_liberalism_desc:0 "Market liberals see themselves as the mainstream liberal ideology. The main tenants of market liberalism are an unregulated free market and a democratic plutocratic political system. Market liberals believe that the freer the market the freer the people, and they will staunchly defend the political and economic rights of the individual."
+
+ conservatism:0 "National Conservatism"
+ conservatism_desc:0 "Considering rapid changes to society to be potentially harmful, national conservatism espouses tradition and moderate reforms."
+ social_conservatism:0 "Social Conservatism"
+ social_conservatism_desc:0 "Social Conservatism is a political ideology centred on preserving traditional beliefs, attitudes and philosophy as well as the traditional power dynamic of society while using the democratic system."
+ reactionary_conservatism:0 "Reactionary Conservatism"
+ reactionary_conservatism_desc:0 "The argument against democracy given by the reactionary conservatives is a five-minute conversation with the average voter. Reactionary Conservatives believe in an authoritarian yet democratic state in which the government has great political power, but which is still democratic, in order to combat ills such as populism and idiocy."
+ 
+ socialism:0 "Democratic Socialism"
+ socialism_desc:0 "Striving for equality and a socialist state by reformist means, Democratic Socialism aims to abolish or mitigate the effects of capitalism with public mandate."
+ social_democracy:0 "Social Democracy"
+ social_democracy_desc:0 "Social Democracy is an ideology whose goal is to reform capitalism and humanise it by aligning it with the ethical ideals of social welfare while maintaining the capitalist mode of production, rather than creating an alternative socialist economic system. While usually promoting a plutocratic form of government and a heavily regulated market economy."
+ 
+ stalinism:0 "Stalinist communism"
+ stalinism_desc:0 "Stalinism, as the name implies, is the political ideology created by Joseph Stalin, It includes the creation of a one-party totalitarian police state; rapid industrialization; the theory of socialism in one country; collectivization of agriculture; intensification of the class struggle under socialism; a cult of personality and subordination of the interests of foreign communist parties to those of the Communist Party of the Soviet Union."
+ leninism:0 "Leninist Communism"
+ leninism_desc:0 "Leninism is a political ideology developed by Russian Marxist revolutionary Vladimir Lenin that proposes the establishment of the dictatorship of the proletariat led by a revolutionary vanguard party, as the political prelude to the establishment of communism."
+ marxism:0 "Marxist Communism"
+ marxism_desc:0 "Marxism is a method of socioeconomic analysis that uses a materialist interpretation of historical development, better known as historical materialism, to understand class relations and social conflict as well as a dialectical perspective to view social transformation. It originates from the works of 19th-century German philosophers Karl Marx and Friedrich Engels."
+ radical_socialism:0 "Radical Socialism"
+ radical_socialism_desc:0 "Radical socialism is implemented as a stepping stone between capitalism and communism, with the goal of gradually tweaking the system in order to allow people to provide the goods or services they make free of charge, and still receive a 'fair share' of society’s wealth, with the eventual goal of abolishing money entirely and establishing Communism."
+ authoritarian_socialism:0 "Authoritarian Socialism"
+ authoritarian_socialism_desc:0 "Authoritarian Socialism, or socialism from above, is an economic and political system supporting some form of socialist economics while rejecting political liberalism. As a term, it represents a set of economic-political systems describing themselves as socialist and rejecting the liberal-democratic concepts of multi-party politics, freedom of assembly, habeas corpus and freedom of expression, either due to fear of the counter-revolution or as a means to socialist ends."
+ 
+ national_populism:0 "National Populism"
+ national_populism_desc:0 "Right-wing populism, also called national populism and right-wing nationalism, is a political ideology which combines right-wing politics and populist rhetoric and themes. The rhetoric often consists of anti-elitist sentiments, opposition to the Establishment, and speaking to the 'common people'."
+ totalitarianism:0 "Totalitarianism"
+ totalitarianism_desc:0 "Totalitarianism is a concept for a form of government or political system that prohibits opposition parties, restricts individual opposition to the state and its claims, and exercises an extremely high degree of control over public and private life."
+ ultranatonalism:0 "Ultranationalism"
+ ultranationalism_desc:0 "Ultranationalism is "extreme nationalism that promotes the interest of one state or people above all others", or simply "extreme devotion to one's own nation""
+ 
+ fascism_ideology:0 "Fascism"
+ fascism_ideology_desc:0 "Fascism encompasses a variety of ultranationalist movements, usually consisting of totalitarianism, state corporatism, ultranationalism and unity the nation and its devotion to its government."
+ nazism:0 "National Socialism"
+ nazism_desc:0 "Rooted in extreme nationalism, National Socialism is driven by ideas of racial supremacy. It promotes aggressive expansionism and a totalitarian state where the people are united under a leader with absolute power."
+ falangism:0 "Intergralism"
+ falangism_desc:0 "Believing that a nation's national integrity must be a priority, Integralism is a form of ultranationalism which believes in exclusion of foreign traditions from the national community, in a balance between the traditions of the nation and the interests of the state, and in an unifying cultural element, a source of correct morals, and social order. It also encompasses many movements such as national syndicalism and falangism"
+ #falangism_desc:0 "Falangism places a strong emphasis on Catholic religious identity, although it has held some secular views on the Church's direct influence in society as it believed that the state should have the supreme authority over the nation. Falangism emphasizes the need for total authority, hierarchy and order in society. Like fascism, Falangism is anti-communist, anti-democratic and anti-liberal."
+ 
+ despotism:0 "Despotism"
+ despotism_desc:0 "Despotism is a form of government in which a single entity rules with absolute power. Normally, that entity is an individual, the despot; but (as in an autocracy) societies which limit respect and power to specific groups have also been called despotic."
+ oligarchism:0 "Oligarchism"
+ oligarchism_desc:0 "Oligarchy is a form of power structure in which power rests with a small number of people. These people may or may not be distinguished by one or several characteristics, such as nobility, fame, wealth, education, corporate, religious, political, or military control."
+ 
+ constitutional_monarchism:0 "Constitutional Monarchism"
+ constitutional_monarchism_desc:0 "A Constitutional Monarchy is a form of monarchy in which the monarch is just the representative of the state or the nation, while seemingly it's ruler and leader, in reality merely a symbolic figurehead or a political puppet."
+ semi_constitutional_monarchism:0 "Semi-Constitutional Monarchism"
+ semi_constitutional_monarchism_desc:0 "Semi-Constitutional Monarchy is a form of monarchy in which the power is split between the monarch and the government, so that the monarch cannot rule by decree, but the monarch still holds power in the state."
+ absolute_monarchism:0 "Absolute Monarchism"
+ absolute_monarchism_desc:0 "Absolute Monarchy (or absolutism as doctrine) is a form of monarchy in which the monarch holds supreme autocratic authority, principally not being restricted by written laws, legislature, or unwritten customs."
+ 
+ theocracy:0 "Theocracy"
+ theocracy_desc:0 "Theocracy is a form of government in which the power is held by the religious institutions"
+ #Re-Using gen_nazism, this way we can have an SS Logo for Himmler
+ gen_nazism:0 "Fascist Occultism" 
+ gen_nazism_desc:0 "Fascist Occultism is a form of fascism which hold pagan beliefs as its core. Far more radical than traditional national myths within fascist movements."
+ 
+ moderatism:0 "Moderatism"
+ moderatism_desc:0 "Moderatism, as the name implies, avoids the extreme right, the extreme left and other extrimism, and in an authoritarian state and a strongman government, whether temporarily or permanently.
+ centrism_liberal:0 "Liberal Centrism"
+ centrism_liberal_desc:0 "Liberal Centrism is an ideology that borrows ideas from both the liberal and centrist philosophies, often melding them together. Most liberal centrists support market-based solutions to social problems, with strong governmental oversight in the public interest."
+ centrism_conservative:0 "Conservative Centrism"
+ centrism_conservative_desc:0 "Conservative Centrism is an ideology that borrows ideas from both the conservative and centrist philosophies, often melding them together. Most conservative centrists supports cultural and practical traditions, and avoids uneccessary change."
+ 
+ anti_revisionism:0 "Syndicalism"
+ anti_revisionism_desc:0 "Syndicalism is a labour movement to establish local, worker-based organizations and advance the demands and rights of workers through strikes"
+ 
+ accelerationism:0 "Accelerationism"
+ accelerationism_desc:0 "Accelerationism is the idea that capitalism, or some processes associated with it, and technological change should be "accelerated" and drastically intensified to create radical social change."

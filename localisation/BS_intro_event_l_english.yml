@@ -1,0 +1,32 @@
+﻿l_english:
+
+ #Splash
+ BSR_SPLASH_TITLE:0 "Welcome to Beautiful States Reborn"
+ BSR_SPLASH_CREDITS:0 "\nThank you for playing our mod, we have worked day and night to bring this to you.\n\nLead devs: Zooptyx,Foxite,Kris,Jingo Spunk and Benpa\n\nDev Team: Aoife, Bag of Nickels, Camille, Gaffate, Kaiser, Marblistical, MiketheGibus, Mr. Confused, Nodara-Kun, Vitality, Amogusmaster69, Noko, Breinschadecoupé Conducteur\n\nContributors: Schloky, Tobias and Geo,\n\nTranslators: Kera (Russian), L'Alsacien (French), Ulmer Pride (Polish), Greek Salad (German) \n\nSpecial Thanks to:\n\nFix sentences smoothly by Big Bantha\nAdditional Portraits by Karlefeldt\nNew portraits by TheBolshevikJew\nLOTS of portraits by FacundoSim\nThanks to Mappa Mundi for letting us use their assets for our new Egypt\nCredit to CSRZ for allowing the use of his events and decisions\nCredit to Hovelax for formable nations\nCredit to Chentienyu for portraits\nCredit to Batsy for portraits\nCredit to R56 for portraits\nCredit to YoanMeister and Wasted192 for the portait chooser mod\n\nThanks to Gerrade for the most amazing mod ever! Thank you for creating Beautiful States. I hope you serve your country well, and I hope that you like how I continued your work! Thank you for everything bro <3. Also, thanks to the original dev of BSR for continuing this mod between us and Gerrade."
+
+ ### USA INTRO ###
+ bs_welcome.2.t:0 "Beautiful States Reborn: Update 2.1!"
+ bs_welcome.2.desc:0 "\n§RTHIS MOD IS NOT COMPATIBLE WITH ROAD TO 56, ANY OTHER MODS THAT EDIT THE MAP AND MOST MODS THAT AFFECT THE GAMEPLAY.§!\n\nWelcome to BSR the dev team has put a lot of love and effort into this hope you enjoy we will keep updating this mod with more features please join the discord if you have any suggestions or any bugs you can report you can send images there and it helps us devs 1000% more thank you!\n\nCurrently we have done several major things for example reworking base game states to being more historically accurate, we are also adding borders from other periods of time, before 1936 and after 1945, one of the biggest things you might notice is our new fully fixed map and hundreds of more states in europe america and asia another noticable thing is our china being more historically accurate it is fully functional\n"
+ bs_welcome.2.a:0 "Thank you."
+ bs_welcome.2.b:0 "Extra Content (menu)"
+ 
+ bs_welcome.3.t:0 "Extra Content Sub Menus"
+ bs_welcome.3.desc:0 "Below is a list of continents you can pick to enable each specific extra content options like adding all the us states as releasables or if you prefer to have a faster running game you can pick the option to optimize the game"
+ bs_welcome.3.a:0 "Thank you."
+ bs_welcome.3.b:0 "Take me back."
+ bs_welcome.3.c:0 "Options for USA"
+ bs_welcome.3.d:0 "Options for China"
+
+ bs_welcome.usa.t:0 "United States Releasable Options"
+ bs_welcome.usa.desc:0 "At the start of the game, the three states that can be released are California, Texas, and Louisiana. New England can also be released but that's a region. If you want more US states to be releasable, or if you want to have regional powerhouses, choose an option. §RIf you pick an option, it'll be your final choice and you can't change later. NE stands for New England btw§"
+ bs_welcome.usa.a:0 "Nevermind, take me back"
+ bs_welcome.usa.b:0 "I would like regional powerhouses."
+ bs_welcome.usa.c:0 "I would like the remaining ones."
+ bs_welcome.usa.d:0 "I would like no new cores."
+ 
+bs_welcome.4.t:0 "China Extra Warlord Options"
+bs_welcome.4.desc:0 "At the start of the game, China is pretty filled with warlords and we thought thats a good amount. §RBUT§! if you want to enhance your history and perhaps alt history you can use this option to add more warlords. Note that if you have a bad PC, it's not recommended to choose More Warlords+."
+bs_welcome.4.a:0 "More Warlords."
+bs_welcome.4.b:0 "More Warlords§R+§!."
+bs_welcome.4.c:0 "Take me back."
+bs_china_extra_warlords_plus_warning:0 "§RThis option doesn't come with focus tree and decision compatiblity with the extra extra warlords.§!"

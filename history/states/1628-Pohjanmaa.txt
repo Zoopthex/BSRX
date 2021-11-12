@@ -1,0 +1,26 @@
+
+state={
+	id=1628
+	name="STATE_1628"
+
+	history={
+		owner = FIN
+		victory_points = {
+			158 6 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+
+		}
+		add_core_of = FIN
+
+	}
+
+	provinces={
+		82 120 132 6081 6212 9106 9219 11132 
+	}
+	manpower=811029
+	buildings_max_level_factor=1.000
+	state_category=town
+}

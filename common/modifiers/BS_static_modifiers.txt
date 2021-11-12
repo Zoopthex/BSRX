@@ -1,0 +1,13 @@
+# BSR's global modifiers are here. They are applied from certain game-features.
+# Effects are fully scriptable here.
+# These names can NOT be removed or changes, as the code uses them....
+
+#LaR Compliance
+SOV_collaboration_with_locals = {
+	valid_relation_trigger = {
+		ROOT = {
+			has_government = communism
+		}
+	}
+	compliance_gain = 0.2
+}

@@ -1,0 +1,70 @@
+spriteTypes = { ##### THIS FILE DEFINES THE PICTURE FOR EACH SUPER EVENT
+	spriteType = {
+		name = "GFX_Background_Book_Window2"
+		textureFile = "gfx/interface/tiles/Background_Book_Window2.dds"
+	}
+	spriteType = {
+		name = "GFX_Superevent_Button"
+		textureFile = "gfx/interface/tiles/Superevent_Button.dds"
+	}
+	spriteType = {
+		name = "GFX_SpanishCivilWar"
+		textureFile = "gfx/superevent_pictures_2/SpanishCivilWar.tga"
+	}
+	spriteType = {
+		name = "GFX_AmericaAtWar"
+		textureFile = "gfx/superevent_pictures_2/AmericaAtWar.tga"
+	}
+	spriteType = {
+		name = "GFX_FallOfAmerica"
+		textureFile = "gfx/superevent_pictures_2/FallOfAmerica.tga"
+	}
+	spriteType = {
+		name = "GFX_CapitulationOfGermany"
+		textureFile = "gfx/superevent_pictures_2/CapitulationOfGermany.tga"
+	}
+	spriteType = {
+		name = "GFX_FallOfBritain"
+		textureFile = "gfx/superevent_pictures_2/FallOfBritain.tga"
+	}
+	spriteType = {
+		name = "GFX_FallOfChina"
+		textureFile = "gfx/superevent_pictures_2/FallOfChina.tga"
+	}
+	spriteType = {
+		name = "GFX_FallOfFrance"
+		textureFile = "gfx/superevent_pictures_2/FallOfFrance.tga"
+	}
+	spriteType = {
+		name = "GFX_FallOfPoland"
+		textureFile = "gfx/superevent_pictures_2/FallOfPoland.tga"
+	}
+	spriteType = {
+		name = "GFX_GermanCivilWar"
+		textureFile = "gfx/superevent_pictures_2/GermanCivilWar.tga"
+	}
+	spriteType = {
+		name = "GFX_InvasionOfRussia"
+		textureFile = "gfx/superevent_pictures_2/InvasionOfRussia.tga"
+	}
+	spriteType = {
+		name = "GFX_KaiserreichTriumphant"
+		textureFile = "gfx/superevent_pictures_2/KaiserreichTriumphant.tga"
+	}
+	spriteType = {
+		name = "GFX_SecondSinoJapaneseWar"
+		textureFile = "gfx/superevent_pictures_2/SecondSinoJapaneseWar.tga"
+	}
+	spriteType = {
+		name = "GFX_SurrenderOfJapan"
+		textureFile = "gfx/superevent_pictures_2/SurrenderOfJapan.tga"
+	}
+	spriteType = {
+		name = "GFX_CollapseOfRussia"
+		textureFile = "gfx/superevent_pictures_2/CollapseOfRussia.tga"
+	}
+	spriteType = {
+		name = "GFX_SecondGreatWar"
+		textureFile = "gfx/superevent_pictures_2/SecondGreatWar.tga"
+	}
+}

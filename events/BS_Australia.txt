@@ -1,0 +1,142 @@
+﻿
+add_namespace = bs_australia
+
+# New Prime Minister
+country_event = {
+    id = bs_australia.1
+    title = bs_australia.1.t
+    desc = bs_australia.1.d
+    picture = GFX_report_event_generic_funeral
+ 
+    fire_only_once = yes
+ 
+    trigger = {
+		tag = AST
+		date > 1939.4.7
+		has_start_date < 1936.01.02
+	}
+	
+	immediate = {
+		hidden_effect = {
+			create_country_leader = {
+				name = "Earle Page"
+				desc = "POLITICS_EARLE_PAGE_DESC"
+				picture = "GFX_AST_earle_page"
+				expire = "1965.1.1"
+				ideology = conservatism
+				traits = {
+					Treasurer
+				}
+			}
+			country_event = { id = bs_australia.2 days = 19 }
+			set_party_name = { ideology = democratic long_name = AST_democratic_party_2_long name = AST_democratic_party_2 }
+		}
+	}
+
+    option = {
+        name = bs_australia.1.a
+
+    }
+}
+
+country_event = {
+    id = bs_australia.2
+    title = bs_australia.2.t
+    desc = bs_australia.2.d
+    picture = GFX_report_event_generic_funeral
+ 
+    fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			create_country_leader = {
+				name = "Robert Menzies"
+				desc = ""
+				picture = "r56_Robert_Menzies.dds"
+				expire = "1965.1.1"
+				ideology = market_liberalism
+				traits = {
+					Developer
+				}
+			}
+			set_party_name = { ideology = democratic long_name = AST_democratic_party_long name = AST_democratic_party }
+		}
+	}
+
+    option = {
+        name = bs_australia.2.a
+
+    }
+}
+
+country_event = {
+    id = bs_australia.3
+    title = bs_australia.3.t
+    desc = bs_australia.3.d
+    picture = GFX_report_event_generic_funeral
+ 
+    fire_only_once = yes
+	
+	trigger = {
+		tag = AST
+		date > 1941.8.29
+	}
+	
+	immediate = {
+		hidden_effect = {
+			create_country_leader = {
+				name = "Arthur Fadden"
+				desc = ""
+				picture = "r56_Arthur_Fadden.dds"
+				expire = "1965.1.1"
+				ideology = conservatism
+				traits = {
+					Treasurer
+				}
+			}
+			country_event = { id = bs_australia.4 days = 39 }
+			set_party_name = { ideology = democratic long_name = AST_democratic_party_2_long name = AST_democratic_party_2 }
+		}
+	}
+
+    option = {
+        name = bs_australia.3.a
+
+    }
+}
+
+country_event = {
+    id = bs_australia.4
+    title = bs_australia.4.t
+    desc = bs_australia.4.d
+    picture = GFX_report_event_generic_funeral
+ 
+    fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			create_country_leader = {
+				name = "John Curtin"
+				desc = "POLITICS_JOHN_CURTIN_DESC"
+				picture = "Portrait_Australia_John_Curtin.dds"
+				expire = "1965.1.1"
+				ideology = socialism
+				traits = {
+					editor
+				}
+			}
+			country_event = { id = bs_australia.4 days = 39 }
+			set_party_name = { ideology = democratic long_name = AST_democratic_party_3_long name = AST_democratic_party_3 }
+		}
+	}
+
+    option = {
+        name = bs_australia.4.a
+
+    }
+}
+

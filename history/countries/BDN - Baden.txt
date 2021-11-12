@@ -1,0 +1,77 @@
+﻿capital = 791
+
+set_research_slots = 3
+
+#oob = "BDN_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_support = 1
+	tech_recon = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	transport = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.6.10"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	fascism = 2
+	communism = 8
+	neutrality = 40
+	democratic = 50
+}
+
+create_country_leader = {
+	name = "Robert Heinrich Wagner"
+	desc = ""
+	picture = "gfx/leaders/BDN/Robert_Wagner.dds"
+	expire = "1960.1.1"
+	ideology = nazism
+	traits = {
+	germanophilic_nazi
+	}
+}
+
+create_country_leader = {
+	name = "Carlo Schmid"
+	desc = ""
+	picture = "gfx/leaders/BDN/Carlo_Schmid.dds"
+	expire = "1960.1.1"
+	ideology = marxism
+	traits = {
+	Human_Rights_Activist	
+	}
+}
+
+create_country_leader = {
+	name = "Berthold Markgraf von Baden"
+	desc = ""
+	picture = "gfx/leaders/BDN/berthold.dds"
+	expire = "1960.1.1"
+	ideology = constitutional_monarchism
+	traits = {
+	unconfident	
+	}
+}
+
+create_country_leader = {
+	name = "Hermann Hummel"
+	desc = ""
+	picture = "gfx/leaders/BDN/Hermann_Hummel.dds"
+	expire = "1960.1.1"
+	ideology = liberalism
+	traits = {
+	POL_chemist	
+	}
+}

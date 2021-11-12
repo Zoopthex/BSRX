@@ -1,0 +1,38 @@
+guiTypes = {
+	containerWindowType = {
+		name = "block_occupation_for_politics_view_window"
+		position = { x = 0 y = 0 }
+		buttonType = {
+			name = "cannot_use_fp_cover_button"
+			position = { x = 10 y = 505 }
+			quadTextureSprite = "GFX_politics_block_button"
+			Orientation = "UPPER_LEFT"
+		}
+		buttonType = {
+			name = "cannot_use_fp_button"
+			position = { x = 10 y = 505 }
+			quadTextureSprite = "GFX_politics_block_button"
+	 		buttonFont = "hoi_16mbs"
+			Orientation = "UPPER_LEFT"
+			buttonText = "CANNOT_USE_BUTTON_TT"
+		}
+	}
+	containerWindowType = {
+		name = "block_occupation_for_states_view_window"
+		position = { x = 0 y = 0 }
+		buttonType = {
+			name = "cannot_use_fs_cover_button"
+			position = { x = 18 y = 262 }
+			quadTextureSprite = "GFX_states_block_button"
+			Orientation = "UPPER_LEFT"
+		}
+		buttonType = {
+			name = "cannot_use_fs_button"
+			position = { x = 18 y = 262 }
+			quadTextureSprite = "GFX_states_block_button"
+	 		buttonFont = "hoi_16mbs"
+			Orientation = "UPPER_LEFT"
+			buttonText = "CANNOT_USE_BUTTON_TT"
+		}
+	}
+}

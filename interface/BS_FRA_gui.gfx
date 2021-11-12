@@ -1,0 +1,106 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_faction_anarcho_syndicalist"
+		texturefile = "gfx/texticons/anarcho_syndicalist.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_faction_leninist"
+		texturefile = "gfx/texticons/leninist.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_faction_stalinist"
+		texturefile = "gfx/texticons/stalinist.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_faction_syndical_democrat"
+		texturefile = "gfx/texticons/syndical_democrat.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_faction_syndicalist"
+		texturefile = "gfx/texticons/syndicalist.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_fra_anarcho_syndicalist"
+		textureFile = "gfx/interface/FRA_gui/anarcho_syndicalist.png"
+	}
+	spriteType = {
+		name = "GFX_fra_leninist"
+		textureFile = "gfx/interface/FRA_gui/leninist.png"
+	}
+	spriteType = {
+		name = "GFX_fra_stalinist"
+		textureFile = "gfx/interface/FRA_gui/stalinist.png"
+	}
+	spriteType = {
+		name = "GFX_fra_syndical_democrat"
+		textureFile = "gfx/interface/FRA_gui/syndical_democrat.png"
+	}
+	spriteType = {
+		name = "GFX_fra_syndicalist"
+		textureFile = "gfx/interface/FRA_gui/syndicalist.png"
+	}
+	spriteType = {
+		name = "GFX_fra_parameters_0"
+		textureFile = "gfx/interface/FRA_gui/parameters_1.dds"
+	}
+	progressbartype = {
+		name = "GFX_fra_parameters_1"
+		textureFile1 = "gfx/interface/FRA_gui/parameters_3.dds"
+		textureFile2 = "gfx/interface/FRA_gui/parameters_2.dds"
+		size = {
+			x = 190
+			y = 190
+		}
+		effectFile = "gfx/FX/radar5/0.lua"
+		horizontal = yes
+	}
+	progressbartype = {
+		name = "GFX_fra_parameters_2"
+		textureFile1 = "gfx/interface/FRA_gui/parameters_3.dds"
+		textureFile2 = "gfx/interface/FRA_gui/parameters_2.dds"
+		size = {
+			x = 190
+			y = 190
+		}
+		effectFile = "gfx/FX/radar5/1.lua"
+		horizontal = yes
+	}
+	progressbartype = {
+		name = "GFX_fra_parameters_3"
+		textureFile1 = "gfx/interface/FRA_gui/parameters_3.dds"
+		textureFile2 = "gfx/interface/FRA_gui/parameters_2.dds"
+		size = {
+			x = 190
+			y = 190
+		}
+		effectFile = "gfx/FX/radar5/2.lua"
+		horizontal = yes
+	}
+	progressbartype = {
+		name = "GFX_fra_parameters_4"
+		textureFile1 = "gfx/interface/FRA_gui/parameters_3.dds"
+		textureFile2 = "gfx/interface/FRA_gui/parameters_2.dds"
+		size = {
+			x = 190
+			y = 190
+		}
+		effectFile = "gfx/FX/radar5/3.lua"
+		horizontal = yes
+	}
+	progressbartype = {
+		name = "GFX_fra_parameters_5"
+		textureFile1 = "gfx/interface/FRA_gui/parameters_3.dds"
+		textureFile2 = "gfx/interface/FRA_gui/parameters_2.dds"
+		size = {
+			x = 190
+			y = 190
+		}
+		effectFile = "gfx/FX/radar5/4.lua"
+		horizontal = yes
+	}
+}

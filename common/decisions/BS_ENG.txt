@@ -1,0 +1,390 @@
+BS_colony_politic_category = {
+
+	ENG_separate_burma = {
+
+		icon = generic_political_discourse
+
+		available = {
+			NOT = { country_exists = BRM }
+		}
+		
+		visible = {
+		    is_puppet = no
+			has_government = democratic
+			has_country_flag = bs_can_colony_politic
+			RAJ = {
+				exists = yes
+			}
+			RAJ = { is_puppet_of = ENG }
+			RAJ = {
+				has_full_control_of_state = 288
+				has_full_control_of_state = 640
+				has_full_control_of_state = 1041
+				has_full_control_of_state = 1042
+				has_full_control_of_state = 1330
+			}
+	    }
+
+		cost = 0
+		
+		fire_only_once = yes
+
+		complete_effect = {
+			custom_effect_tooltip = bs_burma_separate_tt
+			
+			hidden_effect = {
+			    ENG = {
+					transfer_state = 288
+					transfer_state = 640
+					transfer_state = 1041
+					transfer_state = 1042
+					transfer_state = 1330
+				}
+				if = {
+					limit = {
+						RAJ = { has_full_control_of_state = 1545 }
+					}
+					ENG = { transfer_state = 1545 }
+				}
+		    }
+		}
+
+		ai_will_do = {
+			factor = 40
+		}
+	}
+	
+	ENG_New_Viceroy = {
+	
+		icon = generic_political_discourse
+
+		available = {
+			RAJ = { is_puppet_of = ENG }
+			date > 1937.1.1
+			RAJ = { has_government = neutrality }
+			OR = {
+				ENG = { has_government = neutrality }
+				AND = {
+					ENG = { has_government = democratic }
+					date > 1943.9.27
+					NOT = { has_global_flag = new_indian_viceroy }
+				}
+			}
+		}
+		
+		visible = {
+			RAJ = { is_puppet_of = ENG }
+			date > 1937.3.1
+			OR = {
+				RAJ = { has_government = neutrality }
+			}
+	    }
+
+		cost = 50
+
+		complete_effect = {
+			ENG = {
+				country_event = { id = bs.720 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_global_flag = new_indian_viceroy
+			}
+		}
+	}
+}
+
+BS_Eng_Restore_Monarchy_Colonies = {
+	BS_Restore_Monarchy_CAN = {
+		icon = generic_political_discourse
+		
+		available = {
+			any_country = {
+				original_tag = CAN
+				is_puppet_of = ENG
+				NOT = {	has_idea = king_edward_viii_colonial_fash }
+				NOT = { has_idea = king_george_vi_colonial }
+				NOT = { has_idea = queen_elizabeth_ii_colonial }
+			}
+		}
+		visible = {
+			original_tag = ENG
+			NOT = { has_government = communism }
+			OR = {
+				has_idea = ENG_king_edward_fascism
+				has_idea = ENG_george_vi
+				has_country_leader = { ruling_only = yes name = "Edward VIII" }
+				has_country_leader = { ruling_only = yes name = "George VI" }
+				has_country_leader = { ruling_only = yes name = "Elizabeth II" }
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					OR = {
+						ENG = { has_country_leader = { ruling_only = yes name = "Edward VIII" } }
+						ENG = { has_idea = ENG_king_edward_fascism }
+					}
+				}
+				CAN = { add_ideas = king_edward_viii_colonial_fash }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						ENG = { has_country_leader = { ruling_only = yes name = "George VI" }}
+						ENG = { has_idea = ENG_george_vi }
+					}
+				}
+				CAN = { add_ideas = king_george_vi_colonial }
+			}
+			else_if = {
+				limit = {
+					ENG = { has_country_leader = { ruling_only = yes name = "Elizabeth II" }}
+				}
+				CAN = { add_ideas = queen_elizabeth_ii_colonial }
+			}
+		}
+	}
+	
+	BS_Restore_Monarchy_AST = {
+		icon = generic_political_discourse
+		
+		available = {
+			any_country = {
+				original_tag = AST
+				is_puppet_of = ENG
+				NOT = {	has_idea = king_edward_viii_colonial_fash }
+				NOT = { has_idea = king_george_vi_colonial }
+				NOT = { has_idea = queen_elizabeth_ii_colonial }
+			}
+		}
+		visible = {
+			original_tag = ENG
+			NOT = { has_government = communism }
+			OR = {
+				has_idea = ENG_king_edward_fascism
+				has_idea = ENG_george_vi
+				has_country_leader = { ruling_only = yes name = "Edward VIII" }
+				has_country_leader = { ruling_only = yes name = "George VI" }
+				has_country_leader = { ruling_only = yes name = "Elizabeth II" }
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					OR = {
+						ENG = { has_country_leader = { ruling_only = yes name = "Edward VIII" } }
+						ENG = { has_idea = ENG_king_edward_fascism }
+					}
+				}
+				AST = { add_ideas = king_edward_viii_colonial_fash }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						ENG = { has_country_leader = { ruling_only = yes name = "George VI" }}
+						ENG = { has_idea = ENG_george_vi }
+					}
+				}
+				AST = { add_ideas = king_george_vi_colonial }
+			}
+			else_if = {
+				limit = {
+					ENG = { has_country_leader = { ruling_only = yes name = "Elizabeth II" }}
+				}
+				AST = { add_ideas = queen_elizabeth_ii_colonial }
+			}
+		}
+	}
+	
+	BS_Restore_Monarchy_NZL = {
+		icon = generic_political_discourse
+		
+		available = {
+			any_country = {
+				original_tag = NZL
+				is_puppet_of = ENG
+				NOT = {	has_idea = king_edward_viii_colonial_fash }
+				NOT = { has_idea = king_george_vi_colonial }
+				NOT = { has_idea = queen_elizabeth_ii_colonial }
+			}
+		}
+		visible = {
+			original_tag = ENG
+			NOT = { has_government = communism }
+			OR = {
+				has_idea = ENG_king_edward_fascism
+				has_idea = ENG_george_vi
+				has_country_leader = { ruling_only = yes name = "Edward VIII" }
+				has_country_leader = { ruling_only = yes name = "George VI" }
+				has_country_leader = { ruling_only = yes name = "Elizabeth II" }
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					OR = {
+						ENG = { has_country_leader = { ruling_only = yes name = "Edward VIII" } }
+						ENG = { has_idea = ENG_king_edward_fascism }
+					}
+				}
+				NZL = { add_ideas = king_edward_viii_colonial_fash }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						ENG = { has_country_leader = { ruling_only = yes name = "George VI" }}
+						ENG = { has_idea = ENG_george_vi }
+					}
+				}
+				NZL = { add_ideas = king_george_vi_colonial }
+			}
+			else_if = {
+				limit = {
+					ENG = { has_country_leader = { ruling_only = yes name = "Elizabeth II" }}
+				}
+				NZL = { add_ideas = queen_elizabeth_ii_colonial }
+			}
+		}
+	}
+	
+	BS_Restore_Monarchy_RAJ = {
+		icon = generic_political_discourse
+		
+		available = {
+			any_country = {
+				original_tag = RAJ
+				is_puppet_of = ENG
+				NOT = {	has_idea = king_edward_viii_colonial_fash }
+				NOT = { has_idea = king_george_vi_colonial }
+				NOT = { has_idea = queen_elizabeth_ii_colonial }
+			}
+		}
+		visible = {
+			original_tag = ENG
+			NOT = { has_government = communism }
+			OR = {
+				has_idea = ENG_king_edward_fascism
+				has_idea = ENG_george_vi
+				has_country_leader = { ruling_only = yes name = "Edward VIII" }
+				has_country_leader = { ruling_only = yes name = "George VI" }
+				has_country_leader = { ruling_only = yes name = "Elizabeth II" }
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					OR = {
+						ENG = { has_country_leader = { ruling_only = yes name = "Edward VIII" } }
+						ENG = { has_idea = ENG_king_edward_fascism }
+					}
+				}
+				RAJ = { add_ideas = king_edward_viii_colonial_fash }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						ENG = { has_country_leader = { ruling_only = yes name = "George VI" }}
+						ENG = { has_idea = ENG_george_vi }
+					}
+				}
+				RAJ = { add_ideas = king_george_vi_colonial }
+			}
+			else_if = {
+				limit = {
+					ENG = { has_country_leader = { ruling_only = yes name = "Elizabeth II" }}
+				}
+				RAJ = { add_ideas = queen_elizabeth_ii_colonial }
+			}
+		}
+	}
+	
+	BS_Restore_Monarchy_SAF = {
+		icon = generic_political_discourse
+		
+		available = {
+			any_country = {
+				original_tag = SAF
+				is_puppet_of = ENG
+				NOT = {	has_idea = king_edward_viii_colonial_fash }
+				NOT = { has_idea = king_george_vi_colonial }
+				NOT = { has_idea = queen_elizabeth_ii_colonial }
+			}
+		}
+		visible = {
+			original_tag = ENG
+			NOT = { has_government = communism }
+			OR = {
+				has_idea = ENG_king_edward_fascism
+				has_idea = ENG_george_vi
+				has_country_leader = { ruling_only = yes name = "Edward VIII" }
+				has_country_leader = { ruling_only = yes name = "George VI" }
+				has_country_leader = { ruling_only = yes name = "Elizabeth II" }
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					OR = {
+						ENG = { has_country_leader = { ruling_only = yes name = "Edward VIII" } }
+						ENG = { has_idea = ENG_king_edward_fascism }
+					}
+				}
+				SAF = { add_ideas = king_edward_viii_colonial_fash }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						ENG = { has_country_leader = { ruling_only = yes name = "George VI" }}
+						ENG = { has_idea = ENG_george_vi }
+					}
+				}
+				SAF = { add_ideas = king_george_vi_colonial }
+			}
+			else_if = {
+				limit = {
+					ENG = { has_country_leader = { ruling_only = yes name = "Elizabeth II" }}
+				}
+				SAF = { add_ideas = queen_elizabeth_ii_colonial }
+			}
+		}
+	}
+}
+
+foreign_politics = {
+	ENG_address_colonial_disputes = {
+		allowed = { original_tag = ENG }
+		visible = {
+			NOT = { has_country_flag = ENG_addressed_disputes }
+			has_full_control_of_state = 269
+			has_full_control_of_state = 900
+		}
+		available = {
+			has_full_control_of_state = 269
+			has_full_control_of_state = 900
+		}
+		activation = {
+			has_completed_focus = ENG_withdraw_from_contested_territories
+			has_full_control_of_state = 269
+			has_full_control_of_state = 900
+		}
+		cancel_if_not_visible = yes
+		is_good = no
+		selectable_mission = yes
+		days_mission_timeout = 140
+		timeout_effect = {
+			add_political_power = -100
+			add_stability = -0.1
+		}
+		complete_effect = {
+			country_event = bs_britain.1
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+}

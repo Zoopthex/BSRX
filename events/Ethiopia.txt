@@ -1,0 +1,137 @@
+﻿###########################
+# Italian Events
+###########################
+
+add_namespace = ETH_events
+
+# Ethiopia asks Italy for peace
+country_event = {
+	id = ETH_events.1
+	title = ETH_events.1.t
+	desc = ETH_events.1.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ETH_events.1.a
+		ai_chance = {
+			base = 10
+		}
+		FROM = {
+		    remove_ideas = {
+			ETH_last_stand
+			}
+			transfer_state = 550
+			transfer_state = 559
+			transfer_state = 1087
+			transfer_state = 1088			
+			white_peace = ITA
+		}
+		add_ideas = ITA_italy_unprep
+		set_global_flag = italy_unprepared_for_war
+		leave_faction = yes		
+        if = {
+        limit = {
+        ITA = {
+        owns_state = 448
+        }
+        }
+        release = LBA
+        LBA = {
+        load_oob = "LBY_1936"
+        }
+		ITA = {
+		declare_war_on = {
+ 		   target = LBA
+ 		   type = annex_everything
+		}
+        }		
+        }		
+		unlock_national_focus = ITA_victoryinETH
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.25
+		}
+		add_stability = -0.1
+		YUG = {
+		transfer_state = 163
+		transfer_state = 102 #if italy got this part of slovenia before dying in ethiopia
+		}		
+		GRE = {
+		transfer_state = 164
+		}	
+		FRA = {
+			transfer_state = 998 #revoking the franco-italian agreement of 1935 fully
+		}		
+		hidden_effect = {
+			news_event = {
+				id = news.337
+				days = 1
+			}
+		}
+	}
+	
+	option = {
+		name = ETH_events.1.b
+		ai_chance = {
+			base = 0
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.5
+		}
+		add_stability = -0.3
+        add_war_support = -0.3	
+        if = {
+        limit = {
+        ITA = {
+        owns_state = 448
+        }
+        }
+        release = LBA
+        LBA = {
+        load_oob = "LBY_1936"
+        }
+		ITA = {
+		declare_war_on = {
+ 		   target = LBA
+ 		   type = annex_everything
+		}
+        }		
+        }
+		YUG = {
+		transfer_state = 163
+		transfer_state = 102 #if italy got this part of slovenia before dying in ethiopia
+		}		
+		GRE = {
+		transfer_state = 164
+		}	
+		FRA = {
+			transfer_state = 998 #revoking the franco-italian agreement of 1935 fully
+		}		
+		FROM = {
+			country_event = { id = ETH_events.101 days = 1 }
+		}
+	}
+}
+
+# Italy says no
+country_event = {
+	id = ETH_events.101
+	title = ETH_events.101.t
+	desc = ETH_events.101.d
+	picture = GFX_report_event_african_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ETH_events.101.a
+		add_stability = 0.35
+        add_war_support = 0.35		
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+

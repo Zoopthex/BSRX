@@ -1,0 +1,1214 @@
+ideas = {
+
+political_advisor = {
+
+	LAT_Vilis_Lacis = {
+
+		picture = idea_vilis_lacis
+		
+		allowed = { 
+			original_tag = LAT
+		}
+		
+		traits = { backroom_backstabber }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	LAT_Janis_Kaminskis = {
+		
+		picture = idea_janis_kaminskis
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		traits = { war_industrialist }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	LAT_Vilhelms_Munters = {
+		
+		picture = idea_vilhelms_munters
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		traits = { POL_smooth_talking_charmer }
+		
+		on_add = {
+			custom_effect_tooltip = POL_Event_Bonus
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	LAT_Leonids_Breikss = {
+		
+		picture = idea_leonids_breikss
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		available = {
+			OR = {
+				has_stability < 0.3
+				has_government = fascism
+				AND = {
+					is_subject = yes
+					overlord = { has_government = fascism }
+				}
+				AND = {
+					is_in_faction_with = GER
+					GER = { has_government = fascism }
+				}
+			}
+		}
+		
+		traits = { fascist_demagogue }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	LAT_Janis_Kalnberzins = {
+		
+		picture = idea_janis_kalnberzins
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		available = {
+			OR = {
+				has_stability < 0.3
+				has_idea = communist_pressure
+				has_government = communism
+				AND = {
+					is_subject = yes
+					overlord = { has_government = communism }
+				}
+				AND = {
+					is_in_faction_with = SOV
+					SOV = { has_government = communism }
+				}
+			}
+		}
+		
+		traits = { communist_revolutionary }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	LAT_Gustavs_Zemgals = {
+		
+		picture = idea_gustavs_zemgals
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		available = {
+			OR = {
+				has_country_flag = LAT_New_Elections_Held
+				has_government = democratic
+				AND = {
+					is_subject = yes
+					overlord = { has_government = democratic }
+				}
+				AND = {
+					is_in_faction_with = ENG
+					ENG = { has_government = democratic }
+				}
+			}
+		}
+		
+		traits = { democratic_reformer }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+theorist = {
+
+	LAT_Janis_Balodis = {
+		ledger = army
+	
+		picture = janis_balodis
+		   
+		allowed = { 
+			original_tag = LAT
+		}
+		   
+		research_bonus = { land_doctrine = 0.07 }
+		   
+		traits = { military_theorist }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	LAT_Herberts_Cukurs = {
+		ledger = air
+	
+		picture = herberts_cukurs
+
+		allowed = { 
+			original_tag = LAT
+		}
+
+		available = {
+			NOT = { has_country_flag = Crash_of_Herberts_Cukurs }
+		}
+
+		research_bonus = { air_doctrine = 0.07 }
+
+		traits = { air_warfare_theorist }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+high_command = {
+
+	LAT_Janis_Indans = {
+		ledger = air
+	
+		picture = janis_indans
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		traits = { air_close_air_support_2 }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	LAT_Arhibalds_fon_Keizerlings = {
+		ledger = navy
+	
+		picture = arhibalds_fon_keizerlings
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		traits = { navy_screen_2 }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	LAT_Krisjanis_Berkis_1 = {
+		ledger = army
+	
+		picture = Krisjanis_Berkis_1
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		traits = { army_infantry_2 }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	LAT_Martins_Hartmanis = {
+		ledger = army
+	
+		picture = martins_hartmanis
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		traits = { army_entrenchment_2 }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+army_chief = {
+
+	LAT_Fricis_Celmins = {
+	
+		picture = fricis_celmins
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		traits = { army_chief_defensive_2 }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	LAT_Rudolfs_Kocins = {
+	
+		picture = rudolfs_kocins
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		traits = { army_chief_drill_2 }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	LAT_Krisjanis_Berkis_2 = {
+	
+		picture = Krisjanis_Berkis_2
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		traits = { army_chief_offensive_2 }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+air_chief = {
+
+	LAT_Konstantins_Cakste = {
+	
+		picture = konstantins_cakste
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		traits = { air_chief_ground_support_2 }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+navy_chief = {
+
+	LAT_Teodors_Spade = {
+	
+		picture = teodors_spade
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		traits = { navy_chief_decisive_battle_2 }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	LAT_Teodors_Zvejnieks = {
+		
+		picture = teodors_zvejnieks
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		traits = { navy_chief_commerce_raiding_2 }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+country = {
+	
+	LAT_Baltic_Entente_Member = {
+			
+		allowed = {
+			original_tag = LAT
+			always = no
+		}
+		
+		available = {
+			OR = {
+				AND = {
+					is_in_faction_with = LAT
+					LAT = { is_faction_leader = yes }
+				}
+				AND = {
+					is_in_faction_with = EST
+					EST = { is_faction_leader = yes }
+				}
+				AND = {
+					is_in_faction_with = LIT
+					LIT = { is_faction_leader = yes }
+				}
+			}
+			OR = {
+				AND = {
+					is_in_faction_with = LAT
+					NOT = { tag = LAT }
+				}
+				AND = {
+					is_in_faction_with = EST
+					NOT = { tag = EST }
+				}
+				AND = {
+					is_in_faction_with = LIT
+					NOT = { tag = LIT }
+				}
+			}
+			num_faction_members > 1
+		}
+		
+		allowed_civil_war = {
+			always = yes
+		}
+				
+		removal_cost = -1
+		
+		picture = generic_volunteer_expedition_bonus
+		
+		modifier = {
+			ai_join_ally_desire_factor = -50
+			ai_call_ally_desire_factor = -10
+			ai_get_ally_desire_factor = -30
+		}
+	}
+	
+	LAT_Farm_Subsidies_Focus = {
+			
+		allowed = {
+			original_tag = LAT
+			always = no
+		}
+		
+		allowed_civil_war = {
+			always = yes
+		}
+				
+		removal_cost = -1
+		
+		picture = generic_agrarian_reform
+		
+		modifier = {
+			political_power_factor = 0.1
+			conscription = 0.005
+			monthly_population = 0.1
+			consumer_goods_factor = -0.05
+		}
+	}
+	
+	LAT_autarky_idea = {
+
+		allowed = {
+			original_tag = LAT
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+		
+		removal_cost = -1
+
+		picture = generic_exploit_mines
+
+		modifier = {
+			local_resources_factor = 0.1
+			production_speed_infrastructure_factor = 0.1
+			production_speed_industrial_complex_factor = 0.1
+		}
+	}
+	
+	LAT_Reimmigration_Incentives = {
+
+		allowed = {
+			original_tag = LAT
+			always = no
+		}
+		
+		available = {
+			has_war = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+		
+		removal_cost = -1
+
+		picture = CZE_planning_bonus
+
+		modifier = {
+			monthly_population = 0.45
+		}
+	}
+	
+	LAT_Ulmanis_Coup = {
+
+		allowed = {
+			original_tag = LAT
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+		
+		available = {
+			has_government = neutrality
+			is_puppet = no
+		}
+		
+		removal_cost = -1
+
+		picture = FRA_matignon_agreements
+
+		modifier = {
+			drift_defence_factor = 0.5
+		}
+	}
+	
+	LAT_Aizsargi = {
+
+		allowed = {
+			original_tag = LAT
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+		
+		available = {
+			is_puppet = no
+		}
+		
+		removal_cost = -1
+
+		picture = LAT_Aizsargi
+
+		modifier = {
+			conscription = 0.02
+			resistance_damage_to_garrison = -0.25
+			surrender_limit = 0.1
+		}
+	}
+	
+	LAT_Aizsargi2 = {
+
+		allowed = {
+			original_tag = LAT
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+		
+		available = {
+			is_puppet = no
+		}
+		
+		removal_cost = -1
+
+		picture = LAT_Aizsargi
+
+		modifier = {
+			conscription = 0.04
+			resistance_damage_to_garrison = -0.25
+			surrender_limit = 0.1
+		}
+	}
+	
+	LAT_Aizsargi3 = {
+
+		allowed = {
+			original_tag = LAT
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+		
+		available = {
+			is_puppet = no
+		}
+		
+		removal_cost = -1
+
+		picture = LAT_Aizsargi
+
+		modifier = {
+			conscription = 0.06
+			resistance_damage_to_garrison = -0.25
+			surrender_limit = 0.1
+		}
+	}
+	
+	LAT_Anti_Partisan_Focus = {
+
+		allowed = {
+			original_tag = LAT
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+		
+		removal_cost = -1
+
+		picture = generic_infantry_bonus
+
+		modifier = {
+			resistance_damage_to_garrison = -0.4
+		}
+	}
+	
+	LAT_Economic_Recovery = {
+
+		allowed = {
+			original_tag = LAT
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+		
+		available = {
+			has_government = neutrality
+			is_puppet = no
+			has_war = no
+		}
+		
+		removal_cost = -1
+
+		picture = generic_political_support
+
+		modifier = {
+			neutrality_drift = 0.02
+			stability_factor = 0.3
+			consumer_goods_factor = -0.1
+		}
+	}
+	
+	LAT_marginalized_baltic_germans = {
+
+		allowed = {
+			original_tag = LAT
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+		
+		available = {
+			NOT = { is_in_faction_with = GER }
+			NOT = { is_subject_of = GER }
+		}
+		
+		removal_cost = -1
+
+		picture = lat_marginalized_baltic_germans
+
+		modifier = {
+			monthly_population = -0.2
+			political_power_factor = -0.2
+			research_speed_factor = -0.05
+		}
+	}
+	
+	LAT_Pluralism = {
+	
+		allowed = {
+			original_tag = LAT
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+		
+		available = {
+			has_government = democratic
+		}
+
+		removal_cost = -1
+
+		picture = hol_liberation
+		
+		modifier = {		
+			non_core_manpower = 0.05
+		}
+	}
+	
+	LAT_Safe_Haven_Policy = {
+	
+		allowed = {
+			original_tag = LAT
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+		
+		available = {
+			has_government = democratic
+		}
+
+		removal_cost = -1
+
+		picture = generic_research_bonus
+		
+		modifier = {		
+			monthly_population = 0.25
+			research_speed_factor = 0.05
+		}
+	}
+	
+	LAT_Labor_Reforms = {
+	
+		allowed = {
+			original_tag = LAT
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+		
+		available = {
+			has_government = democratic
+		}
+
+		removal_cost = -1
+
+		picture = generic_navy_bonus
+		
+		modifier = {
+			monthly_population = 0.1
+			political_power_factor = 0.2
+			line_change_production_efficiency_factor = 0.1
+			industrial_capacity_dockyard = 0.1
+		}
+	}
+	
+	LAT_latvian_revanchism_focus = {
+	
+		allowed = {
+			original_tag = LAT
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+		
+		available = {
+			has_government = neutrality
+			is_subject = no
+		}
+
+		removal_cost = -1
+
+		picture = generic_intel_bonus
+		
+		modifier = {		
+			justify_war_goal_time = -0.4
+			generate_wargoal_tension = -0.4
+		}
+	}
+	
+	LAT_latvian_military_imports_focus = {
+	
+		allowed = {
+			original_tag = LAT
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+		
+		available = {
+			
+		}
+
+		removal_cost = -1
+
+		picture = generic_foreign_capital
+		
+		modifier = {		
+			license_production_speed = 0.25
+			license_air_purchase_cost = -0.1
+		}
+	}
+	
+}
+
+hidden_ideas = {
+	LAT_dummy = {
+		allowed = {
+			original_tag = LAT
+		}
+		traits = { industrial_concern }
+		modifier = {
+		}
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LAT_dummy2 = {
+		allowed = {
+			original_tag = LAT
+		}
+		traits = { electronics_concern }
+		modifier = {
+		}
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	LAT_dummy3 = {
+		allowed = {
+			original_tag = LAT
+		}
+		traits = { light_aircraft_manufacturer }
+		modifier = {
+		}
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	LAT_dummy4 = {
+		allowed = {
+			original_tag = LAT
+		}
+		traits = { medium_aircraft_manufacturer }
+		modifier = {
+		}
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	LAT_dummy5 = {
+		allowed = {
+			original_tag = LAT
+		}
+		traits = { heavy_aircraft_manufacturer }
+		modifier = {
+		}
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	LAT_dummy6 = {
+		allowed = {
+			original_tag = LAT
+		}
+		traits = { naval_aircraft_manufacturer }
+		modifier = {
+		}
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	LAT_dummy7 = {
+		allowed = {
+			original_tag = LAT
+		}
+		traits = { naval_manufacturer }
+		modifier = {
+		}
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	LAT_dummy8 = {
+		allowed = {
+			original_tag = LAT
+		}
+		traits = { motorized_equipment_manufacturer }
+		modifier = {
+		}
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	LAT_dummy9 = {
+		allowed = {
+			original_tag = LAT
+		}
+		traits = { infantry_equipment_manufacturer }
+		modifier = {
+		}
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	LAT_dummy10 = {
+		allowed = {
+			original_tag = LAT
+		}
+		traits = { tank_manufacturer }
+		modifier = {
+		}
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	LAT_dummy11 = {
+		allowed = {
+			original_tag = LAT
+		}
+		traits = { fascist_demagogue }
+		modifier = {
+		}
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	LAT_dummy12 = {
+		allowed = {
+			original_tag = LAT
+		}
+		traits = { communist_revolutionary }
+		modifier = {
+		}
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+aircraft_manufacturer = {
+			
+		designer = yes
+	
+	VEF_Aviation_Division = {
+			
+		picture = LAT_VEF_aviation_division
+		
+		available = {
+			has_completed_focus = LAT_Domestic_Aviation_Industry
+		}
+		
+		allowed = {
+			original_tag = LAT
+		}
+			
+		research_bonus = {
+			air_equipment = 0.15
+		}
+		
+		equipment_bonus = {
+			
+		}
+			
+		traits = { LAT_Light_Airframe_Designer }
+			
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	LAT_Valsts_gaisa_satiksme = {
+			
+		picture = generic_air_manufacturer_3
+		
+		available = {
+			has_completed_focus = LAT_Domestic_Aviation_Industry
+		}
+		
+		allowed = {
+			original_tag = LAT
+		}
+			
+		research_bonus = {
+			air_equipment = 0.15
+		}
+		
+		equipment_bonus = {
+			transport_plane_equipment = {
+				instant = yes
+				build_cost_ic = -0.05
+			}
+		}
+			
+		traits = { LAT_State_Air_Transport }
+			
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}
+
+tank_manufacturer = { 
+	
+	designer = yes
+	
+	LAT_ford_vairogs = {
+			
+		picture = ford_motor_company
+
+		cost = 150
+
+		allowed = {
+			original_tag = LAT
+		}
+		
+
+		available = {
+			has_completed_focus = LAT_Vairogs_State_Automobile_Factory
+		}
+		
+		research_bonus = {
+			armor = 0.15
+		}
+		
+		traits = { LAT_Armored_Car_Manufacturer }
+
+		equipment_bonus = {
+			motorized_equipment = {
+				build_cost_ic = -0.05
+			}
+			mechanized_equipment = {
+				build_cost_ic = -0.05
+			}
+		}
+
+		modifier = {
+
+		}
+		
+	}
+	
+}
+
+materiel_manufacturer = {
+
+	LAT_Sellier_Bellot = {
+			
+		picture = Sellier_Bellot
+
+		cost = 150
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		available = {
+			has_completed_focus = LAT_Domestic_Ammunition_Production
+		}
+		
+		research_bonus = {
+			infantry_weapons = 0.15
+		}
+		
+		traits = { infantry_equipment_manufacturer }
+
+		equipment_bonus = {
+			
+		}
+
+		modifier = {
+
+		}
+		
+	}
+	
+	LAT_RVR_Fenikss = {
+			
+		picture = RVR_Fenikss
+
+		cost = 150
+
+		allowed = {
+			original_tag = LAT
+		}
+		
+
+		available = {
+			
+		}
+		
+		research_bonus = {
+			motorized_equipment = 0.15
+		}
+		
+		traits = { LAT_Trains_Automobiles }
+
+		equipment_bonus = {
+			
+		}
+
+		modifier = {
+
+		}
+		
+		on_add = {
+			custom_effect_tooltip = POL_armoured_trains2_tooltip_upgrade
+		}
+		
+	}
+}
+
+industrial_concern = {
+
+	LAT_Bellaccord_Electro = {
+
+		picture = LAT_Bellaccord_Electro
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		available = {
+			
+		}
+		
+		research_bonus = {
+		}
+		
+		equipment_bonus = {
+		}
+		
+		traits = { LAT_Music_Recording }
+		
+	}
+
+	LAT_VEF = {
+
+		picture = LAT_VEF
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		available = {
+			
+		}
+		
+		research_bonus = {
+			support_tech = 0.15
+		}
+		
+		equipment_bonus = {
+		}
+		
+		traits = { LAT_State_Electrotechnical_Factory }
+		
+	}
+	
+	LAT_RRR = {
+
+		picture = LAT_RRR
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		available = {
+			
+		}
+		
+		research_bonus = {
+			electronics = 0.15
+		}
+		
+		equipment_bonus = {
+		}
+		
+		traits = { LAT_Radio_Manufacturer }
+		
+	}
+}
+
+naval_manufacturer = {
+		
+	designer = yes
+	
+	LAT_LKOD = {
+		picture = LAT_LKOD
+
+		
+		allowed = {
+			original_tag = LAT
+		}
+		
+		research_bonus = {
+			naval_equipment = 0.15
+		}
+		
+		equipment_bonus = {
+			# mer research
+		}
+		
+		traits = { LAT_Liepaja_Military_Port }
+		
+		modifier = {
+		}
+	}
+}

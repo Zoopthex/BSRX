@@ -1,0 +1,329 @@
+﻿
+add_namespace = bs_raj
+
+# New Viceroy
+country_event = {
+    id = bs_raj.1
+    title = bs_raj.1.t
+    desc = bs_raj.1.d
+    picture = GFX_report_event_generic_funeral
+ 
+    fire_only_once = yes
+ 
+    trigger = {
+		tag = RAJ
+		has_cosmetic_tag = RAJ_UK
+		date > 1936.4.18
+		has_start_date < 1936.01.02
+	}
+	
+	immediate = {
+		hidden_effect = {
+			create_country_leader = {
+				name = "Lord Linlithgow"
+				desc = "POLITICS_LORD_LINLITHGOW_DESC"
+				picture = "gfx/leaders/RAJ/Portrait_British_Raj_Lord_Linlithgow.dds"
+				expire = "1965.1.1"
+				ideology = oligarchism
+				traits = {
+				    self_gov_advoc
+					Agriculturalist
+				}
+			}
+		}
+	}
+
+    option = {
+        name = bs_raj.1.a
+
+    }
+}
+
+#The Question of the Princely States
+
+country_event = {
+	id = bs_raj.2
+	title = bs_raj.2.t
+	desc = bs_raj.2.d 
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = bs_raj.2.a 
+		
+		random_list = { #Sikkim decides to
+			85 = { country_event = { id = bs_raj.3 days = 1 } } #stay protectorate
+			10 = { country_event = { id = bs_raj.4 days = 1 } } #incorporated
+			5 = { country_event = { id = bs_raj.5 days = 1 } } #declare independence
+		}
+		#one more random list to come (Hyderabad)
+		random_list = { #Kashmir decides to
+			65 = { country_event = { id = bs_raj.6 days = 1 } } #declare independence
+			20 = { country_event = { id = bs_raj.7 days = 1 } } #request protectorateship
+			15 = { country_event = { id = bs_raj.8 days = 1 } } #incorporated
+		}
+	}
+	
+}
+#Sikkim
+country_event = {
+	id = bs_raj.3
+	title = bs_raj.3.t 
+	desc = bs_raj.3.d
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = bs_raj.3.a
+		
+		RAJ = {
+			release_puppet = SKM
+		}
+	}
+	
+}
+
+country_event = {
+	id = bs_raj.4
+	title = bs_raj.4.t
+	desc = bs_raj.4.d
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = bs_raj.4.a
+		
+		RAJ = {
+			add_stability = -0.05
+			add_state_core = 983
+		}
+	}
+	
+}
+
+country_event = {
+	id = bs_raj.5
+	title = bs_raj.5.t 
+	desc = bs_raj.5.d
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = {
+		RAJ = { release = SKM }
+	}
+	
+	option = {
+		name = bs_raj.5.a #accept independence
+		ai_chance = {
+			base = 75
+		}
+	}
+	
+	option = {
+		name = bs_raj.5.b #wargoal to annex
+		ai_chance = {
+			base = 25
+		}
+		
+		create_wargoal = {
+			type = annex_everything
+			target = SKM
+		}
+		
+	}
+	
+}
+#Kashmir
+country_event = {
+	id = bs_raj.6
+	title = bs_raj.6.t
+	desc = bs_raj.6.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	immediate = {
+		RAJ = { release = KSH }
+	}
+
+	option = {
+		name = bs_raj.6.a #accept independence
+		ai_chance = {
+			base = 85
+		}
+	}
+
+	option = {
+		name = bs_raj.6.b #wargoal
+		ai_chance = {
+			base = 15
+		}
+
+		create_wargoal = {
+			type = annex_everything
+			target = KSH
+		}
+	}
+}
+country_event = {
+	id = bs_raj.7
+	title = bs_raj.7.t
+	desc = bs_raj.7.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = bs_raj.7.a
+		ai_chance = {
+			base = 100
+		}
+
+		RAJ = { release_puppet = KSH }
+	}
+}
+country_event = {
+	id = bs_raj.8
+	title = bs_raj.8
+	desc = bs_raj.8.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option {
+		name = bs_raj.8.a
+		ai_chance = {
+			base = 100
+		}
+
+		RAJ = {
+			add_state_core = 441
+			add_state_core = 787
+		}
+	}
+}
+
+#####indian campaign against tibet#####
+
+add_namespace = bs_raj_tibet_border
+
+#raj gets ability to do border conflicts
+#country_event = {
+#	id = bs_raj_tibet_border.1
+#	title = bs_raj_tibet_border.1.t
+#	desc = bs_raj_tibet_border.1.d
+#
+#	trigger = {
+#		original_tag = RAJ
+#		date > 1936.6.1
+#		date < 1943.1.1
+#		NOT = { has_country_flag = india_can_contest_tibet_borders }
+#	}
+#
+#	fire_only_once = yes
+#
+#	option = {
+#		name = bs_raj_tibet_border.1.a
+#		set_country_flag = india_can_contest_tibet_borders
+#	}
+#}
+
+#make sure to use r for raj, t for tibet for the responses
+
+#raj wins in tawang
+country_event = {
+	id = bs_raj_tibet_border.2
+	title = bs_raj_tibet_border.2.title
+	desc = bs_raj_tibet_border.2.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		trigger = {
+			original_tag = RAJ
+		}
+		name = bs_raj_tibet_border.2.r
+
+		transfer_state = 434
+		army_experience = 30
+	}
+
+	option = {
+		trigger = {
+			original_tag = TIB
+		}
+		name = bs_raj_tibet_border.2.t
+
+		army_experience = 10
+	}
+}
+
+#tibet wins in tawang, repells raj
+country_event = {
+	id = bs_raj_tibet_border.3
+	title = bs_raj_tibet_border.3.title
+	desc = bs_raj_tibet_border.3.d
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		trigger = {
+			original_tag = RAJ
+		}
+		name = bs_raj_tibet_border.3.r
+
+		army_experience = 10
+	}
+
+	option = {
+		trigger = {
+			original_tag = TIB
+		}
+		name = bs_raj_tibet_border.3.t
+
+		army_experience = 50
+	}
+}
+
+#stalemate
+country_event = {
+	id = bs_raj_tibet_border.4
+	title = bs_raj_tibet_border.4.title
+	desc = bs_raj_tibet_border.4.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		trigger = {
+			original_tag = RAJ
+		}
+		name = bs_raj_tibet_border.4.r
+
+		army_experience = 25
+	}
+	option = {
+		trigger = {
+			original_tag = TIB
+		}
+		name = bs_raj_tibet_border.4.t
+
+		army_experience = 25
+	}
+}

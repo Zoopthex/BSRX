@@ -1,0 +1,686 @@
+former_british_colony_stuff = {
+
+	former_british_colony_stuff = {
+
+		priority = 10
+
+		name = former_colony
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+			tag = BOT
+			tag = GAM
+			tag = KEN
+			tag = MLW
+			tag = NGA
+			tag = TZN
+			tag = UGA
+			tag = ZAM
+			tag = ZIM
+			tag = SIE
+			tag = PAL
+			tag = GHA
+			tag = SMA
+            }			
+		}
+
+		available = {		
+		    NOT = {
+				OR = {
+				former_british_colony_without_change = yes
+				english_free_country_in_africa = yes
+				is_puppet_of = ENG
+				}
+			}
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 5
+
+		is_good = no
+
+		cancel_if_not_visible = yes
+
+		activation = {
+			OR = {
+			former_british_colony_without_change = yes
+			english_free_country_in_africa = yes
+			}
+			is_puppet = no
+		}
+
+		visible = {
+			OR = {
+			former_british_colony_without_change = yes
+			english_free_country_in_africa = yes
+			}
+			is_puppet = no
+		}
+		
+		
+		timeout_effect = {
+		if = {
+			limit = {
+				ROOT = {
+					NOT = {
+						tag = ZIM
+						tag = ZAM
+						tag = KEN
+						}
+					}
+				}
+				country_event = bs.10027
+			}
+		if = {
+			limit = {
+				ROOT = {
+						tag = ZAM
+					}
+				}
+				country_event = bs.10028
+			}
+		if = {
+			limit = {
+				ROOT = {
+						tag = ZIM
+					}
+				}
+				country_event = bs.10029
+			}
+		if = {
+			limit = {
+				ROOT = {
+						tag = KEN
+					}
+				}
+				country_event = bs.10030
+			}
+		}
+	}
+	a_colony_again = {
+
+		priority = 10
+
+		name = former_colony_colony
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+			tag = BOT
+			tag = GAM
+			tag = KEN
+			tag = MLW
+			tag = NGA
+			tag = TZN
+			tag = UGA
+			tag = ZAM
+			tag = ZIM
+			tag = SIE
+			tag = PAL
+			tag = GHA
+			tag = SMA
+            }			
+		}
+
+		available = {		
+		    NOT = {
+				OR = {
+				former_british_colony_without_change = yes
+				english_free_country_in_africa = yes
+				is_puppet_of = ENG
+				}
+			}
+			is_puppet = yes
+			
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 5
+
+		is_good = no
+
+		cancel_if_not_visible = yes
+
+		activation = {
+			OR = {
+			former_british_colony_without_change = yes
+			english_free_country_in_africa = yes
+			}
+			is_puppet = yes
+		}
+
+		visible = {
+			OR = {
+			former_british_colony_without_change = yes
+			english_free_country_in_africa = yes
+			}
+			is_puppet = yes
+		}
+
+		timeout_effect = {
+			country_event = bs.10033
+		}
+	}
+}
+
+former_french_colony_stuff_cat = {
+
+	former_french_colony_stuff = {
+
+		priority = 10
+
+		name = former_colony
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+		tag = MOR
+		tag = TUN
+		tag = MRT
+		tag = MLI
+		tag = SEN
+		tag = GNB
+		tag = GNA
+		tag = IVO
+		tag = VOL
+		tag = TOG
+		tag = DAH
+		tag = NGA
+		tag = CHA
+		tag = CMR
+		tag = CAR
+		tag = GAB
+		tag = RCG
+		tag = DJI
+		tag = MAD
+            }			
+		}
+
+		available = {		
+		    NOT = {
+				OR = {
+				former_french_colony_without_change = yes
+				is_puppet_of = FRA
+				}
+			}
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 5
+
+		is_good = no
+
+		cancel_if_not_visible = yes
+
+		activation = {
+			former_french_colony_without_change = yes
+			is_puppet = no
+		}
+
+		visible = {
+			former_french_colony_without_change = yes
+			is_puppet = no
+		}
+		
+		
+		timeout_effect = {
+			country_event = bs.10034
+		}
+	}
+	a_colony_again_france = {
+
+		priority = 10
+
+		name = former_colony_colony
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+		tag = MOR
+		tag = TUN
+		tag = MRT
+		tag = MLI
+		tag = SEN
+		tag = GNB
+		tag = GNA
+		tag = IVO
+		tag = VOL
+		tag = TOG
+		tag = DAH
+		tag = NGA
+		tag = CHA
+		tag = CMR
+		tag = CAR
+		tag = GAB
+		tag = RCG
+		tag = DJI
+		tag = MAD
+            }			
+		}
+
+		available = {		
+		    NOT = {
+				OR = {
+				former_french_colony_without_change = yes
+				is_puppet_of = FRA
+				}
+			}
+			is_puppet = yes
+			
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 5
+
+		is_good = no
+
+		cancel_if_not_visible = yes
+
+		activation = {
+			former_french_colony_without_change = yes
+			is_puppet = yes
+		}
+
+		visible = {
+			former_french_colony_without_change = yes
+			is_puppet = yes
+		}
+
+		timeout_effect = {
+			country_event = bs.10038
+		}
+	}
+}
+
+former_italian_colony_stuff_cat = {
+
+	former_italian_colony_stuff = {
+
+		priority = 10
+
+		name = former_colony
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+				tag = ERI
+				tag = ETH
+				tag = SOM
+				tag = LBA
+				tag = TUN
+				tag = SYR
+            }			
+		}
+
+		available = {		
+		    NOT = {
+				OR = {
+					former_italian_colony_without_change = yes
+					alt_hist_italian_colony_without_change = yes
+					is_puppet_of = ITA
+				}
+			}
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 5
+
+		is_good = no
+
+		cancel_if_not_visible = yes
+
+		activation = {
+			OR = {
+				former_italian_colony_without_change = yes
+				alt_hist_italian_colony_without_change = yes
+			}
+			is_puppet = no
+		}
+
+		visible = {
+			OR = {
+				former_italian_colony_without_change = yes
+				alt_hist_italian_colony_without_change = yes
+			}
+			is_puppet = no
+		}
+		
+		
+		timeout_effect = {
+			country_event = bs.10035
+		}
+	}
+	a_colony_again_italy = {
+
+		priority = 10
+
+		name = former_colony_colony
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+				tag = ERI
+				tag = ETH
+				tag = SOM
+				tag = LBA
+            }			
+		}
+
+		available = {		
+		    NOT = {
+				OR = {
+					former_italian_colony_without_change = yes
+					is_puppet_of = ITA
+				}
+			}
+			is_puppet = yes
+			
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 5
+
+		is_good = no
+
+		cancel_if_not_visible = yes
+
+		activation = {
+			former_italian_colony_without_change = yes
+			is_puppet = yes
+		}
+
+		visible = {
+			former_italian_colony_without_change = yes
+			is_puppet = yes
+		}
+
+		timeout_effect = {
+			country_event = bs.10039
+		}
+	}
+}
+
+former_portugese_colony_stuff_cat = {
+
+	former_portugese_colony_stuff = {
+
+		priority = 10
+
+		name = former_colony
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+		tag = ANG
+		tag = MZB
+		tag = GNB
+		tag = SAO
+            }			
+		}
+
+		available = {		
+		    NOT = {
+				OR = {
+				former_portugese_colony_without_change = yes
+				is_puppet_of = POR
+				}
+			}
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 5
+
+		is_good = no
+
+		cancel_if_not_visible = yes
+
+		activation = {
+			former_portugese_colony_without_change = yes
+			is_puppet = no
+		}
+
+		visible = {
+			former_portugese_colony_without_change = yes
+			is_puppet = no
+		}
+		
+		
+		timeout_effect = {
+			country_event = bs.10036
+		}
+	}
+	a_colony_again_portugal = {
+
+		priority = 10
+
+		name = former_colony_colony
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+		tag = ANG
+		tag = MZB
+		tag = GNB
+		tag = SAO
+            }			
+		}
+
+		available = {		
+		    NOT = {
+				OR = {
+				former_portugese_colony_without_change = yes
+				is_puppet_of = ITA
+				}
+			}
+			is_puppet = yes
+			
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 5
+
+		is_good = no
+
+		cancel_if_not_visible = yes
+
+		activation = {
+			former_portugese_colony_without_change = yes
+			is_puppet = yes
+		}
+
+		visible = {
+			former_portugese_colony_without_change = yes
+			is_puppet = yes
+		}
+
+		timeout_effect = {
+			country_event = bs.10040
+		}
+	}
+}
+
+former_belgian_colony_stuff_cat = {
+
+	former_belgian_colony_stuff = {
+
+		priority = 10
+
+		name = former_colony
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			tag = COG			
+		}
+
+		available = {		
+		    NOT = {
+				OR = {
+				former_belgian_colony_without_change = yes
+				is_puppet_of = BEL
+				}
+			}
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 5
+
+		is_good = no
+
+		cancel_if_not_visible = yes
+
+		activation = {
+			former_belgian_colony_without_change = yes
+			is_puppet = no
+		}
+
+		visible = {
+			former_belgian_colony_without_change = yes
+			is_puppet = no
+		}
+		
+		
+		timeout_effect = {
+		country_event = bs.10037
+		}
+	}
+	a_colony_again_belgian = {
+
+		priority = 10
+
+		name = former_colony_colony
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			tag = COG			
+		}
+
+		available = {		
+		    NOT = {
+				OR = {
+				former_belgian_colony_without_change = yes
+				is_puppet_of = BEL
+				}
+			}
+			is_puppet = yes
+			
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 5
+
+		is_good = no
+
+		cancel_if_not_visible = yes
+
+		activation = {
+			former_belgian_colony_without_change = yes
+			is_puppet = yes
+		}
+
+		visible = {
+			former_belgian_colony_without_change = yes
+			is_puppet = yes
+		}
+
+		timeout_effect = {
+			country_event = bs.10041
+			
+		}
+	}
+}
+
+south_africa_status_cat = {
+
+	south_africa_status = {
+
+		priority = 10
+
+		name = former_colony
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+            tag = SAF	
+		}
+
+		available = {		
+		    NOT = {
+				OR = {
+				european_south_africa_without_change = yes
+				is_puppet_of = ENG
+				has_completed_focus = SAF_abandon_westminster
+				}
+			}
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 5
+
+		is_good = no
+
+		cancel_if_not_visible = yes
+
+		activation = {
+			european_south_africa_without_change = yes
+			NOT = {
+			is_puppet_of = ENG
+			}
+		}
+
+		visible = {
+			european_south_africa_without_change = yes
+			NOT = {
+			is_puppet_of = ENG
+			}
+		}
+		
+		
+		timeout_effect = {
+		country_event = bs.10045
+		}
+	}
+}

@@ -1,0 +1,100 @@
+
+add_namespace = bs_rk
+
+# Dutch
+country_event = {
+	id = bs_rk.1
+	title = bs_rk.1
+	desc = bs_rk.1
+	
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bs_rk.1.a
+		
+		HOL = {
+			annex_country = {
+				target = NID
+				transfer_troops = no
+			}
+			change_tag_from = NID
+		}
+	}
+}
+
+#Ukrainian Uprising
+country_event = {
+	id = bs_rk.2
+	title = bs_rk.2.t
+	desc = bs_rk.2.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_state = {
+			limit = {
+				is_owned_by = RKU
+				NOT = { is_core_of = RKU }
+				is_core_of = UKR
+			}
+			UKR = { transfer_state = PREV }
+		}
+		UKR = {
+			add_ideas = UKR_dissent
+			set_country_flag = rebelled_from_RK
+			declare_war_on = {
+				target = RKU
+				type = civil_war
+			}
+		}
+		RKU = { add_ideas = RKU_learned_from_partisans }
+	}
+
+	option = { #bring the fight on
+		name = bs_rk.2.a
+
+		add_war_support = 0.1
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { #switch to ukraine
+		name = bs_rk.2.b
+		
+		UKR = { change_tag_from = RKU }
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#RK Ukraine concedes power to the Ukrainians
+country_event = {
+	id = bs_rk.3
+	title = bs_rk.3.t
+	desc = bs_rk.3.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = bs_rk.3.a
+
+		UKR = {
+			annex_country = {
+				target = RKU
+				transfer_troops = yes
+			}
+			change_tag_from = RKU
+		}
+	}
+}

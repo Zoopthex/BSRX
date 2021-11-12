@@ -1,0 +1,21 @@
+
+state={
+	id=2056
+	name="STATE_2056"
+	manpower = 1093581
+	
+	state_category = rural
+	
+	history={
+		add_core_of = MAD
+		owner = FRA
+		buildings = {
+			infrastructure = 3
+		}
+
+	}
+
+	provinces={
+	 8246 10993
+	}
+}

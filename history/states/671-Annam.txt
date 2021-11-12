@@ -1,0 +1,41 @@
+
+state={
+	id=671
+	name="STATE_671"
+	resources={
+		chromium=6.000
+		tungsten=27.000
+	}
+
+	history={
+		add_core_of = VIN
+		add_core_of = TON
+		owner = FRA
+		victory_points = {
+			4075 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 1
+			1185 = {
+				naval_base = 1
+
+			}
+
+		}
+		1941.1.1 = {
+			owner = JAP
+			controller = JAP
+
+		}
+
+	}
+
+	provinces={
+		1185 4075 10129 12075 
+	}
+	manpower=9019890
+	buildings_max_level_factor=1.000
+	state_category=town
+}

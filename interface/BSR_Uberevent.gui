@@ -1,0 +1,389 @@
+guiTypes = {
+	containerWindowType = {
+		name = "BSR_spanish_war_custom_frame"
+		size = { width = 588 height = 465 }
+		position = { x = -210 y = -18 }
+		moveable = yes
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = BSR_Uberevent_Spanish_War
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_SpanishCivilWar"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "BSR_spanish_war_Button"
+			shortcut = "ESCAPE"
+			position = { x = 272 y = 291 }
+			quadTextureSprite ="GFX_Superevent_Button"
+			buttonFont = "Bomb_24"
+			Orientation = center
+		}
+	}
+	
+	containerWindowType = {
+		name = "BSR_america_at_war_custom_frame"
+		size = { width = 588 height = 465 }
+		position = { x = -210 y = -18 }
+		moveable = yes
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = BSR_Uberevent_AmericaAtDefensiveWar
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_AmericaAtWar"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "BSR_america_at_war_Button"
+			shortcut = "ESCAPE"
+			position = { x = 272 y = 291 }
+			quadTextureSprite ="GFX_Superevent_Button"
+			buttonFont = "Bomb_24"
+			Orientation = center
+		}
+	}
+	
+	containerWindowType = {
+		name = "BSR_collapse_of_america_custom_frame"
+		size = { width = 588 height = 465 }
+		position = { x = -210 y = -18 }
+		moveable = yes
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = BSR_Uberevent_FallOfAmerica_Music
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_FallOfAmerica"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "BSR_collapse_of_america_Button"
+			shortcut = "ESCAPE"
+			position = { x = 272 y = 291 }
+			quadTextureSprite ="GFX_Superevent_Button"
+			buttonFont = "Bomb_24"
+			Orientation = center
+		}
+	}
+	
+	containerWindowType = {
+		name = "BSR_capitulation_of_germany_custom_frame"
+		size = { width = 588 height = 465 }
+		position = { x = -210 y = -18 }
+		moveable = yes
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = BSR_Uberevent_FallOfGermany_Music
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_CapitulationOfGermany"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "BSR_capitulation_of_germany_Button"
+			shortcut = "ESCAPE"
+			position = { x = 272 y = 291 }
+			quadTextureSprite ="GFX_Superevent_Button"
+			buttonFont = "Bomb_24"
+			Orientation = center
+		}
+	}
+	
+	containerWindowType = {
+		name = "BSR_defeat_of_britain_custom_frame"
+		size = { width = 588 height = 465 }
+		position = { x = -210 y = -18 }
+		moveable = yes
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = BSR_Uberevent_FallOfBritain_Music
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_FallOfBritain"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "BSR_defeat_of_britain_Button"
+			shortcut = "ESCAPE"
+			position = { x = 272 y = 291 }
+			quadTextureSprite ="GFX_Superevent_Button"
+			buttonFont = "Bomb_24"
+			Orientation = center
+		}
+	}
+	containerWindowType = {
+		name = "BSR_fall_of_china_custom_frame"
+		size = { width = 588 height = 465 }
+		position = { x = -210 y = -18 }
+		moveable = yes
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = BSR_Uberevent_FallOfChina_Music
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_FallOfChina"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "BSR_fall_of_china_Button"
+			shortcut = "ESCAPE"
+			position = { x = 272 y = 291 }
+			quadTextureSprite ="GFX_Superevent_Button"
+			buttonFont = "Bomb_24"
+			Orientation = center
+		}
+	}
+	containerWindowType = {
+		name = "BSR_fall_of_france_custom_frame"
+		size = { width = 588 height = 465 }
+		position = { x = -210 y = -18 }
+		moveable = yes
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = BSR_Uberevent_FallOfFrance_Music
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_FallOfFrance"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "BSR_fall_of_france_Button"
+			shortcut = "ESCAPE"
+			position = { x = 272 y = 291 }
+			quadTextureSprite ="GFX_Superevent_Button"
+			buttonFont = "Bomb_24"
+			Orientation = center
+		}
+	}
+	containerWindowType = {
+		name = "BSR_fall_of_poland_custom_frame"
+		size = { width = 588 height = 465 }
+		position = { x = -210 y = -18 }
+		moveable = yes
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = BSR_Uberevent_FallOfPoland_Music
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_FallOfPoland"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "BSR_fall_of_poland_Button"
+			shortcut = "ESCAPE"
+			position = { x = 272 y = 291 }
+			quadTextureSprite ="GFX_Superevent_Button"
+			buttonFont = "Bomb_24"
+			Orientation = center
+		}
+	}
+	
+	containerWindowType = {
+		name = "BSR_german_civil_war_custom_frame"
+		size = { width = 588 height = 465 }
+		position = { x = -210 y = -18 }
+		moveable = yes
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = BSR_Uberevent_GermanCivilWar_Music
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_GermanCivilWar"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "BSR_german_civil_war_Button"
+			shortcut = "ESCAPE"
+			position = { x = 272 y = 291 }
+			quadTextureSprite ="GFX_Superevent_Button"
+			buttonFont = "Bomb_24"
+			Orientation = center
+		}
+	}
+	
+	containerWindowType = {
+		name = "BSR_invasion_of_russia_custom_frame"
+		size = { width = 588 height = 465 }
+		position = { x = -210 y = -18 }
+		moveable = yes
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = BSR_Uberevent_Barbarossa3
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_InvasionOfRussia"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "BSR_invasion_of_russia_Button"
+			shortcut = "ESCAPE"
+			position = { x = 272 y = 291 }
+			quadTextureSprite ="GFX_Superevent_Button"
+			buttonFont = "Bomb_24"
+			Orientation = center
+		}
+	}
+	
+	containerWindowType = {
+		name = "BSR_kaiserreich_triumphant_custom_frame"
+		size = { width = 588 height = 465 }
+		position = { x = -210 y = -18 }
+		moveable = yes
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = BSR_Uberevent_KaiserreichTriumphant_Music
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_KaiserreichTriumphant"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "BSR_kaiserreich_triumphant_Button"
+			shortcut = "ESCAPE"
+			position = { x = 272 y = 291 }
+			quadTextureSprite ="GFX_Superevent_Button"
+			buttonFont = "Bomb_24"
+			Orientation = center
+		}
+	}
+	
+	containerWindowType = {
+		name = "BSR_sino_japanese_war_custom_frame"
+		size = { width = 588 height = 465 }
+		position = { x = -210 y = -18 }
+		moveable = yes
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = BSR_Uberevent_Sino_Japanese_War
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_SecondSinoJapaneseWar"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "BSR_sino_japanese_war_Button"
+			shortcut = "ESCAPE"
+			position = { x = 272 y = 291 }
+			quadTextureSprite ="GFX_Superevent_Button"
+			buttonFont = "Bomb_24"
+			Orientation = center
+		}
+	}
+	
+	containerWindowType = {
+		name = "BSR_second_great_war_custom_frame"
+		size = { width = 588 height = 465 }
+		position = { x = -210 y = -18 }
+		moveable = yes
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = BSR_Uberevent_SecondGreatWar_Music
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_SecondGreatWar"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "BSR_second_great_war_Button"
+			shortcut = "ESCAPE"
+			position = { x = 272 y = 291 }
+			quadTextureSprite ="GFX_Superevent_Button"
+			buttonFont = "Bomb_24"
+			Orientation = center
+		}
+	}
+	
+	containerWindowType = {
+		name = "BSR_collapse_of_russia_custom_frame"
+		size = { width = 588 height = 465 }
+		position = { x = -210 y = -18 }
+		moveable = yes
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = BSR_Uberevent_FallOfRussia_Music
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_CollapseOfRussia"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "BSR_collapse_of_russia_Button"
+			shortcut = "ESCAPE"
+			position = { x = 272 y = 291 }
+			quadTextureSprite ="GFX_Superevent_Button"
+			buttonFont = "Bomb_24"
+			Orientation = center
+		}
+	}
+	
+	containerWindowType = {
+		name = "BSR_surrender_of_japan_custom_frame"
+		size = { width = 588 height = 465 }
+		position = { x = -210 y = -18 }
+		moveable = yes
+		Orientation = center
+		Origo = center
+		clipping = no
+		show_sound = BSR_Uberevent_FallOfJapan_Music
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_SurrenderOfJapan"
+		}
+
+		buttonType = {
+			name = "Option"
+			text = "BSR_surrender_of_japan_Button"
+			shortcut = "ESCAPE"
+			position = { x = 272 y = 291 }
+			quadTextureSprite ="GFX_Superevent_Button"
+			buttonFont = "Bomb_24"
+			Orientation = center
+		}
+	}
+	
+}

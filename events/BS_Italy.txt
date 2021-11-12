@@ -1,0 +1,1063 @@
+﻿
+add_namespace = bs_italy
+
+# Motion of no confidence V1
+country_event = {
+    id = bs_italy.1
+    title = bs_italy.1.t
+    desc = bs_italy.1.d
+    picture = GFX_report_event_generic_funeral
+ 
+	is_triggered_only = yes
+    fire_only_once = yes
+
+    option = { #Balbo
+        name = bs_italy.1.a
+		create_country_leader = {
+			name = "Italo Balbo"
+			desc = ""
+			picture = "portrait_italy_italo_balbo.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				The_Grand_Fascist_Organizer
+				dislikes_germany
+			}
+		}
+		GER = {
+			add_ai_strategy = {
+				type = antagonize
+				id = "ITA"
+				value = 200
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "ITA"
+				value = -200
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					is_in_faction_with = GER
+					GER = { is_puppet = no }
+				}
+			}
+			hidden_effect = {
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = fascism
+				size = 0.45
+				capital = 159
+				states = { 159 987 158 1351 1391 988 989 1203 2016 160 867 39 986 1872 993 866 736 1066 162 157 1755 1756 1757 1758 990 161 }
+			}
+			set_party_name = { ideology = neutrality long_name = ITA_neutrality_badogliano_long name = ITA_neutrality_badogliano }
+			random_other_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				set_stability = 0.5
+				set_war_support = 0.5
+				set_cosmetic_tag = ITA_RSI
+			    add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			    }
+			    add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			    }
+				add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			    }				
+			}
+			every_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				GER = {
+					puppet = PREV
+					set_autonomy = { target = PREV autonomy_state = autonomy_puppet }
+				}
+			}
+			every_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				declare_war_on = {
+					target = ITA
+					type = annex_everything
+				}	
+			}	
+			
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.5
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.4
+			}
+			set_stability = 1.0
+			set_war_support = 1.0
+		custom_effect_tooltip = BSR_Ita_Civil_War_tt
+		create_country_leader = {
+			name = "Emilio De Bono"
+			desc = ""
+			picture = "portrait_italy_emilio_de_bono.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				Incompetent_Marshal
+			}
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				save_event_target_as = social_fascist_italy_civil_war
+				every_unit_leader = {
+					set_nationality = ITA
+				}
+			}
+			ITA = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_id = 7003
+							has_id = 7004
+							has_id = 7006
+						}
+					}
+					set_nationality = event_target:social_fascist_italy_civil_war
+				}
+			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_political_power = 1500
+				add_equipment_to_stockpile = {
+				    type = infantry_equipment
+				    amount = 250000
+				    producer = ITA
+				}
+				add_equipment_to_stockpile = {
+				    type = support_equipment
+				    amount = 25000
+				    producer = ITA
+				}
+				add_equipment_to_stockpile = {
+				    type = artillery_equipment
+				    amount = 50000
+				    producer = ITA
+				}
+			}
+		}
+		}
+	}
+    }
+	option = { #Badoglio
+        name = bs_italy.1.b
+		create_country_leader = {
+			name = "Pietro Badoglio"
+			desc = ""
+			picture = "Portrait_Italy_Pietro_Badoglio.dds"
+			expire = "1965.1.1"
+			ideology = moderatism
+			traits = {
+				Liberal_General_2
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					is_in_faction_with = GER
+					GER = { is_puppet = no }
+				}
+			}
+			hidden_effect = {
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = fascism
+				size = 0.45
+				capital = 159
+				states = { 159 987 158 1351 1391 988 989 1203 2016 160 867 39 986 1872 993 866 736 1066 162 157 1755 1756 1757 1758 990 161 }
+			}
+			set_party_name = { ideology = neutrality long_name = ITA_neutrality_badogliano_long name = ITA_neutrality_badogliano }
+			random_other_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				set_stability = 0.5
+				set_war_support = 0.5
+				set_cosmetic_tag = ITA_RSI
+			    add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			    }
+			    add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			    }
+				add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			    }				
+			}
+			every_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				GER = {
+					puppet = PREV
+					set_autonomy = { target = PREV autonomy_state = autonomy_puppet }
+				}
+			}
+			every_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				declare_war_on = {
+					target = ITA
+					type = annex_everything
+				}	
+			}	
+			
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.5
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.4
+			}
+			set_stability = 1.0
+			set_war_support = 1.0
+		custom_effect_tooltip = BSR_Ita_Civil_War_tt
+		create_country_leader = {
+			name = "Emilio De Bono"
+			desc = ""
+			picture = "portrait_italy_emilio_de_bono.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				Incompetent_Marshal
+			}
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				save_event_target_as = social_fascist_italy_civil_war
+				every_unit_leader = {
+					set_nationality = ITA
+				}
+			}
+			ITA = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_id = 7003
+							has_id = 7004
+							has_id = 7006
+						}
+					}
+					set_nationality = event_target:social_fascist_italy_civil_war
+				}
+			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_political_power = 1500
+				add_equipment_to_stockpile = {
+				    type = infantry_equipment
+				    amount = 250000
+				    producer = ITA
+				}
+				add_equipment_to_stockpile = {
+				    type = support_equipment
+				    amount = 25000
+				    producer = ITA
+				}
+				add_equipment_to_stockpile = {
+				    type = artillery_equipment
+				    amount = 50000
+				    producer = ITA
+				}
+			}
+		}
+		}
+	}
+	}
+	option = { #Bono
+        name = bs_italy.1.c
+		create_country_leader = {
+			name = "Emilio De Bono"
+			desc = ""
+			picture = "portrait_italy_emilio_de_bono.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				Incompetent_Marshal
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					is_in_faction_with = GER
+					GER = { is_puppet = no }
+				}
+			}
+		hidden_effect = {
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = fascism
+				size = 0.45
+				capital = 159
+				states = { 159 987 158 1351 1391 988 989 1203 2016 160 867 39 986 1872 993 866 736 1066 162 157 1755 1756 1757 1758 990 161 }
+			}
+			set_party_name = { ideology = neutrality long_name = ITA_neutrality_badogliano_long name = ITA_neutrality_badogliano }
+			random_other_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				set_stability = 0.5
+				set_war_support = 0.5
+				set_cosmetic_tag = ITA_RSI
+			    add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			    }
+			    add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			    }
+				add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			    }				
+			}
+			every_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				GER = {
+					puppet = PREV
+					set_autonomy = { target = PREV autonomy_state = autonomy_puppet }
+				}
+			}
+			every_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				declare_war_on = {
+					target = ITA
+					type = annex_everything
+				}	
+			}	
+			
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.5
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.4
+			}
+			set_stability = 1.0
+			set_war_support = 1.0
+		custom_effect_tooltip = BSR_Ita_Civil_War_tt
+		create_country_leader = {
+			name = "Emilio De Bono"
+			desc = ""
+			picture = "portrait_italy_emilio_de_bono.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				Incompetent_Marshal
+			}
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				save_event_target_as = social_fascist_italy_civil_war
+				every_unit_leader = {
+					set_nationality = ITA
+				}
+			}
+			ITA = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_id = 7003
+							has_id = 7004
+							has_id = 7006
+						}
+					}
+					set_nationality = event_target:social_fascist_italy_civil_war
+				}
+			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_political_power = 1500
+				add_equipment_to_stockpile = {
+				    type = infantry_equipment
+				    amount = 250000
+				    producer = ITA
+				}
+				add_equipment_to_stockpile = {
+				    type = support_equipment
+				    amount = 25000
+				    producer = ITA
+				}
+				add_equipment_to_stockpile = {
+				    type = artillery_equipment
+				    amount = 50000
+				    producer = ITA
+				}
+			}
+		}
+		}
+		}
+	}
+	option = { #King
+        name = bs_italy.1.e
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "1932.1.1"
+			election_frequency = 36
+			elections_allowed = no
+		}
+		if = {
+			limit = {
+				AND = {
+					is_in_faction_with = GER
+					GER = { is_puppet = no }
+				}
+			}
+			hidden_effect = {
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = fascism
+				size = 0.45
+				capital = 159
+				states = { 159 987 158 1351 1391 988 989 1203 2016 160 867 39 986 1872 993 866 736 1066 162 157 1755 1756 1757 1758 990 161 }
+			}
+			set_party_name = { ideology = neutrality long_name = ITA_neutrality_badogliano_long name = ITA_neutrality_badogliano }
+			random_other_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				set_stability = 0.5
+				set_war_support = 0.5
+				set_cosmetic_tag = ITA_RSI
+			    add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			    }
+			    add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			    }
+				add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			    }				
+			}
+			every_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				GER = {
+					puppet = PREV
+					set_autonomy = { target = PREV autonomy_state = autonomy_puppet }
+				}
+			}
+			every_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				declare_war_on = {
+					target = ITA
+					type = annex_everything
+				}	
+			}		
+            }
+			
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.5
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.4
+			}
+			set_stability = 1.0
+			set_war_support = 1.0
+		custom_effect_tooltip = BSR_Ita_Civil_War_tt
+		create_country_leader = {
+			name = "Emilio De Bono"
+			desc = ""
+			picture = "portrait_italy_emilio_de_bono.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				Incompetent_Marshal
+			}
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				save_event_target_as = social_fascist_italy_civil_war
+				every_unit_leader = {
+					set_nationality = ITA
+				}
+			}
+			ITA = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_id = 7003
+							has_id = 7004
+							has_id = 7006
+						}
+					}
+					set_nationality = event_target:social_fascist_italy_civil_war
+				}
+			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_political_power = 1500
+				add_equipment_to_stockpile = {
+				    type = infantry_equipment
+				    amount = 250000
+				    producer = ITA
+				}
+				add_equipment_to_stockpile = {
+				    type = support_equipment
+				    amount = 25000
+				    producer = ITA
+				}
+				add_equipment_to_stockpile = {
+				    type = artillery_equipment
+				    amount = 50000
+				    producer = ITA
+				}
+			}
+		}
+		}
+	}
+
+}
+
+country_event = {
+    id = bs_italy.2
+    title = bs_italy.2.t
+    desc = bs_italy.2.d
+    picture = GFX_report_event_generic_funeral
+ 
+	is_triggered_only = yes
+	
+    fire_only_once = yes
+
+    option = { #Badoglio
+        name = bs_italy.2.b
+		create_country_leader = {
+			name = "Pietro Badoglio"
+			desc = ""
+			picture = "Portrait_Italy_Pietro_Badoglio.dds"
+			expire = "1965.1.1"
+			ideology = moderatism
+			traits = {
+				Liberal_General_2
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					is_in_faction_with = GER
+					GER = { is_puppet = no }
+				}
+			}
+			hidden_effect = {
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = fascism
+				size = 0.45
+				capital = 159
+				states = { 159 987 158 1351 1391 988 989 1203 2016 160 867 39 986 1872 993 866 736 1066 162 157 1755 1756 1757 1758 990 161 }
+			}
+			set_party_name = { ideology = neutrality long_name = ITA_neutrality_badogliano_long name = ITA_neutrality_badogliano }
+			random_other_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				set_stability = 0.5
+				set_war_support = 0.5
+				set_cosmetic_tag = ITA_RSI
+			    add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			    }
+			    add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			    }
+				add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			    }				
+			}
+			every_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				GER = {
+					puppet = PREV
+					set_autonomy = { target = PREV autonomy_state = autonomy_puppet }
+				}
+			}
+			every_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				declare_war_on = {
+					target = ITA
+					type = annex_everything
+				}	
+			}	
+			}		
+			
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.5
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.4
+			}
+			set_stability = 1.0
+			set_war_support = 1.0
+		custom_effect_tooltip = BSR_Ita_Civil_War_tt
+		create_country_leader = {
+			name = "Emilio De Bono"
+			desc = ""
+			picture = "portrait_italy_emilio_de_bono.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				Incompetent_Marshal
+			}
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				save_event_target_as = social_fascist_italy_civil_war
+				every_unit_leader = {
+					set_nationality = ITA
+				}
+			}
+			ITA = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_id = 7003
+							has_id = 7004
+							has_id = 7006
+						}
+					}
+					set_nationality = event_target:social_fascist_italy_civil_war
+				}
+			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_political_power = 1500
+				add_equipment_to_stockpile = {
+				    type = infantry_equipment
+				    amount = 250000
+				    producer = ITA
+				}
+				add_equipment_to_stockpile = {
+				    type = support_equipment
+				    amount = 25000
+				    producer = ITA
+				}
+				add_equipment_to_stockpile = {
+				    type = artillery_equipment
+				    amount = 50000
+				    producer = ITA
+				}
+			}
+		}
+		}
+	}
+	option = { #Bono
+        name = bs_italy.2.c
+		create_country_leader = {
+			name = "Emilio De Bono"
+			desc = ""
+			picture = "portrait_italy_emilio_de_bono.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				Incompetent_Marshal
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					is_in_faction_with = GER
+					GER = { is_puppet = no }
+				}
+			}
+			hidden_effect = {
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = fascism
+				size = 0.45
+				capital = 159
+				states = { 159 987 158 1351 1391 988 989 1203 2016 160 867 39 986 1872 993 866 736 1066 162 157 1755 1756 1757 1758 990 161 }
+			}
+			set_party_name = { ideology = neutrality long_name = ITA_neutrality_badogliano_long name = ITA_neutrality_badogliano }
+			random_other_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				set_stability = 0.5
+				set_war_support = 0.5
+				set_cosmetic_tag = ITA_RSI
+			    add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			    }
+			    add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			    }
+				add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			    }				
+			}
+			every_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				GER = {
+					puppet = PREV
+					set_autonomy = { target = PREV autonomy_state = autonomy_puppet }
+				}
+			}
+			every_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				declare_war_on = {
+					target = ITA
+					type = annex_everything
+				}	
+			}	
+			
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.5
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.4
+			}
+			set_stability = 1.0
+			set_war_support = 1.0
+		custom_effect_tooltip = BSR_Ita_Civil_War_tt
+		create_country_leader = {
+			name = "Emilio De Bono"
+			desc = ""
+			picture = "portrait_italy_emilio_de_bono.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				Incompetent_Marshal
+			}
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				save_event_target_as = social_fascist_italy_civil_war
+				every_unit_leader = {
+					set_nationality = ITA
+				}
+			}
+			ITA = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_id = 7003
+							has_id = 7004
+							has_id = 7006
+						}
+					}
+					set_nationality = event_target:social_fascist_italy_civil_war
+				}
+			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_political_power = 1500
+				add_equipment_to_stockpile = {
+				    type = infantry_equipment
+				    amount = 250000
+				    producer = ITA
+				}
+				add_equipment_to_stockpile = {
+				    type = support_equipment
+				    amount = 25000
+				    producer = ITA
+				}
+				add_equipment_to_stockpile = {
+				    type = artillery_equipment
+				    amount = 50000
+				    producer = ITA
+				}
+			}
+		}
+		}
+	}
+	}
+	option = { #King
+        name = bs_italy.2.d
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "1932.1.1"
+			election_frequency = 36
+			elections_allowed = no
+		}
+		if = {
+			limit = {
+				AND = {
+					is_in_faction_with = GER
+					GER = { is_puppet = no }
+				}
+			}
+			hidden_effect = {
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = fascism
+				size = 0.45
+				capital = 159
+				states = { 159 987 158 1351 1391 988 989 1203 2016 160 867 39 986 1872 993 866 736 1066 162 157 1755 1756 1757 1758 990 161 }
+			}
+			set_party_name = { ideology = neutrality long_name = ITA_neutrality_badogliano_long name = ITA_neutrality_badogliano }
+			random_other_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				set_stability = 0.5
+				set_war_support = 0.5
+				set_cosmetic_tag = ITA_RSI
+			    add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			    }
+			    add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			    }
+				add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			    }				
+			}
+			every_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				GER = {
+					puppet = PREV
+					set_autonomy = { target = PREV autonomy_state = autonomy_puppet }
+				}
+			}
+			every_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				declare_war_on = {
+					target = ITA
+					type = annex_everything
+				}	
+			}		
+            }
+			
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.5
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.4
+			}
+			set_stability = 1.0
+			set_war_support = 1.0
+		custom_effect_tooltip = BSR_Ita_Civil_War_tt
+		create_country_leader = {
+			name = "Emilio De Bono"
+			desc = ""
+			picture = "portrait_italy_emilio_de_bono.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				Incompetent_Marshal
+			}
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = ITA
+					has_government = fascism
+				}
+				save_event_target_as = social_fascist_italy_civil_war
+				every_unit_leader = {
+					set_nationality = ITA
+				}
+			}
+			ITA = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_id = 7003
+							has_id = 7004
+							has_id = 7006
+						}
+					}
+					set_nationality = event_target:social_fascist_italy_civil_war
+				}
+			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				add_political_power = 1500
+				add_equipment_to_stockpile = {
+				    type = infantry_equipment
+				    amount = 250000
+				    producer = ITA
+				}
+				add_equipment_to_stockpile = {
+				    type = support_equipment
+				    amount = 25000
+				    producer = ITA
+				}
+				add_equipment_to_stockpile = {
+				    type = artillery_equipment
+				    amount = 50000
+				    producer = ITA
+				}
+			}
+		}
+		}
+	}
+
+}
+

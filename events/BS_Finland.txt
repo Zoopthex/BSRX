@@ -1,0 +1,535 @@
+#Continuation War events
+
+add_namespace = BS_Finland
+
+country_event = { #Presidential Election
+    id = BS_Finland.1
+    title = BS_Finland.1.t
+    desc = BS_Finland.1.d
+ 
+    fire_only_once = yes
+ 
+    trigger = {
+		tag = FIN
+		date > 1937.1.14
+		date < 1937.3.14
+		has_start_date < 1936.01.02
+		OR = {
+			has_government = neutrality
+			has_government = democratic
+		}
+		has_country_leader = { ruling_only = yes name = "Pehr Evind Svinhufvud" }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			create_country_leader = {
+				name = "Kyösti Kallio"
+				desc = "POLITICS_KYÖSTI_KALLIO_DESC"
+				picture = "r56_Kyosti_Kallio.dds"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					leader_of_the_agrarian_union_2
+				}
+			}
+			create_country_leader = {
+				name = "Kyösti Kallio"
+				desc = "POLITICS_KYÖSTI_KALLIO_DESC"
+				picture = "r56_Kyosti_Kallio.dds"
+				expire = "1965.1.1"
+				ideology = social_conservatism
+				traits = {
+					leader_of_the_agrarian_union_2
+				}
+			}
+			set_party_name = { ideology = democratic long_name = FIN_democratic_party_2_long name = FIN_democratic_party_2 }
+			set_party_name = { ideology = neutrality long_name = FIN_neutrality_party_2_long name = FIN_neutrality_party_2 }
+		}
+	}
+    option = {
+        name = BS_Finland.1.a
+    }
+}
+
+country_event = {
+    id = BS_Finland.2
+    title = BS_Finland.2.t
+    desc = BS_Finland.2.d
+    picture = GFX_report_event_generic_funeral
+ 
+    fire_only_once = yes
+ 
+    trigger = {
+		tag = FIN
+		date > 1940.12.18
+		has_start_date < 1941.01.01
+		OR = {
+			has_government = neutrality
+			has_government = democratic
+		}
+		has_country_leader = { ruling_only = yes name = "Kyösti Kallio" }
+		NOT = { has_global_flag = bs_fin_dem_leadership_change_flag }
+		NOT = { has_global_flag = Mannerheim_Leadership }
+		NOT = { has_global_flag = Paasikivi_leadership }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			create_country_leader = {
+				name = "Risto Ryti"
+				desc = ""
+				picture = "Portrait_Finland_Risto_Heikki_Ryti.dds"
+				expire = "1965.1.1"
+				ideology = centrism_liberal
+				traits = {
+					resistance_banker
+				}
+			}
+			create_country_leader = {
+				name = "Risto Ryti"
+				desc = ""
+				picture = "Portrait_Finland_Risto_Heikki_Ryti.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+					resistance_banker
+				}
+			}
+			set_party_name = { ideology = democratic long_name = FIN_democratic_party_3_long name = FIN_democratic_party_3 }
+			set_party_name = { ideology = neutrality long_name = FIN_neutrality_party_3_long name = FIN_neutrality_party_3 }
+			
+			set_global_flag = K_Kallio_dead
+		}
+	}
+    option = {
+        name = BS_Finland.2.a
+
+    }
+}
+
+country_event = {
+    id = BS_Finland.3
+    title = BS_Finland.3.t
+    desc = BS_Finland.3.d
+ 
+    fire_only_once = yes
+	
+	hidden = yes
+ 
+    trigger = {
+		tag = FIN
+		date > 1937.3.1
+		OR = {
+			has_government = fascism
+			has_government = communism
+		}
+		NOT = { has_global_flag = formed_greater_suomi_flag }
+		NOT = { has_global_flag = Mannerheim_Leadership }
+		NOT = { has_global_flag = Paasikivi_leadership }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			create_country_leader = {
+				name = "Risto Ryti"
+				desc = ""
+				picture = "Portrait_Finland_Risto_Heikki_Ryti.dds"
+				expire = "1965.1.1"
+				ideology = centrism_liberal
+				traits = {
+					resistance_banker
+				}
+			}
+			create_country_leader = {
+				name = "Risto Ryti"
+				desc = ""
+				picture = "Portrait_Finland_Risto_Heikki_Ryti.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+					resistance_banker
+				}
+			}
+			set_global_flag = bs_fin_dem_leadership_change_flag
+			set_party_name = { ideology = democratic long_name = FIN_democratic_party_3_long name = FIN_democratic_party_3 }
+			set_party_name = { ideology = neutrality long_name = FIN_neutrality_party_3_long name = FIN_neutrality_party_3 }
+		}
+	}
+    option = {
+        name = BS_Finland.3.a
+
+    }
+}
+
+#Continuation War chain (if Finland was attacked by Soviets during Winter War and lost)
+country_event = {
+	id = BS_Finland.10
+	title = BS_Finland.10.t
+	desc = BS_Finland.10.d
+
+	picture = GFX_report_finland_continuation_war
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = FIN
+		SOV = { has_war_with = GER }
+		OR = {
+			SOV = { owns_state = 147 }	
+			SOV = { owns_state = 146 }
+			SOV = { owns_state = 1067 }
+		}
+		#owns_state = 722
+		NOT = { has_global_flag = finland_soviet_continuation_war }
+		NOT = { has_global_flag = new_finnish_soviet_border_flag } #a flag from the Vanilla Formable Nations Patch mod #the event won't fire if you already got the Moscow Armstice event via VFNP mod
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = BS_Finland.10.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = { FIN { is_in_faction = no } }
+			create_faction = NORTHERN_FRONT_FACTION #Done so that Finland won't join Axis, so it can get still get separate peace with the Soviet Union, get invaded by Germany and not declare a war on allies
+		}
+		declare_war_on = {
+			target = SOV
+			type = take_core_state
+		}
+		FIN = { give_military_access = GER }
+		news_event = { id = fincon.2 }
+		set_global_flag = finland_soviet_continuation_war
+	}
+
+	option = {
+		name = BS_Finland.10.b
+	}
+}
+
+news_event = {
+	id = BS_Finland.11
+	title = BS_Finland.11.t
+	desc = BS_Finland.11.d
+	picture = GFX_news_event_finland_continuation_war
+
+	major = yes
+
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = BS_Finland.11.a
+		trigger = {
+			OR = {
+				has_government = fascism
+				has_war_with = SOV
+			}
+		}
+	}
+
+	option = {
+		name = BS_Finland.11.b
+		trigger = {
+			AND = {
+				NOT = { has_government = fascism }
+				NOT = { has_war_with = SOV }
+			}
+		}
+	}	
+}
+
+#Moscow armstice
+country_event = {
+	id = BS_Finland.12
+	title = BS_Finland.12.t
+	desc = BS_Finland.12.d
+	picture = GFX_report_end_of_continuation_war
+	
+	trigger = {
+		tag = FIN
+		has_war_with = SOV
+		surrender_progress > 0.15
+		has_global_flag = finland_soviet_continuation_war
+		is_puppet = no
+		any_allied_country = {
+			is_faction_leader = yes
+			surrender_progress > 0.1
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	fire_only_once = yes
+
+	option = {
+		name = BS_Finland.12.a
+		ai_chance = { factor = 100 }
+		SOV = {
+			country_event = { id = fincon.4 days = 7 }
+		}
+		If = {
+			limit = {
+				 NOT = { has_global_flag = Mannerheim_Leadership }
+				 OR = {
+					has_government = democratic
+					has_government = neutrality
+				 }
+			}
+			create_country_leader = {
+				name = "Carl Gustaf Mannerheim"
+				desc = ""
+				picture = "portrait_fin_carl_mannerheim.dds"
+				expire = "1965.1.1"
+				ideology = reactionary_conservatism
+				traits = {
+					Marsalkka
+					Sick
+				}
+			}
+			create_country_leader = {
+				name = "Carl Gustaf Mannerheim"
+				desc = ""
+				picture = "portrait_fin_carl_mannerheim.dds"
+				expire = "1965.1.1"
+				ideology = moderatism
+				traits = {
+					Marsalkka
+					Sick
+				}
+			}
+			set_global_flag = Mannerheim_Leadership
+			set_party_name = { ideology = democratic long_name = FIN_democratic_party_4_long name = FIN_democratic_party_4 }
+			set_party_name = { ideology = neutrality long_name = FIN_neutrality_party_4_long name = FIN_neutrality_party_4 }
+		}
+		effect_tooltip = {
+			SOV = { 
+				white_peace = {
+					tag = FIN 
+					message = FIN_agree_peace 
+				} 
+			}
+		}
+	}
+
+	#With this option Soviet Union will go and puppet Finland which can led to annexation of Finland via separate event
+	option = {
+		name = BS_Finland.12.b
+	}
+}
+
+#Soviet response to Finish surrender
+country_event = {
+	id = BS_Finland.13
+	title = BS_Finland.13.t
+	desc = BS_Finland.13.d
+	picture = GFX_report_end_of_continuation_war
+	
+	is_triggered_only = yes
+
+	#Accept surrender
+	option = {
+		name = BS_Finland.13.a
+		ai_chance = { factor = 100 }
+		white_peace = FIN
+		#ENG = { white_peace = FIN }
+		#USA = { white_peace = FIN }
+		transfer_state = 146
+		transfer_state = 147
+		transfer_state = 722
+		transfer_state = 1068
+		transfer_state = 1368
+		transfer_state = 1381
+		transfer_state = 1369
+		FIN = { leave_faction = yes }
+		clr_global_flag = finland_soviet_continuation_war
+		FIN = { give_military_access = SOV }
+		news_event = { id = fincon.6 }
+		FIN = { #This event makes Finland go democratic with Paasikivi
+			country_event = { id = BS_Finland.706 days = 120 }
+		}
+	}
+
+	#Take it all
+	option = {
+		name = BS_Finland.13.b
+		FIN = { country_event = { id = fincon.5 } }
+	}
+}
+
+#Soviets don't agree
+country_event = {
+	id = BS_Finland.14
+	title = BS_Finland.14.t
+	desc = BS_Finland.14.d
+	picture = GFX_report_end_of_continuation_war
+	
+	is_triggered_only = yes
+
+	option = {
+		name = BS_Finland.14.a
+		clr_global_flag = finland_soviet_continuation_war
+	}
+}
+
+news_event = {
+	id = BS_Finland.15
+	title = BS_Finland.15.t
+	desc = BS_Finland.15.d
+	picture = GFX_news_event_end_of_continuation_war
+
+	major = yes
+
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = fincon.6.a
+		trigger = {
+			OR = {
+				has_government = fascism
+				has_war_with = SOV
+			}
+		}
+	}
+
+	option = {
+		name = BS_Finland.15.b
+		trigger = {
+			AND = {
+				NOT = { has_government = fascism }
+				NOT = { has_war_with = SOV }
+			}
+		}
+	}	
+}
+
+#FINLAND JOINS THE ALLIES
+country_event = {
+	id = BS_Finland.16
+	title = BS_Finland.16.t
+	desc = BS_Finland.16.d
+	picture = GFX_report_end_of_continuation_war
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		date > 1944.1.1
+		is_subject = no
+		is_in_faction = yes
+		#has_government = democratic
+		OR = {
+			FIN = { is_puppet = no }
+			FIN = { is_subject_of = ENG }
+		}
+		country_exists = FIN
+		FIN = { is_in_faction = no }
+		#has_government = democratic
+		#USA = { has_war_with = GER }
+		USA = { is_in_faction_with = ENG }
+	}
+	
+	option = {
+		name = BS_Finland.16.a
+		ai_chance = { factor = 100 }
+		FIN = { 
+			country_event = {
+    				id = fincon.8
+				days = 2
+				random = 2
+			}
+		}
+	}
+
+	option = {
+		name = BS_Finland.16.b
+	}	
+}
+
+country_event = {
+	id = BS_Finland.17
+	title = BS_Finland.17.t
+	desc = BS_Finland.17.d
+	picture = GFX_report_end_of_continuation_war
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BS_Finland.17.a
+		ai_chance = { factor = 100 }
+		ENG = { add_to_faction = FIN }
+		if = {
+			limit = { 
+				ENG = { has_war_with = GER }
+			}
+			add_to_war = { 
+				targeted_alliance = ENG
+				enemy = GER 
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+
+	option = {
+		name = BS_Finland.17.b
+	}	
+}
+
+country_event = {
+	id = BS_Finland.18
+	title = BS_Finland.18.t
+	desc = {
+		text = BS_Finland.18.desc
+	}
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = BS_Finland.18.a
+		create_country_leader = {
+			name = "Juho Kusti Paasikivi"
+			desc = ""
+			picture = "r56_portrait_FIN_JK_paasikivi.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+				Neutrality_Advocate
+			}
+		}
+		create_country_leader = {
+			name = "Juho Kusti Paasikivi"
+			desc = ""
+			picture = "r56_portrait_FIN_JK_paasikivi.dds"
+			expire = "1965.1.1"
+			ideology = centrism_conservative
+			traits = {
+				Neutrality_Advocate
+			}
+		}
+		FIN = { 
+			add_popularity = { ideology = democratic popularity = 0.5 }
+			add_popularity = { ideology = communism popularity = 0.15 }
+		}
+		FIN = {
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		}
+		set_party_name = { ideology = democratic long_name = FIN_democratic_party_long name = FIN_democratic_party }
+		set_party_name = { ideology = neutrality long_name = FIN_neutrality_party_long name = FIN_neutrality_party }
+		add_ideas = {
+			neutrality_idea
+		}
+		set_global_flag = Paasikivi_leadership
+	}
+}

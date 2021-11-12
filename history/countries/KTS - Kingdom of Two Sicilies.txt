@@ -1,0 +1,100 @@
+﻿capital = 117
+
+oob = "ITA_1936"
+
+set_research_slots = 3
+
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	#basic_heavy_tank = 1  # PLACEHOLDER
+	#basic_medium_tank = 1 # PLACEHOLDER
+	early_fighter = 1
+	early_bomber = 1
+	naval_bomber1 = 1
+	CAS1 = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	basic_battleship = 1
+	early_battlecruiser = 1
+	transport = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+}
+
+set_convoys = 10
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 15
+	fascism = 10
+	communism = 0
+	neutrality = 75
+}
+
+
+
+create_country_leader = {
+	name = "Ferdinand Pius I"
+	desc = ""
+	picture = "portrait_ferdinand_pius.dds"
+	expire = "1960.1.1"
+	ideology = absolute_monarchism
+	traits = {
+		Autocratic_monarch
+	}
+}
+
+create_country_leader = {
+	name = "Ferdinand Pius I"
+	desc = ""
+	picture = "portrait_ferdinand_pius.dds"
+	expire = "1960.1.1"
+	ideology = ultranationalism
+	traits = {
+		Autocratic_monarch
+	}
+}
+
+create_country_leader = {
+	name = "Gaudino Castaldi"
+	desc = ""
+	picture = "gfx/leaders/Europe/portrait_europe_generic_1.dds"
+	expire = "1960.1.1"
+	ideology = marxism
+	traits = {
+		
+	}
+}
+
+#One of the most influential sicilian mafia bosses, considered the godfather of the sicilian mafia, though, such position did not exist within the loose structure of La Cosa Nostra, Very popular among the peasants, Peasants claim he is not a criminal but a champion of justice, funeral attended by thousands of peasants, Member of the christian democratic party, wanted an independent sicily and supported the sicilian separatists, central in the mafia's support of the allies in sicily, considered the personification of the restoration of democracy in sicily, considered a man of honor, though, still a criminal. And it would be a missed opportunity to not have a mafioso in sicily.
+
+create_country_leader = {
+	name = "Calogero Vizzini"
+	desc = ""
+	picture = "Calogero_Vizzini.tga"
+	expire = "1960.1.1"
+	ideology = conservatism
+	traits = {
+		man_of_the_nation
+		Crime_Boss
+	}
+}

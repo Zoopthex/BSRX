@@ -1,0 +1,406 @@
+RK_future = {
+
+	#----RK Ukraine stuff----
+
+	RKU_ukraine_uprising = {
+
+		name = ukraine_uprising
+
+		icon = revolt
+
+		allowed = {
+			original_tag = RKU
+		}
+
+		available = {
+			NOT = {
+				any_state = {
+    				is_owned_by = RKU
+    				NOT = { is_core_of = RKU }
+    				is_core_of = UKR
+				}
+			}
+			is_subject = no
+		}
+
+		priority = 50
+
+		fire_only_once = yes
+
+		days_mission_timeout = 90
+
+		is_good = no
+
+		cancel_if_not_visible = yes
+
+		activation = {
+			any_state = {
+				is_owned_by = RKU
+				NOT = { is_core_of = RKU }
+				is_core_of = UKR
+			}
+			is_subject = no
+			NOT = { country_exists = UKR }
+		}
+
+		visible = {
+			any_state = {
+				is_owned_by = RKU
+				NOT = { is_core_of = RKU }
+				is_core_of = UKR
+			}
+			is_subject = no
+			NOT = { country_exists = UKR }
+		}
+
+		timeout_effect = {
+			country_event = {
+				id = bs_rk.2
+				random = 24
+			}
+		}
+
+		complete_effect = {
+			add_stability = 0.1
+		}
+	}
+
+	RKU_affirm_german_identity = {
+
+		visible = {
+			original_tag = RKU
+			exists = yes
+			has_active_mission = RKU_ukraine_uprising
+		}
+
+		icon = generic_form_nation
+
+		cost = 15
+
+		fire_only_once = yes
+
+		available = {
+			check_variable = {
+				var = num_core_states
+				value = 10
+				compare = greater_than_or_equals
+			}
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = german_ukraine_affirmed
+			set_global_flag = RKU_affirmed_GER_speak
+			retire_ideology_leader = neutrality
+			retire_ideology_leader = communism
+			retire_ideology_leader = democratic
+			create_country_leader = {
+				name = "Council For The German-Ukrainians"
+				desc = "DESC_RUSHED_COUNCIL"
+				picture = "gfx/leaders/UKR/indep_RKU_council.dds"
+				expire = "1965.1.1"
+				ideology = conservatism
+				traits = {
+					rushed_council
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	RKU_concede_control_to_ukraine = {
+
+		visible = {
+			original_tag = RKU
+			exists = yes
+			has_active_mission = RKU_ukraine_uprising
+		}
+
+		icon = generic_form_nation
+
+		cost = 15
+
+		fire_only_once = yes
+
+		available = {
+			original_tag = RKU
+			exists = yes
+			has_active_mission = RKU_ukraine_uprising
+		}
+
+		complete_effect = {
+			country_event = {
+				id = bs_rk.3
+				days = 1
+				random = 24
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+RK_request_control_over_industry = {
+
+	RK_request_control_over_mils = {
+
+		visible = {
+			is_RK_or_RP = yes
+			is_subject_of = GER
+		}
+
+		icon = generic_industry
+
+		cost = 15
+
+		fire_only_once = no
+
+		available = {
+			is_RK_or_RP = yes
+			NOT = {
+				has_idea = RK_mils_control
+			}
+		}
+
+		complete_effect = {
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = RK_mils_control
+					days = 90
+				}
+			}
+			GER = { 
+				custom_effect_tooltip = needs_approval
+			}
+			hidden_effect = {
+				GER = {
+					country_event = {
+						id = bs_ger.73
+						days = 1
+						random = 12
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				any_controlled_state = {
+					has_active_resistance = yes
+					resistance > 60
+				}
+				factor = 1000
+			}
+		}
+	}
+}
+
+BS_disestablish_RKs = {
+	disestablish_PBM = {
+
+		visible = {
+			OR = {
+				has_war_with = PBM
+				PBM = {
+					is_subject_of = ROOT
+					OVERLORD = {
+						NOT = { original_tag = GER }
+					}
+				}
+			}
+		}
+
+		icon = generic_form_nation
+
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				has_war_with = PBM
+				PBM = {
+					is_subject_of = ROOT
+					OVERLORD = {
+						NOT = { original_tag = GER }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = PBM
+				}
+				controls_state = 9
+				controls_state = 75
+				controls_state = 1612
+				is_subject = no
+			}
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = PBM
+				}
+				remove_core_of = PBM
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_in_faction_with = CZE
+					}
+					CZE = {
+						annex_country = {
+							target = PBM
+							transfer_troops = no
+						}
+					}
+				}
+				else = {
+					ROOT = {
+						annex_country = {
+							target = PBM
+							transfer_troops = no
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	disestablish_GGO = {
+
+		visible = {
+			OR = {
+				has_war_with = GGO
+				GGO = {
+					is_subject_of = ROOT
+					OVERLORD = {
+						NOT = { original_tag = GER }
+					}
+				}
+			}
+		}
+
+		icon = generic_form_nation
+
+		fire_only_once = yes
+
+		available = {
+			OR = {
+				has_war_with = GGO
+				GGO = {
+					is_subject_of = ROOT
+					OVERLORD = {
+						NOT = { original_tag = GER }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = GGO
+				}
+				GGO = { has_capitulated = yes }
+				is_subject = no
+			}
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = GGO
+				}
+				remove_core_of = GGO
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_war_with = GGO
+					}
+					every_state = {
+						limit = {
+							is_owned_by = GGO
+						}
+						set_state_flag = GGO_state
+					}
+				}
+				if = {
+					limit = {
+						is_in_faction_with = POL
+					}
+					POL = {
+						annex_country = {
+							target = GGO
+							transfer_troops = no
+						}
+					}
+				}
+				else = {
+					ROOT = {
+						annex_country = {
+							target = GGO
+							transfer_troops = no
+						}
+					}
+					if = {
+						limit = {
+							tag = SOV
+							has_government = communism
+						}
+						puppet = POL
+						if = {
+							limit = {
+								has_global_flag = GGO_completed
+							}
+							transfer_state = 91
+							transfer_state = 89
+							transfer_state = 1982
+							transfer_state = 1180
+							transfer_state = 1769
+							transfer_state = 1768
+							transfer_state = 1553
+							transfer_state = 1386
+							transfer_state = 1590
+						}
+						POL = {
+							transfer_state = 10
+							transfer_state = 92
+							transfer_state = 90
+							transfer_state = 1558	
+							transfer_state = 1737				
+							transfer_state = 1603				
+							transfer_state = 88
+							transfer_state = 1983
+							transfer_state = 1773
+							transfer_state = 1374
+							transfer_state = 1406			
+							transfer_state = 1599	
+							transfer_state = 1588
+							transfer_state = 1589	
+							transfer_state = 1603
+							transfer_state = 1587
+							transfer_state = 1712
+							transfer_state = 996
+							transfer_state = 97
+							transfer_state = 1363
+							transfer_state = 1373
+							transfer_state = 1440
+							transfer_state = 1969
+							transfer_state = 1972
+							set_cosmetic_tag = POL_provisional_government
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

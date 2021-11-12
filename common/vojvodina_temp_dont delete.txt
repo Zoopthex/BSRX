@@ -1,0 +1,197 @@
+﻿	############################
+	###### VOJVODINA PATH ######
+	############################ This is just place holder to have the code since kris decided to be dumb and get rid of the code instead of saving it in a different file i am doing it now 
+	
+	#freedom rings
+	focus = {
+		id = YUG_freedom_rings
+		icon = GFX_goal_generic_position_armies
+		
+		cost = 5
+		#Make sure that this is only available if none of the other Yugoslavian focuses are completed.
+		x = 52
+		y = 0
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#spread the flames
+	focus = {
+		id = YUG_spread_the_flames
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = YUG_freedom_rings }
+		
+		cost = 5
+		
+		x = 52
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#base pançevo
+	focus = {
+		id = YUG_basepancevo
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = YUG_spread_the_flames }
+		mutually_exclusive = { focus = YUG_exert_novi_sad }
+		mutually_exclusive = { focus = YUG_reach_sremska }
+		
+		cost = 5
+		
+		x = 52
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#exert novi sad
+	focus = {
+		id = YUG_exert_novi_sad
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = YUG_spread_the_flames }
+		mutually_exclusive = { focus = YUG_basepancevo }
+		mutually_exclusive = { focus = YUG_reach_sremska }
+		
+		cost = 5
+		
+		x = 54
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#reach sremska
+	focus = {
+		id = YUG_reach_sremska
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = YUG_spread_the_flames }
+		mutually_exclusive = { focus = YUG_basepancevo }
+		mutually_exclusive = { focus = YUG_exert_novi_sad }
+		
+		cost = 5
+		
+		x = 50
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	
+	#meet with leaders
+	focus = {
+		id = YUG_meet_with_leaders
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = YUG_reach_sremska focus = YUG_exert_novi_sad focus = YUG_basepancevo }
+		
+		cost = 5
+		
+		x = 52
+		y = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#talk suceed
+	focus = {
+		id = YUG_talk_suceed
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = YUG_meet_with_leaders }
+		mutually_exclusive = { focus = YUG_talks_fail }
+		
+		cost = 5
+		
+		x = 51
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	
+
+	#begin transition
+	focus = {
+		id = YUG_begin_transition
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = YUG_talk_suceed }
+		
+		cost = 5
+		
+		x = 51
+		y = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#talks fail
+	focus = {
+		id = YUG_talks_fail
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = YUG_meet_with_leaders }
+		mutually_exclusive = { focus = YUG_talk_suceed }
+		
+		cost = 5
+		
+		x = 53
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	
+	#prepare the fronts
+	focus = {
+		id = YUG_prepare_the_fronts
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = YUG_talks_fail }
+		
+		cost = 5
+		
+		x = 53
+		y = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	
+	#new governmet
+	focus = {
+		id = YUG_new_governmet
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = YUG_prepare_the_fronts focus = YUG_begin_transition }
+		
+		cost = 5
+		
+		x = 52
+		y = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	
+	#Vojvodinist revolution
+	focus = {
+		id = YUG_vojvodinist_revolution
+		icon = GFX_goal_generic_position_armies
+		
+		cost = 5
+		
+		x = 57
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_completed_focus = YUG_basepancevo
+
+			has_completed_focus = YUG_new_governmet
+
+			
+		}
+	}

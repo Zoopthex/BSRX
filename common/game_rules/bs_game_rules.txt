@@ -1,0 +1,277 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	required_dlc = "Name of the Required DLC"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	icon = gfx_option_token							# Optional icon
+#	option = {										# Unless other specified, the first option is the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		allow_achievements = no						# This is for cosmetics, as this mod automatically disbales achievements due to overwriting a lot of files.
+#													# If not specified, this is set to yes for default options and no for all other options.
+#	}
+#	default = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		...
+#	}
+# }
+
+states_renames_rule = {
+	name = "STATE_RENAMES"
+	group = "RULE_BS_GAMEPLAY"
+	default = {
+		name = STATES_YES
+		text = "STATES_YES"
+		desc = "STATES_YES_DESC"
+	}
+	option = {
+		name = STATES_NO
+		text = "STATES_NO"
+		desc = "STATES_NO_DESC"
+	}
+}
+
+vanilla_colorss = {
+	name = "VANILLA_COLORSS"
+	group = "RULE_BS_GAMEPLAY"
+	default = {
+		name = GAMER
+		text = "GAMER_COLORS"
+		desc = "GAMER_COLORS_DESC"
+	}
+	option = {
+		name = FUCK_YOU_CUNT
+		text = "FUCK_YOU_CUNT"
+		desc = "FUCK_YOU_CUNT_DESC"
+	}
+}
+
+#portrait_stuff = {
+#	name = "PORTRAITS_HM"
+#	group = "RULE_BS_GAMEPLAY"
+#	default = {
+#		name = GAMER_PORT
+#		text = "GAMER_PORT"
+#		desc = "GAMER_PORT_DESC"
+#	}
+#	option = {
+#		name = NO_PLEASES
+#		text = "NO_PLEASES"
+#		desc = "NO_PLEASES_DESC"
+#	}
+#}
+
+allow_bs_extra = {
+	name = "RULE_ALLOW_BS_EXTRA"
+	group = "RULE_BS_GAMEPLAY"
+	icon = "GFX_release_nations"
+	default = {
+		name = BS_ALLOWED
+		text = "RULE_OPTION_ALLOWED"
+		desc = "RULE_ALLOW_BS_EXTRA_ALLOWED_DESC"
+	}
+	option = {
+		name = BS_BLOCKED
+		text = "RULE_OPTION_BLOCKED"
+		desc = "RULE_ALLOW_BS_EXTRA_BLOCKED_DESC"
+	}
+}
+
+allow_bs_focus_trees = {
+	name = "RULE_ALLOW_BS_FT"
+	group = "RULE_BS_GAMEPLAY"
+
+	default = {
+		name = BS_TREES
+		text = "BS_TREES"
+		desc = "BS_TREES_DESC"
+	}
+	option = {
+		name = NO_MAJOR_REWORKS
+		text = "NO_MAJOR_REWORKS"
+		desc = "NO_MAJOR_REWORKS_DESC"
+	}
+	option = {
+		name = PARADOX_TREES
+		text = "PARADOX_TREES"
+		desc = "PARADOX_TREES_DESC"
+	}
+}
+
+allow_fragment_trees = {
+	name = "RULE_ALLOW_BS_FRAGMENT_TREES"
+	group = "RULE_BS_GAMEPLAY"
+
+	default = {
+		name = FRAGMENT_YES
+		text = "FRAGMENT_YES"
+		desc = "FRAGMENT_YES_DESC"
+	}
+	option = {
+		name = FRAGMENT_GENERIC
+		text = "FRAGMENT_GENERIC"
+		desc = "FRAGMENT_GENERIC_DESC"
+	}
+	option = {
+		name = FRAGMENT_NO
+		text = "FRAGMENT_NO"
+		desc = "FRAGMENT_NO_DESC"
+	}
+}
+
+nano_nation = {
+	name = "RULE_BS_NANO_NATION"
+	group = "RULE_BS_GAMEPLAY"
+
+	default = {
+		name = BS_ALLOWED
+		text = "RULE_OPTION_ALLOWED"
+		desc = "RULE_BS_NANO_NATION_ALLOW_DESC"
+	}
+	option = {
+		name = BS_BLOCKED
+		text = "RULE_OPTION_BLOCKED"
+		desc = "RULE_BS_NANO_NATION_BLOCKED_DESC"
+	}
+}
+
+east_hebei_status = {
+	name = "RULE_EASTHEBEI"
+	group = "RULE_BS_GAMEPLAY"
+	default = {
+		name = EASTHEBEI_PUPPET
+		text = "RULE_OPTION_EASTHEBEI_DEFAULT"
+		desc = "RULE_OPTION_EASTHEBEI_DEFAULT_DESC"
+	}
+	option = {
+		name = NO_EASTHEBEI
+		text = "RULE_OPTION_NO_EASTHEBEI"
+		desc = "RULE_OPTION_NO_EASTHEBEI_DESC"
+	}
+}
+
+ger_fragmentation_status = {
+	name = "RULE_BS_GERMANY_FRAGMENTATION"
+	group = "RULE_BS_GAMEPLAY"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_FRAGMENTATION_DESC"
+	}
+	option = {
+		name = GER_FRAGMENTED
+		text = "BS_GERMANY_FRAGMENTED"
+		desc = "BS_GERMANY_FRAGMENTED_DESC"
+	}
+}
+
+ita_fragmentation_status = {
+	name = "RULE_BS_ITALY_FRAGMENTATION"
+	group = "RULE_BS_GAMEPLAY"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_FRAGMENTATION_DESC"
+	}
+	option = {
+		name = ITA_FRAGMENTED
+		text = "BS_ITALY_FRAGMENTED"
+		desc = "BS_ITALY_FRAGMENTED_DESC"
+	}
+}
+
+cze_fragmentation_status = {
+	name = "RULE_BS_CZECHO_FRAGMENTATION"
+	group = "RULE_BS_GAMEPLAY"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_FRAGMENTATION_DESC"
+	}
+	option = {
+		name = CZE_SLO_FRAGMENTED
+		text = "BS_CZECHO_AND_SLOVAKIA"
+		desc = "BS_CZECHO_AND_SLOVAKIA_DESC"
+	}
+	option = {
+		name = CZE_FRAGMENTED
+		text = "BS_CZECHO_FRAGMENTED"
+		desc = "BS_CZECHO_FRAGMENTED_DESC"
+	}
+}
+rom_fragmentation_status = {
+	name = "RULE_BS_ROMANIA_FRAGMENTATION"
+	group = "RULE_BS_GAMEPLAY"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_FRAGMENTATION_DESC"
+	}
+	option = {
+		name = ROM_FRAGMENTED
+		text = "BS_ROMANIA_FRAGMENTED"
+		desc = "BS_ROMANIA_FRAGMENTED_DESC"
+	}
+}
+bel_fragmentation_status = {
+	name = "RULE_BS_BELGIUM_FRAGMENTATION"
+	group = "RULE_BS_GAMEPLAY"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_FRAGMENTATION_DESC"
+	}
+	option = {
+		name = FLANDERS_AND_WALLONIA
+		text = "BS_FLANDERS_WALLONIA"
+		desc = "BS_FLANDERS_WALLONIA_DESC"
+	}
+	option = {
+		name = BEL_FRAGMENTED
+		text = "BS_BELGIUM_FRAGMENTED"
+		desc = "BS_BELGIUM_FRAGMENTED_DESC"
+	}
+	option = {
+		name = BEL_PARTITIONED
+		text = "BS_BELGIUM_PARTITIONED"
+		desc = "BS_BELGIUM_PARTITIONED_DESC"
+	}
+}
+usa_fragmentation_status = {
+	name = "RULE_BS_USA_FRAGMENTATION"
+	group = "RULE_BS_GAMEPLAY"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_FRAGMENTATION_DESC"
+	}
+	option = {
+		name = USA_FRAGMENTED
+		text = "BS_USA_FRAGMENTED"
+		desc = "BS_USA_FRAGMENTED_DESC"
+	}
+}
+china_warlords_status = {
+	name = "RULE_BS_CHINA"
+	group = "RULE_BS_GAMEPLAY"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_FRAGMENTATION_DESC"
+	}
+	option = {
+		name = CHINA_WARLORDS
+		text = "CHINA_WARLORDS"
+		desc = "CHINA_WARLORDS_DESC"
+	}
+	option = {
+		name = CHINA_EXTRA_WARLORDS
+		text = "CHINA_EXTRA_WARLORDS"
+		desc = "CHINA_EXTRA_WARLORDS_DESC"
+	}	
+}

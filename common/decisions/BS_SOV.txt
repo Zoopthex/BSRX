@@ -1,0 +1,2505 @@
+
+expand_soviet_union_category = {
+	
+	form_estonian_ssr = {
+	
+		icon = generic_form_nation
+		
+		highlight_state_targets = {
+			state = 890
+			state = 883
+			state = 191
+			state = 13
+			state = 882
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 890
+				controls_state = 883
+				controls_state = 191
+				controls_state = 13
+				controls_state = 882
+				if = {
+					core_compliance = {
+    				occupied_country_tag = EST
+    				value > 30
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 890
+			controls_state = 883
+			controls_state = 191
+			controls_state = 13
+			controls_state = 882
+			NOT = {
+				has_country_flag = formed_estonian_ssr
+			}
+		}
+
+		cost = 5
+		
+		complete_effect = {
+			890 = { add_core_of = SOV }
+			883 = { add_core_of = SOV }
+			191 = { add_core_of = SOV }
+			13 = { add_core_of = SOV }
+			882 = { add_core_of = SOV }
+			890 = { remove_core_of = EST }
+			883 = { remove_core_of = EST }
+			set_country_flag = formed_estonian_ssr
+			EST = {
+			set_cosmetic_tag = EST_SOV		
+			set_popularities = {
+				democratic = 20
+				fascism = 30
+				communism = 50
+			}
+
+			set_politics = {
+					ruling_party = communism
+					last_election = "1936.1.1"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_latvian_ssr = {
+	
+		icon = generic_form_nation
+		
+		highlight_state_targets = {
+			state = 891
+			state = 880
+			state = 12
+			state = 881
+			state = 1346
+			state = 1349			
+			state = 190
+			state = 1454
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 891
+				controls_state = 880
+				controls_state = 12
+				controls_state = 1346
+				controls_state = 1349				
+				controls_state = 881
+				controls_state = 190
+				controls_state = 1454
+				if = {
+					core_compliance = {
+    				occupied_country_tag = LAT
+    				value > 30
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 891
+			controls_state = 880
+			controls_state = 12
+			controls_state = 881
+			controls_state = 190
+			controls_state = 1346
+			controls_state = 1349
+			controls_state = 1454			
+			NOT = {
+				has_country_flag = formed_latvian_ssr
+			}
+		}
+
+		cost = 5
+		
+		complete_effect = {
+			891 = { add_core_of = SOV }
+			880 = { add_core_of = SOV }
+			12 = { add_core_of = SOV }
+			881 = { add_core_of = SOV }
+			190 = { add_core_of = SOV }
+			1346 = { add_core_of = SOV }
+			1349 = { add_core_of = SOV }
+			1454 = { add_core_of = SOV }		
+			891 = { remove_core_of = LAT }
+			set_country_flag = formed_latvian_ssr
+			LAT = {
+			set_cosmetic_tag = LAT_SOV		
+			set_popularities = {
+				democratic = 20
+				fascism = 30
+				communism = 50
+			}
+
+			set_politics = {
+					ruling_party = communism
+					last_election = "1936.1.1"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_lithuanian_ssr = {
+	
+		icon = generic_form_nation
+		
+		highlight_state_targets = {
+			state = 11
+			state = 189
+			state = 2019
+			state = 879
+			state = 1992
+			state = 188
+			state = 1293
+			state = 1604
+			state = 1438		
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 11
+				controls_state = 189
+				controls_state = 879
+				controls_state = 1293
+				controls_state = 1438
+				controls_state = 1604
+				controls_state = 1992
+				controls_state = 2019		
+				if = {
+					11 = {
+					compliance > 30
+					}
+				}
+				if = {
+					189 = {
+					compliance > 30
+					}
+				}
+				if = {
+					879 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1293 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1438 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1604 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1992 = {
+					compliance > 30
+					}
+				}
+				if = {
+					2019 = {
+					compliance > 30
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = SOV_handed_vilnius
+					}
+					controls_state = 784
+					784 = {
+						compliance > 30
+					}
+					controls_state = 1563
+					1563 = {
+						compliance > 30
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 11
+			controls_state = 189
+			controls_state = 879
+			controls_state = 1438
+			controls_state = 1293
+			controls_state = 1992
+			controls_state = 2019
+			NOT = {
+				has_country_flag = formed_lithuanian_ssr
+			}
+		}
+
+		cost = 5
+		
+		complete_effect = {
+			if = {
+				limit = {
+					has_country_flag = SOV_handed_vilnius
+				}
+				784 = { add_core_of = SOV }
+				1563 = { add_core_of = SOV }
+				784 = { remove_core_of = POL }	
+				1563 = { remove_core_of = POL }
+			}
+			11 = { add_core_of = SOV }
+			189 = { add_core_of = SOV }
+			1992 = { add_core_of = SOV }			
+			879 = { add_core_of = SOV }
+			188 = { add_core_of = SOV }
+			2019 = { add_core_of = SOV }			
+			1293 = { add_core_of = SOV }
+			1604 = { add_core_of = SOV }
+			1438 = { add_core_of = SOV }		
+			set_country_flag = formed_lithuanian_ssr
+			LIT = {
+			set_cosmetic_tag = LIT_SOV		
+			set_popularities = {
+				democratic = 20
+				fascism = 30
+				communism = 50
+			}
+
+			set_politics = {
+					ruling_party = communism
+					last_election = "1936.1.1"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	new_soviet_romania_borders = {
+	
+		icon = generic_form_nation
+		
+		highlight_state_targets = {
+			state = 766
+			state = 925
+			state = 80
+			state = 78
+			state = 1939
+			state = 1940
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 766
+				controls_state = 925
+				controls_state = 80
+				controls_state = 78
+				if = {
+					766 = {
+					compliance > 50
+					}
+				}
+				if = {
+					925 = {
+					compliance > 50
+					}
+				}
+				if = {
+					80 = {
+					compliance > 50
+					}
+				}
+				if = {
+					78 = {
+					compliance > 50
+					}
+				}
+				if = {
+					1939 = {
+					compliance > 50
+					}
+				}
+				if = {
+					1940 = {
+					compliance > 50
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 766
+			controls_state = 925
+			controls_state = 80
+			controls_state = 78
+			controls_state = 1939
+			controls_state = 1940
+			NOT = {
+				has_country_flag = formed_new_soviet_romania_borders
+			}
+		}
+
+		cost = 15
+		
+		complete_effect = {
+			766 = { add_core_of = SOV }
+			925 = { add_core_of = SOV }
+			80 = { add_core_of = SOV }
+			78 = { add_core_of = SOV }
+			1939 = { add_core_of = SOV }
+			1940 = { add_core_of = SOV }
+			766 = { remove_core_of = ROM }
+			925 = { remove_core_of = ROM }
+			80 = { remove_core_of = ROM }
+			78 = { remove_core_of = ROM }
+			1939 = { remove_core_of = ROM }
+			1940 = { remove_core_of = ROM }
+			hidden_effect = {
+				#766 = { add_core_of = UKR } already core of ukraine
+				925 = { add_core_of = UKR }
+				#80 = { add_core_of = UKR } already core of ukraine
+				829 = { add_core_of = UKR }
+				766 = { remove_core_of = MOL }
+				1100 = { remove_core_of = MOL }
+				825 = { remove_core_of = MOL }
+			}
+			set_country_flag = formed_new_soviet_romania_borders
+			MOL = {
+				set_cosmetic_tag = MOL_SOV2		
+				set_popularities = {
+					democratic = 20
+					fascism = 30
+					communism = 50
+				}
+
+				set_politics = {
+					ruling_party = communism
+					last_election = "1936.1.1"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+		}
+		
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	curzon_line_a = {
+	
+		icon = generic_form_nation
+		
+		highlight_state_targets = {
+			state = 94
+			state = 93
+			state = 1180
+			state = 1553			
+			state = 89
+			state = 91
+			state = 1192
+			state = 1971
+			state = 933
+			state = 2045
+			state = 2046
+			state = 1656			
+			state = 95
+			state = 1433
+			state = 1434			
+			state = 1191
+			#state = 784
+			state = 1205			
+			state = 96
+			state = 1375
+			state = 1383
+			state = 1981			
+			state = 1384
+			state = 1385
+			state = 1590			
+			state = 1386
+			state = 1768
+			state = 1769
+			state = 1416
+			state = 1417
+			state = 1441
+			state = 1485
+			state = 1557
+            state = 1555		
+            state = 1602
+			state = 1982
+			state = 1997
+			state = 2001		
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				custom_trigger_tooltip = {
+					tooltip = form_eastern_poland_required
+					controls_state = 94
+					controls_state = 93
+					controls_state = 1180
+					controls_state = 1553					
+					controls_state = 89
+					controls_state = 91
+					controls_state = 1192
+					controls_state = 933
+					controls_state = 95
+					controls_state = 1191				
+					controls_state = 1205
+					controls_state = 96
+					controls_state = 1375
+					controls_state = 1383
+					controls_state = 1384
+					controls_state = 1385
+					controls_state = 1602					
+					controls_state = 1386
+					controls_state = 1416
+					controls_state = 1417
+					controls_state = 1433
+					controls_state = 1434
+					controls_state = 1485
+                    controls_state = 1555
+                    controls_state = 1557
+					controls_state = 1982
+					controls_state = 1997				
+					if = {
+						94 = {
+						compliance > 70
+						}
+					}
+					if = {
+						93 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1180 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1553 = {
+						compliance > 70
+						}
+					}					
+					if = {
+						89 = {
+						compliance > 70
+						}
+					}
+					if = {
+						91 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1192 = {
+						compliance > 70
+						}
+					}
+					if = {
+						933 = {
+						compliance > 70
+						}
+					}
+					if = {
+						2045 = {
+						compliance > 70
+						}
+					}
+					if = {
+						2046 = {
+						compliance > 70
+						}
+					}					
+					if = {
+						95 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1191 = {
+						compliance > 70
+						}
+					}
+					if = {
+						limit = {
+							NOT = { has_country_flag = SOV_handed_vilnius }
+						}
+						controls_state = 784
+						784 = {
+							compliance > 70
+						}
+						controls_state = 1563
+						1563 = {
+							compliance > 70
+						}
+					}
+					if = {
+						1205 = {
+						compliance > 70
+						}
+					}
+					if = {
+						96 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1375 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1383 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1384 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1385 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1386 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1416 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1417 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1433 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1434 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1441 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1485 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1982 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1997 = {
+						compliance > 70
+						}
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 94
+			controls_state = 93
+			controls_state = 1180
+			controls_state = 1553			
+			controls_state = 89
+			controls_state = 91
+			controls_state = 1192
+			controls_state = 933
+			controls_state = 2045
+			controls_state = 2046
+			controls_state = 1656			
+			controls_state = 95
+			controls_state = 1191
+			#controls_state = 784
+			controls_state = 1205
+			controls_state = 96
+			controls_state = 1375
+			controls_state = 1383
+			controls_state = 1384
+			controls_state = 1602			
+			controls_state = 1385
+			controls_state = 1386
+			controls_state = 1416
+			controls_state = 1417
+			controls_state = 1433
+			controls_state = 1434	
+			controls_state = 1441
+			controls_state = 1485
+			controls_state = 1982
+			controls_state = 1997		
+			NOT = {
+				OR = {
+					has_country_flag = formed_curzon_line_a
+					has_country_flag = formed_curzon_line_b
+				}
+			}
+		}
+
+		cost = 40
+		
+		complete_effect = {
+			custom_effect_tooltip = form_eastern_poland_cores
+			custom_effect_tooltip = poland_lose_eastern_poland_cores
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SOV_handed_vilnius }
+					}	
+					784 = { add_core_of = SOV }
+					784 = { remove_core_of = POL }
+					1563 = { add_core_of = SOV }
+					1563 = { remove_core_of = POL }
+				}
+				94 = { add_core_of = SOV }
+				93 = { add_core_of = SOV }				
+				1191 = { add_core_of = SOV }
+				1191 = { remove_core_of = POL }
+				2001 = { add_core_of = SOV }
+				2001 = { remove_core_of = POL }	
+				1180 = { add_core_of = SOV }
+				1553 = { add_core_of = SOV }				
+				89 = { add_core_of = SOV }
+				91 = { add_core_of = SOV }
+				1192 = { add_core_of = SOV }
+				933 = { add_core_of = SOV }
+				2045 = { add_core_of = SOV }
+				2046 = { add_core_of = SOV }				
+				1656 = { add_core_of = SOV }
+				95 = { add_core_of = SOV }
+				1433 = { add_core_of = SOV }
+				1434 = { add_core_of = SOV }
+				1602 = { add_core_of = SOV }
+				1205 = { add_core_of = SOV }
+				96 = { add_core_of = SOV }
+				1768 = { add_core_of = SOV }
+				1769 = { add_core_of = SOV }
+				1375 = { add_core_of = SOV }
+				1981 = { add_core_of = SOV }				
+				1555 = { add_core_of = SOV }
+				1557 = { add_core_of = SOV }				
+				1383 = { add_core_of = SOV }
+				1590 = { add_core_of = SOV }
+				1971 = { add_core_of = SOV }
+				1384 = { add_core_of = SOV }
+				1385 = { add_core_of = SOV }
+				1386 = { add_core_of = SOV }
+				1416 = { add_core_of = SOV }
+				1417 = { add_core_of = SOV }
+				1433 = { add_core_of = SOV }
+				1434 = { add_core_of = SOV }
+				1441 = { add_core_of = SOV }
+				1485 = { add_core_of = SOV }
+				1982 = { add_core_of = SOV }
+				1997 = { add_core_of = SOV }
+				94 = { remove_core_of = POL }
+				1485 = { remove_core_of = POL }
+				93 = { remove_core_of = POL }
+				1971 = { remove_core_of = POL }				
+				1180 = { remove_core_of = POL }
+				1553 = { remove_core_of = POL }		
+                1768 = { remove_core_of = POL }
+                1769 = { remove_core_of = POL }				
+				89 = { remove_core_of = POL }
+				91 = { remove_core_of = POL }
+				1192 = { remove_core_of = POL }
+				933 = { remove_core_of = POL }
+				2045 = { remove_core_of = POL }
+				2046 = { remove_core_of = POL }				
+				1656 = { remove_core_of = POL }
+				1602 = { remove_core_of = POL }				
+				95 = { remove_core_of = POL }
+				1205 = { remove_core_of = POL }
+				96 = { remove_core_of = POL }
+				1590 = { remove_core_of = POL }				
+				1375 = { remove_core_of = POL }
+				1981 = { remove_core_of = POL }				
+				1383 = { remove_core_of = POL }
+				1384 = { remove_core_of = POL }
+				1385 = { remove_core_of = POL }
+				1386 = { remove_core_of = POL }				
+				1416 = { remove_core_of = POL }
+				1417 = { remove_core_of = POL }
+				1433 = { remove_core_of = POL }
+				1434 = { remove_core_of = POL }
+				1557 = { remove_core_of = POL }
+				1555 = { remove_core_of = POL }				
+				1441 = { remove_core_of = POL }
+				1982 = { remove_core_of = POL }
+				1997 = { remove_core_of = POL }
+				996 = { remove_core_of = UKR }		
+				1205 = { add_core_of = BLR }
+				1375 = { add_core_of = BLR }
+				1981 = { add_core_of = BLR }				
+				1416 = { add_core_of = BLR }
+				1417 = { add_core_of = BLR }
+				1441 = { add_core_of = BLR }
+				if = {
+					limit = {
+						has_relation_modifier = {
+							target = POL
+							modifier = SOV_collaboration_with_locals
+						}
+					}
+					remove_relation_modifier = {
+						target = POL
+						modifier = SOV_collaboration_with_locals
+					}
+				}
+			}
+			set_country_flag = formed_curzon_line_a
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	curzon_line_b = {
+	
+		icon = generic_form_nation
+		
+		highlight_state_targets = {
+			state = 94
+			state = 93
+			state = 1180
+			state = 1553			
+			state = 89
+			#state = 91
+			state = 1192
+			state = 1791
+			state = 933
+			state = 2045
+			state = 2046
+			state = 1656
+			state = 95
+			state = 1191
+			#state = 784
+			state = 1205
+			state = 96
+			state = 1375
+			state = 1981
+			state = 1383		
+			state = 1590			
+			state = 1433
+			state = 1434			
+			state = 1384
+			state = 1385
+			state = 1555
+			state = 1557
+			state = 1386
+			state = 1768
+			state = 1769			
+			state = 1416
+			state = 1417
+			state = 1433
+			state = 1434
+			state = 1441
+			state = 1485
+			state = 1602
+			state = 1997
+			state = 2001
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				custom_trigger_tooltip = {
+					tooltip = form_eastern_poland_required
+					controls_state = 94
+					controls_state = 93
+					controls_state = 1180
+					controls_state = 1553				
+					controls_state = 89
+					#controls_state = 91
+					controls_state = 1191
+					controls_state = 1192
+					controls_state = 933
+					controls_state = 1656
+					controls_state = 95
+					controls_state = 1205
+					controls_state = 96
+					controls_state = 1375
+					controls_state = 1383				
+					controls_state = 1384
+					controls_state = 1385
+					controls_state = 1386
+					controls_state = 1555
+					controls_state = 1557					
+					controls_state = 1416
+					controls_state = 1602					
+					controls_state = 1417
+					controls_state = 1485
+					controls_state = 1997
+					if = {
+						94 = {
+						compliance > 70
+						}
+					}
+					if = {
+						93 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1180 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1553 = {
+						compliance > 70
+						}
+					}					
+					if = {
+						89 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1192 = {
+						compliance > 70
+						}
+					}
+					if = {
+						933 = {
+						compliance > 70
+						}
+					}
+					if = {
+						2045 = {
+						compliance > 70
+						}
+					}
+					if = {
+						2046 = {
+						compliance > 70
+						}
+					}					
+					if = {
+						95 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1191 = {
+						compliance > 70
+						}
+					}
+					if = {
+						limit = {
+							NOT = { has_country_flag = SOV_handed_vilnius }
+						}
+						controls_state = 784
+						784 = {
+							compliance > 70
+						}
+						controls_state = 1563
+						1563 = {
+							compliance > 70
+						}
+					}
+					if = {
+						1205 = {
+						compliance > 70
+						}
+					}
+					if = {
+						96 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1375 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1383 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1384 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1385 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1386 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1416 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1417 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1433 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1434 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1441 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1485 = {
+						compliance > 70
+						}
+					}
+					if = {
+						1997 = {
+						compliance > 70
+						}
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 94
+			controls_state = 93
+			controls_state = 1180
+			controls_state = 1553			
+			controls_state = 89
+			#controls_state = 91
+			controls_state = 1192
+			controls_state = 933
+			controls_state = 2045
+			controls_state = 2046
+			controls_state = 95
+			controls_state = 1602			
+			controls_state = 1191
+			#controls_state = 784
+			controls_state = 1205
+			controls_state = 96
+			controls_state = 1375
+			controls_state = 1383
+			controls_state = 1384
+			controls_state = 1385
+			controls_state = 1386
+			controls_state = 1416
+			controls_state = 1417
+			controls_state = 1433
+			controls_state = 1434
+			controls_state = 1441
+			controls_state = 1485
+			controls_state = 1997
+			NOT = {
+				OR = {
+					has_country_flag = formed_curzon_line_a
+					has_country_flag = formed_curzon_line_b
+				}
+			}
+		}
+
+		cost = 40
+		
+		complete_effect = {
+			custom_effect_tooltip = form_eastern_poland_cores
+			custom_effect_tooltip = poland_lose_eastern_poland_cores
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SOV_handed_vilnius }
+					}	
+					784 = { add_core_of = SOV }
+					784 = { remove_core_of = POL }		
+					1563 = { add_core_of = SOV }
+					1563 = { remove_core_of = POL }
+				}
+				94 = { add_core_of = SOV }
+				93 = { add_core_of = SOV }			
+				1191 = { add_core_of = SOV }
+				1191 = { remove_core_of = POL }
+				2001 = { add_core_of = SOV }
+				2001 = { remove_core_of = POL }
+				1180 = { add_core_of = SOV }
+				1553 = { add_core_of = SOV }				
+				89 = { add_core_of = SOV }
+				#91 = { add_core_of = SOV }
+				1192 = { add_core_of = SOV }
+				933 = { add_core_of = SOV }
+				2045 = { add_core_of = SOV }
+				2046 = { add_core_of = SOV }				
+				1656 = { add_core_of = SOV }
+				1433 = { add_core_of = SOV }
+				1434 = { add_core_of = SOV }		
+				1590 = { add_core_of = SOV }				
+				95 = { add_core_of = SOV }
+				1205 = { add_core_of = SOV }
+				1485 = { add_core_of = SOV }
+				96 = { add_core_of = SOV }
+				1375 = { add_core_of = SOV }
+				1981 = { add_core_of = SOV }				
+				1383 = { add_core_of = SOV }
+				1602 = { add_core_of = SOV }	
+				1768 = { add_core_of = SOV }				
+				1769 = { add_core_of = SOV }				
+				1384 = { add_core_of = SOV }
+				1791 = { add_core_of = SOV }
+				1385 = { add_core_of = SOV }
+				1386 = { add_core_of = SOV }
+				1416 = { add_core_of = SOV }
+				1417 = { add_core_of = SOV }
+				1433 = { add_core_of = SOV }
+				1434 = { add_core_of = SOV }
+				1555 = { add_core_of = SOV }
+				1557 = { add_core_of = SOV }				
+				1441 = { add_core_of = SOV }
+				1982 = { add_core_of = SOV }
+				1997 = { add_core_of = SOV }
+				94 = { remove_core_of = POL }
+				1485 = { remove_core_of = POL }
+				93 = { remove_core_of = POL }
+				1180 = { remove_core_of = POL }
+				1553 = { remove_core_of = POL }				
+				89 = { remove_core_of = POL }
+				#91 = { remove_core_of = POL }
+				1192 = { remove_core_of = POL }
+				1971 = { remove_core_of = POL }				
+				933 = { remove_core_of = POL }
+				2045 = { remove_core_of = POL }
+				2046 = { remove_core_of = POL }				
+				1656 = { remove_core_of = POL }
+				95 = { remove_core_of = POL }
+				1205 = { remove_core_of = POL }
+				1602 = { remove_core_of = POL }				
+				1375 = { remove_core_of = POL }
+				1981 = { remove_core_of = POL }
+				1383 = { remove_core_of = POL }
+				1384 = { remove_core_of = POL }
+				1385 = { remove_core_of = POL }
+				1386 = { remove_core_of = POL }
+				1416 = { remove_core_of = POL }
+				1417 = { remove_core_of = POL }
+				1433 = { remove_core_of = POL }
+				1434 = { remove_core_of = POL }
+				1441 = { remove_core_of = POL }
+				1768 = { remove_core_of = POL }
+				1769 = { remove_core_of = POL }				
+				1555 = { remove_core_of = POL }
+				1590 = { remove_core_of = POL }				
+				1557 = { remove_core_of = POL }	
+				1982 = { remove_core_of = POL }
+				1997 = { remove_core_of = POL }				
+				96 = { remove_core_of = POL }
+				91 = { remove_core_of = UKR }
+				996 = { remove_core_of = UKR }
+				1982 = { remove_core_of = UKR }				
+				1205 = { add_core_of = BLR }
+				1375 = { add_core_of = BLR }
+				1416 = { add_core_of = BLR }
+				1417 = { add_core_of = BLR }
+				1441 = { add_core_of = BLR }
+				if = {
+					limit = {
+						has_relation_modifier = {
+							target = POL
+							modifier = SOV_collaboration_with_locals
+						}
+					}
+					remove_relation_modifier = {
+						target = POL
+						modifier = SOV_collaboration_with_locals
+					}
+				}
+			}
+			set_country_flag = formed_curzon_line_b
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	integrate_carpathian_ruthenia = {
+	
+		icon = generic_form_nation
+		
+		highlight_state_targets = {
+			state = 73
+			state = 1376
+			state = 1570
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 73
+				controls_state = 1376
+				controls_state = 1570
+				if = {
+					73 = {
+					compliance > 40
+					}
+				}
+				if = {
+					1376 = {
+					compliance > 40
+					}
+				}
+				if = {
+					1570 = {
+					compliance > 40
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 73
+			controls_state = 1376
+			controls_state = 1570
+			NOT = {
+				has_country_flag = integrated_carpathian_ruthenia
+			}
+		}
+
+		cost = 5
+		
+		complete_effect = {
+			73 = { add_core_of = SOV }
+			1376 = { add_core_of = SOV }
+			1570 = { add_core_of = SOV }
+			73 = { remove_core_of = CZE }
+			1376 = { remove_core_of = CZE }
+			1570 = { remove_core_of = CZE }
+			hidden_effect = {
+				73 = { remove_core_of = HUN }
+				73 = { remove_claim_by = HUN }
+				73 = { remove_core_of = SLO }
+				1376 = { remove_core_of = HUN }
+				1376 = { remove_claim_by = HUN }
+				1376 = { remove_core_of = SLO }
+				1570 = { remove_core_of = HUN }
+				1570 = { remove_claim_by = HUN }
+				1570 = { remove_core_of = SLO }
+			}
+			set_country_flag = integrated_carpathian_ruthenia
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	integrate_kaliningrad = {
+	
+		icon = generic_form_nation
+		
+		highlight_state_targets = {
+			state = 763
+			state = 1443
+			state = 1600
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 763
+				controls_state = 1443			
+				if = {
+					763 = {
+					compliance > 40
+					}
+					1443 = {
+					compliance > 40
+					}						
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 763
+			controls_state = 1443
+			NOT = {
+				has_country_flag = integrated_kaliningrad
+			}
+		}
+
+		cost = 10
+		
+		complete_effect = {
+			763 = { add_core_of = SOV }
+			1443 = { add_core_of = SOV }	
+            if = {
+            limit = {
+            controls_state = 1600
+            }
+            1600 = { add_core_of = SOV }
+            }
+			hidden_effect = {
+				set_country_flag = integrated_kaliningrad
+				763 = { remove_core_of = GER }
+				1443 = { remove_core_of = GER }
+				1600 = { remove_core_of = GER }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	new_finland_soviet_border = {
+	
+		icon = generic_form_nation
+		
+		highlight_state_targets = {
+			state = 146
+			state = 147
+			state = 722
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 146
+				controls_state = 147
+				controls_state = 722
+				controls_state = 1368
+				controls_state = 1369
+				controls_state = 1381
+				if = {
+					146 = {
+					compliance > 40
+					}
+				}
+				if = {
+					147 = {
+					compliance > 40
+					}
+				}
+				if = {
+					722 = {
+					compliance > 40
+					}
+				}
+				if = {
+					1368 = {
+					compliance > 40
+					}
+				}
+				if = {
+					1369 = {
+					compliance > 40
+					}
+				}
+				if = {
+					1381 = {
+					compliance > 40
+					}
+				}
+			}
+		}
+
+		visible = {
+			OR = {
+				controls_state = 146
+				controls_state = 147
+				controls_state = 722
+				controls_state = 1368
+				controls_state = 1369
+				controls_state = 1381
+			}
+			NOT = {
+				has_country_flag = formed_new_finland_soviet_border
+			}
+		}
+
+		cost = 10
+		
+		complete_effect = {
+			146 = { add_core_of = SOV }
+			147 = { add_core_of = SOV }
+			722 = { add_core_of = SOV }
+			1368 = { add_core_of = SOV }
+			1369 = { add_core_of = SOV }
+			1381 = { add_core_of = SOV }
+			146 = { remove_core_of = FIN }
+			147 = { remove_core_of = FIN }
+			722 = { remove_core_of = FIN }
+			1368 = { remove_core_of = FIN }
+			1369 = { remove_core_of = FIN }
+			1381 = { remove_core_of = FIN }
+			if = {
+				limit = { SOV = { controls_state = 1380 } }
+				1380 = { remove_core_of = FIN }
+			}
+			set_country_flag = formed_new_finland_soviet_border
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	new_japan_soviet_border = {
+	
+		icon = generic_form_nation
+		
+		highlight_state_targets = {
+			state = 537
+			state = 555
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 537
+				controls_state = 555
+				if = {
+					537 = {
+					compliance > 40
+					}
+				}
+				if = {
+					555 = {
+					compliance > 40
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 537
+			controls_state = 555
+			NOT = {
+				has_country_flag = formed_new_japan_soviet_border
+			}
+		}
+
+		cost = 5
+		
+		complete_effect = {
+			537 = { add_core_of = SOV }
+			555 = { add_core_of = SOV }
+			537 = { remove_core_of = JAP }
+			555 = { remove_core_of = JAP }
+			set_country_flag = formed_new_japan_soviet_border
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	integrate_kars = {
+
+		icon = generic_form_nation
+
+		highlight_state_targets = {
+			state = 1001
+			state = 1224
+			state = 1666
+			state = 2005
+			state = 2006
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 1001
+				controls_state = 1224
+				controls_state = 1666
+				controls_state = 2005
+				controls_state = 2006
+				if = {
+					1001 = {
+					compliance > 40
+					}
+				}
+				if = {
+					1224 = {
+					compliance > 40
+					}
+				}
+				if = {
+					1666 = {
+					compliance > 40
+					}
+				}
+				if = {
+					2005 = {
+					compliance > 40
+					}
+				}
+				if = {
+					2006 = {
+					compliance > 40
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 1001
+			controls_state = 1224
+			controls_state = 1666
+			controls_state = 2005
+			controls_state = 2006
+			NOT = {
+				OR = {
+					has_country_flag = integrated_kars
+					has_country_flag = integrated_western_armenia
+				}
+			}
+		}
+
+		cost = 5
+
+		complete_effect = {
+			1001 = { add_core_of = SOV }
+			1224 = { add_core_of = SOV }
+			1666 = { add_core_of = SOV }
+			2005 = { add_core_of = SOV }
+			2006 = { add_core_of = SOV }
+			1001 = { remove_core_of = TUR }
+			1224 = { remove_core_of = TUR }
+			1666 = { remove_core_of = TUR }
+			2005 = { remove_core_of = TUR }
+			2006 = { remove_core_of = TUR }
+			hidden_effect = {
+				1001 = { add_core_of = ARM }
+				1224 = { add_core_of = GEO }
+				1666 = { add_core_of = ARM }
+				2005 = { add_core_of = GEO }
+				2006 = { add_core_of = ARM }
+				set_country_flag = integrated_kars
+			}
+		}
+	}
+
+	integrate_western_armenia = {
+
+		icon = generic_form_nation
+
+		highlight_state_targets = {
+			state = 353
+			state = 354
+			state = 1001
+			state = 1224
+			state = 1552
+			state = 1666
+			state = 2005
+			state = 2006
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 353
+				controls_state = 354
+				controls_state = 1001
+				controls_state = 1224
+				controls_state = 1552
+				controls_state = 1666
+				controls_state = 2005
+				controls_state = 2006
+				if = {
+					353 = {
+					compliance > 40
+					}
+				}
+				if = {
+					354 = {
+					compliance > 40
+					}
+				}
+				if = {
+					1001 = {
+					compliance > 40
+					}
+				}
+				if = {
+					1224 = {
+					compliance > 40
+					}
+				}
+				if = {
+					1552 = {
+					compliance > 40
+					}
+				}
+				if = {
+					1666 = {
+					compliance > 40
+					}
+				}
+				if = {
+					2005 = {
+					compliance > 40
+					}
+				}
+				if = {
+					2006 = {
+					compliance > 40
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 353
+			controls_state = 354
+			controls_state = 1001
+			controls_state = 1224
+			controls_state = 1552
+			controls_state = 1666
+			controls_state = 2005
+			controls_state = 2006
+			NOT = {
+				OR = {
+					has_country_flag = integrated_kars
+					has_country_flag = integrated_western_armenia
+				}
+			}
+		}
+
+		cost = 5
+
+		complete_effect = {
+			353 = { add_core_of = SOV }
+			354 = { add_core_of = SOV }
+			1001 = { add_core_of = SOV }
+			1224 = { add_core_of = SOV }
+			1552 = { add_core_of = SOV }
+			1666 = { add_core_of = SOV }
+			2005 = { add_core_of = SOV }
+			2006 = { add_core_of = SOV }
+			353 = { remove_core_of = TUR }
+			354 = { remove_core_of = TUR }
+			1001 = { remove_core_of = TUR }
+			1224 = { remove_core_of = TUR }
+			1552 = { remove_core_of = TUR }
+			1666 = { remove_core_of = TUR }
+			2005 = { remove_core_of = TUR }
+			2006 = { remove_core_of = TUR }
+			hidden_effect = {
+				353 = { add_core_of = ARM }
+				354 = { add_core_of = ARM }
+				1001 = { add_core_of = ARM }
+				1224 = { add_core_of = GEO }
+				1666 = { add_core_of = ARM }
+				2005 = { add_core_of = GEO }
+				2006 = { add_core_of = ARM }
+				353 = { remove_core_of = KUR }
+				set_country_flag = integrated_western_armenia
+			}
+		}
+	}
+	
+	expand_azerbaijan_south = {
+	
+		icon = generic_form_nation
+		
+		highlight_state_targets = {
+			state = 419
+			state = 420
+			state = 1086
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 419
+				controls_state = 420
+				controls_state = 1086
+				if = {
+					419 = {
+					compliance > 40
+					}
+				}
+				if = {
+					420 = {
+					compliance > 40
+					}
+				}
+				if = {
+					1086 = {
+					compliance > 40
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 419
+			controls_state = 420
+			controls_state = 1086
+			has_completed_focus = SOV_anti_capitalist_diplomacy
+			NOT = {
+				has_country_flag = expanded_azerbaijan
+			}
+		}
+
+		cost = 15
+		
+		complete_effect = {
+			419 = { add_core_of = SOV }
+			420 = { add_core_of = SOV }
+			1086 = { add_core_of = SOV }
+			419 = { remove_core_of = PER }
+			420 = { remove_core_of = PER }
+			1086 = { remove_core_of = PER }
+			hidden_effect = { 1086 = { remove_core_of = KUR } }
+			set_country_flag = expanded_azerbaijan
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	new_soviet_iranian_borders_east = {
+	
+		icon = generic_form_nation
+		
+		highlight_state_targets = {
+			state = 1474
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 1474
+				if = {
+					1474 = {
+					compliance > 40
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 1474
+			has_completed_focus = SOV_anti_capitalist_diplomacy
+			NOT = {
+				has_country_flag = drew_new_soviet_iran_borders
+			}
+		}
+
+		cost = 5
+		
+		complete_effect = {
+			1474 = { add_core_of = SOV }
+			1474 = { remove_core_of = PER }
+			hidden_effect = {
+				1474 = { add_core_of = TMS }
+				set_country_flag = drew_new_soviet_iran_borders
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	new_soviet_afghan_borders = {
+	
+		icon = generic_form_nation
+		
+		highlight_state_targets = {
+			state = 1129
+			state = 1130
+			state = 1818
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 1129
+				controls_state = 1130
+				controls_state = 1818
+				if = {
+					1129 = {
+					compliance > 40
+					}
+				}
+				if = {
+					1130 = {
+					compliance > 40
+					}
+				}
+				if = {
+					1818 = {
+					compliance > 40
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 1129
+			controls_state = 1130
+			controls_state = 1818
+			has_completed_focus = SOV_anti_capitalist_diplomacy
+			NOT = {
+				has_country_flag = drew_new_soviet_afghan_borders
+			}
+		}
+
+		cost = 10
+		
+		complete_effect = {
+			1129 = { add_core_of = SOV }
+			1130 = { add_core_of = SOV }
+			1818 = { add_core_of = SOV }
+			1129 = { remove_core_of = AFG }
+			1130 = { remove_core_of = AFG }
+			1818 = { remove_core_of = AFG }
+			hidden_effect = {
+				1129 = { add_core_of = TAJ }
+				1130 = { add_core_of = TAJ }
+				1818 = { add_core_of = TAJ }
+				set_country_flag = drew_new_soviet_afghan_borders
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+BS_take_command_sov_Category = {
+
+	BS_sov_take_command = {
+
+		icon = generic_army_support
+
+		available = {
+			OR = {
+				AND = {
+					has_completed_focus = SOV_great_purge
+					has_country_leader = { ruling_only = yes name = "Iosef Stalin" }
+				}
+				has_country_leader = { ruling_only = yes name = "Leon Trotsky" }
+			}
+			has_government = communism
+			has_war = yes
+		}
+
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			NOT = {
+				has_unit_leader = 7008
+			}
+			NOT = {
+				has_unit_leader = 7009
+			}
+			has_government = communism
+			has_war = yes
+		}
+
+		complete_effect = {
+			If = {
+				limit = {
+					has_country_leader = { ruling_only = yes name = "Leon Trotsky" }
+				}
+				create_field_marshal = {
+					name = "Leon Trotsky"
+					picture = "Portrait_Leon_Trotsky.dds"
+					traits = { brilliant_strategist media_personality trait_reckless trickster inspirational_leader politically_connected }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 3
+					logistics_skill = 2
+					id = 7008 
+				}
+			}
+			If = {
+				limit = {
+					has_country_leader = { ruling_only = yes name = "Iosef Stalin" }
+				}
+				create_field_marshal = {
+					name = "Iosef Stalin"
+					picture = "Portrait_Soviet_Joseph_Stalin.dds"
+					traits = { inflexible_strategist harsh_leader politically_connected trait_cautious }
+					skill = 3
+					attack_skill = 4
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 1
+					id = 7009
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				surrender_progress > 0.2
+				factor = 10
+			}
+			modifier = {
+				has_civil_war = yes
+				factor = 0
+			}
+		}
+	}
+}
+
+former_ssr_stuff = {
+
+	former_ssr_new_govt = {
+
+		priority = 10
+
+		name = SSR_government_change
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+				tag = UKR
+				tag = BLR
+				tag = GEO
+				tag = AZR
+				tag = ARM
+				tag = KAZ
+				tag = UZB
+				tag = TMS
+				tag = KYR
+				tag = TAJ
+				tag = CRI
+				tag = KAR
+				tag = KLY
+				tag = DAG
+				tag = CHE
+				tag = KBR 
+				tag = LIT
+				tag = LAT
+				tag = EST
+				tag = MOL
+				tag = ABH
+				tag = KPS
+				tag = YAK
+				tag = BRY
+            }			
+		}
+
+		available = {		
+		    NOT = {
+				is_former_SSR_without_change = yes
+			}
+			is_subject = no
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 5
+
+		is_good = no
+
+		cancel_if_not_visible = yes
+
+		activation = {
+			is_former_SSR_without_change = yes
+			is_subject = no
+		}
+
+		visible = {
+			is_former_SSR_without_change = yes
+			is_subject = no
+		}
+
+		timeout_effect = {
+			country_event = bs.1500
+		}
+	}
+	former_ssr_communist_puppet = {
+
+		priority = 10
+
+		name = SSR_government_change
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			OR = {
+			tag = UKR
+			tag = BLR
+			tag = GEO
+			tag = AZR
+			tag = ARM
+			tag = KAZ
+			tag = UZB
+			tag = TMS
+			tag = KYR
+			tag = TAJ
+			tag = CRI
+			tag = KAR
+			tag = KLY
+			tag = DAG
+			tag = CHE
+			tag = KBR 
+			tag = LIT
+			tag = LAT
+			tag = EST
+			tag = MOL
+			tag = ABH
+			tag = KPS
+			tag = YAK
+            }			
+		}
+
+		available = {		
+		    NOT = {
+				is_former_SSR_without_change = yes
+			}
+			is_subject = yes
+			NOT = { is_subject_of = SOV }
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 5
+
+		is_good = no
+
+		cancel_if_not_visible = yes
+
+		activation = {
+			is_former_SSR_without_change = yes
+			is_subject = yes
+			NOT = { is_subject_of = SOV }
+		}
+
+		visible = {
+			is_former_SSR_without_change = yes
+			is_subject = yes
+			NOT = { is_subject_of = SOV }
+		}
+
+		timeout_effect = {
+			country_event = bs.1501
+		}
+	}
+}
+
+restore_russian_empire_category = {
+
+	restore_russian_empire = {
+
+		priority = 10
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = SOV		
+		}
+
+		available = {		
+		    has_government = neutrality
+			has_war = no
+		}
+
+		priority = 10
+		
+		ai_will_do = {
+		factor = 0
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			has_government = neutrality
+			NOT = { has_cosmetic_tag = RUS_EMPIRE }
+		}
+		complete_effect = {
+		set_cosmetic_tag = RUS_EMPIRE
+		retire_country_leader = yes
+		set_capital = 195
+		create_country_leader = {
+			name = "Vladimir III"
+			desc = ""
+			picture = "r56_Vladimir_Kirillovich.dds"
+			expire = "1953.3.1"
+			ideology = absolute_monarchism
+			traits = {
+				Autocratic_monarch
+			}
+		}
+		
+		if = {
+		limit = {
+		SOV = { owns_state = 1487 }
+		}
+		AZR = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 230 }
+		}
+		ARM = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 231 }
+		}
+		GEO = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 931 }
+		}
+		DAG = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 232 }
+		}
+		CHE = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 237 }
+		}
+		KLY = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 1326 }
+		}
+		KBR = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 218 }
+		}
+		DON = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 234 }
+		}
+		KUB = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 1267 }
+		}
+		CRI = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 202 }
+		}
+		UKR = { 
+		drop_cosmetic_tag = yes
+		add_state_core = 927
+		add_state_core = 1485
+		add_state_core = 1571
+		add_state_core = 1598
+		add_state_core = 137
+		add_state_core = 1267
+		remove_state_core = 1444
+		remove_state_core = 1445
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 206 }
+		}
+		BLR = { 
+		drop_cosmetic_tag = yes
+		add_state_core = 243
+		add_state_core = 1674
+		add_state_core = 1673		
+		add_state_core = 210
+		add_state_core = 1162
+		remove_state_core = 1485
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 216 }
+		}
+		KAR = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 586 }
+		}
+		KAZ = { 
+		set_cosmetic_tag = ALA_AUTONOMY
+		add_state_core = 1467
+		add_state_core = 1459
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 732 }
+		}
+		KYR = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 574 }
+		}
+		YAK = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 586 }
+		}
+		TMS = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 1489 }
+		}
+		KOK = { 
+		set_cosmetic_tag = TRK_AUTONOMY
+		add_state_core = 1148
+		add_state_core = 1273
+		add_state_core = 1469
+		add_state_core = 585
+		add_state_core = 586
+		add_state_core = 1462
+		add_state_core = 1466
+		add_state_core = 1460
+		add_state_core = 584
+		add_state_core = 1463
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 586 }
+		}
+		UZB = { 
+		drop_cosmetic_tag = yes
+		set_capital = 1464
+		remove_state_core = 1467
+		remove_state_core = 1138
+		remove_state_core = 585
+		remove_state_core = 1463
+		remove_state_core = 405
+		remove_state_core = 1489
+		add_state_core = 742
+		add_state_core = 1461
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 1138 }
+		}
+		KPS = { 
+		drop_cosmetic_tag = yes
+		set_capital = 1464
+		remove_state_core = 1467
+		add_state_core = 1465
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 742 }
+		}
+		TAJ = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		SOV = { owns_state = 586 }
+		}
+		MOL = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = democratic
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		hidden_effect = {
+		retire_country_leader = yes
+		set_party_name = { ideology = neutrality long_name = RUS_EMPIRE_neutrality_party_long name = RUS_EMPIRE_neutrality_party }
+			}
+		}	
+	}
+}
+foreign_politics = {
+	SOV_cede_vilnius = {
+
+		highlight_state_targets = {
+			state = 784
+			state = 1563
+		}
+		icon = generic_form_nation
+
+		visible = {
+			LIT = { 
+				exists = yes
+				controls_state = 1604
+			}
+			controls_state = 784
+			controls_state = 1563
+			original_tag = SOV
+		}
+
+		available = {
+			LIT = { 
+				exists = yes
+				controls_state = 1604
+			}
+			controls_state = 784
+			controls_state = 1563
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			LIT = { country_event = bs.813 }
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 100
+				has_global_flag = sov_yes_pact
+			}
+		}
+	}
+}

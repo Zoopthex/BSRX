@@ -1,0 +1,248 @@
+USA_regional_powerhouses = {
+    CAL = {
+        add_state_core = 379
+    }
+    UTA = {
+        add_state_core = 380
+        add_state_core = 377
+        add_state_core = 382
+        add_state_core = 846
+        add_state_core = 853
+        add_state_core = 1064
+        add_state_core = 1195
+        add_state_core = 1199
+        add_state_core = 1566
+        add_state_core = 1567
+        add_state_core = 1636
+        set_cosmetic_tag = DESERET
+        set_global_flag = DESERET_FORMED
+    }
+    TEX = {
+        add_state_core = 376
+        add_state_core = 848
+        add_state_core = 849
+        add_state_core = 1065
+        add_state_core = 1150
+        add_state_core = 1200
+        add_state_core = 1623
+        add_state_core = 1632
+        add_state_core = 1633
+        add_state_core = 1635
+    }
+    LOU = {
+        add_state_core = 372
+		add_state_core = 374
+    }
+    WAS = {
+        add_state_core = 386
+        add_state_core = 385
+        add_state_core = 387
+        add_state_core = 859
+        add_state_core = 1290
+        add_state_core = 1640
+        add_state_core = 1641
+        add_state_core = 1642
+		add_state_core = 1649
+		add_state_core = 1650
+		add_state_core = 1651
+		add_state_core = 1652
+		set_cosmetic_tag = CASCADIA
+		set_global_flag = CASCADIA_FORMED_INDEPENDENT
+    }
+    MIC = {
+        add_state_core = 393
+        add_state_core = 856
+        add_state_core = 261
+        add_state_core = 394
+        add_state_core = 395
+        add_state_core = 396
+        add_state_core = 857
+    }
+    CSA = {
+        set_politics = {
+            ruling_party = fascism
+            elections_allowed = no
+        }
+        add_state_core = 362
+        add_state_core = 363
+        add_state_core = 364
+        add_state_core = 365
+        add_state_core = 366
+        add_state_core = 367
+        add_state_core = 368
+        add_state_core = 369
+        add_state_core = 370
+        add_state_core = 843
+        add_state_core = 1456
+        add_state_core = 1494
+        add_state_core = 1495
+        add_state_core = 1496
+        add_state_core = 1497
+    }
+	MIS = {
+	    add_state_core = 373
+		add_state_core = 381
+		add_state_core = 383
+		add_state_core = 384
+		add_state_core = 388
+		add_state_core = 389
+		add_state_core = 390
+		add_state_core = 391
+		add_state_core = 392
+		add_state_core = 847
+		add_state_core = 1608
+		add_state_core = 1609
+		add_state_core = 1610
+		add_state_core = 1634
+		add_state_core = 1859
+		add_state_core = 1860
+		add_state_core = 1861
+		add_state_core = 1862
+		add_state_core = 1863
+    }
+}
+USA_remaining_minus_new_england = {
+    ORE = { 
+        add_state_core = 385 
+        add_state_core = 1640
+		add_state_core = 1649
+		add_state_core = 1650
+    }
+    WAS = { add_state_core = 386 }
+    OHO = { 
+		add_state_core = 261 
+		add_state_core = 1681
+	}
+    MIC = { 
+        add_state_core = 393
+        add_state_core = 856
+    }
+    MIN = { 
+        add_state_core = 391
+        add_state_core = 857
+        add_state_core = 1608
+		add_state_core = 1889
+    }
+    ILL = { add_state_core = 395 }
+    IND = { add_state_core = 396 }
+    WIS = { add_state_core = 394 }
+    UTA = {
+		add_state_core = 380
+		add_state_core = 1875
+	}
+	MIS = { add_state_core = 373 }
+	FLO = { add_state_core = 366 }
+	GGA = { add_state_core = 365 }
+	SCL = { add_state_core = 364 }
+	NCL = {	add_state_core = 363 }
+	TEN = { add_state_core = 368 }
+	NJY = {
+	add_state_core = 359 
+	add_state_core = 1998
+	add_state_core = 1999	
+	}
+	DEL = { add_state_core = 841 }
+	MRY = { 
+	    add_state_core = 844
+		add_state_core = 361
+	}
+	KFC = { add_state_core = 369 }
+	WVR = { add_state_core = 843 }
+	VIR = {
+	    add_state_core = 362
+		add_state_core = 1456
+	}
+	PEN = { 
+		add_state_core = 360 
+		add_state_core = 1682
+		add_state_core = 1683
+	}
+	NWY = {
+	    add_state_core = 358
+		add_state_core = 1175
+		add_state_core = 1684
+	}
+	ARZ = {
+	    add_state_core = 377
+		add_state_core = 1195
+		add_state_core = 1566
+		add_state_core = 1874
+	}
+	NEV = {
+	    add_state_core = 379
+		add_state_core = 853
+		add_state_core = 1676
+		add_state_core = 1677
+	}
+	NMX = {
+	    add_state_core = 1064
+		add_state_core = 1199
+		add_state_core = 1567
+		add_state_core = 376
+		add_state_core = 1623
+		add_state_core = 1200
+		add_state_core = 1873
+	}
+	DKT = {
+	    add_state_core = 389
+		add_state_core = 390
+		add_state_core = 1609
+		add_state_core = 1610
+		add_state_core = 1860
+		add_state_core = 1863
+	}
+	MNA = {
+	    add_state_core = 388
+		add_state_core = 859
+		add_state_core = 1859
+	}
+	WYM = {
+	    add_state_core = 381
+		add_state_core = 1652
+		add_state_core = 1290
+		add_state_core = 1642
+		add_state_core = 1636
+		add_state_core = 1150
+		add_state_core = 1635
+		add_state_core = 846
+		add_state_core = 1862
+	}
+	IDH = {
+	    add_state_core = 387
+		add_state_core = 1641
+		add_state_core = 1651
+	}
+	ARK = { add_state_core = 372 }
+	MSS = {
+	    add_state_core = 370
+		add_state_core = 1496
+		add_state_core = 1495
+	}
+	ABM = {
+	    add_state_core = 367
+		add_state_core = 1494
+		add_state_core = 1497
+	}
+	CLR = {
+		add_state_core = 382
+		add_state_core = 847
+		add_state_core = 1065
+		add_state_core = 1632
+		add_state_core = 1633
+		add_state_core = 1634
+	}
+	NEB = { 
+		add_state_core = 384 
+		add_state_core = 1861
+	}
+	KAN = {
+		add_state_core = 383
+		add_state_core = 848
+	}
+	IOW = { add_state_core = 392 }
+	VER = { add_state_core = 838 }
+	OKH = { 
+		add_state_core = 374
+		add_state_core = 849
+	}
+}

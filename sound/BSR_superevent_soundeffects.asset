@@ -1,0 +1,177 @@
+soundeffect = { # SOUND EFFECTS, THE GUI USES THIS AND THIS USES SOUNDS, DO NOT MISTAKE ONE FOR THE # OTHER
+	name = BSR_Uberevent_Spanish_War
+	loop = no
+	sounds = {
+		sound = BSR_Uberevent_Spanish_War_Sound
+		}
+	is3d = no # do not use this shit, it caused me to only hear on the left ear
+	max_audible = 1 #no idea what this is, but keep it as is so you dont have problems
+	max_audible_behaviour = fail #same as above
+	volume = 1.5
+}
+soundeffect = { # SOUND EFFECTS, THE GUI USES THIS AND THIS USES SOUNDS, DO NOT MISTAKE ONE FOR THE # OTHER
+	name = BSR_Uberevent_Sino_Japanese_War
+	loop = no
+	sounds = {
+		sound = BSR_Uberevent_Sino_Japanese_War_Sound
+		}
+	is3d = no # do not use this shit, it caused me to only hear on the left ear
+	max_audible = 1 #no idea what this is, but keep it as is so you dont have problems
+	max_audible_behaviour = fail #same as above
+	volume = 1.5
+}
+soundeffect = { # SOUND EFFECTS, THE GUI USES THIS AND THIS USES SOUNDS, DO NOT MISTAKE ONE FOR THE # OTHER
+	name = BSR_Uberevent_Barbarossa3
+	loop = no
+	sounds = {
+		sound = BSR_Uberevent_Barbarossa3_Sound
+		}
+	is3d = no # do not use this shit, it caused me to only hear on the left ear
+	max_audible = 1 #no idea what this is, but keep it as is so you dont have problems
+	max_audible_behaviour = fail #same as above
+	volume = 1.5
+}
+soundeffect = { # SOUND EFFECTS, THE GUI USES THIS AND THIS USES SOUNDS, DO NOT MISTAKE ONE FOR THE # OTHER
+	name = BSR_Uberevent_AmericaAtDefensiveWar
+	loop = no
+	sounds = {
+		sound = BSR_Uberevent_AmericaAtDefensiveWar_Sound
+		}
+	is3d = no # do not use this shit, it caused me to only hear on the left ear
+	max_audible = 1 #no idea what this is, but keep it as is so you dont have problems
+	max_audible_behaviour = fail #same as above
+	volume = 1.5
+}
+
+soundeffect = { # SOUND EFFECTS, THE GUI USES THIS AND THIS USES SOUNDS, DO NOT MISTAKE ONE FOR THE # OTHER
+	name = BSR_Uberevent_ImperialFederationMusic
+	loop = no
+	sounds = {
+		sound = BSR_Uberevent_ImperialFederationMusic_Sound
+		}
+	is3d = no # do not use this shit, it caused me to only hear on the left ear
+	max_audible = 1 #no idea what this is, but keep it as is so you dont have problems
+	max_audible_behaviour = fail #same as above
+	volume = 1.5
+}
+soundeffect = { # SOUND EFFECTS, THE GUI USES THIS AND THIS USES SOUNDS, DO NOT MISTAKE ONE FOR THE # OTHER
+	name = BSR_Uberevent_FallOfRussia_Music
+	loop = no
+	sounds = {
+		sound = BSR_Uberevent_FallOfRussia_Sound
+		}
+	is3d = no # do not use this shit, it caused me to only hear on the left ear
+	max_audible = 1 #no idea what this is, but keep it as is so you dont have problems
+	max_audible_behaviour = fail #same as above
+	volume = 1.5
+}
+soundeffect = { # SOUND EFFECTS, THE GUI USES THIS AND THIS USES SOUNDS, DO NOT MISTAKE ONE FOR THE # OTHER
+	name = BSR_Uberevent_FallOfGermany_Music
+	loop = no
+	sounds = {
+		sound = BSR_Uberevent_FallOfGermany_Sound
+		}
+	is3d = no # do not use this shit, it caused me to only hear on the left ear
+	max_audible = 1 #no idea what this is, but keep it as is so you dont have problems
+	max_audible_behaviour = fail #same as above
+	volume = 1.5
+}
+soundeffect = { # SOUND EFFECTS, THE GUI USES THIS AND THIS USES SOUNDS, DO NOT MISTAKE ONE FOR THE # OTHER
+	name = BSR_Uberevent_FallOfFrance_Music
+	loop = no
+	sounds = {
+		sound = BSR_Uberevent_FallOfFrance_Sound
+		}
+	is3d = no # do not use this shit, it caused me to only hear on the left ear
+	max_audible = 1 #no idea what this is, but keep it as is so you dont have problems
+	max_audible_behaviour = fail #same as above
+	volume = 1.5
+}
+soundeffect = { # SOUND EFFECTS, THE GUI USES THIS AND THIS USES SOUNDS, DO NOT MISTAKE ONE FOR THE # OTHER
+	name = BSR_Uberevent_FallOfAmerica_Music
+	loop = no
+	sounds = {
+		sound = BSR_Uberevent_FallOfAmerica_Sound
+		}
+	is3d = no # do not use this shit, it caused me to only hear on the left ear
+	max_audible = 1 #no idea what this is, but keep it as is so you dont have problems
+	max_audible_behaviour = fail #same as above
+	volume = 1.5
+}
+soundeffect = { # SOUND EFFECTS, THE GUI USES THIS AND THIS USES SOUNDS, DO NOT MISTAKE ONE FOR THE # OTHER
+	name = BSR_Uberevent_FallOfBritain_Music
+	loop = no
+	sounds = {
+		sound = BSR_Uberevent_FallOfBritain_Sound
+		}
+	is3d = no # do not use this shit, it caused me to only hear on the left ear
+	max_audible = 1 #no idea what this is, but keep it as is so you dont have problems
+	max_audible_behaviour = fail #same as above
+	volume = 1.5
+}
+soundeffect = { # SOUND EFFECTS, THE GUI USES THIS AND THIS USES SOUNDS, DO NOT MISTAKE ONE FOR THE # OTHER
+	name = BSR_Uberevent_FallOfJapan_Music
+	loop = no
+	sounds = {
+		sound = BSR_Uberevent_FallOfJapan_Sound
+		}
+	is3d = no # do not use this shit, it caused me to only hear on the left ear
+	max_audible = 1 #no idea what this is, but keep it as is so you dont have problems
+	max_audible_behaviour = fail #same as above
+	volume = 1.5
+}
+soundeffect = { # SOUND EFFECTS, THE GUI USES THIS AND THIS USES SOUNDS, DO NOT MISTAKE ONE FOR THE # OTHER
+	name = BSR_Uberevent_KaiserreichTriumphant_Music
+	loop = no
+	sounds = {
+		sound = BSR_Uberevent_KaiserreichTriumphant_Sound
+		}
+	is3d = no # do not use this shit, it caused me to only hear on the left ear
+	max_audible = 1 #no idea what this is, but keep it as is so you dont have problems
+	max_audible_behaviour = fail #same as above
+	volume = 1.5
+}
+soundeffect = { # SOUND EFFECTS, THE GUI USES THIS AND THIS USES SOUNDS, DO NOT MISTAKE ONE FOR THE # OTHER
+	name = BSR_Uberevent_SecondGreatWar_Music
+	loop = no
+	sounds = {
+		sound = BSR_Uberevent_SecondGreatWar_Sound
+		}
+	is3d = no # do not use this shit, it caused me to only hear on the left ear
+	max_audible = 1 #no idea what this is, but keep it as is so you dont have problems
+	max_audible_behaviour = fail #same as above
+	volume = 1.5
+}
+soundeffect = { # SOUND EFFECTS, THE GUI USES THIS AND THIS USES SOUNDS, DO NOT MISTAKE ONE FOR THE # OTHER
+	name = BSR_Uberevent_FallOfChina_Music
+	loop = no
+	sounds = {
+		sound = BSR_Uberevent_FallOfChina_Sound
+		}
+	is3d = no # do not use this shit, it caused me to only hear on the left ear
+	max_audible = 1 #no idea what this is, but keep it as is so you dont have problems
+	max_audible_behaviour = fail #same as above
+	volume = 1.5
+}
+soundeffect = { # SOUND EFFECTS, THE GUI USES THIS AND THIS USES SOUNDS, DO NOT MISTAKE ONE FOR THE # OTHER
+	name = BSR_Uberevent_FallOfPoland_Music
+	loop = no
+	sounds = {
+		sound = BSR_Uberevent_FallOfPoland_Sound
+		}
+	is3d = no # do not use this shit, it caused me to only hear on the left ear
+	max_audible = 1 #no idea what this is, but keep it as is so you dont have problems
+	max_audible_behaviour = fail #same as above
+	volume = 1.5
+}
+soundeffect = { # SOUND EFFECTS, THE GUI USES THIS AND THIS USES SOUNDS, DO NOT MISTAKE ONE FOR THE # OTHER
+	name = BSR_Uberevent_GermanCivilWar_Music
+	loop = no
+	sounds = {
+		sound = BSR_Uberevent_GermanCivilWar_Sound
+		}
+	is3d = no # do not use this shit, it caused me to only hear on the left ear
+	max_audible = 1 #no idea what this is, but keep it as is so you dont have problems
+	max_audible_behaviour = fail #same as above
+	volume = 1.5
+}

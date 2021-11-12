@@ -1,0 +1,31 @@
+state={
+	id=2051
+	name="STATE_2051"
+
+	history={
+		owner = ETH
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = {
+			4995 1 
+		}
+		add_core_of = ETH
+		add_core_of = SOM
+		1936.6.1 = {
+			owner = ITA
+			controller = ITA
+		}
+		1941.1.1 = {
+			controller = ENG
+		}
+
+	}
+
+	provinces={
+		4995 12812
+	}
+	manpower=1374781
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

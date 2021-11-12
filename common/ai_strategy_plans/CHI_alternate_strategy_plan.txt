@@ -1,0 +1,198 @@
+CHI_alternate_plan_1 = {
+	name = "Nationalist China Alternate Scenario 1: Japan democratic"
+	desc = "With the threat of Japanese Imperialism gone, Nationalist China focuses on eradicating warlords instead"
+
+	allowed = {
+		is_literally_china = yes
+		has_dlc = "Waking the Tiger"
+	}
+	enable = {
+		OR = {
+			original_tag = CHI
+			AND = {
+				is_chinese_warlord = yes
+				has_focus_tree = china_nationalist_focus
+			}
+		}
+		OR = {
+			AND = {
+				JAP = {
+					has_completed_focus = JAP_strengthen_civilian_government
+				}
+				has_game_rule = {
+					rule = CHI_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = CHI_AI_RANDOM_ALTERNATE
+			has_game_rule = {
+				rule = CHI_ai_behavior
+				option = ALTERNATE
+			}
+		}
+	}
+	abort = {
+		has_war_with = JAP
+		has_game_rule = {
+			rule = CHI_ai_behavior
+			option = DEFAULT
+		}
+	}
+	ai_national_focuses = {
+		CHI_three_principles_of_the_people
+		CHI_nationalism
+		CHI_prioritize_the_interior
+		CHI_subjugate_the_warlords
+		CHI_anti_communism
+		CHI_military_affairs_commission
+		CHI_army_reform
+		CHI_fortify_shanghai
+		CHI_the_chinese_hindenburg_line
+		CHI_bureau_of_investigation_and_statistics
+		CHI_60_divisions_plan
+		CHI_war_of_resistance
+		CHI_war_of_national_liberation
+		CHI_industrial_evacuations
+		CHI_scorched_earth_tactics
+		CHI_war_of_anti_imperialism
+		CHI_whampoa_military_academy
+		CHI_invite_foreign_investors
+		CHI_unified_industrial_planning #March 10 1936
+		CHI_mission_to_germany #May 20 1936
+		CHI_rural_reconstruction_movement #July 30 1936
+		CHI_british_cooperation #October 10 1936
+		CHI_mission_to_the_us #February 30 1937
+		CHI_military_affairs_commission #May 10 1937
+		CHI_expand_the_academica_sinica #July 20 1937
+		CHI_mission_to_the_soviet_union #September 30 1937
+		CHI_hire_chennault #December 10 1937
+		CHI_rapprochement_with_soviet_union #February 20 1938
+		CHI_invite_soviet_advisers #April 30 1938
+		CHI_army_reform #July 10 1938
+		CHI_burma_road #September 20 1938
+		CHI_the_soviet_volunteer_group #November 30 1938
+		CHI_fighter_purchases #February 10 1938
+		CHI_camco #April 20 1939
+		CHI_financial_policy #November 20 1939
+		CHI_war_of_resistance #April 10 1940
+		CHI_scorched_earth_tactics #June 20 1940
+		CHI_mining_commission #August 30 1940
+		CHI_welfare #November 10 1940
+		CHI_refugee_relief_agency #January 20 1941
+		CHI_invite_the_flying_tigers #March 30 1941
+		CHI_purchase_tanks #June 10 1941
+		CHI_experimental_mechanised_unit #August 20 1941
+		CHI_land_tax_reform #October 30 1941
+		CHI_forced_conscription #January 10 1942
+		CHI_the_hump #March 20 1942
+		CHI_chinese_expeditionary_force #May 30 1942
+		CHI_sino_american_cooperative_organization #August 10 1942
+		CHI_price_controls #October 20 1942
+		CHI_ledo_road #December 30 1942
+		CHI_the_chu_x_po #March 10 1943
+		CHI_new_life_movement #May 20 1943
+		CHI_modern_logistics #July 30 1943		
+	}
+	focus_factors = {
+		CHI_rural_reconstruction_movement = 5
+		CHI_mission_to_germany = 15
+		CHI_closer_ties_with_germany = 15
+		CHI_purchase_tanks = 5
+		CHI_give_falkenhausen_citizenship = 5
+		CHI_mining_commission = 5
+		CHI_bureau_of_investigation_and_statistics = 5
+		CHI_experimental_mechanised_unit = 5
+		CHI_chinese_general_staff = 5
+		CHI_chinese_panzers = 5
+		CHI_develop_the_hanyan_arsenal = 5
+		CHI_taiyuan_arsenal = 5
+		CHI_price_controls = 5
+		CHI_welfare = 5
+		CHI_land_tax_reform = 5
+		CHI_reform_the_national_bank = 5
+		CHI_forced_loans = 5
+		CHI_democracy = 5
+		CHI_constitutional_reform = 5
+		CHI_60_divisions_plan = 5
+		CHI_whampoa_military_academy = 5
+		CHI_refugee_relief_agency = 5
+		CHI_new_life_movement = 5
+		CHI_executive_yuan = 5
+		CHI_republicanism = 5
+		CHI_inter_party_coordination_council = 5
+		CHI_judicial_yuan = 5
+		CHI_combined_arms_warfare = 5
+		CHI_renegotiate_the_unequal_treaties = 5
+		CHI_pick_a_fight_with_japan = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1
+		modifier = {
+			factor = 2.0
+		}
+	}
+}
+
+CHI_alternate_plan_2 = {
+	name = "Nationalist China Alternate Scenario 1: Germany aims to befriend China"
+	desc = "China selects Germany over Soviet Union"
+
+	allowed = {
+		is_literally_china = yes
+	}
+	enable = {
+		OR = {
+			original_tag = CHI
+			AND = {
+				is_chinese_warlord = yes
+				has_focus_tree = china_nationalist_focus
+			}
+		}
+		GER = {
+			has_completed_focus = GER_china_friend
+		}
+	}
+	abort = {
+		always = no
+	}
+
+	focus_factors = {
+		CHI_mission_to_germany = 5
+		CHI_closer_ties_with_germany = 10
+		CHI_purchase_tanks = 5
+		CHI_give_falkenhausen_citizenship = 5
+		CHI_anti_communism = 5
+		CHI_experimental_mechanised_unit = 5
+		CHI_chinese_general_staff = 5
+		CHI_chinese_panzers = 5
+		CHI_combined_arms_warfare = 5
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1
+		modifier = {
+			factor = 2.0
+		}
+	}
+}

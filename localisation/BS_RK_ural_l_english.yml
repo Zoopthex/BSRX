@@ -1,0 +1,98 @@
+﻿l_english:
+ ### events ###
+
+ # stop cheating retard
+ bs_ura.3.t:0 "stop cheating retard"
+ bs_ura.3.d:0 "we know you're cheating"
+ bs_ura.3.a:0 "bruh"
+ 
+
+
+ ### Decisions ###
+
+ # Batov Insurgency 
+ BS_ural_resistance:0 "The Insurgency"
+ BS_ural_resistance:0 "The treachorous Third Army denies our cause and refuses to accept our authority over the Urals. \n\nFailure to deal with the Army would result in our collapse, and with it the destruction of the Russian people themselves.\n\nCounter Insurgency progress: [?konr_readiness_level]\n\nInsurgency levels: [?batov_resistance_level]"
+ 
+ URA_put_down_third_army:0 "Put down the Third Army"
+ URA_establish_the_SBRG:0 "Establish the SBRG"
+ URA_increase_SBRG_operations:0 "Increase SBRG operations"
+ URA_give_armaments_to_the_SBRG:0 "Transfer armaments to the SBRG"
+ URA_counter_insurgent_propaganda:0 "Counter-insurgent propaganda"
+ URA_launch_shitty_raids:0 "Raid insurgent hideouts"
+ URA_SBRG_infltration_third_army:0 "Infiltrate their ranks"
+ 
+
+ ### custom tooltips ##
+ batov_resistance_tt:0 "The Third Army's insurgency has been §Rneutralized§!."
+ batov_resistance_coup:0 "§RThe Third may coup the KONR government.§!"
+ batov_resistance_put_down:0 "We shall crush the §HThird Army's§! puny resistance."
+ 
+ 
+ #############################
+ ##=====| Focus Trees |=====##
+ #############################
+
+ ### bait and switch ###
+ URA_assert_control:0 "Assert Control"
+ URA_assert_control_desc:0 ""
+
+ URA_absorb_soviet_authorities:0 "Absorb Former Soviet Authorities"
+ URA_absorb_soviet_authorities_desc:0 ""
+
+ URA_root_out_resistance:0 "Root Out Resistance"
+ URA_root_out_resistance_desc:0 ""
+
+ URA_support_from_the_reich:0 "Support From The Reich"
+ URA_support_from_the_reich_desc:0 ""
+
+ URA_german_volunteer_armies:0 "German-trained Regiments"
+ URA_german_volunteer_armies_desc:0 ""
+
+ URA_import_german_equipment:0 "Import German Equipment"
+ URA_import_german_equipment_desc:0 ""
+
+ URA_army_recruitment_campaign:0 "Army Recruitment Campaign"
+ URA_army_recruitment_campaign_desc:0 ""
+
+ URA_recruit_the_youth:0 "Emulate The Hitlerjugend"
+ URA_recruit_the_youth_desc:0 ""
+
+ URA_german_industrial_assistance:0 "Invite German Companies"
+ URA_german_industrial_assistance_desc:0 ""
+
+ URA_provide_for_people:0 "Provide For The People..."
+ URA_provide_for_people_desc:0 ""
+
+ URA_provide_for_machine:0 "To Provide For The State"
+ URA_provide_for_machine_desc:0 ""
+
+ URA_educate_researchers:0 "Lysenkovshchina"
+ URA_educate_researchers_desc:0 ""
+
+ URA_improve_our_equipment:0 "License German Equipment"
+ URA_improve_our_equipment_desc:0 ""
+
+ URA_enforce_natsoc_ideals:0 "Enforce National Socialist Ideals"
+ URA_enforce_natsoc_ideals_desc:0 ""
+
+ URA_anti_commie_education:0 "Anti-Communist Education"
+ URA_anti_commie_education_desc:0 ""
+
+ URA_indoctrinate_the_youth:0 "Indoctrinate The Youth"
+ URA_indoctrinate_the_youth_desc:0 ""
+
+ URA_pursue_partisans:0 "Hunt Down Partisans"
+ URA_pursue_partisans_desc:0 ""
+
+ URA_search_behind_urals:0 "Hunt them In The East"
+ URA_search_behind_urals_desc:0 ""
+
+ URA_search_in_urals:0 "Burn Them In The Urals"
+ URA_search_in_urals_desc:0 ""
+
+ URA_break_the_red_menace:0 "Break The Red Menace"
+ URA_break_the_red_menace_desc:0 ""
+
+ URA_shatter_the_dream:0 "Shatter The Dream"
+ URA_shatter_the_dream_desc:0 ""

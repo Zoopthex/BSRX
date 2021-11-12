@@ -1,0 +1,95 @@
+steal_land_from_czechoslovakia = {
+
+    POL_steal_zaolzie = {
+
+        visible = {
+            original_tag = POL
+            has_full_control_of_state = 1181
+            CZE = { controls_state = 72 }
+            CZE = { has_defensive_war_with = GER }
+            GER = { has_completed_focus = GER_demand_sudetenland }
+        }
+
+        icon = generic_nationalism
+
+        cost = 0
+
+        fire_only_once = yes
+
+        available = {
+            controls_state = 1181
+            CZE = { controls_state = 72 }
+        }
+
+        complete_effect = {
+            if = {
+                limit = {
+                    CZE = {
+                        strength_ratio = { tag = POL ratio < 0.75 }
+                    }
+                }
+                transfer_state = 72
+            }
+            else = {
+                start_border_war = {
+                    change_state_after_war = no
+                    attacker = {
+                        state = 1181
+                        num_provinces = 1
+                        on_win = bs.115
+                        on_lose = bs.116
+						on_cancel = bs.117
+                    }
+                    defender = {
+                        state = 72
+                        num_provinces = 1
+                        on_win = bs.115
+                        on_lose = bs.116
+						on_cancel = bs.117						
+                    }
+                }
+            }
+        }
+    }
+}
+
+RAJ_campaigns_against_tibet = {
+
+    attack_tawang = {
+
+        visible = {
+            has_full_control_of_state = 432
+        }
+
+        icon = generic_nationalism
+
+        fire_only_once = yes
+
+        available = {
+            controls_state = 432
+            TIB = { has_full_control_of_state = 434 }
+        }
+
+        days_remove = 14
+
+        remove_effect = {
+            start_border_war = {
+                change_state_after_war = no
+                attacker = {
+                    state = 1181
+                    num_provinces = 4
+                    on_win = bs_raj_tibet_border.2
+                    on_lose = bs_raj_tibet_border.3
+                    on_cancel = bs_raj_tibet_border.4 
+                }
+                defender = {
+                    state = 434
+                    num_provinces = 3
+                    on_win = bs_raj_tibet_border.3
+                    on_lose = bs_raj_tibet_border.2
+                    on_cancel = bs_raj_tibet_border.4
+                }
+            }
+        }
+    }
+}

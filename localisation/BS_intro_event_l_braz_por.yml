@@ -1,0 +1,17 @@
+﻿l_english:
+
+ #Splash
+ BSR_SPLASH_TITLE:0 "Welcome to Beautiful States Reborn"
+ BSR_SPLASH_CREDITS:0 "\nThank you for playing our mod, we have worked day and night to bring this to you.\n\nLead devs: Zooptyx,Foxite,Kris,Jingo Spunk and Benpa\n\nDev Team: Aoife, Bag of Nickels, Camille, Gaffate, Kaiser, Marblistical, MiketheGibus, Mr. Confused, Nodara-Kun, Vitality, Amogusmaster69, Noko, Breinschadecoupé Conducteur\n\nContributors: Schloky, Tobias and Geo,\n\nSpecial Thanks to:\n\nFix sentences smoothly by Big Bantha\nAdditional Portraits by Karlefeldt\nNew portraits by TheBolshevikJew\nLOTS of portraits by FacundoSim\nThanks to Mappa Mundi for letting us use their assets for our new Egypt\nCredit to CSRZ for allowing the use of his events and decisions\nCredit to Hovelax for formable nations\nCredit to Chentienyu for portraits\nCredit to Batsy for portraits\nCredit to R56 for portraits\nCredit to YoanMeister and Wasted192 for the portait chooser mod\n\nThanks to Gerrade for the most amazing mod ever! Thank you for creating Beautiful States. I hope you serve your country well, and I hope that you like how I continued your work! Thank you for everything bro <3. Also, thanks to Yusuf for continuing this mod between us and Gerrade."
+ #We should thank Yusuf, i think
+ ### USA INTRO ###
+ bs_welcome.2.t:0 "Beautiful States Reborn: Full Map"
+ bs_welcome.2.desc:0 "\n§RTHIS MOD IS NOT COMPATIBLE WITH ROAD TO 56, ANY OTHER MODS THAT EDIT THE MAP AND MOST MODS THAT AFFECT THE GAMEPLAY.§!\n\nWelcome to BSR the dev team has put a lot of love and effort into this hope you enjoy\n\nCurrently we have done several major things for example reworking base game states to being more historically accurate, we are also adding borders from other periods of time like before 1936 and after 1945, one of the biggest things you might notice is our new fully fixed map\n"
+ bs_welcome.2.a:0 "Thank you."
+ bs_welcome.2.b:0 "What is added for United States?"
+ 
+ bs_welcome.3.t:0 "New Concent for United states"
+ bs_welcome.3.d:0 "These are the new content added in BSR for USA\n-Correct mexican empire borders\n-Correct Confederate States Borders\n-Lousiana Purchase\n"
+ bs_welcome.3.a:0 "Thank you."
+ bs_welcome.3.b:0 "Take me back."
+

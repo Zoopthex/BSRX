@@ -1,0 +1,257 @@
+scripted_gui = {	
+
+	### SPANISH CIVIL WAR ###
+	BSR_spanish_war_custom_frame = {
+		context_type = player_context
+		window_name = "BSR_spanish_war_custom_frame"
+
+		visible = {
+			has_global_flag = bsr_uberevent_spanish_war
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = bsr_uberevent_spanish_war
+			}
+		}
+	}
+	#set_global_flag bsr_uberevent_spanish_war ## quick command for testing
+	
+	### AMERICA AT WAR ###
+	BSR_america_at_war_custom_frame = {
+		context_type = player_context
+		window_name = "BSR_america_at_war_custom_frame"
+
+		visible = {
+			has_global_flag = bsr_uberevent_america_at_war
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = bsr_uberevent_america_at_war
+			}
+		}
+	}
+	#set_global_flag bsr_uberevent_america_at_war ## quick command for testing
+	
+	### FALL OF AMERICA ###
+	BSR_collapse_of_america_custom_frame = {
+		context_type = player_context
+		window_name = "BSR_collapse_of_america_custom_frame"
+
+		visible = {
+			has_global_flag = bsr_uberevent_collapse_of_america
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = bsr_uberevent_collapse_of_america
+			}
+		}
+	}
+	#set_global_flag bsr_uberevent_collapse_of_america ## quick command for testing
+	
+	### FALL OF GERMANY ###
+	BSR_capitulation_of_germany_custom_frame = {
+		context_type = player_context
+		window_name = "BSR_capitulation_of_germany_custom_frame"
+
+		visible = {
+			has_global_flag = bsr_uberevent_capitulation_of_germany
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = bsr_uberevent_capitulation_of_germany
+			}
+		}
+	}
+	#set_global_flag bsr_uberevent_capitulation_of_germany ## quick command for testing
+	
+	### DEFEAT OF BRITAIN ###
+	BSR_defeat_of_britain_custom_frame = {
+		context_type = player_context
+		window_name = "BSR_defeat_of_britain_custom_frame"
+
+		visible = {
+			has_global_flag = bsr_uberevent_defeat_of_britain
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = bsr_uberevent_defeat_of_britain
+			}
+		}
+	}
+	#set_global_flag bsr_uberevent_defeat_of_britain ## quick command for testing
+	
+	### FALL OF CHINA ###
+	BSR_fall_of_china_custom_frame = {
+		context_type = player_context
+		window_name = "BSR_fall_of_china_custom_frame"
+
+		visible = {
+			has_global_flag = bsr_uberevent_fall_of_china
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = bsr_uberevent_fall_of_china
+			}
+		}
+	}
+	#set_global_flag bsr_uberevent_fall_of_china ## quick command for testing
+	
+	### FALL OF FRANCE ###
+	BSR_fall_of_france_custom_frame = {
+		context_type = player_context
+		window_name = "BSR_fall_of_france_custom_frame"
+
+		visible = {
+			has_global_flag = bsr_uberevent_fall_of_france
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = bsr_uberevent_fall_of_france
+			}
+		}
+	}
+	#set_global_flag bsr_uberevent_fall_of_france ## quick command for testing
+	
+	### FALL OF POLAND ###
+	BSR_fall_of_poland_custom_frame = {
+		context_type = player_context
+		window_name = "BSR_fall_of_poland_custom_frame"
+
+		visible = {
+			has_global_flag = bsr_uberevent_fall_of_poland
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = bsr_uberevent_fall_of_poland
+			}
+		}
+	}
+	#set_global_flag bsr_uberevent_fall_of_poland ## quick command for testing
+	
+	### GERMAN CIVIL WAR ###
+	BSR_german_civil_war_custom_frame = {
+		context_type = player_context
+		window_name = "BSR_german_civil_war_custom_frame"
+
+		visible = {
+			has_global_flag = bsr_uberevent_german_civil_war
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = bsr_uberevent_german_civil_war
+			}
+		}
+	}
+	#set_global_flag bsr_uberevent_german_civil_war ## quick command for testing
+	
+	### INVASION OF RUSSIA ###
+	BSR_invasion_of_russia_custom_frame = {
+		context_type = player_context
+		window_name = "BSR_invasion_of_russia_custom_frame"
+
+		visible = {
+			has_global_flag = bsr_uberevent_invasion_of_russia
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = bsr_uberevent_invasion_of_russia
+			}
+		}
+	}
+	#set_global_flag bsr_uberevent_invasion_of_russia ## quick command for testing
+	
+	### KAISERREICH TRIUMPHANT ###
+	BSR_kaiserreich_triumphant_custom_frame = {
+		context_type = player_context
+		window_name = "BSR_kaiserreich_triumphant_custom_frame"
+
+		visible = {
+			has_global_flag = bsr_uberevent_kaiserreich_triumphant
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = bsr_uberevent_kaiserreich_triumphant
+			}
+		}
+	}
+	#set_global_flag bsr_uberevent_kaiserreich_triumphant ## quick command for testing
+	
+	### SECOND SINO JAPANESE WAR ###
+	BSR_sino_japanese_war_custom_frame = {
+		context_type = player_context
+		window_name = "BSR_sino_japanese_war_custom_frame"
+
+		visible = {
+			has_global_flag = bsr_uberevent_sino_japanese_war
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = bsr_uberevent_sino_japanese_war
+			}
+		}
+	}
+	#set_global_flag bsr_uberevent_sino_japanese_war ## quick command for testing
+	
+	### SECOND GREAT WAR ###
+	BSR_second_great_war_custom_frame = {
+		context_type = player_context
+		window_name = "BSR_second_great_war_custom_frame"
+
+		visible = {
+			has_global_flag = bsr_uberevent_second_great_war
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = bsr_uberevent_second_great_war
+			}
+		}
+	}
+	#set_global_flag bsr_uberevent_second_great_war ## quick command for testing
+	
+	### COLLAPSE OF RUSSIA ###
+	BSR_collapse_of_russia_custom_frame = {
+		context_type = player_context
+		window_name = "BSR_collapse_of_russia_custom_frame"
+
+		visible = {
+			has_global_flag = bsr_uberevent_collapse_of_russia
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = bsr_uberevent_collapse_of_russia
+			}
+		}
+	}
+	#set_global_flag bsr_uberevent_collapse_of_russia ## quick command for testing
+	
+	### SURRENDER OF JAPAN ###
+	BSR_surrender_of_japan_custom_frame = {
+		context_type = player_context
+		window_name = "BSR_surrender_of_japan_custom_frame"
+
+		visible = {
+			has_global_flag = bsr_uberevent_surrender_of_japan
+		}
+
+		effects = {
+			Option_click = {
+				clr_global_flag = bsr_uberevent_surrender_of_japan
+			}
+		}
+	}
+	#set_global_flag bsr_uberevent_surrender_of_japan ## quick command for testing
+}

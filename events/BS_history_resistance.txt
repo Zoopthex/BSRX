@@ -1,0 +1,159 @@
+#This is for next update.
+#All of these are against Nazi Germany.
+#Yugoslavia will always have crazy partisans. Poland's resistance will start 1 year after it capitulates to Germany. Czechoslovakia's will start 6 months after it dies.
+#France will start 1 year after turning into Free France.
+#The USSR's resistance will start once either A) it's after January 1, 1941 or B) Germany has declared war on the USSR.
+#USSR resistance will get worse over time in spans of years. One year after the war starts, the USSR will get crazier partisans. It continues on every year.
+
+#Make sure all of the events are hidden events. This ensures that they won't be seen by players nor the AI or what not.
+add_namespace = bshisresist
+
+#Event that checks if Nazi Germany or Generalgovernment controls Warsaw and Krakow
+country_event = {
+    id = bshisresist.1
+    title = bshisresist.1.t
+    desc = bshisresist.1.d
+    hidden = yes
+
+    trigger = {
+        10 = {
+            controller = {
+                OR = {
+                    original_tag = GER
+                    tag = GGO
+                }
+                has_government = fascism
+            }
+        }
+        1374 = {
+            controller = {
+                OR = {
+                    original_tag = GER
+                    tag = GGO
+                }
+                has_government = fascism
+            }
+        }
+    }
+
+    fire_only_once = yes
+
+    immediate = {
+        country_event = {
+            id = bshisresist.2
+            days = 360
+            random_days = 6
+        }
+    }
+
+    option = {
+        name = bshisresist.1.a
+
+    }
+}
+#Event that grants Poland the crazy_partisans idea
+country_event = {
+    id = bshisresist.2
+    title = bshisresist.2.t
+    desc = bshisresist.2.d
+    hidden = yes
+
+    is_triggered_only = yes
+
+    fire_only_once = yes 
+
+    immediate = {
+        POL = {
+            add_ideas = crazy_partisans
+        }
+    }
+
+    option = {
+        name = bshisresist.2.a
+
+    }
+}
+
+#Event that checks for the control of Bohemia (prague)
+country_event = {
+    id = bshisresist.3
+    title = bshisresist.3.t
+    desc = bshisresist.3.d
+    hidden = yes
+
+    trigger = {
+        9 = {
+            CONTROLLER = {
+                OR = {
+                    original_tag = GER
+                    tag = PBM
+                }
+                has_government = fascism
+            }
+        }
+    }
+
+    fire_only_once = yes 
+
+    immediate = {
+        country_event = {
+            id = bshisresist.4
+            days = 180
+        }
+    }
+
+    option = {
+        name = bshisresist.3.a
+
+    }
+}
+#Event that grants Czechoslovakia the crazy_partisans idea
+country_event = {
+    id = bshisresist.4
+    title = bshisresist.4.t
+    desc = bshisresist.4.d
+    hidden = yes
+
+    is_triggered_only = yes
+
+    fire_only_once = yes 
+
+    immediate = {
+        CZE = {
+            add_ideas = crazy_partisans
+        }
+    }
+
+    option = {
+        name = bshisresist.4.a
+
+    }
+}
+#semi-related event for independence wars
+country_event = {
+    id = bshisresist.5
+    title = bshisresist.5.t
+    desc = bshisresist.5.d
+    hidden = yes
+
+    trigger = {
+        has_idea = gearing_up_for_independence_war
+        exists = yes
+    }
+
+    fire_only_once = yes 
+
+    immediate = {
+        ROOT = {
+            swap_ideas = {
+                remove_idea = gearing_up_for_independence_war
+                add_idea = generic_independence_war
+            }
+        }
+    }
+
+    option = {
+        name = bshisresist.5.a
+
+    }
+}

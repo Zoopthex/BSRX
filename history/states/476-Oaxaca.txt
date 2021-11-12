@@ -1,0 +1,35 @@
+
+state={
+	id=476
+	name="STATE_476"
+	manpower = 931319
+	
+	state_category = large_town
+
+	resources={
+		oil=6
+	}
+	
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 7
+			air_base = 2
+			10889 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = MEX
+		victory_points = {
+			10889 1
+		}
+		victory_points = {
+			2021 3
+		}
+	}
+
+	provinces={
+		2021 10889
+	}
+	
+}

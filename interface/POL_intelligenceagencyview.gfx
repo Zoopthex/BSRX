@@ -1,0 +1,27 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_pol_extra_one"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_poland_general_staff.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_pol_extra_two"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_poland_political_defense_state_police.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_pol_extra_three"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_poland_war_academy_eagle.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_pol_extra_four"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_poland_war_academy_eagle2.dds"
+		noOfFrames = 2
+	}
+
+}

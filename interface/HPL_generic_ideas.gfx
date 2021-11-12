@@ -1,0 +1,13 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_idea_generic_partial_recovery"
+		texturefile = "gfx/interface/ideas/idea_generic_partial_recovery.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_no_impact"
+		texturefile = "gfx/interface/ideas/idea_generic_no_impact.dds"
+	}
+	
+}

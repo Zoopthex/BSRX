@@ -1,0 +1,1194 @@
+on_actions = {
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+				if = {
+				limit = {			
+					NOT = {
+						has_game_rule = {
+							rule = states_renames_rule
+							option = STATES_NO
+						}
+					}
+				}
+			
+			FROM.FROM = {
+
+				### United France ###
+				if = {
+					limit = {
+						ROOT = {
+							is_France_united = yes
+						}
+					}
+					do_united_paris_renames = yes
+				}
+
+				### GER ###
+				if = {
+					limit = {
+						ROOT = {
+							is_German_speak = yes
+							NOT = {
+							has_cosmetic_tag = HUN_EMPIRE
+							}
+						}										
+					}
+					do_german_renames = yes
+				}
+				
+				### POL ###
+				if = {
+					limit = {
+						ROOT = {
+								OR = { 
+									original_tag = POL 
+									original_tag = GAL 
+								}
+							}
+						}
+					do_polish_renames = yes
+				}
+				
+				
+				### HUN_EMPIRE ###
+				if = {
+					limit = {
+						ROOT = {
+								is_austria_hungary = yes
+							}
+						}
+					do_austria_hungary_renames = yes
+				}
+				
+				### FRA ###
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								original_tag = FRA
+								has_cosmetic_tag = FRA_BLUE
+								has_cosmetic_tag = MOR_FRA
+								has_cosmetic_tag = TUN_FRA
+								has_cosmetic_tag = ALG_FRA
+								has_cosmetic_tag = FWA_FRA
+								has_cosmetic_tag = FEA_FRA
+								has_cosmetic_tag = DJI_FRA
+								has_cosmetic_tag = MAD_FRA
+								has_cosmetic_tag = TOG_FRA
+								has_cosmetic_tag = EGY_FRA
+								has_cosmetic_tag = SUD_FRA
+								has_cosmetic_tag = CMR_FRA
+								has_cosmetic_tag = NMB_FRA
+								has_cosmetic_tag = SYR_FRA
+								has_cosmetic_tag = LEB_FRA
+								has_cosmetic_tag = INC_FRA
+								has_cosmetic_tag = SAF_FRA
+								has_cosmetic_tag = LEZ_FRA
+								has_cosmetic_tag = SWZ_FRA
+								has_cosmetic_tag = ETH_FRA
+								has_cosmetic_tag = SOM_FRA
+								has_cosmetic_tag = MZB_FRA
+								has_cosmetic_tag = SAR_rhineland
+							}
+						}
+					}
+					do_french_renames = yes
+				}
+				
+				### RUSSIA ###
+				if = {
+					limit = {
+						ROOT = {
+							tag = SOV
+							OR = {
+							has_cosmetic_tag = SOV_russia
+							has_cosmetic_tag = RUS_EMPIRE
+							}
+						}
+					}
+					do_russian_renames = yes
+				}
+				
+				### SOV ###
+				if = {
+					limit = {
+						ROOT = {
+							is_Soviet_speak = yes
+							NOT = {
+								OR = {
+								has_cosmetic_tag = SOV_russia
+								has_cosmetic_tag = RUS_EMPIRE
+								}
+							}
+						}
+					}
+					do_soviet_renames = yes
+				}
+
+				### West-Berlin and Ost-Berlin ###
+				if = {
+					limit = {
+						ROOT = {
+							is_Germany_divided = yes
+						}
+					}
+					do_west_east_berlin_renames = yes
+				}
+
+				### United Berlin ###
+				if = {
+					limit = {
+						ROOT = {
+							is_Germany_divided = no
+						}
+					}
+					do_united_berlin_renames = yes
+				}
+
+				### DEN ###
+				if = {
+					limit = {
+						ROOT = {
+							tag = DEN
+						}
+					}
+					do_danish_renames = yes
+				}
+				
+				### JAP ###
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								original_tag = JAP
+								original_tag = RYU
+							}
+						}
+					}
+					do_japanese_renames = yes
+				}
+	
+				### KOR ###
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+							original_tag = KOR
+							original_tag = ROK
+							original_tag = DPK
+							}
+						}
+					}
+					do_korean_renames = yes
+				}
+			
+				### CHI ###
+				if = {
+					limit = {
+						ROOT = {
+							is_Chinese_speak = yes
+						}
+					}
+					do_chinese_renames = yes
+				}
+				
+				### MAN ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = MAN
+						}
+					}
+					do_manchurian_renames = yes
+				}
+				
+				### MZB ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = MZB
+						}
+					}
+					do_mozambique_renames = yes
+				}
+				
+				### ABH ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = ABH
+						}
+					}
+					do_abkhaz_renames = yes
+				}
+				
+				### ARM ###
+				if = {
+					limit = {
+						ROOT = {
+							tag = ARM
+							NOT = { has_cosmetic_tag = CAU_UNIFIED }
+						}										
+					}
+					do_armenian_renames = yes
+				}
+				
+				### AZR ###
+				if = {
+					limit = {
+						ROOT = {
+							tag = AZR
+							NOT = { has_cosmetic_tag = CAU_UNIFIED }
+						}										
+					}
+					do_azeri_renames = yes
+				}
+				
+				### GEO ###
+				if = {
+					limit = {
+						ROOT = {
+							tag = GEO
+							NOT = { has_cosmetic_tag = CAU_UNIFIED }
+						}										
+					}
+					do_georgian_renames = yes
+				}
+				
+				### UKR ###
+				if = {
+					limit = {
+						ROOT = {
+							tag = UKR
+						}										
+					}
+					do_ukranian_renames = yes
+				}
+				
+				### ARAB ###
+				if = {
+					limit = {
+						ROOT = {
+							is_Arabian_speak = yes
+						}
+					}
+					do_arabian_renames = yes
+				}
+				
+				### LIT ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = LIT
+						}
+					}
+					do_lithuanian_renames = yes
+				}
+				
+				### CZE ###
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								original_tag = CZE
+								original_tag = MRV
+								original_tag = SLO
+							}
+							NOT = {
+							has_cosmetic_tag = HUN_EMPIRE
+							}
+						}
+					}
+					do_czech_renames = yes
+				}
+				
+				### ITA ###
+				if = {
+					limit = {
+						ROOT = {
+							is_Italian_speak = yes
+						}
+					}
+					do_italian_renames = yes
+				}
+				
+				### CIR ###
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+							original_tag = CIR
+							original_tag = KBR
+							}
+						}
+					}
+					do_circassian_renames = yes
+				}
+				
+				### YUG ###
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+							original_tag = YUG
+							original_tag = SER
+							original_tag = BOS
+							original_tag = SLV
+							original_tag = CRO
+							original_tag = MNT
+							original_tag = MAC
+							}
+						}
+					}
+					do_yugoslavia_renames = yes
+				}
+				
+				### BEL ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = BEL
+						}
+					}
+					do_belgian_renames = yes
+				}
+
+				### West-Paris and Ost-Paris ###
+				if = {
+					limit = {
+						ROOT = {
+							is_France_divided = yes
+						}
+					}
+					do_west_east_paris_renames = yes
+				}
+				### Virgin Islands ###
+				if = {
+					limit = {
+						ROOT = {
+							virgin_islands_divided = yes
+						}
+					}
+					split_virgin_names = yes
+				}
+				### BUL ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = BUL
+						}
+					}
+					do_bulgarian_renames = yes
+				}
+
+				### LAT ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = LAT
+						}
+					}
+					do_latvian_renames = yes
+				}
+
+				### TUR ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = TUR
+						}
+					}
+					do_turkish_renames = yes
+				}
+				
+				### ALB ###
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+							original_tag = ALB
+							original_tag = KOS
+							}
+						}
+					}
+					do_albanian_renames = yes
+				}
+
+				### HUN ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = HUN
+							NOT = {
+							has_cosmetic_tag = HUN_EMPIRE
+							}
+						}
+					}
+					do_hungarian_renames = yes
+				}
+
+				### SWI ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = SWI
+						}
+					}
+					do_swiss_renames = yes
+				}
+
+				### EST ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = EST
+						}
+					}
+					do_estonian_renames = yes
+				}
+
+				### FIN ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = FIN
+						}
+					}
+					do_finnish_renames = yes
+				}
+
+				### SWE ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = SWE
+						}
+					}
+					do_swedish_renames = yes
+				}
+
+				### ROM ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = ROM
+						}
+					}
+					do_romanian_renames = yes
+				}
+
+				### HOL ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = HOL
+						}
+					}
+					do_dutch_renames = yes
+				}
+
+				### LUX ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = LUX
+						}
+					}
+					do_luxemburg_renames = yes
+				}
+
+				### SPR ###
+				if = {
+					limit = {
+						ROOT = {
+						OR = {
+							original_tag = SPR
+							original_tag = MEX
+							original_tag = SPA
+							original_tag = CUB
+							original_tag = DOM
+							original_tag = PUE
+							original_tag = GUA
+							original_tag = BLZ
+							original_tag = HON
+							original_tag = NIC
+							original_tag = ELS
+							original_tag = COS
+							original_tag = PAN
+							original_tag = COL
+							original_tag = VEN
+							original_tag = ECU
+							original_tag = PRU
+							original_tag = BOL
+							original_tag = PAR
+							original_tag = URG
+							original_tag = ARG
+							original_tag = CHL
+							original_tag = EQG
+							original_tag = WES							
+						}
+						}
+					}
+					do_spanish_renames = yes
+				}
+
+				### CAT ###
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								original_tag = CAT
+								original_tag = ADR
+							}
+						}
+					}
+					do_catalan_renames = yes
+				}
+
+				### POR ###
+				if = {
+					limit = {
+						ROOT = {
+								original_tag = POR
+						}
+					}
+					do_portuguese_renames = yes
+				}
+
+				### BRI ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = BRI
+						}
+					}
+					do_brittany_renames = yes
+				}
+
+				### NOR ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = NOR
+						}
+					}
+					do_norwegian_renames = yes
+				}
+				
+				### UYGHURISTAN ###
+				if = {
+					limit = {
+						ROOT = {
+							has_cosmetic_tag = UYGHUR
+						}
+					}
+					do_uyghur_renames = yes
+				}
+
+				### SIK ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = SIK
+						}
+					}
+					do_sinkiang_renames = yes
+				}
+				
+				###GRE###
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+							original_tag = GRE
+							original_tag = PON
+							}
+						}
+					}
+					do_greek_renames = yes
+				}
+
+				### KTS ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = KTS
+						}
+					}
+					do_neapolitan_renames = yes
+				}
+
+				### SRD ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = SRD
+						}
+					}
+					do_sardinian_renames = yes
+				}
+
+				### OCC ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = OCC
+						}
+					}
+					do_occitan_renames = yes
+				}
+
+				### COG ###
+				if = {
+					limit = {
+						ROOT = {
+							tag = COG
+							NOT = {
+							has_cosmetic_tag = BEL_COG
+							}
+						}
+					}
+					do_east_congolese_renames = yes
+				}
+				
+				### DEN ###
+				if = {
+					limit = {
+						ROOT = {
+							tag = DEN
+							}
+						}
+					}
+					do_danish_renames = yes
+				}
+
+				### ARG ###
+				if = {
+					limit = {
+						ROOT = {
+							tag = ARG
+						}
+					}
+					do_argentine_renames = yes
+				}
+				### ZAM ###
+				if = {
+					limit = {
+						ROOT = {
+							tag = ZAM
+							NOT = {
+							has_cosmetic_tag = ZAM_ENG
+							}
+						}
+					}
+					do_zambian_renames = yes
+				}
+				### ZIM ###
+				if = {
+					limit = {
+						ROOT = {
+							tag = ZIM
+							NOT = {
+							has_cosmetic_tag = ZIM_ENG
+							}
+						}
+					}
+					do_zimbabwe_renames = yes
+				}
+				### ENG ###
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								tag = ENG
+								tag = USA
+								has_cosmetic_tag = ZIM_ENG
+								has_cosmetic_tag = ZAM_ENG
+							}
+						}
+					}
+					do_english_renames = yes
+				}
+				### KUR ###
+				if = {
+					limit = {
+						ROOT = {
+							tag = KUR
+						}										
+					}
+					do_kurdish_renames = yes
+				}
+			}
+		}
+	}
+
+	on_government_change = {
+		effect = {
+		    if = {
+			limit = {			
+			NOT = {
+					has_game_rule = {
+						rule = states_renames_rule
+						option = STATES_NO
+					}
+				}
+		    }		
+			every_controlled_state = {
+
+				### United France ###
+				if = {
+					limit = {
+						ROOT = {
+							is_France_united = yes
+						}
+					}
+					do_united_paris_renames = yes
+				}
+
+				### GER ###
+				if = {
+					limit = {
+						ROOT = {
+							is_German_speak = yes
+						}										
+					}
+					do_german_renames = yes
+				}
+				### RUSSIA ###
+				if = {
+					limit = {
+						ROOT = {
+							tag = SOV
+							OR = {
+							has_cosmetic_tag = SOV_russia
+							has_cosmetic_tag = RUS_EMPIRE
+							}
+						}
+					}
+					do_russian_renames = yes
+				}
+				### ZAM ###
+				if = {
+					limit = {
+						ROOT = {
+							tag = ZAM
+							NOT = {
+							has_cosmetic_tag = ZAM_ENG
+							}
+						}
+					}
+					do_zambian_renames = yes
+				}
+				### ZIM ###
+				if = {
+					limit = {
+						ROOT = {
+							tag = ZIM
+							NOT = {
+							has_cosmetic_tag = ZIM_ENG
+							}
+						}
+					}
+					do_zimbabwe_renames = yes
+				}
+				
+				### POL ###
+				if = {
+					limit = {
+						ROOT = {
+							OR = { 
+								tag = POL 
+								tag = GAL 
+							}
+						}
+					}
+					do_polish_renames = yes
+				}
+				
+				### FRA ###
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								tag = FRA
+								has_cosmetic_tag = FRA_BLUE
+								has_cosmetic_tag = MOR_FRA
+								has_cosmetic_tag = TUN_FRA
+								has_cosmetic_tag = ALG_FRA
+								has_cosmetic_tag = FWA_FRA
+								has_cosmetic_tag = FEA_FRA
+								has_cosmetic_tag = DJI_FRA
+								has_cosmetic_tag = MAD_FRA
+								has_cosmetic_tag = TOG_FRA
+								has_cosmetic_tag = EGY_FRA
+								has_cosmetic_tag = SUD_FRA
+								has_cosmetic_tag = CMR_FRA
+								has_cosmetic_tag = NMB_FRA
+								has_cosmetic_tag = SYR_FRA
+								has_cosmetic_tag = LEB_FRA
+								has_cosmetic_tag = INC_FRA
+								has_cosmetic_tag = SAF_FRA
+								has_cosmetic_tag = LEZ_FRA
+								has_cosmetic_tag = SWZ_FRA
+								has_cosmetic_tag = ETH_FRA
+								has_cosmetic_tag = SOM_FRA
+								has_cosmetic_tag = MZB_FRA
+							}
+						}
+					}
+					do_french_renames = yes
+				}
+				
+				### RUSSIA ###
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+							has_cosmetic_tag = SOV_russia
+							has_cosmetic_tag = RUS_EMPIRE
+							}
+						}
+					}
+					do_russian_renames = yes
+				}
+				
+				### SOV ###
+				if = {
+					limit = {
+						ROOT = {
+							is_Soviet_speak = yes
+							NOT = {
+								OR = {
+								has_cosmetic_tag = SOV_russia
+								has_cosmetic_tag = RUS_EMPIRE
+								}
+							}
+						}
+					}
+					do_soviet_renames = yes
+				}
+
+				### West-Berlin and Ost-Berlin ###
+				if = {
+					limit = {
+						ROOT = {
+							is_Germany_divided = yes
+						}
+					}
+					do_west_east_berlin_renames = yes
+				}
+
+				### United Berlin ###
+				if = {
+					limit = {
+						ROOT = {
+							is_Germany_divided = no
+						}
+					}
+					do_united_berlin_renames = yes
+				}
+
+				### DEN ###
+				if = {
+					limit = {
+						ROOT = {
+							tag = DEN
+						}
+					}
+					do_danish_renames = yes
+				}
+				
+				### JAP ###
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								original_tag = JAP
+								tag = RYU
+							}
+						}
+					}
+					do_japanese_renames = yes
+				}
+				
+				### LIT ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = LIT
+						}
+					}
+					do_lithuanian_renames = yes
+				}
+				
+				### CZE ###
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								original_tag = CZE
+								original_tag = MRV
+							}
+						}
+					}
+					do_czech_renames = yes
+				}
+				
+				### ITA ###
+				if = {
+					limit = {
+						ROOT = {
+							is_Italian_speak = yes
+						}
+					}
+					do_italian_renames = yes
+				}
+				
+				### YUG ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = YUG
+						}
+					}
+					do_yugoslavia_renames = yes
+				}
+				
+				### BEL ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = BEL
+						}
+					}
+					do_belgian_renames = yes
+				}
+
+				### West-Paris and Ost-Paris ###
+				if = {
+					limit = {
+						ROOT = {
+							is_France_divided = yes
+						}
+					}
+					do_west_east_paris_renames = yes
+				}
+
+				### BUL ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = BUL
+						}
+					}
+					do_bulgarian_renames = yes
+				}
+
+				### LAT ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = LAT
+						}
+					}
+					do_latvian_renames = yes
+				}
+
+				### TUR ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = TUR
+						}
+					}
+					do_turkish_renames = yes
+				}
+
+				### HUN ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = HUN
+						}
+					}
+					do_hungarian_renames = yes
+				}
+
+				### SWI ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = SWI
+						}
+					}
+					do_swiss_renames = yes
+				}
+
+				### EST ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = EST
+						}
+					}
+					do_estonian_renames = yes
+				}
+
+				### FIN ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = FIN
+						}
+					}
+					do_finnish_renames = yes
+				}
+
+				### SWE ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = SWE
+						}
+					}
+					do_swedish_renames = yes
+				}
+
+				### ROM ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = ROM
+						}
+					}
+					do_romanian_renames = yes
+				}
+
+				### HOL ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = HOL
+						}
+					}
+					do_dutch_renames = yes
+				}
+
+				### LUX ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = LUX
+						}
+					}
+					do_luxemburg_renames = yes
+				}
+
+				### SPR ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = SPR
+						}
+					}
+					do_spanish_renames = yes
+				}
+
+				### CAT ###
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								original_tag = CAT
+								original_tag = ADR
+							}
+						}
+					}
+					do_catalan_renames = yes
+				}
+
+				### BRI ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = BRI
+						}
+					}
+					do_brittany_renames = yes
+				}
+
+				### NOR ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = NOR
+						}
+					}
+					do_norwegian_renames = yes
+				}
+				
+				### UYGHURISTAN ###
+				if = {
+					limit = {
+						ROOT = {
+							has_cosmetic_tag = UYGHUR
+						}
+					}
+					do_uyghur_renames = yes
+				}
+
+				### SIK ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = SIK
+						}
+					}
+					do_sinkiang_renames = yes
+				}
+
+				### KTS ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = KTS
+						}
+					}
+					do_neapolitan_renames = yes
+				}
+
+				### SRD ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = SRD
+						}
+					}
+					do_sardinian_renames = yes
+
+				### OCC ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = OCC
+						}
+					}
+					do_occitan_renames = yes
+				}
+
+				### COG ###
+				if = {
+					limit = {
+						ROOT = {
+							original_tag = COG
+						}
+					}
+					do_congolese_renames = yes
+				}
+			}
+		}
+	}
+}
+}
+}

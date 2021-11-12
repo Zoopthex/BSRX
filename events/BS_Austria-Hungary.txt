@@ -1,0 +1,656 @@
+﻿
+add_namespace = AUH
+
+#Fascist Leader
+country_event = {
+	id = AUH.1
+	title = AUH.1.t
+	desc = AUH.1.d
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+	
+	option = {	#Hapsburg will lead fascist country
+		name = AUH.1.a
+		
+		ai_chance = {
+			factor = 10
+		}
+
+		create_country_leader = {
+			name = "Otto I"
+			desc = "POLITICS_OTTO_VON_HABSBURG_DESC"
+			picture = GFX_Portrait_hungary_otto_von_hapsburg
+			expire = "1965.1.1"
+			ideology = national_populism
+			traits = {
+
+			}
+		}
+	}
+	option = {	#Friedrich Franz
+		name = AUH.1.b
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 30
+				is_puppet_of = GER
+			}
+		}
+
+		create_country_leader = {
+			name = "I. Frigyes Ferenc"
+			desc = "POLITICS_FRIEDRICH_FRANZ_OF_MECKLENBURG-SCHWERIN_DESC"
+			picture = GFX_Portrait_hungary_friedrich_franz
+			expire = "1965.1.1"
+			ideology = nazism
+			traits = {
+			}
+			id = 502 #Nazi Franz
+		}
+	}
+
+	option = {	#Emil Hacha
+		name = AUH.1.c
+		
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 10
+				tag = CZE
+			}
+		}
+
+		create_country_leader = {
+			name = "Emil Hacha"
+			desc = "POLITICS_EMIL_HACHA"
+			picture = "gfx/leaders/CZE/Portrait_CZE_Emil_Hacha.dds"
+			expire = "1965.1.1"
+			ideology = nazism
+			traits = {
+			}
+		}
+	}
+}
+
+#Communist Leader
+country_event = {
+	id = AUH.2
+	title = AUH.2.t
+	desc = AUH.2.d
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+	
+	option = {	#Bela kun
+		name = AUH.2.a
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 30
+				tag = HUN
+			}
+		}
+
+		create_country_leader = {
+			name = "Bela Kun"
+			desc = "POLITICS_BELA_KUN_DESC"
+			picture = GFX_Portrait_hungary_bela_kun
+			expire = "1965.1.1"
+			ideology = leninism
+			traits = {
+			}
+		}
+	}
+	option = {	#Klement Gottwald
+		name = AUH.2.b
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 30
+				tag = CZE
+			}
+		}
+
+		create_country_leader = {
+			name = "Klement Gottwald"
+			desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+			picture = "Portrait_Czech_Klement_Gottwald.dds"
+			expire = "1965.1.1"
+			ideology = stalinism
+			traits = {
+				#
+			}
+		}
+	}
+
+	option = {	#Alfred Klahr
+		name = AUH.2.c
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 30
+				tag = AUS
+			}
+		}
+
+		create_country_leader = {
+			name = "Alfred Klahr"
+			desc = "POLITICS_ALFRED_KLAHR_DESC"
+			picture = "Portrait_Austria_Klahr_Alfred.dds"
+			expire = "1965.1.1"
+			ideology = marxism
+			traits = {
+				#
+			}
+		}
+	}
+}
+#The Question of Transylvania
+country_event = {
+	id = AUH.3
+	title = AUH.3.t
+	desc = AUH.3.d
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+
+	option = { #Slow but easy way
+		trigger = {
+			NOT = { country_exists = TRA }
+		}
+		name = AUH.3.a
+
+		TRA = {
+			transfer_state = 76
+			transfer_state = 82
+			transfer_state = 83
+			transfer_state = 84
+			transfer_state = 1201
+			transfer_state = 1507
+		}
+		add_state_core = 1201
+		add_state_core = 1625
+		add_state_core = 1643
+		puppet = TRA
+		TRA = { add_ideas = HUN_crownland_integration }
+		hidden_effect = {
+			set_country_flag = HUN_autonomous_TRA
+		}
+		if = {
+			limit = {
+				NOT = { has_dlc = "Together for Victory" }
+			}
+			hidden_effect = {
+				TRA = {
+					set_country_flag = {
+						flag = HUN_integration_time
+						days = 180
+						value = 1
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 75
+		}
+	}
+
+	option = { #With compliance, but hard
+		trigger = {
+			has_dlc = "La Resistance"
+		}
+		name = AUH.3.b
+
+		add_state_core = 1201
+		add_state_core = 1625
+		add_state_core = 1643
+		hidden_effect = {
+			set_country_flag = HUN_TRA_compliance
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+#The Question of Vojvodina
+country_event = {
+	id = AUH.4
+	title = AUH.4.t
+	desc = AUH.4.d
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+
+	option = { #Slow but easy way
+		trigger = {
+			NOT = { country_exists = VOJ }
+		}
+		name = AUH.4.a
+
+		VOJ = {
+			transfer_state = 45
+			transfer_state = 764
+			transfer_state = 868
+			transfer_state = 1987
+			transfer_state = 1988
+		}
+		puppet = VOJ
+		VOJ = { add_ideas = HUN_crownland_integration }
+		hidden_effect = {
+			set_country_flag = HUN_autonomous_COJ
+		}
+		if = {
+			limit = {
+				NOT = { has_dlc = "Together for Victory" }
+			}
+			hidden_effect = {
+				VOJ = {
+					set_country_flag = {
+						flag = HUN_integration_time
+						days = 180
+						value = 1
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 75
+		}
+	}
+
+	option = { #With compliance, but hard
+		trigger = {
+			has_dlc = "La Resistance"
+		}
+		name = AUH.4.b
+		hidden_effect = {
+			set_country_flag = HUN_VOJ_compliance
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+#The Question of Croatia
+country_event = {
+	id = AUH.5
+	title = AUH.5.t
+	desc = AUH.5.d
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+
+	option = { #Slow but easy way
+		trigger = {
+			NOT = { country_exists = CRO }
+		}
+		name = AUH.5.a
+
+		CRO = {
+			transfer_state = 109
+			transfer_state = 869
+			transfer_state = 937
+			transfer_state = 939
+			transfer_state = 1066
+			transfer_state = 2012
+		}
+		puppet = CRO
+		CRO = { add_ideas = HUN_crownland_integration }
+		hidden_effect = {
+			set_country_flag = HUN_autonomous_CRO
+		}
+		if = {
+			limit = {
+				NOT = { has_dlc = "Together for Victory" }
+			}
+			hidden_effect = {
+				CRO = {
+					set_country_flag = {
+						flag = HUN_integration_time
+						days = 180
+						value = 1
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 75
+		}
+	}
+
+	option = { #With compliance, but hard
+		trigger = {
+			has_dlc = "La Resistance"
+		}
+		name = AUH.5.b
+		hidden_effect = {
+			set_country_flag = HUN_CRO_compliance
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+#The Question of Dalmatia
+country_event = {
+	id = AUH.6
+	title = AUH.6.t
+	desc = AUH.6.d
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+
+	option = { #Attach it to Croatia
+		name = AUH.6.a
+
+		CRO = {
+			transfer_state = 103
+			transfer_state = 163
+			transfer_state = 940
+			transfer_state = 1104
+			transfer_state = 1970
+			transfer_state = 1387
+		}
+		hidden_effect = {
+			set_country_flag = CRO_DAL_attached
+		}
+		ai_chance = {
+			factor = 75
+		}
+	}
+
+	option = { #Integrate separately via compliance
+		trigger = {
+			has_dlc = "La Resistance"
+		}
+		name = AUH.6.b
+		hidden_effect = {
+			set_country_flag = AUS_DAL_compliance
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+#The Question of Carinola
+country_event = {
+	id = AUH.7
+	title = AUH.7.t
+	desc = AUH.7.d
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_state_core = 934
+			add_state_core = 936
+			add_state_core = 1450
+			add_state_core = 1458
+		}
+	}
+
+	option = { #Slow but easy way
+		trigger = {
+			NOT = { country_exists = SLV }
+		}
+		name = AUH.7.a
+
+		SLV = {
+			transfer_state = 102
+			transfer_state = 935
+		}
+		puppet = SLV
+		SLV = { add_ideas = HUN_crownland_integration }
+		hidden_effect = {
+			set_country_flag = AUS_autonomous_SLV
+		}
+		if = {
+			limit = {
+				NOT = { has_dlc = "Together for Victory" }
+			}
+			hidden_effect = {
+				SLV = {
+					set_country_flag = {
+						flag = HUN_integration_time
+						days = 180
+						value = 1
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 75
+		}
+	}
+
+	option = { #With compliance, but hard
+		trigger = {
+			has_dlc = "La Resistance"
+		}
+		name = AUH.7.b
+		hidden_effect = {
+			set_country_flag = AUS_SLV_compliance
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+#The Question of the Littoral
+country_event = {
+	id = AUH.8
+	title = AUH.8.t
+	desc = AUH.8.d
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+
+	option = { #Attach it to Carinola
+		name = AUH.8.a
+
+		SLV = {
+			transfer_state = 736
+			transfer_state = 866
+			transfer_state = 948
+			transfer_state = 993
+			transfer_state = 1451
+		}
+		hidden_effect = {
+			set_country_flag = SLV_LIT_attached_fully
+		}
+		ai_chance = {
+			factor = 75
+		}
+	}
+
+	option = { #Split between Croatia and Carinola
+		trigger = {
+			CRO = { is_subject_of = ROOT }
+		}
+		name = AUH.8.b
+		SLV = {
+			transfer_state = 866
+			transfer_state = 948
+			transfer_state = 993
+			transfer_state = 1451
+		}
+		CRO = { transfer_state = 736 }
+		hidden_effect = {
+			set_country_flag = SLV_LIT_attached_partial
+			set_country_flag = CRO_IST_attached
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+
+	option = { #Integrate separately via compliance
+		trigger = {
+			has_dlc = "La Resistance"
+		}
+		name = AUH.8.c
+		hidden_effect = {
+			set_country_flag = AUS_LIT_compliance
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+#The Question of Galicia
+country_event = {
+	id = AUH.9
+	title = AUH.9.t
+	desc = AUH.9.d
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+
+	option = { #Slow but easy way
+		trigger = {
+			NOT = { country_exists = GAL }
+		}
+		name = AUH.9.a
+
+		GAL = {
+			transfer_state = 88
+			transfer_state = 89
+			transfer_state = 91
+			transfer_state = 863
+			transfer_state = 1984
+			transfer_state = 996
+			transfer_state = 1982
+			transfer_state = 1180
+			transfer_state = 1374
+			transfer_state = 1386
+			transfer_state = 1414
+			transfer_state = 1553
+			transfer_state = 1558
+			transfer_state = 1588
+			transfer_state = 1589
+			transfer_state = 1590
+			transfer_state = 1599
+			transfer_state = 1983
+			transfer_state = 1737
+			transfer_state = 1768
+			transfer_state = 1769
+			transfer_state = 1982
+			transfer_state = 1983
+			transfer_state = 1984
+		}
+		puppet = GAL
+		GAL = { add_ideas = HUN_crownland_integration }
+		hidden_effect = {
+			set_country_flag = AUS_autonomous_GAL
+		}
+		if = {
+			limit = {
+				NOT = { has_dlc = "Together for Victory" }
+			}
+			hidden_effect = {
+				GAL = {
+					set_country_flag = {
+						flag = HUN_integration_time
+						days = 180
+						value = 1
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 75
+		}
+	}
+
+	option = { #With compliance, but hard
+		trigger = {
+			has_dlc = "La Resistance"
+		}
+		name = AUH.9.b
+		hidden_effect = {
+			set_country_flag = AUS_GAL_compliance
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+#The Question of Bukovina
+country_event = {
+	id = AUH.10
+	title = AUH.10.t
+	desc = AUH.10.d
+	picture = GFX_report_event_hungary_parliament
+	
+	is_triggered_only = yes
+
+	option = { #Slow but easy way
+		trigger = {
+			NOT = { country_exists = BUK }
+		}
+		name = AUH.10.a
+
+		BUK = {
+			transfer_state = 80
+			transfer_state = 830
+		}
+		puppet = BUK
+		BUK = { add_ideas = HUN_crownland_integration }
+		hidden_effect = {
+			set_country_flag = AUS_autonomous_BUK
+		}
+		if = {
+			limit = {
+				NOT = { has_dlc = "Together for Victory" }
+			}
+			hidden_effect = {
+				BUK = {
+					set_country_flag = {
+						flag = HUN_integration_time
+						days = 180
+						value = 1
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 75
+		}
+	}
+
+	option = { #Attach it to Galicia
+		trigger = {
+			GAL = { is_subject_of = ROOT }
+		}
+		name = AUH.10.b
+		GAL = {
+			transfer_state = 80
+			transfer_state = 830
+		}
+		hidden_effect = {
+			set_country_flag = GAL_BUK_attached
+		}
+		ai_chance = {
+			factor = 12.5
+		}
+	}
+
+	option = { #With compliance, but hard
+		trigger = {
+			has_dlc = "La Resistance"
+		}
+		name = AUH.10.c
+		hidden_effect = {
+			set_country_flag = AUS_BUK_compliance
+		}
+		ai_chance = {
+			factor = 12.5
+		}
+	}
+}

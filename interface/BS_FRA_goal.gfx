@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_goal_FRA_cooperation_with_CGT"
+		texturefile = "gfx/interface/goals/FRA_cooperation_with_CGT.png"
+	}
+	spriteType = {
+		name = "GFX_goal_FRA_team_up_with_anarchists"
+		texturefile = "gfx/interface/goals/FRA_team_up_with_anarchists.png"
+	}
+}

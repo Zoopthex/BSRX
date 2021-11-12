@@ -1,0 +1,21 @@
+﻿###########################
+# SpaceRace Events
+###########################
+
+add_namespace = SpaceRace
+
+# 1957 Artificial Satellite Tech
+news_event = {
+	id = SpaceRace.1
+	title = SpaceRace.1.t
+	desc = SpaceRace.1.d
+	picture = GFX_report_event_soviet_soldiers
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SpaceRace.1.a
+	}
+}

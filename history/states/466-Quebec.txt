@@ -1,0 +1,29 @@
+
+state={
+	id=466
+	name="STATE_466"
+	resources={
+		aluminium=3.000
+	}
+
+	history={
+		owner = CAN
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = CAN
+		add_core_of = QUE
+		victory_points = {
+			12223 1 
+		}
+
+	}
+
+	provinces={
+		 983 1341 1356 1657 4419 4769 7435 7683 7807 7810 7893 10249 10534 10700 10715 12205 12223 12276 12600
+	}
+	manpower=274920
+	buildings_max_level_factor=1.000
+	state_category=rural
+} 

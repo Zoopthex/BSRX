@@ -1,0 +1,422 @@
+﻿l_english:
+
+ WAR_NAME_JAP_USA:0 "Pacific War"
+ WAR_NAME_USA_JAP:0 "Pacific War"
+ 
+ WAR_NAME_JAP_CHI:0 "$ORDER$$SECOND$ Sino-Japanese War"
+ WAR_NAME_CHI_JAP:0 "Chinese anti-Japanese War"
+ 
+ WAR_NAME_JAP_MAN:0 "$ORDER$$SECOND$ Japan-Qing War"
+ WAR_NAME_MAN_JAP:0 "$ORDER$$SECOND$ Qing-Japan War"
+ WAR_NAME_JAP_PRC:0 "War of Resistance"
+
+ WAR_NAME_SOV_FIN:0 "Winter War"
+ WAR_NAME_FIN_SOV:0 "Continuation War"
+ 
+ WAR_NAME_SOV_MAN:0 "Manchurian Operation"
+ WAR_NAME_SOV_PER:0 "Soviet invasion of Iran"
+ WAR_NAME_ENG_PER:0 "British invasion of Iran"
+ 
+ WAR_NAME_GER_SOV:0 "Operation Barbarossa"
+ WAR_NAME_SOV_GER:0 "Great Patriotic War"
+ 
+ WAR_NAME_GER_POL:0 "Poland Campaign"
+ WAR_NAME_POL_GER:0 "September Campaign"
+ 
+ WAR_NAME_GER_FRA:0 "$ORDER$$SECOND$ Great War"
+ WAR_NAME_FRA_GER:0 "$ORDER$$SECOND$ Great War"
+ 
+ WAR_NAME_ENG_GER:0 "$ORDER$$SECOND$ World War"
+ WAR_NAME_GER_ENG:0 "$ORDER$$SECOND$ World War"
+ 
+ WAR_NAME_ENG_CAN:0 "English reclamation of north american territories"
+ WAR_NAME_ENG_RAJ:0 "English reclamation of the Jewel in the Crown"
+ WAR_NAME_ENG_SAF:0 "English reclamation of South Africa"
+ WAR_NAME_ENG_AST:0 "English reclamation of Terra Australis"
+ WAR_NAME_ENG_NZL:0 "English reclamation of New Zealand"
+ WAR_NAME_ENG_EGY:0 "English subjugation of Egypt"
+ 
+ WAR_NAME_ETH_SOM:0 "Ogaden War"
+ WAR_NAME_SOM_ETH:0 "Ogaden War"
+ 
+ WAR_NAME_SAF_ENG:0 "Boer War"
+ WAR_NAME_ENG_SAF:0 "Boer War"
+ 
+ WAR_NAME_HOL_BEL:0 "Dutch reclamation of the southern provinces"
+ WAR_NAME_BEL_GER:0 "War of Belgian Revenge"
+ 
+ WAR_NAME_YUG_BUL:0 "$ORDER$$FOURTH$ Balkan War"
+ WAR_NAME_BUL_YUG:0 "$ORDER$$FOURTH$ Balkan War"
+ 
+ WAR_NAME_ENG_SCO:0 "Hadrian's War"
+ WAR_NAME_SCO_ENG:0 "Hadrian's War"
+ 
+ WAR_NAME_IRE_ENG:0 "The Troubles"
+ WAR_NAME_IRE_ENG:0 "British reclamation of Ireland"
+ 
+ WAR_NAME_VTC_PAL:0 "Crusade for the Holy Land"
+ 
+ WAR_NAME_SYR_ISR:0 "Jihad for the Holy Land"
+ WAR_NAME_PAL_ISR:0 "Jihad for the Holy Land"
+ WAR_NAME_IRQ_ISR:0 "Jihad for the Holy Land"
+ WAR_NAME_LEB_ISR:0 "Jihad for the Holy Land"
+ WAR_NAME_SAU_ISR:0 "Jihad for the Holy Land"
+ WAR_NAME_YEM_ISR:0 "Jihad for the Holy Land"
+ WAR_NAME_PER_ISR:0 "Jihad for the Holy Land"
+ WAR_NAME_AFG_ISR:0 "Jihad for the Holy Land"
+ WAR_NAME_EGY_ISR:0 "Jihad for the Holy Land"
+ WAR_NAME_LIB_ISR:0 "Jihad for the Holy Land"
+ WAR_NAME_ALG_ISR:0 "Jihad for the Holy Land"
+ WAR_NAME_MOR_ISR:0 "Jihad for the Holy Land"
+ 
+ WAR_NAME_ISR_SYR:0 "Arab-Israeli War"
+ WAR_NAME_ISR_PAL:0 "Arab-Israeli War"
+ WAR_NAME_ISR_IRQ:0 "Arab-Israeli War"
+ WAR_NAME_ISR_LEB:0 "Arab-Israeli War"
+ WAR_NAME_ISR_SAU:0 "Arab-Israeli War"
+ WAR_NAME_ISR_YEM:0 "Arab-Israeli War"
+ WAR_NAME_ISR_PER:0 "Arab-Israeli War"
+ WAR_NAME_ISR_AFG:0 "Arab-Israeli War"
+ WAR_NAME_ISR_EGY:0 "Arab-Israeli War"
+ WAR_NAME_ISR_LIB:0 "Arab-Israeli War"
+ WAR_NAME_ISR_ALG:0 "Arab-Israeli War"
+ WAR_NAME_ISR_MOR:0 "Arab-Israeli War"
+ 
+ WAR_NAME_ENG_ITA:0 "Mediterranean War"
+ WAR_NAME_ITA_ENG:0 "Mediterranean War"
+ 
+ WAR_NAME_MOR_ALG:0 "Sand War"
+ WAR_NAME_ALG_MOR:0 "Sand War"
+ 
+ WAR_TAKE_CLAIM_NAME_ARG_ENG:0 "$STATE$ War"
+ 
+ WAR_NAME_USA_IRQ:0 "War in Iraq"
+ 
+ WAR_NAME_MAN_JAP:0 "Celestial War"
+ WAR_NAME_JAP_MAN:0 "Celestial War"
+ 
+ WAR_NAME_MAN_CHI:0 "War of Heavenly Ascension"
+ WAR_NAME_CHI_MAN:0 "Chinese reclamation of Manchuria"
+ 
+ WAR_NAME_ENG_MAN:0 "$ORDER$$THIRD$ Opium War"
+ 
+ WAR_NAME_ENG_MAL:0 "Operation Zipper"
+ WAR_NAME_ENG_DEN:0 "Operation Catherine"
+ WAR_NAME_ENG_NOR:0 "Operation Jupiter"
+ 
+ WAR_NAME_GER_CZE:0 "Case Grün"
+ WAR_NAME_GER_AUS:0 "Case Otto"
+ WAR_NAME_GER_VIC:0 "Case Anton"
+ WAR_NAME_GER_IRE:0 "Operation Kathleen"
+ WAR_NAME_GER_ICE:0 "Operation Icarus"
+ WAR_NAME_GER_SWI:0 "Operation Tannenbaum"
+ WAR_NAME_GER_SPR:0 "Operation Isabella"
+ WAR_NAME_GER_SPR:0 "Operation Gisella"
+ WAR_NAME_GER_SPR:0 "Operation Ilona "
+ WAR_NAME_GER_BUL:0 "Operation Strafe"
+ WAR_NAME_GER_ALB:0 "Operation Alpenveilchen"
+ WAR_NAME_GER_ITA:0 "Operation Schwarz"
+ WAR_NAME_GER_TUR:0 "Operation Gertrud"
+ WAR_NAME_GER_MLT:0 "Operation Herkules"
+ WAR_NAME_GER_EGY:0 "Operation Hornbläser"
+ WAR_NAME_GER_HUN:0 "Operation Panzerfaust"
+ WAR_NAME_GER_VCT:0 "Operation Rabat "
+ WAR_NAME_GER_NOR:0 "Operation Weserübung"
+ WAR_NAME_GER_HOL:0 "Operation Case Gelb"
+ WAR_NAME_GER_LUX:0 "Operation Case Gelb"
+ WAR_NAME_GER_BEL:0 "Operation Case Gelb"
+ WAR_NAME_GER_YUG:0 "Operation Operation 25"
+ WAR_NAME_GER_LAT:0 "Operation Beowulf"
+ WAR_NAME_GER_LIT:0 "Operation Beowulf"
+ WAR_NAME_GER_EST:0 "Operation Beowulf"
+ WAR_NAME_GER_FIN:0 "Operation Tanne West"
+ WAR_NAME_GER_GRE:0 "Operation Marita"
+ WAR_NAME_GER_ROM:0 "Operation Margarethe"
+ 
+ WAR_NAME_FRA_IRQ:0 "Operation Desert Thunder"
+ WAR_NAME_JAP_MAN:0 "Mukden War"
+ 
+ WAR_NAME_ENG_MAD:0 "Operation Ironclad"
+ 
+ WAR_NAME_USA_GER:0 "War Plan Black"
+ WAR_NAME_USA_PHI:0 "War Plan Brown"
+ WAR_NAME_USA_CUB:0 "War Plan Tan"
+ WAR_NAME_USA_ENG:0 "War Plan Red"
+ WAR_NAME_USA_CAN:0 "War Plan Crimson"
+ WAR_NAME_USA_RAJ:0 "War Plan Ruby"
+ WAR_NAME_USA_AST:0 "War Plan Scarlet"
+ WAR_NAME_USA_NZL:0 "War Plan Garnet"
+ WAR_NAME_USA_IRE:0 "War Plan Emerald"
+ WAR_NAME_USA_JAP:0 "War Plan Orange"
+ WAR_NAME_USA_CHI:0 "War Plan Yellow"
+ WAR_NAME_USA_FRA:0 "War Plan Gold"
+ WAR_NAME_USA_MEX:0 "War Plan Green"
+ WAR_NAME_USA_ICE:0 "War Plan Indigo"
+ 
+ WAR_NAME_USA_ARG:0 "War Plan Purple"
+ WAR_NAME_USA_COL:0 "War Plan Purple"
+ WAR_NAME_USA_VEN:0 "War Plan Purple"
+ WAR_NAME_USA_ECU:0 "War Plan Purple"
+ WAR_NAME_USA_BOL:0 "War Plan Purple"
+ WAR_NAME_USA_PRU:0 "War Plan Purple"
+ WAR_NAME_USA_CHI:0 "War Plan Purple"
+ WAR_NAME_USA_PAR:0 "War Plan Purple"
+ WAR_NAME_USA_URU:0 "War Plan Purple"
+ WAR_NAME_USA_BRA:0 "War Plan Purple"
+ 
+ WAR_NAME_USA_ELS:0 "War Plan Violet"
+ WAR_NAME_USA_HON:0 "War Plan Violet"
+ WAR_NAME_USA_GUA:0 "War Plan Violet"
+ WAR_NAME_USA_HAI:0 "War Plan Violet"
+ WAR_NAME_USA_DOM:0 "War Plan Violet"
+ WAR_NAME_USA_PAN:0 "War Plan Violet"
+ WAR_NAME_USA_COS:0 "War Plan Violet"
+ WAR_NAME_USA_NIC:0 "War Plan Violet"
+ 
+ WAR_NAME_ARG_CHI:0 "Operation Soberanía"
+ WAR_NAME_ENG_BRA:0 "Plan Rubber"
+ 
+ WAR_NAME_FIN_SWE:0 "War of the Northern Lights"
+ WAR_NAME_FIN_NOR:0 "War of the Northern Lights"
+ WAR_NAME_FIN_DEN:0 "War of the Northern Lights"
+ WAR_NAME_FIN_ICE:0 "War of the Northern Lights"
+ 
+ WAR_NAME_NOR_SWE:0 "War of the Northern Lights"
+ WAR_NAME_NOR_FIN:0 "War of the Northern Lights"
+ WAR_NAME_NOR_ICE:0 "War of the Northern Lights"
+ WAR_NAME_NOR_DEN:0 "War of the Northern Lights"
+ 
+ WAR_NAME_SWE_FIN:0 "War of the Northern Lights"
+ WAR_NAME_SWE_ICE:0 "War of the Northern Lights"
+ WAR_NAME_SWE_DEN:0 "War of the Northern Lights"
+ WAR_NAME_SWE_NOR:0 "War of the Northern Lights"
+ 
+ WAR_NAME_DEN_SWE:0 "War of the Northern Lights"
+ WAR_NAME_DEN_NOR:0 "War of the Northern Lights"
+ WAR_NAME_DEN_ICE:0 "War of the Northern Lights"
+ WAR_NAME_DEN_FIN:0 "War of the Northern Lights"
+ 
+ WAR_NAME_ICE_SWE:0 "War of the Northern Lights"
+ WAR_NAME_ICE_NOR:0 "War of the Northern Lights"
+ WAR_NAME_ICE_FIN:0 "War of the Northern Lights"
+ WAR_NAME_ICE_DEN:0 "War of the Northern Lights"
+ 
+ WAR_NAME_BUL_TUR:0 "War for the Bosporus"
+ WAR_NAME_TUR_BUL:0 "War for the Bosporus"
+ 
+ WAR_NAME_CZE_SLO:0 "The Divorce"
+ WAR_NAME_SLO_CZE:0 "The Divorce"
+ 
+ WAR_NAME_GER_AUS:0 "Anschluss"
+ WAR_NAME_AUS_GER:0 "Brothers War"
+ 
+ WAR_NAME_GER_DEN:0 "Schleswig War"
+ WAR_NAME_DEN_GER:0 "Schleswig War"
+ 
+ WAR_NAME_ENG_SPR:0 "Gibraltar War"
+ WAR_NAME_SPR_ENG:0 "Gibraltar War"
+ 
+ WAR_NAME_SPR_ITA:0 "Italo-Hispanic War"
+ WAR_NAME_ITA_SPR:0 "Italo-Hispanic War"
+ 
+ WAR_NAME_ITA_ROM:0 "Roman War"
+ WAR_NAME_ROM_ITA:0 "Roman War"
+ 
+ WAR_NAME_MON_CHI:0 "Mongol raids to the South"
+ WAR_NAME_CHI_MON:0 "Chinese reclamation of Mongolia"
+ 
+ WAR_NAME_MON_MEN:0 "Mongolian Unification War"
+ WAR_NAME_MEN_MON:0 "Mongolian Unification War"
+ 
+ WAR_NAME_SOV_CHI:0 "Intervention in China"
+ WAR_NAME_CHI_CHI:0 "Intervention in Siberia"
+ 
+ WAR_NAME_SOV_PRC:0 "Intervention in China"
+ WAR_NAME_PRC_CHI:0 "Intervention in Siberia"
+ 
+ WAR_NAME_SPA_MEX:0 "Spanish reclamation of New Spain"
+ WAR_NAME_SPA_ARG:0 "Spanish reclamation of La Plata"
+ WAR_NAME_SPA_COL:0 "Spanish reclamation of New Granada"
+ WAR_NAME_SPA_PRU:0 "Spanish reclamation of Peru"
+ 
+ WAR_NAME_MEX_POR:0 "Sunset Invasion"
+ WAR_NAME_MEX_FRA:0 "Sunset Invasion"
+ WAR_NAME_MEX_ENG:0 "Sunset Invasion"
+ WAR_NAME_MEX_IRE:0 "Sunset Invasion"
+ WAR_NAME_MEX_ICE:0 "Sunset Invasion"
+ WAR_NAME_MEX_SPR:0 "Sunset Invasion"
+ WAR_NAME_MEX_SCO:0 "Sunset Invasion"
+ WAR_NAME_MEX_DEN:0 "Sunset Invasion"
+ 
+ WAR_NAME_LIT_BLR:0 "Lithunian subjugation of Ruthenia"
+ WAR_NAME_IRE_LAT:0 "Potato War"
+ WAR_NAME_LAT_IRE:0 "Potato War"
+ 
+ WAR_NAME_BLR_UKR:0 "War of the Harvest"
+ WAR_NAME_UKR_BLR:0 "War of the Harvest"
+ 
+ WAR_NAME_MON_KAZ:0 "War of the Steppe"
+ WAR_NAME_KAZ_MON:0 "War of the Steppe"
+ 
+ WAR_NAME_HOL_INS:0 "Dutch reclamation of the indies"
+ 
+ WAR_NAME_CAN_NOR:0 "Vinland War"
+ WAR_NAME_NOR_CAN:0 "Vinland War"
+ 
+ WAR_NAME_CAN_DEN:0 "Whisky War"
+ WAR_NAME_DEN_CAN:0 "Whisky War"
+ 
+ WAR_NAME_SOV_MAN:0 "Seizing of Manchuria"
+ WAR_NAME_MAN_SOV:0 "Seizing of Amur"
+ 
+ WAR_NAME_AUS_HUN:0 "Danubian War"
+ WAR_NAME_HUN_AUS:0 "Danubian War"
+ 
+ WAR_NAME_GRE_MAC:0 "Macedonian War"
+ WAR_NAME_MAC_GRE:0 "Macedonian War"
+ 
+ WAR_NAME_USA_SOV:0 "Cold War"
+ WAR_NAME_SOV_USA:0 "Cold War"
+ 
+ WAR_NAME_POR_SPR:0 "Iberian War"
+ WAR_NAME_SPR_POR:0 "Iberian War"
+ 
+ WAR_NAME_SWI_AUS:0 "War of the Alps"
+ WAR_NAME_AUS_SWI:0 "War of the Alps"
+ 
+ WAR_NAME_SWI_LIE:0 "Swiss border incident"
+ WAR_NAME_LIE_SWI:0 "Liechtenstein assertion of supremacy"
+ 
+ WAR_NAME_CZE_GER:0 "Sudeten War"
+ WAR_NAME_GER_CZE:0 "Sudeten War"
+ 
+ WAR_NAME_ROM_MOL:0 "War of Romanian Unification"
+ WAR_NAME_MOL_ROM:0 "War of Romanian Unification"
+ 
+ WAR_NAME_ROM_TRA:0 "Romanian Reclamation of Transylvania"
+ WAR_NAME_TRA_ROM:0 "Transylvanian War to Guarantee Independence"
+ 
+ WAR_NAME_HUN_TRA:0 "Hungarian Reclamation of Transylvania"
+ WAR_NAME_TRA_HUN:0 "Transylvanian War to Guarantee Independence"
+ 
+ WAR_NAME_UKR_SOV:0 "War of the Donbass"
+ WAR_NAME_SOV_UKR:0 "War of the Donbass"
+ 
+ WAR_NAME_MOL_UKR:0 "Transnistrian War"
+ WAR_NAME_UKR_MOL:0 "Transnistrian War"
+ 
+ WAR_NAME_SOV_TUR:0 "War of the Straits"
+ WAR_NAME_TUR_SOV:0 "Crimean War"
+ 
+ WAR_NAME_EST_FIN:0 "War of the Sisters"
+ WAR_NAME_FIN_EST:0 "War of the Sisters"
+ 
+ WAR_NAME_USA_CUB:0 "War of the Bay of Pigs"
+ WAR_NAME_CUB_USA:0 "Guantanamo War"
+ 
+ WAR_NAME_WGR_DDR:0 "War of German Unification"
+ WAR_NAME_DDR_WGR:0 "War of German Unification"
+ 
+ WAR_NAME_ALG_FRA:0 "Algerian War"
+ WAR_NAME_FRA_ALG:0 "Algerian War"
+ 
+ WAR_NAME_VIC_GER:0 "French war of independence"
+ 
+ WAR_NAME_SOV_MON:0 "Intervention in Mongolia"
+ WAR_NAME_MON_SOV:0 "Mongolian war of Self-Assertion"
+ 
+ WAR_NAME_ALB_USA:0 "Albanian assertion of supremacy"
+ 
+ WAR_NAME_GRE_ALB:0 "War of the Epirus"
+ WAR_NAME_ALB_GRE:0 "War of the Epirus"
+ 
+ WAR_NAME_ALB_YUG:0 "The Illyrian War"
+ 
+ WAR_NAME_ARM_AZE:0 "The Nagorno-Karabakh War"
+ WAR_NAME_AZE_ARM:0 "The Nagorno-Karabakh War"
+ 
+ WAR_NAME_GRE_TUR:0 "$ORDER$$SECOND$ Greco-Turkish War"
+ WAR_NAME_TUR_GRE:0 "$ORDER$$SECOND$ Greco-Turkish War"
+ 
+ WAR_NAME_SOV_HUN:0 "War of Hungarian Suppression"
+ WAR_NAME_HUN_ROM:0 "Transylvanian War"
+ WAR_NAME_ROM_HUN:0 "Transylvanian War"
+ 
+ WAR_NAME_SOV_PRC:0 "Sino-[Sov.GetAdjective] Split"
+ WAR_NAME_PRC_SOV:0 "Sino-[Sov.GetAdjective] Split"
+ 
+ WAR_NAME_IRQ_KUW:0 "Gulf War"
+ 
+ WAR_NAME_HON_ELS:0 "Football War"
+ WAR_NAME_ELS_HON:0 "Football War"
+ 
+ WAR_NAME_FIN_KOR:0 "Finno-Korean Hyperwar"
+ WAR_NAME_KOR_FIN:0 "Finno-Korean Hyperwar"
+ 
+ WAR_NAME_FRA_ENG:0 "French revenge for Waterloo"
+ WAR_NAME_ENG_FRA:0 "[Eng.GetAdjective] war for Union with France"
+ 
+ WAR_NAME_ZIM_MOZ:0 "Bush War"
+ 
+ WAR_NAME_ENG_SOV:0 "Operation Unthinkable"
+ 
+ 
+ 
+ WAR_NAME_AFG_ENG:0 "$ORDER$$FOURTH$ Anglo-Afghan War"
+ WAR_NAME_ENG_AFG:0 "$ORDER$$FOURTH$ Anglo-Afghan War"
+ 
+ WAR_NAME_ICE_ENG:0 "Cod War"
+ WAR_NAME_ENG_ICE:0 "British Intervention in Iceland"
+ 
+ 
+ 
+ CIVIL_WAR_NAME_D01_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D02_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D03_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D04_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D05_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D06_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D07_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D08_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D09_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D10_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D11_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D12_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D13_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D14_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D15_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D16_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D17_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D18_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D19_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D20_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D21_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D22_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D23_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D24_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D25_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D26_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D27_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D28_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D29_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D30_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D31_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D32_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D33_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D34_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D35_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D36_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D37_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D38_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D39_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D40_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D41_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D42_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D43_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D44_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D45_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D46_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D47_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D48_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D49_SAF:0 "Boer War"
+ CIVIL_WAR_NAME_D50_SAF:0 "Boer War" 

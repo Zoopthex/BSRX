@@ -1,0 +1,60 @@
+﻿####### Division Templates #######
+division_template = {
+	name = "Leichte Division"				
+	division_names_group = GER_LTARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }		
+		motorized = { x = 1 y = 0 }			
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Panzer-Division"				
+	division_names_group = GER_Arm_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }		
+		light_armor = { x = 0 y = 1 }		
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+
+
+####### OOB #######
+units = { 
+	division = { # "Leichte Division"	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		} 
+		location = 6521
+		division_template = "Leichte Division" 
+		start_experience_factor = 0.4
+	} 
+
+	# III Corpo d'Armata #
+	division = { # "Panzer-Division" 
+		division_name = {
+			is_name_ordered = yes
+			name_order = 15
+		} 
+		location = 6521
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.4
+	} 	
+} 

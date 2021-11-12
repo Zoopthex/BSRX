@@ -1,0 +1,223 @@
+﻿capital = 70
+
+oob = "SLO_1939"
+
+set_technology = {
+	gw_artillery = 1
+	interwar_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	infantry_weapons2 = 1
+	support_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	tech_engineers = 1
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+}
+
+1939.1.1 = {
+	
+	add_political_power = 1198
+
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = flexible_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	set_technology = {
+		#doctrines
+		formation_flying = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		fuel_silos = 1
+		construction1 = 1
+		concentrated_industry = 1
+	}
+}
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 30
+	fascism = 25
+	communism = 15
+	neutrality = 30
+}
+
+add_ideas = {
+tiso_president
+}
+
+create_country_leader = {
+	name = "Jozef Tiso"
+	desc = "POLITICS_JOZEF_TISO_DESC"
+	picture = "Portrait_Slovakia_Jozef_Tiso.dds"
+	expire = "1965.1.1"
+	ideology = nazism #labelling Tuka and Tiso as "ultranationalist" instead of nazi is whitewashing, I want you to understand that
+	#"At the Salzburg Conference on 28 July 1940, an agreement was reached to establish a NATIONALI SOCIALIST regime in Slovakia. As a result of the conference, two state agencies were created to deal with "Jewish affairs"."
+	#In February 1942, Slovakia became the first Nazi ally to agree to deportations.In August 1942, after the majority of Slovak Jews had been sent to German-occupied Poland 
+	#and it became clear that the deportees were being systematically murdered, Tiso gave a speech in Holič in which he called for Slovaks to "cast off your parasite [the Jews]" and justified continuing deportations of Jews from Slovakia.
+	#On 30 August, Hitler commented "It is interesting how this little Catholic priest Tiso is sending us the Jews!".
+	#"Tiso himself had anti-semitic views".
+	traits = {
+	    priest
+		anti_communist
+		Germans_Man_1
+	}
+}
+create_country_leader = {
+	name = "Vojtech Tuka"
+	desc = "POLITICS_VOJTECH_TUKA_DESC"
+	picture = "BSR_vojtech_tuka.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	#In 1942, Tuka strongly advocated the deportation of Slovakia's Jewish population to the eastern Nazi concentration camps. He encouraged ever-closer cooperation of the Party with Germany.
+	#Tiso was perfectly aware of the deportations orchestrated by Tuka. In 1942 Tiso gave a speech in Holíč in which he justified ongoing deportations of Slovak Jews.
+	traits = {
+	    Germans_Man_1
+		Unpopular_Traitor
+	}
+}
+create_country_leader = {
+	name = "Gustáv Husák"
+	desc = "POLITICS_GUSTAV_HUSAK_DESC"
+	picture = "BSR_Husak.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+	the_academic
+	}
+}
+create_country_leader = {
+	name = "Rudolf Viest"
+	desc = "POLITICS_RUDOLF_VIEST_DESC"
+	picture = "Portrait_Rudolf_Viest.dds"
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = {
+	freedom_fighter
+	}
+}
+create_country_leader = {
+	name = "Jan Golian"
+	desc = "POLITICS_JAN_GOLIAN_DESC"
+	picture = "Portrait_Jan_Golian.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+	Resistance_Leader
+	}
+}
+create_country_leader = {
+	name = "Vavro Šrobár"
+	desc = "POLITICS_VAVRO_SROBAR_DESC"
+	picture = "BSR_Vavro_Srobar.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+	canny_administrator
+	Popular_Resistor
+	}
+}
+create_corps_commander = {
+	name = "Augustin Malár"
+	picture = "portrait_SLO_Augustin_Malar.dds"
+	traits = { trickster harsh_leader}
+	skill = 5
+	attack_skill = 6
+	defense_skill = 4
+	planning_skill = 5
+	logistics_skill = 3	
+}
+create_corps_commander = {
+	name = "Jozef Turanec"
+	picture = "portrait_SLO_Jozef_Turanec.dds"
+	traits = { hill_fighter trait_mountaineer }
+	skill = 4
+	attack_skill = 5
+	defense_skill = 6
+	planning_skill = 4
+	logistics_skill = 6	
+}
+
+create_corps_commander = {
+	name = "Ján Ursíny"
+	picture = "portrait_SLO_Jan_Ursiny.dds"
+	traits = { politically_connected infantry_officer }
+	skill = 1
+	attack_skill = 5
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 1	
+}
+
+create_corps_commander = {
+	name = "Ján Jesenský"
+	picture = "portrait_SLO_Janko_Jesensky.dds"
+	traits = { trickster brilliant_strategist }
+	skill = 1
+	attack_skill = 4
+	defense_skill = 5
+	planning_skill = 2
+	logistics_skill = 3	
+}
+
+create_corps_commander = {
+    name = "Josef Nemisla"
+    picture = "Portrait_Josef_Nemisla.dds"
+    traits = { skirmisher }
+    skill = 3
+	attack_skill = 5
+	defense_skill = 1
+	planning_skill = 5
+	logistics_skill = 4		
+}
+create_corps_commander = { 
+    name = "Rudolf Palaticky"
+    picture = "BSR_Rudolf_Palaticky.dds"
+    traits = { trait_reckless media_personality }
+    skill = 2
+	attack_skill = 6
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 5	
+}
+
+create_field_marshal = {
+	name = "Anton Pulanish"
+	picture = "Anton_Pulanish_Portrait.dds"	
+	traits = { defensive_doctrine }
+	skill = 3
+	attack_skill = 5
+	defense_skill = 3
+	planning_skill = 5
+	logistics_skill = 4
+}
+	

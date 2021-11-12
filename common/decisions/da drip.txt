@@ -1,0 +1,42 @@
+ottoman_drip_category = {
+
+	aquire_drip = {
+
+		icon = generic_form_nation
+
+		allowed = {
+		
+		}
+
+		available = {
+			is_subject = no
+			has_cosmetic_tag = OTT_UNIFIED
+		}
+
+		visible = {
+			has_cosmetic_tag = OTT_UNIFIED
+			NOT = { has_country_flag = aquired_drip }
+			is_ai = no
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			set_cosmetic_tag = OTT_DRIP
+			set_country_flag = aquired_drip
+			create_country_leader = {
+				name = "II. Abdülmecid"
+				desc = "POLITICS_SEVKET_AYDEMIR_DESC"
+				picture = "Abdulmejid.dds"
+				expire = "1965.1.1"
+				ideology = absolute_monarchism
+				traits = {
+					gentle_scholar
+					caliph
+				}
+			}
+		}
+		
+	}
+
+}

@@ -1,0 +1,31 @@
+
+state={
+	id=2049
+	name="STATE_2049"
+
+	history={
+		victory_points = {
+			9290 3 
+		}	
+		owner = POL
+		buildings = {
+			infrastructure = 5
+
+		}
+		add_core_of = POL
+		
+		1941.1.1 = {
+			owner = GER
+			controller = GER
+
+		}
+
+	}
+
+	provinces={
+		9290 9316
+	}
+	manpower=266343
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

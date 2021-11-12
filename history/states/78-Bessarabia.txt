@@ -1,0 +1,32 @@
+
+state={
+	id=78
+	name="STATE_78"
+
+	history={
+		add_core_of = MOL
+		owner = ROM
+		victory_points = {
+			6600 1 
+		}
+		buildings = {
+			infrastructure = 4
+			air_base = 2
+
+		}
+		add_core_of = ROM
+		1941.1.1 = {
+			owner = SOV
+			controller = SOV
+
+		}
+
+	}
+
+	provinces={
+		414 6600 11705 
+	}
+	manpower=1750956
+	buildings_max_level_factor=1.000
+	state_category=town
+}

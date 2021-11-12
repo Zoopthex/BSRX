@@ -1,0 +1,80 @@
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "BSR_Uberevent_Spanish_War_Sound" #name you're using for the sound
+	file = "customsound/BSR_Spanish_War_Music2.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "BSR_Uberevent_Sino_Japanese_War_Sound" #name you're using for the sound
+	file = "customsound/BSRSinoJapaneseWar.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "BSR_Uberevent_Barbarossa3_Sound" #name you're using for the sound
+	file = "customsound/Barbarossa3.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "BSR_Uberevent_AmericaAtDefensiveWar_Sound" #name you're using for the sound
+	file = "customsound/AmericaAtDefensiveWar.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "BSR_Uberevent_ImperialFederationMusic_Sound" #name you're using for the sound
+	file = "customsound/ImperialFederationMusic.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "BSR_Uberevent_FallOfRussia_Sound" #name you're using for the sound
+	file = "customsound/FallOfRussia.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "BSR_Uberevent_FallOfGermany_Sound" #name you're using for the sound
+	file = "customsound/FallOfGermany.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "BSR_Uberevent_FallOfFrance_Sound" #name you're using for the sound
+	file = "customsound/FallOfFrance.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "BSR_Uberevent_FallOfAmerica_Sound" #name you're using for the sound
+	file = "customsound/FallOfAmerica.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "BSR_Uberevent_FallOfBritain_Sound" #name you're using for the sound
+	file = "customsound/FallOfBritain.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "BSR_Uberevent_FallOfJapan_Sound" #name you're using for the sound
+	file = "customsound/FallOfJapan.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "BSR_Uberevent_KaiserreichTriumphant_Sound" #name you're using for the sound
+	file = "customsound/KaiserreichTriumphant.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "BSR_Uberevent_SecondGreatWar_Sound" #name you're using for the sound
+	file = "customsound/SecondGreatWar.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "BSR_Uberevent_FallOfChina_Sound" #name you're using for the sound
+	file = "customsound/FallOfChina.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "BSR_Uberevent_FallOfPoland_Sound" #name you're using for the sound
+	file = "customsound/FallOfPoland.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "BSR_Uberevent_GermanCivilWar_Sound" #name you're using for the sound
+	file = "customsound/GermanCivilWar.wav" ## location of the sound file
+	always_load = no
+}

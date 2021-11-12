@@ -1,0 +1,300 @@
+﻿###########################
+# Latvian Events
+###########################
+
+add_namespace = latvia
+
+# Story So Far, Early
+country_event = {
+	id = latvia.1
+	title = latvia.1.t
+	desc = latvia.1.d
+	picture = GFX_report_event_latvia_naval_bombardment
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.1.a
+		LAT = { country_event = latvia.2 }
+	}
+	
+	option = {
+		name = latvia.1.b
+	}
+}
+
+# Story So Far, Interwar
+country_event = {
+	id = latvia.2
+	title = latvia.2.t
+	desc = latvia.2.d
+	picture = GFX_report_event_latvia_boy_scouts
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.2.a
+		LAT = { country_event = latvia.3 }
+	}
+	
+	option = {
+		name = latvia.2.b
+	}
+}
+
+# Story So Far, Coup
+country_event = {
+	id = latvia.3
+	title = latvia.3.t
+	desc = latvia.3.d
+	picture = GFX_report_event_latvia_ulamnis_walk
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.3.a
+		LAT = { country_event = latvia.4 }
+	}
+	
+	option = {
+		name = latvia.3.b
+	}
+}
+
+# Story So Far, Current
+country_event = {
+	id = latvia.4
+	title = latvia.4.t
+	desc = latvia.4.d
+	picture = GFX_report_event_latvia_army_economic_store
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.4.a
+	}
+}
+
+# Ulmanis Dictatorship or Free Elections?
+country_event = {
+	id = latvia.5
+	title = latvia.5.t
+	desc = latvia.5.d
+	picture = GFX_report_event_latvia_ulmanis_handshake
+	
+	trigger = {
+		tag = LAT
+		has_idea = LAT_Ulmanis_Coup
+		date > 1936.03.19
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = latvia.5.a
+		ai_chance = { factor = 6 }
+		remove_ideas = LAT_Ulmanis_Coup
+		if = {
+			limit = { NOT = { has_government = neutrality } }
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+		}
+		create_country_leader = {
+			name = "Karlis Ulmanis"
+			desc = "POLITICS_KARLIS_ULMANIS_DESC"
+			picture = "GFX_Portrait_latvia_karlis_ulmanis"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				LAT_Rural_Militarist
+			}
+		}
+		set_country_flag = LAT_Constitutional_Norms_Ignored
+	}
+	
+	option = {
+		name = latvia.5.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		remove_ideas = LAT_Ulmanis_Coup
+		remove_ideas = LAT_Economic_Recovery
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		effect_tooltip = {
+			create_country_leader = {
+				name = "Pauls Kalniņš"
+				desc = ""
+				picture = "GFX_Portrait_latvia_Pauls_Kalnins"
+				expire = "1965.1.1"
+				ideology = socialism
+				traits = {
+					great_compromiser
+				}
+			}
+		}
+		set_country_flag = LAT_New_Elections_Held
+	}
+}
+
+#Ask to join faction
+country_event = {
+	id = latvia.6
+	title = latvia.6.t
+	desc = latvia.6.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.6.a
+		ai_chance = { 
+			factor = 95
+			modifier = {
+				factor = 1.35
+				LAT = { has_idea_with_trait = POL_smooth_talking_charmer }
+			}
+			modifier = {
+				factor = 0.01
+				LAT = { is_in_faction = yes }
+			}
+		}
+		LAT = {
+			country_event = latvia.7
+		}
+		add_to_faction = LAT
+		add_ai_strategy = {
+			type = alliance
+			id = "LAT"
+			value = 175
+		}
+	}
+
+	option = {
+		name = latvia.6.b
+		ai_chance = { factor = 5 }
+		LAT = { country_event = latvia.8 }
+	}
+}
+
+# [Country] Accepts Join
+country_event = {
+	id = latvia.7
+	title = latvia.7.t
+	desc = latvia.7.d
+	picture = GFX_report_event_latvia_ulmanis_triumph
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.7.a
+		effect_tooltip = {
+			add_to_faction = FROM
+		}
+	}
+}
+
+# [Country] Rejects Join
+country_event = {
+	id = latvia.8
+	title = latvia.8.t
+	desc = latvia.8.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.8.a
+	}
+}
+
+#Baltic Entente to join faction together
+country_event = {
+	id = latvia.9
+	title = latvia.9.t
+	desc = latvia.9.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.9.a
+		ai_chance = { 
+			factor = 95
+			modifier = {
+				factor = 1.35
+				LAT = { has_idea_with_trait = POL_smooth_talking_charmer }
+			}
+		}
+		if = {
+			limit = {
+				EST = {
+					has_idea = LAT_Baltic_Entente_Member
+					is_in_faction_with = LAT
+					NOT = {
+						any_other_country = {
+							has_war_with = EST
+							NOT = { has_war_with = ROOT }
+						}
+					}
+				}
+			}
+			hidden_effect = { LAT = { remove_from_faction = EST } }
+			add_to_faction = EST
+			add_ai_strategy = {
+				type = alliance
+				id = "EST"
+				value = 175
+			}
+		}
+		if = {
+			limit = {
+				LIT = {
+					has_idea = LAT_Baltic_Entente_Member
+					is_in_faction_with = LAT
+					NOT = {
+						any_other_country = {
+							has_war_with = LIT
+							NOT = { has_war_with = ROOT }
+						}
+					}
+				}
+			}
+			hidden_effect = { LAT = { remove_from_faction = LIT } }
+			add_to_faction = LIT
+			add_ai_strategy = {
+				type = alliance
+				id = "LIT"
+				value = 175
+			}
+		}
+		LAT = {
+			dismantle_faction = yes
+			country_event = latvia.7
+		}
+		add_to_faction = LAT
+		add_ai_strategy = {
+			type = alliance
+			id = "LAT"
+			value = 175
+		}
+	}
+
+	option = {
+		name = latvia.9.b
+		ai_chance = { factor = 5 }
+		LAT = { country_event = latvia.8 }
+	}
+}

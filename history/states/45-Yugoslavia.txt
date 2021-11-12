@@ -1,0 +1,32 @@
+
+state={
+	id=45
+	name="STATE_45"
+
+	history={
+		victory_points = {
+			619 3 
+		}
+		owner = YUG
+		buildings = {
+			infrastructure = 6
+
+		}
+		add_core_of = YUG
+		add_core_of = SER
+		add_core_of = VOJ
+		1941.1.1 = {
+			owner = HUN
+			controller = HUN
+
+		}
+
+	}
+
+	provinces={
+		619 3617
+	}
+	manpower=196531
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

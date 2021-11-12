@@ -1,0 +1,296 @@
+ideologies = {
+	
+	democratic = {
+	
+		types = {
+			#General Liberalism / Libertarianism
+			liberalism = {
+			}
+			#Social Liberalism
+			social_liberalism = {
+			}
+			#Market Liberalism / Market Libertarianism
+			market_liberalism = {
+			}
+			#National Conservatism
+			conservatism = {
+			}
+			#Social Conservatism
+			social_conservatism = {
+			}
+			#For highly authoritarian or pro-authoritarian yet democratic leaders such as Charles de Gaulle and Winston Churchill
+			reactionary_conservatism = {
+			}
+			#Democratic Socialism
+			socialism = {
+			}
+			#Social Democracy
+			social_democracy = {
+			}
+		
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_DEMOCRATIC_1"
+			"FACTION_NAME_DEMOCRATIC_2"
+			"FACTION_NAME_DEMOCRATIC_3"
+			"FACTION_NAME_DEMOCRATIC_4"
+			"FACTION_NAME_DEMOCRATIC_5"
+			"FACTION_NAME_DEMOCRATIC_6"
+		}
+		
+		color = { 0 50 125 }
+		
+		rules = {
+			can_create_collaboration_government = no
+			can_declare_war_on_same_ideology = no
+			can_force_government = yes
+			can_send_volunteers = no
+			can_puppet = yes
+			can_lower_tension = yes
+			can_only_justify_war_on_threat_country = yes
+			can_guarantee_other_ideologies = yes
+		}
+		
+		can_host_government_in_exile = yes
+		
+		war_impact_on_world_tension = 0.25		# no major danger, remember this this the 40s!
+		faction_impact_on_world_tension = 0.1
+		
+		modifiers = {
+			generate_wargoal_tension = 1.00
+			join_faction_tension = 0.80
+			lend_lease_tension = 0.50
+			send_volunteers_tension = 0.50
+			guarantee_tension = 0.25
+			annex_cost_factor = 0.5
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 5.0
+			navy_intel_to_others = 20.0
+			airforce_intel_to_others = 5
+		}
+		
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
+		}
+		ai_democratic = yes # uses the democratic AI behaviour
+	}
+
+
+	communism = {
+		
+		types = {
+			#For vanguard communist stalinists such as Stalin (wow)
+			stalinism = {
+			}
+			#For vanguard communist leninsts such as Trotsky and Mao
+			leninism = {
+			}
+			#For communists that arent vanguardist nor anarchist, but are still communist
+			marxism = {
+			}
+			#A step up from democratic socialism
+			radical_socialism = {
+			}
+			#For authoritarian, non-communist yet socialist states
+			authoritarian_socialism = {
+			}
+			#Reworked as "Syndicalism"
+			anti_revisionism = {
+			}
+			#For anarcho-communists that arent CNT-FAI
+			anarchist_communism = {
+			}
+			
+			
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_COMMUNIST_1"
+			"FACTION_NAME_COMMUNIST_2"
+			"FACTION_NAME_COMMUNIST_3"
+			"FACTION_NAME_COMMUNIST_4"
+			"FACTION_NAME_COMMUNIST_5"
+		}
+		
+		color = { 89 0 2 }
+		
+		war_impact_on_world_tension = 0.75		#Commie less threatening
+		faction_impact_on_world_tension = 0.5
+		
+		ai_communist = yes # uses the commie AI behaviour
+		
+		rules = {
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			puppet_cost_factor = -0.3
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			hidden_modifier = { join_faction_tension = -0.1 }
+		}
+		
+		faction_modifiers = {
+			
+		}
+
+	}
+
+	fascism = {
+	
+		types = {
+			#For national socialists such as Hitler, Rodzaevsky and Arcand
+			nazism = {
+			}
+			#For classic fascists, such as Mussolini, Pavelic and Mosley
+			fascism_ideology = {
+			}
+			#For falangists, integralists, national syndicalists etc, such as Primo de Rivera and Salgado
+			#Called Integralism ingame
+			falangism = {
+			}
+			#For non-fascists who are axis-aligned and displayed as fascist ingame, such as Petain, Horthy, Japan
+			ultranationalism = {
+			}
+			#For non-ultranationalist totalitarianists in the fascist group, such as Lindberg
+			totalitarianism = {
+			}
+			#For some non-fascists who do not fit the above category, yet are still represented fascist ingame such as Francois de la Rocque and D.F. Malan
+			national_populism = {
+			}
+			#Fascist Occultism. For fascist movements that go overboard with pagan occultist stuff, such as Himmler's SS rituals, Evola's ideas or Pērkonkrusts. People like Hitler arent far enough for this, as Hitler criticised Himmler for his pagan rituals and whatnot
+			gen_nazism = {
+			}
+			#TO BE REMOVED
+			rexism = {
+			}
+			
+			
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_FASCIST_1"
+			"FACTION_NAME_FASCIST_2"
+			"FACTION_NAME_FASCIST_3"
+			"FACTION_NAME_FASCIST_4"
+			"FACTION_NAME_FASCIST_5"
+		}
+		
+		color = { 20 20 20 }
+		
+		war_impact_on_world_tension = 1.0			#evil!
+		faction_impact_on_world_tension = 1.0
+		
+		rules = {
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			justify_war_goal_when_in_major_war_time = -0.80
+			civilian_intel_to_others = 15.0
+			army_intel_to_others = 10.0
+			navy_intel_to_others = 10.0
+			airforce_intel_to_others = 10.0
+			hidden_modifier = { join_faction_tension = -0.1 }
+		}
+
+		ai_fascist = yes # uses the fascist AI behaviour
+	}
+	
+	neutrality = {
+	
+		types = {
+			#For absolute monarchies where a monarch occupies the leader's portrait. Examples: Napoleon IV, Abdulaziz Ibn Saud
+			absolute_monarchism  = {
+			}
+			#For monarchies where a monarch occupies the leader's portrait, but doesnt have absolute power. Examples: Wilhelm II, Edward VIII
+			semi_constitutional_monarchism  = {
+			}
+			#For constitutional monarchies where a monarch occupies the leader's portrait. Examples: Wilhelmina I, Otto I, Victor Emmanuel III
+			constitutional_monarchism  = {
+			}
+			#For autocratic states where the leader rules alone and which do not fall into other categories
+			despotism  = {
+			}
+			#For autocratic states where the leader shares power and which do not fall into other categories
+			oligarchism = {
+			}
+			#For states where the religious establishment holds the power, Examples: Pope, Yemeni Imam
+			theocracy = {
+			}
+			#I left tribalism in accidentally, hopefully nobody used it
+			#For somewhat authoritarian non-autocratic states or leaders and strongmen such as Mannerheim
+			moderatism = {
+			}
+			#For democratic states who need to be non-aligned
+			centrism = {
+			}
+			#For liberal democratic states who need to be non-aligned
+			centrism_liberal = {
+			}
+			#For conservative democratic states who need to be non-aligned
+			centrism_conservative = {
+			}
+			
+			#For anarchist spain
+			anarchism = {
+				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
+			}
+
+			#funny mem for content
+			accelerationism = {
+				can_be_randomly_selected = no
+			}
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_NONALIGNED_1"
+			"FACTION_NAME_NONALIGNED_2"
+			"FACTION_NAME_NONALIGNED_3"
+			"FACTION_NAME_NONALIGNED_4"
+			"FACTION_NAME_NONALIGNED_5"
+		}
+		
+		color = { 113 126 132 }
+		
+		
+		war_impact_on_world_tension = 0.25		#no major danger
+		faction_impact_on_world_tension = 0.1
+		
+		rules = {
+			can_force_government = no
+			can_puppet = yes
+			can_send_volunteers = no
+		}
+		
+		modifiers = {
+			#increased_influence_factor = 0.3 #30% easier to influence
+			generate_wargoal_tension = 0.5
+			join_faction_tension = 0.4
+			lend_lease_tension = 0.4
+			send_volunteers_tension = 0.4
+			guarantee_tension = 0.4
+			drift_defence_factor = -0.3	
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 10.0
+			navy_intel_to_others = 20.0
+			airforce_intel_to_others = 10.0
+		}
+		
+		faction_modifiers = {
+		}
+
+		ai_neutral = yes # 
+	}
+}

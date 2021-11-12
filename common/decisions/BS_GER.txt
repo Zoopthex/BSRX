@@ -1,0 +1,5086 @@
+GER_kaiserboo_larp = {
+	BS_Ger_Kingdom_of_Finland = {
+
+		visible = {
+			OR = {
+				FIN = { is_puppet_of = GER }
+				AND = {
+					is_in_faction_with = FIN
+					FIN = { is_puppet = no }
+				}
+			}
+		}
+		
+		days_re_enable = 300
+
+		icon = generic_political_discourse
+
+		available = {
+			NOT = { FIN = { has_country_leader = { name = "Fredrik Kaarle I" ruling_only = yes } } }
+			NOT = { FIN = { has_country_leader = { name = "Väinö" ruling_only = yes } } }
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					FIN = { is_puppet_of = GER }
+				}
+				FIN = { set_cosmetic_tag = FIN_Kingdom }
+				if = {
+					limit = {
+						date < 1940.5.27
+					}
+					FIN = {
+						create_country_leader = {
+						name = "Fredrik Kaarle I"
+						desc = ""
+						picture = "r56_Frederik_Kaarle.dds"
+						expire = "1965.1.1"
+						ideology = constitutional_monarchism
+						traits = {
+							disdain_for_politicians_2
+							humble_2
+							Fascist_Symphaties_2
+							POL_german_origins
+							}
+						}
+					}
+					else = {
+						FIN = {
+						create_country_leader = {
+							name = "Väinö I"
+							desc = ""
+							picture = "wolfgang_von_hesse.dds"
+							expire = "1965.1.1"
+							ideology = constitutional_monarchism
+							traits = {
+								disdain_for_politicians_1
+								banker
+								Fascist_Symphaties_2
+								POL_german_origins
+							}
+						}
+						}
+					}
+				}
+				FIN = { set_party_name = { ideology = neutrality long_name = FIN_House_of_Hesse_neutrality_party_long name = FIN_House_of_Hesse_neutrality_party }  }
+				else = { FIN = { country_event = { id = bs.705 } } }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BS_Ger_Kingdom_of_Lithuania = {
+
+		visible = {
+			OR = {
+				LIT = { is_puppet_of = GER }
+				AND = {
+					is_in_faction_with = LIT
+					LIT = { is_puppet = no }
+				}
+			}
+		}
+		
+		days_re_enable = 300
+
+		icon = generic_political_discourse
+
+		available = {
+			NOT = { LIT = { has_country_leader = { name = "Mindaugas III" ruling_only = yes } } }
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					LIT = { is_puppet_of = GER }
+				}
+				LIT = {
+					create_country_leader = {
+						name = "Mindaugas III"
+						desc = ""
+						picture = "Mindaugas_III.dds"
+						expire = "1965.1.1"
+						ideology = constitutional_monarchism
+						traits = {
+							Architect
+							POL_german_origins
+						}
+					}
+				}
+				LIT = {
+					set_cosmetic_tag = LIT_Kingdom
+				}
+				set_party_name = { ideology = fascism long_name = Uracho_namai name = Uracho_namai }
+				else = { LIT = { country_event = { id = bs.748 } } }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BS_Ger_United_Baltic_Duchy_Estonia = {
+		
+		days_re_enable = 300
+
+		icon = generic_political_discourse
+
+		available = {
+			is_in_faction_with = EST
+			EST = { is_puppet = no }			
+		}
+
+		complete_effect = {
+			EST = { country_event = { id = bs.750 } }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BS_Ger_United_Baltic_Duchy_Latvia = {
+		
+		days_re_enable = 300
+
+		icon = generic_political_discourse
+
+		available = {
+			is_in_faction_with = LAT
+			LAT = { is_puppet = no }			
+		}
+
+		complete_effect = {
+			LAT = { country_event = { id = bs.751 } }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BS_Ger_United_Baltic_Duchy = {
+
+		visible = {
+			LIV = { exists = no }
+		}
+		
+		days_re_enable = 300
+
+		icon = generic_political_discourse
+
+		available = {
+			OR = {
+				LAT = { is_puppet_of = GER }
+				LAT = { exists = no }
+			}
+			OR = {
+				EST = { is_puppet_of = GER }
+				EST = { exists = no }
+			}
+			OR = {
+				OR = {
+					LAT = {
+						any_owned_state = {
+							is_core_of = LIV
+						}
+					}
+					AND = {
+						LAT = { exists = no }
+						GER = {
+							any_owned_state = {
+								is_core_of = LIV
+							}
+						}
+					}
+				}
+				OR = {
+					EST = {
+						any_owned_state = {
+							is_core_of = LIV
+						}
+					}
+					AND = {
+						EST = { exists = no }
+						GER = {
+							any_owned_state = {
+								is_core_of = LIV
+							}
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					LAT = { exists = yes }
+				}
+				LAT = {
+					release = LIV
+				}
+				else = {
+					GER = {
+						release = LIV
+					}
+				}
+			}
+			if = {
+				limit = {
+					EST = { exists = yes }
+				}
+				EST = {
+					release = LIV
+				}
+				else = {
+					GER = {
+						release = LIV
+					}
+				}
+			}
+			LIV = {
+				annex_country = {
+					target = EST
+					transfer_troops = yes
+				}
+			}
+			LIV = {
+				annex_country = {
+					target = LAT
+					transfer_troops = yes
+				}
+			}
+			LIV = {
+				create_country_leader = {
+					name = "Adolf Friedrich"
+					desc = ""
+					picture = "Adolf_Friedrich.dds"
+					expire = "1965.1.1"
+					ideology = constitutional_monarchism
+					traits = {
+						POL_german_origins
+						Explorer
+					}
+				}
+			}
+			GER = {
+				set_autonomy = {
+					target = LIV
+					autonomous_state = autonomy_puppet
+				}
+			}
+			LIV = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+			}
+			LIV = {
+				set_cosmetic_tag = LIV_United
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BS_Ger_United_Baltic_Duchy_2 = {
+
+		visible = {
+			LIV = { exists = yes }
+		}
+		
+		days_re_enable = 300
+
+		icon = generic_political_discourse
+
+		available = {
+			LIV = { is_puppet_of = GER }
+			OR = {
+				LAT = { is_puppet_of = GER }
+				LAT = { exists = no }
+			}
+			OR = {
+				EST = { is_puppet_of = GER }
+				EST = { exists = no }
+			}
+		}
+
+		complete_effect = {
+			GER = {
+				release = LIV
+			}
+			LIV = {
+				annex_country = {
+					target = EST
+					transfer_troops = yes
+				}
+			}
+			LIV = {
+				annex_country = {
+					target = LAT
+					transfer_troops = yes
+				}
+			}
+			LIV = {
+				create_country_leader = {
+					name = "Adolf Friedrich"
+					desc = ""
+					picture = "Adolf_Friedrich.dds"
+					expire = "1965.1.1"
+					ideology = constitutional_monarchism
+					traits = {
+						POL_german_origins
+						Explorer
+					}
+				}
+			}
+			GER = {
+				set_autonomy = {
+					target = LIV
+					autonomous_state = autonomy_puppet
+				}
+			}
+			LIV = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+			}
+			LIV = {
+				set_cosmetic_tag = LIV_United
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	emergency_invasion_of_poland = {
+
+		visible = {
+			POL = { NOT = { is_in_faction_with = GER } }
+		}
+
+		icon = generic_break_treaty
+
+		cost = 5
+
+		fire_only_once = yes
+
+		days_remove = 14
+
+		available = {
+			has_war_with = SOV
+			SOV = { 
+				has_war_with = POL 
+				controls_state = 93
+				controls_state = 94
+				controls_state = 95
+				controls_state = 96
+				controls_state = 1384
+				controls_state = 1385
+				controls_state = 1590
+				controls_state = 1433
+				controls_state = 1434
+			}
+		}
+
+		complete_effect = {
+			add_state_claim = 1119
+			add_state_claim = 1178
+			add_state_claim = 2049
+			add_state_claim = 1824
+			add_state_claim = 1363
+			if = {
+				limit = {
+					LIT = {
+						NOT = { has_government = communism }
+						OR = {
+							is_in_faction_with = POL
+							is_in_faction = no
+						}
+					}
+				}
+				custom_effect_tooltip = lithuania_brest_litovsk_borders
+				LIT = { custom_effect_tooltip = needs_approval }
+			}
+			else_if = {
+				limit = {
+					LIT = {
+						OR = {
+							is_in_faction_with = GER
+							is_subject_of = GER
+						}
+					}
+				}
+				LIT = {
+					add_state_claim = 97
+					add_state_claim = 933
+					add_state_claim = 2045
+					add_state_claim = 2046
+					add_state_claim = 1440
+					add_state_claim = 1969
+					add_state_claim = 1441
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						LIT = {
+							NOT = { has_government = communism }
+							OR = {
+								is_in_faction_with = POL
+								is_in_faction = no
+							}
+						}
+					}
+					LIT = {
+						country_event = {
+							id = bs_ger.71
+							days = 12
+							random = 24
+						}
+					}
+				}
+				BLR = {
+					#add_state_core = 1432
+					add_state_core = 1383
+					add_state_core = 1563					
+					add_state_core = 1417
+				}
+			}
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = POL
+				type = puppet_wargoal_focus
+			}
+			if = {
+				limit = {
+					has_global_flag = LIT_rejected_faction_POL
+				}
+				declare_war_on = {
+					target = LIT
+					type = puppet_wargoal_focus
+				}
+			}
+			else_if = {
+				limit = {
+					LIT = { is_in_faction_with = GER }
+				}
+				LIT = {
+					declare_war_on = {
+						target = POL
+						type = take_claimed_state
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		war_with_on_timeout = POL
+	}
+	GER_new_prussia = {
+
+		visible = {
+			has_government = neutrality
+		}
+
+		icon = generic_formable_nations
+
+		fire_only_once = yes
+
+		available = {
+			controls_state = 357
+			has_country_leader = {
+				name = "Wilhelm II"
+				ruling_only = yes
+			}
+		}
+
+		complete_effect = {
+			NEE = { 
+				set_cosmetic_tag = NEE_GER 
+				create_country_leader = {
+					name = "Wilhelm III"
+					desc = "POLITICS_WILHELM_III_DESC"
+					picture = GFX_portrait_ger_wilhelm_iii
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						popular_figurehead2
+					}
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = neutrality
+					popularity = 100
+				}
+				set_party_name = {
+					ideology = neutrality
+					long_name = NEE_GER_party_long
+					name = NEE_GER_party
+				}
+				transfer_state = 357
+			}
+			GER = {
+				set_autonomy = { target = NEE autonomy_state = autonomy_puppet }
+			}
+		}
+
+		
+		ai_will_do = {
+			factor = 500
+		}
+	}
+	
+	GER_german_east_asia = {
+
+		visible = {
+			has_government = neutrality
+			controls_state = 980
+			original_tag = GER
+		}
+
+		icon = generic_formable_nations
+
+		fire_only_once = yes
+
+		available = {
+			controls_state = 980
+		}
+
+		complete_effect = {
+			SNG = { 
+				set_cosmetic_tag = SNG_KLM
+				create_country_leader = {
+					name = "Günther Lütjens"
+					desc = ""
+					picture = "gfx/leaders/GER/Portrait_Germany_Gunter_Lutjens.dds"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						
+					}
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = neutrality
+					popularity = 100
+				}
+				set_party_name = {
+					ideology = neutrality
+					long_name = SNG_KLM_party_long
+					name = SNG_KLM_party
+				}
+				transfer_state = 980
+			}
+			GER = {
+				set_autonomy = { target = SNG autonomy_state = autonomy_colony }
+			}
+		}
+
+		
+		ai_will_do = {
+			factor = 500
+		}
+	}
+}
+GER_enacting_hitler_plans_in_the_east = {
+	GER_raze_leningrad = {
+
+		visible = {
+			has_government = fascism
+			controls_state = 195
+		}
+
+		icon = generic_industry
+
+		fire_only_once = yes
+
+		available = {
+			controls_state = 195
+			num_of_available_civilian_factories > 15
+		}
+
+		days_remove = 180
+
+		cost = 250
+
+		modifier = {
+			civilian_factory_use = 15
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -15000
+			}
+			add_manpower = -50000
+		}
+
+		remove_effect = {
+			set_victory_points = {
+				province = 3151
+				value = 5
+			}
+			add_manpower = 40000
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				NOT = { has_war_with = SOV }
+				factor = 100
+			}
+			modifier = {
+				has_opinion = {
+					target = FIN
+					value < -50
+				}
+				factor = 0 
+			}
+		}
+	}
+}
+GER_transfer_equipment_category = {
+	GER_transfer_equipment_decision = {
+
+		visible = {
+			has_government = fascism
+		}
+
+		icon = generic_industry
+
+		fire_only_once = no
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = RKU
+					tag = RKO
+					tag = RKM
+					tag = RKK
+					tag = RKT
+					tag = RKS
+					tag = RKW
+					tag = RKD
+					tag = NWG
+					tag = NID
+					tag = GGO
+					tag = PBM
+					tag = BNF
+					tag = GFA
+				}
+				exists = yes
+			}
+		}
+		
+		available = {
+			has_government = fascism
+		}
+
+		cost = 10
+
+		days_re_enable = 30
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -5000
+			}
+			add_manpower = -25000
+			FROM = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 5000
+				}
+				add_manpower = 25000
+			}
+		}
+		ai_will_do = {
+			factor = 5000 #prioritize this first
+		}
+	}
+}
+GER_operation_achse_category = {
+
+	GER_operation_achse = {
+
+		icon = generic_operation
+
+		available = {
+			has_war = yes
+			controls_state = 158
+			controls_state = 159
+			controls_state = 867
+			controls_state = 160
+			controls_state = 866
+			controls_state = 161
+			controls_state = 162
+			controls_state = 2
+			controls_state = 157
+			controls_state = 1755
+			controls_state = 1756
+			controls_state = 1757
+			controls_state = 1758			
+			controls_state = 987
+			controls_state = 988
+			controls_state = 989
+			controls_state = 990
+			controls_state = 1203
+			controls_state = 2016
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		visible = {
+		    has_country_flag = GER_operation_achse_flag
+			has_government = fascism
+		}
+		
+		target_trigger = {
+			FROM = {
+				tag = ITA
+			}
+		}
+
+		complete_effect = {
+
+				GER = {
+					if = {
+						limit = { 39 = { owner = { original_tag = ITA } } }
+						set_state_controller = 39
+					}
+					if = {
+						limit = { 110 = { owner = { original_tag = ITA } } }
+						set_state_controller = 110
+					}
+					if = {
+						limit = { 736 = { owner = { original_tag = ITA } } }
+						set_state_controller = 736
+					}
+					if = {
+						limit = { 866 = { owner = { original_tag = ITA } } }
+						set_state_controller = 866
+					}
+					if = {
+						limit = { 867 = { owner = { original_tag = ITA } } }
+						set_state_controller = 867
+					}
+					if = {
+						limit = { 986 = { owner = { original_tag = ITA } } }
+						set_state_controller = 986
+					}
+					if = {
+						limit = { 1872 = { owner = { original_tag = ITA } } }
+						set_state_controller = 1872
+					}					
+					if = {
+						limit = { 993 = { owner = { original_tag = ITA } } }
+						set_state_controller = 993
+					}
+				}
+				ITA = {
+					start_civil_war = {
+						ideology = fascism
+						size = 0.3
+						states = { 158 2 159 867 160 66 161 162 157 1755 1756 1757 1758 987 988 989 990 1203 2016 }
+					}
+					hidden_effect = {
+						load_oob = "ITA_Italian_Civil_War"
+						remove_ideas = victor_emmanuel
+						remove_ideas = vittoria_mutilata
+						remove_ideas = ITA_german_millitary_cooperation_focus
+					}
+					
+					random_other_country = {
+						limit = {
+							original_tag = ITA
+							has_government = fascism
+						}
+						set_cosmetic_tag = ITA_RSI
+						set_capital = 159
+						set_party_name = { ideology = fascism long_name = ITA_fascism_party_civil_war_long name = ITA_fascism_party_civil_war }
+						set_stability = 0.3
+						set_war_support = 0.6
+						
+						set_state_controller = 159
+						set_state_controller = 988
+						set_state_controller = 989
+						set_state_controller = 1755
+						set_state_controller = 987
+						set_state_controller = 158
+						set_state_controller = 160
+						set_state_controller = 2
+						set_state_controller = 1756
+						set_state_controller = 1757
+						set_state_controller = 1758
+						set_state_controller = 161
+						set_state_controller = 162
+						set_state_controller = 990
+						set_state_controller = 157
+						set_state_controller = 1203
+						set_state_controller = 2016						
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_reichsprotectorate }
+						}
+						
+						hidden_effect = {
+							add_ideas = victor_emmanuel
+							create_country_leader = {
+								name = "Benito Mussolini"
+								desc = "POLITICS_BENITO_MUSSOLINI_DESC"
+								picture = "Portrait_Benito_Mussolini_1944.dds"
+								expire = "1965.1.1"
+								ideology = fascism_ideology
+								traits = {
+									
+								}
+							}
+						}
+					}
+				}
+			ITA = { country_event = { id = bs.4 days = 3 } }
+		}
+
+		ai_will_do = {
+			factor = 70
+		}
+	}
+}
+
+GER_reichsprotektorat = {
+	GER_reichsprotektorat_bohmen_und_mahren = {
+	
+		icon = ger_reichskommissariats
+
+		available = {
+			controls_state = 9
+			controls_state = 75
+			controls_state = 1612
+			NOT = { has_country_flag =  protectorate_bohemia_intergrated }
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		visible = {
+			controls_state = 9
+			controls_state = 75
+			controls_state = 1612
+		}
+		
+		complete_effect = {
+		    9 = { add_core_of = PBM }
+			release = PBM
+			PBM = {
+				transfer_state = 9
+				transfer_state = 75
+				transfer_state = 1612
+				GER = {
+					puppet = PBM
+					set_autonomy = { target = PBM autonomy_state = autonomy_reichsprotectorate }
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = { country_exists = CZE }
+						NOT = { CZE = { has_idea = emil_hacha_1 }}
+					}
+				}
+				PBM = {
+					add_ideas = {
+						emil_hacha_2
+					}
+				}
+				set_global_flag = Hacha_not_recognized
+			}
+		}
+	}
+
+	GER_generalgouvernement = {
+	
+		icon = ger_reichskommissariats
+
+		available = {
+			controls_state = 10
+			controls_state = 2047			
+			controls_state = 92
+			controls_state = 1406			
+			controls_state = 90
+			controls_state = 1773
+			controls_state = 88
+			controls_state = 1558	
+			controls_state = 1737
+            controls_state = 1599			
+			controls_state = 1983
+			controls_state = 1374
+			controls_state = 1588
+			controls_state = 1589
+			controls_state = 1603
+			controls_state = 1712
+		}
+
+		cost = 0
+		
+		fire_only_once = no
+		
+		ai_will_do = {
+			factor = 3
+		}
+
+		visible = {
+			controls_state = 10
+			controls_state = 92
+			controls_state = 90
+			controls_state = 1406
+			controls_state = 1587			
+			controls_state = 88
+			controls_state = 1599 
+            controls_state = 1737			
+			controls_state = 1374
+			controls_state = 1558
+            controls_state = 1588
+			controls_state = 1589	
+			controls_state = 1603
+			controls_state = 1712
+		}
+
+		complete_effect = {
+			88 = { add_core_of = GGO } #although krakow was a part of the polish underground resistance movement it's the capital of ggo
+		    1374 = { add_core_of = GGO } #state not in the primary area of the underground resistance
+			1983 = { add_core_of = GGO } #state not in the primary area of the underground resistance
+			release = GGO
+			GGO = {
+				transfer_state = 10
+				transfer_state = 92
+				transfer_state = 90
+				transfer_state = 1558	
+                transfer_state = 1737				
+				transfer_state = 1603				
+				transfer_state = 88
+				transfer_state = 1983
+				transfer_state = 1773
+				transfer_state = 1374
+				transfer_state = 1406			
+				transfer_state = 1599	
+                transfer_state = 1588
+				transfer_state = 2047
+                transfer_state = 1589	
+				transfer_state = 1603
+				transfer_state = 1587
+				transfer_state = 1712
+				GER = {
+					puppet = GGO
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 91
+					controls_state = 89
+					controls_state = 996
+					controls_state = 1180
+					controls_state = 1553					
+					controls_state = 1386
+					controls_state = 1769
+					controls_state = 1768					
+					controls_state = 1590
+				}
+				GGO = {
+					transfer_state = 91
+					transfer_state = 1587					
+					transfer_state = 89
+					transfer_state = 996
+					transfer_state = 1180
+					transfer_state = 1769
+					transfer_state = 1982
+					transfer_state = 1768					
+					transfer_state = 1553					
+					transfer_state = 1386
+					transfer_state = 1406		
+					transfer_state = 1590			
+				}
+			}
+			if = {
+				limit = {
+					SLO = {
+						exists = yes
+						is_in_faction_with = GER
+					}
+				}
+				SLO = {
+					transfer_state = 1284				
+				}
+			}
+			else_if = {
+				limit = {
+					HUN = {
+						is_friend_or_potential_friend_of_GER = yes
+						has_full_control_of_state = 1372
+					}
+				}
+				HUN = {
+					transfer_state = 1284
+				}
+			}
+			else_if = {
+				limit = {
+					GER = { controls_state = 1284 }
+				}
+				GGO = {
+					transfer_state = 1284
+				}
+			}
+			if = {
+				limit = {
+					POL = { has_idea = POL_last_struggle }
+				}
+				POL = { remove_ideas = POL_last_struggle }
+			}
+		}
+	}
+	
+	GER_ss_staat_burgund = {
+	
+		icon = ger_reichskommissariats
+
+		visible = {
+			has_government = fascism
+			controls_state = 28
+			controls_state = 1436
+			controls_state = 1933
+			controls_state = 1934
+		}
+
+		available = {
+			has_war = no
+			OR = {
+				NOT = { country_exists = BGN }
+				BGN = { is_subject_of = GER }
+			}
+			OR = {
+				NOT = { country_exists = FRA }
+				NOT = {
+					FRA = {
+						has_war_with = GER
+					}
+				}
+			}
+			has_government = fascism
+			controls_state = 17
+			controls_state = 1734
+			controls_state = 18
+			controls_state = 27
+			controls_state = 814
+			controls_state = 1731
+			controls_state = 817
+			controls_state = 1732
+			controls_state = 1733
+			controls_state = 1183
+			controls_state = 1184
+		}
+
+		cost = 0
+
+		complete_effect = {
+			release = BGN
+			BGN = {
+				transfer_state = 17
+				transfer_state = 18
+				transfer_state = 27
+				transfer_state = 814
+				transfer_state = 1731
+				transfer_state = 1734
+				transfer_state = 1732
+				transfer_state = 1733
+				transfer_state = 817
+				transfer_state = 1183
+				transfer_state = 1184
+                transfer_state = 1932				
+				
+				hidden_effect = {
+					27 = { add_core_of = PREV }
+				}
+				create_country_leader = {
+	                name = "Heinrich Himmler"
+	                desc = "POLITICS_HEINRICH_HIMMLER_DESC"
+	                picture = "gfx/leaders/GER/Portrait_Germany_Heinrich_Himmler.dds"
+ 	                expire = "1965.1.1"
+	                ideology = gen_nazism
+	                traits = {
+						SS_Fuhrer
+	                }
+                }
+				set_cosmetic_tag = BGN_SS
+			}
+			if = {
+				limit = {
+					NOT = { BGN = { is_puppet_of = GER } }
+				}
+				set_autonomy = { target = BGN autonomy_state = autonomy_reichsprotectorate }
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				is_in_faction_with = ENG
+				add = 100
+			}
+		}
+	}
+	GER_establish_SER = {
+		
+		highlight_state_targets = {
+			state = 107
+			state = 108
+			state = 872
+			state = 941
+			state = 1403
+		}
+		
+		visible = {
+			GER = {
+				has_government = fascism
+				controls_state = 107
+			}
+		}
+		
+		icon = generic_form_nation
+		
+		fire_only_once = no
+		
+		available = {
+			GER = {
+				controls_state = 107
+				controls_state = 108
+				controls_state = 872
+				controls_state = 941
+				controls_state = 1403				
+			}
+			SER = { exists = no }
+		}
+		
+		complete_effect = {
+
+				SER = {
+					set_cosmetic_tag = SER_GER_fascism
+					transfer_state = 107
+					transfer_state = 108
+					transfer_state = 872
+					transfer_state = 941
+					transfer_state = 1403
+					set_capital = 107
+					load_focus_tree = nazi_serbia
+					GER = {
+					puppet = PREV
+					set_autonomy = { target = PREV autonomy_state = autonomy_puppet }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+
+BS_transfer_territories_category = {
+	GER_eastern_poland = {
+
+		highlight_state_targets = {
+			state = 91
+			state = 89
+			state = 996
+			state = 1982
+			state = 1180
+			state = 1553		
+			state = 1386
+			state = 1769
+			state = 1768			
+			state = 1590
+		}
+		available = {
+			controls_state = 91
+			controls_state = 89
+			controls_state = 996
+			controls_state = 1553			
+			controls_state = 1180
+			controls_state = 1386
+			controls_state = 1590
+		}
+
+		cost = 10
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+			NOT = { has_global_flag = GGO_completed }
+			GGO = {
+				exists = yes
+			}
+			controls_state = 91
+			controls_state = 89
+			controls_state = 996
+			controls_state = 1180
+			controls_state = 1553			
+			controls_state = 1386
+			controls_state = 1590
+		}
+
+		complete_effect = {
+			release = GGO
+			GGO = {
+				transfer_state = 91
+				transfer_state = 89
+				transfer_state = 996
+				transfer_state = 1982
+				transfer_state = 1180
+				transfer_state = 1769
+				transfer_state = 1768				
+				transfer_state = 1553				
+				transfer_state = 1386
+				transfer_state = 1590
+			}
+			hidden_effect = {
+				set_global_flag = GGO_completed
+			}
+		}
+	}
+	
+	GER_baku = {
+
+		highlight_state_targets = {
+			state = 1487
+		}
+		available = {
+			controls_state = 1487
+		}
+
+		cost = 10
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+			NOT = { has_global_flag = transfered_baku }
+			RKK = {
+				exists = yes
+				}
+			controls_state = 1487
+			}
+
+		complete_effect = {
+			RKK = {
+				transfer_state = 1487
+			}
+			hidden_effect = {
+				set_global_flag = transfered_baku
+			}
+		}
+	}
+	
+	GER_expand_bgn_southf = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 20
+			controls_state = 32
+			controls_state = 1147
+			controls_state = 1185
+			controls_state = 1730
+			controls_state = 1270
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		    BGN = {
+			controls_state = 27
+			}
+		}
+	
+
+		complete_effect = {
+			BGN = {
+				transfer_state = 20
+				transfer_state = 32
+				transfer_state = 1147
+				transfer_state = 1730
+				transfer_state = 1185
+				transfer_state = 1270
+			}
+		}
+	}
+
+    GER_expand_bgn_savoy = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 822
+			controls_state = 823
+			controls_state = 1801
+			controls_state = 1132
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		    BGN = {
+			controls_state = 32
+			}
+		}
+	
+
+		complete_effect = {
+			BGN = {
+				transfer_state = 822
+				transfer_state = 1842
+				transfer_state = 823
+				transfer_state = 1801
+				transfer_state = 1132
+			}
+		}
+	}	
+	
+	GER_expand_bgn_medi = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 21
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		    BGN = {
+				controls_state = 32
+			}
+		}
+	
+
+		complete_effect = {
+			BGN = {
+				transfer_state = 21
+			}
+		}
+	}
+	
+	GER_expand_bgn_channel = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 785
+			controls_state = 1877
+			controls_state = 815
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		    BGN = {
+			controls_state = 18
+			}
+		}
+	
+
+		complete_effect = {
+			BGN = {
+				transfer_state = 785
+				transfer_state = 1877
+				transfer_state = 815
+			}
+		}
+	}
+	
+	GER_expand_bgn_calais = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 29
+			controls_state = 1089
+			controls_state = 1430
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		    BGN = {
+			controls_state = 785
+			}
+		}
+	
+
+		complete_effect = {
+			BGN = {
+				transfer_state = 29
+				transfer_state = 1089
+				transfer_state = 1430
+			}
+		}
+	}
+	
+	GER_expand_bgn_wal = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 34
+			controls_state = 813
+			controls_state = 1251
+			controls_state = 1182
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		    BGN = {
+			controls_state = 29
+			}
+		}
+	
+
+		complete_effect = {
+			BGN = {
+				transfer_state = 34
+				transfer_state = 813
+				#transfer_state = 1251
+				transfer_state = 1182
+			}
+			GER = {
+				transfer_state = 1251
+			}
+		}
+	}
+	
+	GER_expand_bgn_bel = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 6
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		    BGN = {
+			controls_state = 1182
+			}
+		}
+	
+
+		complete_effect = {
+			BGN = {
+				transfer_state = 6
+			}
+		}
+	}
+	
+	GER_expand_bgn_bnfcalais = {
+	
+		icon = generic_form_nation
+
+		available = {
+		    BNF = {
+			controls_state = 29
+			controls_state = 1089
+			controls_state = 1430
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		    BGN = {
+			controls_state = 785
+			}
+		}
+	
+
+		complete_effect = {
+			BGN = {
+				transfer_state = 29
+				transfer_state = 1089
+				transfer_state = 1430
+			}
+		}
+	}
+	
+	GER_expand_bgn_bnfwal = {
+	
+		icon = generic_form_nation
+
+		available = {
+		    BNF = {
+			controls_state = 34
+			controls_state = 813
+			controls_state = 1251
+			controls_state = 1182
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		    BGN = {
+			controls_state = 29
+			}
+		}
+	
+
+		complete_effect = {
+			BGN = {
+				transfer_state = 34
+				transfer_state = 813
+				#transfer_state = 1251
+				transfer_state = 1182
+			}
+			GER = {
+				transfer_state = 1251
+			}
+		}
+	}
+	
+	GER_expand_bgn_bnfbel = {
+	
+		icon = generic_form_nation
+
+		available = {
+		    BNF = {
+			controls_state = 6
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		    BGN = {
+			controls_state = 1182
+			}
+		}
+	
+
+		complete_effect = {
+			BGN = {
+				transfer_state = 6
+			}
+		}
+	}
+	
+	GER_expand_bgn_par = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 2038
+			controls_state = 2039
+			controls_state = 1194			
+			controls_state = 16
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		    BGN = {
+			controls_state = 18
+			}
+		}
+	
+
+		complete_effect = {
+			BGN = {
+				transfer_state = 1194
+				transfer_state = 16
+				transfer_state = 2039
+				transfer_state = 2038				
+				set_capital = 16
+			}
+		}
+	}
+	
+	GER_expand_bgn_nor = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 818
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		    BGN = {
+			controls_state = 785
+			}
+		}
+	
+
+		complete_effect = {
+			BGN = {
+				transfer_state = 818
+			}
+		}
+	}
+	
+	GER_expand_bgn_swiss = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 892
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		    BGN = {
+			controls_state = 17
+			}
+		}
+	
+
+		complete_effect = {
+			BGN = {
+				transfer_state = 892
+			}
+		}
+	}
+	
+	GER_expand_bgn_haute = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 735
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+		    BGN = {
+			controls_state = 1270
+			}
+		}
+	
+
+		complete_effect = {
+			BGN = {
+				transfer_state = 735
+			}
+		}
+	}
+	
+	GER_transnistria_romania = {
+		highlight_state_targets = {
+			state = 192
+			state = 198
+			state = 1100
+			state = 829
+			state = 1624
+		}
+
+		available = {
+			has_full_control_of_state = 198
+			has_full_control_of_state = 192
+			has_full_control_of_state = 1100
+			has_full_control_of_state = 829
+			has_full_control_of_state = 1624
+			
+			ROM = {
+				has_full_control_of_state = 78
+				has_full_control_of_state = 766
+			}
+		}
+
+		cost = 10
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 10
+			
+			modifier = {
+				factor = 50
+				is_historical_focus_on = yes
+			}
+
+			modifier = {
+				factor = 0
+				ROM = {
+					has_government = communism
+				}
+			}
+		}
+
+		visible = {
+			NOT = { has_global_flag = GER_transfer_transistria }
+			ROM = {
+				exists = yes
+			}
+			controls_state = 198
+			controls_state = 192
+			controls_state = 1100
+			controls_state = 829
+			controls_state = 1624
+		}
+
+		complete_effect = {
+			ROM = { country_event = { id = bs_ger.1 days = 3 } }
+			set_global_flag = GER_transfer_transistria
+			
+			effect_tooltip = {
+				ROM = {
+					transfer_state = 198
+					transfer_state = 192
+					transfer_state = 1100
+					transfer_state = 829
+					transfer_state = 1624
+				}
+				ROM = { add_opinion_modifier = { target = GER modifier = ROM_transfer_transnistria }}
+			}
+		}
+	}
+	
+	GER_transnistria_ukraine = {
+		highlight_state_targets = {
+			state = 192
+			state = 198
+			state = 1100
+			state = 829
+			state = 1624
+		}
+
+		available = {
+			has_full_control_of_state = 198
+			has_full_control_of_state = 192
+			has_full_control_of_state = 1100
+			has_full_control_of_state = 829
+			has_full_control_of_state = 1624
+
+			RKU = {
+				has_full_control_of_state = 199
+				has_full_control_of_state = 201
+				has_full_control_of_state = 203
+				has_full_control_of_state = 197
+			}
+		}
+
+		cost = 10
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 50
+				ROM = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				factor = 150
+				OR = {
+					has_country_flag = partitoned_romania_1
+					has_country_flag = partitoned_romania_2
+					has_country_flag = partitoned_romania_3
+					has_country_flag = partitoned_romania_4
+					has_country_flag = partitoned_romania_5
+				}
+			}
+		}
+
+		visible = {
+			NOT = { has_global_flag = GER_transfer_transistria }
+			RKU = {
+				exists = yes
+			}
+			controls_state = 198
+			controls_state = 192
+			controls_state = 1100
+			controls_state = 829
+			controls_state = 1624
+		}
+
+		complete_effect = {
+			set_global_flag = GER_transfer_transistria
+			RKU = {
+				transfer_state = 198
+				transfer_state = 192
+				transfer_state = 1100
+				transfer_state = 829
+				transfer_state = 1624
+				set_country_flag = got_transnistria
+			}
+			hidden_effect = {
+				192 = { set_state_flag = RK_ukraine_can_integrate }
+				198 = { set_state_flag = RK_ukraine_can_integrate }
+				829 = { set_state_flag = RK_ukraine_can_integrate }
+				1100 = { set_state_flag = RK_ukraine_can_integrate }
+				1624 = { set_state_flag = RK_ukraine_can_integrate }
+			}
+		}
+	}
+	
+	GER_east_karelia_filand = {
+
+		highlight_state_targets = {
+					state = 146
+					state = 147
+					state = 722
+					state = 929
+					state = 928
+					state = 213
+					state = 215
+					state = 216
+					state = 1380
+					state = 1382
+		}
+
+		available = {
+			has_full_control_of_state = 929
+			has_full_control_of_state = 928
+			has_full_control_of_state = 213
+			has_full_control_of_state = 215
+			has_full_control_of_state = 216
+			has_full_control_of_state = 1380
+			has_full_control_of_state = 1382
+		}
+
+		cost = 10
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+			NOT = { has_global_flag = east_karelia_transfered }
+			FIN = {
+				exists = yes
+				OR = {
+					is_puppet = no
+					is_puppet_of = GER
+				}
+			}
+			controls_state = 929
+			controls_state = 928
+			controls_state = 213
+			controls_state = 215
+			controls_state = 216
+			controls_state = 1380
+			controls_state = 1382
+		}
+
+		complete_effect = {
+			FIN = { country_event = { id = bs_ger.2 days = 3 } }
+			set_global_flag = east_karelia_transfered
+			
+			effect_tooltip = {
+				FIN = {
+					transfer_state = 929
+					transfer_state = 928
+					transfer_state = 213
+					transfer_state = 215
+					transfer_state = 216
+					transfer_state = 1380
+					transfer_state = 1382
+				}
+				FIN = { add_opinion_modifier = { target = GER modifier = FIN_transfer_east_karelia }}
+			}
+			if = {
+				limit = {
+					controls_state = 146
+					controls_state = 147
+					controls_state = 722
+	               	controls_state = 929
+		        	controls_state = 928
+		        	controls_state = 213
+					controls_state = 215
+					controls_state = 216
+				}
+				FIN = {
+					transfer_state = 146
+					transfer_state = 147
+					transfer_state = 722
+					transfer_state = 929
+					transfer_state = 928
+					transfer_state = 213
+					transfer_state = 215
+					transfer_state = 216
+					transfer_state = 1380
+					transfer_state = 1382
+				}
+		    }
+		}
+	}
+	
+	GER_east_karelia_moscowien = {
+
+		highlight_state_targets = {
+					state = 146
+					state = 147
+					state = 722
+					state = 929
+					state = 928
+					state = 213
+					state = 1380
+					state = 1382
+		}
+
+		available = {
+			has_full_control_of_state = 929
+			has_full_control_of_state = 928
+			has_full_control_of_state = 213
+			has_full_control_of_state = 215
+			has_full_control_of_state = 216
+			has_full_control_of_state = 1380
+			has_full_control_of_state = 1382
+		}
+
+		cost = 10
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			factor = 50
+			FIN = {
+				has_government = communism
+			}
+			}			
+		}
+
+
+
+		visible = {
+			NOT = { has_global_flag = east_karelia_transfered }
+			RKM = {
+				exists = yes
+				is_puppet_of = GER
+			}
+			controls_state = 929
+			controls_state = 928
+			controls_state = 213
+			controls_state = 215
+			controls_state = 216
+			controls_state = 1380
+			controls_state = 1382
+		}
+
+		complete_effect = {
+			set_global_flag = east_karelia_transfered
+			RKM = {
+				transfer_state = 929
+				transfer_state = 928
+				transfer_state = 213
+				transfer_state = 215
+				transfer_state = 216
+				transfer_state = 1380
+				transfer_state = 1382
+			}
+			if = {
+				limit = {
+					controls_state = 146
+					controls_state = 147
+					controls_state = 722
+	               	controls_state = 929
+		        	controls_state = 928
+		        	controls_state = 213
+				}
+				RKM = {
+					transfer_state = 146
+					transfer_state = 147
+					transfer_state = 722
+					transfer_state = 929
+					transfer_state = 928
+					transfer_state = 213
+					transfer_state = 1380
+					transfer_state = 1382
+				}
+		    }
+		}
+	}
+
+	GER_expand_moscow = {
+
+		highlight_state_targets = {
+			state = 1255
+			state = 351
+			state = 400
+			state = 214
+			state = 397
+			state = 262
+			state = 256
+			state = 250
+			state = 399
+			state = 398
+			state = 249
+			state = 651
+			state = 251
+			state = 652
+			state = 1252
+			state = 1120
+			state = 1000
+			state = 582
+			state = 573
+			state = 1360
+			state = 581
+		}
+
+		available = {
+			has_full_control_of_state = 1255
+			has_full_control_of_state = 351
+			has_full_control_of_state = 400
+			has_full_control_of_state = 214
+			has_full_control_of_state = 397
+			has_full_control_of_state = 262
+			has_full_control_of_state = 256
+			has_full_control_of_state = 250
+			has_full_control_of_state = 399
+			has_full_control_of_state = 398
+			has_full_control_of_state = 249
+			has_full_control_of_state = 651
+			has_full_control_of_state = 251
+			has_full_control_of_state = 652
+			has_full_control_of_state = 1252
+			has_full_control_of_state = 1120
+			has_full_control_of_state = 1000
+			has_full_control_of_state = 582
+			has_full_control_of_state = 573
+			has_full_control_of_state = 1360
+			has_full_control_of_state = 581
+			
+			RKM = {
+			has_full_control_of_state = 244
+			has_full_control_of_state = 246
+			has_full_control_of_state = 242
+			has_full_control_of_state = 243
+			has_full_control_of_state = 264
+			has_full_control_of_state = 252
+			has_full_control_of_state = 253
+			has_full_control_of_state = 248
+			has_full_control_of_state = 247
+			has_full_control_of_state = 219
+			has_full_control_of_state = 205
+			has_full_control_of_state = 223
+			has_full_control_of_state = 254
+			has_full_control_of_state = 255
+			has_full_control_of_state = 1161
+			has_full_control_of_state = 1371
+			has_full_control_of_state = 1164
+			}
+		}
+
+		cost = 10
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 1
+				SOV = { has_capitulated = yes }
+			}
+
+			modifier = {
+				factor = 0
+				RKM = {
+					has_government = communism
+				}
+			}
+		}
+
+		visible = {
+			RKM = {
+				exists = yes
+			}
+					controls_state = 1255
+					controls_state = 351
+					controls_state = 400
+					controls_state = 214
+					controls_state = 397
+					controls_state = 262
+					controls_state = 256
+					controls_state = 250
+					controls_state = 399
+					controls_state = 398
+					controls_state = 249
+					controls_state = 651
+					controls_state = 251
+					controls_state = 652
+					controls_state = 1252
+					controls_state = 1120
+					controls_state = 1000
+					controls_state = 582
+					controls_state = 573
+					controls_state = 1360
+					controls_state = 581
+					NOT = { has_country_flag = expanded_moscow_eastward }
+		}
+
+		complete_effect = {
+			RKM = { country_event = { id = bs_ger.1502 days = 3 } }
+			set_global_flag = GER_expand_moscow
+			set_global_flag = GER_expand_moscow_eastward
+			effect_tooltip = {
+				RKM = {
+					transfer_state = 1255
+					transfer_state = 351
+					transfer_state = 400
+					transfer_state = 214
+					transfer_state = 397
+					transfer_state = 262
+					transfer_state = 256
+					transfer_state = 250
+					transfer_state = 399
+					transfer_state = 398
+					transfer_state = 249
+					transfer_state = 651
+					transfer_state = 251
+					transfer_state = 652
+					transfer_state = 1252
+					transfer_state = 1120
+					transfer_state = 1000
+					transfer_state = 582
+					transfer_state = 573
+					transfer_state = 1360
+					transfer_state = 581
+				}
+				
+				RKM = { add_opinion_modifier = { target = GER modifier = RKU_expand_ukraine }}
+			}
+		}
+	}
+
+	GER_expand_moscow_westward = {
+		highlight_state_targets = {
+			state = 208
+			state = 209
+			state = 210
+			state = 241
+			state = 1774
+			state = 263
+			state = 1162
+			state = 1163
+		}
+
+		available = {
+			has_full_control_of_state = 204
+			has_full_control_of_state = 1470			
+			has_full_control_of_state = 207
+			has_full_control_of_state = 208
+			has_full_control_of_state = 209
+			has_full_control_of_state = 210
+			has_full_control_of_state = 241
+			has_full_control_of_state = 263
+			has_full_control_of_state = 1162
+			has_full_control_of_state = 1163
+			has_full_control_of_state = 1774
+			has_full_control_of_state = 1170
+			
+			RKM = {
+				has_full_control_of_state = 244
+				has_full_control_of_state = 246
+				has_full_control_of_state = 242
+				has_full_control_of_state = 243
+				has_full_control_of_state = 264
+				has_full_control_of_state = 252
+				has_full_control_of_state = 253
+				has_full_control_of_state = 248
+				has_full_control_of_state = 247
+				has_full_control_of_state = 219
+				has_full_control_of_state = 205
+				has_full_control_of_state = 223
+				has_full_control_of_state = 254
+				has_full_control_of_state = 255
+				has_full_control_of_state = 1161
+				has_full_control_of_state = 1371
+				has_full_control_of_state = 1164
+			}
+		}
+
+		cost = 10
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 1
+				SOV = { has_capitulated = yes }
+			}
+
+			modifier = {
+				factor = 0
+				RKO = {
+					has_government = communism
+				}
+			}
+		}
+
+		visible = {
+			RKM = {
+				exists = yes
+				has_full_control_of_state = 244
+				has_full_control_of_state = 246
+				has_full_control_of_state = 242
+				has_full_control_of_state = 243
+				has_full_control_of_state = 264
+				has_full_control_of_state = 252
+				has_full_control_of_state = 253
+				has_full_control_of_state = 248
+				has_full_control_of_state = 247
+				has_full_control_of_state = 219
+				has_full_control_of_state = 205
+				has_full_control_of_state = 223
+				has_full_control_of_state = 254
+				has_full_control_of_state = 255
+				has_full_control_of_state = 1161
+				has_full_control_of_state = 1371
+				has_full_control_of_state = 1164
+			}
+			NOT = { has_country_flag = expanded_moscow_westward }
+		}
+
+		complete_effect = {
+			set_global_flag = GER_expand_moscow_westward
+			if = {
+				limit = { 
+				RKO = { exists = yes }
+				}
+				RKO = {
+					transfer_state = 1470			
+					transfer_state = 204
+					transfer_state = 1619
+					transfer_state = 1620				
+					transfer_state = 207
+					transfer_state = 1993
+					transfer_state = 1170
+					transfer_state = 1994				
+				}
+			}
+			
+			RKM = {
+				transfer_state = 208
+				transfer_state = 209
+				transfer_state = 210
+				transfer_state = 1774
+				transfer_state = 241
+				transfer_state = 263
+				transfer_state = 1162
+				transfer_state = 1163					
+			}
+			set_country_flag = expanded_moscow_westward	
+		}
+	}
+	
+	GER_establish_scandivania = {
+
+		highlight_state_targets = {
+			state = 1115
+			state = 140
+			state = 1006
+			state = 138
+			state = 139
+			state = 1007
+			state = 141
+			state = 1008
+			state = 1009
+			state = 1114
+			state = 38
+			state = 666
+			state = 1362
+			state = 124
+			state = 1259
+			state = 1657		
+		}
+
+		available = {
+			has_full_control_of_state = 1115
+			has_full_control_of_state = 140
+			has_full_control_of_state = 1006
+			has_full_control_of_state = 138
+			has_full_control_of_state = 139
+			has_full_control_of_state = 1007
+			has_full_control_of_state = 141
+			has_full_control_of_state = 1008
+			has_full_control_of_state = 1009
+			has_full_control_of_state = 1114
+			has_full_control_of_state = 38
+			has_full_control_of_state = 666
+			has_full_control_of_state = 1362
+			has_full_control_of_state = 124
+			has_full_control_of_state = 1259	
+			has_full_control_of_state = 1657		
+			
+			NWG = {
+				has_full_control_of_state = 110	
+				has_full_control_of_state = 1010
+				has_full_control_of_state = 1012
+				has_full_control_of_state = 1011
+				has_full_control_of_state = 143
+				has_full_control_of_state = 1013
+				has_full_control_of_state = 1014
+				has_full_control_of_state = 144
+			}
+		}
+
+		cost = 10
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 1
+				ENG = { has_capitulated = yes }
+			}
+
+			modifier = {
+				factor = 0
+				RKU = {
+					has_government = communism
+				}
+			}
+		}
+
+		visible = {
+			NWG = {
+				exists = yes
+			}
+			controls_state = 1115
+			controls_state = 140
+			controls_state = 1006
+			controls_state = 138
+			controls_state = 139
+			controls_state = 1007
+			controls_state = 141
+			controls_state = 1008
+			controls_state = 1009
+			controls_state = 1114
+			controls_state = 38
+			controls_state = 666
+			controls_state = 1362
+			controls_state = 1657
+		}
+
+		complete_effect = {
+			set_global_flag = GER_establish_scandivania
+			
+			NWG = {
+				transfer_state = 1115
+				transfer_state = 140
+				transfer_state = 1006
+				transfer_state = 138
+				transfer_state = 139
+				transfer_state = 1007
+				transfer_state = 141
+				transfer_state = 1008
+				transfer_state = 1009
+				transfer_state = 124
+				transfer_state = 1259				
+				transfer_state = 1114
+				transfer_state = 38
+				transfer_state = 666
+				transfer_state = 1362
+				transfer_state = 1657
+			}
+				
+		}
+	}
+	
+	GER_expand_scandivania = {
+
+		highlight_state_targets = {
+			state = 149
+			state = 145
+			state = 111
+			state = 1151
+			state = 1368
+			state = 150
+			state = 1361
+			state = 148
+		}
+
+		available = {
+				has_full_control_of_state = 149
+				has_full_control_of_state = 145
+				has_full_control_of_state = 111
+				has_full_control_of_state = 1151
+				has_full_control_of_state = 1368
+				has_full_control_of_state = 150
+				has_full_control_of_state = 1361
+				has_full_control_of_state = 148
+			
+			NWG = {
+				has_full_control_of_state = 110	
+				has_full_control_of_state = 1010
+				has_full_control_of_state = 1012
+				has_full_control_of_state = 1011
+				has_full_control_of_state = 143
+				has_full_control_of_state = 1013
+				has_full_control_of_state = 1014
+				has_full_control_of_state = 144
+				has_full_control_of_state = 1362
+				has_full_control_of_state = 666
+				has_full_control_of_state = 38
+				has_full_control_of_state = 1009
+				has_full_control_of_state = 1114
+				has_full_control_of_state = 1008
+				has_full_control_of_state = 141
+				has_full_control_of_state = 140
+				has_full_control_of_state = 1115
+				has_full_control_of_state = 1007
+				has_full_control_of_state = 139
+			}
+		}
+
+		cost = 10
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 1
+				ENG = { has_capitulated = yes }
+			}
+
+			modifier = {
+				factor = 0
+				NWG = {
+					has_government = communism
+				}
+			}
+		}
+
+		visible = {
+			NWG = {
+				exists = yes
+				controls_state = 110	
+				controls_state = 1010
+				controls_state = 1012
+				controls_state = 1011
+				controls_state = 143
+				controls_state = 1013
+				controls_state = 1014
+				controls_state = 144
+				controls_state = 1362
+				controls_state = 666
+				controls_state = 38
+				controls_state = 1009
+				controls_state = 1114
+				controls_state = 1008
+				controls_state = 141
+				controls_state = 140
+				controls_state = 1115
+				controls_state = 1007
+				controls_state = 139
+			}
+			controls_state = 149
+			controls_state = 145
+			controls_state = 111
+			controls_state = 1151
+			controls_state = 1368
+			controls_state = 150
+			controls_state = 1361
+			controls_state = 148
+		}
+
+		complete_effect = {
+			set_global_flag = GER_expand_scandivania
+		
+			NWG = {
+				transfer_state = 149
+				transfer_state = 145
+				transfer_state = 111
+				transfer_state = 1151
+				transfer_state = 150
+				transfer_state = 1361
+				transfer_state = 148
+			}
+				
+		}
+	}
+	
+	GER_karelia_to_scandivania = {
+
+		highlight_state_targets = {
+			state = 146
+			state = 1368
+			state = 1369
+			state = 1381
+			state = 147
+			state = 722
+			state = 216
+			state = 215
+			state = 1380
+			state = 928
+			state = 929
+			state = 1382
+			state = 213
+		}
+
+		available = {
+				has_full_control_of_state = 146
+				has_full_control_of_state = 1368
+				has_full_control_of_state = 1369
+				has_full_control_of_state = 1381
+				has_full_control_of_state = 147
+				has_full_control_of_state = 722
+				has_full_control_of_state = 216
+				has_full_control_of_state = 215
+				has_full_control_of_state = 1380
+				has_full_control_of_state = 928
+				has_full_control_of_state = 929
+				has_full_control_of_state = 1382
+				has_full_control_of_state = 213
+			
+			NWG = {
+				controls_state = 111
+				controls_state = 141
+				controls_state = 110
+			}
+		}
+
+		cost = 10
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				factor = 10
+				FIN = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				factor = 0
+				NWG = {
+					has_government = communism
+				}
+			}
+		}
+
+		visible = {
+			NWG = {
+				exists = yes
+				controls_state = 111
+				controls_state = 141
+				controls_state = 110
+			}
+		}
+		complete_effect = {
+			set_global_flag = GER_karelia_scandivania_flag
+			
+			NWG = {
+				transfer_state = 1362
+				transfer_state = 146
+				transfer_state = 1368
+				transfer_state = 1369
+				transfer_state = 1381
+				transfer_state = 147
+				transfer_state = 722
+				transfer_state = 216
+				transfer_state = 215
+				transfer_state = 1380
+				transfer_state = 928
+				transfer_state = 929
+				transfer_state = 1382
+				transfer_state = 213
+			}
+				
+		}
+	}
+		
+	GER_transfer_far_eastern_holdings = {
+		highlight_state_targets = {
+			state = 408
+			state = 409
+			state = 560
+			state = 561
+			state = 637
+			state = 655
+			state = 657
+			state = 970
+			state = 1090
+			state = 1407
+		}
+
+		available = {
+			has_full_control_of_state = 408
+			has_full_control_of_state = 409
+			has_full_control_of_state = 560
+			has_full_control_of_state = 561
+			has_full_control_of_state = 637
+			has_full_control_of_state = 655
+			has_full_control_of_state = 657
+			has_full_control_of_state = 970
+			has_full_control_of_state = 1090
+			has_full_control_of_state = 1407
+			
+		}
+
+		cost = 10
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+			
+			modifier = {
+				factor = 50
+				is_historical_focus_on = yes
+			}
+
+			modifier = {
+				factor = 0
+				JAP = {
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				factor = 0
+				JAP = { #i doubt germany would cooperate with democratic japan
+					has_government = democratic
+				}
+			}
+		}
+
+		visible = {
+			JAP = {
+				exists = yes
+			}
+			controls_state = 408
+			controls_state = 409
+			controls_state = 560
+			controls_state = 561
+			controls_state = 637
+			controls_state = 655
+			controls_state = 657
+			controls_state = 970
+			controls_state = 1090
+			controls_state = 1407
+		}
+
+		complete_effect = {
+			JAP = { country_event = { id = bs_ger.66 days = 3 } }
+			set_global_flag = GER_transfer_far_eastern_holdings
+			
+			effect_tooltip = {
+				JAP = {
+					transfer_state = 408
+					transfer_state = 409
+					transfer_state = 560
+					transfer_state = 561
+					transfer_state = 637
+					transfer_state = 655
+					transfer_state = 657
+					transfer_state = 970
+					transfer_state = 1090
+					transfer_state = 1407
+				}
+				
+				JAP = { add_opinion_modifier = { target = GER modifier = JAP_transfer_far_eastern_holdings }}
+			}
+		}
+	}
+
+	GER_kherson_ukraine = {
+		highlight_state_targets = {
+			state = 196
+		}
+
+		available = { 
+			controls_state = 196
+		}
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+
+		visible = {
+			country_exists = RKU
+			controls_state = 196
+		}
+
+		complete_effect = {
+			set_global_flag = GER_transfer_kherson
+			RKU = { transfer_state = 196 }
+		}
+	}
+
+	GER_kherson_crimea = {
+		highlight_state_targets = {
+			state = 196
+		}
+
+		available = { 
+			has_full_control_of_state = 196
+		}
+
+		cost = 5
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+
+		visible = {
+			country_exists = SSG
+			controls_state = 196
+		}
+
+		complete_effect = {
+			set_global_flag = GER_transfer_kherson
+			SSG = { transfer_state = 196 }
+		}
+	}
+	
+	GER_fate_of_ostsibirien = {
+
+		icon = ger_reichskommissariats
+		
+		fire_only_once = no
+		
+		available = {
+			has_full_control_of_state = 516
+			has_full_control_of_state = 562
+			has_full_control_of_state = 563
+			has_full_control_of_state = 564
+			has_full_control_of_state = 565
+			has_full_control_of_state = 566
+			has_full_control_of_state = 567
+			has_full_control_of_state = 574
+			has_full_control_of_state = 575
+			has_full_control_of_state = 576
+			has_full_control_of_state = 644
+			has_full_control_of_state = 1167
+			has_full_control_of_state = 1420			
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		visible = {
+			country_exists = RKW
+			controls_state = 516
+			controls_state = 562
+			controls_state = 563
+			controls_state = 564
+			controls_state = 565
+			controls_state = 566
+			controls_state = 567
+			controls_state = 574
+			controls_state = 575
+			controls_state = 576
+			controls_state = 644
+			controls_state = 1167
+			controls_state = 1420
+		}
+
+		complete_effect = {	
+			country_event = bs_ger.79		
+		}
+	}
+}
+
+GER_mittelafrika_plan_category = {
+
+	GER_form_the_mittelafrika = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 295
+			controls_state = 2054				
+			controls_state = 538
+			controls_state = 539
+			controls_state = 546
+			controls_state = 547
+			controls_state = 548
+			controls_state = 660
+			controls_state = 718
+			controls_state = 768
+			controls_state = 769
+			controls_state = 770
+			controls_state = 1961
+			controls_state = 771
+			controls_state = 772
+			controls_state = 773
+			controls_state = 774
+			controls_state = 895
+			controls_state = 896
+			controls_state = 897
+			controls_state = 898
+			controls_state = 899
+			controls_state = 900
+			controls_state = 901
+			controls_state = 1135
+			controls_state = 1539
+			controls_state = 1174
+			controls_state = 1136
+			controls_state = 1137
+			controls_state = 1197
+			controls_state = 1289
+			controls_state = 1493
+			controls_state = 1540
+			controls_state = 1522
+			controls_state = 1521
+			controls_state = 1530
+			controls_state = 1944
+			controls_state = 1945
+			controls_state = 1527
+			controls_state = 1528
+			controls_state = 1529
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			OR = {
+				controls_state = 773
+				controls_state = 293
+				controls_state = 546
+			}		
+		}
+
+		complete_effect = {
+		    773 = { add_core_of = MTA }
+			1493 = { add_core_of = MTA }
+			900 = { add_core_of = MTA }
+			546 = { add_core_of = MTA }
+			901 = { add_core_of = MTA }
+			1961 = { add_core_of = MTA }
+			899 = { add_core_of = MTA }
+			986 = { add_core_of = MTA }
+			1872 = { add_core_of = MTA }			
+			897 = { add_core_of = MTA }
+			546 = { add_core_of = MTA }
+			1526 = { add_core_of = MTA }
+			1944 = { add_core_of = MTA }
+			1945 = { add_core_of = MTA }			
+			1525 = { add_core_of = MTA }
+			1522 = { add_core_of = MTA }
+			1289 = { add_core_of = MTA }
+			768 = { add_core_of = MTA }
+			769 = { add_core_of = MTA }
+			773 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			546 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			1493 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			
+			release = MTA
+			MTA = {
+				transfer_state = 295
+				transfer_state = 2054				
+				transfer_state = 538
+				transfer_state = 1961
+				transfer_state = 539
+				transfer_state = 546
+				transfer_state = 547
+				transfer_state = 548
+				transfer_state = 660
+				transfer_state = 718
+				transfer_state = 768
+				transfer_state = 769
+				transfer_state = 770
+				transfer_state = 771
+				transfer_state = 772
+				transfer_state = 773
+				transfer_state = 774
+				transfer_state = 895
+				transfer_state = 896
+				transfer_state = 1944
+				transfer_state = 1945
+				transfer_state = 897
+				transfer_state = 898
+				transfer_state = 899
+				transfer_state = 900
+				transfer_state = 901
+				transfer_state = 1135
+				transfer_state = 1136
+				transfer_state = 1137
+				transfer_state = 1197
+				transfer_state = 1289
+				transfer_state = 1493
+				transfer_state = 1540
+				transfer_state = 1522
+				transfer_state = 1521
+				transfer_state = 1530
+				transfer_state = 1527
+				transfer_state = 1528
+				transfer_state = 1529
+				transfer_state = 1539
+				transfer_state = 1174
+				transfer_state = 1813
+			}
+			GER = {
+				puppet = MTA
+				#set_autonomy = { target = PBM autonomy_state = autonomy_reichsprotectorate }
+
+				if = {
+					limit = {
+						has_government = fascism
+					}
+					MTA = {
+						set_politics = {
+							ruling_party = fascism
+							last_election = "1936.1.1"
+							election_frequency = 48
+							elections_allowed = no
+						}
+						set_popularities = {
+							democratic = 0
+							fascism = 100
+							communism = 0
+							neutrality = 0
+						}
+						create_country_leader = {
+							name = "Hermann Göring"
+							desc = "POLITICS_HERMANN_GORING_DESC"
+							picture = "gfx/leaders/GER/Portrait_Germany_Hermann_Goring.dds"
+							expire = "1965.1.1"
+							ideology = nazism
+							traits = {
+								Cruel_Statthalter
+							}
+						}
+					}
+				}
+				
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					MTA = {
+						set_politics = {
+							ruling_party = neutrality
+							last_election = "1936.1.1"
+							election_frequency = 48
+							elections_allowed = no
+						}
+						set_popularities = {
+							democratic = 0
+							fascism = 0
+							communism = 0
+							neutrality = 100
+						}
+						create_country_leader = {
+							name = "Paul von Lettow-Vorbeck"
+							desc = "POLITICS_PAUL_VON_LETTOW_VORBECK_DESC"
+							picture = "gfx/leaders/GER/portrait_ger_von_lettow_vorbeck.dds"
+							expire = "1965.1.1"
+							ideology = despotism
+							traits = {
+								Moderate_Statthalter
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	GER_equatorial_guinea_mta = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 1548
+			MTA = {
+			controls_state = 897 
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			MTA = { exists = yes }
+		}
+
+		complete_effect = {
+			MTA = {
+				transfer_state = 1548
+				transfer_state = 297
+			}
+		}
+	}	
+	GER_portugal_mta = {
+	
+		icon = generic_form_nation
+
+		available = {
+				controls_state = 540
+				controls_state = 544
+				controls_state = 1036
+				controls_state = 1128
+				controls_state = 1357
+				controls_state = 1358
+				controls_state = 1959 
+				controls_state = 1960
+				controls_state = 1359
+				controls_state = 1542
+				MTA = {
+				}
+			MTA = {
+			controls_state = 771
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			MTA = { exists = yes }
+		}
+
+		complete_effect = {
+			MTA = {
+				transfer_state = 540
+				transfer_state = 544
+				transfer_state = 1036
+				transfer_state = 1128
+				transfer_state = 1357
+				transfer_state = 1358
+				transfer_state = 1960
+				transfer_state = 1959
+				transfer_state = 1359
+				transfer_state = 705
+				transfer_state = 1538
+				transfer_state = 1541
+				transfer_state = 1542
+			}
+		}
+	}
+	GER_namibia_mta = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 541
+			controls_state = 1056
+			controls_state = 1057
+			controls_state = 1544
+			controls_state = 1057
+			controls_state = 1543
+			MTA = {
+				controls_state = 1528
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			MTA = { exists = yes }
+		}
+
+		complete_effect = {
+			MTA = {
+				transfer_state = 541
+				transfer_state = 1056
+				transfer_state = 1057
+				transfer_state = 1544
+				transfer_state = 1057
+				transfer_state = 1543
+			}
+		}
+	}
+	GER_rhodesia_botswana_mta = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 542
+			controls_state = 1537
+			controls_state = 1534
+			controls_state = 1536
+			controls_state = 1535
+			controls_state = 1531
+			controls_state = 545
+			controls_state = 1533
+			MTA = {
+				controls_state = 1528
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			MTA = { exists = yes }
+		}
+
+		complete_effect = {
+			MTA = {
+				transfer_state = 542
+				transfer_state = 1537
+				transfer_state = 1534
+				transfer_state = 1536
+				transfer_state = 1535
+				transfer_state = 1531
+				transfer_state = 545
+				transfer_state = 1533
+			}
+		}
+	}
+	GER_south_africa_mta = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 275
+			controls_state = 1221
+			controls_state = 1220
+			controls_state = 1037
+			controls_state = 719
+			controls_state = 1216
+			controls_state = 1208
+			controls_state = 1209
+			controls_state = 1218
+			controls_state = 1217
+			controls_state = 1038
+			controls_state = 1215
+			controls_state = 1214
+			controls_state = 1210
+			controls_state = 1207
+			controls_state = 681
+			controls_state = 1206
+			controls_state = 1211
+			controls_state = 1213
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			MTA = { exists = yes }
+		}
+
+		complete_effect = {
+			MTA = {
+				transfer_state = 275
+				transfer_state = 1221
+				transfer_state = 1220
+				transfer_state = 1037
+				transfer_state = 719
+				transfer_state = 1216
+				transfer_state = 1208
+				transfer_state = 1209
+				transfer_state = 1218
+				transfer_state = 1217
+				transfer_state = 1038
+				transfer_state = 1215
+				transfer_state = 1214
+				transfer_state = 1210
+				transfer_state = 1207
+				transfer_state = 681
+				transfer_state = 1206
+				transfer_state = 1211
+				transfer_state = 1213
+				transfer_state = 1941
+			}
+		}
+	}
+	GER_madagascar_mta = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 543
+			controls_state = 2057
+			controls_state = 2056
+			controls_state = 2055			
+			controls_state = 708
+			controls_state = 706
+			controls_state = 707
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			MTA = { exists = yes }
+		}
+
+		complete_effect = {
+			MTA = {
+				transfer_state = 543
+				transfer_state = 2057
+				transfer_state = 2056
+				transfer_state = 2055				
+				transfer_state = 708
+				transfer_state = 706
+				transfer_state = 707
+			}
+		}
+	}
+	GER_west_africa_one_mta = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 558
+			controls_state = 1110
+			controls_state = 1492
+			controls_state = 776
+			controls_state = 777
+			controls_state = 1049
+			controls_state = 274
+			controls_state = 779
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			MTA = { exists = yes }
+		}
+
+		complete_effect = {
+			MTA = {
+				1049 = { add_core_of = MTA }
+				777 = { add_core_of = MTA }
+				transfer_state = 558
+				transfer_state = 1110
+				transfer_state = 1492
+				transfer_state = 776
+				transfer_state = 777
+				transfer_state = 1049
+				transfer_state = 274
+				transfer_state = 779
+			}
+		}
+	}
+	GER_liberia_mta = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 298
+			MTA = {
+			controls_state = 779
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			MTA = { exists = yes }
+		}
+
+		complete_effect = {
+			MTA = {
+				transfer_state = 298
+			}
+		}
+	}
+	GER_ethiopia_mta = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 268
+			controls_state = 269
+			controls_state = 271
+			controls_state = 550
+			controls_state = 559
+			controls_state = 1087
+			controls_state = 1088
+			controls_state = 1111
+			controls_state = 1113
+			controls_state = 2052
+			controls_state = 2050
+			controls_state = 2051
+			controls_state = 2053
+			controls_state = 550
+			controls_state = 1980
+			controls_state = 1087
+			controls_state = 559
+			controls_state = 1088
+			MTA = {
+			controls_state = 547
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			MTA = { exists = yes }
+		}
+
+		complete_effect = {
+			MTA = {
+				transfer_state = 268
+				transfer_state = 269
+				transfer_state = 271
+				transfer_state = 550	
+				transfer_state = 559
+				transfer_state = 1087
+				transfer_state = 1088	
+				transfer_state = 1111
+				transfer_state = 1113
+				transfer_state = 1979
+				transfer_state = 1980	
+				transfer_state = 2052
+				transfer_state = 2050
+				transfer_state = 2051		
+				transfer_state = 2053
+				transfer_state = 550
+				transfer_state = 1980
+				transfer_state = 1087
+				transfer_state = 559
+				transfer_state = 1088
+			}
+		}
+	}
+	GER_west_africa_two_mta = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 778
+			controls_state = 781
+			controls_state = 780
+			controls_state = 272
+			controls_state = 556
+			controls_state = 1524
+			controls_state = 1816
+			controls_state = 1925
+			controls_state = 1814
+			controls_state = 1924
+			controls_state = 1815
+			MTA = {
+				controls_state = 779
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			MTA = { exists = yes }
+		}
+
+		complete_effect = {
+			MTA = {
+				transfer_state = 778
+				transfer_state = 781
+				transfer_state = 780
+				transfer_state = 272
+				
+				transfer_state = 701
+				transfer_state = 296
+				transfer_state = 700
+				transfer_state = 556
+				transfer_state = 1524
+				transfer_state = 2037
+				transfer_state = 1816
+				transfer_state = 1925
+				transfer_state = 1814
+				transfer_state = 1924
+				transfer_state = 1815
+                set_cosmetic_tag = RKA				
+			}
+		}
+	}
+	GER_egypt_mta = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 446
+			controls_state = 447
+			controls_state = 452
+			controls_state = 453
+			controls_state = 456
+			controls_state = 457
+			controls_state = 549
+			controls_state = 1187
+			controls_state = 1279
+			controls_state = 1277
+			controls_state = 1278
+			controls_state = 1276
+			controls_state = 1274
+			controls_state = 1288
+			controls_state = 551
+			controls_state = 552
+			controls_state = 767
+			controls_state = 873
+			controls_state = 874
+			controls_state = 1196
+			MTA = {
+				controls_state = 660
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			MTA = { exists = yes }
+		}
+
+		complete_effect = {
+			MTA = {
+				transfer_state = 446
+				transfer_state = 447
+				transfer_state = 452
+				transfer_state = 456
+				transfer_state = 457
+				transfer_state = 549
+				transfer_state = 1187
+				transfer_state = 1279
+				transfer_state = 1277
+				transfer_state = 1278
+				transfer_state = 1276
+				transfer_state = 1274
+				transfer_state = 551
+				transfer_state = 552	
+				transfer_state = 767
+				transfer_state = 873
+				transfer_state = 874
+				transfer_state = 1196
+				transfer_state = 1923
+				transfer_state = 1569
+                set_cosmetic_tag = RKA	
+			}
+		}
+	}
+	GER_sahara_mta = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 775
+			controls_state = 515
+			controls_state = 514
+			controls_state = 699
+			controls_state = 1152
+			controls_state = 786
+			controls_state = 557
+			controls_state = 1172
+			controls_state = 1173
+			controls_state = 1319
+			controls_state = 782
+			controls_state = 786
+			controls_state = 557
+			MTA = {
+				controls_state = 660
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			MTA = { exists = yes }
+		}
+
+		complete_effect = {
+			MTA = {
+				transfer_state = 775
+				transfer_state = 515
+				transfer_state = 514
+				transfer_state = 699
+				transfer_state = 1152
+				transfer_state = 786
+				transfer_state = 557
+				transfer_state = 1172
+				transfer_state = 1173
+				transfer_state = 1319
+				transfer_state = 782
+				transfer_state = 786
+				transfer_state = 557			
+                set_cosmetic_tag = RKA	
+			}
+		}
+	}
+	GER_morocco_mta = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 461
+			controls_state = 462
+			controls_state = 1345
+			controls_state = 1106
+			controls_state = 290
+			MTA = {
+				controls_state = 699
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			MTA = { exists = yes }
+		}
+
+		complete_effect = {
+			MTA = {
+				transfer_state = 461
+				transfer_state = 462
+				transfer_state = 514
+				transfer_state = 1345
+				transfer_state = 1106
+				transfer_state = 290
+				transfer_state = 783
+				transfer_state = 1044
+				transfer_state = 1043
+                set_cosmetic_tag = RKA	
+			}
+		}
+	}
+	GER_algeria_mta = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 459
+			controls_state = 1577
+			controls_state = 460
+			controls_state = 458
+			controls_state = 1935
+			controls_state = 1937
+			controls_state = 1936
+			controls_state = 665
+			controls_state = 1575
+			controls_state = 513
+			MTA = {
+				controls_state = 660
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			MTA = { exists = yes }
+		}
+
+		complete_effect = {
+			MTA = {
+				transfer_state = 459
+				transfer_state = 1577
+				transfer_state = 460
+				transfer_state = 458
+				transfer_state = 1935
+				transfer_state = 1937
+				transfer_state = 1936
+				transfer_state = 665
+				transfer_state = 1575
+				transfer_state = 513
+                set_cosmetic_tag = RKA	
+			}
+		}
+	}
+	GER_libya_mta = {
+	
+		icon = generic_form_nation
+
+		available = {
+			controls_state = 273
+			controls_state = 448
+			controls_state = 449
+			controls_state = 450
+			controls_state = 451
+			controls_state = 661
+			controls_state = 662
+			controls_state = 663
+			controls_state = 998
+			controls_state = 1069
+			controls_state = 1070
+			controls_state = 1071
+			controls_state = 1072
+			controls_state = 1144
+			controls_state = 1177
+			controls_state = 1176
+			controls_state = 1145
+			controls_state = 1146
+			MTA = {
+			controls_state = 665
+			controls_state = 775
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			MTA = { exists = yes }
+		}
+
+		complete_effect = {
+			MTA = {
+				transfer_state = 273
+				transfer_state = 448
+				transfer_state = 449
+				transfer_state = 450
+				transfer_state = 451
+				transfer_state = 661
+				transfer_state = 662
+				transfer_state = 663
+				transfer_state = 998	
+				transfer_state = 1069
+				transfer_state = 1070
+				transfer_state = 1071
+				transfer_state = 1072
+				transfer_state = 1144
+				transfer_state = 1177
+				transfer_state = 1176
+				transfer_state = 1145
+				transfer_state = 1146
+				transfer_state = 1327
+                set_cosmetic_tag = RKA			
+			}
+		}
+	}
+	GER_outer_horn_of_mta = {
+	
+		icon = generic_form_nation
+
+		available = {
+			AND = {
+				OR = {
+					AND = {
+						547 = { controller = {
+								OR = {
+									is_puppet_of = GER
+									tag = GER
+								}
+							}
+						}
+						1187 = { controller = {
+								OR = {
+									is_puppet_of = GER
+									tag = GER
+								}
+							}
+						}
+						551 = { controller = {
+								OR = {
+									is_puppet_of = GER
+									tag = GER
+								}
+							}
+						}
+					}
+					AND = {
+						271 = { controller = {
+								OR = {
+									is_puppet_of = GER
+									tag = GER
+								}
+							}
+						}
+						1087 = { controller = {
+								OR = {
+									is_puppet_of = GER
+									tag = GER
+								}
+							}
+						}
+						1111 = { controller = {
+								OR = {
+									is_puppet_of = GER
+									tag = GER
+								}
+							}
+						}
+						550 = { controller = {
+								OR = {
+									is_puppet_of = GER
+									tag = GER
+								}
+							}
+						}
+						1113 = { controller = {
+								OR = {
+									is_puppet_of = GER
+									tag = GER
+								}
+							}
+						}
+					}
+				}
+				controls_state = 1287
+				controls_state = 1286
+				controls_state = 1285
+				controls_state = 1283
+				controls_state = 1282
+				controls_state = 1281
+				controls_state = 1280
+				controls_state = 268
+				controls_state = 269
+			}
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			MTA = { exists = yes }
+		}
+
+		complete_effect = {
+			MTA = {
+				transfer_state = 1287
+				transfer_state = 1286
+				transfer_state = 1285
+				transfer_state = 1283
+				transfer_state = 1282
+				transfer_state = 1281
+				transfer_state = 1280	
+				transfer_state = 268
+				transfer_state = 269	
+			}
+		}
+	}
+}
+
+GER_german_american_bund_category = {
+
+	GER_german_american_bund = {
+
+		icon = ger_reichskommissariats
+
+		visible = {
+			has_war_with = USA
+			any_state = {
+				is_controlled_by = GER
+				is_core_of = USA
+				is_on_continent = north_america
+			}
+		}
+
+		available = {
+			controls_state = 357
+			controls_state = 358
+			controls_state = 359
+			controls_state = 1999
+			controls_state = 1998
+			controls_state = 360
+			controls_state = 835
+			controls_state = 836
+			controls_state = 837
+			controls_state = 838
+			controls_state = 839
+			controls_state = 840
+		}
+
+		cost = 70
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		complete_effect = {
+			release = ADV
+			ADV = {
+				add_state_core = 358
+				add_state_core = 357
+				add_state_core = 359
+				add_state_core = 1999
+				add_state_core = 1998
+				add_state_core = 360
+				add_state_core = 835
+				add_state_core = 836
+				add_state_core = 837
+				add_state_core = 838
+				add_state_core = 839
+				add_state_core = 840
+				
+				add_state_core = 389
+				add_state_core = 390
+				add_state_core = 384
+				add_state_core = 383
+				add_state_core = 848
+				add_state_core = 391
+				add_state_core = 392
+				add_state_core = 373
+				add_state_core = 857
+				add_state_core = 394
+				add_state_core = 856
+				add_state_core = 395
+				add_state_core = 393
+				add_state_core = 396
+				add_state_core = 261
+				add_state_core = 1175
+				
+				transfer_state = 358
+				transfer_state = 357
+				transfer_state = 359
+				transfer_state = 1998
+				transfer_state = 1999				
+				transfer_state = 360
+				transfer_state = 835
+				transfer_state = 836
+				transfer_state = 837
+				transfer_state = 838
+				transfer_state = 839
+				transfer_state = 840
+				transfer_state = 1175
+				
+				set_capital = 360
+
+				create_country_leader = {
+	                name = "Fritz Julius Kuhn"
+	                desc = "POLITICS_FRITZ_JULIUS_KUHN_DESC"
+	                picture = "gfx/leaders/USA/portrait_usa_fritz_kuhn.dds"
+ 	                expire = "1965.1.1"
+	                ideology = nazism
+	                traits = {
+	                }
+                }
+				
+				hidden_effect = {
+					set_stability = 0.5
+					set_war_support = 0.9
+					
+					load_oob = "ADV_Militia"
+
+					create_corps_commander = {
+						name = "Fritz Julius Kuhn"
+						GFX = GFX_portrait_ger_fritz_kuhn
+						skill = 2
+						attack_skill = 3
+						defense_skill = 2
+						planning_skill = 1
+						logistics_skill = 1
+						traits = { politically_connected }
+					}
+				}
+			}
+			set_autonomy = { target = ADV autonomy_state = autonomy_reichsprotectorate }
+			
+			hidden_effect = {
+				news_event = { hours = 6 id = bs.19 }
+			}
+		}
+	}
+}
+
+BS_german_empire_territory_cateogry = {
+	
+	#BS_integrate_eupen = {
+	
+		#icon = generic_operation
+
+		#highlight_state_targets = {
+			#state = 812
+		#}
+
+		#visible = {
+			#controls_state = 812
+			#NOT = {
+				#has_country_flag = reint_eupen
+			#}
+		#}
+
+		#cost = 25
+		
+		#complete_effect = {
+			#812 = { add_core_of = GER }
+			#set_country_flag = reint_eupen
+		#}
+
+		#ai_will_do = {
+			#factor = 1
+		#}
+	#}
+	
+	BS_integrate_schleswig = {
+	
+		icon = generic_operation
+		
+		highlight_state_targets = {
+			state = 804
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 804
+				if = {
+					804 = {
+					compliance > 50
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 804
+			NOT = {
+				has_country_flag = reint_schleswig
+			}
+		}
+
+		cost = 10
+		
+		complete_effect = {
+			804 = { add_core_of = GER }
+			set_country_flag = reint_schleswig
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	BS_integrate_hlucin = {
+	
+		icon = generic_operation
+		
+		highlight_state_targets = {
+			state = 884
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 884
+				if = {
+					884 = {
+					compliance > 30
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 884
+			NOT = {
+				has_country_flag = reint_hlucin
+			}
+		}
+
+		cost = 5
+		
+		complete_effect = {
+			884 = { add_core_of = GER }
+			set_country_flag = reint_hlucin
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+BS_demand_old_empire_territory_category = {
+	
+	#BS_demand_eupen = {
+	
+		#icon = generic_operation
+
+		#highlight_state_targets = {
+			#state = 812
+		#}
+
+		#visible = {
+			#NOT = {
+				#controls_state = 812
+				#has_country_flag = forced_eupen
+			#}
+			#any_allied_country = {
+				#controls_state = 812
+			#}
+		#}
+
+		#cost = 10
+		
+		#complete_effect = {
+			#random_country = {
+				#limit = {
+					#controls_state = 812
+					#is_in_faction_with = GER
+				#}
+				#country_event = { id = bs_ger.4 days = 3 }
+			#}
+		#}
+
+		#ai_will_do = {
+			#factor = 1
+		#}
+	#}
+	
+	BS_demand_schleswig = {
+	
+		icon = generic_operation
+		
+		highlight_state_targets = {
+			state = 804
+		}
+
+		visible = {
+			NOT = {
+				controls_state = 804
+				has_country_flag = forced_schleswig
+			}
+			any_allied_country = {
+				controls_state = 804
+			}
+		}
+
+		cost = 25
+		
+		complete_effect = {
+			random_country = {
+				limit = {
+					controls_state = 804
+					is_in_faction_with = GER
+				}
+				country_event = { id = bs_ger.5 days = 3 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+expand_reich_category = {
+	integrate_austria = {
+
+		icon = ger_reichskommissariats
+
+		highlight_state_targets = {
+			state = 4
+			state = 152
+			state = 153
+			state = 806
+			state = 807
+			state = 810
+			state = 1107
+			state = 1149
+			state = 1354
+			state = 1554
+			state = 1679
+			state = 1865
+		}
+		
+		available = {
+			is_subject = no
+			AND = {
+				controls_state = 4
+				controls_state = 152
+				controls_state = 153
+				controls_state = 806
+				controls_state = 807
+				controls_state = 810
+				controls_state = 1107
+				controls_state = 1149
+				controls_state = 1354
+				controls_state = 1554
+				controls_state = 1679
+				controls_state = 1865
+				if = {
+					core_compliance = {
+						occupied_country_tag = AUS
+						value > 50
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 4
+			controls_state = 152
+			controls_state = 153
+			controls_state = 806
+			controls_state = 807
+			controls_state = 810
+			controls_state = 1107
+			controls_state = 1149
+			controls_state = 1354
+			controls_state = 1554
+			controls_state = 1679
+			controls_state = 1865
+			NOT = {
+				AND = {
+					4 = { is_core_of = ROOT }
+					152 = { is_core_of = ROOT }
+					153 = { is_core_of = ROOT }
+					806 = { is_core_of = ROOT }
+					807 = { is_core_of = ROOT }
+					810 = { is_core_of = ROOT }
+					1107 = { is_core_of = ROOT }
+					1149 = { is_core_of = ROOT }
+					1354 = { is_core_of = ROOT }
+					1554 = { is_core_of = ROOT }
+					1679 = { is_core_of = ROOT }
+					1865 = { is_core_of = ROOT }
+				}
+			}
+		}
+
+		cost = 50
+
+		complete_effect = {
+			add_state_core = 4
+			add_state_core = 152
+			add_state_core = 153
+			add_state_core = 806
+			add_state_core = 807
+			add_state_core = 810
+			add_state_core = 1107
+			add_state_core = 1149
+			add_state_core = 1354
+			add_state_core = 1554
+			add_state_core = 1679
+			add_state_core = 1865
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	integrate_sudetenland = {
+
+		icon = ger_reichskommissariats
+
+		highlight_state_targets = {
+			state = 69
+			state = 74
+			state = 884
+			state = 886
+			state = 887
+			state = 888
+			state = 1710
+		}
+
+		available = {
+			is_subject = no
+			AND = {
+				controls_state = 69
+				controls_state = 74
+				controls_state = 884
+				controls_state = 886
+				controls_state = 887
+				controls_state = 888
+				controls_state = 1710
+				if = {
+					69 = {
+						compliance > 25
+					}
+				}
+				if = {
+					74 = {
+						compliance > 25
+					}
+				}
+				if = {
+					limit = {
+						NOT = { 884 = { is_core_of = GER } }
+					}
+					884 = {
+						compliance > 25
+					}
+				}
+				if = {
+					886 = {
+						compliance > 25
+					}
+				}
+				if = {
+					887 = {
+						compliance > 25
+					}
+				}
+				if = {
+					888 = {
+						compliance > 25
+					}
+				}
+				if = {
+					1710 = {
+						compliance > 25
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 69
+			controls_state = 74
+			controls_state = 884
+			controls_state = 886
+			controls_state = 887
+			controls_state = 888
+			controls_state = 1710
+			884 = { is_claimed_by = ROOT }
+			NOT = {
+				AND = {
+					69 = { is_core_of = ROOT }
+					74 = { is_core_of = ROOT }
+					886 = { is_core_of = ROOT }
+					887 = { is_core_of = ROOT }
+					888 = { is_core_of = ROOT }
+					1710 = { is_core_of = ROOT }
+				}
+			}
+		}
+		
+		cost = 10
+
+		complete_effect = {
+			add_state_core = 69
+			add_state_core = 74
+			add_state_core = 884
+			add_state_core = 886
+			add_state_core = 887
+			add_state_core = 888
+			add_state_core = 1710
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	integrate_old_provinces = {
+	
+		icon = ger_reichskommissariats
+		
+		highlight_state_targets = {
+			state = 762
+			state = 86
+			state = 865
+			state = 1942
+			state = 1927
+			state = 1425
+			state = 1364
+			state = 1868
+			state = 1424
+			state = 1973
+			state = 1426
+			state = 1556
+			state = 1560
+			state = 2029
+			state = 2030
+			state = 2031
+			state = 1561
+			state = 1711
+			state = 1966
+			state = 1728
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 762
+				controls_state = 86
+				controls_state = 865
+				controls_state = 1364
+				controls_state = 1424
+				controls_state = 1425
+				controls_state = 1426
+				controls_state = 1556
+				controls_state = 1560
+				controls_state = 2029
+				controls_state = 2030
+				controls_state = 2031
+				controls_state = 1561
+				controls_state = 1711
+				controls_state = 1927
+				controls_state = 1728
+				controls_state = 1966
+				if = {
+					762 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1927 = {
+					compliance > 30
+					}
+				}				
+				if = {
+					86 = {
+					compliance > 30
+					}
+				}
+				if = {
+					limit = {
+						865 = { NOT = { is_core_of = ROOT } }
+					}
+					865 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1364 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1424 = {
+					compliance > 30
+					}
+				}
+				if = {
+					limit = {
+						1425 = { NOT = { is_core_of = ROOT } }
+					}
+					1425 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1426 = {
+					compliance > 30
+					}
+				}
+				if = {
+					limit = {
+						1556 = { NOT = { is_core_of = ROOT } }
+					}
+					1556 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1560 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1561 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1711 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1728 = {
+					compliance > 30
+					}
+				}
+				if = {
+					1966 = {
+					compliance > 30
+					}
+				}
+				if = {
+					2029 = {
+					compliance > 30
+					}
+				}
+				if = {
+					2030 = {
+					compliance > 30
+					}
+				}
+				if = {
+					2031 = {
+					compliance > 30
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 762
+			controls_state = 86
+			controls_state = 865
+			controls_state = 1424
+			controls_state = 1425
+			controls_state = 1927
+			controls_state = 1966
+			controls_state = 1426
+			controls_state = 1556
+			controls_state = 1560
+			controls_state = 1561
+			controls_state = 1711
+			controls_state = 1728
+			controls_state = 2029
+			controls_state = 2030
+			controls_state = 2031
+			NOT = {
+				has_country_flag = reint_old_provinces
+			}
+			85 = {
+				is_core_of = GER
+			}
+		}
+
+		cost = 5
+		
+		complete_effect = {
+			762 = { add_core_of = GER }
+			86 = { add_core_of = GER }
+			865 = { add_core_of = GER }
+			1364 = { add_core_of = GER }
+			1868 = { add_core_of = GER }
+			2029 = { add_core_of = GER }
+			2030 = { add_core_of = GER }
+			2031 = { add_core_of = GER }			
+			1424 = { add_core_of = GER }
+			1927 = { add_core_of = GER }			
+			1425 = { add_core_of = GER }
+			1426 = { add_core_of = GER }
+			1942 = { add_core_of = GER }
+			1973 = { add_core_of = GER }			
+            1966 = { add_core_of = GER }			
+			1556 = { add_core_of = GER }
+			1560 = { add_core_of = GER }
+			1561 = { add_core_of = GER }
+			1711 = { add_core_of = GER }
+			1728 = { add_core_of = GER }
+			set_country_flag = reint_old_provinces
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	integrate_wartheland = {
+	
+		icon = ger_reichskommissariats
+		
+		highlight_state_targets = {
+			state = 1119
+			state = 72
+			state = 863
+			state = 1982
+			state = 1984
+			state = 1983
+			state = 1181
+			state = 98
+			state = 1776
+			state = 1178
+			state = 2049
+			state = 2048
+			state = 1824
+			state = 87
+			state = 1795
+			state = 1775
+			state = 1414
+			state = 1803
+			state = 1560
+			state = 1728
+			state = 1561
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 1119
+				controls_state = 72
+				controls_state = 863
+				controls_state = 98
+				controls_state = 1178
+				controls_state = 1181
+				controls_state = 87
+				controls_state = 1776
+				controls_state = 1824
+				controls_state = 1795
+				controls_state = 1414
+				controls_state = 1560				
+				controls_state = 1728
+				controls_state = 1561
+				controls_state = 1775
+				if = {
+					1119 = {
+					compliance > 90
+					}
+				}
+				if = {
+					1728 = {
+					compliance > 90
+					}
+				}				
+				if = {
+					72 = {
+					compliance > 90
+					}
+				}
+				if = {
+					863 = {
+					compliance > 90
+					}
+				}
+				if = {
+					98 = {
+					compliance > 90
+					}
+				}
+				if = {
+					1178 = {
+					compliance > 90
+					}
+				}
+				if = {
+					87 = {
+					compliance > 90
+					}
+				}
+				if = {
+					1181 = {
+					compliance > 90
+					}
+				}
+				if = {
+					1414 = {
+					compliance > 90
+					}
+				}
+				if = {
+					1560 = {
+					compliance > 90
+					}
+				}
+				if = {
+					1561 = {
+					compliance > 90
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 1119
+			controls_state = 72
+			controls_state = 863
+			controls_state = 98
+			controls_state = 1178
+			controls_state = 2049
+			controls_state = 2048
+			controls_state = 87
+			controls_state = 1181
+			controls_state = 1414
+			controls_state = 1560
+			controls_state = 1728
+			controls_state = 1561
+			NOT = {
+				has_country_flag = integrated_wartheland
+			}
+			has_country_flag = reint_old_provinces
+		}
+
+		cost = 50
+		
+		complete_effect = {
+			1119 = { add_core_of = GER }
+			72 = { add_core_of = GER }
+			863 = { add_core_of = GER }
+			#1255 = { add_core_of = GER }
+			1775 = { add_core_of = GER }
+			1983 = { add_core_of = GER }
+			1982 = { add_core_of = GER }
+			1984 = { add_core_of = GER }			
+			1795 = { add_core_of = GER }	
+            1824 = { add_core_of = GER }			
+			98 = { add_core_of = GER }
+			1728 = { add_core_of = GER }
+			1776 = { add_core_of = GER }
+			1803 = { add_core_of = GER }
+			1178 = { add_core_of = GER }
+			2049 = { add_core_of = GER }
+			2048 = { add_core_of = GER }			
+			87 = { add_core_of = GER }
+			1181 = { add_core_of = GER }
+			1414 = { add_core_of = GER }
+			1560 = { add_core_of = GER }			
+			1561 = { add_core_of = GER }
+			set_country_flag = integrated_wartheland
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	integrate_new_east_prussia = {
+	
+		icon = ger_reichskommissariats
+		
+		highlight_state_targets = {
+			state = 1191
+			state = 933
+			state = 2045
+			state = 2046
+			state = 997
+			state = 97
+			state = 1363
+			state = 1373
+			state = 1375
+			state = 1440
+			state = 1969
+			state = 1971
+			state = 1972
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 1191
+				controls_state = 933
+				controls_state = 997
+				controls_state = 97
+				controls_state = 1363
+				controls_state = 1373
+				controls_state = 1375
+				controls_state = 1440
+				controls_state = 2046
+				controls_state = 2045				
+				controls_state = 1971
+				if = {
+					1191 = {
+					compliance > 90
+					}
+				}
+				if = {
+					1971 = {
+					compliance > 90
+					}
+				}
+				if = {
+					933 = {
+					compliance > 90
+					}
+				}
+				if = {
+					997 = {
+					compliance > 90
+					}
+				}
+				if = {
+					97 = {
+					compliance > 90
+					}
+				}
+				if = {
+					1363 = {
+					compliance > 90
+					}
+				}
+				if = {
+					1373 = {
+					compliance > 90
+					}
+				}
+				if = {
+					1375 = {
+					compliance > 90
+					}
+				}
+				if = {
+					1440 = {
+					compliance > 90
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 1191
+			controls_state = 933
+			controls_state = 997
+			controls_state = 97
+			controls_state = 1363
+			controls_state = 1373
+			controls_state = 1375
+			controls_state = 1440
+			controls_state = 1971
+			controls_state = 2046
+			controls_state = 2045			
+			NOT = {
+				has_country_flag = integrated_new_east_prussia
+			}
+			has_country_flag = reint_old_provinces
+		}
+
+		cost = 50
+		
+		complete_effect = {
+			1191 = { add_core_of = GER }
+			933 = { add_core_of = GER }
+			997 = { add_core_of = GER }
+			1363 = { add_core_of = GER }
+			2045 = { add_core_of = GER }
+			2046 = { add_core_of = GER }			
+			1373 = { add_core_of = GER }
+			1375 = { add_core_of = GER }
+			1440 = { add_core_of = GER }
+			1971 = { add_core_of = GER }
+			1972 = { add_core_of = GER }			
+			1969 = { add_core_of = GER }
+			97 = { add_core_of = GER }
+			set_country_flag = integrated_new_east_prussia
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	integrate_nordschleswig = {
+	
+		icon = ger_reichskommissariats
+		
+		highlight_state_targets = {
+			state = 804
+		}
+
+		available = {
+			is_subject = no
+
+			AND = {
+				controls_state = 804
+				if = {
+					804 = {
+					compliance > 30
+					}
+				}
+			}
+		}
+
+		visible = {
+			controls_state = 804
+			NOT = {
+				has_country_flag = integrated_nordschleswig
+			}
+		}
+
+		cost = 10
+		
+		complete_effect = {
+			804 = { add_core_of = GER }
+			set_country_flag = integrated_nordschleswig
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+BS_Request_territory_category = {
+    GER_burgenland_question = {
+
+        highlight_state_targets = {
+            state = 994
+            state = 1431
+        }
+
+        icon = generic_political_discourse
+
+        available = {
+            NOT = { controls_state = 1431 }
+            controls_state = 810
+            NOT = { has_war_with = HUN }
+            NOT = { is_puppet_of = HUN }
+        }
+
+        visible = {
+            HUN = { 
+				controls_state = 1431 
+				surrender_progress > 0.5
+			}
+            NOT = { has_government = democratic }
+            NOT = { has_government = communism }
+        }
+
+        cost = 15
+
+        fire_only_once = yes
+
+        complete_effect = {
+            HUN = { 
+                country_event = { hours = 5 id = bs.600} #Germany request the Hungarian Burgenland
+            }
+
+            hidden_effect = {
+                set_country_flag = GER_request_burgenland
+
+            }
+        }
+
+        ai_will_do = {
+            factor = 50
+
+            modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+        }
+    }
+}
+#AI Germany decisions to create historical puppets because the AI does not release nations on its own
+AI_GER_puppets = {
+	AI_create_slovakia = {
+
+		visible = {
+			NOT = { country_exists = SLO }
+		}
+
+		available = {
+			has_full_control_of_state = 70
+			has_full_control_of_state = 71
+			has_full_control_of_state = 889
+			has_full_control_of_state = 1372
+			has_full_control_of_state = 1583
+			has_full_control_of_state = 1729
+			NOT = { country_exists = SLO }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			SLO = {
+				transfer_state = 70
+				transfer_state = 71
+				transfer_state = 889
+				transfer_state = 1372
+				transfer_state = 1583
+				transfer_state = 1729
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 1325
+				}
+				SLO = { transfer_state = 1325 }
+			}
+			puppet = SLO
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+}

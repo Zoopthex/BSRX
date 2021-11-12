@@ -1,0 +1,1175 @@
+﻿
+add_namespace = bs_ger
+
+# Transfer Transnistria from Germany
+country_event = {
+    id = bs_ger.1
+    title = bs_ger.1.t
+    desc = bs_ger.1.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    fire_only_once = yes
+ 
+    is_triggered_only = yes
+
+    option = {
+        name = bs_ger.1.a
+		
+		add_opinion_modifier = { target = GER modifier = ROM_transfer_transnistria }
+		
+		transfer_state = 198
+		transfer_state = 192
+		transfer_state = 1100
+		transfer_state = 829
+		transfer_state = 1624
+    }
+}
+
+# Transfer East Karelia from Germany
+country_event = {
+    id = bs_ger.2
+    title = bs_ger.2.t
+    desc = bs_ger.2.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    fire_only_once = yes
+ 
+    is_triggered_only = yes
+
+    option = {
+        name = bs_ger.2.a
+		
+		add_opinion_modifier = { target = GER modifier = FIN_transfer_east_karelia }
+		
+		transfer_state = 146
+		transfer_state = 147
+		transfer_state = 722
+		transfer_state = 929
+		transfer_state = 928
+		transfer_state = 213
+		transfer_state = 216
+		transfer_state = 215
+		transfer_state = 1380
+		transfer_state = 1382
+    }
+}
+
+# Free Election
+country_event = {
+	id = bs_ger.3
+	title = bs_ger.3.t
+	desc = bs_ger.3.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	option = {
+		name = bs_ger.3.a
+		ai_chance = {
+			factor = 40
+		}
+		set_party_name = { ideology = democratic long_name = GER_cdu_csu_party_long name = GER_cdu_csu_party }
+		
+		create_country_leader = {
+			name = "Konrad Adenauer"
+			desc = "POLITICS_KONRAD_ADENAUER_DESC"
+			picture = "Portrait_Germany_Konrad_Adenauer.dds"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {
+				anti_communist
+				economist
+			}
+		}
+	}
+
+	option = {
+		name = bs_ger.3.b
+		ai_chance = {
+			factor = 30
+		}		
+		set_party_name = { ideology = democratic long_name = GER_spd_party_long name = GER_spd_party }
+
+		create_country_leader = {
+			name = "Kurt Schumacher"
+			desc = "POLITICS_KURT_SCHUMACHER_DESC"
+			picture = "Portrait_Kurt_Schumacher.dds"
+			expire = "1965.1.1"
+			ideology = social_democracy
+			traits = {
+				appeaser
+				resolute_social_democrat
+			}
+		}
+	}
+}
+
+# Demand Eupen
+country_event = {
+    id = bs_ger.4
+    title = bs_ger.4.t
+    desc = bs_ger.4.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    is_triggered_only = yes
+
+	immediate = {
+		ROOT = { save_event_target_as = eupen_owner }
+	}
+    option = {	#Accept
+        name = bs_ger.4.a
+		
+		ai_chance = {
+			factor = 30
+		}
+
+		add_opinion_modifier = { target = GER modifier = BS_transfer_eupen }
+		
+		effect_tooltip = {
+			GER = { transfer_state = 812 }
+		}
+		
+		hidden_effect = {
+			GER = { country_event = { id = bs_ger.41 days = 3 } }
+		}
+    }
+	
+	option = {	#Deny
+        name = bs_ger.4.b
+		
+		ai_chance = {
+			factor = 5
+		}
+		
+		GER = { country_event = { id = bs_ger.42 days = 3 } }
+    }
+}
+
+# Demand Eupen - Accept
+country_event = {
+    id = bs_ger.41
+    title = bs_ger.41.t
+    desc = bs_ger.41.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    is_triggered_only = yes
+
+    option = {
+        name = bs_ger.41.a
+		
+		transfer_state = 812
+    }
+}
+
+# Demand Eupen - Deny
+country_event = {
+    id = bs_ger.42
+    title = bs_ger.42.t
+    desc = bs_ger.42.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    is_triggered_only = yes
+
+    option = {	#do nothing
+        name = bs_ger.42.a
+		
+		add_political_power = -25
+    }
+	
+	option = {	#attack them
+        name = bs_ger.42.b
+		
+		create_wargoal = {
+			type = take_state_focus
+			target = event_target:eupen_owner
+			expire = 0
+			generator = { 812 }
+		}
+		set_global_flag = forced_eupen
+    }
+}
+
+# Demand Schleswig
+country_event = {
+    id = bs_ger.5
+    title = bs_ger.5.t
+    desc = bs_ger.5.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    is_triggered_only = yes
+
+	immediate = {
+		ROOT = { save_event_target_as = schleswig_owner }
+	}
+    option = {	#Accept
+        name = bs_ger.5.a
+		
+		ai_chance = {
+			factor = 30
+		}
+		
+		add_opinion_modifier = { target = GER modifier = BS_transfer_schleswig }
+		
+		effect_tooltip = {
+			GER = { transfer_state = 804 }
+		}
+		
+		hidden_effect = {
+			GER = { country_event = { id = bs_ger.51 days = 3 } }
+		}
+    }
+	
+	option = {	#Deny
+        name = bs_ger.5.b
+		
+		ai_chance = {
+			factor = 5
+		}
+
+		GER = { country_event = { id = bs_ger.52 days = 3 } }
+    }
+}
+
+# Demand Schleswig - Accept
+country_event = {
+    id = bs_ger.51
+    title = bs_ger.51.t
+    desc = bs_ger.51.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    is_triggered_only = yes
+
+    option = {
+        name = bs_ger.51.a
+		
+		transfer_state = 804
+    }
+}
+
+# Demand Schleswig - Refuse
+country_event = {
+    id = bs_ger.52
+    title = bs_ger.52.t
+    desc = bs_ger.52.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    is_triggered_only = yes
+
+    option = {	#do nothing
+        name = bs_ger.52.a
+		
+		add_political_power = -25
+    }
+	
+	option = {	#attack them
+        name = bs_ger.52.b
+		
+		create_wargoal = {
+			type = take_state_focus
+			target = event_target:schleswig_owner
+			generator = { 804 }
+		}
+		set_global_flag = forced_schleswig
+    }
+}
+
+# Demand Hlucin
+country_event = {
+    id = bs_ger.6
+    title = bs_ger.6.t
+    desc = bs_ger.6.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    is_triggered_only = yes
+
+	immediate = {
+		ROOT = { save_event_target_as = hlucin_owner }
+	}
+    option = {	#Accept
+        name = bs_ger.6.a
+		
+		ai_chance = {
+			factor = 30
+		}
+
+		add_opinion_modifier = { target = GER modifier = BS_transfer_hlucin }
+		
+		effect_tooltip = {
+			GER = { transfer_state = 884 }
+		}
+		
+		hidden_effect = {
+			GER = { country_event = { id = bs_ger.61 days = 3 } }
+		}
+    }
+	
+	option = {	#Refuse
+        name = bs_ger.6.b
+		
+		ai_chance = {
+			factor = 5
+		}
+
+		GER = { country_event = { id = bs_ger.62 days = 3 } }
+    }
+}
+
+# Demand Hlucin - Accept
+country_event = {
+    id = bs_ger.61
+    title = bs_ger.61.t
+    desc = bs_ger.61.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    is_triggered_only = yes
+
+    option = {
+        name = bs_ger.61.a
+		
+		transfer_state = 884
+    }
+}
+
+# Demand Hlucin - Refuse
+country_event = {
+    id = bs_ger.62
+    title = bs_ger.62.t
+    desc = bs_ger.62.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    is_triggered_only = yes
+
+    option = {	#do nothing
+        name = bs_ger.62.a
+		
+		add_political_power = -25
+    }
+	
+	option = {	#attack them
+        name = bs_ger.62.b
+		
+		create_wargoal = {
+			type = take_state_focus
+			target = event_target:hlucin_owner
+			generator = { 884 }
+		}
+		set_global_flag = forced_hlucin
+    }
+}
+
+# Expand Ostland
+country_event = {
+    id = bs_ger.63
+    title = bs_ger.63.t
+    desc = bs_ger.63.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    fire_only_once = yes
+ 
+    is_triggered_only = yes
+
+    option = {
+        name = bs_ger.63.a
+		
+		add_opinion_modifier = { target = GER modifier = RKO_expand_ostland }
+		
+		transfer_state = 204
+		transfer_state = 207
+		transfer_state = 1993
+		transfer_state = 208
+		transfer_state = 209
+		transfer_state = 210
+		transfer_state = 241
+		transfer_state = 1774
+		transfer_state = 263
+		transfer_state = 1162
+		transfer_state = 1674
+		transfer_state = 1673
+		transfer_state = 1163
+		transfer_state = 1164
+		transfer_state = 1170
+		transfer_state = 1620
+		transfer_state = 1619
+        transfer_state = 1994		
+    }
+}
+
+# Expand Ukraine
+country_event = {
+    id = bs_ger.64
+    title = bs_ger.64.t
+    desc = bs_ger.64.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    fire_only_once = yes
+ 
+    is_triggered_only = yes
+
+    option = {
+        name = bs_ger.64.a
+		
+		add_opinion_modifier = { target = GER modifier = RKU_expand_ukraine}
+		
+		set_capital =  202
+		add_state_core = 202
+		remove_state_core = 93
+		transfer_state = 193
+		#transfer_state = 217
+		#transfer_state = 218
+		transfer_state = 220
+		transfer_state = 221
+		transfer_state = 222
+		transfer_state = 224
+		transfer_state = 225
+		transfer_state = 227
+		transfer_state = 228
+		#transfer_state = 239
+		transfer_state = 240
+		#transfer_state = 245
+		transfer_state = 257
+		transfer_state = 258
+		transfer_state = 260
+		#transfer_state = 265
+		#transfer_state = 401
+		transfer_state = 927
+		#transfer_state = 930
+		transfer_state = 1125
+		transfer_state = 1126
+		transfer_state = 1165
+		transfer_state = 1446
+		transfer_state = 1445
+		transfer_state = 1444
+		transfer_state = 1452
+    }
+}
+
+# Expand Moscow Eastwards
+country_event = {
+    id = bs_ger.1502
+    title = bs_ger.1502.t
+    desc = bs_ger.1502.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    fire_only_once = yes
+ 
+    is_triggered_only = yes
+
+    option = {
+        name = bs_ger.1502.a
+		
+			transfer_state = 1255
+			transfer_state = 351
+			transfer_state = 400
+			transfer_state = 214
+			transfer_state = 397
+			transfer_state = 262
+			transfer_state = 256
+			transfer_state = 250
+			transfer_state = 399
+			transfer_state = 398
+			transfer_state = 249
+			transfer_state = 651
+			transfer_state = 251
+			transfer_state = 652
+			transfer_state = 1252
+			transfer_state = 1120
+			transfer_state = 1000
+			transfer_state = 582
+			transfer_state = 573
+			transfer_state = 1360
+			transfer_state = 581
+    }
+}
+
+# Transfer Crimea
+country_event = {
+    id = bs_ger.65
+    title = bs_ger.65.t
+    desc = bs_ger.65.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    fire_only_once = yes
+ 
+    is_triggered_only = yes
+
+    option = {
+        name = bs_ger.65.a
+		
+		add_opinion_modifier = { target = GER modifier = RKU_transfer_crimea}
+		
+		transfer_state = 137
+		transfer_state = 1267
+    }
+}
+
+# Transfer Far Eastern Holdings
+country_event = {
+    id = bs_ger.66
+    title = bs_ger.66.t
+    desc = bs_ger.66.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    fire_only_once = yes
+ 
+    is_triggered_only = yes
+
+    option = {
+        name = bs_ger.66.a
+		
+		add_opinion_modifier = { target = GER modifier = JAP_transfer_far_eastern_holdings}
+		
+		transfer_state = 408
+		transfer_state = 409
+		transfer_state = 560
+		transfer_state = 561
+		transfer_state = 637
+		transfer_state = 655
+		transfer_state = 657
+		transfer_state = 970
+		transfer_state = 1090
+		transfer_state = 1407
+    }
+}
+
+country_event = {
+	id = bs_ger.67
+	title = bs_ger.67.t
+	desc = bs_ger.67.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = { #franz bohme as reichskommissar
+		name = bs_ger.67.a
+		URA = {
+			create_country_leader = {
+				name = "Franz Böhme"
+				desc = "POLITICS_LEON_TROTSKY_DESC"
+				picture = "gfx/leaders/GER/Portrait_Germany_Franz_Bohme.dds"
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = {
+				}
+			}
+			hidden_effect = {
+				set_country_flag = rk_ural_bohme
+			}
+			GER = {
+				every_unit_leader = {
+					limit = { has_id = 1000 }
+					set_nationality = URA
+				}
+			}
+		}
+	}
+
+	option = {
+		name = bs_ger.67.b
+		URA = {
+			create_country_leader = {
+				name = "Andrey Vlasov"
+    			desc = "POLITICS_ANDREY_VLASOV_DESC"
+    			picture = "gfx/leaders/SOV/Portrait_Soviet_Andrey_Vlasov.dds"
+    			expire = "1965.1.1"
+    			ideology = nazism
+    			traits = {
+       				eager_collaborator
+    			}
+			}
+			set_cosmetic_tag = URA_ROA
+			set_party_name = { 
+    			ideology = fascism 
+    			long_name = URA_vlasov_fascism_party_long
+    			name = URA_vlasov_fascism_party
+			}
+			add_state_core = 401
+			add_state_core = 251
+			add_state_core = 652	
+			add_state_core = 1120
+			add_state_core = 249				
+			add_state_core = 651
+			add_state_core = 398 
+			add_state_core = 399
+			remove_ideas = { RK_lower_resistance }
+			add_ideas = { BS_batov_resistance }
+			hidden_effect = {
+				set_country_flag = vlasov_bait
+			}
+		}
+		hidden_effect = {
+			#set_country_flag = batov_resistance 
+			#set_country_flag = batov_resistance_active
+			#set_variable = {
+			#	var = konr_readiness_level
+			#	value = 0
+			#}
+			#set_variable = {
+			#	var = batov_resistance_level
+			#	value = 100
+			#}
+		}
+		custom_effect_tooltip = 1_URA_tt
+	}
+	
+}
+
+country_event = {
+    id = bs_ger.69
+    title = bs_ger.69.t
+    desc = bs_ger.69.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    fire_only_once = yes
+ 
+    is_triggered_only = yes
+
+    option = {
+        name = bs_ger.69.a
+		
+		add_opinion_modifier = { target = GER modifier = JAP_transfer_far_eastern_holdings}
+		
+		transfer_state = 1115
+		transfer_state = 140
+		transfer_state = 1006
+		transfer_state = 138
+		transfer_state = 139
+		transfer_state = 1007
+		transfer_state = 141
+		transfer_state = 1008
+		transfer_state = 1009
+		transfer_state = 1114
+		transfer_state = 38
+		transfer_state = 666
+		transfer_state = 1362
+    }
+}
+
+country_event = {
+    id = bs_ger.70
+    title = bs_ger.70.t
+    desc = bs_ger.70.d
+    picture = GFX_report_event_generic_sign_treaty1
+ 
+    fire_only_once = yes
+ 
+    is_triggered_only = yes
+
+    option = {	
+        name = bs_ger.70.a
+		USA = {
+			set_cosmetic_tag = USA_RP
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+			create_country_leader = {
+				name = "Harry Byrd"
+				desc = "POLITICS_HARRY_BYRD_DESC"
+				picture = "gfx/leaders/USA/Harry_Byrd.dds"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					german_puppet
+				}
+			}
+			set_party_name = { 
+  				ideology = neutrality 
+   				long_name = BYRD_fascism_party 
+				name = BYRD_fascism_party 
+			}
+			add_ideas = { 
+				BS_german_military_restrictions 
+			}
+    	}
+	}
+}
+#Germany offers Lithuania B-L borders
+country_event = {
+	id = bs_ger.71
+	title = bs_ger.71.t
+	desc = bs_ger.71.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #sure
+		name = bs_ger.71.a
+
+		ai_chance = {
+			factor = 55
+		}
+		add_state_claim = 97
+		add_state_claim = 933
+		add_state_claim = 2045
+		add_state_claim = 2046
+		add_state_claim = 1791
+		add_state_claim = 1440
+		add_state_claim = 1969
+		add_state_claim = 1441
+		if = {
+			limit = {
+				is_in_faction_with = POL
+			}
+			leave_faction = yes
+		}
+		GER = { add_to_faction = LIT }
+	}
+	option = { #yeah no
+		name = bs_ger.71.b
+
+		ai_chance = {
+			factor = 45
+			modifier = {
+				factor = 20
+				LIT = { is_in_faction = no }
+			}
+		}
+
+		GER = {
+			country_event = {
+				id  = bs_ger.72
+				days = 1
+			}
+		}
+	}
+}
+#Lithuania rejected
+country_event = {
+	id = bs_ger.72
+	title = bs_ger.72.t
+	desc = bs_ger.72.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			LIT = { is_in_faction = no }
+		}
+		name = bs_ger.72.a
+
+		add_state_claim = 1440
+		add_state_claim = 1969
+		add_state_claim = 997
+	}
+	option = {
+		trigger = {
+			LIT = { is_in_faction_with = POL }
+		}
+		name = bs_ger.72.b
+		
+		set_global_flag = LIT_rejected_faction_POL
+	}
+}
+
+# Hitler ist tot
+news_event = {
+	id = bs_ger.700
+	title = bs_ger.700.t
+	desc = bs_ger.700.d
+	picture = GFX_news_event_german_reichstag_graffiti_ruins
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = bs_ger.700.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				has_war_with = GER
+			}
+		}
+	}
+	option = {
+		name = bs_ger.700.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = bs_ger.700.c
+		trigger = { has_war_with = GER }
+	}
+}
+#Reichskommissariat requests military industry control
+country_event = {
+	id = bs_ger.73
+	title = bs_ger.73.t
+	desc = bs_ger.73.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { #sure
+		name = bs_ger.73.a
+
+		FROM = {
+			add_timed_idea = {
+				idea = RK_mils_control
+				days = 90
+			}
+		}
+		ai_chance = { factor = 55 }
+	}
+	option = { #lmao no
+		name = bs_ger.73.b
+
+		FROM = { country_event = { id = bs_ger.74 days = 1} }
+		ai_chance = {
+			factor = 45
+			modifier = {
+				check_variable = {
+					var = num_of_available_military_factories
+					value = 60
+					compare = less_than_or_equals
+				}
+				factor = 0.1
+			}
+		}
+	}
+}
+#Germany refused
+country_event = {
+	id = bs_ger.74
+	title = bs_ger.74.t
+	desc = bs_ger.74.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bs_ger.74.a
+	}
+}
+
+#rudolf hess comes back
+country_event = {
+	id = bs_ger.75
+	title = bs_ger.75.t
+	desc = bs_ger.75.d
+
+	fire_only_once = yes
+
+	trigger = {
+		126 = { is_controlled_by = GER }
+		126 = { is_owned_by = ENG }
+		GER = { 
+			has_war_with = ENG
+			has_government = fascism
+			has_country_flag = flight_of_hess
+			NOT = { has_country_flag = hess_dead}
+		}
+		
+	}
+
+	option = { #shoot him lmao
+		name = bs_ger.75.a
+		add_political_power = 10
+	}
+
+	option = {
+		name = bs_ger.75.b
+		clr_country_flag = flight_of_hess
+		add_political_power = -10
+	}
+}
+
+country_event = {
+	id = bs_ger.76
+	title = bs_ger.76.t
+	desc = bs_ger.76.d
+
+	fire_only_once = yes
+
+	trigger = {
+		126 = { is_controlled_by = GER }
+		338 = { is_controlled_by = GER }
+		125 = { is_controlled_by = GER }
+		1709 = { is_controlled_by = GER }		
+		126 = { is_owned_by = ENG }
+		338 = { is_owned_by = ENG }
+		125 = { is_owned_by = ENG }
+		1709 = { is_owned_by = ENG }		
+		GER = { 
+			has_war_with = ENG 
+			has_government = fascism
+		}
+	}
+
+	option = { #halder gaming
+		name = bs_ger.76.a
+	    hidden_effect = {
+            create_dynamic_country = {
+                original_tag = GER
+                set_temp_variable = { new_country = this }
+                var:new_country = {
+                	transfer_state = 126
+					transfer_state = 125
+					transfer_state = 338
+					transfer_state = 1709					
+					GER = {
+						set_autonomy = {
+							target = new_country
+							autonomy_state = autonomy_integrated_puppet
+						}
+					}
+              		add_ideas = {
+                   		extensive_conscription
+                	}
+
+                	add_popularity = {
+                    	ideology = fascism
+                    	popularity = 100
+                	}
+                	set_politics = {
+                    	ruling_party = fascism
+                    	elections_allowed = no
+						election_frequency = 48
+                	}
+					create_country_leader = {
+						name = "Franz Halder"
+						desc = ""
+						picture = "gfx/leaders/GER/Portrait_Germany_Franz_Halder.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+
+						}
+					}
+					set_party_name = {
+						ideology = fascism
+						long_name = american_rk_party_long
+						name = american_rk_party
+					}
+                	set_cosmetic_tag = RK_ENG 
+					load_focus_tree = generic_focus
+
+                	every_state = {
+                    	limit = { NOT = { state = 126 } }
+                        remove_core_of = var:new_country
+					}
+				}
+            }
+        }
+	}
+
+	option = { #the king
+		name = bs_ger.76.b
+		trigger = {
+			ENG = {
+				NOT = {
+					has_completed_focus = ENG_the_kings_party
+				}
+			}
+		}
+	    hidden_effect = {
+            create_dynamic_country = {
+                original_tag = ENG
+                set_temp_variable = { new_country = this }
+                var:new_country = {
+                	transfer_state = 126
+					transfer_state = 125
+					transfer_state = 338
+					transfer_state = 1709					
+					GER = {
+						set_autonomy = {
+							target = new_country
+							autonomy_state = autonomy_puppet
+						}
+					}
+              		add_ideas = {
+                   		limited_conscription
+						BS_german_military_restrictions
+                	}
+
+                	add_popularity = {
+                    	ideology = neutrality
+                    	popularity = 75
+                	}
+					add_popularity = {
+						ideology = fascism
+						popularity = 25
+					}
+                	set_politics = {
+                    	ruling_party = neutrality
+                    	elections_allowed = yes
+						election_frequency = 48
+                	}
+					create_country_leader = {
+						name = "Edward VIII"
+						desc = "POLITICS_EDWARD_EDWARD_DESC"
+						picture = "Portrait_Britain_Edward_VIII.dds"
+						expire = "1965.1.1"
+						ideology = centrism
+						traits = {				
+
+						}
+					}
+					
+					set_party_name = {
+						ideology = neutrality
+						long_name = ENG_kingdom_ger_party_long
+						name = ENG_kingdom_ger_party
+					}
+                	set_cosmetic_tag = ENG_kingdom_ger 
+					load_focus_tree = generic_focus
+
+				}
+            }
+        }
+
+	}
+	option = { #john amery
+		name = bs_ger.76.c
+		set_country_flag = lord_haw_haw_england
+		add_political_power = -10
+	}
+}
+
+country_event = {
+	id = bs_ger.77
+	title = bs_ger.77.t
+	desc = bs_ger.77.d
+	
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = GER
+		has_country_leader = {
+			name = "Wilhelm II"
+			ruling_only = yes
+		}
+		has_country_leader_with_trait = GER_unpopular_kaiser
+		OR = {
+			controls_state = 16 #Paris
+			controls_state = 125 #London
+			controls_state = 219 #Moscow
+			controls_state = 195 #Leningrad
+			controls_state = 217 #Stalingrad
+		}
+	}
+
+	option = { #God is with us
+		name = bs_ger.77.a
+
+		remove_country_leader_trait = GER_unpopular_kaiser
+		add_country_leader_trait = GER_redeemed_kaiser
+		ai_chance = {
+			factor = 2000
+		}
+	}
+}
+#Play as RK Ukraine?
+country_event = {
+	id = bs_ger.78
+	title = bs_ger.78.t
+	desc = bs_ger.78.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Yes
+		name = bs_ger.78.a
+
+		RKU = { change_tag_from = ROOT }
+	}
+
+	option = { #No
+		name = bs_ger.78.b
+	}
+}
+#fate of East Siberia
+country_event = {
+	id = bs_ger.79
+	title = bs_ger.79.t
+	desc = bs_ger.79.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #establish RK Ostsibirien
+		name = bs_ger.79.a
+
+		566 = { add_core_of = RKS }
+		release = RKS
+		RKS = {
+            transfer_state = 516
+			transfer_state = 562
+			transfer_state = 563
+			transfer_state = 564
+			transfer_state = 1840
+			transfer_state = 565
+			transfer_state = 566
+			transfer_state = 567
+			transfer_state = 574
+			transfer_state = 575
+			transfer_state = 576
+			transfer_state = 644
+			transfer_state = 1167
+			transfer_state = 1420				
+			GER = {
+				puppet = RKS
+				set_autonomy = { target = RKS autonomy_state = autonomy_integrated_puppet }
+			}
+		}
+
+		ai_chance = {
+			factor = 5 #the ai will try to avoid making unneccessary rks
+		}
+	}
+	option = { #make a big RK Sibirien
+		name = bs_ger.79.b
+
+		RKW = {
+            transfer_state = 516
+			transfer_state = 562
+			transfer_state = 563
+			transfer_state = 564
+			transfer_state = 1840
+			transfer_state = 565
+			transfer_state = 566
+			transfer_state = 567
+			transfer_state = 574
+			transfer_state = 575
+			transfer_state = 576
+			transfer_state = 644
+			transfer_state = 1167
+			transfer_state = 1420
+			set_cosmetic_tag = RK_siberia
+		}
+	}
+	option = { #give it to japan to make for a defensible barrier
+		trigger = {
+			JAP = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+		}
+		
+		name = bs_ger.79.c
+
+		JAP = {
+            transfer_state = 516
+			transfer_state = 562
+			transfer_state = 563
+			transfer_state = 564
+			transfer_state = 1840
+			transfer_state = 565
+			transfer_state = 566
+			transfer_state = 567
+			transfer_state = 574
+			transfer_state = 575
+			transfer_state = 576
+			transfer_state = 644
+			transfer_state = 1167
+			transfer_state = 1420
+		}
+	}
+}

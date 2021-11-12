@@ -1,0 +1,668 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ideology_SWI_democratic_group"
+		texturefile = "gfx/interface/ideologies/SWI/fc.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_GUA_democratic_group"
+		texturefile = "gfx/interface/ideologies/GUA/GUA.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_RKU_democratic_group"
+		texturefile = "gfx/interface/ideologies/UKR/oun_good.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_PON_democratic_group"
+		texturefile = "gfx/interface/ideologies/PON/pont.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_SIL_democratic_group"
+		texturefile = "gfx/interface/ideologies/SIL/rodlo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_THR_democratic_group"
+		texturefile = "gfx/interface/ideologies/THR/thr.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_ISR_democratic_group"
+		texturefile = "gfx/interface/ideologies/PAL/mapai.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_PAL_liberalism"
+		texturefile = "gfx/interface/ideologies/PAL/pales.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_PAL_socialism"
+		texturefile = "gfx/interface/ideologies/PAL/jerr.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_ideology_TNG_democratic_group"
+		texturefile = "gfx/interface/ideologies/TNG/tangier.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_ZZZ_democratic_group"
+		texturefile = "gfx/interface/ideologies/ZZZ/zzz.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_RKO_democratic_group"
+		texturefile = "gfx/interface/ideologies/POL/balts.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_NID_democratic_group"
+		texturefile = "gfx/interface/ideologies/HOL/resist.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_CUB_democratic_group"
+		texturefile = "gfx/interface/ideologies/CUB/CUB.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_GGO_democratic_group"
+		texturefile = "gfx/interface/ideologies/POL/partyzantka.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_CHI_democratic_group"
+		texturefile = "gfx/interface/ideologies/CHI/kuomintang.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_PRC_democratic_group"
+		texturefile = "gfx/interface/ideologies/CHI/kuomintang.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_PGR_democratic_group"
+		texturefile = "gfx/interface/ideologies/CHI/kuomintang.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_RGR_democratic_group"
+		texturefile = "gfx/interface/ideologies/CHI/kuomintang.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_ideology_TUR_market_liberalism"
+		texturefile = "gfx/interface/ideologies/TUR/CHP.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_TUR_liberalism"
+		texturefile = "gfx/interface/ideologies/TUR/CHP.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_TUR_conservatism"
+		texturefile = "gfx/interface/ideologies/TUR/tradi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_TUR_social_conservatism"
+		texturefile = "gfx/interface/ideologies/TUR/tradi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_HAI_democratic_group"
+		texturefile = "gfx/interface/ideologies/HAI/HAI.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_NIC_democratic_group"
+		texturefile = "gfx/interface/ideologies/NIC/NIC.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_ELS_democratic_group"
+		texturefile = "gfx/interface/ideologies/ELS/ELS.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_ideology_BOL_democratic_group"
+		texturefile = "gfx/interface/ideologies/BOL/BOL.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_CHL_democratic_group"
+		texturefile = "gfx/interface/ideologies/CHL/CHL.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_COL_democratic_group"
+		texturefile = "gfx/interface/ideologies/COL/COL.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_COS_democratic_group"
+		texturefile = "gfx/interface/ideologies/COS/COS.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_DOM_democratic_group"
+		texturefile = "gfx/interface/ideologies/DOM/DOM.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_ECU_democratic_group"
+		texturefile = "gfx/interface/ideologies/ECU/ECU.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_HON_democratic_group"
+		texturefile = "gfx/interface/ideologies/HON/HON.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_PAN_democratic_group"
+		texturefile = "gfx/interface/ideologies/PAN/PAN.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_PAR_democratic_group"
+		texturefile = "gfx/interface/ideologies/PAR/PAR.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_PRU_democratic_group"
+		texturefile = "gfx/interface/ideologies/PRU/PRU.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_URG_democratic_group"
+		texturefile = "gfx/interface/ideologies/URG/URG.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_VEN_democratic_group"
+		texturefile = "gfx/interface/ideologies/VEN/VEN.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_NOR_democratic_group"
+		texturefile = "gfx/interface/ideologies/NOR/lp.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_EGY_democratic_group"
+		texturefile = "gfx/interface/ideologies/EGY/loyalist.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_NZL_democratic_group"
+		texturefile = "gfx/interface/ideologies/NZL/nzl.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_SIA_democratic_group"
+		texturefile = "gfx/interface/ideologies/SIA/siam.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_PHI_democratic_group"
+		texturefile = "gfx/interface/ideologies/PHI/phil.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_MAL_democratic_group"
+		texturefile = "gfx/interface/ideologies/MAL/malay.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_INS_democratic_group"
+		texturefile = "gfx/interface/ideologies/INS/holl.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_LIB_democratic_group"
+		texturefile = "gfx/interface/ideologies/LIB/LIB.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_AST_democratic_group"
+		texturefile = "gfx/interface/ideologies/AST/austra.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_GXC_democratic_group"
+		texturefile = "gfx/interface/ideologies/warlord/warlord.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_HSI_democratic_group"
+		texturefile = "gfx/interface/ideologies/warlord/warlord.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_NSI_democratic_group"
+		texturefile = "gfx/interface/ideologies/warlord/warlord.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_XSM_democratic_group"
+		texturefile = "gfx/interface/ideologies/warlord/warlord.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_TUG_democratic_group"
+		texturefile = "gfx/interface/ideologies/warlord/warlord.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_SIK_democratic_group"
+		texturefile = "gfx/interface/ideologies/warlord/warlord.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_SZH_democratic_group"
+		texturefile = "gfx/interface/ideologies/warlord/warlord.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_ADR_democratic_group"
+		texturefile = "gfx/interface/ideologies/ADR/andor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_TIB_democratic_group"
+		texturefile = "gfx/interface/ideologies/TIB/TIB.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SAF_democratic_group"
+		texturefile = "gfx/interface/ideologies/SAF/SAF.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_BHU_democratic_group"
+		texturefile = "gfx/interface/ideologies/BHU/bhu.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_VCT_democratic_group"
+		texturefile = "gfx/interface/ideologies/VCT/papacy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_MCO_democratic_group"
+		texturefile = "gfx/interface/ideologies/MCO/monac.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_SMR_democratic_group"
+		texturefile = "gfx/interface/ideologies/SMR/marin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_LIE_democratic_group"
+		texturefile = "gfx/interface/ideologies/LIE/licht.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_IRQ_democratic_group"
+		texturefile = "gfx/interface/ideologies/IRQ/irq.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_NEP_democratic_group"
+		texturefile = "gfx/interface/ideologies/NEP/nepd.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_ENG_social_conservatism"
+		texturefile = "gfx/interface/ideologies/ENG/CONS.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_ENG_reactionary_conservatism"
+		texturefile = "gfx/interface/ideologies/ENG/CONS.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_ENG_conservatism"
+		texturefile = "gfx/interface/ideologies/ENG/CONS.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_ideology_ENG_liberalism"
+		texturefile = "gfx/interface/ideologies/ENG/LABS.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_ideology_ENG_socialism"
+		texturefile = "gfx/interface/ideologies/ENG/LABS.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_GRE_democratic_group"
+		texturefile = "gfx/interface/ideologies/GRE/greec.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_HOL_democratic_group"
+		texturefile = "gfx/interface/ideologies/HOL/anti.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_HUN_democratic_group"
+		texturefile = "gfx/interface/ideologies/HUN/hun.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_IRE_democratic_group"
+		texturefile = "gfx/interface/ideologies/IRE/fail.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_ICE_democratic_group"
+		texturefile = "gfx/interface/ideologies/ICE/icel.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_LIT_democratic_group"
+		texturefile = "gfx/interface/ideologies/LIT/lith.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_LAT_democratic_group"
+		texturefile = "gfx/interface/ideologies/LAT/lat.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_EST_democratic_group"
+		texturefile = "gfx/interface/ideologies/EST/est.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_ENG_social_democracy"
+		texturefile = "gfx/interface/ideologies/ENG/LABS.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_ENG_social_liberalism"
+		texturefile = "gfx/interface/ideologies/ENG/LABS.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_ENG_market_liberalism"
+		texturefile = "gfx/interface/ideologies/ENG/LABS.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_ideology_WLL_democratic_group"
+		texturefile = "gfx/interface/ideologies/BEL/bloc.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_FLA_democratic_group"
+		texturefile = "gfx/interface/ideologies/BEL/bloc.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_BEL_democratic_group"
+		texturefile = "gfx/interface/ideologies/BEL/bloc.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_YUG_democratic_group"
+		texturefile = "gfx/interface/ideologies/YUG/yugo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_AUS_socialism"
+		texturefile = "gfx/interface/ideologies/AUS/spo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_AUS_social_democracy"
+		texturefile = "gfx/interface/ideologies/AUS/spo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_AUS_reactionary_conservatism"
+		texturefile = "gfx/interface/ideologies/AUS/bauer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_AUS_social_conservatism"
+		texturefile = "gfx/interface/ideologies/AUS/bauer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_AUS_market_liberalism"
+		texturefile = "gfx/interface/ideologies/AUS/bauer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_AUS_social_liberalism"
+		texturefile = "gfx/interface/ideologies/AUS/bauer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_AUS_liberalism"
+		texturefile = "gfx/interface/ideologies/AUS/bauer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_AUS_conservatism"
+		texturefile = "gfx/interface/ideologies/AUS/bauer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_MEX_socialism"
+		texturefile = "gfx/interface/ideologies/MEX/pri.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_MEX_social_democracy"
+		texturefile = "gfx/interface/ideologies/MEX/pri.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_MEX_liberalism"
+		texturefile = "gfx/interface/ideologies/MEX/PLC.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_MEX_conservatism"
+		texturefile = "gfx/interface/ideologies/MEX/PLC.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_POL_democratic_group"
+		texturefile = "gfx/interface/ideologies/POL/sch.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_PBM_democratic_group"
+		texturefile = "gfx/interface/ideologies/CZE/CZE.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_LUX_democratic_group"
+		texturefile = "gfx/interface/ideologies/LUX/LUX.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_DAN_democratic_group"
+		texturefile = "gfx/interface/ideologies/DAN/danzig.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_SLO_democratic_group"
+		texturefile = "gfx/interface/ideologies/SLO/SLO.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_CZE_democratic_group"
+		texturefile = "gfx/interface/ideologies/CZE/csns.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_SWE_socialism"
+		texturefile = "gfx/interface/ideologies/SWE/sap.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SWE_social_democracy"
+		texturefile = "gfx/interface/ideologies/SWE/sap.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_SWE_conservatism"
+		texturefile = "gfx/interface/ideologies/SWE/swef.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_FIN_socialism"
+		texturefile = "gfx/interface/ideologies/FIN/sdp.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_FIN_social_democracy"
+		texturefile = "gfx/interface/ideologies/FIN/sdp.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_FIN_conservatism"
+		texturefile = "gfx/interface/ideologies/FIN/kok.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_FIN_social_conservatism"
+		texturefile = "gfx/interface/ideologies/FIN/ml.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_FIN_liberalism"
+		texturefile = "gfx/interface/ideologies/FIN/kep.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_FIN_reactionary_conservatism"
+		texturefile = "gfx/interface/ideologies/FIN/Mannerheim.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_DEN_democratic_group"
+		texturefile = "gfx/interface/ideologies/DEN/sd.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_PRS_democratic_group"
+		texturefile = "gfx/interface/ideologies/GER/spd.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_BDN_democratic_group"
+		texturefile = "gfx/interface/ideologies/GER/spd.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_MEK_democratic_group"
+		texturefile = "gfx/interface/ideologies/GER/spd.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SAX_democratic_group"
+		texturefile = "gfx/interface/ideologies/GER/spd.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_GER_democratic_group"
+		texturefile = "gfx/interface/ideologies/GER/zentrum.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_GFA_democratic_group"
+		texturefile = "gfx/interface/ideologies/FRA/free.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_FRA_democratic_group"
+		texturefile = "gfx/interface/ideologies/FRA/radical.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_CAN_democratic_group"
+		texturefile = "gfx/interface/ideologies/CAN/clp.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_UKR_democratic_group"
+		texturefile = "gfx/interface/ideologies/UKR/undo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_KAZ_democratic_group"
+		texturefile = "gfx/interface/ideologies/KAZ/alash.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_ARG_democratic_group"
+		texturefile = "gfx/interface/ideologies/ARG/ucr.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_ITA_democratic_group"
+		texturefile = "gfx/interface/ideologies/ITA/pda.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SPR_liberalism"
+		texturefile = "gfx/interface/ideologies/SPR/psoe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SPR_conservatism"
+		texturefile = "gfx/interface/ideologies/SPR/psoe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SPR_socialism"
+		texturefile = "gfx/interface/ideologies/SPR/psoe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SPR_social_democracy"
+		texturefile = "gfx/interface/ideologies/SPR/psoe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_USA_democratic_group"
+		texturefile = "gfx/interface/ideologies/USA/usa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_BLR_democratic_group"
+		texturefile = "gfx/interface/ideologies/BLR/bcd.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_USA_conservatism"
+		texturefile = "gfx/interface/ideologies/USA/republican.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_USA_reactionary_conservatism"
+		texturefile = "gfx/interface/ideologies/USA/republican.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_USA_liberalism"
+		texturefile = "gfx/interface/ideologies/USA/democratic.dds"
+	}
+
+}

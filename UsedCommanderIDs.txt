@@ -1,0 +1,30 @@
+#UniqueLeaderIDs
+
+#Starts from 7000
+
+#ENG
+7000: Louis Mountbatten
+#GER
+7001: Ferdinand Schörner
+7007: August von Mackensen
+#USA
+7002: George C. Marshall
+#ITA
+7003: Cavallero
+7004: Soddu
+7005: Italo Balbo
+7006: Graziani
+#SOV
+7008: Trotsky
+7009: Stalin
+7018: Pavel Batov
+#FIN
+7010: Karl Lennart Oesch
+7011: Ruben Lagus
+7012: Aksel Airo
+7013: Erkki Raappana
+7014: Hugo Österman
+7015: Kurt Martti Wallenius 
+7016: Erik Heinrichs
+7017: Vilho Petter Nenonen
+7018: Eero Rahola

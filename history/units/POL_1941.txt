@@ -1,0 +1,275 @@
+﻿division_template = {
+	name = "Dywizja Piechoty"			# Represents both regular and reserve infantry divisions
+	division_names_group = POL_INF_01
+										# Reserve divisions have minimal experience and equipment; several are still forming on 1939.9.1
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }		
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }		
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+		infantry = { x = 2 y = 4 }		
+	}
+	support = {
+        recon = { x = 0 y = 0 }	
+		engineer = { x = 0 y = 1 } 
+		signal_company = { x = 0 y = 2 }
+		artillery = { x = 0 y = 3 } 
+	}
+division_template = {
+	name = "Dywizja Piechoty Górskiej"			# 21st, 22nd Infantry Divisions
+	division_names_group = POL_MNT_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }	
+		mountaineers = { x = 2 y = 1 }	
+		mountaineers = { x = 2 y = 2 }	
+	}
+	support = {
+        recon = { x = 0 y = 0 }	
+		engineer = { x = 0 y = 1 } 
+		signal_company = { x = 0 y = 2 }
+		artillery = { x = 0 y = 3 }  
+	}
+}
+division_template = {
+	name = "Brygada Piechoty Górskiej"			# Mixed units of regular and KOP mountain troops
+	division_names_group = POL_MNT_01
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 0 y = 3 }
+		mountaineers = { x = 0 y = 4 }			
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }		
+	}
+}
+division_template = {
+	name = "Brygada Kawalerii" 
+	division_names_group = POL_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 0 y = 4 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }		
+		cavalry = { x = 1 y = 4 }			
+	}
+	support = {
+        recon = { x = 0 y = 0 }	
+		engineer = { x = 0 y = 1 } 
+		signal_company = { x = 0 y = 2 }
+		artillery = { x = 0 y = 3 }     
+	}
+}
+division_template = {
+	name = "Brygada Motorowej"
+	division_names_group = POL_MOT_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+	    motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+	    motorized = { x = 0 y = 3 }
+		motorized = { x = 0 y = 4 }	
+	}
+	support = {
+        recon = { x = 0 y = 0 }	
+		engineer = { x = 0 y = 1 } 
+		signal_company = { x = 0 y = 2 }
+		artillery = { x = 0 y = 3 } 
+	}
+}
+division_template = {
+	name = "Grupa Pancerna"				# represents reserve armor assets (FT-17s and some R-35s)
+	division_names_group = POL_CAV_01
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+		light_armor = { x = 0 y = 4 }		
+	}
+	support = {
+        recon = { x = 0 y = 0 }	
+		engineer = { x = 0 y = 1 } 
+		signal_company = { x = 0 y = 2 }
+		artillery = { x = 0 y = 3 }  
+	}
+}
+division_template = {
+	name = "Grupa Pancerno-Motorowa"				
+	division_names_group = POL_MOT_01
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }	
+		light_armor = { x = 0 y = 4 }		
+		motorized = { x = 1 y = 0 }
+	    motorized = { x = 1 y = 1 }		
+		motorized = { x = 1 y = 2 }
+	    motorized = { x = 1 y = 3 }	
+	    motorized = { x = 1 y = 4 }		
+	}
+	support = {
+        light_tank_recon = { x = 0 y = 0 }	
+		engineer = { x = 0 y = 1 } 
+		signal_company = { x = 0 y = 2 }
+		logistics_company = { x = 0 y = 3 }
+		artillery = { x = 0 y = 4 }
+	}
+}
+division_template = {
+	name = "Brygada Ochrony Pogranicza"			# Represents groupings of Korpus Brygada Ochrony Pogranicza (KOP) and 
+	division_names_group = POL_GAR_01
+										# Onrona Novrova (ON) units: militia units with minimal equip and experience
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+}
+units = {
+	######## LAND OOB ########
+	division = { # "1. Brygada Strzelców"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 219
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+
+	}
+	division = { # "2. Brygada Strzelców"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 3311
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+
+	}
+	division = { # "3. Brygada Kadrowa Strzelców"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 11378
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+
+	}
+	division = { # "4. Brygada Kadrowa Strzelców"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 11218
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+
+	}
+	division = { # "5. Brygada Kadrowa Strzelców"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 11378
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+
+	}	
+	division = { # "1. Pułk Czołgów"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 11136
+		division_template = "Grupa Pancerna"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+
+	}
+	division = { # "1. Korpus Pancerno-Motorowy"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 9350
+		division_template = "Grupa Pancerno-Motorowa"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+
+	}
+}
+
+##### Wojska Lotnicze i Obrony Powietrzne (CO: Zajec) #####
+air_wings = {
+	125 = { 																			
+		### Brygada Poscigowa (CO: Pawlikowski) ###
+		fighter_equipment_0 =  { owner = "POL" amount = 70 }						
+							
+	}
+	126 = { 																			
+		### Brygada Bombowy (CO: Haller) ###
+		tac_bomber_equipment_1 =  { owner = "POL" amount = 40 }						
+		CAS_equipment_1 =  { owner = "POL" amount = 50 }							
+	}
+	128 = { 																			
+		### Lotnictwo Armii Pomorze (CO: Stachon) ###
+		fighter_equipment_0 =  { owner = "POL" amount = 40 }						
+	}
+	123 = { 																			
+		### Lotnictwo Armii Poznan (CO: Kuzminski) ###
+		fighter_equipment_0 =  { owner = "POL" amount = 30 }						
+	}
+	121 = { 																			
+		### Lotnictwo Armii Lodz (CO: Iwaszkiewscz) ###
+		fighter_equipment_0 =  { owner = "POL" amount = 35 }						
+	}
+	130 = { 																			
+		### Lotnictwo Armii Krakow (CO: Szylling) ###
+		fighter_equipment_0 =  { owner = "POL" amount = 30 }						
+	}
+	129 = { 																			
+		### Lotnictwo Armii Modlin (CO: Prauss) ###
+		fighter_equipment_0 =  { owner = "POL" amount = 20 }						
+	}
+}

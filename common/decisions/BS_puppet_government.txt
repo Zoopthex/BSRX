@@ -1,0 +1,673 @@
+### Decisions currently disabled, work in progress ###
+
+BS_GER_fascist_puppet_governments = {
+	
+	BS_Ger_British_Collaboration = {
+
+		visible = {
+			NOT = { ENG = { is_puppet_of = GER } }
+			NOT = { ENG = { is_in_faction_with = GER } }
+			ENG = { exists = yes }
+			GER = { has_war_with = ENG }
+		}
+
+		icon = generic_political_discourse
+
+		fire_only_once = yes
+
+		available = {
+			126 = { is_controlled_by = GER }
+			338 = { is_controlled_by = GER }
+			125 = { is_controlled_by = GER }
+			126 = { is_owned_by = ENG }
+			338 = { is_owned_by = ENG }
+			125 = { is_owned_by = ENG }
+			is_faction_leader = yes
+		}
+
+		complete_effect = {
+            create_dynamic_country = {
+                original_tag = ENG
+                set_temp_variable = { british_collab_country = this }
+                var:british_collab_country = {
+                	transfer_state = 126
+					transfer_state = 125
+					transfer_state = 338
+
+              		add_ideas = {
+                   		extensive_conscription
+                	}
+
+                	add_popularity = {
+                    	ideology = fascism
+                    	popularity = 60
+                	}
+                	set_politics = {
+                    	ruling_party = fascism
+                    	elections_allowed = no
+						election_frequency = 48
+                	}
+					load_focus_tree = generic_focus
+					declare_war_on = {
+						target = ENG
+						type = civil_war
+					}
+
+                	every_state = {
+                    	limit = { NOT = { state = 126 } }
+                        remove_core_of = var:british_collab_country
+					}
+					set_country_flag = british_collaboration_government
+				}
+            }
+			GER = { add_to_faction = var:british_collab_country }
+			set_global_flag = british_collab_government_setup
+			var:british_collab_country = {
+				create_country_leader = {
+					name = "British Fascist Junta"
+					desc = ""
+					picture = "BritishFascistJunta.dds"
+					expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+						divided_interests
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	BS_Ger_Puppet_Collaborators_Puppet = {
+
+		visible = {
+			has_global_flag = british_collab_government_setup
+			has_government = fascism
+		}
+
+		icon = generic_political_discourse
+
+		fire_only_once = yes
+
+		available = {
+			NOT = {
+				ENG = {
+					any_other_country = {
+						original_tag = ENG
+					}
+				}
+			}
+			any_country = {
+				has_country_flag = british_collaboration_government
+			}
+			ENG = { has_war = no }
+		}
+
+		complete_effect = {
+			GER = {
+				set_autonomy = {
+					target = ENG
+					autonomy_state = autonomy_puppet
+					freedom_level = 0.5
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	BS_Ger_Depose_Mosley = {
+
+		visible = {
+			ENG = { is_puppet_of = GER }
+			ENG = { has_government = fascism }
+		}
+
+		icon = generic_political_discourse
+
+		fire_only_once = yes
+
+		available = {
+			NOT = {
+				ENG = {
+					any_other_country = {
+						original_tag = ENG
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					ENG = { has_country_flag = british_collaboration_government }
+				}
+				ROOT = { country_event = { id = bs.759 } }
+			}
+			else_if = {
+				limit = {
+					ENG = { is_puppet_of = GER }
+				}
+				ROOT = { country_event = { id = bs.711 } }
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				has_country_flag = Fascist_Leadership_of_Britain_Chosen
+				factor = 0
+			}
+		}
+	}
+	
+	BS_Ger_Depose_Horthy = {
+
+		visible = {
+			HUN = { is_puppet_of = GER }
+			HUN = { has_government = fascism }
+			NOT = { HUN = { has_country_leader = { name = "Ferenc Szálasi" ruling_only = yes } } }
+		}
+
+		icon = generic_political_discourse
+
+		available = {
+		}
+
+		complete_effect = {
+			HUN = {
+			create_country_leader = {
+				name = "Ferenc Szálasi"
+				desc = ""
+				picture = "portrait_hun_ferenc_szalasi.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					prince_of_terror_2
+				}
+			}
+			set_party_name = { ideology = fascism long_name = HUN_arrow_cross_party_long name = HUN_arrow_cross_party }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	BS_Ger_Bogdan_Filov = {
+
+		visible = {
+			BUL = { is_puppet_of = GER }
+			BUL = { has_government = fascism }
+		}
+
+		icon = generic_political_discourse
+
+		available = {
+			NOT = { has_country_leader = { name = "Bogdan Filov" ruling_only = yes } }
+		}
+
+		complete_effect = {
+			BUL = {
+				create_country_leader = {
+					name = "Bogdan Filov"
+					desc = "POLITICS_BOGDAN_FILOV_DESC"
+					picture = GFX_portrait_bul_bogdan_filov
+					expire = "1965.1.1"
+					ideology = totalitarianism
+					traits = {
+						political_manipulator
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+
+BS_SOVIET_communist_puppet_governments = {
+	BS_Soviet_Leadership_of_Poland = {
+
+		visible = {
+			POL = { is_puppet_of = ROOT }
+			POL = { has_government = communism }
+		}
+		
+		days_re_enable = 10
+
+		icon = generic_political_discourse
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			ROOT = { country_event = { id = bs.754 } }
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = Communist_Leadership_of_Poland_Chosen
+				factor = 0
+			}
+		}
+	}
+	
+	BS_Soviet_Leadership_of_Yugoslavia = {
+
+		visible = {
+			YUG = { is_puppet_of = ROOT }
+			YUG = { has_government = communism }
+		}
+		
+		days_re_enable = 10
+
+		icon = generic_political_discourse
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			ROOT = { country_event = { id = bs.776 } }
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = Communist_Leadership_of_Yugoslavia_Chosen
+				factor = 0
+			}
+		}
+	}
+	
+	BS_Soviet_Leadership_of_Soviet_Union = {
+
+		visible = {
+			SOV = { is_puppet_of = ROOT }
+			SOV = { has_government = communism }
+		}
+		
+		days_re_enable = 10
+
+		icon = generic_political_discourse
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			ROOT = { country_event = { id = bs.755 } }
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = Communist_Leadership_of_Russia_Chosen
+				factor = 0
+			}
+		}
+	}
+	
+	BS_Soviet_Leadership_of_Finland = {
+
+		visible = {
+			FIN = { is_puppet_of = ROOT }
+			FIN = { has_government = communism }
+		}
+		
+		days_re_enable = 10
+
+		icon = generic_political_discourse
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			ROOT = { country_event = { id = bs.756 } }
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = Communist_Leadership_of_Finland_Chosen
+				factor = 0
+			}
+		}
+	}
+	
+	BS_Soviet_Leadership_of_Britain = {
+
+		visible = {
+			ENG = { is_puppet_of = ROOT }
+			ENG = { has_government = communism }
+		}
+		
+		days_re_enable = 10
+
+		icon = generic_political_discourse
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			ROOT = { country_event = { id = bs.757 } }
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = Communist_Leadership_of_England_Chosen
+				factor = 0
+			}
+		}
+	}
+	
+	BS_Soviet_Leadership_of_Germany = {
+
+		visible = {
+			GER = { is_puppet_of = ROOT }
+			GER = { has_government = communism }
+		}
+		
+		days_re_enable = 10
+
+		icon = generic_political_discourse
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			ROOT = { country_event = { id = bs.764 } }
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = Communist_Leadership_of_Germany_Chosen
+				factor = 0
+			}
+		}
+	}
+}
+
+BS_any_fascist_puppet_governments = {
+
+	BS_any_fascist_Leadership_of_Germany = {
+
+		visible = {
+			GER = { is_puppet_of = ROOT }
+			GER = { has_government = fascism }
+		}
+		
+		days_re_enable = 10
+
+		icon = generic_political_discourse
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			ROOT = { country_event = { id = bs.758 } }
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = Fascist_Leadership_of_Germany_Chosen
+				factor = 0
+			}
+		}
+	}
+	
+	BS_any_fascist_Leadership_of_France = {
+
+		visible = {
+			FRA = { is_puppet_of = ROOT }
+			FRA = { has_government = fascism }
+		}
+		
+		days_re_enable = 10
+
+		icon = generic_political_discourse
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			ROOT = { country_event = { id = bs.781 } }
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = Fascist_Leadership_of_France_Chosen
+				factor = 0
+			}
+		}
+	}
+}
+
+BS_any_neutral_puppet_governments = {
+	BS_any_neutral_Leadership_of_Germany = {
+
+		visible = {
+			GER = { is_puppet_of = ROOT }
+			GER = { has_government = neutrality }
+		}
+		
+		days_re_enable = 10
+
+		icon = generic_political_discourse
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			ROOT = { country_event = { id = bs.765 } }
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = Neutral_Leadership_of_Germany_Chosen
+				factor = 0
+			}
+		}
+	}
+	BS_any_neutral_Leadership_of_Poland = {
+
+		visible = {
+			POL = { is_puppet_of = ROOT }
+			POL = { has_government = neutrality }
+		}
+		
+		days_re_enable = 10
+
+		icon = generic_political_discourse
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					OR = {
+						original_tag = GER
+						has_country_leader_with_trait = Kaiser_of_the_people
+						has_country_leader_with_trait = Kaiser_of_europe
+						has_country_leader_with_trait = Fourth_Napoleon
+					}
+				}
+				ROOT = { country_event = { id = bs.782 } }
+				else = {
+					ROOT = { country_event = { id = bs.777 } }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = Neutral_Leadership_of_Poland_Chosen
+				factor = 0
+			}
+		}
+	}
+	
+	BS_any_neutral_Leadership_of_France = {
+
+		visible = {
+			FRA = { is_puppet_of = ROOT }
+			FRA = { has_government = neutrality }
+		}
+		
+		days_re_enable = 10
+
+		icon = generic_political_discourse
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			ROOT = { country_event = { id = bs.778 } }
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = Neutral_Leadership_of_France_Chosen
+				factor = 0
+			}
+		}
+	}
+	
+	BS_any_neutral_Leadership_of_America = {
+
+		visible = {
+			USA = { is_puppet_of = ROOT }
+			USA = { has_government = neutrality }
+		}
+		
+		days_re_enable = 10
+
+		icon = generic_political_discourse
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			ROOT = { country_event = { id = bs.779 } }
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = Neutral_Leadership_of_America_Chosen
+				factor = 0
+			}
+			modifier = {
+				has_country_leader = { name = "Edward VIII" ruling_only = yes }
+				factor = 0
+			}
+		}
+	}
+	
+	BS_any_neutral_Leadership_of_Britain = {
+
+		visible = {
+			ENG = { is_puppet_of = ROOT }
+			ENG = { has_government = neutrality }
+		}
+		
+		days_re_enable = 10
+
+		icon = generic_political_discourse
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			ROOT = { country_event = { id = bs.780 } }
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = Neutral_Leadership_of_Britain_Chosen
+				factor = 0
+			}
+		}
+	}
+	BS_any_neutral_Leadership_of_Ukraine = {
+
+		visible = {
+			UKR = { is_puppet_of = ROOT }
+			UKR = { has_government = neutrality }
+		}
+		
+		days_re_enable = 10
+
+		icon = generic_political_discourse
+
+		available = {
+		}
+
+		complete_effect = {
+			ROOT = { country_event = { id = bs.752 } }
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = Neutral_Leadership_of_Ukraine_Chosen
+				factor = 0
+			}
+		}
+	}
+	BS_any_neutral_Leadership_of_Belarus = {
+
+		visible = {
+			BLR = { is_puppet_of = ROOT }
+			BLR = { has_government = neutrality }
+		}
+		
+		days_re_enable = 10
+
+		icon = generic_political_discourse
+
+		available = {
+		}
+
+		complete_effect = {
+			ROOT = { country_event = { id = bs.753 } }
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_country_flag = Neutral_Leadership_of_Belarus_Chosen
+				factor = 0
+			}
+		}
+	}
+}

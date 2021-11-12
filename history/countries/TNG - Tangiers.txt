@@ -1,0 +1,87 @@
+﻿capital = 1336
+
+#oob = ""
+
+give_military_access = FRA
+give_military_access = SPR
+give_military_access = ENG
+
+set_research_slots = 1
+
+set_technology = {
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1922.2.6"
+	election_frequency = 60
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 50
+	fascism = 3
+	communism = 1
+	neutrality = 46
+}
+
+add_ideas = {
+	neutrality_idea	
+	disarmed_nation
+	BS_microstate_faction
+	BS_microstate_justify
+}
+
+set_stability = 0.5
+set_war_support = 0.5
+
+create_country_leader = {
+	name = "Luís Magalhães Correia"
+	desc = ""
+	picture = "Tangier_Luis_Magalhaes_Correia.dds"
+	expire = "1939.2.11"
+	ideology = oligarchism
+	traits = {
+		Naval_Connections
+	}
+}
+create_country_leader = {
+	name = "Committee of Control"
+	desc = ""
+	picture = "Tangier_Administration.dds"
+	expire = "1939.2.11"
+	ideology = oligarchism
+	traits = {
+		voice_of_restraint_neutrality
+	}
+}
+create_country_leader = {
+	name = "Committee of Control"
+	desc = ""
+	picture = "Tangier_Administration.dds"
+	expire = "1939.2.11"
+	ideology = reactionary_conservatism
+	traits = {
+		voice_of_restraint
+	}
+}
+create_country_leader = {
+	name = "Council of People's Commissars"
+	desc = ""
+	picture = "Tangier_Administration.dds"
+	expire = "1939.2.11"
+	ideology = leninism
+	traits = {
+		voice_of_restraint_communist
+	}
+}
+create_country_leader = {
+	name = "Grand Council of Fascism"
+	desc = ""
+	picture = "Tangier_Administration.dds"
+	expire = "1939.2.11"
+	ideology = fascism_ideology
+	traits = {
+		voice_of_restraint_fascist
+	}
+}
+

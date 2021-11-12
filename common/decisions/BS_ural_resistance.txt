@@ -1,0 +1,626 @@
+BS_ural_resistance = {
+    URA_put_down_third_army = {
+        icon = decision_generic_ignite_civil_war
+
+        activation = { always = no }
+
+        visible = {
+            has_country_flag = batov_resistance
+        }
+
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = batov_resistance_tt
+                NOT = {
+                    has_country_flag = batov_resistance_active
+                }
+            }
+        }
+
+        days_mission_timeout = 180
+
+        timeout_effect = {
+            custom_effect_tooltip = batov_resistance_coup
+            country_event = {
+                id = bs_ura.1
+                days = 5
+            }
+        }
+        complete_effect = {
+            custom_effect_tooltip = batov_resistance_put_down
+            hidden_effect = {
+                country_event = {
+                    id = bs_ura.2
+                    days = 5
+                }
+            }
+        }
+    }
+    URA_establish_the_SBRG = {
+        icon = decision_generic_brainwash
+
+
+        allowed = {
+            original_tag = URA
+        }
+
+        visible = {
+            has_country_flag = batov_resistance
+        }
+        available = {
+            NOT = {
+                has_country_flag = operation_in_progress
+            }
+        } 
+
+        ai_will_do = {
+            factor = 100
+        }
+
+        cost = 30
+
+        fire_only_once = yes
+
+        complete_effect = {
+            set_country_flag = SBRG_established
+            add_to_variable = {
+                var = konr_readiness_level
+                value = 10
+            }
+        }
+    }
+    URA_increase_SBRG_operations = {
+        icon = decision_generic_arrest
+        
+        allowed = {
+            original_tag = URA
+        }
+
+        visible = {
+            has_country_flag = batov_resistance
+        }
+        available = {
+            NOT = {
+                has_country_flag = operation_in_progress
+            }
+            has_country_flag = SBRG_established
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+
+        days_remove = 7
+        days_re_enable = 14
+        
+        cost = 15
+
+        complete_effect = {
+            set_country_flag = operation_in_progress
+        }
+
+        remove_effect = {
+            clr_country_flag = operation_in_progress
+            add_to_variable = {
+                var = konr_readiness_level 
+                value = 10
+            }
+        }
+    }
+
+    URA_give_armaments_to_the_SBRG = {
+        icon = decision_eng_support_imperialist_coup
+
+        allowed = {
+            original_tag = URA
+        }
+
+        visible = {
+            has_country_flag = batov_resistance
+        }
+    
+
+        available = {
+            NOT = {
+                has_country_flag = operation_in_progress 
+            }
+            has_country_flag = SBRG_established
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+        days_remove = 7
+        days_re_enable = 14
+
+        cost = 15 
+
+        complete_effect = {
+            set_country_flag = operation_in_progress
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = -750
+                producer = URA
+            }
+        }
+
+        remove_effect ={
+            clr_country_flag = operation_in_progress
+            add_to_variable = {
+                var = konr_readiness_level
+                value = 20
+            }
+            add_command_power = 5
+        }
+    }
+
+    URA_counter_insurgent_propaganda = {
+        icon = decision_generic_brainwash
+
+        allowed = {
+            original_tag = URA
+        }
+
+        visible = {
+            has_country_flag = batov_resistance
+        }
+        available = {
+            NOT = {
+                has_country_flag = operation_in_progress
+            }           
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+        days_remove = 7 
+        days_re_enable = 14
+
+        cost = 20
+
+        complete_effect = {
+            set_country_flag = operation_in_progress
+            add_stability = -0.05
+        }
+
+        remove_effect ={
+            clr_country_flag = operation_in_progress
+            add_to_variable = {
+                var = konr_readiness_level 
+                value = 15
+            }
+            add_stability = 0.025
+        }
+    }
+
+    URA_launch_shitty_raids = {
+        icon = decision_generic_military
+        
+        allowed = {
+            original_tag = URA
+        }
+
+        visible = {
+            has_country_flag = batov_resistance
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = operation_in_progress
+            }
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+
+        days_remove = 15
+        days_re_enable = 30
+
+        cost = 25
+
+        complete_effect = {
+            set_country_flag = operation_in_progress
+            add_manpower = -1000
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = -250
+                producer = URA
+            }
+        }
+        
+        remove_effect = {
+            clr_country_flag = operation_in_progress
+            add_to_variable = {
+                var = konr_readiness_level
+                value = 30
+            }
+        }
+    }
+
+    URA_SBRG_infltration_third_army = {
+        icon = decision_recruit_operative
+
+        allowed = {
+            original_tag = URA
+        }
+
+        visible = {
+            has_country_flag = batov_resistance
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = operation_in_progress
+            }
+            has_country_flag = SBRG_established
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+
+        days_remove = 15
+        days_re_enable = 30
+        
+        cost = 25
+
+        complete_effect = {
+            set_country_flag = operation_in_progress
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = -10
+                producer = URA
+            }
+        }
+
+        remove_effect = {
+            clr_country_flag = operation_in_progress
+            add_to_variable = {
+                var = konr_readiness_level
+                value = 25
+            }
+        }
+    }
+    #decision_generic_prepare_civil_war
+
+    URA_purge_magnitogorsk = {
+        icon = decision_generic_prepare_civil_war
+
+        allowed = {
+            original_tag = URA
+        }
+
+        visible = {
+            has_country_flag = batov_resistance
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = purge_in_progress
+            }
+            check_variable = {
+                konr_readiness_level > 40
+            }
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+
+        days_remove = 15
+
+        fire_only_once = yes
+
+        highlight_states = {
+            state = 1000
+        }
+
+        custom_cost_trigger = { command_power > 14 }
+        custom_cost_text = decision_cost_15_cp
+
+        timeout_effect = {
+            hidden_effect = {
+                add_command_power = -15
+            }
+            set_country_flag = purge_in_progress
+            add_manpower = -2500
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = -500
+                producer = URA
+            }
+            subtract_from_variable = {
+                var = konr_readiness_level
+                value = 40
+            }
+        }
+
+        remove_effect = {
+            clr_country_flag = purge_in_progress
+            add_manpower = 2000
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 250
+                producer = URA
+            }
+            subtract_from_variable = {
+                var = batov_resistance_level
+                value = 20
+            }
+        }
+        
+    }
+
+    URA_purge_sverdlovsk = {
+        icon = decision_generic_prepare_civil_war
+
+        allowed = {
+            original_tag = URA
+        }
+
+        visible = {
+            has_country_flag = batov_resistance
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = purge_in_progress
+            }
+            check_variable = {
+                konr_readiness_level > 40
+            }
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+
+        days_remove = 15
+
+        fire_only_once = yes
+
+        highlight_states = {
+            state = 653
+        }
+
+        custom_cost_trigger = { command_power > 14 }
+        custom_cost_text = decision_cost_15_cp
+
+        timeout_effect = {
+            hidden_effect = {
+                add_command_power = -15
+            }
+            set_country_flag = purge_in_progress
+            add_manpower = -2500
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = -500
+                producer = URA
+            }
+            subtract_from_variable = {
+                var = konr_readiness_level
+                value = 40
+            }
+        }
+
+        remove_effect = {
+            clr_country_flag = purge_in_progress
+            add_manpower = 2000
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 250
+                producer = URA
+            }
+            subtract_from_variable = {
+                var = batov_resistance_level
+                value = 20
+            }
+        }
+        
+    }
+
+    URA_zlatoust_corridor = {
+        icon = decision_generic_prepare_civil_war
+
+        allowed = {
+            original_tag = URA
+        }
+
+        visible = {
+            has_country_flag = batov_resistance
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = purge_in_progress
+            }
+            check_variable = {
+                konr_readiness_level > 40
+            }
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+
+        days_remove = 15
+
+        fire_only_once = yes
+
+        highlight_states = {
+            state = 573
+        }
+
+        custom_cost_trigger = { command_power > 14 }
+        custom_cost_text = decision_cost_15_cp
+
+        timeout_effect = {
+            hidden_effect = {
+                add_command_power = -15
+            }
+            set_country_flag = purge_in_progress
+            add_manpower = -2500
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = -500
+                producer = URA
+            }
+            subtract_from_variable = {
+                var = konr_readiness_level
+                value = 40
+            }
+        }
+
+        remove_effect = {
+            clr_country_flag = purge_in_progress
+            add_manpower = 2000
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 250
+                producer = URA
+            }
+            subtract_from_variable = {
+                var = batov_resistance_level
+                level = 20
+            }
+        }
+        
+    }
+
+    URA_purge_kuibyshev = {
+        icon = decision_generic_prepare_civil_war
+
+        allowed = {
+            original_tag = URA
+        }
+
+        visible = {
+            has_country_flag = batov_resistance
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = purge_in_progress
+            }
+            check_variable = {
+                konr_readiness_level > 40
+            }
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+
+        days_remove = 15
+
+        fire_only_once = yes
+
+        highlight_states = {
+            state = 251
+        }
+
+        custom_cost_trigger = { command_power > 14 }
+        custom_cost_text = decision_cost_15_cp
+
+        timeout_effect = {
+            hidden_effect = {
+                add_command_power = -15
+            }
+            set_country_flag = purge_in_progress
+            add_manpower = -2500
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = -500
+                producer = URA
+            }
+            subtract_from_variable = {
+                var = konr_readiness_level
+                value = 40
+            }
+        }
+
+        remove_effect = {
+            clr_country_flag = purge_in_progress
+            add_manpower = 2000
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 250
+                producer = URA
+            }
+            subtract_from_variable = {
+                var = batov_resistance_level
+                level = 20
+            }
+        }
+        
+    }
+
+    URA_purge_perm = {
+        icon = decision_generic_prepare_civil_war
+
+        allowed = {
+            original_tag = URA
+        }
+
+        visible = {
+            has_country_flag = batov_resistance
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = purge_in_progress
+            }
+            check_variable = {
+                konr_readiness_level > 40
+            }
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+
+        days_remove = 15
+
+        fire_only_once = yes
+
+        highlight_states = {
+            state = 398
+        }
+
+        custom_cost_trigger = { command_power > 14 }
+        custom_cost_text = decision_cost_15_cp
+
+        timeout_effect = {
+            hidden_effect = {
+                add_command_power = -15
+            }
+            set_country_flag = purge_in_progress
+            add_manpower = -2500
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = -500
+                producer = URA
+            }
+            subtract_from_variable = {
+                var = konr_readiness_level
+                value = 40
+            }
+        }
+
+        remove_effect = {
+            clr_country_flag = purge_in_progress
+            add_manpower = 2000
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 250
+                producer = URA
+            }
+            subtract_from_variable = {
+                var = batov_resistance_level
+                value = 20
+            }
+        }
+        
+    }
+}

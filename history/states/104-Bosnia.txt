@@ -1,0 +1,33 @@
+
+state={
+	id=104
+	name="STATE_104"
+	resources={
+		aluminium=5.000
+	}
+
+	history={
+		owner = YUG
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			air_base = 2
+
+		}
+		add_core_of = YUG
+		add_core_of = BOS
+		1941.1.1 = {
+			owner = CRO
+			controller = CRO
+
+		}
+
+	}
+
+	provinces={
+		6799 11572 11872 
+	}
+	manpower=1353200
+	buildings_max_level_factor=1.000
+	state_category=town
+}

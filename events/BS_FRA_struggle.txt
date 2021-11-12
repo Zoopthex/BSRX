@@ -1,0 +1,266 @@
+﻿add_namespace = bs_fra_struggle
+country_event = {
+	id = bs_fra_struggle.0
+	title = bs_fra_struggle.0.title
+	desc = bs_fra_struggle.0.desc
+	picture = GFX_report_event_second_vienna_award_pact
+	is_triggered_only = yes
+	option = {
+		name = bs_fra_struggle.0.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			if = {
+        		limit = {
+        			check_variable = { FRA_parameters_1 > FRA_parameters_2 }
+        			check_variable = { FRA_parameters_1 > FRA_parameters_3 }
+        			check_variable = { FRA_parameters_1 > FRA_parameters_4 }
+        			check_variable = { FRA_parameters_1 > FRA_parameters_5 }
+        		}
+        		country_event = { id = bs_fra_struggle.1 days = 3 }
+        	}
+        	else_if = {
+            	limit = {
+            		check_variable = { FRA_parameters_2 > FRA_parameters_1 }
+        			check_variable = { FRA_parameters_2 > FRA_parameters_3 }
+        			check_variable = { FRA_parameters_2 > FRA_parameters_4 }
+        			check_variable = { FRA_parameters_2 > FRA_parameters_5 }
+            	}
+            	country_event = { id = bs_fra_struggle.2 days = 3 }
+            }
+            else_if = {
+            	limit = {
+            		check_variable = { FRA_parameters_3 > FRA_parameters_1 }
+        			check_variable = { FRA_parameters_3 > FRA_parameters_2 }
+        			check_variable = { FRA_parameters_3 > FRA_parameters_4 }
+        			check_variable = { FRA_parameters_3 > FRA_parameters_5 }
+            	}
+            	country_event = { id = bs_fra_struggle.3 days = 3 }
+            }
+            else_if = {
+            	limit = {
+            		check_variable = { FRA_parameters_4 > FRA_parameters_1 }
+        			check_variable = { FRA_parameters_4 > FRA_parameters_2 }
+        			check_variable = { FRA_parameters_4 > FRA_parameters_3 }
+        			check_variable = { FRA_parameters_4 > FRA_parameters_5 }
+            	}
+            	country_event = { id = bs_fra_struggle.4 days = 3 }
+            }
+            else_if = {
+            	limit = {
+            		check_variable = { FRA_parameters_5 > FRA_parameters_1 }
+        			check_variable = { FRA_parameters_5 > FRA_parameters_2 }
+        			check_variable = { FRA_parameters_5 > FRA_parameters_3 }
+        			check_variable = { FRA_parameters_5 > FRA_parameters_4 }
+            	}
+            	country_event = { id = bs_fra_struggle.5 days = 3 }
+            }
+            else = { country_event = { id = bs_fra_struggle.6 days = 3 } }
+        }
+	}
+}
+country_event = {
+	id = bs_fra_struggle.1
+	title = bs_fra_struggle.1.title
+	desc = bs_fra_struggle.1.desc
+	is_triggered_only = yes
+	option = {
+		name = bs_fra_struggle.1.a
+		ai_chance = { base = 100 }
+		complete_national_focus = FRA_loyalty_to_moscow
+		retire_ideology_leader = communism
+		create_country_leader = {
+			name = "Maurice Thorez"
+			desc = "POLITICS_MAURICE_THOREZ_DESC"
+			picture = "GFX_portrait_fra_maurice_thorez"
+			expire = "1965.1.1"
+			ideology = stalinism
+			traits = {
+			}
+		}
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+	}
+}
+country_event = {
+	id = bs_fra_struggle.2
+	title = bs_fra_struggle.2.title
+	desc = bs_fra_struggle.2.desc
+	is_triggered_only = yes
+	option = {
+		name = bs_fra_struggle.2.a
+		ai_chance = { base = 100 }
+		complete_national_focus = FRA_loyalty_to_the_cause
+		retire_ideology_leader = communism
+		create_country_leader = {
+			name = "Jacques Duclos"
+			desc = "POLITICS_JACQUES_DUCLOS_DESC"
+			picture = GFX_portrait_jacques_duclos
+			expire = "1965.1.1"
+			ideology = leninism
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+	}
+}
+country_event = {
+	id = bs_fra_struggle.3
+	title = bs_fra_struggle.3.title
+	desc = bs_fra_struggle.3.desc
+	is_triggered_only = yes
+	option = {
+		name = bs_fra_struggle.3.a
+		ai_chance = { base = 100 }
+		complete_national_focus = FRA_cooperation_with_CGT
+		retire_ideology_leader = communism
+		create_country_leader = {
+			name = "Lﾃｩon Jouhaux"
+			desc = "POLITICS_LEON_JOUHAUX_DESC"
+			picture = "Portrait_FRA_Leon_Jouhaux.png"
+			expire = "1965.1.1"
+			ideology = anti_revisionism
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+	}
+}
+country_event = {
+	id = bs_fra_struggle.4
+	title = bs_fra_struggle.4.title
+	desc = bs_fra_struggle.4.desc
+	is_triggered_only = yes
+	option = {
+		name = bs_fra_struggle.4.a
+		ai_chance = { base = 100 }
+		complete_national_focus = FRA_anti_fascist_coalition
+		retire_ideology_leader = communism
+		create_country_leader = {
+			name = "Lﾃｩon Blum"
+			desc = "POLITICS_ﾃ吋OUARD_DALADIER_DESC"
+			picture = GFX_portrait_fra_leon_blum
+			expire = "1965.1.1"
+			ideology = anti_revisionism
+			traits = {
+				reluctant_interventionist
+				stout_defender
+			}
+		}
+		set_party_name = {
+			ideology = communism
+			long_name = FRA_democratic_party
+			name = FRA_democratic_party
+		}
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = yes
+		}
+	}
+}
+country_event = {
+	id = bs_fra_struggle.5
+	title = bs_fra_struggle.5.title
+	desc = bs_fra_struggle.5.desc
+	is_triggered_only = yes
+	option = {
+		name = bs_fra_struggle.5.a
+		ai_chance = { base = 100 }
+		complete_national_focus = FRA_team_up_with_anarchists
+		retire_ideology_leader = communism
+		create_country_leader = {
+			name = "Sébastien Faure"
+			desc = "POLITICS_SEBASTIEN_FAURE_DESC"
+			picture = "Portrait_FRA_Sebastien_Faure.png"
+			expire = "1965.1.1"
+			ideology = anarchist_communism
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+	}
+}
+country_event = {
+	id = bs_fra_struggle.6
+	title = bs_fra_struggle.6.title
+	desc = bs_fra_struggle.6.desc
+	is_triggered_only = yes
+	option = {
+		name = bs_fra_struggle.6.a
+		ai_chance = { base = 100 }
+		complete_national_focus = FRA_anti_fascist_coalition
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		country_event = {
+			id = bs_fra_struggle.7
+			days = 5
+		}
+		#retire_ideology_leader = communism
+		#create_country_leader = {
+		#	name = "Ho Chí Minh"
+		#	desc = ""
+		#	picture = "gfx/leaders/VIN/Portrait_VIN_Ho_Chi_Minh.png"
+		#	expire = "1965.1.1"
+		#	ideology = leninism
+		#	traits = {}
+		#}
+	}
+}
+country_event = {
+	id = bs_fra_struggle.7
+	title = bs_fra_struggle.7.title
+	desc = bs_fra_struggle.7.desc
+	is_triggered_only = yes
+	option = {
+		name = bs_fra_struggle.7.a
+		ai_chance = { base = 25 }
+	}
+	option = {
+		name = bs_fra_struggle.7.b
+		ai_chance = { base = 25 }
+		retire_ideology_leader = communism
+		create_country_leader = {
+			name = "Ho Chí Minh"
+			desc = ""
+			picture = "gfx/leaders/VIN/Portrait_VIN_Ho_Chi_Minh.png"
+			expire = "1965.1.1"
+			ideology = leninism
+			traits = {}
+		}
+	}
+	option = {
+		name = bs_fra_struggle.7.c
+		ai_chance = { base = 25 }
+		retire_ideology_leader = communism
+		create_country_leader = {
+			name = "Maurice Gamelin"
+			desc = "POLITICS_MAURICE_GAMELIN_DESC"
+			picture = "Portrait_France_Maurice_Gamelin.dds"
+			expire = "1965.1.1"
+			ideology = anarchist_communism
+			traits = {}
+		}
+	}
+	option = {
+		name = bs_fra_struggle.7.d
+		ai_chance = { base = 25 }
+		retire_ideology_leader = communism
+		create_country_leader = {
+			name = "Sﾃｩbastien Faure"
+			desc = "POLITICS_SEBASTIEN_FAURE_DESC"
+			picture = "Portrait_FRA_Sebastien_Faure.png"
+			expire = "1965.1.1"
+			ideology = anarchist_communism
+			traits = {}
+		}
+	}
+}

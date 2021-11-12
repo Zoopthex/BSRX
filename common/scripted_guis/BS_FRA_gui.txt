@@ -1,0 +1,14 @@
+scripted_gui = {
+	fra_decision_parameters = {
+		window_name = "fra_decision_parameters_window"
+		context_type = decision_category
+		#effects = { refresh_button_click = { FRA_convert_axes_values_to_frames = yes } }
+		properties = {
+			FRA_parameters_1 = { frame = FRA_display_1 }
+			FRA_parameters_2 = { frame = FRA_display_2 }
+			FRA_parameters_3 = { frame = FRA_display_3 }
+			FRA_parameters_4 = { frame = FRA_display_4 }
+			FRA_parameters_5 = { frame = FRA_display_5 }
+		}
+	}
+}

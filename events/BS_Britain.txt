@@ -1,0 +1,161 @@
+add_namespace = bs_britain
+
+add_namespace = bs_hidden_uk
+
+#The Colonial Dispute Question
+country_event = {
+    id = bs_britain.1
+    title = bs_britain.1.t
+    desc = bs_britain.1.d
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        set_country_flag = ENG_addressed_disputes
+    }
+
+    option = { #Cede the territories if their people are similar
+        name = bs_britain.1.a
+
+        if = {
+            limit = {
+                has_full_control_of_state = 900
+            }
+            FRA = { transfer_state = 900 }
+            NGA = { remove_state_core = 900 }
+            CMR = { add_state_core = 900 }
+        }
+
+        if = {
+            limit = {
+                has_full_control_of_state = 269
+            }
+            ITA = { transfer_state = 269 }
+        }
+        ai_chance = {
+            base = 35
+            modifier = {
+                OR = {
+                    has_completed_focus = ENG_concessions_to_the_trade_unions
+                    has_game_rule = {
+                        rule = ENG_ai_behavior
+                        option = COMMUNIST
+                    }
+                }
+                add = 15
+            }
+        }
+    }
+    option = { #Sure, they can have the territories
+        trigger = {
+            NOT = {
+                has_completed_focus = ENG_concessions_to_the_trade_unions
+                has_game_rule = {
+                    rule = ENG_ai_behavior
+                    option = COMMUNIST
+                }
+            }
+            OR = {
+                AND = {
+                    has_full_control_of_state = 900
+                    has_full_control_of_state = 901
+                }
+                has_full_control_of_state = 1049
+                has_full_control_of_state = 269
+                AND = {
+                    has_full_control_of_state = 1286
+                    has_full_control_of_state = 1287
+                }
+                has_full_control_of_state = 1853
+            }
+        }
+        name = bs_britain.1.b
+
+        if = {
+            limit = {
+                has_full_control_of_state = 900
+                has_full_control_of_state = 901
+            }
+            FRA = { 
+                transfer_state = 900 
+                transfer_state = 901
+            }
+            NGA = { remove_state_core = 900 }
+            CMR = { add_state_core = 900 }
+        }
+
+        if = {
+            limit = {
+                has_full_control_of_state = 1049
+            }
+            FRA = { transfer_state = 1049 }
+        }
+
+        if = {
+            limit = {
+                has_full_control_of_state = 269
+            }
+            ITA = { transfer_state = 269 }
+        }
+
+        if = {
+            limit = {
+                has_full_control_of_state = 1286
+                has_full_control_of_state = 1287
+            }
+            ITA = { 
+                transfer_state = 1286 
+                transfer_state = 1287
+            }
+        }
+
+        if = {
+            limit = {
+                has_full_control_of_state = 1853
+            }
+            HOL = { transfer_state = 1853 }
+        }
+
+        ai_chance = {
+            base = 35
+        }
+    }
+    option = { #No
+        name = bs_britain.1.c
+
+        ai_chance = {
+            base = 30
+            modifier = {
+                OR = {
+                    has_completed_focus = ENG_concessions_to_the_trade_unions
+                    has_game_rule = {
+                        rule = ENG_ai_behavior
+                        option = COMMUNIST
+                    }
+                }
+                add = 20
+            }
+        }
+    }
+}
+#England event because the CT setting fails
+country_event = {
+    id = bs_hidden_uk.1
+    title = bs_hidden_uk.1.t
+    desc = bs_hidden_uk.1.d
+    hidden = yes
+
+    fire_only_once = yes
+    
+    is_triggered_only = yes
+
+    immediate = {
+        set_cosmetic_tag = ENG_england
+    }
+
+    option = {
+        name = bs_hidden_uk.1.a
+    }
+}

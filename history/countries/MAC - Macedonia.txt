@@ -1,0 +1,147 @@
+﻿capital = 106
+
+set_research_slots = 3
+
+# Starting tech
+# clone of Yugoslavia
+set_technology = {
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	early_fighter = 1
+	gwtank = 1
+	basic_light_tank = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_submarine = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.6.8"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 47
+	neutrality = 33
+	communism = 20
+}
+
+create_country_leader = {
+	name = "Dositej Stojković"
+	desc = ""
+	picture = "gfx/leaders/MAC/Dositej_Stojkovic.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+	marxist_priest
+	social_reformer_2
+	}
+}
+
+create_country_leader = {
+	name = "Dositej Stojković"
+	desc = ""
+	picture = "gfx/leaders/MAC/Dositej_Stojkovic.dds"
+	expire = "1965.1.1"
+	ideology = falangism
+	traits = {
+	priest
+	popular_figurehead2
+	}
+}
+
+create_country_leader = {
+	name = "Dositej Stojković"
+	desc = ""
+	picture = "gfx/leaders/MAC/Dositej_Stojkovic.dds"
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = {
+	priest
+	social_reformer_2
+	}
+}
+
+create_country_leader = {
+	name = "Dositej Stojković"
+	desc = ""
+	picture = "gfx/leaders/MAC/Dositej_Stojkovic.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+	priest
+	social_reformer_2
+	}
+}
+
+create_country_leader = {
+	name = "Mihailo Apostolski"
+	desc = ""
+	picture = "gfx/leaders/MAC/mihailo.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+	freedom_fighter
+	democratic_socialist_democratic
+	}
+}
+
+create_country_leader = {
+	name = "Metodija Andonov-Čento"
+	desc = "POLITICS_GEORGI_DIMITROV_DESC"
+	picture = "gfx/leaders/MAC/metodija.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+	guerilla_warfare_expert
+	}
+}
+
+create_country_leader = {
+	name = "Panko Brashnarov"
+	desc = "POLITICS_NIKOLA_PETKOV_DESC"
+	picture = "gfx/leaders/MAC/panko.dds"
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = {
+	experienced_insurgent
+	}
+}
+
+create_country_leader = {
+	name = "Ivan Mihailov"
+	desc = "POLITICS_HRISTO_LUKOV_DESC"
+	picture = "gfx/leaders/MAC/ivan.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+	popular_figurehead2
+	}
+}

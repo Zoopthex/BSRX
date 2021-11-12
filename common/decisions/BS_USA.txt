@@ -1,0 +1,321 @@
+BS_golden_gate_bridge_category = {
+	BS_golden_gate_bridge = {
+
+		icon = generic_construction
+
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 854
+			controls_state = 1517
+		}
+
+		available = {
+			controls_state = 854
+			controls_state = 1517
+		}
+		
+		days_remove = 513 #1937.05.27
+		
+		modifier = {
+			consumer_goods_factor = 0.01
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = golden_gate_bridge_tt
+			1517 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			854 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			set_global_flag = GOLDEN_GATE_BRIDGE_DONE
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+}
+
+BS_Beijing_Biden_Category = {
+	BS_Beijing_Biden = {
+
+		icon = generic_political_discourse
+
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" }
+				has_country_leader = { ruling_only = yes name = "Harry S. Truman" }
+			}
+		}
+
+		complete_effect = {
+			PRC = {
+				create_country_leader = {
+					name = "Beijing Biden"
+					desc = ""
+					picture = "Portrait_BS_Beijing_Biden.dds"
+					expire = "1965.1.1"
+					ideology = socialism
+					traits = {
+						sleepy_joe
+						no_gods_no_malarkey
+					}
+				}
+			}
+		}
+	}
+}
+#below here is for us states
+former_us_state_stuff = {
+
+	former_us_state_new_govt = {
+
+		priority = 10
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			is_former_us_state_without_change = no
+			is_subject = no
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 5
+
+		is_good = no
+
+		cancel_if_not_visible = yes
+
+		activation = {
+			is_former_us_state_without_change = yes
+			is_subject = no
+		}
+
+		visible = {
+			is_former_us_state_without_change = yes
+			is_subject = no
+		}
+
+		timeout_effect = {
+			country_event = {
+				id = bs.817
+				random_days = 2
+			}
+		}
+	}
+	former_us_state_puppet = {
+
+		priority = 10
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			is_former_us_state_without_change = no
+			is_subject = yes
+			NOT = { is_subject_of = USA }
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 5
+
+		is_good = no
+
+		cancel_if_not_visible = yes
+
+		activation = {
+			is_former_us_state_without_change = yes
+			is_subject = yes
+			NOT = { is_subject_of = USA }
+		}
+
+		visible = {
+			is_former_us_state_without_change = yes
+			is_subject = yes
+			NOT = { is_subject_of = USA }
+		}
+
+		timeout_effect = {
+			drop_cosmetic_tag = yes
+		}
+	}
+}
+us_state_investments = {
+
+	state_request_for_investment = {
+
+		visible = {
+			OR = {
+				original_tag = CAL
+				original_tag = TEX
+				original_tag = LOU
+				original_tag = VIR
+				original_tag = KFC
+				original_tag = PEN
+				original_tag = MSS
+				original_tag = FLO
+				original_tag = ABM
+				original_tag = DEL
+				original_tag = GGA
+				original_tag = MRY
+				original_tag = NJY
+				original_tag = NWY
+				original_tag = SCL
+				original_tag = NCL
+				original_tag = VER
+				original_tag = WVR
+				original_tag = OKH
+				original_tag = ARK
+				original_tag = TEN
+				original_tag = MIC
+				original_tag = MIN
+				original_tag = ILL
+				original_tag = IND
+				original_tag = IOW
+				original_tag = MIS
+				original_tag = OHO
+				original_tag = WIS
+				original_tag = ARZ
+				original_tag = UTA
+				original_tag = CLR
+				original_tag = IDH
+				original_tag = NMX
+				original_tag = NEV
+				original_tag = WYM
+				original_tag = MNA
+				original_tag = NEB
+				original_tag = KAN
+				original_tag = DKT
+				original_tag = ORE
+				original_tag = WAS
+			}
+			is_subject = no
+			has_civil_war = no
+			if = {
+				limit = {
+					is_faction_leader = no
+				}
+				is_major = no
+			}
+			num_of_civilian_factories < 40
+			NOT = {
+				has_idea = neutrality_investment
+				has_idea = democratic_investment
+				has_idea = communist_investment
+				has_idea = fascist_investment
+			}
+		}
+
+		available = {
+			is_subject = no
+			num_of_civilian_factories < 40
+		}
+
+		icon = generic_factory
+
+        cost = 15
+
+        days_re_enable = 180
+
+		complete_effect = {
+			custom_effect_tooltip = opens_up_investment_tt
+			hidden_effect = { set_country_flag = wants_investment_pretty_please }
+		}
+
+		ai_will_do = {
+			factor = 1500
+		}
+	}
+
+	offer_state_investment = {
+
+		visible = {
+			OR = {
+				original_tag = CAN
+				original_tag = ENG
+				original_tag = GER
+				original_tag = SOV
+			}
+			is_subject = no
+			has_civil_war = no
+		}
+
+		target_trigger = {
+			FROM = {
+				has_country_flag = wants_investment_pretty_please
+			}
+		}
+
+		available = {
+			is_subject = no
+			has_civil_war = no
+			FROM = { has_country_flag = wants_investment_pretty_please }
+		}
+
+		icon = generic_factory
+
+        days_re_enable = 15
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				FROM = {
+					country_event = bs_usa.2
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = communism
+				}
+				FROM = {
+					country_event = bs_usa.3
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = democratic
+				}
+				FROM = {
+					country_event = bs_usa.4
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = neutrality
+				}
+				FROM = {
+					country_event = bs_usa.5
+				}
+			}
+			hidden_effect = {
+				FROM = {
+					clr_country_flag = wants_investment_pretty_please
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

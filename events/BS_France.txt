@@ -1,0 +1,227 @@
+
+add_namespace = bsfrance
+
+#  Rhineland Question
+country_event = {
+	id = bsfrance.1
+	title = bsfrance.1.t
+	desc = bsfrance.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bsfrance.1.a
+		ai_chance = {
+			factor = 50
+		}
+		add_state_core = 812
+		add_stability = -0.01
+	}
+	
+	option = {
+		name = bsfrance.1.b
+		ai_chance = {
+			factor = 25
+		}
+		
+		FRA = {
+			annex_country = {
+				target = BDN
+				transfer_troops = yes
+			}
+			transfer_state = 788
+			transfer_state = 790
+			transfer_state = 1432
+			transfer_state = 1334
+			add_state_core = 812		
+			add_stability = -0.05
+		}
+		WUR = {
+			transfer_state = 799
+			add_state_core = 799
+		}
+	}
+	
+	option = {
+		name = bsfrance.1.c
+		ai_chance = {
+			factor = 50
+		}
+		FRA = {
+			release_puppet = RHI
+		}
+	}
+}
+# Naples Throne Question
+country_event = {
+	 id = bsfrance.2
+	 title = bsfrance.2.t
+	 desc = bsfrance.2.d
+	 
+	 fire_only_once = yes
+	 
+	 is_triggered_only = yes
+	 
+	option = {
+		name = bsfrance.2.a
+		ai_chance = {
+			factor = 25
+		}
+		
+		KTS = {
+			add_stability = 0.05
+		}
+	}
+	option = {
+		name = bsfrance.2.b
+		ai_chance = {
+			factor = 75
+		}
+		
+		KTS = {
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Joachim II"
+				desc = ""
+				picture = "Joachim.dds"
+				expire = "1965.1.1"
+				ideology = constitutional_monarchism
+			}
+			set_cosmetic_tag = KTS_naples
+		}
+		FRA = {
+			add_political_power = 10
+		}
+	}
+}
+# Rename Rhinelands to situation across the Rhine
+country_event = {
+	id = bsfrance.3
+	title = bsfrance.3.t
+	desc = bsfrance.3.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = bsfrance.3.a
+
+		ai_chance = {
+			factor = 95
+		}
+	}
+	option = {
+		name = bsfrance.3.b
+
+		THU = { set_cosmetic_tag = confed_transrhine }
+		RHI = { set_cosmetic_tag = cisrhenia }
+		
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+# Moroccan Independence
+country_event = {
+	id = bsfrance.4
+	title = bsfrance.4.t
+	desc = bsfrance.4.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #We will give them proper independence
+		name = bsfrance.4.a
+
+		activate_mission = MOR_independence
+		ai_chance = {
+			factor = 99
+		}
+	}
+	option = { #Independence? No
+		name = bsfrance.4.b
+
+		add_stability = -0.01
+		461 = {
+			add_resistance = 85
+			add_resistance_target = 60
+		}
+		462 = {
+			add_resistance = 85
+			add_resistance_target = 60
+		}
+		1345 = {
+			add_resistance = 85
+			add_resistance_target = 60
+		}
+
+		hidden_effect = {
+			MOR = { 
+				add_ideas = gearing_up_for_independence_war 
+				set_country_flag = distaste_in_communism
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+# Tunisian Independence
+country_event = {
+	id = bsfrance.5
+	title = bsfrance.5.t
+	desc = bsfrance.5.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #We will give them proper independence
+		name = bsfrance.4.a
+
+		activate_mission = TUN_independence
+		ai_chance = {
+			factor = 99
+		}
+	}
+	option = { #Independence? No
+		name = bsfrance.4.b
+
+		add_stability = -0.01
+		458 = {
+			add_resistance = 85
+			add_resistance_target = 60
+		}
+		665 = {
+			add_resistance = 85
+			add_resistance_target = 60
+		}
+		1935 = {
+			add_resistance = 85
+			add_resistance_target = 60
+		}
+		1936 = {
+			add_resistance = 85
+			add_resistance_target = 60
+		}
+		1937 = {
+			add_resistance = 85
+			add_resistance_target = 60
+		}
+
+		hidden_effect = {
+			TUN = { 
+				add_ideas = gearing_up_for_independence_war 
+				set_country_flag = distaste_in_communism
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

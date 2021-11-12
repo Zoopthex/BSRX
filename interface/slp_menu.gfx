@@ -1,0 +1,320 @@
+spriteTypes = {	
+	
+	spriteType = {
+		name = "GFX_small_shield_overlay"
+		texturefile = "gfx/interface/small_shield_overlay.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_small_shield_mask"
+		texturefile = "gfx/interface/small_shield_mask.dds"
+	}
+	
+	spriteType = { 
+		name = "GFX_pol_leader_frame_hitler1"
+		texturefile = "gfx/interface/pol_leader_frame_hitler1.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_hitler2"
+		texturefile = "gfx/interface/pol_leader_frame_hitler2.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_hitler3"
+		texturefile = "gfx/interface/pol_leader_frame_hitler3.dds"
+	}
+	spriteType = { 
+		name = "GFX_pol_leader_frame_hitler4"
+		texturefile = "gfx/interface/pol_leader_frame_hitler4.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_hitler5"
+		texturefile = "gfx/interface/pol_leader_frame_hitler5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pol_leader_frame_baldwin1"
+		texturefile = "gfx/interface/pol_leader_frame_baldwin1.dds"
+	}
+	spriteType = { 
+		name = "GFX_pol_leader_frame_baldwin2"
+		texturefile = "gfx/interface/pol_leader_frame_baldwin2.dds"
+	}
+	spriteType = {  
+		name = "GFX_pol_leader_frame_baldwin3"
+		texturefile = "gfx/interface/pol_leader_frame_baldwin3.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_baldwin4"
+		texturefile = "gfx/interface/pol_leader_frame_baldwin4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pol_leader_frame_chamberlain1"
+		texturefile = "gfx/interface/pol_leader_frame_chamberlain1.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_chamberlain2"
+		texturefile = "gfx/interface/pol_leader_frame_chamberlain2.dds"
+	}
+	spriteType = { 
+		name = "GFX_pol_leader_frame_chamberlain3"
+		texturefile = "gfx/interface/pol_leader_frame_chamberlain3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pol_leader_frame_churchill1"
+		texturefile = "gfx/interface/pol_leader_frame_churchill1.dds"
+	}
+	spriteType = { 
+		name = "GFX_pol_leader_frame_churchill2"
+		texturefile = "gfx/interface/pol_leader_frame_churchill2.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_churchill3"
+		texturefile = "gfx/interface/pol_leader_frame_churchill3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pol_leader_frame_roosevelt1"
+		texturefile = "gfx/interface/pol_leader_frame_roosevelt1.dds"
+	}
+	spriteType = {  
+		name = "GFX_pol_leader_frame_roosevelt2"
+		texturefile = "gfx/interface/pol_leader_frame_roosevelt2.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_roosevelt3"
+		texturefile = "gfx/interface/pol_leader_frame_roosevelt3.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_roosevelt4"
+		texturefile = "gfx/interface/pol_leader_frame_roosevelt4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pol_leader_frame_stalin1"
+		texturefile = "gfx/interface/pol_leader_frame_stalin1.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_stalin2"
+		texturefile = "gfx/interface/pol_leader_frame_stalin2.dds"
+	}
+	spriteType = {  
+		name = "GFX_pol_leader_frame_stalin3"
+		texturefile = "gfx/interface/pol_leader_frame_stalin3.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_stalin4"
+		texturefile = "gfx/interface/pol_leader_frame_stalin4.dds"
+	}
+	
+	spriteType = {  
+		name = "GFX_pol_leader_frame_mussolini1"
+		texturefile = "gfx/interface/pol_leader_frame_mussolini1.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_mussolini2"
+		texturefile = "gfx/interface/pol_leader_frame_mussolini2.dds"
+	}
+	spriteType = {  
+		name = "GFX_pol_leader_frame_mussolini3"
+		texturefile = "gfx/interface/pol_leader_frame_mussolini3.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_mussolini4"
+		texturefile = "gfx/interface/pol_leader_frame_mussolini4.dds"
+	}
+	
+	spriteType = {  
+		name = "GFX_pol_leader_frame_hirohito1"
+		texturefile = "gfx/interface/pol_leader_frame_hirohito1.dds"
+	}
+	spriteType = {  
+		name = "GFX_pol_leader_frame_hirohito2"
+		texturefile = "gfx/interface/pol_leader_frame_hirohito2.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_hirohito3"
+		texturefile = "gfx/interface/pol_leader_frame_hirohito3.dds"
+	}
+	
+	spriteType = {  
+		name = "GFX_pol_leader_frame_daladier1"
+		texturefile = "gfx/interface/pol_leader_frame_daladier1.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_daladier2"
+		texturefile = "gfx/interface/pol_leader_frame_daladier2.dds"
+	} 
+	spriteType = {  
+		name = "GFX_pol_leader_frame_daladier3"
+		texturefile = "gfx/interface/pol_leader_frame_daladier3.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_daladier4"
+		texturefile = "gfx/interface/pol_leader_frame_daladier4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pol_leader_frame_truman1"
+		texturefile = "gfx/interface/pol_leader_frame_truman1.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_truman2"
+		texturefile = "gfx/interface/pol_leader_frame_truman2.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_truman3"
+		texturefile = "gfx/interface/pol_leader_frame_truman3.dds"
+	}
+	spriteType = {   
+		name = "GFX_pol_leader_frame_truman4"
+		texturefile = "gfx/interface/pol_leader_frame_truman4.dds"
+	}
+	
+	spriteType = {   
+		name = "GFX_pol_leader_frame_gaulle1"
+		texturefile = "gfx/interface/pol_leader_frame_gaulle1.dds"
+	} 
+	spriteType = {
+		name = "GFX_pol_leader_frame_gaulle2"
+		texturefile = "gfx/interface/pol_leader_frame_gaulle2.dds"
+	} 
+	spriteType = {
+		name = "GFX_pol_leader_frame_gaulle3"
+		texturefile = "gfx/interface/pol_leader_frame_gaulle3.dds"
+	}
+	
+	spriteType = {   
+		name = "GFX_pol_leader_frame_mosley1"
+		texturefile = "gfx/interface/pol_leader_frame_mosley1.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_mosley2"
+		texturefile = "gfx/interface/pol_leader_frame_mosley2.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_mosley3"
+		texturefile = "gfx/interface/pol_leader_frame_mosley3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pol_leader_frame_edward1"
+		texturefile = "gfx/interface/pol_leader_frame_edward1.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_edward2"
+		texturefile = "gfx/interface/pol_leader_frame_edward2.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_edward3"
+		texturefile = "gfx/interface/pol_leader_frame_edward3.dds"
+	}
+	spriteType = { 
+		name = "GFX_pol_leader_frame_edward4"
+		texturefile = "gfx/interface/pol_leader_frame_edward4.dds"
+	}
+	
+	spriteType = { 
+		name = "GFX_pol_leader_frame_wilhelm1"
+		texturefile = "gfx/interface/pol_leader_frame_wilhelm1.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_wilhelm2"
+		texturefile = "gfx/interface/pol_leader_frame_wilhelm2.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_wilhelm3"
+		texturefile = "gfx/interface/pol_leader_frame_wilhelm3.dds"
+	} 
+	spriteType = { 
+		name = "GFX_pol_leader_frame_wilhelm4"
+		texturefile = "gfx/interface/pol_leader_frame_wilhelm4.dds"
+	}
+	
+	spriteType = { 
+		name = "GFX_pol_leader_frame_landon1"
+		texturefile = "gfx/interface/pol_leader_frame_landon1.dds"
+	}
+	spriteType = { 
+		name = "GFX_pol_leader_frame_landon2"
+		texturefile = "gfx/interface/pol_leader_frame_landon2.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_landon3"
+		texturefile = "gfx/interface/pol_leader_frame_landon3.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_landon4"
+		texturefile = "gfx/interface/pol_leader_frame_landon4.dds"
+	}
+	
+	spriteType = { 
+		name = "GFX_pol_leader_frame_wilhelm2_1"
+		texturefile = "gfx/interface/pol_leader_frame_wilhelm2_1.dds"
+	}
+	spriteType = { 
+		name = "GFX_pol_leader_frame_wilhelm2_2"
+		texturefile = "gfx/interface/pol_leader_frame_wilhelm2_2.dds"
+	}
+	spriteType = { 
+		name = "GFX_pol_leader_frame_wilhelm2_3"
+		texturefile = "gfx/interface/pol_leader_frame_wilhelm2_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pol_leader_frame_victoria1"
+		texturefile = "gfx/interface/pol_leader_frame_victoria1.dds"
+	}
+	spriteType = { 
+		name = "GFX_pol_leader_frame_victoria2"
+		texturefile = "gfx/interface/pol_leader_frame_victoria2.dds"
+	}
+	spriteType = { 
+		name = "GFX_pol_leader_frame_victoria3"
+		texturefile = "gfx/interface/pol_leader_frame_victoria3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pol_leader_frame_ataturk1"
+		texturefile = "gfx/interface/pol_leader_frame_ataturk1.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_ataturk2"
+		texturefile = "gfx/interface/pol_leader_frame_ataturk2.dds"
+	}
+	spriteType = {  
+		name = "GFX_pol_leader_frame_ataturk3"
+		texturefile = "gfx/interface/pol_leader_frame_ataturk3.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_ataturk4"
+		texturefile = "gfx/interface/pol_leader_frame_ataturk4.dds"
+	}
+	
+	spriteType = { 
+		name = "GFX_pol_leader_frame_ismet1"
+		texturefile = "gfx/interface/pol_leader_frame_ismet1.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_ismet2"
+		texturefile = "gfx/interface/pol_leader_frame_ismet2.dds"
+	}
+	spriteType = {  
+		name = "GFX_pol_leader_frame_ismet3"
+		texturefile = "gfx/interface/pol_leader_frame_ismet3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pol_leader_frame_ignancy1"
+		texturefile = "gfx/interface/pol_leader_frame_ignancy1.dds"
+	}
+	spriteType = {
+		name = "GFX_pol_leader_frame_ignancy2"
+		texturefile = "gfx/interface/pol_leader_frame_ignancy2.dds"
+	}
+	spriteType = { 
+		name = "GFX_pol_leader_frame_ignancy3"
+		texturefile = "gfx/interface/pol_leader_frame_ignancy3.dds"
+	}
+}

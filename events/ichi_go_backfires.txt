@@ -1,0 +1,348 @@
+#in vanilla Ichi-go focus was eternal and never went away...
+#updated to also include overhaul of Sino-Japanese War based on ideas
+
+
+add_namespace = ichigo
+
+#Warning event for Japan
+country_event = {
+	id = ichigo.1
+	title = ichigo.1.t
+	desc = ichigo.1.d
+
+	picture = GFX_report_jap_1936
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = JAP
+		has_idea = JAP_ichi_go
+	}
+
+	option = {
+		name = ichigo.1.a
+		remove_ideas = JAP_ichi_go
+		add_timed_idea = {
+			idea = JAP_ichi_go
+			days = 365
+		}
+		set_country_flag = ichigo_is_go
+	}	
+}
+
+#Backlash for Japan - one year has passed so China will take the initiative now
+country_event = {
+	id = ichigo.2
+	title = ichigo.2.t
+	desc = ichigo.2.d
+
+	picture = GFX_report_jap_1936
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = JAP
+		has_country_flag = ichigo_is_go
+		NOT = { has_idea = JAP_ichi_go }
+	}
+
+	option = {
+		name = ichigo.2.a
+		add_timed_idea = {
+			idea = end_of_ichigo
+			#days = 2555
+			days = 365
+		}
+		clr_country_flag = ichigo_is_go
+	}	
+}
+
+country_event = {
+	id = ichigo.3
+	title = ichigo.3.t
+	desc = ichigo.3.d
+
+	picture = GFX_report_jap_1936
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		has_war_with = JAP
+		is_historical_focus_on = yes
+		date > 1944.1.1
+	}
+
+	option = {
+		name = ichigo.3.a
+		ai_chance = { factor = 100 }
+		add_timed_idea = {
+			idea = major_chinese_offensive_1944
+			days = 1095
+		}
+	}	
+
+	option = {
+		name = ichigo.3.b
+	}	
+}
+
+#events for Sino-Japanese war stalemate
+#script activation check
+country_event = {
+	id = ichigo.10
+	
+	fire_only_once = yes
+
+	hidden = yes
+
+	trigger = {
+		tag = JAP
+		is_ai = yes
+		CHI = { is_ai = yes } #if you're playing as PRC or warlord it will still activate
+		is_historical_focus_on = yes
+		has_war_with = CHI
+	}
+
+	immediate = {
+		set_global_flag = bs_sino_japanese_war_flag
+	}		
+}
+
+#script closes forever
+country_event = {
+	id = ichigo.11
+	
+	fire_only_once = yes
+
+	hidden = yes
+
+	trigger = {
+		tag = JAP
+		has_global_flag = bs_sino_japanese_war_flag
+		NOT = { has_war_with = CHI }
+	}
+
+	immediate = {
+		clr_global_flag = bs_sino_japanese_war_flag
+		remove_ideas = {
+			blitzkrieg_japan_phase_one
+			blitzkrieg_japan_phase_two
+			blitzkrieg_japan_phase_three
+			blitzkrieg_japan_phase_four
+			blitzkrieg_japan_phase_five
+		}
+	}		
+}
+
+#script activation check
+country_event = {
+	id = ichigo.20
+	
+	fire_only_once = yes
+
+	hidden = yes
+
+	trigger = {
+		tag = MAN
+		is_ai = yes
+		CHI = { is_ai = yes } #if you're playing as PRC or warlord it will still activate
+		is_historical_focus_on = yes
+		has_war_with = CHI
+	}
+
+	immediate = {
+		set_global_flag = bs_sino_ming_war_flag
+	}		
+}
+
+#script closes forever
+country_event = {
+	id = ichigo.21
+	
+	fire_only_once = yes
+
+	hidden = yes
+
+	trigger = {
+		tag = MAN
+		has_global_flag = bs_sino_ming_war_flag
+		NOT = { has_war_with = CHI }
+	}
+
+	immediate = {
+		clr_global_flag = bs_sino_ming_war_flag
+		remove_ideas = {
+			blitzkrieg_japan_phase_one
+		}
+	}		
+}
+
+country_event = {
+	id = ichigo.22
+	
+	fire_only_once = yes #should fire every time when something happens
+	
+	#is_triggered_only = yes
+
+	hidden = yes
+
+	trigger = {
+		tag = MAN
+		has_global_flag = bs_sino_ming_war_flag
+		has_war_with = CHI
+		NOT = { has_idea = blitzkrieg_japan_phase_one }
+		NOT = {
+			608 = {
+				OR = {
+					is_controlled_by = MAN
+					any_other_country = {
+						controls_state = 608
+						is_in_faction_with = MAN
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		add_ideas = blitzkrieg_japan_phase_one
+	}		
+}
+
+country_event = {
+	id = ichigo.23
+	
+	fire_only_once = yes #should fire every time when something happens
+	
+	#is_triggered_only = yes
+
+	hidden = yes
+
+	trigger = {
+		tag = MAN
+		has_global_flag = bs_sino_ming_war_flag
+		has_war_with = CHI
+		608 = {
+			OR = {
+				is_controlled_by = MAN
+				any_other_country = {
+					controls_state = 608
+					is_in_faction_with = MAN
+				}
+			}
+		}
+	}
+
+	immediate = {
+		remove_ideas = {
+			blitzkrieg_japan_phase_one
+		}
+	}		
+}
+
+#script activation check
+country_event = {
+	id = ichigo.30
+	
+	fire_only_once = yes
+
+	hidden = yes
+
+	trigger = {
+		tag = MEN
+		is_ai = yes
+		CHI = { is_ai = yes } #if you're playing as PRC or warlord it will still activate
+		is_historical_focus_on = yes
+		has_war_with = CHI
+	}
+
+	immediate = {
+		set_global_flag = bs_sino_meng_war_flag
+	}
+}
+
+#script closes forever
+country_event = {
+	id = ichigo.31
+	
+	fire_only_once = yes
+
+	hidden = yes
+
+	trigger = {
+		tag = MEN
+		has_global_flag = bs_sino_meng_war_flag
+		NOT = { has_war_with = CHI }
+	}
+
+	immediate = {
+		clr_global_flag = bs_sino_meng_war_flag
+		remove_ideas = {
+			blitzkrieg_japan_phase_one
+		}
+	}		
+}
+
+country_event = {
+	id = ichigo.32
+	
+	fire_only_once = yes #should fire every time when something happens
+	
+	#is_triggered_only = yes
+
+	hidden = yes
+
+	trigger = {
+		tag = MEN
+		has_global_flag = bs_sino_meng_war_flag
+		has_war_with = CHI
+		NOT = { has_idea = blitzkrieg_japan_phase_one }
+		NOT = {
+			615 = {
+				OR = {
+					is_controlled_by = MEN
+					any_other_country = {
+						controls_state = 615
+						is_in_faction_with = MEN
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		add_ideas = blitzkrieg_japan_phase_one
+	}		
+}
+
+country_event = {
+	id = ichigo.33
+	
+	fire_only_once = yes #should fire every time when something happens
+	
+	#is_triggered_only = yes
+
+	hidden = yes
+
+	trigger = {
+		tag = MEN
+		has_global_flag = bs_sino_meng_war_flag
+		has_war_with = CHI
+		615 = {
+			OR = {
+				is_controlled_by = MEN
+				any_other_country = {
+					controls_state = 615
+					is_in_faction_with = MEN
+				}
+			}
+		}
+	}
+
+	immediate = {
+		remove_ideas = {
+			blitzkrieg_japan_phase_one
+		}
+	}		
+}

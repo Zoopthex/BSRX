@@ -1,0 +1,680 @@
+
+add_namespace = bshisaxis
+
+country_event = {
+	id = bshisaxis.1
+	title = bshisaxis.1.t
+	desc = bshisaxis.1.d
+
+	picture = GFX_report_event_yugoslavian_split
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		has_war_with = YUG
+		GER = { is_faction_leader = yes }
+		YUG = { has_capitulated = yes }
+		is_in_faction_with = ITA
+		YUG = {
+			AND = {
+				has_war_with = ITA
+				has_war_with = HUN
+				#has_war_with = BUL
+			}			
+		}
+		107 = {
+			OR = {
+				is_fully_controlled_by = GER
+				any_other_country = {
+					controls_state = 107
+					is_in_faction_with = GER
+				}
+			}
+		}
+		NOT = { has_global_flag = axis_partition_of_yugoslavia }
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = bshisaxis.1.a
+		ai_chance = { factor = 100 }
+		ITA = { set_state_controller = 105 }
+		ITA = { set_state_controller = 940 }
+		ITA = { set_state_controller = 878 }
+		ITA = { set_state_controller = 871 }
+		ITA = { set_state_controller = 1104 }
+		ITA = { set_state_controller = 1970 }		
+		ITA = { set_state_controller = 102 }
+		ITA = { set_state_controller = 1189 }
+		ITA = { set_state_controller = 1231 }
+		ITA = { set_state_controller = 1190 }
+		ITA = { set_state_controller = 1955 }
+		ITA = { set_state_controller = 1956 }
+		ITA = { set_state_controller = 1957 }
+		GER = { set_state_controller = 764 }
+		GER = { set_state_controller = 1988 }		
+		GER = { set_state_controller = 935 }
+		GER = { set_state_controller = 934 }
+		GER = { set_state_controller = 1458 }
+		GER = { set_state_controller = 1450 }		
+		HUN = { set_state_controller = 45 }
+		HUN = { set_state_controller = 868 }
+		HUN = { set_state_controller = 1987 }		
+		HUN = { set_state_controller = 936 }
+		release_puppet = CRO
+		CRO = { transfer_state = 109 }
+		CRO = { transfer_state = 869 }
+		CRO = { transfer_state = 937 }
+		CRO = { transfer_state = 1404 }
+		CRO = { transfer_state = 1387 }
+		CRO = { transfer_state = 939 }
+		CRO = { transfer_state = 103 }
+		CRO = { set_state_controller = 104 }
+		CRO = { transfer_state = 938 }
+		CRO = { set_state_controller = 1046 }
+		CRO = { set_state_controller = 104 }
+		CRO = { set_state_controller = 1048 }
+		CRO = { transfer_state = 2003 }
+		CRO = { transfer_state = 2004 }
+		CRO = { transfer_state = 2011 }
+		CRO = { transfer_state = 2012 }
+		CRO = { set_state_controller = 1047 }
+		CRO = { set_state_controller = 1421 }
+		release_puppet = SER
+		SER = { transfer_state = 941 }
+		SER = { transfer_state = 107 }
+		SER = { transfer_state = 108 }
+		SER = { transfer_state = 872 }
+		SER = { load_focus_tree = nazi_serbia }
+		GER = { set_state_controller = 764 }
+		GER = { set_state_controller = 1988 }		
+		if = {
+			limit = { YUG = { has_war_with = BUL } }
+			BUL = { set_state_controller = 106 }
+			BUL = { set_state_controller = 870 }
+			BUL = { set_state_controller = 1302 }
+			BUL = { set_state_controller = 1204 }
+			BUL = { set_state_controller = 1230 }
+			BUL = { set_state_controller = 1265 }
+			BUL = { set_state_controller = 1546 }
+			BUL = { set_state_controller = 1547 }
+			BUL = { set_state_controller = 1958 }
+		}
+		if = {
+			limit = { NOT = { YUG = { has_war_with = BUL } } }
+			ITA = { set_state_controller = 106 }
+			ITA = { set_state_controller = 1302 }
+			ITA = { set_state_controller = 1204 }
+			ITA = { set_state_controller = 1230 }
+			ITA = { set_state_controller = 1958 }
+			SER = { transfer_state = 1265 }
+			SER = { transfer_state = 870 }
+		}
+		set_global_flag = axis_partition_of_yugoslavia
+	}
+
+	option = {
+		name = bshisaxis.1.b
+	}
+}
+
+country_event = {
+	id = bshisaxis.2
+	title = bshisaxis.2.t
+	desc = bshisaxis.2.d
+
+	picture = GFX_report_event_yugoslavian_split
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		is_in_faction_with = ITA
+		has_global_flag = axis_partition_of_yugoslavia
+		OR = {
+			YUG = { is_puppet = yes }
+			AND = {
+				NOT = { country_exists = YUG }
+				OR = {
+					GER = { owns_state = 107 }
+					ITA = { owns_state = 107 }
+					AND = {
+						BUL = { owns_state = 107 }
+						BUL = { is_in_faction_with = GER }
+					}
+					AND = {
+						CRO = { owns_state = 107 }
+						CRO = { is_in_faction_with = GER }
+					}
+					AND = {
+						HUN = { owns_state = 107 }
+						HUN = { is_in_faction_with = GER }
+					}
+					AND = {
+						ROM = { owns_state = 107 }
+						ROM = { is_in_faction_with = GER }
+					}
+					AND = {
+						SER = { owns_state = 107 }
+						SER = { is_in_faction_with = GER }
+					}				
+				}
+			}
+		}
+	}
+
+	option = {
+		name = bshisaxis.2.a
+		ai_chance = { factor = 100 }
+		GER = { transfer_state = 934 }
+		GER = { transfer_state = 1450 }		
+		GER = { transfer_state = 935 }
+		ITA = { transfer_state = 105 }
+		ITA = { transfer_state = 102 }
+		ITA = { transfer_state = 1104 }
+		ITA = { transfer_state = 1970 }		
+		ITA = { transfer_state = 940 }
+		ITA = { transfer_state = 1189 }
+		ITA = { transfer_state = 1190 }
+		ITA = { transfer_state = 878 }
+		ITA = { transfer_state = 871 }
+		ITA = { transfer_state = 1231 }
+		ITA = { transfer_state = 1387 }
+		if = {
+			limit = { is_in_faction_with = CRO }
+			CRO = { transfer_state = 109 }
+			CRO = { transfer_state = 104 }
+			CRO = { transfer_state = 103 }
+			CRO = { transfer_state = 1048 }
+			CRO = { transfer_state = 939 }
+			CRO = { transfer_state = 937 }
+			CRO = { transfer_state = 869 }
+			CRO = { transfer_state = 1046 }
+			CRO = { transfer_state = 1047 }
+			CRO = { transfer_state = 938 }
+			CRO = { transfer_state = 1404 }
+		}
+		if = {
+			limit = { NOT = { is_in_faction_with = CRO } }
+			GER = { transfer_state = 109 }
+			GER = { transfer_state = 869 }
+			GER = { transfer_state = 937 }
+			ITA = { transfer_state = 104 }
+			ITA = { transfer_state = 103 }
+			ITA = { transfer_state = 1048 }
+			ITA = { transfer_state = 939 }
+			ITA = { transfer_state = 1046 }
+			ITA = { transfer_state = 1047 }
+			ITA = { transfer_state = 1404 }
+		}
+		if = {
+			limit = { is_in_faction_with = BUL }
+			BUL = { transfer_state = 106 }
+			BUL = { transfer_state = 870 }
+			BUL = { transfer_state = 1302 }
+			BUL = { transfer_state = 1204 }
+			BUL = { transfer_state = 1230 }
+			BUL = { transfer_state = 1265 }
+			BUL = { transfer_state = 1549 }
+		}
+		if = {
+			limit = { NOT = { is_in_faction_with = BUL } }
+			ITA = { transfer_state = 106 }
+			ITA = { transfer_state = 870 }
+			ITA = { transfer_state = 1302 }
+			ITA = { transfer_state = 1204 }
+			ITA = { transfer_state = 1230 }
+			GER = { transfer_state = 1265 }
+		}
+		if = {
+			limit = { is_in_faction_with = HUN }
+			HUN = { transfer_state = 45 }
+			HUN = { transfer_state = 868 }
+			HUN = { transfer_state = 1987 }			
+			HUN = { transfer_state = 936 }
+		}
+		if = {
+			limit = { NOT = { is_in_faction_with = HUN } }
+			GER = { transfer_state = 45 }
+			GER = { transfer_state = 868 }
+			GER = { transfer_state = 1987 }			
+			GER = { transfer_state = 936 }
+		}
+		GER = { transfer_state = 107 }
+		GER = { transfer_state = 108 }
+		GER = { transfer_state = 872 }
+		GER = { transfer_state = 941 }
+		release_puppet = SER
+		GER = { transfer_state = 764 }
+		GER = { transfer_state = 1988 }		
+		release_puppet = CRO
+		clr_global_flag = axis_partition_of_yugoslavia
+	}			
+
+	option = {
+		name = bshisaxis.2.b
+		clr_global_flag = axis_partition_of_yugoslavia
+	}
+}
+
+country_event = {
+	id = bshisaxis.3
+	title = bshisaxis.3.t
+	desc = bshisaxis.3.d
+
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ROM
+		has_war_with = SOV
+		is_in_faction_with = GER
+		GER = { is_faction_leader = yes }
+		SOV = { has_war_with = GER }
+		SOV = { NOT = { controls_state = 202 } } # will fire when soviets lose Kiev to German and Romanian invaders
+		NOT = { has_country_flag = didnt_give_germans_land }
+	}		
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = bshisaxis.3.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				199 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 199
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 199 }
+		}
+		if = {
+			limit = {
+				89 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 89
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 89 }
+		}
+		if = {
+			limit = {
+				93 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 93
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 93 }
+		}
+		if = {
+			limit = {
+				94 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 94
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 94 }
+		}
+		if = {
+			limit = {
+				194 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 194
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 194 }
+		}
+		if = {
+			limit = {
+				201 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 201
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 201 }
+		}
+		if = {
+			limit = {
+				1996 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 1996
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1996 }
+		}		
+		if = {
+			limit = {
+				202 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 202
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 202 }
+		}
+		if = {
+			limit = {
+				1490 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 1490
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1490 }
+		}
+		if = {
+			limit = {
+				1491 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 1491
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1491 }
+		}		
+		if = {
+			limit = {
+				203 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 203
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 203 }
+		}
+		if = {
+			limit = {
+				259 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 259
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 259 }
+		}
+		if = {
+			limit = {
+				197 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 197
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 197 }
+		}
+		if = {
+			limit = {
+				196 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 196
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 196 }
+		}
+		if = {
+			limit = {
+				200 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 200
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 200 }
+		}
+		if = {
+			limit = {
+				197 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 197
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 197 }
+		}
+		if = {
+			limit = {
+				226 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 226
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 226 }
+		}
+		if = {
+			limit = {
+				91 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 91
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 91 }
+		}
+		if = {
+			limit = {
+				1181 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 1181
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1181 }
+		}
+		if = {
+			limit = {
+				1180 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 1180
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1180 }
+		}
+		if = {
+			limit = {
+				1553 = {
+					OR = {
+						is_controlled_by = ROM
+						any_other_country = {
+							controls_state = 1553
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			GER = { set_state_controller = 1553 }
+		}		
+	}
+
+	option = {
+		name = bshisaxis.3.b
+		set_country_flag = didnt_give_germans_land
+	}
+}
+
+country_event = {
+	id = bshisaxis.4
+	title = bshisaxis.4.t
+	desc = bshisaxis.4.d
+
+	picture = GFX_report_event_greece_occupation
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		has_war_with = GRE
+		GER = { is_faction_leader = yes }
+		GRE = { has_capitulated = yes }
+		is_in_faction_with = ITA
+		GRE = {
+			AND = {
+				has_war_with = ITA
+				has_war_with = BUL
+			}			
+		}
+		47 = {
+			OR = {
+				is_fully_controlled_by = GER
+				any_other_country = {
+					controls_state = 47
+					is_in_faction_with = GER
+				}
+			}
+		}
+		NOT = { has_global_flag = axis_partition_of_greece }
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = bshisaxis.4.a
+		ai_chance = { factor = 100 }
+		ITA = { set_state_controller = 976 }
+		ITA = { set_state_controller = 1512 }		
+		ITA = { set_state_controller = 977 }
+		ITA = { set_state_controller = 1303 }
+		ITA = { set_state_controller = 185 }
+		ITA = { set_state_controller = 47 }
+		ITA = { set_state_controller = 186 }
+		ITA = { set_state_controller = 978 }
+		ITA = { set_state_controller = 187 }
+		ITA = { set_state_controller = 1157 }
+		GER = { set_state_controller = 731 }
+		GER = { set_state_controller = 1160 }
+		GER = { set_state_controller = 1156 }
+		GER = { set_state_controller = 975 }
+		GER = { set_state_controller = 182 }
+		GER = { set_state_controller = 1428 }
+		BUL = { set_state_controller = 184 }
+		BUL = { set_state_controller = 1063 }
+		BUL = { set_state_controller = 1159 }
+		BUL = { set_state_controller = 1139 }
+		BUL = { set_state_controller = 1266 }
+		set_global_flag = axis_partition_of_greece
+	}
+
+	option = {
+		name = bshisaxis.4.b
+	}
+}

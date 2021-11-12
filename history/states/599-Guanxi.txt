@@ -1,0 +1,44 @@
+
+state={
+	id=599
+	name="STATE_599"
+
+	history={
+		owner = GXC
+		add_core_of = GXC
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+
+		}
+		1938.10.25 = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "Waking the Tiger" 
+					}
+
+				}
+				CHI = {
+					transfer_state = PREV
+
+				}
+
+			}
+
+		}
+		victory_points = {
+			7137 10 
+		}
+	}
+
+	provinces={
+		1625 4028 4077 4085 4628 7137 7650 10050 10459 1469 4121 4177 4656 1003 
+	}
+	manpower=8685200
+	buildings_max_level_factor=1.000
+	state_category=town
+}

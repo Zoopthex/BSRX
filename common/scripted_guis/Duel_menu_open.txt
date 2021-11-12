@@ -1,0 +1,83 @@
+scripted_gui = {
+   duel = { 
+     window_name = "duel_container"
+ 
+       context_type = player_context
+	   parent_window_token = politics_tab
+ 
+       visible = {
+            OR = {
+				tag = ENG
+			}
+        }
+ 
+        effects = {
+            duel_icon_click = {
+				if = {
+					limit = {
+						AND = {
+							TAG = ENG
+							has_country_leader = {
+								name = "Stanley Baldwin"
+								ruling_only = yes
+							}
+						}
+					}
+					set_temp_variable = { show = 1 }
+					subtract_from_temp_variable = { show = show_duel_eng1 }
+					set_variable = { show_duel_eng1 = show }
+				}
+			}
+		}
+    }
+	
+	
+	### Baldwin ###
+	duel_menu_George_v = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		
+		window_name = "duel_menu_George_v_Container"
+		
+		visible = {
+			OR = {
+				check_variable = { show_duel_eng1 > 0.0 }
+				is_ai = YES
+			}
+			has_country_leader = {
+				name = "Stanley Baldwin"
+				ruling_only = yes
+			}
+		}
+		
+		effects = {
+           leader_George_V_close_click = {
+                subtract_from_temp_variable = { show = show_duel_eng1 }
+                set_variable = { show_duel_eng1 = show }
+            }
+        }
+		ai_enabled = {
+			tag = ENG
+		}
+		
+		ai_check = {
+			check_variable = { ROOT.eng_port1_4 < 0.99 }
+			check_variable = { ai_random > 0.4 }
+		}
+		
+		ai_test_interval = 0
+		
+        triggers = {
+			duel_ENG_1_close_enabled = {
+				always = yes
+			}
+			leader_frame1_ENG2_click_enabled = {
+				has_country_leader = {
+					name = "Stanley Baldwin"
+					ruling_only = yes
+				}
+				check_variable = { eng_port1_2 < 0.99 }
+			}
+        }
+	}
+}

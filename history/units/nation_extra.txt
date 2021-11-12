@@ -1,0 +1,106 @@
+﻿division_template = {
+	name = "Brigada Legionario"
+	is_locked = yes
+	division_names_group = SPAN_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }		
+	}
+}
+
+units = {
+	division = {
+		name = "1a Brigada Legionario"
+		location = 12100  # Western Aragon
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "2a Brigada Legionario"
+		location = 13304  # Western Aragon
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "49a Brigada Legionario"
+		location = 7215  # Western Aragon
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "3a Brigada Legionario"
+		location = 4199  # Western Aragon
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "4a Brigada Legionario"
+		location = 12087  # Western Aragon
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "50a Brigada Legionario"
+		location = 9945  # Western Aragon
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "5a Brigada Legionario"
+		location = 12100  # Western Aragon
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "6a Brigada Legionario"
+		location = 13304  # Western Aragon
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "51a Brigada Legionario"
+		location = 7215  # Western Aragon
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "7a Brigada Legionario"
+		location = 4199  # Western Aragon
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "8a Brigada Legionario"
+		location = 12087  # Western Aragon
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "9a Brigada Legionario"
+		location = 9945  # Western Aragon
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "10a Brigada Legionario"
+		location = 11766  # Burgos
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "11a Brigada Legionario"
+		location = 3859  # Burgos
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "37a Brigada Legionario"
+		location = 3902  # Burgos
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "38a Brigada Legionario"
+		location = 11852  # Burgos
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "39a Brigada Legionario"
+		location = 13220  # Burgos
+		division_template = "Brigada Legionario"
+	}
+	division = {
+		name = "40a Brigada Legionario"
+		location = 11854  # Burgos
+		division_template = "Brigada Legionario"
+	}
+}

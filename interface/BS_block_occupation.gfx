@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_politics_block_button"
+		texturefile = "gfx/interface/politics_block_button.png"
+	}
+	spriteType = {
+		name = "GFX_states_block_button"
+		texturefile = "gfx/interface/states_block_button.png"
+	}
+}

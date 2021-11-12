@@ -1,0 +1,355 @@
+
+bs_ignore_tiny_nations = {
+	enable = {
+		always = yes
+	}
+	abort = {
+		OR = {
+			has_war_with = VCT
+			has_war_with = SMR
+			has_war_with = ADR
+		}
+	}
+	
+	ai_strategy = {
+		type = ignore
+		id = "VCT"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = ignore
+		id = "SMR"
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = ignore
+		id = "ADR"
+		value = 100
+	}
+}
+BS_no_war_with_USRR = {
+enable = {
+OR = {
+original_tag = ENG
+original_tag = FRA
+AND = {
+has_government = democratic
+NOT = {
+original_tag = GER
+}
+}
+}
+}
+abort = {
+OR = {
+        POL = {
+		has_capitulated = yes
+		}
+		NOT = { country_exists = POL }
+		NOT = { country_exists = SOV }
+		SOV = {
+		is_in_faction_with = GER 
+		}
+		has_global_flag = SOV_did_fail_lul
+}
+}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = "POL"
+		target_country = "SOV"
+		value = 50000
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = "SOV"
+		target_country = "POL" 
+		value = 50000
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "POL"
+		value = 50000
+	}
+	ai_strategy = {
+		type = ignore
+		id = "POL"
+		value = 50000
+	}		
+	ai_strategy = {
+		type = ignore
+		id = "SOV"
+		value = 50000
+	}	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "SOV"		
+		target = declare_war		
+		value = -50000 
+	}	
+	ai_strategy = {
+		type = protect
+		id = "POL"			
+		value = -50000
+	}	
+}	
+
+BS_friendship_historical = {
+	enable = {
+		OR = {
+			original_tag = HUN
+			original_tag = POL
+		}
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = "POL"
+		target_country = "GER"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = "GER"
+		target_country = "POL" 
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = "HUN"
+		target_country = "GER"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = "GER"
+		target_country = "HUN" 
+		value = 100
+	}	
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = "POL"
+		target_country = "SOV"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = "SOV"
+		target_country = "POL" 
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = "HUN"
+		target_country = "SOV"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = "SOV"
+		target_country = "HUN" 
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "GER"
+		value = 100
+	}
+	ai_strategy = {
+		type = befriend
+		id = "POL"
+		value = 100
+	}
+	ai_strategy = {
+		type = befriend
+		id = "HUN"
+		value = 100
+	}	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "HUN"		
+		target = declare_war		
+		value = -100 
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "POL"		
+		target = declare_war		
+		value = -100 
+	}	
+}
+
+BS_Ignore_warlord = {
+	enable = {
+		country_exists = SHX
+		country_exists = NSI
+		country_exists = XSM
+		country_exists = SIK
+		country_exists = TUG
+		country_exists = HSI
+		country_exists = YUN
+		country_exists = GXC
+		country_exists = SZH
+		country_exists = NEA
+	}
+	abort = {
+		NOT = { country_exists = SHX }
+		NOT = { country_exists = NSI }
+		NOT = { country_exists = XSM }
+		NOT = { country_exists = SIK }
+		NOT = { country_exists = TUG }
+		NOT = { country_exists = HSI }
+		NOT = { country_exists = YUN }
+		NOT = { country_exists = GXC }
+		NOT = { country_exists = SZH }
+		NOT = { country_exists = NEA }
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "SHX"			
+		value = -200
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "SHX"
+		target = guarantee
+		value = -200
+	}
+	ai_strategy = {
+		type = protect
+		id = "NSI"			
+		value = -200
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "NSI"
+		target = guarantee
+		value = -200
+	}
+	ai_strategy = {
+		type = protect
+		id = "XSM"			
+		value = -200
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "XSM"
+		target = guarantee
+		value = -200
+	}
+	ai_strategy = {
+		type = protect
+		id = "SIK"			
+		value = -200
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "SIK"
+		target = guarantee
+		value = -200
+	}
+	ai_strategy = {
+		type = protect
+		id = "TUG"			
+		value = -200
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "TUG"
+		target = guarantee
+		value = -200
+	}
+	ai_strategy = {
+		type = protect
+		id = "HSI"			
+		value = -200
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "HSI"
+		target = guarantee
+		value = -200
+	}
+	ai_strategy = {
+		type = protect
+		id = "YUN"			
+		value = -200
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "YUN"
+		target = guarantee
+		value = -200
+	}
+	ai_strategy = {
+		type = protect
+		id = "GXC"			
+		value = -200
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "GXC"
+		target = guarantee
+		value = -200
+	}
+	ai_strategy = {
+		type = protect
+		id = "SZH"			
+		value = -200
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "SZH"
+		target = guarantee
+		value = -200
+	}
+	ai_strategy = {
+		type = protect
+		id = "NEA"			
+		value = -200
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "NEA"
+		target = guarantee
+		value = -200
+	}
+}
+BS_stop_attacking_each_other = {
+	enable = {
+		original_tag = PRU
+		original_tag = ECU
+		date<1941.7.5
+	}
+	abort = {
+		date>1941.7.4
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "ECU"
+		value = -100
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "PRU"
+		value = -100
+	}
+}
+BS_soviets_send_volunteers_if_sinkiang_fights_tunganistan = {
+	enable = {
+		tag = SOV
+		SIK = { 
+			has_war_with = TUG 
+			has_government = communism
+		}
+	}
+	abort = {
+		has_global_flag = sinkiang_won
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SIK
+		value = 200
+	}
+}

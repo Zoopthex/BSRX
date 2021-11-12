@@ -1,0 +1,4 @@
+﻿l_polish:
+ ABILITY_ARMOURED_TRAINS:0 "Pociągi pancerne"
+ ABILITY_ARMOURED_TRAINS_TOOLTIP:0 "Pociągi pancerne ($LEADER$)"
+ ABILITY_ARMOURED_TRAINS_DESC:0 "Twoja armia dostanie znaczny bonus do tempa otrzymywania wsparcia oraz lekki bonus do obrony."

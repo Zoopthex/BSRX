@@ -1,0 +1,180 @@
+focus_tree = {
+    id = tribe_focus
+
+    country = {
+        factor = 0
+
+        modifier = {
+            add = 10
+            tag = CAG
+        }
+        modifier = {
+            add = 10
+            tag = HOR
+        }
+        modifier = {
+            add = 10
+            tag = NAI
+        }
+        modifier = {
+            add = 10
+            tag = KRE
+        }
+        modifier = {
+            add = 10
+            tag = MUI
+        }
+        modifier = {
+            add = 10
+            tag = NGL
+        }
+        modifier = {
+            add = 10
+            tag = KNY
+        }
+        modifier = {
+            add = 10
+            tag = MNH
+        }
+        modifier = {
+            add = 10
+            tag = GNG
+        }
+    }
+	
+	default = no
+	reset_on_civilwar = no
+
+    focus = {
+        id = BSR_an_independent_tribe
+        icon = GFX_goal_generic_demand_territory
+        x = 5
+        cost = 1
+
+        mutually_exclusive = { focus = BSR_subjugated_tribe }
+
+        available = {
+            is_subject = no
+        }
+		
+		available_if_capitulated = no
+    }
+    focus = {
+        id = BSR_subjugated_tribe
+        icon = GFX_focus_cze_german_puppet
+        x = 7
+        cost = 1
+
+        mutually_exclusive = { focus = BSR_an_independent_tribe }
+
+        available = {
+            is_subject = yes
+        }
+		
+		available_if_capitulated = no
+    }
+    focus = {
+        id = BSR_begin_westernization
+        icon = GFX_goal_continuous_boost_freedom
+        x = -1
+        y = 1
+        cost = 29
+        relative_position_id = BSR_an_independent_tribe
+        prerequisite = { focus = BSR_an_independent_tribe }
+        mutually_exclusive = { focus = BSR_undisturbed_isolation focus = BSR_obey_master }
+		
+		available_if_capitulated = no
+
+        ai_will_do = {
+            factor = 2
+        }
+    }
+    focus = {
+        id = BSR_undisturbed_isolation
+        icon = GFX_goal_generic_neutrality_focus
+        x = 1
+        y = 1
+        cost = 9
+        relative_position_id = BSR_an_independent_tribe
+        prerequisite = { focus = BSR_an_independent_tribe }
+        mutually_exclusive = { focus = BSR_begin_westernization focus = BSR_obey_master }
+		
+		available_if_capitulated = no
+
+        ai_will_do = {
+            factor = 25
+        }
+    }
+    focus = {
+        id = BSR_obey_master
+        icon = GFX_focus_generic_military_mission
+        x = 1
+        y = 1
+        cost = 9
+        relative_position_id = BSR_subjugated_tribe
+        prerequisite = { focus = BSR_subjugated_tribe }
+        mutually_exclusive = { focus = BSR_begin_westernization focus = BSR_undisturbed_isolation }
+    }
+    #Westernization Branch#
+    focus = {
+        id = BSR_partial_industrialization
+        icon = GFX_focus_generic_industry_1
+        y = 1
+        cost = 30
+        relative_position_id = BSR_begin_westernization
+        prerequisite = { focus = BSR_begin_westernization }
+
+        completion_reward = {
+            add_tech_bonus = {
+                name = BSR_partial_industrialization
+                bonus = 0.5
+                uses = 1 
+                category = industry
+            }
+        }
+    }
+    focus = {
+        id = BSR_learn_western_ideals
+        icon = GFX_goal_generic_political_pressure
+        y = 1
+        cost = 30
+        relative_position_id = BSR_partial_industrialization
+        prerequisite = { focus = BSR_partial_industrialization }
+
+        completion_reward = {
+            add_political_power = 50
+        }
+    }
+    focus = {
+        id = BSR_enter_the_world_stage
+        icon = GFX_focus_generic_support_the_left_right
+        y = 1
+        cost = 50
+        relative_position_id = BSR_learn_western_ideals
+        prerequisite = { focus = BSR_learn_western_ideals }
+
+        completion_reward = {
+            drop_cosmetic_tag = yes
+            add_political_power = 25
+            swap_ideas = {
+                add_idea = BS_Illegitimate_Chinese_State
+                remove_idea = BSR_tribe
+            }
+            load_focus_tree = generic_focus
+        }
+    }
+    #Undisturbed Isolation#
+    focus = {
+        id = BSR_tribal_deterrence
+        text = deterrence
+        icon = GFX_goal_generic_defence
+        y = 1
+        cost = 20
+        relative_position_id = BSR_undisturbed_isolation
+        prerequisite = { focus = BSR_undisturbed_isolation }
+
+        completion_reward = {
+            add_ideas = BSR_tribal_deterrence
+        }
+    }
+}

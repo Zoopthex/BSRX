@@ -1,0 +1,1763 @@
+
+occupy_tangiers_cat = {
+
+	occupy_tangiers = { #Backup
+		available = {
+			NOT = { owns_state = 1336 }
+			date > 1941.1.1
+			if = {
+				limit = {
+					TNG = { is_guaranteed_by = ENG }
+				}
+				has_opinion = {
+					target = ENG
+					value > 49
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+			NOT = { owns_state = 1336 }	
+			TNG = { exists = yes }
+			date > 1941.1.1
+		}
+
+		complete_effect = {
+			ROOT = {
+				transfer_state = 1336
+			}
+			1336 = {
+				set_demilitarized_zone = no
+			}
+		}
+	}
+}
+
+american_fleet_recovery = {
+
+	recover_american_fleet_stage_1 = {
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		visible = {
+			has_idea = USA_Navy_Crippled_Pearl_Harbor_Level_2
+		}
+		
+		modifier = {
+			repair_speed_factor = -0.25
+			industrial_capacity_dockyard = -0.2
+			navy_refit_speed = -0.25
+			navy_refit_ic_cost = 0.15
+		}
+		
+		days_remove = 40
+
+		remove_effect = {
+			Root = {
+				swap_ideas = {
+					remove_idea = USA_Navy_Crippled_Pearl_Harbor_Level_2
+					add_idea = USA_Navy_Crippled_Pearl_Harbor_Level_1
+				}
+			}
+		}
+	}
+	
+	recover_american_fleet_stage_2 = {
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		visible = {
+			has_idea = USA_Navy_Crippled_Pearl_Harbor_Level_1
+		}
+		
+		modifier = {
+			repair_speed_factor = -0.25
+			industrial_capacity_dockyard = -0.2
+			navy_refit_speed = -0.25
+			navy_refit_ic_cost = 0.15
+		}
+		
+		days_remove = 40
+
+		remove_effect = {
+			Root = {
+				remove_ideas = USA_Navy_Crippled_Pearl_Harbor_Level_1
+			}
+		}
+	}
+}
+
+
+reorganize_central_asia_category = {
+
+	reorganize_central_asia = {
+
+		priority = 10
+
+		icon = generic_form_nation
+
+		available = {	
+			has_war = no
+			owns_state = 586
+			owns_state = 732
+			owns_state = 405
+			owns_state = 742
+			owns_state = 584
+		}
+		
+		ai_will_do = {
+		factor = 0
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 586
+			owns_state = 732
+			owns_state = 405
+			owns_state = 742
+			owns_state = 584
+			NOT = {
+				AND = {
+					tag = GER
+					has_government = fascism
+				}
+			}
+		}
+		complete_effect = {		
+		if = {
+		limit = {
+		ROOT = { owns_state = 586 }
+		}
+		KAZ = { 
+		set_cosmetic_tag = ALA_AUTONOMY
+		add_state_core = 1467
+		add_state_core = 1459
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		ROOT = { owns_state = 586 }
+		}
+		TMS = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		ROOT = { owns_state = 1489 }
+		}
+		KOK = { 
+		set_cosmetic_tag = TRK_AUTONOMY
+		add_state_core = 1148
+		add_state_core = 1273
+		add_state_core = 1469
+		add_state_core = 585
+		add_state_core = 586
+		add_state_core = 1462
+		add_state_core = 1466
+		add_state_core = 1460
+		add_state_core = 584
+		add_state_core = 1463
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		ROOT = { owns_state = 586 }
+		}
+		UZB = { 
+		drop_cosmetic_tag = yes
+		set_capital = 1464
+		remove_state_core = 1467
+		remove_state_core = 1138
+		remove_state_core = 585
+		remove_state_core = 1463
+		remove_state_core = 405
+		remove_state_core = 1489
+		add_state_core = 742
+		add_state_core = 1461
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		ROOT = { owns_state = 1138 }
+		}
+		KPS = { 
+		drop_cosmetic_tag = yes
+		set_capital = 1464
+		remove_state_core = 1467
+		add_state_core = 1465
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		if = {
+		limit = {
+		ROOT = { owns_state = 742 }
+		}
+		TAJ = { 
+		drop_cosmetic_tag = yes
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+					}
+				}
+			}
+		}	
+	}
+}
+
+aus_ans_cat = {
+
+	AUS_demand_hungarian_burgenland = {
+		available = {
+			tag = AUS
+			has_war = no
+			HUN = {
+			has_war = yes
+			surrender_progress > 0.5
+			owns_state = 1431
+			owns_state = 994
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+			tag = AUS
+			has_war = no			
+		}
+
+		complete_effect = {
+			every_country = {
+			limit = {
+			OR = {
+			owns_state = 1431
+			owns_state = 994
+			}
+			}
+			country_event = { id = germany.1020 }	
+            }			
+		}
+	}
+	
+	AUS_plead_to_italy = {
+		available = {
+			tag = AUS
+			has_defensive_war_with = GER
+			ITA = {
+			NOT = {
+			is_in_faction_with = GER
+			}
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+			tag = AUS
+			has_defensive_war_with = GER
+			ITA = {
+			NOT = {
+			is_in_faction_with = GER
+			}
+			}			
+		}
+
+		complete_effect = {
+			every_country = {
+			limit = {
+			original_tag = ITA
+			}
+			country_event = { id = germany.1005 }	
+            }			
+		}
+	}
+}
+
+BS_Andorra_Co_Prince_Cat = {
+	BS_Andorra_Co_Prince = {
+
+		visible = {
+			NOT = { has_idea_with_trait = Co_Prince }
+			NOT = { has_country_flag = BS_ADR_No_Valid_Leader }
+			NOT = { has_country_flag = BS_ADR_FRA_Cap_Check_Ongoing }
+		}
+
+		icon = generic_political_discourse
+
+		fire_only_once = no
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					FRA = { exists = yes }
+				}
+				if = {
+					limit = {
+						FRA = { has_idea = idea_albert_lebrun }
+					}
+					add_ideas = idea_albert_lebrun_andorra
+				}
+				else_if = {
+					limit = {
+						FRA = { has_capitulated = yes }
+						NOT = { has_country_flag = BS_ADR_FRA_Cap_Check_Failed }
+					}
+					if = {
+						limit = {
+							any_country_with_original_tag = {
+								original_tag_to_check = FRA
+								has_capitulated = no
+								OR = {
+									has_government = neutrality
+									has_government = fascism
+								}
+							}
+						}
+						if = {
+							limit = {
+								any_country_with_original_tag = {
+									original_tag_to_check = FRA
+									has_capitulated = no
+									has_country_leader = { ruling_only = yes name = "Philippe Pétain" }
+								}
+							}
+							add_ideas = idea_philippe_petain_andorra
+							clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+						}
+						else_if = {
+							limit = {
+								any_country_with_original_tag = {
+									original_tag_to_check = FRA
+									has_capitulated = no
+									has_country_leader = { ruling_only = yes name = "Pierre Laval" }
+								}
+							}
+							add_ideas = idea_pierre_laval_andorra
+							clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+						}
+						else_if = {
+							limit = {
+								any_country_with_original_tag = {
+									original_tag_to_check = FRA
+									has_capitulated = no
+									has_country_leader = { ruling_only = yes name = "Charles Maurras" }
+								}
+							}
+							add_ideas = idea_charles_maurras_andorra
+							clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+							
+							else = {
+								add_ideas = idea_regency_three_andorra
+								hidden_effect = {
+									set_country_flag = BS_ADR_No_Valid_Leader
+								}
+							}
+						}
+						else = {
+							set_country_flag = BS_ADR_FRA_Cap_Check_Ongoing
+							country_event = { id = bs.761 }
+						}
+					}
+					else_if = {
+						limit = {
+							has_country_flag = BS_ADR_No_Valid_Leader
+						}
+						add_ideas = idea_pierre_laval_andorra
+						clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+					}
+				}
+				else_if = {
+					limit = {
+						FRA = {
+							has_government = democratic
+						}
+					}
+					if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Charles de Gaulle" }
+							}
+						}
+						add_ideas = idea_de_gaulle_andorra
+						clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_idea = idea_albert_lebrun
+							}
+						}
+						add_ideas = idea_albert_lebrun_andorra
+						clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+						else = {
+							add_ideas = idea_regency_three_andorra
+							hidden_effect = {
+								set_country_flag = BS_ADR_No_Valid_Leader
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FRA = {
+							has_government = neutrality
+						}
+					}
+					if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Napoléon IV" }
+							}
+						}
+						add_ideas = idea_napoleon_andorra
+						clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Charles Maurras" }
+							}
+						}
+						add_ideas = idea_charles_maurras_andorra
+						clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Alphonse I" }
+							}
+						}
+						add_ideas = idea_alphonse_andorra
+						clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Jacques II" }
+							}
+						}
+						add_ideas = idea_jacques_andorra
+						clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Jean III" }
+							}
+						}
+						add_ideas = idea_jean_andorra
+						clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Henri VI" }
+							}
+						}
+						add_ideas = idea_henri_andorra
+						clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Pierre Laval" }
+							}
+						}
+						add_ideas = idea_pierre_laval_andorra
+						clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+						
+						else = {
+							add_ideas = idea_regency_three_andorra
+							hidden_effect = {
+								set_country_flag = BS_ADR_No_Valid_Leader
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FRA = {
+							has_government = fascism
+						}
+					}
+					if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Jacques Doriot" }
+							}
+						}
+						add_ideas = idea_doriot_andorra
+						clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "François de la Rocque" }
+							}
+						}
+						add_ideas = idea_de_la_rocque_andorra
+						clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Philippe Pétain" }
+							}
+						}
+						add_ideas = idea_philippe_petain_andorra
+						clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Pierre Laval" }
+							}
+						}
+						add_ideas = idea_pierre_laval_andorra
+						clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+						else = {
+							add_ideas = idea_regency_three_andorra
+							hidden_effect = {
+								set_country_flag = BS_ADR_No_Valid_Leader
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FRA = {
+							has_government = communism
+						}
+					}
+					if = {
+						limit = {
+							AND = {
+								FRA = {
+									has_country_leader = { ruling_only = yes name = "Maurice Thorez" }
+								}
+								ADR = {
+									NOT = { has_government = communism }
+								}
+							}
+						}
+						add_ideas = idea_thorez_andorra
+						clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+					}
+					else_if = {
+						limit = {
+							AND = {
+								FRA = {
+									has_country_leader = { ruling_only = yes name = "Maurice Thorez" }
+								}
+								ADR = {
+									has_government = communism
+								}
+							}
+						}
+						add_ideas = idea_thorez_chairman_andorra
+						clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+						else = {
+							add_ideas = idea_regency_three_andorra
+							hidden_effect = {
+								set_country_flag = BS_ADR_No_Valid_Leader
+							}
+						}
+					}
+					else = {
+						add_ideas = idea_regency_two_andorra
+						hidden_effect = {
+							set_country_flag = BS_ADR_No_Valid_Leader
+						}
+					}
+				}
+				else = {
+					add_ideas = idea_regency_two_andorra
+				}
+			}
+			else = {
+				add_ideas = idea_regency_andorra
+				hidden_effect = {
+					set_country_flag = BS_ADR_No_Valid_Leader
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 50000
+		}
+	}
+	
+	BS_Andorra_Co_Prince_2 = {  #Incase the above fails, this activates every 300 days
+
+		visible = {
+			has_country_flag = BS_ADR_No_Valid_Leader
+		}
+
+		icon = generic_political_discourse
+
+		fire_only_once = no
+		
+		days_re_enable = 300
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					FRA = { exists = yes }
+				}
+				if = {
+					limit = {
+						FRA = { has_idea = idea_albert_lebrun }
+					}
+					add_ideas = idea_albert_lebrun_andorra
+					clr_country_flag = BS_ADR_No_Valid_Leader
+				}
+				else_if = {
+					limit = {
+						FRA = { has_capitulated = yes }
+						NOT = { has_country_flag = BS_ADR_FRA_Cap_Check_Failed }
+					}
+					if = {
+						limit = {
+							any_country_with_original_tag = {
+								original_tag_to_check = FRA
+								has_capitulated = no
+								OR = {
+									has_government = neutrality
+									has_government = fascism
+								}
+							}
+						}
+						if = {
+							limit = {
+								any_country_with_original_tag = {
+									original_tag_to_check = FRA
+									has_capitulated = no
+									has_country_leader = { ruling_only = yes name = "Philippe Pétain" }
+								}
+							}
+							add_ideas = idea_philippe_petain_andorra
+							clr_country_flag = BS_ADR_No_Valid_Leader
+						}
+						else_if = {
+							limit = {
+								any_country_with_original_tag = {
+									original_tag_to_check = FRA
+									has_capitulated = no
+									has_country_leader = { ruling_only = yes name = "Pierre Laval" }
+								}
+							}
+							add_ideas = idea_pierre_laval_andorra
+							clr_country_flag = BS_ADR_No_Valid_Leader
+						}
+						else_if = {
+							limit = {
+								any_country_with_original_tag = {
+									original_tag_to_check = FRA
+									has_capitulated = no
+									has_country_leader = { ruling_only = yes name = "Charles Maurras" }
+								}
+							}
+							add_ideas = idea_charles_maurras_andorra
+							clr_country_flag = BS_ADR_No_Valid_Leader
+							
+							else = {
+								add_ideas = idea_regency_three_andorra
+								hidden_effect = {
+									set_country_flag = BS_ADR_No_Valid_Leader
+								}
+							}
+						}
+						else = {
+							set_country_flag = BS_ADR_FRA_Cap_Check_Ongoing
+							country_event = { id = bs.761 }
+						}
+					}
+					else_if = {
+						limit = {
+							has_country_flag = BS_ADR_No_Valid_Leader
+						}
+						add_ideas = idea_pierre_laval_andorra
+						clr_country_flag = BS_ADR_No_Valid_Leader
+					}
+				}
+				else_if = {
+					limit = {
+						FRA = {
+							has_government = democratic
+						}
+					}
+					if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Charles de Gaulle" }
+							}
+						}
+						add_ideas = idea_de_gaulle_andorra
+						clr_country_flag = BS_ADR_No_Valid_Leader
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_idea = idea_albert_lebrun
+							}
+						}
+						add_ideas = idea_albert_lebrun_andorra
+						clr_country_flag = BS_ADR_No_Valid_Leader
+						else = {
+							add_ideas = idea_regency_three_andorra
+							hidden_effect = {
+								set_country_flag = BS_ADR_No_Valid_Leader
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FRA = {
+							has_government = neutrality
+						}
+					}
+					if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Napoléon IV" }
+							}
+						}
+						add_ideas = idea_napoleon_andorra
+						clr_country_flag = BS_ADR_No_Valid_Leader
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Charles Maurras" }
+							}
+						}
+						add_ideas = idea_charles_maurras_andorra
+						clr_country_flag = BS_ADR_No_Valid_Leader
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Alphonse I" }
+							}
+						}
+						add_ideas = idea_alphonse_andorra
+						clr_country_flag = BS_ADR_No_Valid_Leader
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Jacques II" }
+							}
+						}
+						add_ideas = idea_jacques_andorra
+						clr_country_flag = BS_ADR_No_Valid_Leader
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Jean III" }
+							}
+						}
+						add_ideas = idea_jean_andorra
+						clr_country_flag = BS_ADR_No_Valid_Leader
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Henri VI" }
+							}
+						}
+						add_ideas = idea_henri_andorra
+						clr_country_flag = BS_ADR_No_Valid_Leader
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Pierre Laval" }
+							}
+						}
+						add_ideas = idea_pierre_laval_andorra
+						clr_country_flag = BS_ADR_No_Valid_Leader
+						
+						else = {
+							add_ideas = idea_regency_three_andorra
+							hidden_effect = {
+								set_country_flag = BS_ADR_No_Valid_Leader
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FRA = {
+							has_government = fascism
+						}
+					}
+					if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Jacques Doriot" }
+							}
+						}
+						add_ideas = idea_doriot_andorra
+						clr_country_flag = BS_ADR_No_Valid_Leader
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "François de la Rocque" }
+							}
+						}
+						add_ideas = idea_de_la_rocque_andorra
+						clr_country_flag = BS_ADR_No_Valid_Leader
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Philippe Pétain" }
+							}
+						}
+						add_ideas = idea_philippe_petain_andorra
+						clr_country_flag = BS_ADR_No_Valid_Leader
+					}
+					else_if = {
+						limit = {
+							FRA = {
+								has_country_leader = { ruling_only = yes name = "Pierre Laval" }
+							}
+						}
+						add_ideas = idea_pierre_laval_andorra
+						clr_country_flag = BS_ADR_No_Valid_Leader
+						
+						clr_country_flag = BS_ADR_FRA_Cap_Check_Failed
+						else = {
+							add_ideas = idea_regency_three_andorra
+							hidden_effect = {
+								set_country_flag = BS_ADR_No_Valid_Leader
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						FRA = {
+							has_government = communism
+						}
+					}
+					if = {
+						limit = {
+							AND = {
+								FRA = {
+									has_country_leader = { ruling_only = yes name = "Maurice Thorez" }
+								}
+								ADR = {
+									NOT = { has_government = communism }
+								}
+							}
+						}
+						add_ideas = idea_thorez_andorra
+						clr_country_flag = BS_ADR_No_Valid_Leader
+					}
+					else_if = {
+						limit = {
+							AND = {
+								FRA = {
+									has_country_leader = { ruling_only = yes name = "Maurice Thorez" }
+								}
+								ADR = {
+									has_government = communism
+								}
+							}
+						}
+						add_ideas = idea_thorez_chairman_andorra
+						clr_country_flag = BS_ADR_No_Valid_Leader
+						
+						else = {
+							add_ideas = idea_regency_three_andorra
+							hidden_effect = {
+								set_country_flag = BS_ADR_No_Valid_Leader
+							}
+						}
+					}
+					else = {
+						add_ideas = idea_regency_two_andorra
+						hidden_effect = {
+							set_country_flag = BS_ADR_No_Valid_Leader
+						}
+					}
+				}
+				else = {
+					add_ideas = idea_regency_two_andorra
+				}
+			}
+			else = {
+				add_ideas = idea_regency_andorra
+				hidden_effect = {
+					set_country_flag = BS_ADR_No_Valid_Leader
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 50000
+		}
+	}
+}
+
+BS_naming_category = {
+
+	protectorate_of_crete = {
+
+		visible = {
+			NOT = {
+				has_government = communism
+				has_country_flag = CRT_PROTECTORATE
+				CRT = { 
+					has_government = communism
+					has_cosmetic_tag = CRT_PROTECTORATE
+					has_cosmetic_tag = CRT_ITA_PROTECTORATE
+				}
+				original_tag = GRE
+				original_tag = TUR
+			}
+			CRT = { is_subject_of = ROOT }
+		}
+
+		icon = generic_form_nation
+
+		fire_only_once = no
+
+		available = {
+			NOT = { has_government = communism }
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					ROOT = { is_Italian_speak = yes }
+				}
+				CRT = { set_cosmetic_tag = CRT_ITA_PROTECTORATE }
+			}
+			else = {
+				CRT = { set_cosmetic_tag = CRT_PROTECTORATE }
+			}
+			set_country_flag = CRT_PROTECTORATE
+		}
+	}
+}
+
+independence_war = {
+
+	create_cavalry = {
+
+		visible = {
+			has_idea = generic_independence_war
+			is_ai = yes
+			NOT = { has_country_flag = cavalry }
+		}
+
+		available = {
+			has_idea = generic_independence_war
+		}
+
+		icon = generic_military
+
+		complete_effect = {
+			division_template = {
+				name = "Quick Cavalry"
+				is_locked = no
+				regiments = {
+					cavalry = { x = 0 y = 0 }
+					cavalry = { x = 0 y = 1 }
+					cavalry = { x = 0 y = 2 }
+				}
+			}
+			set_country_flag = cavalry
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	build_mil = {
+
+		visible = {
+			has_idea = generic_independence_war
+			is_ai = yes
+			num_of_military_factories < 1
+			NOT = { has_country_flag = built_mil }
+		}
+
+		available = {
+			num_of_military_factories < 1
+		}
+
+		icon = generic_industry
+
+		complete_effect = {
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size < 25
+    					include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = built_mil
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	build_civ = {
+
+		visible = {
+			has_idea = generic_independence_war
+			is_ai = yes
+			num_of_civilian_factories < 1
+			NOT = { has_country_flag = built_civ }
+		}
+
+		available = {
+			num_of_civilian_factories < 1
+		}
+
+		icon = generic_industry
+
+		complete_effect = {
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 25
+    					include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = built_civ
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+foreign_politics = {
+
+	cze_bohemia_become = {
+
+		visible = {
+		tag = CZE
+		}
+
+		available = {
+		tag = CZE
+		country_exists = MRV
+		country_exists = SLO
+		NOT = { has_global_flag = CZE_became_bohemia }
+		}
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		complete_effect = {
+		set_cosmetic_tag = BOHEMIA
+		set_global_flag = CZE_became_bohemia
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	cze_czehia_become = {
+
+		visible = {
+		tag = CZE
+		has_global_flag = CZE_became_bohemia
+		}
+
+		available = {
+		tag = CZE
+		NOT = { country_exists = MRV }
+		NOT = { country_exists = SLO }
+		NOT = {
+			any_state = {
+				is_core_of = CZE
+				NOT = { state = 9 }
+				NOT = { is_owned_by = CZE }
+			}
+		}
+		has_global_flag = CZE_became_bohemia
+		}
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		complete_effect = {
+		drop_cosmetic_tag = yes
+		clr_global_flag = CZE_became_bohemia
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	USA_become_american_reich = {
+
+		visible = {
+		tag = USA
+		is_puppet_of = GER
+		}
+
+		available = {
+		tag = USA
+		is_puppet_of = GER
+		GER = { has_government = fascism }
+		NOT = { has_global_flag = USA_American_Reich }
+		}
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		complete_effect = {
+		set_cosmetic_tag = USA_GER
+		set_global_flag = USA_American_Reich
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	USA_unbecome_american_reich = {
+
+		visible = {
+		tag = USA
+		has_global_flag = USA_American_Reich
+		}
+
+		available = {
+		tag = USA
+		NOT = { is_puppet_of = GER }
+		has_global_flag = USA_American_Reich
+		}
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		complete_effect = {
+		drop_cosmetic_tag = yes
+		clr_global_flag = USA_American_Reich
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	old_korean_territory_transfer = {
+
+		visible = {
+		OR = {
+			tag = ROK
+			tag = DPK
+		}
+		}
+
+		available = {
+		country_exists = KOR
+		OR = {
+			country_exists = ROK
+			country_exists = DPK
+		}
+		OR = {
+			tag = ROK
+			tag = DPK
+		}
+		}
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		complete_effect = {
+		country_event = bs.17
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	easter_egg_something_kek = {
+
+		visible = {
+		tag = NEA
+		}
+
+		available = {
+		tag = NEA
+		has_country_leader = { ruling_only = yes name = "Chang Hsüeh-liang" }
+		has_government = neutrality
+		has_war_with = ITA
+		ITA = { has_country_leader = { ruling_only = yes name = "Benito Mussolini" } }
+		NOT = { has_global_flag = Mussolini_Daughter }
+		any_state = {
+			is_core_of = ITA
+			controller = {
+				tag = NEA	
+				has_war_with = ITA
+			}
+		}
+		}
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		complete_effect = {
+		country_event = bs.72
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	the_cairo_conference = {
+
+		visible = {
+		#A democratic faction leader whose faction holds at least one German core state while SOV holds another can get this.
+		has_war_with = JAP
+		JAP = {
+			surrender_progress > 0.5
+		}
+		is_faction_leader = yes
+		any_state = {
+			is_core_of = KOR
+			controller = {
+				is_in_faction_with = ROOT
+			}
+		}
+		}
+
+		available = {
+		#A democratic faction leader whose faction holds at least one German core state while SOV holds another can get this.
+		has_war_with = JAP
+		JAP = {
+			surrender_progress > 0.5
+		}
+		is_faction_leader = yes
+		any_state = {
+			is_core_of = KOR
+			controller = {
+				is_in_faction_with = ROOT
+			}
+		}
+
+		NOT = {
+			tag = SOV
+		}
+		NOT = {
+			has_war_with = SOV
+		}
+		SOV = {
+			is_faction_leader = yes
+		}
+		any_state = {
+			is_core_of = KOR
+			is_controlled_by = SOV
+		}
+		NOT = {
+			has_global_flag = had_cariro_conference
+		}
+		NOT = {
+			any_state = {
+				is_core_of = KOR
+				controller = {
+					NOT = {
+						tag = JAP
+					}
+					is_in_faction = yes
+					NOT = {
+						OR = {
+							is_in_faction_with = ROOT
+							is_in_faction_with = SOV
+						}
+					}
+				}
+			}
+		}
+		}
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		complete_effect = {
+		country_event = bs.13
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	TUG_bshischina_2 = {
+
+		visible = {
+		tag = NEA
+		has_war_with = JAP
+		CHI = { is_faction_leader = yes }
+		}
+
+		available = {
+		tag = NEA
+		date > 1937.01.01
+		has_war_with = JAP
+		CHI = { is_faction_leader = yes }
+		is_in_faction_with = CHI
+		JAP = {
+			AND = {
+				has_war_with = CHI
+				has_war_with = NEA
+			}
+		}
+		NOT = { has_global_flag = china_northeast }
+		}
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		complete_effect = {
+			country_event = bshischina.2
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	HSI_bshischina_3 = {
+
+		visible = {
+		tag = HSI
+		has_war_with = JAP
+		CHI = { is_faction_leader = yes }
+		is_in_faction_with = CHI
+		}
+
+		available = {
+		tag = HSI
+		date > 1939.01.01
+		has_war_with = JAP
+		CHI = { is_faction_leader = yes }
+		is_in_faction_with = CHI
+		JAP = {
+			AND = {
+				has_war_with = CHI
+				has_war_with = HSI
+			}
+		}
+		NOT = { has_global_flag = china_hsikang }
+		}
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		complete_effect = {
+			country_event = bshischina.3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	TUG_bshischina_4 = {
+
+		visible = {
+		tag = TUG
+		is_subject = no
+		}
+
+		available = {
+		tag = TUG
+		AND = {
+			date > 1937.01.01
+			date < 1937.06.01
+		}
+		is_subject = no
+		}
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		complete_effect = {
+			country_event = bshischina.4
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	SIK_bshischina_5 = {
+
+		visible = {
+		tag = SIK
+		is_subject = no
+		}
+
+		available = {
+		tag = SIK
+		AND = {
+			date > 1937.04.01
+			date < 1939.06.01
+			has_global_flag = no_islamic_revolt
+		}
+		NOT = {
+			is_in_faction_with = TUG
+			CHI = { is_faction_leader = yes }
+			is_in_faction_with = CHI
+			is_subject_of = CHI
+			has_global_flag = sinkiang_invaded
+		}
+		is_subject = no
+		}
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		complete_effect = {
+			country_event = bshischina.5
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	IRE_bring_home_ulster = {
+
+		visible = {
+			original_tag = IRE
+		}
+
+		available = {
+			NIR = {
+				exists = yes
+				controls_state = 119
+			}
+			is_subject = no
+		}
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		complete_effect = {
+			NIR = { country_event = bs.810 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ITA_invade_newly_independent_african_nations = {
+
+		visible = {
+			original_tag = ITA
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = TUN
+					original_tag = EGY
+					original_tag = SUD
+					original_tag = DJI
+					original_tag = SOM
+					original_tag = SMA
+					original_tag = KEN
+				}
+				is_neighbor_of = ROOT
+				is_subject = no
+				is_in_faction = no
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		icon = generic_nationalism
+
+		cost = 5
+
+		days_remove = 3
+
+		remove_effect = {
+            ROOT = {
+                declare_war_on = {
+                    target = FROM
+                    type = annex_everything
+                }
+            }
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		war_with_target_on_remove = yes
+	}
+
+	INS_modify_idea_a = {
+		visible = {
+			original_tag = INS
+			has_cosmetic_tag = INS_HOL
+			has_idea = INS_native_resistance_a
+		}
+
+		icon = generic_nationalism
+
+		available = {
+			has_idea = INS_native_resistance_a
+		}
+
+		cost = 150
+
+		days_remove = 365
+
+		remove_effect = {
+			add_stability = -0.05
+			swap_ideas = { 
+ 				 remove_idea = INS_native_resistance_a 
+ 				 add_idea = INS_native_resistance_b
+			}
+		}
+	}
+
+	INS_modify_idea_b = {
+		visible = {
+			original_tag = INS
+			has_cosmetic_tag = INS_HOL
+			has_idea = INS_native_resistance_b
+		}
+
+		icon = generic_nationalism
+
+		available = {
+			has_idea = INS_native_resistance_b
+		}
+
+		cost = 200
+
+		days_remove = 365
+
+		remove_effect = {
+			add_stability = -0.05
+			swap_ideas = { 
+ 				 remove_idea = INS_native_resistance_b 
+ 				 add_idea = INS_native_resistance_c
+			}
+		}
+	}
+
+	INS_modify_idea_c = {
+		visible = {
+			original_tag = INS
+			has_cosmetic_tag = INS_HOL
+			has_idea = INS_native_resistance_b
+		}
+
+		icon = generic_nationalism
+
+		available = {
+			has_idea = INS_native_resistance_b
+		}
+
+		cost = 300
+
+		days_remove = 365
+
+		remove_effect = {
+			add_stability = -0.05
+			remove_ideas = { INS_native_resistance_c }
+		}
+	}
+
+	remove_united_fruit_company = {
+		visible = {
+			OR = {
+				original_tag = HON
+				original_tag = COS
+				original_tag = GUA
+			}
+			is_ai = no
+			NOT = {
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		} 
+
+		icon = generic_nationalism
+
+		available = {
+			has_idea = united_fruit_company
+			OR = {
+				industrial_complex > 14
+				has_idea = war_economy
+				has_idea = tot_economic_mobilisation
+			}
+			NOT = {
+				OR = {
+				has_government = fascism
+				has_government = communism
+				}
+			}
+			
+		}
+
+		cost = 100
+
+		days_remove = 25
+
+		remove_effect = {
+			add_political_power = 25
+			remove_ideas = { united_fruit_company }
+			add_stability = 0.05
+		}
+	}
+
+	remove_united_fruit_company_a = {
+		visible = {
+			OR = {
+				original_tag = HON
+				original_tag = COS
+				original_tag = GUA
+			}
+			OR = {
+				has_government = communism
+				has_government = fascism
+			}
+		} 
+
+		icon = generic_nationalism
+
+		available = {
+			has_idea = united_fruit_company
+			OR = {
+				has_government = communism
+				has_government = fascism
+			}
+		}
+
+		cost = 25
+
+		days_remove = 10
+
+		remove_effect = {
+			add_political_power = 25
+			remove_ideas = { united_fruit_company }
+			add_stability = 0.05
+		}
+	}
+}

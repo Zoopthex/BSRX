@@ -1,0 +1,29 @@
+
+state={
+	id=32
+	name="STATE_32" 
+	manpower = 468290
+	
+	state_category = rural
+	
+	resources={
+		steel=10 # was: 56
+		aluminium=10 # was: 58
+	}
+
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = {
+			3768 1 
+		}
+		add_core_of = FRA
+		#add_core_of = OCC
+	}
+
+	provinces={
+	 780 3589 3768 6784 
+	}
+}

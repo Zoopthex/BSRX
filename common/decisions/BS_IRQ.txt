@@ -1,0 +1,69 @@
+iraq_flag = {
+
+	iraq_flag_change1 = {
+
+		visible = {		
+		ROOT = {
+		has_government = democratic
+				}
+		NOT = {
+		ROOT = {
+		has_country_flag = changed_iraq_flag
+				}
+			}
+		}
+
+		icon = generic_form_nation
+		
+		available = {
+
+		}
+
+		complete_effect = {
+		IRQ = {
+		set_cosmetic_tag = IRQ_1963
+		set_country_flag = changed_iraq_flag
+		clr_country_flag = changed_back_iraq_flag
+			}
+        }
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	iraq_flag_change2 = {
+
+		visible = {		
+		ROOT = {
+		has_government = democratic
+		has_country_flag = changed_iraq_flag
+				}
+		NOT = {
+		ROOT = {
+		has_country_flag = changed_back_iraq_flag
+				}
+			}
+		}
+
+		icon = generic_form_nation
+		
+		available = {
+
+		}
+
+		complete_effect = {
+		IRQ = {
+		drop_cosmetic_tag = yes
+		set_country_flag = changed_back_iraq_flag
+		clr_country_flag = changed_iraq_flag
+			}
+        }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

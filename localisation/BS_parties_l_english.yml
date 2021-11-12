@@ -1,0 +1,520 @@
+﻿l_english:
+
+ turk_straits_neutrality_party_:0 "International Straits Commission"
+ turk_straits_neutrality_party_long:0 "International Straits Commission"
+
+ Uracho_namai:0 "Uracho namai"
+ FIN_House_of_Hesse_neutrality_party:0 "Hessen Suku"
+ FIN_House_of_Hesse_neutrality_party_long:0 "Hessen Suku"
+ 
+ SIL_democratic_party:0 "NRLŚ"
+ SIL_democratic_party_long:0 "Naczelna Rada Ludowa na Śląsku"
+ SIL_communism_party:0 "ZZZ(S)"
+ SIL_communism_party_long:0 "Związek Śląskich Związków Zawodowych"
+ SIL_meutrality_party:0 "LAG"
+ SIL_neutrality_party_long:0 "Löwenberger Arbeitsgemeinschaft"
+ SIL_fascism_party:0 "NSDAP"
+ SIL_fascism_party_long:0 "Nationalsozialistische Deutsche Arbeiterpartei" 
+ 
+ RHI_neutrality_party:0 "House of Hohenzollern"
+ RHI_neutrality_party_long:0 "House of Hohenzollern"
+ RHI_communism_party:0 "KPD"
+ RHI_communism_party_long:0 "Kommunistische Partei Deutschlands"
+ RHI_democratic_party:0 "RDP"
+ RHI_democratic_party_long:0 "Rhenisches Demokratische Partei"
+ RHI_fascism_party:0 "NSDAP"
+ RHI_fascism_party_long:0 "Nationalsozialistische Deutsche Arbeiterpartei"
+ 
+ ZZZ_imperium_neutrality_party:0 "SIHP"
+ ZZZ_imperium_neutrality_party_long:0 "Sempronio Imperium Habenti Praetor"
+
+ ZZZ_imperium_communism_party:0 "Anarchist Remnants"
+
+ MAN_restored_neutrality_party:0 "Qing"
+ MAN_restored_neutrality_party_long:0 "Qīng dài"
+ 
+ ##Vanilla Countries
+ ENG_democratic_party_2:0 "Labour Party"
+ ENG_democratic_party_2_long:0 "Labour Party"
+
+ POL_fascism_party:0 "SN"
+ POL_fascism_party_long:0 "Stronnictwo Narodowe"
+ 
+ POL_fascism_dmowski_dead_party:0 "ONR-Falanga"
+ POL_fascism_dmowski_dead_party_long:0 "Ruch Narodowo-Radykalny Falanga"
+ 
+ DEN_neutrality_party:0 "Hus af Glücksburg"
+ DEN_neutrality_party_long:0 "Hus af Glücksburg"
+ NOR_neutrality_party:0 "Huset til Glücksburg"
+ NOR_neutrality_party_long:0 "Huset til Glücksburg"
+ SWE_neutrality_party:0 "Hus av Bernadotte"
+ SWE_neutrality_party_long:0 "Hus av Bernadotte"
+ LUX_neutrality_party:0 "Haus vun Nassau-Weilburg"
+ LUX_neutrality_party_long:0 "Haus vun Nassau-Weilburg"
+
+ SAF_neutrality_party:0 "United"
+ SAF_neutrality_party_long:0 "United National South African Party"
+ SAF_fascism_party:0 "OB"
+ SAF_fascism_party_long:0 "Ossewabrandwag"
+ SAF_neutrality_party_2:0 "Herenigde"
+ SAF_neutrality_party_2_long:0 "Herenigde Nasionale Party"
+ 
+ BRM_neutrality_party:0 "Poor Man's Party"
+
+ BEL_neutrality_party:0 "Maison de Belgique/Huis van België"
+ BEL_neutrality_party_long:0 "Maison de Belgique/Huis van België"
+
+ PGR_fascism_party:0 "ZM"
+ PGR_fascism_party_long:0 "Zhōnghuá Mínguó"
+ RGR_fascism_party:0 "ZM"
+ RGR_fascism_party_long:0 "Zhōnghuá Mínguó"
+ PGR_neutrality_party:0 "ZM"
+ PGR_neutrality_party_long:0 "Zhōnghuá Mínguó"
+ RGR_neutrality_party:0 "ZM"
+ RGR_neutrality_party_long:0 "Zhōnghuá Mínguó"
+ PGR_democratic_party:0 "Kuomintang"
+ PGR_democratic_party_long:0 "Kuomintang"
+ RGR_democratic_party:0 "Kuomintang"
+ RGR_democratic_party_long:0 "Kuomintang"
+ PGR_communism_party:0 "CPC"
+ PGR_communism_party_long:0 "Communist Party of China"
+ RGR_communism_party:0 "CPC"
+ RGR_communism_party_long:0 "Communist Party of China" 
+ 
+ GER_communism_party_long:0 "Kommunistische Partei Deutschlands"
+ GER_cdu_csu_party:0 "CDU/CSU"
+ GER_cdu_csu_party_long:0 "Christlich Demokratische Union Deutschlands/Christlich-Soziale Union in Bayern"
+ GER_spd_party:0 "SPD"
+ GER_spd_party_long:0 "Sozialdemokratische Partei Deutschlands"
+ SOV_fascism_party_long:0 "Russian Fascist Party"
+ ENG_communism_party_long:0 "Communist Party of Great Britain"
+ 
+ WGR_neutrality_party:0 "WAV"
+ WGR_neutrality_party_long:0 "Wirtschaftliche Aufbau-Vereinigung"
+ WGR_communism_party:0 "KPD"
+ WGR_communism_party_long:0 "Kommunistische Partei Deutschlands"
+ WGR_democratic_party:0 "CDU/CSU"
+ WGR_democratic_party_long:0 "Christlich Demokratische Union Deutschlands/Christlich-Soziale Union in Bayern"
+ WGR_fascism_party:0 "NPD"
+ WGR_fascism_party_long:0 "Nationaldemokratische Partei Deutschlands"
+ 
+ DDR_communism_party:0 "SED"
+ DDR_communism_party_long:0 "Sozialistische Einheitspartei Deutschlands"
+ DDR_democratic_party:0 "CDU"
+ DDR_democratic_party_long:0 "Christlich-Demokratische Union Deutschlands"
+ 
+ CRO_fascism_party:0 "Ustaša"
+ CRO_fascism_party_long:0 "Croatian Revolutionary Movement"
+ CRO_democratic_party:0 "Hrvatski blok" #Croatian Bloc
+ CRO_democraticm_party_long:0 "Hrvatski blok"
+ CRO_neutrality_party:0 "HSS"    #Croatian Peasant Party
+ CRO_neutrality_party_long:0 "Hrvatska seljačka stranka"
+ 
+ MEN_fascism_party:0 "MMG"
+ MEN_fascism_party_long:0 "Mongol Military Government"
+ 
+ SLV_democratic_party:0 "SLS"
+ SLV_democratic_party_long:0 "Slovenska ljudska stranka" #Slovene People's Party
+ SLV_neutrality_party:0 "SKS"
+ SLV_neutrality_party_long:0 "Slovenska kmetska stranka" #Slovene Peasant Party
+ 
+ PAR_democratic_party:0 "Partido Liberal"
+ PAR_democratic_party_long:0 "Partido Liberal"
+ PAR_neutrality_party:0 "Military Government"
+ PAR_neutrality_party_long:0 "Fuerzas Armadas de Paraguay" #Armed Forces of Paraguay
+
+ EGY_fascism_party:0 "Misr El-Fatah"
+ 
+ ALS_democratic_party:0 "URL"
+ ALS_democratic_party_long:0 "Union Républicaine Lorraine"
+ ALS_communism_party:0 "PAOP"
+ ALS_communism_party_long:0 "Parti Alsacien Ouvrier et Paysan"
+ ALS_neutrality_party:0 "IdAP"
+ ALS_neutrality_party_long:0 "Indépendants d'Action Populaire"
+ ALS_fascism_party:0 "EAB"
+ ALS_fascism_party_long:0 "Elsässische Arbeiter- und Bauernpartei"
+
+ PON_democratic_party:0 "EPÉK"
+ PON_democratic_party_long:0 "Ethnikí Proodeftikí Énosis Kéntrou"
+ PON_communism_party:0 "KKP"
+ PON_communism_party_long:0 "Kommounistikó Kómma Póntou"
+ PON_neutrality_party:0 "LK"
+ PON_neutrality_party_long:0 "Laïkòn Kómma"
+ PON_fascism_party:0 "ERK"
+ PON_fascism_party_long:0 "Ethnikón Rizospastikón Kómma"
+
+ ##German Countries
+ BAY_neutrality_party:0 "BBB"
+ BAY_neutrality_party_long:0 "Bayrischer Bauern Bund"
+ BAY_communism_party:0 "KPD"
+ BAY_communism_party_long:0 "Kommunistische Partei Deutschlands"
+ BAY_democratic_party:0 "BVP"
+ BAY_democratic_party_long:0 "Bayrische Volkspartei"
+ BAY_fascism_party:0 "NSDAP"
+ BAY_fascism_party_long:0 "Nationalsozialistische Deutsche Arbeiterpartei"
+
+ PRE_fascism_party:0 "NSDAP"
+ PRE_fascism_party_long:0 "Nationalsozialistische Deutsche Arbeiterpartei"
+ PRE_democratic_party:0 "SPD"
+ PRE_democratic_party_long:0 "Sozialdemokratische Partei Deutschlands"
+ PRE_communism_party:0 "KPD"
+ PRE_communism_party_long:0 "Kommunistische Partei Deutschlands"
+ PRE_neutrality_party:0 "DNVP"
+ PRE_neutrality_party_long:0 "Deutschnationale Volkspartei"
+ 
+ BDN_fascism_party:0 "NSDAP"
+ BDN_fascism_party_long:0 "Nationalsozialistische Deutsche Arbeiterpartei"
+ BDN_democratic_party:0 "SPD"
+ BDN_democratic_party_long:0 "Sozialdemokratische Partei Deutschlands"
+ BDN_communism_party:0 "KPD"
+ BDN_communism_party_long:0 "Kommunistische Partei Deutschlands"
+ 
+ MEK_fascism_party:0 "NSDAP"
+ MEK_fascism_party_long:0 "Nationalsozialistische Deutsche Arbeiterpartei"
+ MEK_democratic_party:0 "SPD"
+ MEK_democratic_party_long:0 "Sozialdemokratische Partei Deutschlands"
+ MEK_communism_party:0 "KPD"
+ MEK_communism_party_long:0 "Kommunistische Partei Deutschlands"
+ 
+ SAX_fascism_party:0 "NSDAP"
+ SAX_fascism_party_long:0 "Nationalsozialistische Deutsche Arbeiterpartei"
+ SAX_democratic_party:0 "SPD"
+ SAX_democratic_party_long:0 "Sozialdemokratische Partei Deutschlands"
+ SAX_communism_party:0 "KPD"
+ SAX_communism_party_long:0 "Kommunistische Partei Deutschlands"
+ 
+ ##German puppet
+ RKO_fascism_party:0 "OAdNSDAP"
+ RKO_democratic_party:0 "Omakaitse"
+ RKO_neutrality_party:0 "AK" 
+ RKO_neutrality_party_long:0 "Armia Krajowa"
+ RKO_communism_party:0 "TsShPD" 
+ RKO_communism_party_long:0 "Tsentralnyj Shtab Partizanskovo Dvizheniya"  
+ ROK_fascism_party_long:0 "Ostland Arbeitsbereich der Nationalsozialistische Deutsche Arbeiterpartei"
+ RKD_fascism_party:0 "DWAdNSDAP"
+ RKD_fascism_party_long:0 "Don-Wolgan Arbeitsbereich der Nationalsozialistische Deutsche Arbeiterpartei"
+ RKU_fascism_party:0 "UAdNSDAP"
+ RKU_fascism_party_long:0 "Ukrainischer Arbeitsbereich der Nationalsozialistische Deutsche Arbeiterpartei"
+ RKK_fascism_party:0 "KAdNSDAP"
+ RKK_fascism_party_long:0 "Kaukasian Arbeitsbereich der Nationalsozialistische Deutsche Arbeiterpartei"
+ RKM_fascism_party:0 "MAdNSDAP" 
+ RKM_fascism_party_long:0 "Moskowien Arbeitsbereich der Nationalsozialistische Deutsche Arbeiterpartei"
+ RKT_fascism_party:0 "TAdNSDAP"
+ RKT_fascism_party_long:0 "Turkestan Arbeitsbereich der Nationalsozialistische Deutsche Arbeiterpartei"
+ NID_fascism_party:0 "BSN"
+ NID_fascism_party_long:0 "Duitse Bezettingsmacht in Nederland"
+ NID_neutrality_party:0 "LO"
+ NID_neutrality_party_long:0 "Landelijke Organisatie voor Hulp aan Onderduikers"
+ NID_democratic_party:0 "NSF"
+ NID_democratic_party_long:0 "Nationaal Steun Fonds"
+ NID_communism_party:0 "RVV"
+ NID_communism_party_long:0 "Raad van Verzet in het Koninkrijk der Nederlanden" 
+ NWG_fascism_party:0 "NS"
+ NWG_fascism_party_long:0 "Nasjonal Samling"
+ BNF_fascism_party:0 "NSDAP - BB"
+ BNF_fascism_party_long:0 "Nationalsozialistische Deutsche Arbeiterpartei - Belgische Besatzungsmächte"
+ GGO_fascism_party:0 "Generalgouvernement"
+ GGO_neutrality_party:0 "Armia Krajowa" 
+ GGO_communism_party:0 "Gwardia Ludowa"  
+ GGO_democratic_party:0 "Delegatura Rządu na Kraj"   
+ PBM_fascism_party:0 "NSDAP - ABuM"
+ PBM_fascism_party_long:0 "Nationalsozialistische Deutsche Arbeiterpartei - Abteilung Böhmen und Mähren"
+ PBM_neutrality_party:0 "ÚVOD" 
+ PBM_neutrality_party_long:0 "Ústření vedení odboje domácího"  
+ PBM_communism_party:0 "PVVZ"  
+ PBM_communism_party_long:0 "Petiční výbor věrni zůstaneme"   
+ PBM_democratic_party:0 "ON" 
+ PBM_democratic_party_long:0 "Obrana národa"  
+ RKU_democratic_party:0 "OUN-M"
+ RKU_democratic_party_long:0 "Organizatsiya Ukrainskikh Natsionalistov (Melnikovtsy)"
+ RKU_neutrality_party:0 "OUN-B"
+ RKU_neutrality_party_long:0 "Organizatsiya Ukrainskikh Natsionalistov (Banderovskoye Dvizheniye)"
+ RKU_communism_party:0 "CP(b)U"
+ RKU_communism_party_long:0 "Communist Party (Bolsheviks) of Ukraine" 
+ BGN_fascism_party:0 "NSDAP - SS"
+ BGN_fascism_party_long:0 "Nationalsozialistische Deutsche Arbeiterpartei - Schutzstaffel"
+ SSP_fascism_party:0 "NSDAP - VDSS"
+ SSP_fascism_party_long:0 "Nationalsozialistische Deutsche Arbeiterpartei - Volksdeutsche Schutzstaffel"
+ SSG_fascism_party:0 "NSDAP - SS"
+ SSG_fascism_party_long:0 "Nationalsozialistische Deutsche Arbeiterpartei - Schutzstaffel"
+ MTA_fascism_party:0 "GfZA - Göringite"
+ MTA_fascism_party_long:0 "Generalbüro für Zentralafrikanische Angelegenheiten - Göringite"
+ MTA_neutrality_party:0 "Gouverneur der Kolonie"
+ URA_fascism_party:0 "OKW - BU"
+ URA_fascism_party_long:0 "Oberkommando der Wehrmacht - Betriebszone Ural"
+ URA_vlasov_fascism_party:0 "KONR"
+ URA_vlasov_fascism_party_long:0 "Komitet osvobozhdeniya narodov Rossii"
+
+ ##American Countries
+ CAL_communism_party:0 "Communist Party USA"
+ CAL_democratic_party:0 "Republican Party"
+ CAL_fascism_party:0 "Silver Legion of America"
+ 
+ TEX_communism_party:0 "Communist Party USA"
+ TEX_democratic_party:0 "Democratic Party"
+ TEX_fascism_party:0 "Silver Legion of America"
+
+
+ ##Belgian Countries
+ FLA_fascism_party:0 "VNV"
+ FLA_fascism_party_long:0 "Vlaams Nationaal Verbond"
+ FLA_communism_party:0 "KPB"
+ FLA_communism_party_long:0 "Kommunistische Partij van België"
+ FLA_democratic_party:0 "KP"
+ FLA_democratic_party_long:0 "Katholieke Partij"
+ FLA_neutrality_party:0 "NRM"
+ FLA_neutrality_party_long:0 "National Royalist Movement"
+
+ WLL_fascism_party:0 "REX"
+ WLL_fascism_party_long:0 "Parti Rexiste"
+ WLL_communism_party:0 "PCB"
+ WLL_communism_party_long:0 "Parti Communiste de Belgique"
+ WLL_democratic_party:0 "PC"
+ WLL_democratic_party_long:0 "Parti catholique"
+ WLL_neutrality_party:0 "NRM"
+ WLL_neutrality_party_long:0 "National Royalist Movement"
+ 
+
+ ##etc
+ LIE_neutrality_party:0 "FBP"
+ LIE_neutrality_party_long:0 "Fortschrittliche Bürgerpartei"
+ LIE_democratic_party:0 "VU"
+ LIE_democratic_party_long:0 "Vaterländische Union"
+ LIE_fascism_party:0 "VDBL"
+ LIE_fascism_party_long:0 "Volksdeutsche Bewegung in Liechtenstein"
+
+ POL_neutrality_party:0 "Zamek" 
+ POL_neutrality_party_long:0 "Grupa Zamkowa oraz Klonowa(GISZ)"
+ POL_neutrality_party_zamek:0 "Zamek" 
+ POL_neutrality_party_zamek_long:0 "Grupa Zamkowa oraz Klonowa(GISZ)" 
+ 
+ KTS_neutrality_party:0 "Casa dei Borbone delle Due Sicilie"
+ KTS_communism_party:0 "PCPS"
+ KTS_communism_party_long:0 "Partito Comunista Popolare Siciliano"
+ KTS_democratic_party:0 "PLS"
+ KTS_democratic_party_long:0 "Partito Liberale Siciliano"
+ KTS_fascism_party:0 "PNS"
+ KTS_fascism_party_long:0 "Partito Nazionalista Siciliano"
+ 
+ VCT_neutrality_party:0 "Curia Romana"
+
+ SMR_democratic_party:0 "Consiglio Grande e Generale"
+ SMR_fascism_party:0 "PFS"
+ SMR_fascism_party_long:0 "Partito Fascista Sammarinese"
+ SMR_communism_party:0 "PCS"
+ SMR_communism_party_long:0 "Partito Comunista Sammarinese"
+
+ ADR_democratic_party:0 "Consell General d'Andorra"
+ MCO_neutrality_party:0 "Maison Grimaldi"
+ 
+ DAN_fascism_party:0 "NSDAP"
+ DAN_fascism_party_long:0 "Nationalsozialistische Deutsche Arbeiterpartei"
+ DAN_communism_party:0 "KPD-D"
+ DAN_communism_party_long:0 "Kommunistische Partei Deutschlands-Danzig"
+ DAN_democratic_party:0 "SPFSD"
+ DAN_democratic_party_long:0 "Sozialdemokratische Partei der Freien Stadt Danzig"
+ DAN_neutrality_party:0 "Polnische Partei"
+ DAN_neutrality_party_long:0 "Polnische Partei"
+ 
+ ITA_fascism_party_civil_war:0 "Partito Fascista Repubblicano"
+ ITA_fascism_party_civil_war_long:0 "Partito Fascista Repubblicano"
+ 
+ BRT_fascism_party:0 "Parti National Breton"
+ 
+ KUR_fascism_party:0 "Kurdish Nationalist"
+ KUR_fascism_party_long:0 "Kurdish Nationalist"
+ KUR_communism_party:0 "KKP"
+ KUR_communism_party_long:0 "Partiya Komuniste Kurdistan"
+ KUR_democratic_party:0 "KDP"
+ KUR_democratic_party_long:0 "Partiya Demokrat a Kurdistane"
+ 
+ HKG_democratic_party:0 "Legislative Council of Hong Kong"
+
+ ROK_neutrality_party:0 "Left-Right Unification Movement"
+ ROK_fascism_party:0 "KIP"
+ ROK_fascism_party_long:0 "Korea Independence Party"
+ ROK_communism_party:0 "Workers' Party of South Korea"
+ ROK_democratic_party:0 "Liberal Party"
+ 
+ DPK_communism_party:0 "Workers' Party of Korea"
+ 
+ OCC_fascism_party:0 "PNO"
+ OCC_fascism_party_long:0 "Partit de la Nacion Occitana"
+ 
+ GRE_Metaxa:0 "Metaxá"
+ GRE_Metaxa_long:0 "Kathestós Metaxá"
+ 
+ HUN_Arrow_Cross_party:0 "NYKP"
+ HUN_Arrow_Cross_party_long:0 "Nyilaskeresztes Párt"
+
+ SER_Arrow_Cross_party:0 "GNS"
+ SER_Arrow_Cross_party_long:0 "Nedićeva vlada"
+ 
+ ITA_Arrow_Cross_party:0 "PFR"
+ ITA_Arrow_Cross_party_long:0 "Partito Fascista Repubblicano"
+ 
+ ADV_fascism_party:0 "German American Bund"
+ ADV_communism_party:0 "Communist Party USA"
+ ADV_democratic_party:0 "Democratic Party"
+
+ BYRD_fascism_party:0 "Byrd's Administration"
+
+ CAL_RK_fascism_party:0 "OKM"
+ CAL_RK_fascism_party_long:0 "Oberkommando der Marine"
+
+ ENG_kingdom_ger_party_long:0 "Royal Party"
+ ENG_kingdom_ger_party:0 "RP"
+ 
+ american_rk_party:0 "OKW"
+ american_rk_party_long:0 "Oberkommando der Wehrmacht"
+
+ NEE_GER_party:0 "IAA"
+ NEE_GER_party_long:0 "Imperiale Autorität in Amerika"
+
+ SNG_KLM_party:0 "DSiO"
+ SNG_KLM_party_long:0 "Deutsche Seemacht in Ostasien"
+ 
+ LTN_JAP_party:0 "Nihon no gyōsei"
+ LTN_JAP_party_long:0 "Nihon no gyōsei"
+ 
+ HAW_JAP_party:0 "Nihon no gyōsei"
+ HAW_JAP_party_long:0 "Nihon no gyōsei"
+ 
+ MEL_JAP_party:0 "Nihon no gyōsei"
+ MEL_JAP_party_long:0 "Nihon no gyōsei"
+ 
+ FOR_JAP_party:0 "Nihon no gyōsei"
+ FOR_JAP_party_long:0 "Nihon no gyōsei"
+
+ NZL_JAP_party:0 "Nihon no gyōsei"
+ NZL_JAP_party_long:0 "Nihon no gyōsei"
+ 
+ AST_JAP_party:0 "Nihon no gyōsei"
+ AST_JAP_party_long:0 "Nihon no gyōsei"
+ 
+ SRL_JAP_party:0 "Nihon no gyōsei"
+ SRL_JAP_party_long:0 "Nihon no gyōsei"
+ 
+ ALA_JAP_party:0 "Nihon no gyōsei"
+ ALA_JAP_party_long:0 "Nihon no gyōsei"
+ 
+ CAL_JAP_party:0 "Nihon no gyōsei"
+ CAL_JAP_party_long:0 "Nihon no gyōsei"
+ 
+ AST_democratic_party:0 "UAP"
+ AST_democratic_party_long:0 "United Australia Party"
+ AST_democratic_party_2:0 "Country"
+ AST_democratic_party_2_long:0 "Country Party"
+ AST_democratic_party_3:0 "Labor"
+ AST_democratic_party_3_long:0 "Labor Party"
+ 
+ CAN_neutrality_party:0 "Governor-General"
+ CAN_neutrality_party_long:0 "Office of the Governor-General"
+ 
+ AST_neutrality_party:0 "Governor-General"
+ AST_neutrality_party_long:0 "Office of the Governor-General"
+ 
+ FRA_neutrality_party:0 "AF"
+ FRA_neutrality_party_long:0 "Action française"
+ 
+ GER_neutrality_party:0 "Junkers"
+ GER_neutrality_party_long:0 "Junkers"
+ 
+ CZE_neutrality_party:0 "Military Junta"
+ CZE_neutrality_party_long:0 "Military Junta"
+ 
+ SOV_neutrality_party:0 "Russian Military Government"
+ SOV_neutrality_party_long:0 "Russian Military Government"
+ 
+ INS_fascism_party:0 "PNI"
+ INS_fascism_party_long:0 "Partai Nasional Indonesia"
+ INS_democratic_party:0 "Governor-General"
+ INS_democratic_party:0 "Office of the Governor-General"
+ INS_neutrality_party:0 "PNI"
+ INS_neutrality_party_long:0 "Partai Nasional Indonesia"
+ 
+ ITA_neutrality_badogliano_long:0 "Temporary Badoglio Government"
+ ITA_neutrality_badogliano:0 "Temporary Badoglio Government"
+ 
+ #Guatemala 
+ GUA_neutrality_party:0 "PLP"
+ GUA_neutrality_party_long:0 "Partido Libertador Progresista"
+ GUA_communism_party:0 "PS"
+ GUA_communism_party_long:0 "Partido Socialista"
+ GUA_fascism_party:0 "PIN"
+ GUA_fascism_party_long:0 "Partido de Integridad Nacional" 
+ 
+ NIC_neutrality_party:0 "PLN"
+ NIC_neutrality_party_long:0 "Partido Liberal Nacionalista"
+ NIC_communism_party:0 "PSN"
+ NIC_communism_party_long:0 "Partido Socialista Nicaragüense"
+ NIC_fascism_party:0 "GNN"
+ NIC_fascism_party_long:0 "Guardia Nacional de Nicaragua" 
+  
+ 
+ #Finland
+ FIN_neutrality_party:1 "KOK"
+ FIN_neutrality_party_long:1 "Kokoomus"
+ FIN_democratic_party:0 "KOK"
+ FIN_democratic_party_long:0 "Kokoomus"
+ 
+ FIN_neutrality_party_2:1 "ML"
+ FIN_neutrality_party_2_long:1 "Maalaisliitto"
+ FIN_democratic_party_2:0 "ML"
+ FIN_democratic_party_2_long:0 "Maalaisliitto"
+ 
+ FIN_neutrality_party_3:1 "KEP"
+ FIN_neutrality_party_3_long:1 "Kansallinen Edistyspuolue"
+ FIN_democratic_party_3:0 "KEP"
+ FIN_democratic_party_3_long:0 "Kansallinen Edistyspuolue"
+ 
+ FIN_neutrality_party_4:1 "Sotahallitus"
+ FIN_neutrality_party_4_long:1 "Mannerheimin Hallitus"
+ FIN_democratic_party_4:0 "Sotahallitus"
+ FIN_democratic_party_4_long:0 "Mannerheimin Hallitus"
+
+ #Japan
+ JAP_neutrality_party:1 "Militarists"
+ JAP_neutrality_party_long:1 "Militarists"
+ 
+ JAP_fascism_party:0 "Militarists"
+ JAP_fascism_party_long:0 "Militarists"
+ 
+ JAP_party_radical:1 "Radical Militarists"
+ JAP_party_radical_long:1 "Radical Militarists"
+ 
+ JAP_yokusankai_party:0 "Taisei Yokusankai"
+ 
+ JAP_showa_loyalist_party:0 "Shōwa Loyalists"
+ JAP_showa_loyalist_party_long:0 "Emperor Shōwa Loyalists"
+ 
+ JAP_neutrality_party_kodoha:0 "Kōdōha"
+ JAP_neutrality_party_kodoha_long:0 "Kōdōha Faction"
+ 
+ USA_neutrality_party:1 "National Defense"
+ USA_neutrality_party_long:1 "Government of National Defense"
+ 
+ ZZZ_communism_party:0 "Anarchy"
+ LIB_democratic_party:0 "True Whig Party"
+
+ ISR_fascism_party:0 "Lehi"
+ ISR_fascism_party_long:0 "Lohamei Herut Israel"
+ 
+ RUS_EMPIRE_neutrality_party:0 "House of Romanov"
+ RUS_EMPIRE_neutrality_party_long:0 "House of Romanov"
+ 
+ GFA_fascism_party:0 "NSDAP"
+ GFA_fascism_party_long:0 "Nationalsozialistische Deutsche Arbeiterpartei"
+ GFA_democratic_party:0 "CNR"
+ GFA_democratic_party_long:0 "Conseil National de la Résistance"
+ GFA_communism_party:0 "FTPF"
+ GFA_communism_party_long:0 "Francs-Tireurs et Partisans"
+ GFA_neutrality_party:0 "ORA"
+ GFA_neutrality_party_long:0 "Organisation de Résistance de l'Armée" 
+ 
+ FEM_neutrality_party:0 "House of Karsten and Argyle"
+ FEM_neutrality_party_long:0 "House of Karsten and Argyle"
+ 
+ FEM_fascism_party:0 "Crusch and Felix's Personal Dominion"
+ FEM_fascism_party_long:0 "Crusch and Felix's Personal Dominion"
+ 

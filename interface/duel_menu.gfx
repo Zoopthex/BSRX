@@ -1,0 +1,27 @@
+spriteTypes = {	
+	
+	spriteType = {
+		name = "GFX_small_shield_overlay"
+		texturefile = "gfx/interface/small_shield_overlay.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_small_shield_mask"
+		texturefile = "gfx/interface/small_shield_mask.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pol_leader_frame_George_V"
+		texturefile = "gfx/interface/pol_leader_frame_George_V.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pol_duel_open"
+		texturefile = "gfx/interface/duel_open.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pol_duel_close"
+		texturefile = "gfx/interface/duel_close.dds"
+	}
+}

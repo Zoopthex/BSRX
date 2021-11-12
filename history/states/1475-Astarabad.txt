@@ -1,0 +1,23 @@
+
+state={
+	id=1475
+	name="STATE_1475"
+
+	history={
+		owner = PER
+		buildings = {
+			infrastructure = 4
+			air_base = 3
+
+		}
+		add_core_of = PER
+
+	}
+
+	provinces={
+		4580 10385 10768 
+	}
+	manpower=2000000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

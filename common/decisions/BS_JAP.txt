@@ -1,0 +1,3134 @@
+JAP_government_general_category = {
+
+	JAP_latin_america {
+
+		visible {
+			JAP = {
+				has_government = fascism
+				has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere
+			}
+		}
+
+		icon = jap_pacific_guardian
+
+		fire_only_once = yes
+
+		available {
+			JAP = {
+			controls_state = 475
+			controls_state = 1727
+			controls_state = 1591
+			controls_state = 313
+			controls_state = 1851
+			controls_state = 1867
+			controls_state = 1886
+			controls_state = 1852
+			controls_state = 311
+			controls_state = 1850
+			controls_state = 314
+			controls_state = 1888
+			controls_state = 1887
+			controls_state = 312
+			controls_state = 1870
+			controls_state = 1858
+			controls_state = 1857
+			controls_state = 1593
+			controls_state = 317
+			controls_state = 1871
+			controls_state = 1592
+			controls_state = 1855
+			controls_state = 1856
+			controls_state = 316
+			controls_state = 917
+			controls_state = 304
+			controls_state = 493
+			controls_state = 306
+			controls_state = 486
+			controls_state = 1442
+			controls_state = 1830
+			controls_state = 1834
+			controls_state = 305
+			controls_state = 864
+			controls_state = 315
+			controls_state = 860
+			controls_state = 318
+			controls_state = 319
+			controls_state = 689
+			controls_state = 690
+			controls_state = 693
+			}
+		}
+
+		complete_effect = {
+			CHP = {
+			set_cosmetic_tag = LTN_JAP_GG
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			set_political_party = {
+				ideology = fascism
+				popularity = 100
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = LTN_JAP_party_long
+				name = LTN_JAP_party
+			}
+			transfer_state = 475
+			transfer_state = 1727
+			transfer_state = 1591
+			transfer_state = 313
+			transfer_state = 1851
+			transfer_state = 1867
+			transfer_state = 1886
+			transfer_state = 1852
+			transfer_state = 311
+			transfer_state = 1850
+			transfer_state = 314
+			transfer_state = 1888
+			transfer_state = 1887
+			transfer_state = 312
+			transfer_state = 1870
+			transfer_state = 1858
+			transfer_state = 1857
+			transfer_state = 1593
+			transfer_state = 317
+			transfer_state = 1871
+			transfer_state = 1592
+			transfer_state = 1855
+			transfer_state = 1856
+			transfer_state = 316
+			transfer_state = 917
+			transfer_state = 304
+			transfer_state = 493
+			transfer_state = 306
+			transfer_state = 486
+			transfer_state = 1442
+			transfer_state = 1830
+			transfer_state = 1834
+			transfer_state = 305
+			transfer_state = 864
+			transfer_state = 315
+			transfer_state = 860
+			transfer_state = 318
+			transfer_state = 319
+			transfer_state = 689
+			transfer_state = 690
+			transfer_state = 693
+			set_capital = 316
+		}
+			JAP = {
+				set_autonomy = { target = CHP autonomy_state = autonomy_puppet }
+				set_country_flag = LTN_established
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				USA = { has_capitulated = yes }
+			}
+		}
+	}
+
+	JAP_expand_LTN_to_yucatan = {
+
+		highlight_state_targets = {
+			state = 474
+			state = 1849
+		}
+
+		visible = {
+			JAP = {
+				has_country_flag = LTN_established
+			}
+		}
+
+	icon = eng_trade_unions_support
+
+	fire_only_once = yes
+
+	available = {
+		JAP = {
+			controls_state = 474
+			controls_state = 1849
+		}
+	}
+
+	complete_effect = {
+
+		CHP = {
+			transfer_state = 474
+			transfer_state = 1849
+		}
+		JAP = {
+			set_country_flag = LTN_yucatun_transferred
+		}
+	}
+
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 100
+			}
+		}
+	}
+
+	JAP_expand_LTN_to_panama_canal = {
+
+		highlight_state_targets = {
+			state = 685
+		}
+
+		visible = {
+			JAP = {
+				has_country_flag = LTN_established
+			}
+		}
+
+	icon = eng_trade_unions_support
+
+	fire_only_once = yes
+
+	available = {
+		JAP = {
+			controls_state = 685
+		}
+	}
+
+	complete_effect = {
+
+		CHP = {
+			transfer_state = 685
+		}
+		JAP = {
+			set_country_flag = LTN_panama_canal_transferred
+		}
+	}
+
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 100
+			}
+		}
+	}
+
+	JAP_east_pacific = {
+
+		visible = {
+			JAP = { 
+				has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere
+			}
+		}
+
+		icon = jap_pacific_guardian
+
+		fire_only_once = yes
+
+		available = {
+			JAP = {
+				controls_state = 629
+				controls_state = 631
+				controls_state = 630
+				controls_state = 727
+				controls_state = 642
+				controls_state = 1355
+				controls_state = 1356
+				controls_state = 641
+				controls_state = 726
+				controls_state = 1102
+			}
+		}
+
+		complete_effect = {
+			HAW = {
+				set_cosmetic_tag = HAW_JAP_GG
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 100
+				}
+				set_party_name = {
+					ideology = fascism
+					long_name = HAW_JAP_party_long
+					name = HAW_JAP_party
+				}
+					transfer_state = 629
+					transfer_state = 631
+					transfer_state = 630
+					transfer_state = 727
+					transfer_state = 642
+					transfer_state = 1355
+					transfer_state = 1356
+					transfer_state = 641
+					transfer_state = 726
+					transfer_state = 1102
+			}
+			JAP = {
+				set_autonomy = { target = HAW autonomy_state = autonomy_puppet }
+				set_country_flag = HAW_established
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				USA = { has_capitulated = yes }
+			}
+		}
+	}
+
+	JAP_melanesia = {
+
+		visible = {
+			JAP = {
+			has_government = fascism
+			has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere
+			}
+		}
+
+		icon = jap_pacific_guardian
+
+		fire_only_once = yes
+
+		available = {
+			JAP = {
+				controls_state = 737
+				controls_state = 1035
+				controls_state = 634
+				controls_state = 734
+				controls_state = 643
+				controls_state = 636
+				controls_state = 1101
+				controls_state = 635
+			}
+		}
+
+		complete_effect = {
+			SOL = {
+				set_cosmetic_tag = MEL_JAP_GG
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 100
+				}
+				set_party_name = {
+					ideology = fascism
+					long_name = MEL_JAP_party_long
+					name = MEL_JAP_party
+				}
+				transfer_state = 737
+				transfer_state = 1035
+				transfer_state = 634
+				transfer_state = 734
+				transfer_state = 643
+				transfer_state = 636
+				transfer_state = 1101
+				transfer_state = 635
+				set_capital = 737
+			}
+			JAP = {
+				set_autonomy = { target = SOL autonomy_state = autonomy_puppet }
+				set_country_flag = MEL_established
+			}	
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				USA = { has_capitulated = yes }
+			}
+		}
+	}
+
+	JAP_formosa = {
+
+		visible = {
+			JAP = {
+			has_government = fascism
+			has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere
+			}
+		}
+
+		icon = jap_pacific_guardian
+
+		fire_only_once = yes
+
+		available = {
+			JAP = {
+				controls_state = 591
+				controls_state = 326
+			}
+		}
+
+		complete_effect = {
+			FOR = { 
+				set_cosmetic_tag = FOR_JAP_GG
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 100
+				}
+				set_party_name = {
+					ideology = fascism
+					long_name = FOR_JAP_party_long
+					name = FOR_JAP_party
+				}
+				transfer_state = 591
+				transfer_state = 326
+				remove_state_core = 524
+				add_state_core = 591
+				set_capital = 591
+			}
+			JAP = {
+				set_autonomy = { target = FOR autonomy_state = autonomy_puppet }
+				set_country_flag = FOR_established
+			}
+		}
+
+		
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				USA = { has_capitulated = yes }
+			}
+		}
+	}
+
+	JAP_new_zealand = {
+
+		visible = {
+			JAP = {
+				has_government = fascism
+				has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere
+			}
+		}
+
+		icon = jap_pacific_guardian
+
+		fire_only_once = yes
+
+		available = {
+			JAP = {
+				controls_state = 284
+				controls_state = 723
+			}
+		}
+	
+		complete_effect = {
+			NZL = {
+				set_party_name = {
+					ideology = fascism
+					long_name = NZL_JAP_party_long
+					name = NZL_JAP_party
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 100
+				}
+				set_cosmetic_tag = NZL_JAP_GG
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				transfer_state = 284
+				transfer_state = 723
+			}
+			JAP = {
+				set_autonomy = { target = NZL autonomy_state = autonomy_puppet }
+			}
+		}
+
+		
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				USA = { has_capitulated = yes }
+			}
+		}
+	}
+
+	JAP_australia = {
+
+		visible = {
+			JAP = {
+				has_government = fascism
+				has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere
+			}
+		}
+
+		icon = jap_pacific_guardian
+
+		fire_only_once = yes
+
+		available = {
+			JAP = {
+				controls_state = 285
+				controls_state = 1786
+				controls_state = 517
+				controls_state = 521
+				controls_state = 923
+				controls_state = 922
+				controls_state = 520
+				controls_state = 924
+				controls_state = 921
+				controls_state = 519
+				controls_state = 920
+				controls_state = 674
+				controls_state = 919
+				controls_state = 522
+				controls_state = 518
+			}
+		}
+	
+		complete_effect = {
+			AST = {
+				set_party_name = {
+					ideology = fascism
+					long_name = AST_JAP_party_long
+					name = AST_JAP_party
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 100
+				}
+				set_cosmetic_tag = AST_JAP_GG
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				transfer_state = 285
+				transfer_state = 1786
+				transfer_state = 517
+				transfer_state = 521
+				transfer_state = 923
+				transfer_state = 922
+				transfer_state = 520
+				transfer_state = 924
+				transfer_state = 921
+				transfer_state = 519
+				transfer_state = 920
+				transfer_state = 674
+				transfer_state = 919
+				transfer_state = 522
+				transfer_state = 518
+			}
+			JAP = {
+				set_autonomy = { target = AST autonomy_state = autonomy_puppet }
+			}
+		}
+
+		
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				USA = { has_capitulated = yes }
+			}
+		}
+	}
+
+	JAP_california = {
+
+		visible = {
+			JAP = {
+				has_government = fascism
+				has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere
+			}
+		}
+
+		icon = jap_pacific_guardian
+
+		fire_only_once = yes
+
+		available = {
+			JAP = {
+				controls_state = 1649
+				controls_state = 854
+				controls_state = 385
+				controls_state = 1650
+				controls_state = 1640
+				controls_state = 1517
+				controls_state = 1690
+				controls_state = 1689
+				controls_state = 1695
+				controls_state = 1696
+				controls_state = 855
+				controls_state = 378
+				controls_state = 1694
+				controls_state = 1518
+				controls_state = 1692
+				controls_state = 1693
+				controls_state = 1691
+				controls_state = 379
+				controls_state = 1676
+			}
+		}
+
+		complete_effect = {
+			CAL = {
+				set_party_name = {
+					ideology = fascism
+					long_name = CAL_JAP_party_long
+					name = CAL_JAP_party
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 100
+				}
+				set_cosmetic_tag = CAL_JAP_GG
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				transfer_state = 1649
+				transfer_state = 854
+				transfer_state = 385
+				transfer_state = 1650
+				transfer_state = 1640
+				transfer_state = 1517
+				transfer_state = 1690
+				transfer_state = 1689
+				transfer_state = 1695
+				transfer_state = 1696
+				transfer_state = 855
+				transfer_state = 378
+				transfer_state = 1694
+				transfer_state = 1518
+				transfer_state = 1692
+				transfer_state = 1693
+				transfer_state = 1691
+			}
+			JAP = {
+				set_autonomy = { target = CAL autonomy_state = autonomy_puppet }
+			}
+		}
+
+		
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 100
+				USA = { has_capitulated = yes }
+			}
+		}
+	}
+	JAP_alaska = {
+
+		visible = {
+			JAP = {
+				has_government = fascism
+				has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere
+			}
+		}
+
+		icon = jap_pacific_guardian
+
+		fire_only_once = yes
+
+		available = {
+			controls_state = 463
+			controls_state = 650
+			controls_state = 1562
+			controls_state = 1564
+			controls_state = 1621
+			controls_state = 471
+			controls_state = 1645
+			controls_state = 1621
+			controls_state = 1565
+			controls_state = 473
+			controls_state = 739
+			controls_state = 740
+			controls_state = 1418
+			controls_state = 386
+			controls_state = 1713
+			controls_state = 1714
+			controls_state = 1810
+		}
+
+		complete_effect = {
+			ALA = {
+				set_party_name = {
+					ideology = fascism
+					long_name = ALA_JAP_party_long
+					name = ALA_JAP_party
+				} 
+				set_political_party = {
+					ideology = fascism
+					popularity = 100
+				}
+				set_cosmetic_tag = ALA_JAP_GG
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				transfer_state = 463
+				transfer_state = 650
+				transfer_state = 1564
+				transfer_state = 1562
+				transfer_state = 1621
+				transfer_state = 471
+				transfer_state = 1645
+				transfer_state = 1621
+				transfer_state = 1565
+				transfer_state = 473
+				transfer_state = 739
+				transfer_state = 740
+				transfer_state = 1418
+				transfer_state = 386
+				transfer_state = 1713
+				transfer_state = 1714
+				transfer_state = 1810
+			}
+			JAP = {
+				set_autonomy = { target = ALA autonomy_state = autonomy_puppet }
+			}
+		}
+
+		
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 100
+				USA = { has_capitulated = yes }
+			}
+		}
+	}
+	
+	
+	JAP_ceylon = {
+
+		visible = {
+			JAP = {
+			has_government = fascism
+			has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere
+			}
+		}
+
+		icon = jap_pacific_guardian
+
+		fire_only_once = yes
+
+		available = {
+			controls_state = 423
+			controls_state = 320
+			controls_state = 424
+			controls_state = 425
+			controls_state = 1946
+			controls_state = 1948
+			controls_state = 1949
+		}
+
+		complete_effect = {
+			SRL = { 
+				set_cosmetic_tag = SRL_JAP_GG
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = fascism
+					popularity = 100
+				}
+				set_party_name = {
+					ideology = fascism
+					long_name = SRL_JAP_party_long
+					name = SRL_JAP_party
+				}
+				transfer_state = 423
+				transfer_state = 320
+				transfer_state = 424
+				transfer_state = 425
+				transfer_state = 1946
+				transfer_state = 1948
+				transfer_state = 1949
+				remove_state_core = 422
+				remove_state_core = 1817
+				add_state_core = 423
+				set_capital = 423
+			}
+			JAP = {
+				set_autonomy = { target = SRL autonomy_state = autonomy_puppet }
+			}
+		}
+
+		
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				RAJ = { has_capitulated = yes }
+			}
+		}
+	}
+}
+
+JAP_GEACPS = {
+	#RussiaDecisions
+	JAP_establish_FER = {
+
+		highlight_state_targets = {
+			state = 562
+			state = 637
+			state = 574
+			state = 644
+			state = 1840
+		}
+		
+		visible = {
+			JAP = {
+				has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere
+				has_government = fascism
+				controls_state = 408
+			}
+		}
+
+		icon = generic_form_nation
+
+		fire_only_once = yes
+
+		available = {
+			JAP = {
+				controls_state = 562
+				controls_state = 637
+				controls_state = 574
+				controls_state = 644
+				controls_state = 1840
+			}
+			NOT = {	country_exists = FER }
+		}
+
+		complete_effect = {
+			FER = {
+			transfer_state = 562
+			transfer_state = 637
+			transfer_state = 574
+			transfer_state = 644
+			transfer_state = 1840
+			set_capital = 562
+			set_cosmetic_tag = FER_JAP_GEACPS
+			}
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				JAP = { set_autonomy = { target = FER autonomous_state = autonomy_wtt_imperial_protectorate } }
+			}
+			else = {
+				JAP = { puppet = FER }
+			}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+	}
+
+#MongoliaDecisions
+
+	JAP_mongolia_suiyuan = {
+		
+		highlight_state_targets = {
+			state = 621
+			state = 746
+			state = 1449
+			state = 1523
+			state = 1922
+		}
+		
+		visible = {
+			country_exists = MEN
+			MEN = {
+				is_subject_of = JAP
+				has_government = fascism
+			}
+			OR = {
+				JAP = { has_full_control_of_state = 621 has_full_control_of_state = 746  has_full_control_of_state = 1922 }
+				MEN = { has_full_control_of_state = 621 has_full_control_of_state = 746  has_full_control_of_state = 1922 }
+				PGR = { has_full_control_of_state = 621 has_full_control_of_state = 746  has_full_control_of_state = 1922 }
+			}
+		}
+		
+		icon = generic_nationalism
+		
+		fire_only_once = yes
+		
+		available = {
+			AND = {
+				OR = {
+					JAP = {
+						controls_state = 621
+						controls_state = 746
+						controls_state = 1922
+					}
+					MEN = {
+						controls_state = 621
+						controls_state = 746
+						controls_state = 1922
+					}
+					PGR = {
+						controls_state = 621
+						controls_state = 746
+						controls_state = 1922
+					}
+				}
+				if = {
+					621 = {
+					compliance > 20
+					}
+					746 = {
+					compliance > 20
+					}
+					1922 = {
+					compliance > 20
+					}
+				}
+			}
+		}
+		
+		days_remove = 14
+		remove_effect = {
+			621 = { add_core_of = MEN }
+			746 = { add_core_of = MEN }
+			1922 = { add_core_of = MEN }
+			JAP = { set_country_flag = MEN_suiyuan_transferred }
+			MEN = {
+				transfer_state = 1523
+			    transfer_state = 621
+				transfer_state = 746
+				transfer_state = 1449
+				transfer_state = 1922
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JAP_mongolia_ningxia = {
+	
+		highlight_state_targets = {
+			state = 616
+		}
+		
+		visible = {
+			country_exists = MEN
+			MEN = {
+				is_subject_of = JAP
+				has_government = fascism
+			}
+			OR = {
+				JAP = { has_full_control_of_state = 616 }
+				MEN = { has_full_control_of_state = 616 }
+				PGR = { has_full_control_of_state = 616 }
+			}
+		}
+		
+		icon = generic_nationalism
+		
+		fire_only_once = yes
+		
+		available = {
+			AND = {
+				OR = {
+					JAP = { controls_state = 616 }
+					MEN = { controls_state = 616 }
+					PGR = { controls_state = 616 }
+				}
+				if = {
+					616 = { compliance > 30 }
+				}
+			}
+		}
+		
+		days_remove = 14
+		remove_effect = {
+			616 = { add_core_of = MEN }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JAP_outer_mongolia = {
+		
+		
+		highlight_state_targets = {
+			state = 330
+			state = 1015
+			state = 1016
+			state = 1017
+			state = 1018
+			state = 1019
+			state = 1020
+			state = 1448
+			state = 1573
+		}
+		
+		visible = {
+			country_exists = MEN
+			MEN = {
+				is_subject_of = JAP
+				has_government = fascism
+			}
+			JAP = {
+			    has_full_control_of_state = 330
+				has_full_control_of_state = 1015
+				has_full_control_of_state = 1016
+				has_full_control_of_state = 1017
+				has_full_control_of_state = 1018
+				has_full_control_of_state = 1019
+				has_full_control_of_state = 1020
+				has_full_control_of_state = 1448
+				has_full_control_of_state = 1573
+			}
+			OR = {
+				
+				JAP = { has_full_control_of_state = 330 has_full_control_of_state = 1015 has_full_control_of_state = 1016 has_full_control_of_state = 1017 has_full_control_of_state = 1018 has_full_control_of_state = 1019 has_full_control_of_state = 1020 has_full_control_of_state = 1448 has_full_control_of_state = 1573 }
+				MEN = { has_full_control_of_state = 330 has_full_control_of_state = 1015 has_full_control_of_state = 1016 has_full_control_of_state = 1017 has_full_control_of_state = 1018 has_full_control_of_state = 1019 has_full_control_of_state = 1020 has_full_control_of_state = 1448 has_full_control_of_state = 1573 }
+			}
+		}
+		
+		icon = generic_nationalism
+		
+		fire_only_once = yes
+		
+		available = {
+			AND = {
+				custom_trigger_tooltip = {
+					tooltip = JAP_outer_mongolia_required
+					OR = {
+						JAP = {
+							controls_state = 330
+							controls_state = 1015
+							controls_state = 1016
+							controls_state = 1017
+							controls_state = 1018
+							controls_state = 1019
+							controls_state = 1020
+							controls_state = 1448
+							controls_state = 1573
+						}
+						MEN = {
+							controls_state = 330
+							controls_state = 1015
+							controls_state = 1016
+							controls_state = 1017
+							controls_state = 1018
+							controls_state = 1019
+							controls_state = 1020
+							controls_state = 1448
+							controls_state = 1573
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = JAP_outer_mongolia_compliance
+					if = {
+						core_compliance = {
+						occupied_country_tag = MON
+						value > 50
+						}
+					}
+				}
+			}
+		}
+		
+		days_remove = 60
+		
+		remove_effect = {
+			custom_effect_tooltip = MEN_outer_mongolia
+			hidden_effect = {
+				330 = { add_core_of = MEN }
+				1015 = { add_core_of = MEN }
+				1016 = { add_core_of = MEN }
+				1017 = { add_core_of = MEN }
+				1018 = { add_core_of = MEN }
+				1019 = { add_core_of = MEN }
+				1020 = { add_core_of = MEN }
+				1448 = { add_core_of = MEN }
+				1573 = { add_core_of = MEN }
+				MEN = { transfer_state = 1573 }
+				country_event = bs_japan.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JAP_mongolia_tuva = {
+		
+		highlight_state_targets = {
+			state = 329
+		}
+		
+		visible = {
+			country_exists = MEN
+			MEN = {
+				is_subject_of = JAP
+				has_government = fascism
+			}
+			OR = {
+				JAP = { has_full_control_of_state = 329 }
+				MEN = { has_full_control_of_state = 329 }
+			}
+		}
+		
+		icon = generic_nationalism
+		
+		fire_only_once = yes
+		available = {
+			AND = {
+				OR = {
+					JAP = { controls_state = 329 }
+					MEN = { controls_state = 329 }
+				}
+				if = {
+					329 = { compliance > 50 }
+				}
+			}
+		}
+		
+		days_remove = 7
+		
+		remove_effect = {
+			329 = { add_core_of = MEN }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+#ChinaDecisions
+	
+	JAP_establish_PGR = {
+		
+		highlight_state_targets = {
+			state = 609
+			state = 608
+			state = 614
+			state = 1027
+			state = 597
+			state = 743
+			state = 902
+			state = 1253
+			state = 1341
+			state = 1752
+		}
+		
+		visible = {
+			NOT = { country_exists = PGR }
+			JAP = {
+				has_government = fascism
+				609 = { is_owned_or_subject_trigger = yes }
+				has_completed_focus = JAP_intervene_in_china
+			}
+		}
+		
+		icon = jap_conquer_china
+		
+		fire_only_once = yes
+		
+		available = {
+			JAP = {
+				controls_state = 597
+				controls_state = 608
+				609 = { is_owned_or_subject_trigger = yes }
+				controls_state = 614
+				controls_state = 743
+				controls_state = 902
+				controls_state = 1027
+				controls_state = 1253
+				controls_state = 1341
+				controls_state = 1752				
+			}
+		}
+		
+		complete_effect = {
+			PGR = {
+				add_ideas = {
+					CHI_ineffective_bureaucracy
+					MAN_partisan_warfare_3
+					PGR_low_popular_support
+					MAN_unreliable_army
+				}
+				add_state_core = 608
+				add_state_core = 609
+				transfer_state = 597
+				transfer_state = 608
+				transfer_state = 609
+				transfer_state = 614
+				transfer_state = 743
+				transfer_state = 902
+				transfer_state = 1027
+				transfer_state = 1253
+				transfer_state = 1341
+				transfer_state = 1752			
+			}
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				JAP = { set_autonomy = { target = PGR autonomous_state = autonomy_wtt_imperial_protectorate } }
+			}
+			if = {
+				limit = {
+					controls_state = 611
+					MEN = { NOT = { is_subject_of = JAP } }
+				}
+				PGR = { transfer_state = 611 }
+			}
+			if = {
+				limit = {
+					controls_state = 612
+					MEN = { NOT = { is_subject_of = JAP } }
+				}
+				PGR = { transfer_state = 612 }
+			}
+			if = {
+				limit = {
+					controls_state = 621
+					MEN = { NOT = { is_subject_of = JAP } }
+				}
+				PGR = { transfer_state = 621 }
+			}
+			if = {
+				limit = {
+					controls_state = 746
+					MEN = { NOT = { is_subject_of = JAP } }
+				}
+				PGR = { transfer_state = 746 }
+			}
+			if = {
+				limit = {
+					controls_state = 1449
+					MEN = { NOT = { is_subject_of = JAP } }
+				}
+				PGR = { transfer_state = 1449 }
+			}
+			if = {
+				limit = {
+					controls_state = 1921
+					MEN = { NOT = { is_subject_of = JAP } }
+				}
+				PGR = { transfer_state = 1921 }
+			}
+			if = {
+				limit = {
+					controls_state = 1922
+					MEN = { NOT = { is_subject_of = JAP } }
+				}
+				PGR = { transfer_state = 1922 }
+			}
+			else = {
+				JAP = { puppet = PGR }
+			}
+			hidden_effect = {
+				597 = { set_state_flag = PGR_can_core_before_is_main_china }
+				614 = { set_state_flag = PGR_can_core_before_is_main_china }
+				743 = { set_state_flag = PGR_can_core_before_is_main_china }
+				902 = { set_state_flag = PGR_can_core_before_is_main_china }
+				1027 = { set_state_flag = PGR_can_core_before_is_main_china }
+				1253 = { set_state_flag = PGR_can_core_before_is_main_china }
+				1341 = { set_state_flag = PGR_can_core_before_is_main_china }
+				1752 = { set_state_flag = PGR_can_core_before_is_main_china }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	JAP_establish_RGR = {
+		
+		highlight_state_targets = {
+			state = 598
+			state = 606
+			state = 613
+			state = 1021
+			state = 1028
+			state = 1219
+			state = 1331
+		}
+		
+		visible = {
+			NOT = { country_exists = RGR }
+			JAP = {
+				has_government = fascism
+				has_completed_focus = JAP_intervene_in_china
+			}
+		}
+		
+		icon = jap_conquer_china
+		
+		fire_only_once = yes
+		
+		available = {
+			JAP = {
+				controls_state = 598
+				controls_state = 606
+				controls_state = 613
+				controls_state = 1021
+				controls_state = 1028
+				controls_state = 1219
+				controls_state = 1331			
+			}
+		}
+		
+		complete_effect = {
+			RGR = {
+				add_ideas = {
+					CHI_ineffective_bureaucracy
+					MAN_partisan_warfare_3
+					PGR_low_popular_support
+					MAN_unreliable_army
+				}
+				add_state_core = 1021
+				transfer_state = 598
+				transfer_state = 606
+				transfer_state = 613
+				transfer_state = 1021
+				transfer_state = 1028
+				transfer_state = 1219
+				transfer_state = 1331			
+			}
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				JAP = { set_autonomy = { target = RGR autonomous_state = autonomy_wtt_imperial_protectorate } }
+			}
+			else = {
+				JAP = { puppet = RGR }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JAP_merge_china = {
+		
+		visible = {
+			country_exists = RGR
+			country_exists = PGR
+			PGR = { 
+				is_subject_of = JAP 
+				has_government = fascism
+			}
+			RGR = { 
+				is_subject_of = JAP 
+				has_government = fascism
+			}
+			OR = {
+				date > 1940.1.1
+				CHI = { has_capitulated = yes }
+				AND = { 
+					NOT = { 
+						country_exists = CHI 
+						country_exists = PRC
+					}
+				} 
+			}
+		}
+		
+		icon = generic_decision
+		
+		fire_only_once = yes
+		
+		available = {
+			country_exists = RGR
+			country_exists = PGR
+		}
+		
+		complete_effect = {
+			PGR = {
+				annex_country = {
+					target = RGR
+					transfer_troops = yes
+				}
+				every_state = {
+					limit = {
+						is_core_of = RGR
+					}
+					add_core_of = PGR
+					remove_core_of = RGR
+				}
+				every_state = {
+					limit = {
+						OR = {
+							has_state_flag = PGR_can_core_before_is_main_china
+							has_state_flag = RGR_can_core
+						}
+					}
+					clr_state_flag = PGR_can_core_before_is_main_china
+					clr_state_flag = RGR_can_core
+				}
+				every_state = {
+					limit = {
+						AND = {
+							is_core_of = CHI
+							NOT = {
+								is_core_of = MAN
+								is_core_of = JAP
+								is_core_of = KOR
+								state = 524
+								state = 601
+							}
+						}
+					}
+					add_claim_by = PGR
+				}
+				retire_ideology_leader = fascism
+				create_country_leader = {
+					name = "Wang Jingwei"
+					desc = "POLITICS_WANG_JINGWEI_DESC"
+					picture = "portrait_chi_wang_jingwei.dds"
+					expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+					#
+					}
+				}
+				set_cosmetic_tag = CHI
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JAP_expand_china_south = {
+	
+	    highlight_state_targets = {
+			state = 1339
+			state = 596
+			state = 749
+			state = 600
+			state = 595
+			state = 1340
+		}
+	
+		visible = {
+			country_exists = PGR
+			NOT = { 
+			country_exists = RGR
+			}
+			PGR = { 
+				is_subject_of = JAP 
+				has_government = fascism
+			    controls_state = 598
+			    controls_state = 606
+			    controls_state = 613
+			    controls_state = 1021
+			    controls_state = 1028
+			    controls_state = 1219
+			    controls_state = 1331
+			}
+			JAP = { has_completed_focus = JAP_secure_china }
+			OR = {
+				date > 1940.1.1
+				CHI = { has_capitulated = yes }
+				AND = { 
+					NOT = { 
+						country_exists = CHI 
+						country_exists = PRC
+					}
+				} 
+			}
+		}
+		
+	    icon = eng_trade_unions_support
+		
+		fire_only_once = yes
+		
+		available = {
+		        country_exists = PGR
+				has_full_control_of_state = 1339
+	            has_full_control_of_state = 596
+	            has_full_control_of_state = 749
+	            has_full_control_of_state = 600
+	            has_full_control_of_state = 595
+	            has_full_control_of_state = 1340
+		}
+		
+		complete_effect = {
+		    PGR = {
+			transfer_state = 1339
+			transfer_state = 596
+			transfer_state = 749
+			transfer_state = 600
+			transfer_state = 595
+			transfer_state = 1340
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JAP_expand_china_inland = {
+		
+	    highlight_state_targets = {
+			state = 615
+			state = 1029
+			state = 607
+			state = 1030
+			state = 620
+			state = 1031
+			state = 750
+			state = 602
+			state = 1763
+		}
+		
+		visible = {
+			country_exists = PGR
+			NOT = {
+			    country_exists = RGR
+			}
+			PGR = { 
+				is_subject_of = JAP 
+				has_government = fascism
+			    controls_state = 1339
+			    controls_state = 596
+			    controls_state = 749
+			    controls_state = 600
+			    controls_state = 595
+			    controls_state = 1340
+			}
+			JAP = { has_completed_focus = JAP_secure_china }
+			OR = {
+				date > 1940.1.1
+				CHI = { has_capitulated = yes }
+				AND = { 
+					NOT = { 
+						country_exists = CHI 
+						country_exists = PRC
+					}
+				} 
+			}
+		}
+		
+	    icon = eng_trade_unions_support
+		
+		fire_only_once = yes
+		
+		available = {
+		        country_exists = PGR
+				has_full_control_of_state = 1763
+				has_full_control_of_state = 615
+	            has_full_control_of_state = 1029
+	            has_full_control_of_state = 607
+	            has_full_control_of_state = 1030
+	            has_full_control_of_state = 620
+	            has_full_control_of_state = 1031
+	            has_full_control_of_state = 750
+				has_full_control_of_state = 602
+		}
+		
+		complete_effect = {
+				PGR = {
+				transfer_state = 1763
+				transfer_state = 615
+				transfer_state = 1029
+				transfer_state = 607
+				transfer_state = 1030
+				transfer_state = 620
+				transfer_state = 1031
+				transfer_state = 750
+				transfer_state = 602
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+# Shensi State
+
+	JAP_shensi_decision = {
+	
+ 	    highlight_state_targets = { state = 622 state = 1307 state = 744 state = 1751 }
+
+        visible = {
+			JAP = {
+				622 = { is_owned_or_subject_trigger = yes }
+				1307 = { is_owned_or_subject_trigger = yes }
+				744 = { is_owned_or_subject_trigger = yes }
+				1751 = { is_owned_or_subject_trigger = yes }
+				has_completed_focus = JAP_secure_china
+			}
+			PGR = { 
+				is_subject_of = JAP 
+				has_government = fascism
+			    controls_state = 615
+			    controls_state = 1029
+			    controls_state = 607
+			    controls_state = 1030
+			    controls_state = 620
+                controls_state = 1031
+			    controls_state = 750
+				controls_state = 602
+				controls_state = 1752
+			}
+		}
+           
+		icon = generic_decision
+		fire_only_once = yes
+
+   	    available = {
+            JAP = {
+	            has_full_control_of_state = 622
+	            has_full_control_of_state = 1307
+	            has_full_control_of_state = 744
+				has_full_control_of_state = 1751
+				622 = { compliance > 10 resistance < 25} 
+				1307 = { compliance > 10 resistance < 25} 
+				744 = { compliance > 10 resistance < 25}  
+				1751 = { compliance > 10 resistance < 25}  
+			}
+			NOT = { country_exists = SHX country_exists = PRC country_exists = CHI }
+	    }
+		
+	    complete_effect = { JAP = { country_event = { id = bs.800 } } }
+		
+	}
+
+# Szechwan State
+
+	JAP_szechwan_decision = {
+
+ 	   highlight_state_targets = { state = 1745 state = 1309 state = 1311 state = 605 state = 1310 state = 751 state = 753 state = 1791 state = 1792 state = 1793 }
+	
+        visible = {
+			JAP = {
+				1309 = { is_owned_or_subject_trigger = yes }
+				1311 = { is_owned_or_subject_trigger = yes }
+				605 = { is_owned_or_subject_trigger = yes }
+                1310 = { is_owned_or_subject_trigger = yes }
+				1791 = { is_owned_or_subject_trigger = yes }
+				1792 = { is_owned_or_subject_trigger = yes }
+				1793 = { is_owned_or_subject_trigger = yes }
+				751 = { is_owned_or_subject_trigger = yes }
+				753 = { is_owned_or_subject_trigger = yes }
+				1745 = { is_owned_or_subject_trigger = yes }
+				has_completed_focus = JAP_secure_china
+			}
+			PGR = { 
+				is_subject_of = JAP 
+				has_government = fascism
+			    controls_state = 615
+			    controls_state = 1029
+			    controls_state = 607
+			    controls_state = 1030
+			    controls_state = 620
+                controls_state = 1031
+			    controls_state = 750
+				controls_state = 602
+				controls_state = 1752
+			}
+		}
+           
+		icon = generic_decision
+		fire_only_once = yes
+
+   	    available = {
+            JAP = {
+	            has_full_control_of_state = 1309
+	            has_full_control_of_state = 1311
+	            has_full_control_of_state = 605
+                has_full_control_of_state = 1310
+				has_full_control_of_state = 1791
+				has_full_control_of_state = 1792
+				has_full_control_of_state = 1745
+				has_full_control_of_state = 1793
+				has_full_control_of_state = 751
+				has_full_control_of_state = 753
+				1309 = { compliance > 10 resistance < 25} 
+				1311 = { compliance > 10 resistance < 25} 
+				605 = { compliance > 10 resistance < 25} 
+                1310 = { compliance > 10 resistance < 25} 
+				1791 = { compliance > 10 resistance < 25}
+				1792 = { compliance > 10 resistance < 25}
+				1793 = { compliance > 10 resistance < 25}
+				751 = { compliance > 10 resistance < 25}
+				753 = { compliance > 10 resistance < 25}
+				1745 = { compliance > 10 resistance < 25}
+			}
+			NOT = { country_exists = SZH country_exists = PRC country_exists = CHI }
+	    }
+		
+	    complete_effect = { JAP = { country_event = { id = bs.801 } } }
+		
+	}
+
+# Kweichow State
+
+	JAP_kweichow_decision = {
+
+    	highlight_state_targets = { state = 1312 state = 748 state = 603 }
+	
+        visible = {
+			JAP = {
+				1312 = { is_owned_or_subject_trigger = yes }
+				748 = { is_owned_or_subject_trigger = yes }
+				603 = { is_owned_or_subject_trigger = yes }
+				has_completed_focus = JAP_secure_china
+			}
+			PGR = { 
+				is_subject_of = JAP 
+				has_government = fascism
+			    controls_state = 615
+			    controls_state = 1029
+			    controls_state = 607
+			    controls_state = 1030
+			    controls_state = 620
+                controls_state = 1031
+			    controls_state = 750
+				controls_state = 602
+				controls_state = 1752
+			}
+		}
+           
+		icon = generic_decision
+		fire_only_once = yes
+
+   	    available = {
+            JAP = {
+	            has_full_control_of_state = 1312
+	            has_full_control_of_state = 748
+	            has_full_control_of_state = 603
+				1312 = { compliance > 10 resistance < 25} 
+				748 = { compliance > 10 resistance < 25} 
+				603 = { compliance > 10 resistance < 25} 
+			}
+			NOT = { country_exists = KWI country_exists = PRC country_exists = CHI }
+	    }
+		
+	    complete_effect = { JAP = { country_event = { id = bs.802 } } }
+		
+	}
+
+# Kwanghsi State
+	 
+	JAP_kwanghsi_decision = {
+
+		highlight_state_targets = { state = 599 state = 1316 state = 1317 state = 1315 }
+	
+        visible = {
+			JAP = {
+				599 = { is_owned_or_subject_trigger = yes }
+				1316 = { is_owned_or_subject_trigger = yes }
+				1317 = { is_owned_or_subject_trigger = yes }
+                1315 = { is_owned_or_subject_trigger = yes }
+				has_completed_focus = JAP_secure_china
+			}
+			PGR = { 
+				is_subject_of = JAP 
+				has_government = fascism
+			    controls_state = 615
+			    controls_state = 1029
+			    controls_state = 607
+			    controls_state = 1030
+			    controls_state = 620
+                controls_state = 1031
+			    controls_state = 750
+				controls_state = 602
+				controls_state = 1752
+			}
+		}
+           
+		icon = generic_decision
+		fire_only_once = yes
+
+   	    available = {
+            JAP = {
+	            has_full_control_of_state = 599
+	            has_full_control_of_state = 1316
+	            has_full_control_of_state = 1317
+                has_full_control_of_state = 1315
+				599 = { compliance > 10 resistance < 25}  
+				1316 = { compliance > 10 resistance < 25} 
+				1317 = { compliance > 10 resistance < 25} 
+                1315 = { compliance > 10 resistance < 25}
+			}
+			NOT = { country_exists = GXC country_exists = PRC country_exists = CHI }
+	    }
+		
+	    complete_effect = { JAP = { country_event = { id = bs.803 } } }
+		
+	}
+
+# Kwangtung State
+	 
+	JAP_kwangtung_decision = {
+
+		highlight_state_targets = { state = 1344 state = 1202 state = 593 state = 592 state = 594 state = 728 state = 2027 }
+	
+        visible = {
+			JAP = {
+				593 = { is_owned_or_subject_trigger = yes }
+				1202 = { is_owned_or_subject_trigger = yes }
+				1344 = { is_owned_or_subject_trigger = yes }
+                592 = { is_owned_or_subject_trigger = yes }
+				594 = { is_owned_or_subject_trigger = yes }
+				2027 = { is_owned_or_subject_trigger = yes }
+				has_completed_focus = JAP_secure_china
+			}
+			PGR = { 
+				is_subject_of = JAP 
+				has_government = fascism
+			    controls_state = 615
+			    controls_state = 1029
+			    controls_state = 607
+			    controls_state = 1030
+			    controls_state = 620
+                controls_state = 1031
+			    controls_state = 750
+				controls_state = 602
+				controls_state = 1752
+				controls_state = 2027
+			}
+		}
+           
+		icon = generic_decision
+		fire_only_once = yes
+
+   	    available = {
+            JAP = {
+	            has_full_control_of_state = 593
+	            has_full_control_of_state = 1202
+	            has_full_control_of_state = 1344
+                has_full_control_of_state = 728
+				has_full_control_of_state = 592
+				has_full_control_of_state = 594
+				has_full_control_of_state = 2027
+				593 = { compliance > 10 resistance < 25}  
+				1202 = { compliance > 10 resistance < 25} 
+				1344 = { compliance > 10 resistance < 25} 
+                728 = { compliance > 10 resistance < 25}
+				592 = { compliance > 10 resistance < 25}
+				594 = { compliance > 10 resistance < 25}
+				2027 = { compliance > 10 resistance < 25}
+			}
+			NOT = { country_exists = PRC country_exists = CHI }
+	    }
+		
+	    complete_effect = { JAP = { country_event = { id = bs.809 } } }
+		
+	}
+
+
+# Yunnan State
+
+	JAP_yunnan_decision = {
+
+		highlight_state_targets = { state = 1747 state = 1313 state = 325 state = 1884 state = 747 state = 1748 state = 1749 state = 1750 state = 1794 }
+	
+        visible = {
+			JAP = {
+				325 = { is_owned_or_subject_trigger = yes }
+				747 = { is_owned_or_subject_trigger = yes }
+				1748 = { is_owned_or_subject_trigger = yes }
+				1749 = { is_owned_or_subject_trigger = yes }
+				1750 = { is_owned_or_subject_trigger = yes }
+				1794 = { is_owned_or_subject_trigger = yes }
+				has_completed_focus = JAP_secure_china
+			}
+			PGR = { 
+				is_subject_of = JAP 
+				has_government = fascism
+			    controls_state = 615
+			    controls_state = 1029
+			    controls_state = 607
+			    controls_state = 1030
+			    controls_state = 620
+                controls_state = 1031
+			    controls_state = 750
+				controls_state = 602
+				controls_state = 1752
+			}
+		}
+           
+		icon = generic_decision
+		fire_only_once = yes
+
+   	    available = {
+            JAP = {
+	            has_full_control_of_state = 325
+	            has_full_control_of_state = 747
+	            has_full_control_of_state = 1313
+				has_full_control_of_state = 1747
+				has_full_control_of_state = 1748
+				has_full_control_of_state = 1749
+				has_full_control_of_state = 1750
+				has_full_control_of_state = 1794
+				325 = { compliance > 10 resistance < 25}
+				747 = { compliance > 10 resistance < 25}
+				1313 = { compliance > 10 resistance < 25}
+				1747 = { compliance > 10 resistance < 25}
+				1748 = { compliance > 10 resistance < 25}
+				1749 = { compliance > 10 resistance < 25}
+				1750 = { compliance > 10 resistance < 25}
+				1794 = { compliance > 10 resistance < 25}
+			}
+			NOT = { country_exists = YUN country_exists = PRC country_exists = CHI }
+	    }
+		
+	    complete_effect = { JAP = { country_event = { id = bs.804 } } }
+		
+	}
+
+# Hsikang State
+
+	JAP_gannan_decision = {
+
+		highlight_state_targets = { state = 752 state = 1746 state = 1787 state = 1788 state = 1789 state = 1790 }
+	
+        visible = {
+			JAP = {
+				752 = { is_owned_or_subject_trigger = yes }
+				1746 = { is_owned_or_subject_trigger = yes }
+				1747 = { is_owned_or_subject_trigger = yes }
+				1787 = { is_owned_or_subject_trigger = yes }
+				1788 = { is_owned_or_subject_trigger = yes }
+				1789 = { is_owned_or_subject_trigger = yes }
+				1790 = { is_owned_or_subject_trigger = yes }
+				has_completed_focus = JAP_secure_china
+			}
+			PGR = { 
+				is_subject_of = JAP 
+				has_government = fascism
+			    controls_state = 615
+			    controls_state = 1029
+			    controls_state = 607
+			    controls_state = 1030
+			    controls_state = 620
+                controls_state = 1031
+			    controls_state = 750
+				controls_state = 602
+				controls_state = 1752
+			}
+		}
+           
+		icon = generic_decision
+		fire_only_once = yes
+
+   	    available = {
+            JAP = {
+	            has_full_control_of_state = 752
+				has_full_control_of_state = 1746
+				has_full_control_of_state = 1747
+				has_full_control_of_state = 1787
+				has_full_control_of_state = 1788
+				has_full_control_of_state = 1789
+				has_full_control_of_state = 1790
+				752 = { compliance > 10 resistance < 25}
+				1746 = { compliance > 10 resistance < 25}
+				1747 = { compliance > 10 resistance < 25}
+				1787 = { compliance > 10 resistance < 25}
+				1788 = { compliance > 10 resistance < 25}
+				1789 = { compliance > 10 resistance < 25}
+				1790 = { compliance > 10 resistance < 25}
+			}
+			NOT = { country_exists = HSI country_exists = PRC country_exists = CHI }
+	    }
+		
+	    complete_effect = { JAP = { country_event = { id = bs.805 } } }
+		
+	}
+
+#Tsinghai and Kansu State
+
+	JAP_tsinghai_kansu_decision = {
+
+		highlight_state_targets = { state = 604 state = 1305 state = 755 state = 1743 state = 1744 state = 754 state = 756 state = 283 state = 1520 state = 1308 state = 1777 state = 1778 state = 1779 state = 1780 state = 1781 state = 1782 state = 1783 state = 1784 state = 1785 }
+        visible = {
+			JAP = {
+				1305 = { is_owned_or_subject_trigger = yes }
+				604 = { is_owned_or_subject_trigger = yes }
+				755 = { is_owned_or_subject_trigger = yes }
+				1743 = { is_owned_or_subject_trigger = yes }
+				1744 = { is_owned_or_subject_trigger = yes }
+				754 = { is_owned_or_subject_trigger = yes }
+				756 = { is_owned_or_subject_trigger = yes }
+				283 = { is_owned_or_subject_trigger = yes }
+				1520 = { is_owned_or_subject_trigger = yes }
+				1308 = { is_owned_or_subject_trigger = yes }
+				1777 = { is_owned_or_subject_trigger = yes }
+				1778 = { is_owned_or_subject_trigger = yes }
+				1779 = { is_owned_or_subject_trigger = yes }
+				1780 = { is_owned_or_subject_trigger = yes }
+				1781 = { is_owned_or_subject_trigger = yes }
+				1782 = { is_owned_or_subject_trigger = yes }
+				1783 = { is_owned_or_subject_trigger = yes }
+				1784 = { is_owned_or_subject_trigger = yes }
+				1785 = { is_owned_or_subject_trigger = yes }
+				2022 = { is_owned_or_subject_trigger = yes }
+				has_completed_focus = JAP_secure_china
+			}
+			PGR = { 
+				is_subject_of = JAP 
+				has_government = fascism
+			    controls_state = 615
+			    controls_state = 1029
+			    controls_state = 607
+			    controls_state = 1030
+			    controls_state = 620
+                controls_state = 1031
+			    controls_state = 750
+				controls_state = 602
+				controls_state = 1752
+			}
+		}
+           
+		icon = generic_decision
+		fire_only_once = yes
+
+   	    available = {
+            JAP = {
+				has_full_control_of_state = 1305
+				has_full_control_of_state = 604
+				has_full_control_of_state = 755
+				has_full_control_of_state = 1743
+				has_full_control_of_state = 1744
+				has_full_control_of_state = 754
+				has_full_control_of_state = 756 
+				has_full_control_of_state = 283 
+				has_full_control_of_state = 1520 
+				has_full_control_of_state = 1308 
+				has_full_control_of_state = 1777
+				has_full_control_of_state = 1778
+				has_full_control_of_state = 1779
+				has_full_control_of_state = 1780
+				has_full_control_of_state = 1781
+				has_full_control_of_state = 1782
+				has_full_control_of_state = 1783
+				has_full_control_of_state = 1784
+				has_full_control_of_state = 1785
+				has_full_control_of_state = 2022
+				1305 = { compliance > 10 resistance < 25}
+				604 = { compliance > 10 resistance < 25}
+				755 = { compliance > 10 resistance < 25}
+				1743 = { compliance > 10 resistance < 25}
+				1744 = { compliance > 10 resistance < 25}
+				754 = { compliance > 10 resistance < 25}
+				756 = { compliance > 10 resistance < 25}
+				283 = { compliance > 10 resistance < 25}
+				1520 = { compliance > 10 resistance < 25}
+				1308 = { compliance > 10 resistance < 25}
+				1777 = { compliance > 10 resistance < 25}
+				1778 = { compliance > 10 resistance < 25}
+				1779 = { compliance > 10 resistance < 25}
+				1780 = { compliance > 10 resistance < 25}
+				1781 = { compliance > 10 resistance < 25}
+				1782 = { compliance > 10 resistance < 25}
+				1783 = { compliance > 10 resistance < 25}
+				1784 = { compliance > 10 resistance < 25}
+				1785 = { compliance > 10 resistance < 25}
+				2022 = { compliance > 10 resistance < 25}
+			}
+			AND = {
+				OR = {
+					has_country_flag = SHX_given_to_PGR
+					has_country_flag = SHX_puppet_established
+				}
+				OR = {
+					has_country_flag = SZH_given_to_PGR
+					has_country_flag = SZH_puppet_established
+
+				}
+				OR = {
+					has_country_flag = GAN_given_to_PGR
+					has_country_flag = GAN_puppet_established
+				}
+			}
+			NOT = { country_exists = XSM country_exists = GAN country_exists = PRC country_exists = CHI }
+	    }
+		
+	    complete_effect = { JAP = { country_event = { id = bs.806 } } }
+
+	}
+
+#Ningsa State
+
+	JAP_ningsa_decision = {
+
+		highlight_state_targets = { state = 1753 state = 616 }
+	
+        visible = {
+			JAP = {
+				1753 = { is_owned_or_subject_trigger = yes }
+				616 = { is_owned_or_subject_trigger = yes }
+				has_completed_focus = JAP_secure_china
+			}
+			PGR = { 
+				is_subject_of = JAP 
+				has_government = fascism
+			    controls_state = 615
+			    controls_state = 1029
+			    controls_state = 607
+			    controls_state = 1030
+			    controls_state = 620
+                controls_state = 1031
+			    controls_state = 750
+				controls_state = 602
+				controls_state = 1752
+			}
+		}
+           
+		icon = generic_decision
+		fire_only_once = yes
+
+   	    available = {
+            JAP = {
+	            has_full_control_of_state = 1753
+	            has_full_control_of_state = 616
+				1753 = { compliance > 10 resistance < 25}
+				616 = { compliance > 10 resistance < 25}
+				has_country_flag = MEN_suiyuan_transferred
+				has_country_flag = tsinghai_decision_complete
+			}
+			NOT = { country_exists = NSI country_exists = PRC country_exists = CHI }
+	    }
+		
+	    complete_effect = { JAP = { country_event = { id = bs.807 } } }
+		
+	}
+
+#Sinkiang State
+
+	JAP_sinkiang_decision = {
+
+		highlight_state_targets = { state = 617 state = 759 state = 1306 state = 287 state = 619 state = 1739 state = 1318 state = 1738 state = 618 state = 760 } 
+
+		visible = {
+			JAP = {
+				760 = { is_owned_or_subject_trigger = yes }
+				617 = { is_owned_or_subject_trigger = yes }
+				618 = { is_owned_or_subject_trigger = yes }
+				1318 = { is_owned_or_subject_trigger = yes }
+				1738 = { is_owned_or_subject_trigger = yes }
+				1739 = { is_owned_or_subject_trigger = yes }
+				619 = { is_owned_or_subject_trigger = yes }
+				759 = { is_owned_or_subject_trigger = yes }
+				1306 = { is_owned_or_subject_trigger = yes }
+				has_completed_focus = JAP_secure_china
+			}
+			PGR = { 
+				is_subject_of = JAP 
+				has_government = fascism
+			    controls_state = 615
+			    controls_state = 1029
+			    controls_state = 607
+			    controls_state = 1030
+			    controls_state = 620
+                controls_state = 1031
+			    controls_state = 750
+				controls_state = 602
+				controls_state = 1752
+			}
+		}
+
+		icon = generic_decision
+		fire_only_once = yes
+
+		available = {
+			JAP = {
+				has_full_control_of_state = 760
+				has_full_control_of_state = 617
+				has_full_control_of_state = 618
+				has_full_control_of_state = 1318
+				has_full_control_of_state = 1738
+				has_full_control_of_state = 1739
+				has_full_control_of_state = 619
+				has_full_control_of_state = 759
+				has_full_control_of_state = 1306		
+				760 = { compliance > 10 resistance < 25}
+				617 = { compliance > 10 resistance < 25}
+				618 = { compliance > 10 resistance < 25}
+				1318 = { compliance > 10 resistance < 25}
+				1738 = { compliance > 10 resistance < 25}
+				1739 = { compliance > 10 resistance < 25}
+				619 = { compliance > 10 resistance < 25}
+				759 = { compliance > 10 resistance < 25}
+				1306 = { compliance > 10 resistance < 25}
+				has_country_flag = tsinghai_decision_complete
+			}
+		    NOT = { country_exists = SIK country_exists = TUG country_exists = PRC country_exists = CHI }
+		}
+
+		complete_effect = { JAP = { country_event = { id = bs.808 } } }
+
+	}
+	
+#IndochinaDecisions
+	
+	JAP_indochina_siam = {
+	
+		highlight_state_targets = {
+			state = 1073
+			state = 1077
+			state = 1085
+		}
+		
+		visible = {
+			JAP = {
+				has_completed_focus = JAP_alliance_with_siam
+				is_faction_leader = yes
+				has_country_flag = JAP_demanded_indochina
+			}
+			SIA = {
+				is_in_faction_with = JAP
+				NOT = {
+					owns_state = 1073
+					owns_state = 1077
+					owns_state = 1085
+				}
+			}
+		}
+		
+		icon = eng_trade_unions_support
+		
+		fire_only_once = yes
+		
+		available = {
+			controls_state = 1073
+			controls_state = 1077
+			controls_state = 1085
+		}
+		
+		complete_effect = {
+			SIA = {
+				transfer_state = 1073
+				transfer_state = 1077
+				transfer_state = 1085
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JAP_establish_VIN = {
+		
+		highlight_state_targets = {
+			state = 1078
+			state = 671
+			state = 1079
+			state = 1080
+			state = 1082
+			state = 1938
+		}
+		
+		visible = {
+			NOT = { country_exists = VIN }
+			JAP = {
+				has_government = fascism
+				has_completed_focus = JAP_strike_south_doctrine
+			}
+	        has_country_flag = JAP_demanded_indochina
+		}
+		
+		icon = generic_form_nation
+		
+		fire_only_once = yes
+		
+		available = {
+			JAP = {
+				controls_state = 1078
+				controls_state = 671
+				controls_state = 1079
+				controls_state = 1080
+				controls_state = 1082
+				controls_state = 1938		
+			}
+		}
+		
+		complete_effect = {
+			VIN = {
+				transfer_state = 1078
+				transfer_state = 671
+				transfer_state = 1079
+				transfer_state = 1080
+				transfer_state = 1082
+				transfer_state = 1938
+				set_capital = 1080
+				set_cosmetic_tag = VIN_JAP_GEACPS
+			}
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				JAP = { set_autonomy = { target = VIN autonomous_state = autonomy_wtt_imperial_protectorate } }
+			}
+			else = {
+				JAP = { puppet = VIN }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	JAP_establish_LAO = {
+		
+		highlight_state_targets = {
+			state = 670
+			state = 1074
+			state = 1075
+			state = 1076
+		}
+		
+		visible = {
+			NOT = { country_exists = LAO }
+			JAP = {
+				has_government = fascism
+				has_completed_focus = JAP_strike_south_doctrine
+			}
+			has_country_flag = JAP_demanded_indochina
+		}
+		
+		icon = generic_form_nation
+		
+		fire_only_once = yes
+		
+		available = {
+			JAP = {
+			controls_state = 670
+			controls_state = 1074
+			controls_state = 1075
+			controls_state = 1076	
+			}
+		}
+		
+		complete_effect = {
+			LAO = {
+			transfer_state = 670
+			transfer_state = 1074
+			transfer_state = 1075
+			transfer_state = 1076		
+			set_cosmetic_tag = LAO_JAP_GEACPS
+			}
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				JAP = { set_autonomy = { target = LAO autonomous_state = autonomy_wtt_imperial_protectorate } }
+			}
+			else = {
+				JAP = { puppet = LAO }
+			}
+			}
+			ai_will_do = {
+			factor = 1
+			}
+	}
+
+	JAP_establish_CAM = {
+		
+		highlight_state_targets = {
+			state = 1083
+			state = 1084
+			state = 741
+			state = 286
+			state = 1081
+		}
+		
+		visible = {
+			NOT = { country_exists = CAM }
+			JAP = {
+				has_government = fascism
+				has_completed_focus = JAP_strike_south_doctrine
+			}
+			has_country_flag = JAP_demanded_indochina
+		}
+		
+		icon = generic_form_nation
+		
+		fire_only_once = yes
+		
+		available = {
+			JAP = {
+			controls_state = 1083
+			controls_state = 1084
+			controls_state = 741
+			controls_state = 286
+			controls_state = 1081
+			}
+		}
+		
+		complete_effect = {
+			CAM = {
+			transfer_state = 1083
+			transfer_state = 1084
+			transfer_state = 741
+			transfer_state = 286
+			transfer_state = 1081
+			set_cosmetic_tag = CAM_JAP_GEACPS
+			}
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				JAP = { set_autonomy = { target = CAM autonomous_state = autonomy_wtt_imperial_protectorate } }
+			}
+			else = {
+				JAP = { puppet = CAM }
+			}
+			}
+			ai_will_do = {
+			factor = 1
+			}
+	}
+
+#IndiaDecisions
+
+	JAP_burma_siam = {
+	
+	    highlight_state_targets = {
+		    state = 1041
+			
+	    }
+		
+		visible = {
+			JAP = {
+				has_completed_focus = JAP_alliance_with_siam
+				is_faction_leader = yes
+				has_completed_focus = JAP_strike_on_the_southern_resource_area
+			}
+			SIA = {
+				is_in_faction_with = JAP
+				NOT = {
+					owns_state = 1041
+				}
+			}
+		}
+		
+		icon = eng_trade_unions_support
+		
+		fire_only_once = yes
+		
+		available = {
+			controls_state = 1041
+		}
+		
+		complete_effect = {
+			SIA = {
+				transfer_state = 1041
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	} 
+	
+	JAP_establish_BRM = {
+		
+		highlight_state_targets = {
+			state = 288
+			state = 1042
+			state = 1330
+			state = 640
+			state = 1545
+		}
+		
+		visible = {
+			JAP = {
+				has_government = fascism
+				has_completed_focus = JAP_strike_on_the_southern_resource_area
+			}
+		}
+		
+		icon = generic_form_nation
+		
+		fire_only_once = yes
+		
+		available = {
+			JAP = {
+			controls_state = 288
+			controls_state = 1042
+			controls_state = 1330
+			controls_state = 640
+			controls_state = 1545
+			NOT = { country_exists = BRM }
+			}
+		}
+		
+		complete_effect = {
+		    set_country_flag = JAP_established_BRM
+			BRM = {
+			transfer_state = 288
+			transfer_state = 1042
+			transfer_state = 1330
+			transfer_state = 640
+			transfer_state = 1545
+			set_cosmetic_tag = BRM_JAP_GEACPS
+			}
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				JAP = { set_autonomy = { target = BRM autonomous_state = autonomy_wtt_imperial_protectorate } }
+			}
+			else = {
+				JAP = { puppet = BRM }
+			}
+			}
+			ai_will_do = {
+			factor = 1
+			}
+	}
+
+	JAP_expand_BRM = {
+		
+		highlight_state_targets = {
+			state = 432
+			state = 430
+		}
+		
+		visible = {
+			BRM = {
+				is_subject_of = JAP
+			}
+			JAP = {
+				has_government = fascism
+				has_completed_focus = JAP_strike_on_the_southern_resource_area
+				has_country_flag = JAP_established_BRM
+				has_country_flag = JAP_established_azad_hind
+			}
+		}
+		
+		icon = eng_trade_unions_support
+		
+		fire_only_once = yes
+		
+		available = {
+			JAP = {
+				controls_state = 432
+				controls_state = 430
+				controls_state = 1726
+				has_country_flag = JAP_established_BRM
+				has_country_flag = JAP_established_azad_hind
+			}
+		}
+		
+		complete_effect = {
+			BRM = {
+				transfer_state = 432
+				transfer_state = 430
+				transfer_state = 1812
+			}
+
+			every_country_with_original_tag = {
+				original_tag_to_check = RAJ
+				limit = {
+					has_cosmetic_tag = RAJ_JAP_provisional_GEACPS
+				}
+  				transfer_state = 1726
+				remove_state_core = 1812
+				remove_state_core = 432
+				remove_state_core = 430
+			}
+
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				JAP = { set_autonomy = { target = BRM autonomous_state = autonomy_wtt_imperial_protectorate } }
+			}
+			else = {
+				JAP = { puppet = BRM }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JAP_establish_RAJ = {
+
+		highlight_state_targets = {
+			state = 1812
+		}
+
+		visible = {
+			BRM = {
+				is_subject_of = JAP
+			}
+			JAP = {
+				has_government = fascism
+				has_completed_focus = JAP_strike_on_the_southern_resource_area
+			}
+		}
+
+		icon = generic_form_nation
+
+		fire_only_once = yes
+		
+		available = {
+			JAP = {
+				has_country_flag = JAP_established_BRM
+				controls_state = 1812
+			}
+		}
+
+		complete_effect = {
+			create_dynamic_country = {
+				original_tag = RAJ
+				set_temp_variable = { new_country = this }
+				var:new_country = {
+					transfer_state = 1812
+					load_focus_tree = generic_focus
+					set_cosmetic_tag = RAJ_JAP_provisional_GEACPS
+				
+					every_state = {
+						limit = { NOT =  { state = 1812 } }
+						remove_core_of = var:new_country
+					}
+				}
+			}
+			JAP = {
+				puppet = var:new_country
+				set_country_flag = JAP_established_azad_hind
+			}
+		}
+	}
+	
+#SouthEastAsiaDecisions
+
+	JAP_malaya_siam = {
+	
+	    highlight_state_targets = {
+		    state = 1094
+			state = 981
+	    }
+		
+		visible = {
+			JAP = {
+				has_completed_focus = JAP_alliance_with_siam
+				is_faction_leader = yes
+				has_completed_focus = JAP_strike_on_the_southern_resource_area
+			}
+			SIA = {
+				is_in_faction_with = JAP
+				NOT = {
+					owns_state = 1094
+					owns_state = 981
+				}
+			}
+		}
+		
+		icon = eng_trade_unions_support
+		
+		fire_only_once = yes
+		
+		available = {
+			controls_state = 1094
+			controls_state = 981
+		}
+		
+		complete_effect = {
+			SIA = {
+				transfer_state = 1094
+				transfer_state = 981
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JAP_establish_MAL = {
+		
+		highlight_state_targets = {
+			state = 336
+		}
+		
+		visible = {
+			JAP = {
+				has_government = fascism
+				has_completed_focus = JAP_strike_on_the_southern_resource_area
+				}
+			}
+		
+		icon = generic_form_nation
+		
+		fire_only_once = yes
+		
+		available = {
+			JAP = {
+			controls_state = 336
+			controls_state = 980
+			}
+			NOT = { country_exists = MAL }
+		}
+		
+		complete_effect = {
+			MAL = {
+			transfer_state = 336
+			set_cosmetic_tag = MAL_JAP_GEACPS
+			}
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				JAP = { set_autonomy = { target = MAL autonomous_state = autonomy_wtt_imperial_protectorate } }
+			}
+			else = {
+				JAP = { puppet = MAL }
+			}
+			}
+			ai_will_do = {
+			factor = 1
+			}
+	}
+	
+	JAP_establish_INS = {
+		
+		highlight_state_targets = {
+			state = 335
+			state = 334
+			state = 672
+			state = 1093
+			state = 667
+			state = 673
+			state = 1269
+			state = 668
+			state = 738
+			state = 669
+			state = 1314
+			state = 333
+			state = 982
+			state = 1254
+			state = 711
+			state = 712
+			state = 733
+			state = 1910
+			state = 1911
+			state = 1912
+			state = 1913
+			state = 1914
+			state = 1915
+			state = 1916
+			state = 1918
+			state = 1919
+			state = 1928
+			state = 1929
+			state = 1930
+			state = 1931
+			state = 1950
+			state = 1951
+		}
+		
+		visible = {
+
+			JAP = {
+				has_government = fascism
+				has_completed_focus = JAP_strike_on_the_southern_resource_area
+				}
+			}
+		
+		icon = generic_form_nation
+		
+		fire_only_once = yes
+		
+		available = {
+			JAP = {
+			controls_state = 335
+			controls_state = 334
+			controls_state = 672
+			controls_state = 1093
+			controls_state = 667
+			controls_state = 673
+			controls_state = 1269
+			controls_state = 668
+			controls_state = 738
+			controls_state = 669
+			controls_state = 1314
+			controls_state = 333
+			controls_state = 982
+			controls_state = 1254
+			controls_state = 711
+			controls_state = 712
+			controls_state = 733
+			controls_state = 1910
+			controls_state = 1911
+			controls_state = 1912
+			controls_state = 1913
+			controls_state = 1914
+			controls_state = 1915
+			controls_state = 1916
+			controls_state = 1918
+			controls_state = 1919
+			controls_state = 1928
+			controls_state = 1929
+			controls_state = 1930
+			controls_state = 1931
+			controls_state = 1950
+			controls_state = 1951
+			NOT = { country_exists = INS }
+			}
+		}
+		
+		complete_effect = {
+		    set_country_flag = JAP_established_INS
+			INS = {
+			transfer_state = 335
+			transfer_state = 334
+			transfer_state = 672
+			transfer_state = 1093
+			transfer_state = 667
+			transfer_state = 673
+			transfer_state = 1269
+			transfer_state = 668
+			transfer_state = 738
+			transfer_state = 669
+			transfer_state = 1314
+			transfer_state = 333
+			transfer_state = 982
+			transfer_state = 1254
+			transfer_state = 711
+			transfer_state = 712
+			transfer_state = 733
+			transfer_state = 1910
+			transfer_state = 1911
+			transfer_state = 1912
+			transfer_state = 1913
+			transfer_state = 1914
+			transfer_state = 1915
+			transfer_state = 1916
+			transfer_state = 1918
+			transfer_state = 1919
+			transfer_state = 1928
+			transfer_state = 1929
+			transfer_state = 1930
+			transfer_state = 1931
+			transfer_state = 1950
+			transfer_state = 1951
+			set_cosmetic_tag = INS_JAP_GEACPS
+			}
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				JAP = { set_autonomy = { target = INS autonomous_state = autonomy_wtt_imperial_protectorate } }
+			}
+			else = {
+				JAP = { puppet = INS }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JAP_expand_INS = {
+		
+		highlight_state_targets = {
+			state = 918
+			state = 885
+			state = 1296
+			state = 523
+		}
+		
+		visible = {
+			INS = {
+				is_subject_of = JAP
+			}
+			JAP = {
+				has_government = fascism
+				has_completed_focus = JAP_strike_on_the_southern_resource_area	
+			}
+		}
+		
+		icon = eng_trade_unions_support
+		
+		fire_only_once = yes
+		
+		available = {
+			JAP = {
+			controls_state = 918
+			controls_state = 885
+			controls_state = 1296
+			controls_state = 523
+			has_country_flag = JAP_established_INS
+			}
+		}
+		
+		complete_effect = {
+			INS = {
+			transfer_state = 918
+			transfer_state = 885
+			transfer_state = 1296
+			transfer_state = 523
+			}
+			if = {
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				JAP = { set_autonomy = { target = INS autonomous_state = autonomy_wtt_imperial_protectorate } }
+			}
+			else = {
+				JAP = { puppet = INS }
+			}
+			}
+			ai_will_do = {
+			factor = 1
+			}
+	}
+
+	JAP_establish_PHI = {
+		
+		highlight_state_targets = {
+			state = 623
+			state = 327
+			state = 624
+			state = 625
+			state = 628
+			state = 626
+			state = 627
+		}
+		
+		visible = {
+			JAP = {
+				has_government = fascism
+				has_completed_focus = JAP_secure_the_philippines
+			}
+		}
+		
+		icon = generic_form_nation
+		
+		fire_only_once = yes
+		
+		available = {
+			JAP = {
+				controls_state = 623
+				controls_state = 327
+				controls_state = 624
+				controls_state = 625
+				controls_state = 628
+				controls_state = 626
+				controls_state = 627				
+			}
+		}
+		
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = PHI
+				}
+				hidden_effect = {
+					PHI = {
+						set_state_controller = 623
+						set_state_controller = 327
+						set_state_controller = 624
+						set_state_controller = 625
+						set_state_controller = 628
+						set_state_controller = 626
+						transfer_state = 627
+					}
+					PHI = {
+						start_civil_war = {
+							ideology = fascism 
+							size = 1
+							transfer_state = 623
+							transfer_state = 327
+							transfer_state = 624
+							transfer_state = 625
+							transfer_state = 628
+							set_state_controller = 626
+							transfer_state = 627
+							set_capital = 327 
+							set_cosmetic_tag = PHI_JAP
+							if = {
+								limit = {
+									has_dlc = "Waking the Tiger"
+								}
+								JAP = { set_autonomy = { target = PREV autonomous_state = autonomy_wtt_imperial_protectorate } }
+							}
+							else = {
+								JAP = { puppet = PREV }
+							}
+						}
+					}
+				}
+			}
+			else = {
+				PHI = {
+					set_cosmetic_tag = PHI_JAP
+						transfer_state = 623
+						transfer_state = 327
+						transfer_state = 624
+						transfer_state = 625
+						transfer_state = 628
+						transfer_state = 626
+						transfer_state = 627
+						set_capital = 327
+							if = {
+								limit = {
+									has_dlc = "Waking the Tiger"
+								}
+								JAP = { set_autonomy = { target = PHI autonomous_state = autonomy_wtt_imperial_protectorate } }
+							}
+							else = {
+								JAP = { puppet = PHI }
+							}
+						}
+					}
+				}
+			ai_will_do = {
+			factor = 1
+			}
+		}
+	
+	JAP_CHI_fix = {
+		
+		visible = {
+			OR = {
+				AND = {
+					country_exists = CHI
+					CHI = { is_subject_of = JAP }
+				}
+				AND = {
+					country_exists = PRC
+					CHI = { is_subject_of = JAP }
+				}
+			}
+		}
+		
+		icon = generic_form_nation
+		
+		available = {
+			OR = {
+				AND = {
+					country_exists = CHI
+					CHI = { is_subject_of = JAP }
+				}
+				AND = {
+					country_exists = PRC
+					PRC = { is_subject_of = JAP }
+				}
+			}
+		}
+		
+		complete_effect = {
+			if {
+				limit = {
+					CHI = { is_subject_of = JAP }
+				}
+				PGR = {
+					annex_country = {
+						target = CHI
+						transfer_troops = no
+					}
+				}
+			}
+			if ={
+				limit = {
+					PRC = { is_subject_of = JAP }
+				}
+				PGR = {
+					annex_country = {
+						target = PRC
+						transfer_troops = no
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
+
+JAP_MONARCHY = {
+	JAP_Showa_Constitution = { 
+		
+		visible = {
+			original_tag = JAP
+			OR = {
+				has_government = neutrality
+				has_government = democratic
+				has_government = fascism
+			}
+			NOT = { any_other_country = { has_country_leader = { ruling_only = yes name = "Hirohito" }}}
+			NOT = { any_other_country = { has_idea = king_hirohito_democratic }}
+			NOT = { any_other_country = { has_idea = king_hirohito }}
+			NOT = { has_country_leader = { ruling_only = yes name = "Hirohito" }}
+			NOT = { has_idea = king_hirohito_democratic }
+			NOT = { has_idea = king_hirohito }
+		}
+		
+		icon = generic_form_nation
+		
+		fire_only_once = yes
+		
+		available = {
+			OR = {
+				has_completed_focus = JAP_the_unthinkable_option
+				has_completed_focus = JAP_purge_the_kodoha_faction
+				has_completed_focus = JAP_modern_shogunate
+				has_completed_focus = JAP_showa_restoration
+				has_completed_focus = JAP_challenge_the_zaibatsus
+				has_completed_focus = JAP_the_showa_constitution
+				has_completed_focus = JAP_cast_the_die
+			}
+		}
+		
+		complete_effect = {
+			if {
+				limit = {
+					has_government = neutrality
+				}
+				JAP = {
+					add_ideas = { king_hirohito }
+				}
+			}
+			if ={
+				limit = {
+					has_government = fascism
+				}
+				JAP = {
+					add_ideas = { king_hirohito }
+				}
+			}
+			if ={
+				limit = {
+					has_government = democratic
+				}
+				JAP = {
+					add_ideas = { king_hirohito_democratic }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}

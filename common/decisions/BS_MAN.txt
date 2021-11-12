@@ -1,0 +1,171 @@
+greater_manchuria_category = {
+
+	integrate_south_amur = {
+
+		icon = generic_political_discourse
+
+		fire_only_once = yes
+
+		visible = {
+			tag = MAN
+			controls_state = 1407
+			controls_state = 409
+			controls_state = 970
+			NOT = { 
+				1407 = { is_core_of = ROOT }
+				409 = { is_core_of = ROOT }
+				970 = { is_core_of = ROOT }
+			}
+		}
+
+		cost = 100
+		available = {
+			controls_state = 1407
+			controls_state = 409
+			controls_state = 970
+			NOT = { has_country_flag = integrating_manchuria_state }
+			1407 = {
+			compliance > 50
+			}
+			409 = {
+			compliance > 50
+			}
+			970 = {
+			compliance > 50
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = { 
+				flag = integrating_manchuria_state
+				days = 100 
+			}
+			hidden_effect = {
+			970 = { remove_core_of = RUS }
+			409 = { remove_core_of = RUS }
+			1407 = { remove_core_of = RUS }
+			970 = { remove_core_of = SOV }
+			409 = { remove_core_of = SOV }
+			1407 = { remove_core_of = SOV }
+			}
+		}
+
+		days_remove = 100
+		remove_effect = {
+			970 = { add_core_of = ROOT }
+			409 = { add_core_of = ROOT }
+			1407 = { add_core_of = ROOT }
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	integrate_north_amur = {
+
+		icon = generic_political_discourse
+
+		fire_only_once = yes
+
+		visible = {
+			tag = MAN
+			controls_state = 657
+			controls_state = 560
+			controls_state = 561
+			NOT = { 
+				657 = { is_core_of = ROOT }
+				560 = { is_core_of = ROOT }
+				561 = { is_core_of = ROOT }
+			}
+		}
+
+		cost = 100
+		available = {
+			controls_state = 657
+			controls_state = 560
+			controls_state = 561
+			controls_state = 1090
+			NOT = { has_country_flag = integrating_manchuria_state }
+			657 = {
+			compliance > 50
+			}
+			560 = {
+			compliance > 50
+			}
+			561 = {
+			compliance > 50
+			}
+			1090 = {
+			compliance > 50
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = { 
+				flag = integrating_manchuria_state
+				days = 100 
+			}
+			hidden_effect = {
+			657 = { remove_core_of = RUS }
+			560 = { remove_core_of = RUS }
+			561 = { remove_core_of = RUS }
+			1090 = { remove_core_of = RUS }
+			657 = { remove_core_of = SOV }
+			560 = { remove_core_of = SOV }
+			561 = { remove_core_of = SOV }
+			}
+		}
+
+		days_remove = 100
+		remove_effect = {
+			657 = { add_core_of = ROOT }
+			560 = { add_core_of = ROOT }
+			561 = { add_core_of = ROOT }
+			1090 = { add_core_of = ROOT }
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	integrate_vladivostok_yongmingcheng = {
+
+		icon = generic_political_discourse
+
+		fire_only_once = yes
+
+		visible = {
+			tag = MAN
+			controls_state = 408
+			NOT = { 
+				408 = { is_core_of = ROOT }
+			}
+		}
+
+		cost = 100
+		available = {
+			controls_state = 408
+			NOT = { has_country_flag = integrating_manchuria_state }
+			408 = {
+			compliance > 50
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = { 
+				flag = integrating_manchuria_state
+				days = 75 
+			}
+			hidden_effect = {
+			408 = { remove_core_of = RUS }
+			408 = { remove_core_of = SOV }
+			}
+		}
+
+		days_remove = 75
+		remove_effect = {
+			408 = { add_core_of = ROOT }
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}

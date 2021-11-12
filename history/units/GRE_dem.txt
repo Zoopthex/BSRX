@@ -1,0 +1,56 @@
+﻿division_template = {
+	name = "Trigoniko Pezikou"
+	is_locked = yes
+
+	division_names_group = GER_Inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }		
+	}
+}
+
+units = {
+	division = {
+		name = "Trigoniko Pezikou"
+		location = 4178
+		division_template = "Trigoniko Pezikou"
+	}
+	division = {
+		name = "Trigoniko Pezikou"
+		location = 7096
+		division_template = "Trigoniko Pezikou"
+	}
+	division = {
+		name = "Trigoniko Pezikou"
+		location = 7211  # Ulm
+		division_template = "Trigoniko Pezikou"
+	}
+	division = {
+		name = "Trigoniko Pezikou"
+		location = 11818
+		division_template = "Trigoniko Pezikou"
+	}
+	division = {
+		name = "Trigoniko Pezikou"
+		location = 3844
+		division_template = "Trigoniko Pezikou"
+	}
+	division = {
+		name = "Trigoniko Pezikou"
+		location = 966
+		division_template = "Trigoniko Pezikou"
+	}
+	division = {
+		name = "Trigoniko Pezikou"
+		location = 9837
+		division_template = "Trigoniko Pezikou"
+	}	
+}

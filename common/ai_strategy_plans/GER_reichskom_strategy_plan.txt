@@ -1,0 +1,76 @@
+RKU_strategy_plan = {
+    name = "RK Ukraine Strat Plan"
+    desc = "RK Ukraine does silly things and becomes breadbasket colorized"
+
+    allowed = {
+        tag = RKU
+    }
+    enable = {
+        country_exists = RKU
+    }
+    abort = {
+
+    }
+
+    ai_national_focuses = {
+        #Stop everything! RK Ukraine, get victory in the east!
+        RKU_fall_of_the_soviet_union
+
+        #now the actual focuses in order
+        RKU_brutally_oppress_resistance
+        RKU_appoint_a_reichskommissar
+        RKU_economic_development_and_exploitation
+        RKU_contact_nationalist_groups
+        RKU_destroy_partisan_groups
+        RKU_request_guns
+        RKU_german_industrial_and_farm_workers
+        RKU_german_blueprints
+        ukrainian_industry_and_farm_workers
+        RKU_industrial_expansion_phase1
+        RKU_a_german_administration
+        RKU_hitler_the_liberator
+        RKU_encourage_cooperation
+        RKU_local_arms_procurment
+        RKU_propaganda_effort
+        RKU_wartime_measures
+        expand_ukrainian_infrastructure
+        RKU_military_industrial_expansion
+        RKU_civilian_industrial_expansion
+        RKU_industrial_expansion_phase2
+        RKU_mobilise_the_civilian_workforce
+        RKU_gemeindwitschaften
+        RKU_establish_kombines
+        RKU_civil_and_criminal_justice
+        deutsche_ukrainezeitung
+        RKU_establish_a_research_department
+        RKU_limited_religious_freedom
+        RKU_volksdeutsche_special_rights
+        RKU_protect_the_volksdeutsche
+        RKU_autarky
+        ukrainian_volunteer_force
+        RKU_a_new_army
+        RKU_department_of_education
+        breadbasket_of_the_reich
+        RKU_industrial_expansion_phase3
+        RKU_mass_german_immgration
+        integrate_ukrainian_land
+        RKU_invite_german_investors
+        RKU_a_model_german_colony
+    }
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

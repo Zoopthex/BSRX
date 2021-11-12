@@ -1,0 +1,20 @@
+defined_text = { 
+	name = GetStalinistsName
+	text = { localization_key = FRA_fst }
+}
+defined_text = { 
+	name = GetLeninistsName
+	text = { localization_key = FRA_fln }
+}
+defined_text = { 
+	name = GetSyndicalistsName
+	text = { localization_key = FRA_fsy }
+}
+defined_text = { 
+	name = GetSyndicalDemocratsName
+	text = { localization_key = FRA_fsd }
+}
+defined_text = { 
+	name = GetAnarchoSyndicalistsName
+	text = { localization_key = FRA_fas }
+}

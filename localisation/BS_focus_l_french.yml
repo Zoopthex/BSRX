@@ -1,0 +1,253 @@
+﻿l_french: 
+ #RK UKRAINE
+ RKU_brutally_oppress_resistance:0 "Brutally Oppress the Resistance"
+ RKU_brutally_oppress_resistance_desc:0 "Due to the nature of how the Reichskommissariat was formed, a plethora of resistance groups have been fighting against us from the beginning. Their existence should not be for any longer however, once we begin some effort into crushing these Untermensch groups, and the Ubermensch shall forever reign in the fields of Ukraine."
+
+ RKU_contact_nationalist_groups:0 "Contact Nationalist Groups"
+ RKU_contact_nationalist_groups_desc:0 "It turns out that crushing partisans was a harder task than the Ordnungpolizei had anticipated, and we have suffered some serious losses against the resistance. Recruiting various Ukrainian nationalist groups by promising them Ukraine to fight the resistance would be a win-win for us, plus, who says that we're going to keep that promise?"
+
+ RKU_destroy_partisan_groups:0 "Destroy Partisan Groups"
+ RKU_destroy_partisan_groups_desc:0 "Via lying and war crimes, we have almost crushed all resistance in Ukraine, and all that is left is various insurgent groups in the countryside. The Einsatzgruppen will complete the final sweeping up of resistance, and Ukraine shall become the breadbasket of the Reich."
+
+ RKU_encourage_cooperation:0 "Encourage Cooperation"
+ RKU_encourage_cooperation_desc:0 "Despite nominally being a German ruled state, we are forced to encourge cooperation with the native Ukrainians, if we ever wish for a stable and orderly realm for the Fatherland."
+
+ ukrainian_volunteer_force:0 "Ukrainian Volunteer Force"
+ ukrainian_volunteer_force_desc:0 "The war on the east has exhausted the Reich's Aryan population, and the remainder of Germany's children is being sent to the bulwark against Judeo-Bolshevikism. We should proceed to recruit native Ukrainians to join the security force, via the connections we have to various nationalist groups."
+
+ RKU_request_guns:0 "Request Guns"
+ RKU_request_guns_desc:0 "For us to effectively keep partisans at bay, we require arms, and we lack the capabilities currently to locally produce them. Germany will be willing to assist us with this issue, at a cost.
+
+ RKU_german_blueprints:0 "German Blueprints"
+ RKU_german_blueprints_desc:0 "Germany has a plethora of blueprints that we need to build our new society, and they are willing to give it to us, but in return they will increase the occupation tax."
+
+ RKU_local_arms_procurment:0 "Local Arms Procurment"
+ RKU_local_arms_procurment_desc:0 "If we ever wish to have an army of our own, we have to be able to procure our own weaponry. To accomplish this we must first establish weapon factories, cutting some corners in the process to speed things up."
+
+ RKU_a_new_army:0 "A New Army"
+ RKU_a_new_army_desc:0 "To defend our people and the German Reich, we have created our own proper army capable of defending ourselves."
+
+ RKU_establish_a_research_department:0 "Establish a Research Department"
+ RKU_establish_a_research_department_desc:0 "To ensure we don't rely too much on Germany and end up becoming more of a liability then a useful ally, we will establish our own research capabilities."
+ 
+ RKU_department_of_education:0 "Department of Education"
+ RKU_department_of_education_desc:0 "Its time we adapt the current department of education to meet our new needs, mainly being that of teaching German children in the future.f"
+
+ RKU_appoint_a_reichskommissar:0 "Appoint a Reichskommissar"
+ RKU_appoint_a_reichskommissar_desc:0 "The German Reich requires stability and order in the region it has just conquered, to achieve this we must first appoint a Reichskommissar to head the new state."
+
+ RKU_economic_development_and_exploitation:0 "Economic Development and Exploitation"
+ RKU_economic_development_and_exploitation_desc:0 "The German war machine requires resources and funds, we must do everything we can to assist the fatherland in its total war."
+
+ RKU_german_industrial_and_farm_workers:0 "German Industrial and Farm Workers"
+ RKU_german_industrial_and_farm_workers_desc:0 "By encouraging German worker immigration to Ukraine, we can fill the void of experienced works."
+
+ expand_ukrainian_infrastructure:0 "Expand Ukrainian Infrastructure"
+ expand_ukrainian_infrastructure_desc:0 "The infrastructure in Ukraine is lacking to say the least, a lot of work on it will need to be done."
+
+ RKU_military_industrial_expansion:0 "Military Industrial Expansion"
+ RKU_military_industrial_expansion_desc:0 "Our military industry requires a vast expansion to be able to support our war effort."
+
+ RKU_industrial_expansion_phase1:0 "Industrial Expansion - Phase 1"
+ RKU_industrial_expansion_phase1_desc:0 "Our industry is small, but by using a set plan to expand it we'll achieve a fully function industrial complex within the next five to ten years."
+ 
+ ukrainian_industry_and_farm_workers:0 "Ukrainian Industrial and Farm Workers"
+ ukrainian_industry_and_farm_workers_desc:0 "By "recruiting" Ukrainian industrial and farm workers, we will be able to expand our efforts of providing Germany with the resources to wage total war."
+
+ RKU_wartime_measures:0 "Wartime Measures"
+ RKU_wartime_measures_desc:0 "In war, the army man is more important then the civilian, we must divert resources from luxury goods production to our industrial expansion."
+
+ RKU_civilian_industrial_expansion:0 "Civilian Industrial Expansion"
+ RKU_civilian_industrial_expansion_desc:0 "Our civilian industry is lacklustre at best, we should invest into expanding it."
+
+ RKU_industrial_expansion_phase2:0 "Industrial Expansion - Phase 2"
+ RKU_industrial_expansion_phase2_desc:0 "Our efforts through our first Industrial Expansion plan have been a success, we shall now move onto phase two."
+
+ RKU_a_german_administration:0 "A German Administration"
+ RKU_a_german_administration_desc:0 "We should model our administration on that of Germany, but simplified to allow for us to set it up faster."
+
+ RKU_hitler_the_liberator:0 "Hitler The Liberator"
+ RKU_hitler_the_liberator_desc:0 "The peasants and nationalists of this nation have been liberated from the oppressive Soviet rule by the German Army, we should make sure everyone knows this."
+
+ RKU_propaganda_effort:0 "Propaganda Effort"
+ RKU_propaganda_effort_desc:0 "Propaganda will be a vital component of encouraging cooperation and discouraging resistance, expanding our propaganda efforts is a must."
+
+ RKU_mobilise_the_civilian_workforce:0 "Mobilise The Civilian Workforce"
+ RKU_mobilise_the_civilian_workforce_desc:0 "The workforce must be mobilised and ready to do all that is required until peace has been restored to Eastern Europe."
+
+ RKU_gemeindwitschaften:0 "Gemeindswitschaften"
+ RKU_gemeindwitschaften_desc:0 "Establishing German Communal Farms must be our top priority, although it is a socialist practice in nature, it is a necessary evil for our grain supply to continue running"
+
+ RKU_establish_kombines:0 "Establish Kombines"
+ RKU_establish_kombines_desc:0 "The Kombines are the Great German exploitation Monopolies designed to exploit the resources and Donbass area."
+
+ RKU_autarky:0 "Autarky"
+ RKU_autarky_desc:0 "By modelling ourselves on Germany, the next logical step is to replicate its Autarky."
+
+ breadbasket_of_the_reich:0 "Breadbasket of the Reich"
+ breadbasket_of_the_reich_desc:0 "Ukraine is often called the "Breadbasket of Europe", but until now it has never fully achieved its potential. We shall provide the Reich with bread for a 1000 years."
+
+ RKU_industrial_expansion_phase3:0 "Industrial Expansion - Phase 3"
+ RKU_industrial_expansion_phase3_desc:0 "We now have a stable and mostly efficient economy, although it is still weak, we have achieved the baseline we require to expand our efforts into the future."
+
+ RKU_invite_german_investors:0 "Invite German Investors"
+ RKU_invite_german_investors_desc:0 "By inviting German investors, we can expand our industrial capabilities even further."
+
+ RKU_civil_and_criminal_justice:0 "Civil and Criminal Justice"
+ RKU_civil_and_criminal_justice_desc:0 "A civil and criminal justice system is required for any state to function, we should prioritise its completion."
+
+ RKU_limited_religious_freedom:0 "Limited Religious Freedom"
+ RKU_limited_religious_freedom_desc:0 "By cooperating with the religious institutions within our state, we can promote more stability and support for the war effort."
+
+ RKU_volksdeutsche_special_rights:0 "Volksdeutsche Special Rights"
+ RKU_volksdeutsche_special_rights_desc:0 "The Volksdeutsche are generally considered to be Germans who lack German citizenship, many of whom live in Ukraine. We must ensure the Volksdeutsche of Ukraine receive the special rights they deserve."
+
+ RKU_protect_the_volksdeutsche:0 "Protect the Volksdeutsche"
+ RKU_protect_the_volksdeutsche_desc:0 "The Volksdeutsche require special protection from partisan groups that have been targeting them."
+
+ RKU_fall_of_the_soviet_union:0 "Fall of the Soviet Union"
+ RKU_fall_of_the_soviet_union_desc:0 "The Soviet Union has finally fallen, we can now begin our true objective."
+
+ RKU_mass_german_immgration:0 "Mass German Immigration"
+ RKU_mass_german_immgration_desc:0 "Now that the Soviet Union has fallen, we can encourage the German troops returning home from the Eastern front to make their new homes in Reichskommissariat Ukraine."
+
+ RKU_a_model_german_colony:0 "A Model German Colony"
+ RKU_a_model_german_colony_desc:0 "We have become a model German colony through our efforts, we shall shine brightly into the future and beyond."
+
+ integrate_ukrainian_land:0 "Integrate Ukrainian Land"
+ integrate_ukrainian_land_desc:0 "We can finally begin integrating the Ukrainian land into our administration. Now that the Soviet Union is out of the way most partisans have given up."
+
+ ### Germany ###
+ hitler_purge_speer:0 "Purged by Hitler"
+ hitler_purge_thalmann:0 "Purged by Hitler"
+ hitler_purge_canaris:0 "Purged by Hitler"
+ hitler_purge_1:0 "Purged by Hitler"
+ hitler_purge_2:0 "Purged by Hitler"
+ hitler_purge_3:0 "Purged by Hitler"
+ himmler_purge_5:0 "Purged by Himmler"
+ himmler_purge_4:0 "Purged by Himmler"
+ himmler_purge_3:0 "Purged by Himmler"
+ himmler_purge_2:0 "Purged by Himmler"
+ himmler_purge_1:0 "Purged by Himmler"
+ goering_purge_3:0 "Purged by Göring"
+ goering_purge_2:0 "Purged by Göring"
+ goering_purge_1:0 "Purged by Göring"
+ 
+ kurt_deluge_in_bohemia:0 "Kurt Daluege sent to Bohemia"
+ reinhard_heydrich_in_bohemia:0 "Reinhard Heydrich sent to Bohemia"
+ reinhard_heydrich_killed:0 "Reinhard Heydrich dead"
+ 
+ protectorate_bohemia_intergrated:0 "Bohemia and Morawia Integrated"
+
+ #MENGJIANG/CHAHAR
+ pailingmao_council:0 "Pailingmiao Council"
+ pailingmao_council_desc:0 "Currently we're under the Pailingmiao Council which was originally founded in 1934. However, times are changing quickly and so we have to change."
+ 
+ mengjiang_future:0 "The Future of Chahar and the Pailingmiao Council"
+ mengjiang_future_desc:0 "We need to establish a future now, as the Japanese and Chinese are overseeing us, knowing our every move."
+
+ MEN_decision_day:0 "Decision Day"
+ MEN_decision_day_desc:0 "The time has come. The Nationalist government has demanded we move to Chahar to make room for the Suiyuan Mongol Council. The Japanese seem to eye us and want us to collaborate. It's time to make a decision."
+
+ MEN_side_with_JAP:0 "Side with the Japanese"
+ MEN_side_with_JAP_desc:0 "The council is no longer needed, as we need to establish a new government with the Japanese. That way, we can unite all Mongols in Suiyuan and Ningxia, and hopefully Outer Mongolia too."
+
+ MEN_side_with_CHI:0 "Side with the Nationalists"
+ MEN_side_with_CHI_desc:0 "The central government is a much more reliable government than the Japanese. We are weak and defense with them would be best, but this comes with a cost: to move from Pailingmao into Chahar completely."
+ #PRUSSIA WHEN GERMANY IS FRAGMENTED VIA GAME RULE
+ PRE_six_year_plan:0 "Six Year Plan"
+ PRE_six_year_plan_desc:0 "In order to boost our industry, we should devise a plan that will last for six years. This will pump out the war machine that Prussia has lost."
+ PRE_befestigungsbau:0 "Festungsbau"
+ PRE_befestigungsbau_desc:0 "In order to defend ourselves, we need to construct forts. It is important to construct fortifications as France is trying to contain us, and Poland might attack us in the future."
+ PRE_rheinwall:0 "Rheinwall"
+ PRE_rheinwall_desc:0 "We have secured the eastern bank of the Rhine. In order to increase security from a French attack, we shall build fortifications on the Rhine."
+ PRE_oderwall:0 "Oderwall"
+ PRE_oderwall_desc:0 "Building fortifications on the Oder will help ensure the Polish will not go past the Oder when invading us."
+ PRE_vistulawall:0 "Weichselwall"
+ PRE_vistulawall_desc:0 "As we have secured the western side of the Vistula, the Russian bear still poises a threat. In order to ensure defense, we shall build a series of fortifications across the Vistula."
+ PRE_mittelgrosewirtschaft:0 "Wirtschaft"
+ PRE_mittelgrosewirtschaft_desc:0 "Prussia needs a true economy, and incentivizing into infrastructure should help the nation."
+ PRE_heavy_boost:0 "A Heavy Boost"
+ PRE_heavy_boost_desc:0 "To gain up in industry and electronics, we should put more research into those areas."
+ PRE_hire_scientists:0 "Hire Scientists"
+ PRE_hire_scientists_desc:0 "Generalized scientific engineering will help the Prussian nation greatly, therefore we should hire scientists to further advance in technology."
+ PRE_a_beacon_of_innovation:0 "A Beacon of Innovation"
+ PRE_a_beacon_of_innovation_desc:0 "Prussia has truly proven to be a beacon of innovation in Europe, and we shall take pride in that!"
+ PRE_autarky:0 "Autarky"
+ PRE_autarky:0 "Prussia needs to be more self-sufficent. In order to get to that point and revive the greatness of Prussia, we must take advantage of our resources."
+ PRE_zivilindustriepriorisierung:0 "Zivilindustriepriorisierung"
+ PRE_zivilindustriepriorisierung_desc:0 "Prioritizing the industrial complex will help us with building advanced projects in the future."
+ PRE_rustungsindustriepriorisierung:0 "Rüstungsindustriepriorisierung"
+ PRE_rustungsindustriepriorisierung_desc:0 "The military industry is much more important! The Prussian military needs production of equipment, and we shall serve that production!"
+ PRE_civil_engineering:0 "Civil Engineering"
+ PRE_civil_engineering_desc:0 "Continuing the construction of civilian factories will is important now and will be important in the future."
+ PRE_expand_arms_production:0 "Expand Arms Production"
+ PRE_expand_arms_production_desc:0 "We should expand the arms production industry in order to further boost the military in their ventures."
+ PRE_air_innovation_2:0 "Air Innovations II"
+ PRE_air_innovation_2_desc:0 "The Prussian Luftwaffe is on its way to become the best airforce in the world. We should put more funds in order to accelerate that!"
+ PRE_wunderwaffe:0 "Wunderwaffe"
+ PRE_wunderwaffe_desc:0 "Our scientists have been proposing such weapons that can possibly destroy a city. We just need the resources for it..."
+ PRE_army_innovations:0 "An Army With A Country"
+ PRE_army_innovations_desc:0 "In the 18th century, Friedrich von Schrötter remarked that, Prussia was not a country with an army, but an army with a country. We should take this remark into account to begin boosting our efforts in the armed forces."
+ PRE_equipment_innovations:0 "Equipment Innovations"
+ PRE_equipment_innovations_desc:0 "Placing funding on researching better equipment will be a key start in letting our troops win wars."
+ PRE_infantry_focus:0 "Fund the Infantry"
+ PRE_infantry_focus_desc:0 "Prussia historically was renowned for its infantry, so let it shine a new light into day!"
+ PRE_cavalry_focus:0 "Fund the Cavalry"
+ PRE_cavalry_focus_desc:0 "Cavalrymen are very effective forces at war. We should priortize them first."
+ PRE_armor_focus:0 "Fund the Armored Divisions"
+ PRE_armor_focus_desc:0 "A new set of divisons appeared in the Great War, those being the armored divisions. They are very effective in speedy warfare, so we should priortize them to win battles!"
+ PRE_small_arms_focus:0 "More Effective Small Arms Production"
+ PRE_small_arms_focus_desc:0 "With funding the infantry/cavalry, Prussia needs a way to produce equipment more efficiently, and therefore we should fund the small arms companies."
+ #GERMAN SERBIA 
+ SER_national_government_of_salvation:0 "The National Government of Salvation"
+ SER_national_government_of_salvation_desc:0 ""
+ SER_the_military_governor:0 "The Military Governor"
+ SER_the_military_governor_desc:0 ""
+ SER_fate_of_yugoslavia:0 "Fate of Yugoslavia"
+ SER_fate_of_yugoslavia_desc:0 "Yugoslavia, invaded from all sides by German armies, collapsed. The Serbian Government applies a collaborationist policy for its survival. But the red terror is likely to pose a thorn under the feet of the collaborationists..."
+ SER_side_with_partisans:0 "Side with Partisans"
+ SER_side_with_partisans_desc:0 ""
+ SER_side_with_collaborationists:0 "Side with Collaborationists"
+ SER_side_with_collaborationists_desc:0 ""
+ SER_approach_italy:0 "Approach Italy"
+ SER_approach_italy_desc:0 ""
+ SER_rebuilding_the_serbian_state:0 "Rebuilding the Serbian state"
+ SER_rebuilding_the_serbian_state_desc:0 ""
+ SER_putting_down_the_rebellions:0 "Putting down the Rebellions"
+ SER_putting_down_the_rebellions_desc:0 ""
+ SER_military_aid_to_germany:0 "Military aid to Germany"
+ SER_military_aid_to_germany_desc:0 ""
+ SER_etablish_a_stable_governement:0 "Establish a stable Governement"
+ SER_etablish_a_stable_governement_desc:0 ""
+ #TRIBAL TREE
+ BSR_an_independent_tribe:0 "An Independent Tribal Society"
+ BSR_an_independent_tribe_desc:0 ""
+ BSR_subjugated_tribe:0 "Subjugated Tribal Society"
+ BSR_subjugated_tribe_desc:0 ""
+ BSR_begin_westernization:0 "Begin Westernization"
+ BSR_begin_westernization_desc:0 "A tribal society isn't going to get us anywhere in the world. We need to westernize."
+ BSR_undisturbed_isolation:0 "Undisturbed Isolation"
+ BSR_undisturbed_isolation_desc:0 "We don't need interaction, we can remain undisturbed and isolation."
+ BSR_obey_master:0 "Obey Master"
+ BSR_obey_master_desc:0 ""
+ BSR_partial_industrialization:0 "Partial Industrialization"
+ BSR_partial_industrialization_desc:0 "Our first step in westernizing is to partially industrialize. We do not have the capabilities to fully industrialize as of yet."
+ BSR_learn_western_ideals:0 "Learn Western Ideals"
+ BSR_learn_western_ideals_desc:0 "Learning the ideals of a westernized society is important in becoming one."
+ BSR_enter_the_world_stage:0 "Enter The World Stage"
+ BSR_enter_the_world_stage_desc:0 "We have fully westernized, now it is time to enter the world stage with other nations around the world!"
+ #TIBET TREE
+ TIB_tribal_integration:0 "Tribal Integration"
+ TIB_tribal_integration_desc:0 "We still have tribes that loosely follow us to control. It is time to fully integrate them into Tibet proper."
+ TIB_integrate_changtang:0 "Integrate Changtang"
+ TIB_integrate_changtang_desc:0 ""
+ TIB_integrate_hor:0 "Integrate Hor"
+ TIB_integrate_hor_desc:0 ""
+ TIB_isolation:0 "Isolation"
+ TIB_isolation_desc:0 "For the last couple of years, isolation has kept us away from the Chinese meanace and has allowed us to exist in peace. We must continue this policy."
+ TIB_restore_greater_tibet:0 "Restore Greater Tibet"
+ TIB_restore_greater_tibet_desc:0 "The era of isolation must end! The glory of the Tibetan Empire must come back, and we'll poise against the Chinese meance!"
+ TIB_oriental_pope:0 "Papal States of the Orient"
+ TIB_oriental_pope_desc:0 "Just like the Papal States, now the Vatican City, we host the capital of a major Asian religion: Buddhism. And just like the Papal States, we are peaceful."
+

@@ -1,0 +1,31 @@
+
+state={
+	id=764
+	name="STATE_764"
+	manpower = 570579
+	state_category = rural
+
+	history={
+		owner = YUG
+		victory_points = {
+			11787 1 
+		}
+
+		buildings = {
+			infrastructure = 6
+		}
+		add_core_of = YUG
+		add_core_of = SER
+		add_core_of = BNT
+		add_core_of = VOJ
+		1941.1.1 = {
+			owner = GER
+			controller = GER
+
+		}
+	}
+
+	provinces={
+		614 3614 11787
+	}
+}

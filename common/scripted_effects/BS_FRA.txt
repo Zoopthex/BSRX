@@ -1,0 +1,54 @@
+FRA_randomize_axes_values = {
+	#stalinist
+	set_variable = { FRA_parameters_1 = random }
+	multiply_variable = { FRA_parameters_1 = 5 }
+	add_to_variable = { FRA_parameters_1 = 4 }
+	subtract_from_variable = { FRA_parameters_1 = 0.5 }
+	round_variable = FRA_parameters_1
+	#leninist
+	set_variable = { FRA_parameters_2 = random }
+	multiply_variable = { FRA_parameters_2 = 5 }
+	add_to_variable = { FRA_parameters_2 = 4 }
+	subtract_from_variable = { FRA_parameters_2 = 0.5 }
+	round_variable = FRA_parameters_2
+	#syndicalist
+	set_variable = { FRA_parameters_3 = random }
+	multiply_variable = { FRA_parameters_3 = 5 }
+	add_to_variable = { FRA_parameters_3 = 4 }
+	subtract_from_variable = { FRA_parameters_3 = 0.5 }
+	round_variable = FRA_parameters_3
+	#syndical-democrat
+	set_variable = { FRA_parameters_4 = random }
+	multiply_variable = { FRA_parameters_4 = 5 }
+	add_to_variable = { FRA_parameters_4 = 4 }
+	subtract_from_variable = { FRA_parameters_4 = 0.5 }
+	round_variable = FRA_parameters_4
+	#anarcho-syndicalist
+	set_variable = { FRA_parameters_5 = random }
+	multiply_variable = { FRA_parameters_5 = 5 }
+	add_to_variable = { FRA_parameters_5 = 4 }
+	subtract_from_variable = { FRA_parameters_5 = 0.5 }
+	round_variable = FRA_parameters_5
+}
+FRA_convert_axes_values_to_frames = {
+	#stalinist
+	set_variable = { FRA_display_1 = FRA_parameters_1 }
+	multiply_variable = { FRA_display_1 = 10 }
+	add_to_variable = { FRA_display_1 = FRA_parameters_2 }
+	#leninist
+	set_variable = { FRA_display_2 = FRA_parameters_2  }
+	multiply_variable = { FRA_display_2 = 10 }
+	add_to_variable = { FRA_display_2 = FRA_parameters_3 }
+	#syndicalist
+	set_variable = { FRA_display_3 = FRA_parameters_3 }
+	multiply_variable = { FRA_display_3 = 10 }
+	add_to_variable = { FRA_display_3 = FRA_parameters_4 }
+	#syndical-democrat
+	set_variable = { FRA_display_4 = FRA_parameters_4 }
+	multiply_variable = { FRA_display_4 = 10 }
+	add_to_variable = { FRA_display_4 = FRA_parameters_5 }
+	#anarcho-syndicalist
+	set_variable = { FRA_display_5 = FRA_parameters_5 }
+	multiply_variable = { FRA_display_5 = 10 }
+	add_to_variable = { FRA_display_5 = FRA_parameters_1 }
+}

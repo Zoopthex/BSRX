@@ -1,0 +1,565 @@
+#Siam actually attacks Allies when in faction with Japan
+
+add_namespace = supersiam
+
+country_event = {
+	id = supersiam.1
+	title = supersiam.1.t
+	desc = supersiam.1.d
+	picture = GFX_report_asia_1936
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = SIA
+		has_war = no
+		is_in_faction_with = JAP
+		has_government = fascism
+		JAP = { has_war_with = ENG }
+		JAP = { is_ai = yes } #Player can prevent Siam from joining the war
+		is_historical_focus_on = yes
+	}
+	
+	option = {
+		name = supersiam.1.a
+		ai_chance = { factor = 100 }
+		add_to_war = { 
+			targeted_alliance = JAP 
+			enemy = ENG
+			hostility_reason = asked_to_join
+		}
+	}
+
+	option = {
+		name = supersiam.1.b
+	}	
+}
+
+#Siamese AI gives Singapore control to Japan
+country_event = {
+	id = supersiam.4
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SIA
+		has_war = yes
+		is_in_faction_with = JAP
+		SIA = { is_ai = yes }
+		controls_state = 980
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	hidden = yes
+
+	immediate = {
+		JAP = { set_state_controller = 980 }
+	}
+}
+
+#Phibun takes over the fascist party
+country_event = {
+	id = supersiam.11
+	title = supersiam.11.t
+	desc = supersiam.11.d
+	picture = GFX_report_phibun
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = SIA
+		date > 1938.1.1
+	}
+	
+	option = { 
+		name = supersiam.11.a
+	}
+}
+
+#Siamese coup d'etat
+country_event = {
+	id = supersiam.12
+	title = supersiam.12.t
+	desc = supersiam.12.d
+	picture = GFX_report_asia_1936
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = SIA
+		date > 1939.1.1
+	}
+	
+	option = {
+		name = supersiam.12.a
+		ai_chance = { 
+			factor = 35
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		set_global_flag = phibun_rules
+		hidden_effect = {
+			news_event = { id = supersiam.13 hours = 6 }
+		}	
+		SIA = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+		}
+		SIA = { 
+			set_popularities = {
+				democratic = 10
+				neutrality = 15
+				fascism = 70
+				communism = 5
+			}
+		}
+	}
+
+	option = {
+		name = supersiam.12.b
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			news_event = { id = supersiam.14 hours = 6 }
+		}
+		SIA = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+		SIA = { 
+			set_popularities = {
+				democratic = 10
+				neutrality = 15
+				fascism = 5
+				communism = 70
+			}
+		}
+	}
+
+	option = {
+		name = supersiam.12.c
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			news_event = { id = supersiam.15 hours = 6 }
+		}
+		SIA = {
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		}	
+		SIA = { 
+			set_popularities = {
+				democratic = 70
+				neutrality = 15
+				fascism = 5
+				communism = 10
+			}
+		}
+	}
+
+	option = {
+		name = supersiam.12.e
+		ai_chance = { 
+			factor = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}	
+	}	
+}
+
+#News event - Fascist Siam
+news_event = {
+	id = supersiam.13
+	title = supersiam.13.t
+	desc = supersiam.13.d
+	picture = GFX_news_event_phibun
+	
+	major = yes
+	
+	#fire_only_once = yes
+
+	is_triggered_only =  yes 
+
+	option = {
+		name = supersiam.13.a
+		trigger = {
+			OR = {
+				has_government = fascism
+			}
+		}
+	}
+
+	option = {
+		name = supersiam.13.b
+		trigger = {
+			NOT = {
+				has_government = fascism
+			}
+		}
+	}	
+}
+
+#News event - Communist Siam
+news_event = {
+	id = supersiam.14
+	title = supersiam.14.t
+	desc = supersiam.14.d
+	picture = GFX_news_event_phibun
+	
+	major = yes
+	
+	#fire_only_once = yes
+
+	is_triggered_only =  yes 
+
+	option = {
+		name = supersiam.14.a
+		trigger = {
+			OR = {
+				has_government = communism
+			}
+		}
+	}
+
+	option = {
+		name = supersiam.14.b
+		trigger = {
+			NOT = {
+				has_government = communism
+			}
+		}
+	}	
+}
+
+#News event - Democratic Siam
+news_event = {
+	id = supersiam.15
+	title = supersiam.15.t
+	desc = supersiam.15.d
+	picture = GFX_news_event_phibun
+	
+	major = yes
+	
+	#fire_only_once = yes
+
+	is_triggered_only =  yes 
+
+	option = {
+		name = supersiam.15.a
+		trigger = {
+			OR = {
+				has_government = democratic
+			}
+		}
+	}
+
+	option = {
+		name = supersiam.15.b
+		trigger = {
+			NOT = {
+				has_government = democratic
+			}
+		}
+	}	
+}
+
+#Invasion of Siam
+country_event = {
+	id = supersiam.16
+	title = supersiam.16.t
+	desc = supersiam.16.d
+	picture = GFX_report_asia_1936
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = JAP
+		date > 1939.1.1
+		date < 1943.1.1
+		has_government = fascism
+		has_global_flag = phibun_rules #Phibun must be a ruler of Siam
+		NOT = { is_in_faction_with = SIA } #If player has already joined it won't trigger
+		OR = {
+			has_war_with = ENG
+			SIA = { has_war_with = ENG }
+		}
+	}
+
+	option = {
+		name = supersiam.16.a
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { 
+			country_event = { 
+				id = supersiam.17 
+				hours = 6 
+			}
+		}
+	}
+
+	option = {
+		name = supersiam.16.b
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}		
+	}
+}
+
+#surrender to Japanese
+country_event = {
+	id = supersiam.17
+	title = supersiam.17.t
+	desc = supersiam.17.d
+	picture = GFX_report_asia_1936
+	
+	is_triggered_only = yes
+
+	option = {
+		name = supersiam.17.a
+		ai_chance = { 
+			factor = 100
+		}
+		JAP = { 
+			country_event = { 
+				id = supersiam.18 
+				hours = 6 
+			}
+		}
+	}
+
+	option = {
+		name = supersiam.17.b
+		ai_chance = { 
+			factor = 0
+		}
+		JAP = { 
+			country_event = { 
+				id = supersiam.19 
+				hours = 6 
+			}
+		}		
+	}
+}
+
+#Siam surrenders
+country_event = {
+	id = supersiam.18
+	title = supersiam.18.t
+	desc = supersiam.18.d
+	picture = GFX_report_asia_1936
+	
+	is_triggered_only = yes
+
+	option = {
+		name = supersiam.18.a
+		ai_chance = { 
+			factor = 100
+		}
+		JAP = { add_to_faction = SIA }
+	}
+
+	option = {
+		name = supersiam.18.b
+		ai_chance = { 
+			factor = 0
+		}
+		declare_war_on = {
+			target = SIA
+			type = puppet_wargoal_focus
+		}		
+	}
+}
+
+#Siam defiant
+country_event = {
+	id = supersiam.19
+	title = supersiam.19.t
+	desc = supersiam.19.d
+	picture = GFX_report_asia_1936
+	
+	is_triggered_only = yes
+
+	option = {
+		name = supersiam.19.a
+		ai_chance = { 
+			factor = 100
+		}
+		declare_war_on = {
+			target = SIA
+			type = puppet_wargoal_focus
+		}
+	}
+
+	option = {
+		name = supersiam.19.b
+		ai_chance = { 
+			factor = 0
+		}		
+	}
+}
+
+#Invasion of Siam alternative
+country_event = {
+	id = supersiam.20
+	title = supersiam.20.t
+	desc = supersiam.20.d
+	picture = GFX_report_asia_1936
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = JAP
+		date > 1939.1.1
+		date < 1943.1.1
+		has_government = fascism
+		NOT = { has_global_flag = phibun_rules } #Phibun is not a ruler of Siam
+		NOT = { is_in_faction_with = SIA } #If player has already joined it won't trigger
+		OR = {
+			has_war_with = ENG
+			SIA = { has_war_with = ENG }
+		}
+	}
+
+	option = {
+		name = supersiam.20.a
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		declare_war_on = {
+			target = SIA
+			type = puppet_wargoal_focus
+		}
+	}
+
+	option = {
+		name = supersiam.20.b
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}		
+	}
+}
+
+#Siam becomes the Japanese puppet
+country_event = {
+	id = supersiam.21
+	title = supersiam.21.t
+	desc = supersiam.21.d
+	picture = GFX_report_phibun
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = JAP
+		country_exists = SIA
+		SIA = { is_in_faction_with = JAP }
+	}
+
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	option = {
+		name = supersiam.21.a
+		ai_chance = { factor = 100 }
+		SIA = {
+			country_event = { id = supersiam.22 }
+		}
+	}
+
+	option = {
+		name = supersiam.21.b
+	}
+}
+
+country_event = {
+	id = supersiam.22
+	title = supersiam.22.t
+	desc = supersiam.22.d
+	picture = GFX_report_phibun
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = supersiam.22.a
+		ai_chance = { factor = 100 }
+		JAP = {
+			country_event = { id = supersiam.24 }
+		}
+		#custom_effect_tooltip = GAME_OVER_TT #It's not game over only a puppeting.
+	}
+	option = { # Refuse
+		name = supersiam.22.b
+		JAP = {
+			country_event = { id = supersiam.23 }
+		}
+	}
+}
+
+# Siam declines the offer
+country_event = {
+	id = supersiam.23
+	title = supersiam.23.t
+	desc = supersiam.23.d
+	picture = GFX_report_asia_1936
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = supersiam.23.a
+	}
+}
+
+# Siam accepts the offer
+country_event = {
+	id = supersiam.24
+	title = supersiam.24.t
+	desc = supersiam.24.d
+	picture = GFX_report_asia_1936
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = supersiam.24.a
+		puppet = SIA
+	}
+}

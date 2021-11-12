@@ -1,0 +1,669 @@
+bs_dont_attack_polan_off_time = {
+	enable = {
+		is_historical_focus_on = yes
+		tag = GER
+		date > 1937.1.1
+		date < 1939.8.31
+	}
+	abort = {
+		AND = {
+			date > 1939.8.31
+		}
+	}
+
+	ai_strategy = {
+		type = declare_war
+		id = "POL"
+		value = -200 
+	}
+}
+bs_attack_poland = {
+	enable = {
+		is_historical_focus_on = yes
+		tag = GER
+		has_completed_focus = GER_danzig_or_war
+		date > 1939.8.31
+		date < 1939.10.6
+	}
+	abort = {
+		AND = {
+			date > 1939.10.6
+		}
+	}
+
+	ai_strategy = {
+		type = declare_war
+		id = "POL"
+		value = 200 
+	}
+}
+bs_dont_attack_norway = {
+	enable = {
+		is_historical_focus_on = yes
+		tag = GER
+		date > 1937.1.1
+		date < 1940.3.1
+	}
+	abort = {
+		AND = {
+			date > 1940.3.1
+		}
+	}
+
+	ai_strategy = {
+		type = declare_war
+		id = "NOR"
+		value = -200 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "DEN"
+		value = -200 
+	}
+}
+
+bs_attack_norway = {
+	enable = {
+		is_historical_focus_on = yes
+		tag = GER
+		has_war_with = POL
+		POL = { has_capitulated = yes }
+		date > 1940.4.8
+		date < 1940.6.6
+	}
+	abort = {
+		AND = {
+			date > 1940.6.6
+		}
+	}
+
+	ai_strategy = {
+		type = declare_war
+		id = "NOR"
+		value = 200 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "DEN"
+		value = 200 
+	}
+}
+
+bs_attack_yugoslavia = {
+	enable = {
+		is_historical_focus_on = yes
+		tag = GER
+		has_war_with = POL
+		POL = { has_capitulated = yes }
+		date > 1941.4.4
+		date < 1941.6.6
+	}
+	abort = {
+		AND = {
+			date > 1941.6.6
+		}
+	}
+
+	ai_strategy = {
+		type = declare_war
+		id = "YUG"
+		value = 200 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "GRE"
+		value = 200 
+	}
+}
+
+bs_dont_attack_luxembourg = {
+	enable = {
+		is_historical_focus_on = yes
+		tag = GER
+		date > 1937.1.1
+		date < 1940.5.9
+	}
+	abort = {
+		AND = {
+			date > 1940.5.9
+		}
+	}
+
+	ai_strategy = {
+		type = declare_war
+		id = "LUX"
+		value = -200
+	}
+}
+
+bs_dont_attack_benelux = {
+	enable = {
+		is_historical_focus_on = yes
+		tag = GER
+		has_war_with = POL
+		POL = { has_capitulated = no }
+		date > 1937.1.1
+		date < 1940.5.9
+	}
+	abort = {
+		AND = {
+			POL = { has_capitulated = yes }
+			date > 1940.5.9
+		}
+	}
+
+	ai_strategy = {
+		type = declare_war
+		id = "HOL"			
+		value = -200
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "BEL"
+		value = -200
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "LUX"
+		value = -200
+	}
+}
+
+bs_bulgaria_join_axis = {
+	enable = {
+		is_historical_focus_on = yes
+		tag = BUL
+		date > 1937.1.1
+		OR = {
+			date > 1941.3.1
+			ROM = { is_in_faction_with = GER }
+			YUG = { has_war_with = GER }
+		}
+	}
+	abort = {
+		date > 1941.6.1
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "GER"			
+		value = 2000
+	}
+	ai_strategy = {
+		type = alliance
+		id = "GER"			
+		value = 2000
+	}	
+}
+
+bs_italy_dont_take_claims_on_yugoslavia = {
+	enable = {
+		tag = ITA
+		country_exists = YUG
+		is_historical_focus_on = yes
+		date > 1937.1.1
+		date < 1941.1.1
+	}
+
+	abort = {
+		OR = {
+			NOT = { country_exists = YUG }
+			date > 1941.2.2
+		}
+	}
+	
+	ai_strategy = {
+		type = ignore_claim
+		id = "YUG"			
+		value = 1
+	}
+}
+
+bs_italy_yugoslavia_war_goal = {
+	enable = {
+		tag = ITA
+		has_completed_focus = ITA_slovenia_dalmatia_claims
+		country_exists = YUG
+		date > 1937.1.1
+		date < 1941.1.1
+	}
+	abort = {
+		OR = {
+			NOT = {
+				country_exists = YUG
+			}
+			date > 1941.2.2
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "YUG"			
+		value = -200
+	}		
+}
+
+bs_germany_dont_take_claims_on_lux = {
+	enable = {
+		tag = GER
+		country_exists = LUX
+		is_historical_focus_on = yes
+		date > 1937.1.1
+		date < 1940.5.5
+	}
+
+	abort = {
+		OR = {
+			NOT = { country_exists = LUX }
+			date > 1940.5.5
+		}
+	}
+	
+	ai_strategy = {
+		type = ignore_claim
+		id = "LUX"			
+		value = 100
+	}
+}
+
+bs_germany_lux_war_goal = {
+	enable = {
+		tag = GER
+		country_exists = LUX
+		is_historical_focus_on = yes
+		date > 1937.1.1
+		date < 1940.5.5
+	}
+	abort = {
+		OR = {
+			NOT = {
+				country_exists = LUX
+			}
+			date > 1940.5.5
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "LUX"			
+		value = -200
+	}		
+}
+
+bs_soviet_atack_germany = {
+	enable = {
+		is_historical_focus_on = yes
+		tag = SOV
+		date > 1937.1.1
+		GER = { is_subject = no }
+		NOT = { is_in_faction_with = GER }
+		AND = {
+			date > 1942.1.1
+			date < 1943.12.12
+			NOT = { GER = { controls_state = 16 } }				
+		}
+	}
+	abort = {
+		date > 1944.1.1
+		GER = { is_subject = yes }
+		SOV = { is_in_faction_with = GER }
+	}
+
+	ai_strategy = {
+		type = declare_war
+		id = "GER"
+		value = 20000 
+	}
+}
+
+bs_france_italy_will_likely_join_axis = {
+
+	allowed = {
+		original_tag = FRA
+	}
+
+	enable = {
+		ITA = {
+			has_government = fascism
+			NOT = { 
+				has_war_with = FRA
+			}
+		}
+		GER = {
+			has_government = fascism
+			has_war_with = FRA
+		}
+		date > 1937.1.1
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = prepare_for_war
+		id = ITA
+		value = 200
+	}
+}
+
+bs_soviet_union_wont_start_ww3 = {
+	enable = {
+		is_historical_focus_on = yes
+		tag = SOV
+		date > 1937.1.1
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = "ENG"
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "FRA"
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "USA"
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "PER"
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "IRQ"
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "AFG"
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "GRE"
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "TUR"
+		value = -20000 
+	}
+}
+
+bs_germany_dont_attack_poland = {
+	enable = {
+		is_historical_focus_on = yes
+		tag = GER
+		date > 1937.1.1
+		date < 1939.8.30
+	}
+	abort = {
+		date > 1939.8.31
+	}
+
+	ai_strategy = {
+		type = declare_war
+		id = "POL"			
+		value = -20000 
+	}
+}
+
+bs_japan_dont_attack_usa = {
+	enable = {
+		is_historical_focus_on = yes
+		tag = JAP
+		date > 1937.1.1
+		date < 1941.12.5
+	}
+	abort = {
+		date > 1941.12.6
+	}
+
+	ai_strategy = {
+		type = declare_war
+		id = "PHI"			
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "USA"			
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "ENG"			
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "HOL"			
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "FRA"			
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "AST"			
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "NZL"			
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "INS"			
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "MAL"			
+		value = -20000 
+	}
+}
+
+bs_china_dont_attack_indochina = {
+	enable = {
+		is_historical_focus_on = yes
+		tag = PRC
+		date > 1937.1.1
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = "PHI"			
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "VIN"			
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "CAM"			
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "LAO"			
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "SIA"			
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "BRM"			
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "RAJ"			
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "INS"			
+		value = -20000 
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "MAL"			
+		value = -20000 
+	}
+}
+
+bs_siam_join_japan_not_axis = {
+	enable = {
+		tag = SIA
+		date > 1937.1.1
+		country_exists = GER
+	}
+	abort = {
+		is_in_faction_with = GER
+	}
+	ai_strategy = {
+		type = alliance
+		id = "GER"			
+		value = -200
+	}
+}
+
+bs_UK_iraq_will_likely_join_axis = {
+	# if GER is going to war with us, consider IRQ as a threat as well
+
+	allowed = {
+		original_tag = ENG
+	}
+
+	enable = {
+		is_historical_focus_on = yes
+		has_war_with = GER
+		date > 1937.1.1
+		date < 1942.1.1
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = prepare_for_war
+		id = IRQ
+		value = 200
+	}
+}
+
+bs_UK_italy_will_likely_join_axis = {
+	# if GER is going to war with us, consider ITA as a threat as well
+
+	allowed = {
+		original_tag = ENG
+	}
+
+	enable = {
+		is_historical_focus_on = yes
+		has_war_with = GER
+		date > 1937.1.1
+		date < 1942.1.1
+		NOT = { has_global_flag = disable_AI_tweaks_hiep }
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = prepare_for_war
+		id = ITA
+		value = 200
+	}
+}
+
+bs_germany_invade_norway = {
+
+	allowed = {
+		original_tag = GER
+	}
+
+	enable = {
+		is_historical_focus_on = yes
+		has_war_with = NOR
+		date > 1940.1.1
+		date < 1941.1.1
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = "NOR"			
+		value = 500
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = scandinavia
+		value = 100
+	}
+	
+}
+
+bs_japan_invade_china = {
+
+	allowed = {
+		original_tag = JAP
+	}
+
+	enable = {
+		is_historical_focus_on = yes
+		has_war_with = CHI
+		date > 1937.1.1
+		date < 1941.1.1
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = "CHI"			
+		value = 500
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "GXC"	
+		value = 500
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "SHX"	
+		value = 500
+	}
+	
+}
+
+bs_rk_garrison = { #Ensure with this that the RK AIs use their troops to garrison themselves.
+	enable = {
+		has_idea = RK_troops_can_be_used_for_garrison
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = garrison
+		value = 100
+	}
+}

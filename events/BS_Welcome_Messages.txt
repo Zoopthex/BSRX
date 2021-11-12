@@ -1,0 +1,113 @@
+﻿add_namespace = bs_welcome
+
+country_event = {
+	id = bs_welcome.1
+	title = bs_welcome.1.t
+	desc = {
+		text = bs_welcome.1.desc
+	}
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			country_event = { id = bs_welcome.2 }
+		}
+	}
+	option = {
+		name = bs_welcome.1.a
+	}
+}
+
+country_event = {
+	id = bs_welcome.2
+	title = bs_welcome.2.t
+	desc = {
+		text = bs_welcome.2.desc
+	}
+	
+	is_triggered_only = yes
+	
+	option = { #"Thank you."
+		name = bs_welcome.2.a
+		set_global_flag = completed_BSR_event
+	}
+	option = { #"Extra Content"
+		name = bs_welcome.2.b
+		country_event = { id = bs_welcome.3 }
+	}
+}
+
+country_event = { #Extra content
+	id = bs_welcome.3
+	title = bs_welcome.3.t
+	desc = bs_welcome.3.desc
+	picture = GFX_report_event_ast_navy
+	
+	is_triggered_only = yes
+
+	option = { #Thank you
+		name = bs_welcome.3.a
+		set_global_flag = completed_BSR_event
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = { #Take me back
+		name = bs_welcome.3.b
+		ai_chance = {
+			factor = 0
+		}
+		country_event = { id = bs_welcome.2 }
+	}
+	option = { #Options for US releasables
+		trigger = {
+			NOT = { has_global_flag = picked_an_option_for_usa }
+		}
+		name = bs_welcome.3.c
+		ai_chance = {
+			factor = 0
+		}
+		country_event = { id = bs_welcome.usa }
+	}
+}
+
+country_event = { #AMERICA
+	id = bs_welcome.usa
+	title = bs_welcome.usa.t
+	desc = bs_welcome.usa.desc
+	picture = GFX_report_event_ast_navy
+
+	is_triggered_only = yes
+
+	option = { #Maybe later
+		name = bs_welcome.usa.a
+		country_event = { id = bs_welcome.3 }
+	}
+
+	option = { #Regional powerhouses please.
+		name = bs_welcome.usa.b
+		USA_regional_powerhouses = yes
+		country_event = { id = bs_welcome.3 }
+	}
+
+	option = { #how about the remaining states minus new england
+		name = bs_welcome.usa.c
+		USA_remaining_minus_new_england = yes
+		set_global_flag = picked_an_option_for_usa
+		country_event = { id = bs_welcome.3 }
+	}
+
+	option = { #No new cores
+		name = bs_welcome.usa.d
+		country_event = { id = bs_welcome.3 }
+		set_global_flag = picked_an_option_for_usa
+	}
+}
