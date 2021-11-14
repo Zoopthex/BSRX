@@ -1,11 +1,13 @@
+
 state={
 	id=2076
 	name="STATE_2076"
-	
+
 	history={
 		owner = FRA
 		buildings = {
 			infrastructure = 1
+
 		}
 
 	}

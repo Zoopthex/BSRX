@@ -1,3 +1,4 @@
+
 state={
 	id=871
 	name="STATE_871"
@@ -5,9 +6,8 @@ state={
 	history={
 		owner = YUG
 		victory_points = {
-			833 1
+			833 1 
 		}
-
 		buildings = {
 			infrastructure = 3
 
@@ -23,7 +23,7 @@ state={
 	}
 
 	provinces={
-		833 867 13927
+		833 867 
 	}
 	manpower=150100
 	buildings_max_level_factor=1.000

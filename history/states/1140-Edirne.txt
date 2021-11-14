@@ -1,3 +1,4 @@
+
 state={
 	id=1140
 	name="STATE_1140"
@@ -9,14 +10,15 @@ state={
 
 		}
 		victory_points = {
-			11842 3
-		}		
+			11842 3 
+		}
 		add_core_of = TUR
 		add_core_of = THR
+
 	}
 
 	provinces={
-		922 11842
+		922 
 	}
 	manpower=98568
 	buildings_max_level_factor=1.000

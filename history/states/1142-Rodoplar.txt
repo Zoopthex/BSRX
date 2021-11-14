@@ -1,3 +1,4 @@
+
 state={
 	id=1142
 	name="STATE_1142"
@@ -10,10 +11,11 @@ state={
 		}
 		add_core_of = BUL
 		add_core_of = THR
+
 	}
 
 	provinces={
-		878 893 13320
+		878 893 
 	}
 	manpower=618500
 	buildings_max_level_factor=1.000

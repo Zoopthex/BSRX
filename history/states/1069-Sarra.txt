@@ -1,8 +1,7 @@
+
 state={
 	id=1069
 	name="STATE_1069"
-
-	impassable = yes
 
 	history={
 		owner = ITA
@@ -13,7 +12,6 @@ state={
 		add_core_of = LBA
 
 	}
-
 
 	provinces={
 		13291 

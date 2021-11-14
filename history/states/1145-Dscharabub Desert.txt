@@ -1,8 +1,7 @@
+
 state={
 	id=1145
 	name="STATE_1145"
-
-	impassable = yes
 
 	history={
 		owner = ITA
@@ -15,7 +14,7 @@ state={
 	}
 
 	provinces={
-		1060
+		1060 
 	}
 	manpower=1110
 	buildings_max_level_factor=1.000

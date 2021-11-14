@@ -3,9 +3,7 @@ state={
 	id=1144
 	name="STATE_1144"
 
-	impassable = yes
-
-	history = {
+	history={
 		owner = ITA
 		buildings = {
 			infrastructure = 0
@@ -16,9 +14,9 @@ state={
 	}
 
 	provinces={
-		1994 5004 12022 12082 13324
+		1994 5004 12022 12082 13324 
 	}
-	manpower = 7113
-	buildings_max_level_factor = 1.000
-	state_category = wasteland
+	manpower=7113
+	buildings_max_level_factor=1.000
+	state_category=wasteland
 }
